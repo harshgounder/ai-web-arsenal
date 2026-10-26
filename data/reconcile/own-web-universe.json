@@ -1,0 +1,20 @@
+{
+ "source": "own-web-universe",
+ "rows": 11581,
+ "admitted": 0,
+ "excluded": 11581,
+ "held": 0,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "TAXONOMY_NODE": 11581
+ },
+ "unique_entries": {
+  "admit": 0,
+  "exclude": 11412,
+  "hold": 0
+ },
+ "identity_holds": true,
+ "held_examples": []
+}

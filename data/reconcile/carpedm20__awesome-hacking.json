@@ -1,0 +1,149 @@
+{
+ "source": "carpedm20__awesome-hacking",
+ "rows": 201,
+ "admitted": 49,
+ "excluded": 25,
+ "held": 127,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "UNCLASSIFIED_LOW_SIGNAL": 127,
+  "SOCIAL_OR_VIDEO": 3,
+  "OUT_OF_SCOPE_NONWEB": 21,
+  "KNOWLEDGE_NOT_TOOL": 1
+ },
+ "unique_entries": {
+  "admit": 47,
+  "exclude": 25,
+  "hold": 125
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "awesome-machine-learning",
+   "url": "https://github.com/josephmisiti/awesome-machine-learning/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "here",
+   "url": "https://github.com/Hack-with-Github/Free-Security-eBooks",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Roppers Computing Fundamentals",
+   "url": "https://www.roppers.org/courses/fundamentals",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "gitbook",
+   "url": "https://www.hoppersroppers.org/fundamentals/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Understanding the basics of Linux Binary Exploitation",
+   "url": "https://github.com/r0hi7/BinExp",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Missing Semester",
+   "url": "https://missing.csail.mit.edu/2020/course-shell/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Begin RE: A Reverse Engineering Tutorial Workshop",
+   "url": "https://www.begin.re/the-workshop",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Malware Unicorn Reverse Engineering Tutorial",
+   "url": "https://malwareunicorn.org/workshops/re101.html#0",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Lena151: Reversing With Lena",
+   "url": "https://archive.org/details/lena151",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "IDA",
+   "url": "https://www.hex-rays.com/products/ida/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OllyDbg",
+   "url": "http://www.ollydbg.de/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "x64dbg",
+   "url": "https://github.com/x64dbg/x64dbg",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "plasma",
+   "url": "https://github.com/joelpx/plasma",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ScratchABit",
+   "url": "https://github.com/pfalcon/ScratchABit",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Capstone",
+   "url": "https://github.com/aquynh/capstone",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Ghidra",
+   "url": "https://ghidra-sre.org/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Krakatau",
+   "url": "https://github.com/Storyyeller/Krakatau",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "JD-GUI",
+   "url": "https://github.com/java-decompiler/jd-gui",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "procyon",
+   "url": "https://bitbucket.org/mstrobel/procyon/wiki/Java%20Decompiler",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Luyten",
+   "url": "https://github.com/deathmarine/Luyten",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "JAD",
+   "url": "http://varaneckas.com/jad/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "JADX",
+   "url": "https://github.com/skylot/jadx",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "dotPeek",
+   "url": "https://www.jetbrains.com/decompiler/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ILSpy",
+   "url": "https://github.com/icsharpcode/ILSpy/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "dnSpy",
+   "url": "https://github.com/0xd4d/dnSpy",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

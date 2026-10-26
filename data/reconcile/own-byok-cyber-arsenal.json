@@ -1,0 +1,151 @@
+{
+ "source": "own-byok-cyber-arsenal",
+ "rows": 1580,
+ "admitted": 652,
+ "excluded": 505,
+ "held": 423,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "TAXONOMY_NODE": 304,
+  "OUT_OF_SCOPE_NONWEB": 36,
+  "UNCLASSIFIED_LOW_SIGNAL": 423,
+  "KNOWLEDGE_NOT_TOOL": 114,
+  "SOCIAL_OR_VIDEO": 48,
+  "MCP_NON_SECURITY": 3
+ },
+ "unique_entries": {
+  "admit": 451,
+  "exclude": 424,
+  "hold": 397
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "Open-Source Dataset",
+   "url": "https://huggingface.co/datasets/ScaleAI/MCP-Atlas",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Lobster Trap",
+   "url": "https://github.com/veeainc/lobstertrap",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "LiveKit Agents",
+   "url": "https://github.com/livekit/agents",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Watch Context Agents Live",
+   "url": "https://atlan.com/context-layer-demo/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Claude Code",
+   "url": "https://github%E2%80%8B.com/anthropics/claude-code",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OpenAI Codex",
+   "url": "https://github%E2%80%8B.com/openai/codex",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "SmythOS",
+   "url": "https://github.com/SmythOS/sre",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Middleware OpsAI",
+   "url": "https://middleware.io/product/ops-ai/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Beeps",
+   "url": "https://www.beeps.co/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Ontheia",
+   "url": "https://github.com/Ontheia/ontheia",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "The Robotics Institute",
+   "url": "http://www.ri.cmu.edu",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Taking AI-Based Side-Channel Attacks to a New Dimension",
+   "url": "https://eprint.iacr.org/2025/655.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Asqav",
+   "url": "https://github.com/jagmarques/asqav-sdk",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Cem Dilmegani",
+   "url": "https://aimultiple.com/author/cem-dilmegani",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Cem Dilmegani",
+   "url": "https://aimultiple.com/author/cem-dilmegani",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Alyona Vert.",
+   "url": "https://www.turingpost.com/authors/alyona-vert",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Smart Founder Lab",
+   "url": "https://smartfounderlab.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "activitywatch",
+   "url": "https://github.com/ActivityWatch/activitywatch",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "anomaly-detection",
+   "url": "https://github.com/opensearch-project/anomaly-detection",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "canarytokens",
+   "url": "https://github.com/thinkst/canarytokens",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "cedar",
+   "url": "https://github.com/cedar-policy/cedar",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "cloudsplaining",
+   "url": "https://github.com/salesforce/cloudsplaining",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "endpointdlp",
+   "url": "https://github.com/SomansaOpenSource/endpointdlp",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "firecracker",
+   "url": "https://github.com/firecracker-microvm/firecracker",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "fleet",
+   "url": "https://github.com/fleetdm/fleet",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

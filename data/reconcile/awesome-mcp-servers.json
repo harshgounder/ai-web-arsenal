@@ -1,0 +1,144 @@
+{
+ "source": "awesome-mcp-servers",
+ "rows": 11777,
+ "admitted": 10957,
+ "excluded": 435,
+ "held": 385,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "UNCLASSIFIED_LOW_SIGNAL": 385,
+  "OUT_OF_SCOPE_NONWEB": 119,
+  "MCP_NON_SECURITY": 299,
+  "SOCIAL_OR_VIDEO": 17
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "![\u0e44\u0e17\u0e22",
+   "url": "https://img.shields.io/badge/Thai-Click-blue",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![English",
+   "url": "https://img.shields.io/badge/English-Click-yellow",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![\u7e41\u9ad4\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7e41\u9ad4\u4e2d\u6587-\u9ede\u64ca\u67e5\u770b-orange",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![\u7b80\u4f53\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7b80\u4f53\u4e2d\u6587-\u70b9\u51fb\u67e5\u770b-orange",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![\u65e5\u672c\u8a9e",
+   "url": "https://img.shields.io/badge/\u65e5\u672c\u8a9e-\u30af\u30ea\u30c3\u30af-\u9752",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![\ud55c\uad6d\uc5b4",
+   "url": "https://img.shields.io/badge/\ud55c\uad6d\uc5b4-\ud074\ub9ad-yellow",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![Portugu\u00eas Brasileiro",
+   "url": "https://img.shields.io/badge/Portugu\u00eas_Brasileiro-Clique-green",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![Discord",
+   "url": "https://img.shields.io/discord/1312302100125843476?logo=discord&label=discord",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "![Subreddit subscribers",
+   "url": "https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Glama Chat",
+   "url": "https://glama.ai/chat",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "\u062f\u0631\u0648\u0627\u0632\u0647 \u0647\u0648\u0634 \u0645\u0635\u0646\u0648\u0639\u06cc",
+   "url": "https://glama.ai/gateway",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "\u0633\u0631\u0648\u0631 \u062f\u06cc\u0633\u06a9\u0648\u0631\u062f",
+   "url": "https://glama.ai/mcp/discord",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "glama",
+   "url": "https://glama.ai/mcp/servers/@tasopen/mcp-alphabanana",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "pdavis68/RepoMapper",
+   "url": "https://github.com.mcas.ms/pdavis68/RepoMapper",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Carbon Voice",
+   "url": "https://getcarbon.app",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Carbon Voice",
+   "url": "https://getcarbon.app",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "DIDLogic",
+   "url": "https://didlogic.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "AntV",
+   "url": "https://github.com/antvis",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Apache ECharts",
+   "url": "https://echarts.apache.org",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "mermaid",
+   "url": "https://mermaid.js.org/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "iaptic",
+   "url": "https://www.iaptic.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "\u067e\u0631\u0648\u0698\u0647\u200c\u0647\u0627\u06cc Aiven",
+   "url": "https://go.aiven.io/mcp-server",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "CockroachDB",
+   "url": "https://cockroachlabs.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "memvid",
+   "url": "https://github.com/Olow304/memvid",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "get-convex/convex-backend",
+   "url": "https://stack.convex.dev/convex-mcp-server",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

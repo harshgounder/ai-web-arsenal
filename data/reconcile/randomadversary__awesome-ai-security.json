@@ -1,0 +1,23 @@
+{
+ "source": "randomadversary__awesome-ai-security",
+ "rows": 97,
+ "admitted": 36,
+ "excluded": 61,
+ "held": 0,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "TAXONOMY_NODE": 14,
+  "KNOWLEDGE_NOT_TOOL": 39,
+  "SOCIAL_OR_VIDEO": 3,
+  "OUT_OF_SCOPE_NONWEB": 5
+ },
+ "unique_entries": {
+  "admit": 36,
+  "exclude": 54,
+  "hold": 0
+ },
+ "identity_holds": true,
+ "held_examples": []
+}

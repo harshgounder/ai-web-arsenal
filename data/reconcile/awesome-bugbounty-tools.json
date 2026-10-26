@@ -1,0 +1,142 @@
+{
+ "source": "awesome-bugbounty-tools",
+ "rows": 410,
+ "admitted": 328,
+ "excluded": 14,
+ "held": 68,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "OUT_OF_SCOPE_NONWEB": 14,
+  "UNCLASSIFIED_LOW_SIGNAL": 68
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "CRLFsuite",
+   "url": "https://github.com/Nefcore/CRLFsuite",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Injectus",
+   "url": "https://github.com/BountyStrike/Injectus",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "liffy",
+   "url": "https://github.com/mzfr/liffy",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Oralyzer",
+   "url": "https://github.com/r0075h3ll/Oralyzer",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Injectus",
+   "url": "https://github.com/BountyStrike/Injectus",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OpenRedireX",
+   "url": "https://github.com/devanshbatham/OpenRedireX",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "racepwn",
+   "url": "https://github.com/racepwn/racepwn",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "waybackSqliScanner",
+   "url": "https://github.com/ghostlulzhacks/waybackSqliScanner",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "mssqli-duet",
+   "url": "https://github.com/Keramas/mssqli-duet",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "BurpSQLTruncSanner",
+   "url": "https://github.com/InitRoot/BurpSQLTruncSanner",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "andor",
+   "url": "https://github.com/sadicann/andor",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Blinder",
+   "url": "https://github.com/mhaskar/Blinder",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "DefaultCreds-cheat-sheet",
+   "url": "https://github.com/ihebski/DefaultCreds-cheat-sheet",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "BruteX",
+   "url": "https://github.com/1N3/BruteX",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "patator",
+   "url": "https://github.com/lanjelot/patator",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "git-secrets",
+   "url": "https://github.com/awslabs/git-secrets",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "truffleHog",
+   "url": "https://github.com/dxa4481/truffleHog",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "gitGraber",
+   "url": "https://github.com/hisxo/gitGraber",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "talisman",
+   "url": "https://github.com/thoughtworks/talisman",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "GitGot",
+   "url": "https://github.com/BishopFox/GitGot",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "git-all-secrets",
+   "url": "https://github.com/anshumanbh/git-all-secrets",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "github-search",
+   "url": "https://github.com/gwen001/github-search",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "git-vuln-finder",
+   "url": "https://github.com/cve-search/git-vuln-finder",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "shhgit",
+   "url": "https://github.com/eth0izzle/shhgit",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "rusty-hog",
+   "url": "https://github.com/newrelic/rusty-hog",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

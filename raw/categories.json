@@ -1,0 +1,100 @@
+[
+  {
+    "id": "governance",
+    "name": "Observability & Governance",
+    "short": "Observability & Governance",
+    "color": "--c-governance",
+    "desc": "Continuous discovery, inventory, and behavioral profiling of every AI agent across the enterprise. Lifecycle controls, audit trails, and policy enforcement to keep the agent fleet visible and accountable."
+  },
+  {
+    "id": "runtime",
+    "name": "Runtime & Guardrails",
+    "short": "Runtime & Guardrails",
+    "color": "--c-runtime",
+    "desc": "Inline content inspection and behavioral enforcement at the moment of inference. Blocks prompt injection, jailbreaks, data exfiltration, and unauthorized tool calls before they reach the model or downstream systems."
+  },
+  {
+    "id": "identity",
+    "name": "AI Identity",
+    "short": "AI Identity",
+    "color": "--c-identity",
+    "desc": "Issues verifiable, scoped, and revocable identities to AI agents and non-human workloads. Brokers least-privilege access to tools, APIs, and data so each agent action can be authenticated and audited."
+  },
+  {
+    "id": "mcp-gateway",
+    "name": "MCP & LLM Gateways",
+    "short": "MCP & LLM Gateways",
+    "color": "--c-mcp",
+    "desc": "Protocol-layer control plane sitting between agents and the MCP servers, tools, and models they call. Per-request auth, scope enforcement, tool-call inspection, and supply-chain governance for the agent ↔ tool boundary."
+  },
+  {
+    "id": "redteam",
+    "name": "AI Red Teaming",
+    "short": "AI Red Teaming",
+    "color": "--c-redteam",
+    "desc": "Automated and human-in-the-loop adversarial testing of agents, models, and AI infrastructure. Generates attack chains, evaluates defenses, and produces auditor-ready findings before vulnerabilities reach production."
+  },
+  {
+    "id": "aispm",
+    "name": "AI CSPM",
+    "short": "AI CSPM",
+    "color": "--c-aispm",
+    "desc": "Posture management for AI agents, models, datasets, and pipelines across cloud and SaaS estates. Maps agent dependencies, surfaces misconfigurations, and prioritizes risk before workloads are exploited at runtime."
+  },
+  {
+    "id": "dspm",
+    "name": "AI Data Governance",
+    "short": "AI Data Governance",
+    "color": "--c-dspm",
+    "desc": "Governs what data AI agents can read, write, and surface to users. Detects oversharing, enforces need-to-know access at inference time, and remediates sensitive-data exposure across the agent supply chain."
+  },
+  {
+    "id": "model",
+    "name": "Model Security",
+    "short": "Model Security",
+    "color": "--c-model",
+    "desc": "Secures the model itself across the ML lifecycle — supply-chain scanning of model files for backdoors, malware, and poisoning. Runtime protection against adversarial inputs and integrity drift in production."
+  },
+  {
+    "id": "network",
+    "name": "AI Network Security",
+    "short": "AI Network Security",
+    "color": "--c-network",
+    "desc": "Network-layer visibility and enforcement for AI traffic that bypasses traditional firewalls, SSE, and SASE. Decodes prompt/response flows, blocks shadow AI usage, and applies dynamic policy by app, user, and data type."
+  },
+  {
+    "id": "aes",
+    "name": "AI Endpoint Security",
+    "short": "AI Endpoint Security",
+    "color": "--c-aes",
+    "desc": "Next-generation EDR for AI agents running on developer and employee endpoints. Endpoint-native sensors intercept agent actions before execution, enforce intent-based policy, and surface shadow agents fleet-wide."
+  },
+  {
+    "id": "aspm",
+    "name": "AI Code Security",
+    "short": "AI Code Security",
+    "color": "--c-aspm",
+    "desc": "Shift-left security for AI-generated code and agent-orchestrated codebases. Reviews designs, scans dependencies, and governs coding agents (Cursor, Claude Code, Copilot) before insecure code ships to production."
+  },
+  {
+    "id": "browser",
+    "name": "AI Browser Security",
+    "short": "AI Browser Security",
+    "color": "--c-browser",
+    "desc": "Controls AI usage happening inside the browser, where most employee GenAI activity lives. Browser-layer DLP, in-flow coaching, and per-action policy enforcement for ChatGPT, Copilot, Claude, and embedded copilots."
+  },
+  {
+    "id": "sspm",
+    "name": "AI SSPM",
+    "short": "AI SSPM",
+    "color": "--c-sspm",
+    "desc": "Secures AI agents and copilots that live inside SaaS applications and citizen-developer platforms. Discovers OAuth-connected AI, governs Copilot Studio / Agentforce / LCNC agents, and contains SaaS-to-SaaS propagation risk."
+  },
+  {
+    "id": "sandbox",
+    "name": "Sandboxing",
+    "short": "Sandboxing",
+    "color": "--c-sandbox",
+    "desc": "Isolated execution environments where AI-generated code and agent actions can run without touching production. Container, microVM, and syscall-level boundaries that contain blast radius when agents go off-script."
+  }
+]

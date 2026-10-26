@@ -1,0 +1,18 @@
+{
+ "source": "wangyihang__awesome-web-security",
+ "rows": 1,
+ "admitted": 0,
+ "excluded": 0,
+ "held": 0,
+ "orphan": 0,
+ "unresolved": 1,
+ "unparsed": 0,
+ "exclusion_reasons": {},
+ "unique_entries": {
+  "admit": 0,
+  "exclude": 0,
+  "hold": 0
+ },
+ "identity_holds": true,
+ "held_examples": []
+}

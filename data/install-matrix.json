@@ -1,0 +1,1264 @@
+{
+ "generated_at": "2026-10-26",
+ "os": "arch",
+ "tools": [
+  {
+   "id": "jq",
+   "bin": "jq",
+   "domain": "D00",
+   "kind": "cli",
+   "role": "json slicing, the glue for every other tool",
+   "profiles": [
+    "minimal",
+    "web",
+    "api",
+    "all"
+   ],
+   "installed": true,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "jq",
+    "version": "1.8.2-1.1"
+   },
+   "status": "installed",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "jq",
+     "ok": true,
+     "version": "1.8.2-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "yq",
+   "bin": "yq",
+   "domain": "D00",
+   "kind": "cli",
+   "role": "yaml and xml to json, for specs and configs",
+   "profiles": [
+    "minimal",
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "go-yq",
+    "version": "4.54.1-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "go-yq",
+     "ok": true,
+     "version": "4.54.1-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "fq",
+   "bin": "fq",
+   "domain": "D31",
+   "kind": "cli",
+   "role": "jq semantics over any binary format, the fastest unknown-format probe",
+   "profiles": [
+    "re",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "fq",
+    "version": "0.18.0-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "fq",
+     "ok": true,
+     "version": "0.18.0-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "curl",
+   "bin": "curl",
+   "domain": "D00",
+   "kind": "cli",
+   "role": "raw http, the ground truth for every request claim",
+   "profiles": [
+    "minimal",
+    "web",
+    "api",
+    "all"
+   ],
+   "installed": true,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "curl",
+    "version": "8.22.0-1.1"
+   },
+   "status": "installed",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "curl",
+     "ok": true,
+     "version": "8.22.0-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "subfinder",
+   "bin": "subfinder",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "passive subdomain enumeration",
+   "profiles": [
+    "minimal",
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "subfinder",
+    "version": "2.17.0-1",
+    "votes": 11,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "subfinder",
+     "ok": true,
+     "version": "2.17.0-1",
+     "votes": 11,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "httpx",
+   "bin": "httpx",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "http probing and fingerprinting at scale",
+   "profiles": [
+    "minimal",
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "httpx-bin",
+    "version": "1.10.0-1",
+    "votes": 4,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "httpx-bin",
+     "ok": true,
+     "version": "1.10.0-1",
+     "votes": 4,
+     "outdated": false
+    }
+   ],
+   "ambiguity": "AUR 'httpx' is the python library. Use httpx-bin, or go install, never the bare name."
+  },
+  {
+   "id": "naabu",
+   "bin": "naabu",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "fast port scan",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "naabu",
+    "version": "2.6.1-2",
+    "votes": 1,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "naabu",
+     "ok": true,
+     "version": "2.6.1-2",
+     "votes": 1,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "dnsx",
+   "bin": "dnsx",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "dns toolkit, resolver brute force, record types",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "dnsx",
+    "version": "1.3.1-1",
+    "votes": 2,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "dnsx",
+     "ok": true,
+     "version": "1.3.1-1",
+     "votes": 2,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "katana",
+   "bin": "katana",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "crawler that understands js, endpoints and forms",
+   "profiles": [
+    "recon",
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "katana",
+    "version": "3.0v1-1",
+    "votes": 0,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "katana",
+     "ok": true,
+     "version": "3.0v1-1",
+     "votes": 0,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "gau",
+   "bin": "gau",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "known urls from wayback, commoncrawl, alienvault",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "gau",
+    "version": "2.2.4-1",
+    "votes": 3,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "gau",
+     "ok": true,
+     "version": "2.2.4-1",
+     "votes": 3,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "ffuf",
+   "bin": "ffuf",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "content discovery and parameter fuzzing",
+   "profiles": [
+    "minimal",
+    "recon",
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "ffuf",
+    "version": "2.1.0-1",
+    "votes": 11,
+    "outdated": true
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "ffuf",
+     "ok": true,
+     "version": "2.1.0-1",
+     "votes": 11,
+     "outdated": true
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "feroxbuster",
+   "bin": "feroxbuster",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "recursive content discovery",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "feroxbuster",
+    "version": "2.13.1-1",
+    "votes": 6,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "feroxbuster",
+     "ok": true,
+     "version": "2.13.1-1",
+     "votes": 6,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "gobuster",
+   "bin": "gobuster",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "dir, dns and vhost brute force",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "gobuster",
+    "version": "3.8.2-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "gobuster",
+     "ok": true,
+     "version": "3.8.2-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "arjun",
+   "bin": "arjun",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "http parameter discovery",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "arjun",
+    "version": "2.2.7"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "arjun",
+     "ok": true,
+     "version": "2.2.7"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "nuclei",
+   "bin": "nuclei",
+   "domain": "D22",
+   "kind": "cli",
+   "role": "template based scanning, the cve and misconfig workhorse",
+   "profiles": [
+    "minimal",
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "nuclei-bin",
+    "version": "3.11.1-1",
+    "votes": 5,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "nuclei-bin",
+     "ok": true,
+     "version": "3.11.1-1",
+     "votes": 5,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "nikto",
+   "bin": "nikto",
+   "domain": "D22",
+   "kind": "cli",
+   "role": "classic server misconfiguration scanner",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "nikto",
+    "version": "2.6.0-2"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "nikto",
+     "ok": true,
+     "version": "2.6.0-2"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "wafw00f",
+   "bin": "wafw00f",
+   "domain": "D22",
+   "kind": "cli",
+   "role": "waf fingerprint, decides which evasion class applies",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": true,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "wafw00f",
+    "version": "2.4.2"
+   },
+   "status": "installed",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "wafw00f",
+     "ok": true,
+     "version": "2.4.2"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "whatweb",
+   "bin": "whatweb",
+   "domain": "D03",
+   "kind": "cli",
+   "role": "technology fingerprinting with plugin detail",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "whatweb",
+    "version": "0.6.4-2",
+    "votes": 13,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "whatweb",
+     "ok": false,
+     "version": null
+    },
+    {
+     "channel": "aur",
+     "pkg": "whatweb",
+     "ok": true,
+     "version": "0.6.4-2",
+     "votes": 13,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "nmap",
+   "bin": "nmap",
+   "domain": "D02",
+   "kind": "cli",
+   "role": "service and version truth, the fallback when http lies",
+   "profiles": [
+    "recon",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "nmap",
+    "version": "7.991-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "nmap",
+     "ok": true,
+     "version": "7.991-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "sqlmap",
+   "bin": "sqlmap",
+   "domain": "D07",
+   "kind": "cli",
+   "role": "sql injection detection and exploitation",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "sqlmap",
+    "version": "1.10.7-1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "sqlmap",
+     "ok": true,
+     "version": "1.10.7-1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "dalfox",
+   "bin": "dalfox",
+   "domain": "D08",
+   "kind": "cli",
+   "role": "xss scanner with dom and parameter analysis",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "dalfox",
+    "version": "3.2.4-1",
+    "votes": 0,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "dalfox",
+     "ok": true,
+     "version": "3.2.4-1",
+     "votes": 0,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "commix",
+   "bin": "commix",
+   "domain": "D07",
+   "kind": "cli",
+   "role": "os command injection",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "commix",
+    "version": "3.4-1",
+    "votes": 0,
+    "outdated": true
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "commix",
+     "ok": true,
+     "version": "3.4-1",
+     "votes": 0,
+     "outdated": true
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "grpcurl",
+   "bin": "grpcurl",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "grpc reflection and call, the whole grpc attack surface in one binary",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "grpcurl",
+    "version": "1.9.4-2",
+    "votes": 6,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "grpcurl",
+     "ok": false,
+     "version": null
+    },
+    {
+     "channel": "aur",
+     "pkg": "grpcurl",
+     "ok": true,
+     "version": "1.9.4-2",
+     "votes": 6,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "kiterunner",
+   "bin": "kr",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "api route brute force with real wordlists",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "kiterunner-bin",
+    "version": "1.0.2-2",
+    "votes": 3,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "kiterunner-bin",
+     "ok": true,
+     "version": "1.0.2-2",
+     "votes": 3,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "clairvoyance",
+   "bin": "clairvoyance",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "graphql schema recovery when introspection is disabled",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "clairvoyance",
+    "version": "2.5.5"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "clairvoyance",
+     "ok": true,
+     "version": "2.5.5"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "mitmproxy2swagger",
+   "bin": "mitmproxy2swagger",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "recover an openapi spec from a har or flow dump",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "mitmproxy2swagger",
+    "version": "0.15.0"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "mitmproxy2swagger",
+     "ok": true,
+     "version": "0.15.0"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "mitmproxy",
+   "bin": "mitmproxy",
+   "domain": "D31",
+   "kind": "cli",
+   "role": "programmable intercepting proxy, the capture source for REA",
+   "profiles": [
+    "minimal",
+    "web",
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "mitmproxy",
+    "version": "12.2.3-1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "mitmproxy",
+     "ok": true,
+     "version": "12.2.3-1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "zaproxy",
+   "bin": "zaproxy",
+   "domain": "D22",
+   "kind": "cli",
+   "role": "full scanner with api driven automation",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "zaproxy",
+    "version": "2.17.0-4"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "zaproxy",
+     "ok": true,
+     "version": "2.17.0-4"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "chromium",
+   "bin": "chromium",
+   "domain": "D08",
+   "kind": "service",
+   "role": "real browser for cdp work, the only honest way to test client side",
+   "profiles": [
+    "minimal",
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "chromium",
+    "version": "153.0.8010.52-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "chromium",
+     "ok": true,
+     "version": "153.0.8010.52-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "trufflehog",
+   "bin": "trufflehog",
+   "domain": "D16",
+   "kind": "cli",
+   "role": "verified secret detection in repos and filesystems",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "trufflehog",
+    "version": "3.99.7-1",
+    "votes": 5,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "trufflehog",
+     "ok": true,
+     "version": "3.99.7-1",
+     "votes": 5,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "gitleaks",
+   "bin": "gitleaks",
+   "domain": "D16",
+   "kind": "cli",
+   "role": "fast regex secret scan for repos and bundles",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "gitleaks",
+    "version": "8.30.1-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "gitleaks",
+     "ok": true,
+     "version": "8.30.1-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "prowler",
+   "bin": "prowler",
+   "domain": "D17",
+   "kind": "cli",
+   "role": "cloud posture and attack path checks",
+   "profiles": [
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "prowler",
+    "version": "5.45.0"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "prowler",
+     "ok": true,
+     "version": "5.45.0"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "jadx",
+   "bin": "jadx",
+   "domain": "D21",
+   "kind": "cli",
+   "role": "dex to java, the readable half of apk analysis",
+   "profiles": [
+    "mobile",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "jadx",
+    "version": "1.5.6-1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "jadx",
+     "ok": true,
+     "version": "1.5.6-1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "apktool",
+   "bin": "apktool",
+   "domain": "D21",
+   "kind": "cli",
+   "role": "manifest and resource decode, smali",
+   "profiles": [
+    "mobile",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "android-apktool",
+    "version": "3.0.3-1",
+    "votes": 259,
+    "outdated": true
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "android-apktool",
+     "ok": true,
+     "version": "3.0.3-1",
+     "votes": 259,
+     "outdated": true
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "frida",
+   "bin": "frida",
+   "domain": "D21",
+   "kind": "cli",
+   "role": "runtime instrumentation, ssl pinning and logic bypass at runtime",
+   "profiles": [
+    "mobile",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "frida-tools",
+    "version": "14.11.0"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "frida-tools",
+     "ok": true,
+     "version": "14.11.0"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "ghidra",
+   "bin": "ghidra",
+   "domain": "D31",
+   "kind": "cli",
+   "role": "decompiler for native artifacts reached from a web target",
+   "profiles": [
+    "re",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "ghidra",
+    "version": "12.1.2-2.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "ghidra",
+     "ok": true,
+     "version": "12.1.2-2.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "radare2",
+   "bin": "r2",
+   "domain": "D31",
+   "kind": "cli",
+   "role": "fast disassembly and binary triage",
+   "profiles": [
+    "re",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "radare2",
+    "version": "6.2.2-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "radare2",
+     "ok": true,
+     "version": "6.2.2-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "binwalk",
+   "bin": "binwalk",
+   "domain": "D31",
+   "kind": "cli",
+   "role": "firmware and embedded container signature scan",
+   "profiles": [
+    "re",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "binwalk",
+    "version": "3.1.0-1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "binwalk",
+     "ok": true,
+     "version": "3.1.0-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "hashcat",
+   "bin": "hashcat",
+   "domain": "D16",
+   "kind": "cli",
+   "role": "offline cracking for hashes recovered from artifacts",
+   "profiles": [
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "hashcat",
+    "version": "1:7.1.2-2.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "hashcat",
+     "ok": true,
+     "version": "1:7.1.2-2.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "seclists",
+   "bin": null,
+   "domain": "D27",
+   "kind": "corpus",
+   "role": "the wordlist corpus everything else consumes",
+   "profiles": [
+    "minimal",
+    "recon",
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "git",
+    "pkg": "https://github.com/danielmiessler/SecLists",
+    "version": null
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "seclists",
+     "ok": false,
+     "version": null
+    },
+    {
+     "channel": "git",
+     "pkg": "https://github.com/danielmiessler/SecLists",
+     "ok": true,
+     "note": "clone url, unverified"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "nuclei-templates",
+   "bin": null,
+   "domain": "D27",
+   "kind": "corpus",
+   "role": "the template corpus nuclei runs",
+   "profiles": [
+    "minimal",
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "git",
+    "pkg": "https://github.com/projectdiscovery/nuclei-templates",
+    "version": null
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "git",
+     "pkg": "https://github.com/projectdiscovery/nuclei-templates",
+     "ok": true,
+     "note": "clone url, unverified"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "uv",
+   "bin": "uv",
+   "domain": "D35",
+   "kind": "cli",
+   "role": "python env and tool runner, the install engine for python tooling",
+   "profiles": [
+    "minimal",
+    "all"
+   ],
+   "installed": true,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "uv",
+    "version": "0.12.23-1.1"
+   },
+   "status": "installed",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "uv",
+     "ok": true,
+     "version": "0.12.23-1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "pipx",
+   "bin": "pipx",
+   "domain": "D35",
+   "kind": "cli",
+   "role": "isolated python cli installs",
+   "profiles": [
+    "minimal",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pacman",
+    "pkg": "python-pipx",
+    "version": "1.15.0-1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pacman",
+     "pkg": "python-pipx",
+     "ok": true,
+     "version": "1.15.0-1"
+    }
+   ],
+   "ambiguity": null
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+# clone cache: 77MB of rival repos, reproducible with scripts/harvest-rivals.sh
+raw/rivals/
+# runtime logs
+bootstrap/logs/
+# python
+__pycache__/
+*.pyc
+.venv/

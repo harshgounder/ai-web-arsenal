@@ -1,0 +1,145 @@
+{
+ "source": "awesome-security-tools-2026",
+ "rows": 125,
+ "admitted": 47,
+ "excluded": 38,
+ "held": 40,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "OUT_OF_SCOPE_NONWEB": 20,
+  "TAXONOMY_NODE": 16,
+  "UNCLASSIFIED_LOW_SIGNAL": 40,
+  "SOCIAL_OR_VIDEO": 1,
+  "KNOWLEDGE_NOT_TOOL": 1
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "Wireshark",
+   "url": "https://www.wireshark.org/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Suricata",
+   "url": "https://github.com/OISF/suricata",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Zeek",
+   "url": "https://github.com/zeek/zeek",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Fail2Ban",
+   "url": "https://github.com/fail2ban/fail2ban",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "CrowdSec",
+   "url": "https://github.com/crowdsecurity/crowdsec",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Scapy",
+   "url": "https://github.com/secdev/scapy",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Snort",
+   "url": "https://github.com/snort3/snort3",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Wazuh",
+   "url": "https://github.com/wazuh/wazuh",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Elastic Security",
+   "url": "https://github.com/elastic/elasticsearch",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Grafana Loki",
+   "url": "https://github.com/grafana/loki",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Graylog",
+   "url": "https://github.com/Graylog2/graylog2-server",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "TheHive",
+   "url": "https://github.com/TheHive-Project/TheHive",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OSSEC",
+   "url": "https://github.com/ossec/ossec-hids",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "MISP",
+   "url": "https://github.com/MISP/MISP",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OpenCTI",
+   "url": "https://github.com/OpenCTI-Platform/opencti",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "GreyNoise",
+   "url": "https://www.greynoise.io/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "AbuseIPDB",
+   "url": "https://www.abuseipdb.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Volatility",
+   "url": "https://github.com/volatilityfoundation/volatility3",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Autopsy",
+   "url": "https://github.com/sleuthkit/autopsy",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Velociraptor",
+   "url": "https://github.com/Velocidex/velociraptor",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "GRR",
+   "url": "https://github.com/google/grr",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Chainsaw",
+   "url": "https://github.com/WithSecureLabs/chainsaw",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Falco",
+   "url": "https://github.com/falcosecurity/falco",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Kube-bench",
+   "url": "https://github.com/aquasecurity/kube-bench",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Kubescape",
+   "url": "https://github.com/kubescape/kubescape",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

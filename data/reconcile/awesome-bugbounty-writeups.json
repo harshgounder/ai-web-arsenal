@@ -1,0 +1,144 @@
+{
+ "source": "awesome-bugbounty-writeups",
+ "rows": 620,
+ "admitted": 248,
+ "excluded": 335,
+ "held": 37,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "SOCIAL_OR_VIDEO": 306,
+  "KNOWLEDGE_NOT_TOOL": 24,
+  "UNCLASSIFIED_LOW_SIGNAL": 37,
+  "OUT_OF_SCOPE_NONWEB": 5
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "AIRDOS",
+   "url": "https://kishanbagaria.com/airdos/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Github actions DOS",
+   "url": "https://blog.teddykatz.com/2019/11/12/github-actions-dos.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Instagram account is reactivated without entering 2FA",
+   "url": "https://bugbountypoc.com/instagram-account-is-reactivated-without-entering-2fa/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "A Race condition bug in Facebook chat groups",
+   "url": "https://www.seekurity.com/blog/general/the-fuzz-the-bug-the-action-a-race-condition-bug-in-facebook-chat-groups-leads-to-spy-on-conversations/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Race condition on web",
+   "url": "https://www.josipfranjkovic.com/blog/race-conditions-on-web",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Attacking helpdesk RCE chain on deskpro with bitdefender",
+   "url": "https://blog.redforce.io/attacking-helpdesks-part-1-rce-chain-on-deskpro-with-bitdefender-as-case-study/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Wordpress design flaw leads to woocommerce RCE",
+   "url": "https://blog.ripstech.com/2018/wordpress-design-flaw-leads-to-woocommerce-rce/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Path traversal while uploading results in RCE",
+   "url": "https://blog.harshjaiswal.com/path-traversal-while-uploading-results-in-rce",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE jenkins instance",
+   "url": "https://blog.securitybreached.org/2018/09/07/rce-jenkins-instance-dosomething-org-bug-bounty-poc/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Traversing the path to RCE",
+   "url": "https://hawkinsecurity.com/2018/08/27/traversing-the-path-to-rce/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE due to showexceptions",
+   "url": "https://sites.google.com/view/harshjaiswalblog/rce-due-to-showexceptions",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Yahoo luminate RCE",
+   "url": "https://sites.google.com/securifyinc.com/secblogs/yahoo-luminate-rce",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE by uploading a web config",
+   "url": "https://poc-server.com/blog/2018/05/22/rce-by-uploading-a-web-config/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE in duolingos tinycards app from android",
+   "url": "https://wwws.nightwatchcybersecurity.com/2018/01/04/rce-in-duolingos-tinycards-app-for-android-cve-2017-16905/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Unrestricted file upload to RCE",
+   "url": "https://blog.securitybreached.org/2017/12/19/unrestricted-file-upload-to-rce-bug-bounty-poc/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE starwars",
+   "url": "https://blog.zsec.uk/rce-starwars/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE in Addthis",
+   "url": "https://whitehatnepal.tumblr.com/post/149933960267/rce-in-addthis",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Abusing ImageMagick to obtain RCE",
+   "url": "https://strynx.org/imagemagick-rce/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE via ImageTragick",
+   "url": "https://rezo.blog/hacking/2019/11/29/rce-via-imagetragick.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Chaining Two 0-Days to Compromise An Uber Wordpress",
+   "url": "https://www.rcesecurity.com/2019/09/H1-4420-From-Quiz-to-Admin-Chaining-Two-0-Days-to-Compromise-an-Uber-Wordpress/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE in Ruby using mustache templates",
+   "url": "https://rhys.io/post/rce-in-ruby-using-mustache-templates",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "About a Sucuri RCE\u2026and How Not to Handle Bug Bounty Reports",
+   "url": "https://www.rcesecurity.com/2019/06/about-a-sucuri-rce-and-how-not-to-handle-bug-bounty-reports/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Facebook\u2019s Burglary Shopping List",
+   "url": "https://www.7elements.co.uk/resources/blog/facebooks-burglary-shopping-list/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Apache strust RCE",
+   "url": "https://www.mohamedharon.com/2019/04/apache-strust-rce.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Dell KACE K1000 Remote Code Execution",
+   "url": "https://www.rcesecurity.com/2019/04/dell-kace-k1000-remote-code-execution-the-story-of-bug-k1-18652/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

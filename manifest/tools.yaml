@@ -1,0 +1,623 @@
+# manifest/tools.yaml: the single source of truth for the bootstrap layer.
+#
+# Everything else is generated from this file:
+#   bootstrap/*.sh        install scripts
+#   mcps/generated/       MCP client configs
+#   README tables         the "what you get" tables
+#   data/install-matrix.json  verified availability
+#
+# RULE: an install candidate is a HYPOTHESIS until scripts/verify-tools.py resolves it
+# against the real channel. status field is written by the verifier, never by hand.
+# Channels, in preference order: pacman > aur > go > cargo > npm > pipx > uv > git > docker
+#
+# verify: a command that exits 0 when the tool is present and working.
+
+meta:
+  name: ai-web-arsenal
+  generated: "2026-10-26"
+  target_os: [arch, cachyos, endeavouros, manjaro]
+  assumes: [paru-or-yay, python3, git, curl]
+  notes: |
+    Arch first. Every tool also carries a distro-neutral fallback so a non-Arch user
+    is not locked out. The installer refuses to run as root and never pipes curl to sh.
+
+profiles:
+  minimal:
+    what: the 12 things you need to start today
+    rough_time: 10 min
+  recon:
+    what: surface mapping and content discovery
+    rough_time: 25 min
+  web:
+    what: request manipulation, fuzzing, injection, browser driving
+    rough_time: 40 min
+  api:
+    what: REST, GraphQL, gRPC, schema recovery, capture to spec
+    rough_time: 20 min
+  ai-agent:
+    what: MCP servers, agent harness, prompt packs, sandboxes
+    rough_time: 15 min
+  mobile:
+    what: APK and IPA analysis for the client behind the web app
+    rough_time: 30 min
+  re:
+    what: the REA spine, binary and artifact work
+    rough_time: 45 min
+  all:
+    what: everything
+    rough_time: 90 min
+
+tools:
+  # ---------------- core utilities ----------------
+  - id: jq
+    bin: jq
+    domain: D00
+    role: json slicing, the glue for every other tool
+    kind: cli
+    install: [{channel: pacman, pkg: jq}]
+    verify: "jq --version"
+    json_out: true
+    stdin: true
+    agent_use: "pipe any tool's json through jq -r to get one field per line"
+    docs: https://jqlang.github.io/jq/
+    profiles: [minimal, web, api, all]
+
+  - id: yq
+    bin: yq
+    domain: D00
+    role: yaml and xml to json, for specs and configs
+    kind: cli
+    install: [{channel: pacman, pkg: go-yq}, {channel: aur, pkg: yq}]
+    verify: "yq --version"
+    json_out: true
+    stdin: true
+    agent_use: "yq -o=json openapi.yaml to normalize a spec before diffing"
+    docs: https://github.com/mikefarah/yq
+    profiles: [minimal, api, all]
+
+  - id: fq
+    bin: fq
+    domain: D31
+    role: jq semantics over any binary format, the fastest unknown-format probe
+    kind: cli
+    install: [{channel: pacman, pkg: fq}, {channel: aur, pkg: fq-bin}, {channel: go, pkg: github.com/wader/fq@latest}]
+    verify: "fq --version"
+    json_out: true
+    stdin: true
+    agent_use: "fq '.boxes[0]' file.mp4 to walk an unknown container without a parser"
+    docs: https://github.com/wader/fq
+    profiles: [re, all]
+
+  - id: curl
+    bin: curl
+    domain: D00
+    role: raw http, the ground truth for every request claim
+    kind: cli
+    install: [{channel: pacman, pkg: curl}]
+    verify: "curl --version"
+    json_out: false
+    stdin: true
+    agent_use: "curl -sS -D- -o- with no client cookies, to confirm what a browser tool reported"
+    docs: https://curl.se/docs/
+    profiles: [minimal, web, api, all]
+
+  # ---------------- recon ----------------
+  - id: subfinder
+    bin: subfinder
+    domain: D02
+    role: passive subdomain enumeration
+    kind: cli
+    install: [{channel: aur, pkg: subfinder}, {channel: go, pkg: github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest}]
+    verify: "subfinder -version"
+    json_out: true
+    stdin: true
+    agent_use: "subfinder -d target.tld -silent -json, then dedupe on host"
+    docs: https://github.com/projectdiscovery/subfinder
+    profiles: [minimal, recon, all]
+
+  - id: httpx
+    bin: httpx
+    domain: D02
+    role: http probing and fingerprinting at scale
+    kind: cli
+    install: [{channel: aur, pkg: httpx-bin}, {channel: go, pkg: github.com/projectdiscovery/httpx/cmd/httpx@latest}]
+    verify: "httpx -version"
+    json_out: true
+    stdin: true
+    ambiguity: "AUR 'httpx' is the python library. Use httpx-bin, or go install, never the bare name."
+    corrected: "apktool resolves as AUR android-apktool, not 'apktool'. kiterunner resolves as AUR kiterunner-bin."
+    agent_use: "httpx -l hosts -json -tech-detect -status-code, gives the stack per host"
+    docs: https://github.com/projectdiscovery/httpx
+    profiles: [minimal, recon, all]
+
+  - id: naabu
+    bin: naabu
+    domain: D02
+    role: fast port scan
+    kind: cli
+    install: [{channel: aur, pkg: naabu}, {channel: go, pkg: github.com/projectdiscovery/naabu/v2/cmd/naabu@latest}]
+    verify: "naabu -version"
+    json_out: true
+    stdin: true
+    agent_use: "naabu -list hosts -top-ports 1000 -json"
+    docs: https://github.com/projectdiscovery/naabu
+    profiles: [recon, all]
+
+  - id: dnsx
+    bin: dnsx
+    domain: D02
+    role: dns toolkit, resolver brute force, record types
+    kind: cli
+    install: [{channel: aur, pkg: dnsx}, {channel: go, pkg: github.com/projectdiscovery/dnsx/cmd/dnsx@latest}]
+    verify: "dnsx -version"
+    json_out: true
+    stdin: true
+    agent_use: "dnsx -l subs -a -cname -json to separate dangling cname from live host"
+    docs: https://github.com/projectdiscovery/dnsx
+    profiles: [recon, all]
+
+  - id: katana
+    bin: katana
+    domain: D02
+    role: crawler that understands js, endpoints and forms
+    kind: cli
+    install: [{channel: aur, pkg: katana}, {channel: go, pkg: github.com/projectdiscovery/katana/cmd/katana@latest}]
+    verify: "katana -version"
+    json_out: true
+    stdin: true
+    agent_use: "katana -u target -jc -json -d 3, js crawl is the part that finds api routes"
+    docs: https://github.com/projectdiscovery/katana
+    profiles: [recon, web, all]
+
+  - id: gau
+    bin: gau
+    domain: D02
+    role: known urls from wayback, commoncrawl, alienvault
+    kind: cli
+    install: [{channel: aur, pkg: gau}, {channel: go, pkg: github.com/lc/gau/v2/cmd/gau@latest}]
+    verify: "gau --version"
+    json_out: false
+    stdin: true
+    agent_use: "gau --subs target.tld to harvest historical endpoints before touching the host"
+    docs: https://github.com/lc/gau
+    profiles: [recon, all]
+
+  # ---------------- discovery and fuzzing ----------------
+  - id: ffuf
+    bin: ffuf
+    domain: D02
+    role: content discovery and parameter fuzzing
+    kind: cli
+    install: [{channel: aur, pkg: ffuf}, {channel: aur, pkg: ffuf-bin}, {channel: go, pkg: github.com/ffuf/ffuf/v2@latest}]
+    verify: "ffuf -V"
+    json_out: true
+    stdin: true
+    agent_use: "ffuf -w list -u https://t/FUZZ -of json -o out.json, one job per host"
+    docs: https://github.com/ffuf/ffuf
+    profiles: [minimal, recon, web, all]
+
+  - id: feroxbuster
+    bin: feroxbuster
+    domain: D02
+    role: recursive content discovery
+    kind: cli
+    install: [{channel: aur, pkg: feroxbuster}, {channel: cargo, pkg: feroxbuster}]
+    verify: "feroxbuster --version"
+    json_out: true
+    stdin: true
+    agent_use: "feroxbuster -u target --json, recursion finds nested apps"
+    docs: https://github.com/epi052/feroxbuster
+    profiles: [recon, all]
+
+  - id: gobuster
+    bin: gobuster
+    domain: D02
+    role: dir, dns and vhost brute force
+    kind: cli
+    install: [{channel: pacman, pkg: gobuster}]
+    verify: "gobuster version"
+    json_out: false
+    stdin: false
+    agent_use: "gobuster vhost -u target -w names --append-domain, the vhost mode is the underused one"
+    docs: https://github.com/OJ/gobuster
+    profiles: [recon, all]
+
+  - id: arjun
+    bin: arjun
+    domain: D02
+    role: http parameter discovery
+    kind: cli
+    install: [{channel: pipx, pkg: arjun}, {channel: uv, pkg: arjun}]
+    verify: "arjun --version"
+    json_out: true
+    stdin: false
+    agent_use: "arjun -u endpoint -oJ params.json, hidden params are a logic bug source"
+    docs: https://github.com/s0md3v/Arjun
+    profiles: [web, all]
+
+  # ---------------- scanning ----------------
+  - id: nuclei
+    bin: nuclei
+    domain: D22
+    role: template based scanning, the cve and misconfig workhorse
+    kind: cli
+    install: [{channel: aur, pkg: nuclei-bin}, {channel: aur, pkg: nuclei}, {channel: go, pkg: github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest}]
+    verify: "nuclei -version"
+    json_out: true
+    stdin: true
+    agent_use: "nuclei -l live -jsonl -severity high,critical -rl 30, rate limit is not optional"
+    docs: https://github.com/projectdiscovery/nuclei
+    profiles: [minimal, web, all]
+
+  - id: nikto
+    bin: nikto
+    domain: D22
+    role: classic server misconfiguration scanner
+    kind: cli
+    install: [{channel: pacman, pkg: nikto}, {channel: aur, pkg: nikto}]
+    verify: "nikto -Version"
+    json_out: true
+    stdin: false
+    agent_use: "nikto -h target -Format json -output n.json, noisy, use once per host not per path"
+    docs: https://github.com/sullo/nikto
+    profiles: [web, all]
+
+  - id: wafw00f
+    bin: wafw00f
+    domain: D22
+    role: waf fingerprint, decides which evasion class applies
+    kind: cli
+    install: [{channel: pipx, pkg: wafw00f}, {channel: uv, pkg: wafw00f}]
+    verify: "wafw00f --version"
+    json_out: true
+    stdin: false
+    agent_use: "wafw00f -a target -o json, run before payload selection, not after"
+    docs: https://github.com/EnableSecurity/wafw00f
+    profiles: [web, all]
+
+  - id: whatweb
+    bin: whatweb
+    domain: D03
+    role: technology fingerprinting with plugin detail
+    kind: cli
+    install: [{channel: pacman, pkg: whatweb}, {channel: aur, pkg: whatweb}]
+    verify: "whatweb --version"
+    json_out: true
+    stdin: false
+    agent_use: "whatweb --log-json=w.json --aggression 1, aggression 3 is loud"
+    docs: https://github.com/urbanadventurer/WhatWeb
+    profiles: [recon, all]
+
+  - id: nmap
+    bin: nmap
+    domain: D02
+    role: service and version truth, the fallback when http lies
+    kind: cli
+    install: [{channel: pacman, pkg: nmap}]
+    verify: "nmap --version"
+    json_out: true
+    stdin: true
+    agent_use: "nmap -sV -Pn -oX - | xml to json, good for adhoc service checks"
+    docs: https://nmap.org/book/
+    profiles: [recon, all]
+
+  # ---------------- web and injection ----------------
+  - id: sqlmap
+    bin: sqlmap
+    domain: D07
+    role: sql injection detection and exploitation
+    kind: cli
+    install: [{channel: pacman, pkg: sqlmap}]
+    verify: "sqlmap --version"
+    json_out: false
+    stdin: false
+    agent_use: "sqlmap -u url --batch --level 2 --risk 1 --output-dir, never --dump against production"
+    docs: https://github.com/sqlmapproject/sqlmap
+    profiles: [web, all]
+
+  - id: dalfox
+    bin: dalfox
+    domain: D08
+    role: xss scanner with dom and parameter analysis
+    kind: cli
+    install: [{channel: aur, pkg: dalfox}, {channel: go, pkg: github.com/hahwul/dalfox/v2@latest}]
+    verify: "dalfox version"
+    json_out: true
+    stdin: true
+    agent_use: "dalfox url target --json, then verify by hand, dalfox reports candidates"
+    docs: https://github.com/hahwul/dalfox
+    profiles: [web, all]
+
+  - id: commix
+    bin: commix
+    domain: D07
+    role: os command injection
+    kind: cli
+    install: [{channel: aur, pkg: commix}, {channel: git, pkg: https://github.com/commixproject/commix}]
+    verify: "commix --version"
+    json_out: false
+    stdin: false
+    agent_use: "commix --url target --batch"
+    docs: https://github.com/commixproject/commix
+    profiles: [web, all]
+
+  # ---------------- api ----------------
+  - id: grpcurl
+    bin: grpcurl
+    domain: D11
+    role: grpc reflection and call, the whole grpc attack surface in one binary
+    kind: cli
+    install: [{channel: pacman, pkg: grpcurl}, {channel: aur, pkg: grpcurl}, {channel: go, pkg: github.com/fullstorydev/grpcurl/cmd/grpcurl@latest}]
+    verify: "grpcurl --version"
+    json_out: true
+    stdin: true
+    agent_use: "grpcurl -plaintext host:443 list, then describe, then call. reflection on means full schema"
+    docs: https://github.com/fullstorydev/grpcurl
+    profiles: [api, all]
+
+  - id: kiterunner
+    bin: kr
+    domain: D11
+    role: api route brute force with real wordlists
+    kind: cli
+    install: [{channel: aur, pkg: kiterunner-bin}, {channel: go, pkg: github.com/assetnote/kiterunner/cmd/kr@latest}]
+    verify: "kr version"
+    json_out: true
+    stdin: true
+    agent_use: "kr scan target -w routes.kite -j json, finds routes docs do not mention"
+    docs: https://github.com/assetnote/kiterunner
+    profiles: [api, all]
+
+  - id: clairvoyance
+    bin: clairvoyance
+    domain: D11
+    role: graphql schema recovery when introspection is disabled
+    kind: cli
+    install: [{channel: pipx, pkg: clairvoyance}, {channel: uv, pkg: clairvoyance}]
+    verify: "clairvoyance --help"
+    json_out: true
+    stdin: false
+    agent_use: "clairvoyance -o schema.json -w wordlist url/graphql, this is the introspection-off path"
+    docs: https://github.com/nikitastupin/clairvoyance
+    profiles: [api, all]
+
+  - id: mitmproxy2swagger
+    bin: mitmproxy2swagger
+    domain: D11
+    role: recover an openapi spec from a har or flow dump
+    kind: cli
+    install: [{channel: pipx, pkg: mitmproxy2swagger}, {channel: uv, pkg: mitmproxy2swagger}]
+    verify: "mitmproxy2swagger --help"
+    json_out: true
+    stdin: false
+    agent_use: "mitmproxy2swagger -i flows -o spec.yml -p https://api, then fix ignored paths by hand"
+    docs: https://github.com/alufers/mitmproxy2swagger
+    profiles: [api, all]
+
+  # ---------------- interception and browser ----------------
+  - id: mitmproxy
+    bin: mitmproxy
+    domain: D31
+    role: programmable intercepting proxy, the capture source for REA
+    kind: cli
+    install: [{channel: pacman, pkg: mitmproxy}]
+    verify: "mitmproxy --version"
+    json_out: true
+    stdin: false
+    agent_use: "mitmdump -w flows.mitm, then rea inspect_web_network_capture reads it natively"
+    docs: https://docs.mitmproxy.org/
+    profiles: [minimal, web, api, all]
+
+  - id: zaproxy
+    bin: zaproxy
+    domain: D22
+    role: full scanner with api driven automation
+    kind: cli
+    install: [{channel: pacman, pkg: zaproxy}]
+    verify: "zaproxy -version"
+    json_out: true
+    stdin: false
+    agent_use: "zap.sh -daemon then the rest api, or -cmd for one shot. json report is machine readable"
+    docs: https://www.zaproxy.org/docs/
+    profiles: [web, all]
+
+  - id: chromium
+    bin: chromium
+    domain: D08
+    role: real browser for cdp work, the only honest way to test client side
+    kind: service
+    install: [{channel: pacman, pkg: chromium}]
+    verify: "chromium --version"
+    json_out: false
+    stdin: false
+    agent_use: "chromium --remote-debugging-port=9222 --user-data-dir=/tmp/p, then REA inspects the page"
+    docs: https://chromium.googlesource.com/chromium/src/+/main/docs/
+    profiles: [minimal, web, all]
+
+  # ---------------- secrets and supply chain ----------------
+  - id: trufflehog
+    bin: trufflehog
+    domain: D16
+    role: verified secret detection in repos and filesystems
+    kind: cli
+    install: [{channel: aur, pkg: trufflehog}, {channel: go, pkg: github.com/trufflesecurity/trufflehog/v3@latest}]
+    verify: "trufflehog --version"
+    json_out: true
+    stdin: true
+    agent_use: "trufflehog filesystem . --json --only-verified, only-verified cuts the noise to near zero"
+    docs: https://github.com/trufflesecurity/trufflehog
+    profiles: [web, all]
+
+  - id: gitleaks
+    bin: gitleaks
+    domain: D16
+    role: fast regex secret scan for repos and bundles
+    kind: cli
+    install: [{channel: pacman, pkg: gitleaks}, {channel: aur, pkg: gitleaks}]
+    verify: "gitleaks version"
+    json_out: true
+    stdin: true
+    agent_use: "gitleaks detect --source bundle.js --report-format json, works on a single file"
+    docs: https://github.com/gitleaks/gitleaks
+    profiles: [web, all]
+
+  # ---------------- cloud ----------------
+  - id: prowler
+    bin: prowler
+    domain: D17
+    role: cloud posture and attack path checks
+    kind: cli
+    install: [{channel: pipx, pkg: prowler}, {channel: uv, pkg: prowler}]
+    verify: "prowler --version"
+    json_out: true
+    stdin: false
+    agent_use: "prowler aws -M json-ocsf -o out, needs scoped read credentials, never prod root"
+    docs: https://github.com/prowler-cloud/prowler
+    profiles: [all]
+
+  # ---------------- mobile ----------------
+  - id: jadx
+    bin: jadx
+    domain: D21
+    role: dex to java, the readable half of apk analysis
+    kind: cli
+    install: [{channel: pacman, pkg: jadx}, {channel: aur, pkg: jadx}]
+    verify: "jadx --version"
+    json_out: false
+    stdin: false
+    agent_use: "jadx -d out app.apk, then grep for endpoints. REA does class level lookup without writing source"
+    docs: https://github.com/skylot/jadx
+    profiles: [mobile, all]
+
+  - id: apktool
+    bin: apktool
+    domain: D21
+    role: manifest and resource decode, smali
+    kind: cli
+    install: [{channel: aur, pkg: android-apktool}]
+    verify: "apktool --version"
+    json_out: false
+    stdin: false
+    agent_use: "apktool d -s app.apk, then read AndroidManifest for exported components"
+    docs: https://apktool.org/
+    profiles: [mobile, all]
+
+  - id: frida
+    bin: frida
+    domain: D21
+    role: runtime instrumentation, ssl pinning and logic bypass at runtime
+    kind: cli
+    install: [{channel: pipx, pkg: frida-tools}, {channel: uv, pkg: frida-tools}]
+    verify: "frida --version"
+    json_out: true
+    stdin: false
+    agent_use: "frida -U -f pkg -l hook.js, pinning bypass is a script not a flag"
+    docs: https://frida.re/docs/
+    profiles: [mobile, all]
+
+  # ---------------- reverse engineering spine ----------------
+  - id: ghidra
+    bin: ghidra
+    domain: D31
+    role: decompiler for native artifacts reached from a web target
+    kind: cli
+    install: [{channel: pacman, pkg: ghidra}]
+    verify: "ghidra --version"
+    json_out: false
+    stdin: false
+    agent_use: "analyzeHeadless with a script, or drive it through the rea MCP bridge"
+    docs: https://ghidra-sre.org/
+    profiles: [re, all]
+
+  - id: radare2
+    bin: r2
+    domain: D31
+    role: fast disassembly and binary triage
+    kind: cli
+    install: [{channel: pacman, pkg: radare2}]
+    verify: "r2 -v"
+    json_out: true
+    stdin: true
+    agent_use: "r2 -q -c 'aaa; aflj' file, json output is the agent usable form"
+    docs: https://rada.re/
+    profiles: [re, all]
+
+  - id: binwalk
+    bin: binwalk
+    domain: D31
+    role: firmware and embedded container signature scan
+    kind: cli
+    install: [{channel: pacman, pkg: binwalk}, {channel: aur, pkg: binwalk}]
+    verify: "binwalk --version"
+    json_out: true
+    stdin: false
+    agent_use: "binwalk -e image.bin, or REA firmware lane for unblob based extraction"
+    docs: https://github.com/ReFirmLabs/binwalk
+    profiles: [re, all]
+
+  - id: hashcat
+    bin: hashcat
+    domain: D16
+    role: offline cracking for hashes recovered from artifacts
+    kind: cli
+    install: [{channel: pacman, pkg: hashcat}]
+    verify: "hashcat --version"
+    json_out: true
+    stdin: false
+    agent_use: "hashcat -m 1400 -a 0 hash.txt rockyou.txt, identify mode first with hashid"
+    docs: https://hashcat.net/hashcat/
+    profiles: [all]
+
+  # ---------------- payload and knowledge corpora ----------------
+  - id: seclists
+    bin: null
+    domain: D27
+    role: the wordlist corpus everything else consumes
+    kind: corpus
+    install: [{channel: pacman, pkg: seclists}, {channel: git, pkg: https://github.com/danielmiessler/SecLists}]
+    verify: "test -d /usr/share/seclists"
+    json_out: false
+    stdin: false
+    agent_use: "point -w at /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt"
+    docs: https://github.com/danielmiessler/SecLists
+    profiles: [minimal, recon, web, all]
+
+  - id: nuclei-templates
+    bin: null
+    domain: D27
+    role: the template corpus nuclei runs
+    kind: corpus
+    install: [{channel: git, pkg: https://github.com/projectdiscovery/nuclei-templates}]
+    verify: "test -d ~/nuclei-templates"
+    json_out: false
+    stdin: false
+    agent_use: "nuclei -update-templates, then -tags for a class instead of all"
+    docs: https://github.com/projectdiscovery/nuclei-templates
+    profiles: [minimal, web, all]
+
+  # ---------------- agent layer ----------------
+  - id: uv
+    bin: uv
+    domain: D35
+    role: python env and tool runner, the install engine for python tooling
+    kind: cli
+    install: [{channel: pacman, pkg: uv}]
+    verify: "uv --version"
+    json_out: false
+    stdin: false
+    agent_use: "uv tool install <pkg> keeps system python untouched"
+    docs: https://docs.astral.sh/uv/
+    profiles: [minimal, all]
+
+  - id: pipx
+    bin: pipx
+    domain: D35
+    role: isolated python cli installs
+    kind: cli
+    install: [{channel: pacman, pkg: python-pipx}]
+    verify: "pipx --version"
+    json_out: false
+    stdin: false
+    agent_use: "pipx install <pkg> for single file python tools"
+    docs: https://pipx.pypa.io/
+    profiles: [minimal, all]

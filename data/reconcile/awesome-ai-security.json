@@ -1,0 +1,25 @@
+{
+ "source": "awesome-ai-security",
+ "rows": 97,
+ "admitted": 36,
+ "excluded": 60,
+ "held": 0,
+ "orphan": 1,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "TAXONOMY_NODE": 13,
+  "not_in_corpus": 1,
+  "KNOWLEDGE_NOT_TOOL": 39,
+  "SOCIAL_OR_VIDEO": 3,
+  "OUT_OF_SCOPE_NONWEB": 5
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "Website / Blog post",
+   "url": null,
+   "reason": "not_in_corpus"
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+{
+ "total_rows": 31298,
+ "sources": [
+  {
+   "source": "qazbnm456__awesome-web-security",
+   "type": "rival",
+   "label": "qazbnm456/awesome-web-security",
+   "status": "ok",
+   "rows": 2262,
+   "with_url": 2227,
+   "unique_canonical": 714
+  },
+  {
+   "source": "infoslack__awesome-web-hacking",
+   "type": "rival",
+   "label": "infoslack/awesome-web-hacking",
+   "status": "ok",
+   "rows": 42,
+   "with_url": 42,
+   "unique_canonical": 42
+  },
+  {
+   "source": "0xinfection__awesome-waf",
+   "type": "rival",
+   "label": "0xInfection/Awesome-WAF",
+   "status": "ok",
+   "rows": 305,
+   "with_url": 305,
+   "unique_canonical": 210
+  },
+  {
+   "source": "vavkamil__awesome-bugbounty-tools",
+   "type": "rival",
+   "label": "vavkamil/awesome-bugbounty-tools",
+   "status": "ok",
+   "rows": 410,
+   "with_url": 410,
+   "unique_canonical": 398
+  },
+  {
+   "source": "hack-with-github__awesome-hacking",
+   "type": "rival",
+   "label": "Hack-with-Github/Awesome-Hacking",
+   "status": "ok",
+   "rows": 83,
+   "with_url": 83,
+   "unique_canonical": 83
+  },
+  {
+   "source": "enaqx__awesome-pentest",
+   "type": "rival",
+   "label": "enaqx/awesome-pentest",
+   "status": "ok",
+   "rows": 618,
+   "with_url": 618,
+   "unique_canonical": 617
+  },
+  {
+   "source": "carpedm20__awesome-hacking",
+   "type": "rival",
+   "label": "carpedm20/awesome-hacking",
+   "status": "ok",
+   "rows": 201,
+   "with_url": 201,
+   "unique_canonical": 197
+  },
+  {
+   "source": "devanshbatham__awesome-bugbounty-writeups",
+   "type": "rival",
+   "label": "devanshbatham/Awesome-Bugbounty-Writeups",
+   "status": "ok",
+   "rows": 620,
+   "with_url": 620,
+   "unique_canonical": 579
+  },
+  {
+   "source": "arainho__awesome-api-security",
+   "type": "rival",
+   "label": "arainho/awesome-api-security",
+   "status": "ok",
+   "rows": 227,
+   "with_url": 204,
+   "unique_canonical": 196
+  },
+  {
+   "source": "jbahire__awesome-api-security-essentials",
+   "type": "rival",
+   "label": "JBAhire/awesome-api-security-essentials",
+   "status": "ok",
+   "rows": 191,
+   "with_url": 166,
+   "unique_canonical": 158
+  },
+  {
+   "source": "wangyihang__awesome-web-security",
+   "type": "rival",
+   "label": "WangYihang/awesome-web-security",
+   "status": "ok",
+   "rows": 1,
+   "with_url": 0,
+   "unique_canonical": 0
+  },
+  {
+   "source": "skyvanguard__awesome-ai-pentesting",
+   "type": "rival",
+   "label": "skyvanguard/awesome-ai-pentesting",
+   "status": "ok",
+   "rows": 197,
+   "with_url": 184,
+   "unique_canonical": 183
+  },
+  {
+   "source": "penstriker__awesome-ai-pentest-tools",
+   "type": "rival",
+   "label": "penstriker/awesome-ai-pentest-tools",
+   "status": "ok",
+   "rows": 35,
+   "with_url": 35,
+   "unique_canonical": 34
+  },
+  {
+   "source": "spinov001-art__awesome-security-tools-2026",
+   "type": "rival",
+   "label": "spinov001-art/awesome-security-tools-2026",
+   "status": "ok",
+   "rows": 125,
+   "with_url": 109,
+   "unique_canonical": 108
+  },
+  {
+   "source": "marchev__awesome-ai-web3-security",
+   "type": "rival",
+   "label": "marchev/awesome-ai-web3-security",
+   "status": "ok",
+   "rows": 62,
+   "with_url": 62,
+   "unique_canonical": 60
+  },
+  {
+   "source": "randomadversary__awesome-ai-security",
+   "type": "rival",
+   "label": "RandomAdversary/Awesome-AI-Security",
+   "status": "ok",
+   "rows": 97,
+   "with_url": 83,
+   "unique_canonical": 83
+  },
+  {
+   "source": "tupletype__awesome-cicd-attacks",
+   "type": "rival",
+   "label": "TupleType/awesome-cicd-attacks",
+   "status": "ok",
+   "rows": 89,
+   "with_url": 89,
+   "unique_canonical": 89
+  },
+  {
+   "source": "enablesecurity__awesome-rtc-hacking",
+   "type": "rival",
+   "label": "EnableSecurity/awesome-rtc-hacking",
+   "status": "ok",
+   "rows": 108,
+   "with_url": 108,
+   "unique_canonical": 99
+  },
+  {
+   "source": "punkpeye__awesome-mcp-servers",
+   "type": "rival",
+   "label": "punkpeye/awesome-mcp-servers",
+   "status": "ok",
+   "rows": 11777,
+   "with_url": 11777,
+   "unique_canonical": 8183
+  },
+  {
+   "source": "own-byok-cyber-arsenal",
+   "type": "own",
+   "label": "byok-cyber-arsenal/catalog",
+   "status": "ok",
+   "rows": 1580,
+   "with_url": 1276,
+   "unique_canonical": 1013
+  },
+  {
+   "source": "own-web-universe",
+   "type": "own",
+   "label": "web-universe-work/universe-nodes.json",
+   "status": "ok",
+   "rows": 11581,
+   "with_url": 0,
+   "unique_canonical": 0
+  },
+  {
+   "source": "own-rea-expansion",
+   "type": "own",
+   "label": "rea-expansion/w3-tools",
+   "status": "ok",
+   "rows": 687,
+   "with_url": 687,
+   "unique_canonical": 687
+  }
+ ],
+ "generated_at": "2026-10-26"
+}

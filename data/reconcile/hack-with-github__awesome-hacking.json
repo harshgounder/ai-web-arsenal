@@ -1,0 +1,149 @@
+{
+ "source": "hack-with-github__awesome-hacking",
+ "rows": 83,
+ "admitted": 39,
+ "excluded": 10,
+ "held": 34,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "OUT_OF_SCOPE_NONWEB": 7,
+  "UNCLASSIFIED_LOW_SIGNAL": 34,
+  "KNOWLEDGE_NOT_TOOL": 1,
+  "SOCIAL_OR_VIDEO": 2
+ },
+ "unique_entries": {
+  "admit": 39,
+  "exclude": 10,
+  "hold": 34
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "CI/CD Attacks",
+   "url": "https://github.com/TupleType/awesome-cicd-attacks",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "CTF",
+   "url": "https://github.com/apsdehal/awesome-ctf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Cyber Skills",
+   "url": "https://github.com/joe-shenouda/awesome-cyber-skills",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Cybersources",
+   "url": "https://github.com/bst04/CyberSources",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Detection Engineering",
+   "url": "https://github.com/infosecB/awesome-detection-engineering",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "DevSecOps",
+   "url": "https://github.com/devsecops/awesome-devsecops",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Drone Hacking",
+   "url": "https://github.com/nicholasaleks/Awesome-Drone-Hacking",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Hacking",
+   "url": "https://github.com/carpedm20/awesome-hacking",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Honeypots",
+   "url": "https://github.com/paralax/awesome-honeypots",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Incident Response",
+   "url": "https://github.com/meirwah/awesome-incident-response",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Mainframe Hacking",
+   "url": "https://github.com/samanL33T/Awesome-Mainframe-Hacking",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Malware Analysis",
+   "url": "https://github.com/rshipp/awesome-malware-analysis",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Malware Persistence",
+   "url": "https://github.com/Karneades/awesome-malware-persistence",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OSINT",
+   "url": "https://github.com/jivoi/awesome-osint",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Password Cracking",
+   "url": "https://github.com/n0kovo/awesome-password-cracking",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Pcaptools",
+   "url": "https://github.com/caesar0301/awesome-pcaptools",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Reversing",
+   "url": "https://github.com/HACKE-RC/awesome-reversing",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Social Engineering",
+   "url": "https://github.com/giuliacassara/awesome-social-engineering",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Static Analysis",
+   "url": "https://github.com/analysis-tools-dev/static-analysis",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "The Art of Hacking Series",
+   "url": "https://github.com/The-Art-of-Hacking/h4cker",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Threat Intelligence",
+   "url": "https://github.com/hslatman/awesome-threat-intelligence",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "YARA",
+   "url": "https://github.com/InQuest/awesome-yara",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "APT Notes",
+   "url": "https://github.com/kbandla/APTnotes",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Cryptography",
+   "url": "https://github.com/sobolevn/awesome-cryptography",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Forensics",
+   "url": "https://github.com/Cugu/awesome-forensics",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

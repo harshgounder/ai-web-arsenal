@@ -1,0 +1,151 @@
+{
+ "source": "jbahire__awesome-api-security-essentials",
+ "rows": 191,
+ "admitted": 38,
+ "excluded": 82,
+ "held": 69,
+ "orphan": 2,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "TAXONOMY_NODE": 23,
+  "UNCLASSIFIED_LOW_SIGNAL": 69,
+  "KNOWLEDGE_NOT_TOOL": 26,
+  "OUT_OF_SCOPE_NONWEB": 17,
+  "not_in_corpus": 2,
+  "SOCIAL_OR_VIDEO": 16
+ },
+ "unique_entries": {
+  "admit": 35,
+  "exclude": 78,
+  "hold": 68
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "API1:2023 - Broken Object Level Authorization",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API2:2023 - Broken Authentication",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa2-broken-authentication/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API3:2023 - Broken Object Property Level Authorization",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API5:2023 - Broken Function Level Authorization",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "#",
+   "url": null,
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "The Parler Hack Is a Reminder: The End-to-End Encryption Debate Isn\u2019t Going Away",
+   "url": "https://www.wired.com/story/parler-hack-end-to-end-encryption-debate/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Peloton\u2019s leaky API let anyone grab riders\u2019 private account data",
+   "url": "https://techcrunch.com/2021/05/05/peloton-api-account-data-leak/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Experian\u2019s Credit Freeze Security is Still a Joke",
+   "url": "https://krebsonsecurity.com/2020/08/experians-credit-freeze-security-is-still-a-joke/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "John Deere security flaw lets anyone download sensitive files from its site",
+   "url": "https://www.vice.com/en/article/epn5jw/john-deere-security-flaw-lets-anyone-download-sensitive-files-from-its-site",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Microsoft says it thwarted recent cyberattack from group it calls \u2018Lapsus$\u2019",
+   "url": "https://www.cnn.com/2022/03/20/tech/microsoft-cyberattack/index.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Bloomberg",
+   "url": "https://www.bloomberg.com/news/articles/2020-10-15/robinhood-says-some-customer-accounts-may-have-become-target",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ZDNet",
+   "url": "https://www.zdnet.com/article/garmin-services-and-production-go-down-after-ransomware-attack/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ZDNet",
+   "url": "https://www.zdnet.com/article/exclusive-details-of-10-6-million-of-mgm-hotel-guests-posted-on-a-hacking-forum/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "SolarWinds",
+   "url": "https://www.solarwinds.com/securityadvisory",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "BBC",
+   "url": "https://www.bbc.com/news/technology-52722626",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Marriott",
+   "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-update-on-property-system-security",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Nintendo",
+   "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/49167/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "KrebsOnSecurity",
+   "url": "https://krebsonsecurity.com/2019/05/first-american-financial-corp-leaked-hundreds-of-millions-of-title-insurance-records/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "The Economic Times",
+   "url": "https://economictimes.indiatimes.com/tech/internet/justdial-affected-by-data-breach-of-100-million-users/articleshow/68883453.cms",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Capital One",
+   "url": "https://www.capitalone.com/facts2019/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "DoorDash Blog",
+   "url": "https://blog.doordash.com/important-security-notice-about-your-doordash-account-34b2b7d89a58",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ZDNet",
+   "url": "https://www.zdnet.com/article/data-for-roughly-139-million-users-has-been-taken-from-canva/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "The Hacker News",
+   "url": "https://thehackernews.com/2019/09/zynga-game-data-breach.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Facebook Newsroom",
+   "url": "https://about.fb.com/news/2018/04/restricting-data-access/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "The Information",
+   "url": "https://www.theinformation.com/articles/instagram-exposed-data-on-millions-of-users",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

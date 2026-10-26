@@ -1,0 +1,144 @@
+{
+ "source": "awesome-rtc-hacking",
+ "rows": 108,
+ "admitted": 29,
+ "excluded": 49,
+ "held": 30,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "UNCLASSIFIED_LOW_SIGNAL": 30,
+  "OUT_OF_SCOPE_NONWEB": 24,
+  "SOCIAL_OR_VIDEO": 14,
+  "KNOWLEDGE_NOT_TOOL": 11
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "![CC0",
+   "url": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Hacking VoIP Exposed",
+   "url": "https://www.blackhat.com/presentations/bh-usa-06/BH-US-06-Endler.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Remote Access VPN and SIP Vulnerabilities in Cisco PIX and Cisco ASA",
+   "url": "https://www.opennet.ru/base/fire/1220546283_299.txt.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Zoom Communications user enumeration",
+   "url": "https://blog.talosintelligence.com/2020/04/zoom-user-enumeration.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "SIPPTS",
+   "url": "https://github.com/Pepelux/sippts",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "vsaudit",
+   "url": "https://github.com/eurialo/vsaudit",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "SIPp digest leak scenario",
+   "url": "http://tomeko.net/other/sipp/sipp_cheatsheet.php",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "VoIPShark",
+   "url": "https://github.com/pentesteracademy/voipshark",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "sipsak",
+   "url": "https://github.com/nils-ohlmeier/sipsak",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "SeeYouCM Thief",
+   "url": "https://github.com/trustedsec/SeeYouCM-Thief",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "TURNado",
+   "url": "https://github.com/SySS-Research/TURNado",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Abusing SIP Authentication",
+   "url": "https://www.researchgate.net/publication/4377144_Abusing_SIP_authentication",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Realtime Steganography with RTP",
+   "url": "http://www.uninformed.org/?v=8&a=3&t=pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "A Lossless Steganography Technique for G.711 Telephony Speech",
+   "url": "https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/39690/1/MP-P2-7.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Steganalysis of compressed speech to detect covert VoIP channels",
+   "url": "https://repository.uwl.ac.uk/id/eprint/3959/1/Steganalysis%20of%20compressed%20speech%20to%20detect%20covert%20Voice%20over%20Internet%20Protocol%20channels.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Securing Voice over Internet Protocol",
+   "url": "https://annals-csis.org/proceedings/2007/pliks/16.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "An ontology description for SIP security flaws",
+   "url": "https://web.archive.org/web/20121222012028/http://www.cs.columbia.edu/~dgen/papers/journal/Journal-03.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Analysis of DDoS Attacks in Heterogeneous VoIP Networks: A Survey",
+   "url": "https://www.ijitee.org/wp-content/uploads/papers/v8i6s3/F10490486S319.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Network security systems to counter SIP-based denial-of-service attacks",
+   "url": "https://web.archive.org/web/20180619110044/http://www.cs.columbia.edu:80/~dgen/papers/journal/Journal-08.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Multilayer Secured SIP Based VoIP Architecture",
+   "url": "https://www.researchgate.net/profile/Rowayda_Sadek/publication/282624359_Multilayer_Secured_SIP_Based_VoIP_Architecture/links/57c3ed2a08aed010b7ee370f/Multilayer-Secured-SIP-Based-VoIP-Architecture.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Battling Against DDoS in SIP",
+   "url": "https://www.researchgate.net/profile/Georgios_Kambourakis/publication/281240581_Battling_Against_DDoS_in_SIP_Is_Machine_Learning-based_Detection_an_Effective_Weapon/links/55dc7f2508aec156b9b1801d/Battling-Against-DDoS-in-SIP-Is-Machine-Learning-based-Detection-an-Effective-Weapon.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "An Analysis of Security Threats and Tools in SIP-Based VoIP Systems",
+   "url": "http://startrinity.com/VoIP/Resources/sip371.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Fast Detection of Denial-of-ServiceAttacks on IP Telephony",
+   "url": "https://www.eecis.udel.edu/~hnw/paper/iwqos06.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "VoIP Security: Threat Analysis & Countermeasures",
+   "url": "https://fysarakis.com/uploads/2/0/6/3/20637656/MSc_Project_Thesis_VoIP.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Pepelux blog",
+   "url": "https://blog.pepelux.org/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

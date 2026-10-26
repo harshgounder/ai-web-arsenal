@@ -1,0 +1,122 @@
+{
+ "generated_at": "2026-10-26",
+ "rows_parsed": 31295,
+ "entries_canonical": 24759,
+ "unresolved_rows": 3,
+ "tiers": {
+  "core_web": 537,
+  "adjacent": 19004,
+  "offscope": 420,
+  "knowledge": 824,
+  "tail": 3974
+ },
+ "kinds": {
+  "tool": 12223,
+  "taxonomy_node": 11712,
+  "social": 577,
+  "knowledge": 247
+ },
+ "domains": {
+  "unclassified": 11960,
+  "D28": 7702,
+  "D08": 683,
+  "D10": 679,
+  "D02": 637,
+  "D24": 635,
+  "D17": 288,
+  "D22": 262,
+  "D26": 212,
+  "D19": 188,
+  "D11": 185,
+  "D07": 182,
+  "D16": 134,
+  "D14": 127,
+  "D21": 127,
+  "D18": 108,
+  "D06": 96,
+  "D13": 93,
+  "D12": 60,
+  "D25": 59,
+  "D15": 57,
+  "D04": 53,
+  "D31": 45,
+  "D20": 39,
+  "D23": 35,
+  "D05": 34,
+  "D30": 34,
+  "D03": 18,
+  "D09": 17,
+  "D01": 10
+ },
+ "unique_to_one_source": 24211,
+ "multi_source_ge2": 548,
+ "per_source": {
+  "0xinfection__awesome-waf": {
+   "rows": 305
+  },
+  "arainho__awesome-api-security": {
+   "rows": 227
+  },
+  "carpedm20__awesome-hacking": {
+   "rows": 201
+  },
+  "devanshbatham__awesome-bugbounty-writeups": {
+   "rows": 620
+  },
+  "enablesecurity__awesome-rtc-hacking": {
+   "rows": 108
+  },
+  "enaqx__awesome-pentest": {
+   "rows": 618
+  },
+  "hack-with-github__awesome-hacking": {
+   "rows": 83
+  },
+  "infoslack__awesome-web-hacking": {
+   "rows": 42
+  },
+  "jbahire__awesome-api-security-essentials": {
+   "rows": 189,
+   "unresolved": 2
+  },
+  "marchev__awesome-ai-web3-security": {
+   "rows": 62
+  },
+  "own-byok-cyber-arsenal": {
+   "rows": 1580
+  },
+  "own-rea-expansion": {
+   "rows": 687
+  },
+  "own-web-universe": {
+   "rows": 11581
+  },
+  "penstriker__awesome-ai-pentest-tools": {
+   "rows": 35
+  },
+  "punkpeye__awesome-mcp-servers": {
+   "rows": 11777
+  },
+  "qazbnm456__awesome-web-security": {
+   "rows": 2262
+  },
+  "randomadversary__awesome-ai-security": {
+   "rows": 97
+  },
+  "skyvanguard__awesome-ai-pentesting": {
+   "rows": 197
+  },
+  "spinov001-art__awesome-security-tools-2026": {
+   "rows": 125
+  },
+  "tupletype__awesome-cicd-attacks": {
+   "rows": 89
+  },
+  "vavkamil__awesome-bugbounty-tools": {
+   "rows": 410
+  },
+  "wangyihang__awesome-web-security": {
+   "unresolved": 1
+  }
+ }
+}

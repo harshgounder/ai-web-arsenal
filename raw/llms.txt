@@ -1,0 +1,58 @@
+---
+title: AI Security Startups Map
+date: 2026-10-25
+lastUpdated: 2026-10-25
+published: 2025-06-05
+---
+
+# AI Security Startups Map
+
+> Interactive, continuously updated map of agentic AI security startups and vendors — runtime guardrails, agentic identity, AI red teaming, governance, and more.
+
+Curated by Prompt Security. 466 vendors across 14 categories. Includes acquired companies; excludes stealth-mode companies. Last updated: October 25, 2026.
+
+## Key statistics
+
+- Vendors tracked: 466
+- Categories: 14
+- Countries: 29
+- Pre-existing security vendors repositioned into AI security: 148 (32%)
+- Disclosed funding: ~$14.9B across 326 vendors
+- Top countries: USA (247, 53%), Israel (106, 23%), UK (21, 5%)
+- Largest category: Observability & Governance (304 vendors)
+- Founded 2023–2025: 268 of 466 (58%); peak year 2025 (113)
+- Acquired: 37; top acquirers Check Point (3), PAN (3), Cisco (3)
+- Acquisitions by year: 2026: 20, 2025: 13, 2024: 4
+
+## Categories
+
+- **Observability & Governance** (304 vendors): Continuous discovery, inventory, and behavioral profiling of every AI agent across the enterprise. Lifecycle controls, audit trails, and policy enforcement to keep the agent fleet visible and accountable.
+- **Runtime & Guardrails** (237 vendors): Inline content inspection and behavioral enforcement at the moment of inference. Blocks prompt injection, jailbreaks, data exfiltration, and unauthorized tool calls before they reach the model or downstream systems.
+- **AI Identity** (122 vendors): Issues verifiable, scoped, and revocable identities to AI agents and non-human workloads. Brokers least-privilege access to tools, APIs, and data so each agent action can be authenticated and audited.
+- **MCP & LLM Gateways** (110 vendors): Protocol-layer control plane sitting between agents and the MCP servers, tools, and models they call. Per-request auth, scope enforcement, tool-call inspection, and supply-chain governance for the agent ↔ tool boundary.
+- **AI Red Teaming** (94 vendors): Automated and human-in-the-loop adversarial testing of agents, models, and AI infrastructure. Generates attack chains, evaluates defenses, and produces auditor-ready findings before vulnerabilities reach production.
+- **AI CSPM** (75 vendors): Posture management for AI agents, models, datasets, and pipelines across cloud and SaaS estates. Maps agent dependencies, surfaces misconfigurations, and prioritizes risk before workloads are exploited at runtime.
+- **AI Data Governance** (77 vendors): Governs what data AI agents can read, write, and surface to users. Detects oversharing, enforces need-to-know access at inference time, and remediates sensitive-data exposure across the agent supply chain.
+- **Model Security** (57 vendors): Secures the model itself across the ML lifecycle — supply-chain scanning of model files for backdoors, malware, and poisoning. Runtime protection against adversarial inputs and integrity drift in production.
+- **AI Network Security** (25 vendors): Network-layer visibility and enforcement for AI traffic that bypasses traditional firewalls, SSE, and SASE. Decodes prompt/response flows, blocks shadow AI usage, and applies dynamic policy by app, user, and data type.
+- **AI Endpoint Security** (43 vendors): Next-generation EDR for AI agents running on developer and employee endpoints. Endpoint-native sensors intercept agent actions before execution, enforce intent-based policy, and surface shadow agents fleet-wide.
+- **AI Code Security** (25 vendors): Shift-left security for AI-generated code and agent-orchestrated codebases. Reviews designs, scans dependencies, and governs coding agents (Cursor, Claude Code, Copilot) before insecure code ships to production.
+- **AI Browser Security** (34 vendors): Controls AI usage happening inside the browser, where most employee GenAI activity lives. Browser-layer DLP, in-flow coaching, and per-action policy enforcement for ChatGPT, Copilot, Claude, and embedded copilots.
+- **AI SSPM** (14 vendors): Secures AI agents and copilots that live inside SaaS applications and citizen-developer platforms. Discovers OAuth-connected AI, governs Copilot Studio / Agentforce / LCNC agents, and contains SaaS-to-SaaS propagation risk.
+- **Sandboxing** (25 vendors): Isolated execution environments where AI-generated code and agent actions can run without touching production. Container, microVM, and syscall-level boundaries that contain blast radius when agents go off-script.
+
+## Data & APIs
+
+- [All vendors (JSON)](https://startups.prompt.security/api/vendors): full structured vendor dataset
+- [All categories (JSON)](https://startups.prompt.security/api/categories): category definitions
+- [MCP server](https://startups.prompt.security/mcp): Model Context Protocol endpoint (streamable HTTP) with tools get_categories, get_vendors_by_categories, get_vendor_details
+- [Full LLM text](https://startups.prompt.security/llms-full.txt): complete vendor details in plain text
+
+## About the curator
+
+Prompt Security is an enterprise platform for securing generative and agentic AI, trusted by security teams running AI agents in production. Its expertise spans runtime guardrails, prompt-injection defense, AI red teaming, agentic identity, and governance across the AI stack — the same domain this directory catalogs.
+This map is a free, open, vendor-neutral resource maintained as a reliable, continuously updated reference for security architects, AI platform teams, investors, and researchers. It is widely used to compare the agentic-AI security market.
+
+## Optional
+
+- [Homepage](https://startups.prompt.security/): interactive visual map and chat

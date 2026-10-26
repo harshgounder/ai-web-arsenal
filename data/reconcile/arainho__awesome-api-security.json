@@ -1,0 +1,150 @@
+{
+ "source": "arainho__awesome-api-security",
+ "rows": 227,
+ "admitted": 126,
+ "excluded": 52,
+ "held": 49,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "TAXONOMY_NODE": 23,
+  "UNCLASSIFIED_LOW_SIGNAL": 49,
+  "OUT_OF_SCOPE_NONWEB": 4,
+  "KNOWLEDGE_NOT_TOOL": 14,
+  "SOCIAL_OR_VIDEO": 11
+ },
+ "unique_entries": {
+  "admit": 118,
+  "exclude": 31,
+  "hold": 49
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "Key-Checker",
+   "url": "https://github.com/daffainfo/Key-Checker",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Keyhacks",
+   "url": "https://github.com/streaak/keyhacks",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API audit checklist",
+   "url": "https://www.apiopscycles.com/api-audit-checklist",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API penetration testing checklist",
+   "url": "https://apimike.com/api-penetration-testing-checklist",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Bookstore",
+   "url": "https://tryhackme.com/room/bookstoreoc",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Damn Vulnerable Micro Services",
+   "url": "https://github.com/ne0z/DamnVulnerableMicroServices",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Damn Vulnerable RESTaurant API Game",
+   "url": "https://github.com/theowni/Damn-Vulnerable-RESTaurant-API-Game",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Generic-University",
+   "url": "https://github.com/InsiderPhD/Generic-University",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "node-api-goat",
+   "url": "https://github.com/layro01/node-api-goat",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Pixi",
+   "url": "https://github.com/DevSlop/Pixi",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "vulnapi",
+   "url": "https://github.com/tkisason/vulnapi",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Websheep",
+   "url": "https://github.com/marmicode/websheep",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Collect API Requirements",
+   "url": "https://www.apiopscycles.com/collecting-requirements",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "w3af scanning",
+   "url": "http://docs.w3af.org/en/latest/scan-rest-apis.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Know your HTTP Headers!",
+   "url": "http://prezo.s3.amazonaws.com/pixi_california_2018/basics/headers.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Know your HTTP Methods!",
+   "url": "http://prezo.s3.amazonaws.com/pixi_california_2018/basics/methods.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Know your HTTP Status codes!",
+   "url": "http://prezo.s3.amazonaws.com/pixi_california_2018/basics/status-codes.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "HTTP Status Codes",
+   "url": "https://httpstatuses.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Know your HTTP Well",
+   "url": "https://github.com/for-GET/know-your-http-well",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Harsh Bothra",
+   "url": "https://github.com/muffyhub",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "api hacker\u2019s inner circle",
+   "url": "https://apihacker.blog/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API Hacking Articles",
+   "url": "https://danaepp.com/blog",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API Penetration Testing",
+   "url": "https://blog.securelayer7.net/api-penetration-testing-with-owasp-2017-test-cases",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "API Penetration Testing Report",
+   "url": "https://underdefense.com/wp-content/uploads/2019/05/Anonymised-API-Penetration-Testing-Report.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "How to Hack an API and Get Away with It",
+   "url": "https://smartbear.com/blog/test-and-monitor/api-security-testing-how-to-hack-an-api-part-1/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

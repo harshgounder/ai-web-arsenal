@@ -1,0 +1,68 @@
+{
+ "source": "0xinfection__awesome-waf",
+ "rows": 305,
+ "admitted": 177,
+ "excluded": 119,
+ "held": 9,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "UNCLASSIFIED_LOW_SIGNAL": 9,
+  "SOCIAL_OR_VIDEO": 115,
+  "KNOWLEDGE_NOT_TOOL": 4
+ },
+ "unique_entries": {
+  "admit": 123,
+  "exclude": 78,
+  "hold": 9
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "title-casing",
+   "url": "http://titlecapitalization.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "GitHub account",
+   "url": "https://github.com/join",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Step 2 Click on Readme.md",
+   "url": "https://cloud.githubusercontent.com/assets/170270/9402920/53a7e3ea-480c-11e5-9d81-aecf64be55eb.png",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Step 3 - Click on Edit",
+   "url": "https://cloud.githubusercontent.com/assets/170270/9402927/6506af22-480c-11e5-8c18-7ea823530099.png",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "GitHub Flavored Markdown",
+   "url": "https://help.github.com/articles/github-flavored-markdown/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Step 4 - Edit the file",
+   "url": "https://cloud.githubusercontent.com/assets/170270/9402932/7301c3a0-480c-11e5-81f5-7e343b71674f.png",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Step 5 - Propose Changes",
+   "url": "https://cloud.githubusercontent.com/assets/170270/9402937/7dd0652a-480c-11e5-9138-bd14244593d5.png",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "pull request",
+   "url": "https://help.github.com/articles/using-pull-requests/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Here",
+   "url": "https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "source": "infoslack__awesome-web-hacking",
+ "rows": 42,
+ "admitted": 23,
+ "excluded": 6,
+ "held": 13,
+ "orphan": 0,
+ "unresolved": 0,
+ "unparsed": 0,
+ "exclusion_reasons": {
+  "UNCLASSIFIED_LOW_SIGNAL": 13,
+  "OUT_OF_SCOPE_NONWEB": 6
+ },
+ "unique_entries": {
+  "admit": 23,
+  "exclude": 6,
+  "hold": 13
+ },
+ "identity_holds": true,
+ "held_examples": [
+  {
+   "name": "AppSec Santa",
+   "url": "https://appsecsanta.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Web Application Exploitation @ Rawsec Inventory",
+   "url": "https://inventory.raw.pm/tools.html#title-tools-web-application-exploitation",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "BadUSB Script To Exfiltrate Passwords",
+   "url": "https://github.com/MarkCyber/BadUSB/blob/main/HackStuff/CredentialHarvester.txt",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "SaaSFort",
+   "url": "https://saasfort.com/scan",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ImmuniWeb CyberScore",
+   "url": "https://www.immuniweb.com/cyberscore/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "official Kali Linux",
+   "url": "https://hub.docker.com/r/kalilinux/kali-linux-docker/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "official BlackArch Linux",
+   "url": "https://hub.docker.com/r/blackarchlinux/blackarch",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OWASP Juice Shop",
+   "url": "https://hub.docker.com/r/bkimminich/juice-shop",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OWASP WebGoat Project docker image",
+   "url": "https://hub.docker.com/r/webgoat/goatandwolf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "OWASP WrongSecrets Project docker image",
+   "url": "https://hub.docker.com/r/jeroenwillemsen/wrongsecrets",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Hackerone",
+   "url": "https://www.hackerone.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "HackSimulator",
+   "url": "https://chatgpt.com/g/g-jnT7HlNeK-hacksimulator",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "MarkCyber",
+   "url": "https://github.com/MarkCyber",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  }
+ ]
+}
