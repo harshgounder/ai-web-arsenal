@@ -249,8 +249,8 @@
   },
   {
    "id": "d03-favicon",
-   "name": "Favicon hash matching",
-   "url": "https://github.com/dev2be/awesome-favicon-hash",
+   "name": "Favicon hash via httpx -favicon",
+   "url": "https://github.com/projectdiscovery/httpx",
    "role": "Shodan style favicon hash to identify a product across hosts you cannot otherwise correlate",
    "driver": {
     "install": "core:curl",
@@ -275,7 +275,7 @@
    "agency": "A2",
    "stage": "L03",
    "status": "PROBABLE",
-   "note": "The hash method is well known; the linked repo is not the authority. Treat the technique as established and the link as a pointer to verify."
+   "note": "The technique is well established, the repo originally cited here does not exist. httpx implements favicon hashing with -favicon, which is verified."
   },
   {
    "id": "d03-ja3",

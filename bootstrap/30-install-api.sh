@@ -55,4 +55,7 @@ p_pipx inql || FAILED=$((FAILED+1))
 log "--- restler: stateful rest api fuzzing from an openapi spec, finds sequences not single calls"
 p_git https://github.com/microsoft/restler-fuzzer  || FAILED=$((FAILED+1))
 
+log "--- interactsh-client: out of band interaction server, the oracle for blind SSRF and blind injection"
+p_aur interactsh-client || FAILED=$((FAILED+1))
+
 summary "$FAILED"

@@ -44,7 +44,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [cloudscraper](https://github.com/VeNoMouS/cloudscraper) | L06 probing | A2 | A15 | `pipx:cloudscraper` | no | Solves only the classic Cloudflare JS challenge |
 | [curl-impersonate](https://github.com/lwthiker/curl-impersonate) | L06 probing | A2 | A05 | `git:https://github.com/lwthiker/curl-impersonate` | no | The same idea from the shell, for quick differential checks |
 | [curl_cffi](https://github.com/lexiforest/curl_cffi) | L06 probing | A2 | A05,A03 | `pipx:curl-cffi` | no | Browser TLS fingerprint from python, the library route past JA3 and h2 checks |
-| [mitmproxy](https://docs.mitmproxy.org/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Intercept and replay with control over the exact bytes, including pacing |
+| [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Intercept and replay with control over the exact bytes, including pacing |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15 | `aur:nuclei-bin` | yes | Template checks with rate limiting and known WAF friendly options |
 | [playwright](https://playwright.dev/) | L06 probing | A2 | A05,A08 | `pipx:playwright` | no | A real browser engine driven by script, the honest bot workflow |
 | [tls-client](https://github.com/FlorianREGAZ/Python-Tls-Client) | L06 probing | A2 | A05 | `pipx:tls-client` | no | Go backed python client with selectable browser profiles |

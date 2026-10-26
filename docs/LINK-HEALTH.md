@@ -82,3 +82,20 @@ Every URL in the 10 authored domain files, checked with `GET`, a browser user ag
 ## The lesson, again
 
 A guessed URL is indistinguishable from a real one until it is fetched. Three of the seven failures looked perfectly plausible: a BApp deep link, a GitHub repo under a plausible name, and a documentation root. The repo now has a check that catches all three classes, and the two invented ones are recorded as inventions rather than quietly fixed.
+
+---
+
+# Final domain link sweep (2026-10-27)
+
+213 unique URLs across all 28 authored domains: OK 209, DEAD 2, BLOCKED 1, ERR 1.
+
+Four problems found and fixed:
+
+1. `docs.mitmproxy.org/` still appeared in D22, D29 and D31 after the earlier fix. It is `/stable/` that resolves.
+2. `frida.re/docs/` does not resolve from this host at all. Now points at `github.com/frida/frida`.
+3. `github.com/dev2be/awesome-favicon-hash` **does not exist.** That is the second invented repository in this project. The entry is now `Favicon hash via httpx -favicon`, because httpx genuinely implements it and is verified.
+4. `w3.org/TR/webauthn-3/` returns 403 to automated clients, which is refusal not death, recorded BLOCKED.
+
+## Standing rule
+
+A URL that has not been fetched is a hypothesis. Two invented repositories and one guessed BApp slug is enough evidence for that. Every URL in this repo now has a fetch date behind it.

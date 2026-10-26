@@ -1,12 +1,38 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 111,
+ "unique_urls": 213,
  "results": {
-  "https://github.com/dolevf/graphw00f": {
+  "https://github.com/fullstorydev/grpcurl": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d11-graphw00f"
+    "d11-grpcurl",
+    "d29-grpcurl"
+   ]
+  },
+  "https://github.com/erev0s/VAmPI": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-vampi",
+    "d05-vampi"
+   ]
+  },
+  "https://github.com/doyensec/inql": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-inql",
+    "d29-inql"
+   ]
+  },
+  "https://github.com/assetnote/kiterunner": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-kiterunner",
+    "d05-kiterunner",
+    "d29-kiterunner"
    ]
   },
   "https://github.com/ffuf/ffuf": {
@@ -17,7 +43,75 @@
     "d05-ffuf",
     "d04-ffuf",
     "d02-ffuf",
-    "d07-ffuf"
+    "d07-ffuf",
+    "d29-ffuf",
+    "d03-ffuf",
+    "d22-ffuf",
+    "d13-ffuf"
+   ]
+  },
+  "https://github.com/nikitastupin/clairvoyance": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-clairvoyance",
+    "d29-clairvoyance"
+   ]
+  },
+  "https://github.com/dolevf/graphw00f": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-graphw00f",
+    "d29-graphw00f"
+   ]
+  },
+  "https://github.com/alufers/mitmproxy2swagger": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-mitmproxy2swagger",
+    "d29-mitmproxy2swagger"
+   ]
+  },
+  "https://github.com/OWASP/crAPI": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-crapi",
+    "d05-crapi"
+   ]
+  },
+  "https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-dvga"
+   ]
+  },
+  "https://github.com/microsoft/restler-fuzzer": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-restler",
+    "d29-restler"
+   ]
+  },
+  "https://github.com/dolevf/graphql-cop": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-graphql-cop",
+    "d29-graphql-cop"
+   ]
+  },
+  "https://github.com/s0md3v/Arjun": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-arjun",
+    "d02-arjun",
+    "d29-arjun"
    ]
   },
   "https://github.com/schemathesis/schemathesis": {
@@ -28,100 +122,6 @@
     "d05-schemathesis"
    ]
   },
-  "https://github.com/alufers/mitmproxy2swagger": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-mitmproxy2swagger"
-   ]
-  },
-  "https://github.com/doyensec/inql": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-inql"
-   ]
-  },
-  "https://github.com/microsoft/restler-fuzzer": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-restler"
-   ]
-  },
-  "https://github.com/dolevf/graphql-cop": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-graphql-cop"
-   ]
-  },
-  "https://github.com/assetnote/kiterunner": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-kiterunner",
-    "d05-kiterunner"
-   ]
-  },
-  "https://github.com/nikitastupin/clairvoyance": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-clairvoyance"
-   ]
-  },
-  "https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-dvga"
-   ]
-  },
-  "https://github.com/s0md3v/Arjun": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-arjun",
-    "d02-arjun"
-   ]
-  },
-  "https://github.com/swisskyrepo/GraphQLmap": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-graphqlmap"
-   ]
-  },
-  "https://github.com/akto-api-security/akto": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-akto"
-   ]
-  },
-  "https://github.com/postmanlabs/newman": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-newman",
-    "d05-newman"
-   ]
-  },
-  "https://github.com/Quitten/Autorize": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d05-autorize"
-   ]
-  },
-  "https://github.com/shieldfy/API-Security-Checklist": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-api-checklist"
-   ]
-  },
   "https://dsopas.github.io/MindAPI/play/": {
    "status": "OK",
    "http": 200,
@@ -130,11 +130,22 @@
     "d05-mindapi"
    ]
   },
-  "https://github.com/fullstorydev/grpcurl": {
+  "https://github.com/assetnote/batchql": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d11-grpcurl"
+    "d11-batchql"
+   ]
+  },
+  "https://github.com/postmanlabs/newman": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-newman",
+    "d05-newman",
+    "d29-newman",
+    "d12-newman",
+    "d23-newman"
    ]
   },
   "https://github.com/SecurityInnovation/AuthMatrix": {
@@ -144,20 +155,35 @@
     "d05-authmatrix"
    ]
   },
+  "https://github.com/Quitten/Autorize": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d05-autorize"
+   ]
+  },
   "https://docs.mitmproxy.org/stable/": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d05-mitmproxy",
     "d04-mitmproxy",
-    "d31-mitmproxy"
+    "d31-mitmproxy",
+    "d14-mitmproxy",
+    "d09-mitmproxy",
+    "d12-mitmproxy",
+    "d06-mitmproxy",
+    "d10-mitmproxy",
+    "d23-mitmproxy"
    ]
   },
-  "https://owasp.org/API-Security/editions/2023/en/0x11-t10/": {
+  "https://github.com/WebGoat/WebGoat": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d11-owasp-api-top10"
+    "d05-webgoat",
+    "d04-webgoat",
+    "d07-webgoat"
    ]
   },
   "https://www.zaproxy.org/": {
@@ -174,22 +200,26 @@
     "d05-juiceshop"
    ]
   },
-  "https://github.com/WebGoat/WebGoat": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d05-webgoat",
-    "d04-webgoat",
-    "d07-webgoat"
-   ]
-  },
   "https://github.com/projectdiscovery/nuclei": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d05-nuclei",
     "d04-nuclei",
-    "d07-nuclei"
+    "d07-nuclei",
+    "d29-nuclei",
+    "d03-nuclei",
+    "d22-nuclei",
+    "d09-nuclei",
+    "duc-nuclei",
+    "d23-nuclei"
+   ]
+  },
+  "https://owasp.org/API-Security/editions/2023/en/0x11-t10/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-owasp-api-top10"
    ]
   },
   "https://github.com/ticarpi/jwt_tool": {
@@ -197,30 +227,10 @@
    "http": 200,
    "entries": [
     "d11-jwt_tool",
-    "d04-jwt_tool"
-   ]
-  },
-  "https://github.com/OWASP/crAPI": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-crapi",
-    "d05-crapi"
-   ]
-  },
-  "https://github.com/assetnote/batchql": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-batchql"
-   ]
-  },
-  "https://github.com/erev0s/VAmPI": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d11-vampi",
-    "d05-vampi"
+    "d04-jwt_tool",
+    "d29-jwt_tool",
+    "d16-jwt-tool",
+    "d06-jwt-tool"
    ]
   },
   "https://github.com/flipkart-incubator/Astra": {
@@ -237,21 +247,25 @@
     "d11-cherrybomb"
    ]
   },
-  "https://github.com/OWASP/ASVS": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d05-asvs-v8",
-    "d04-asvs-v6",
-    "d04-asvs-v7",
-    "d04-asvs-v10"
-   ]
-  },
   "https://supabase.com/docs/guides/database/postgres/row-level-security": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d05-supabase-rls"
+   ]
+  },
+  "https://github.com/swisskyrepo/GraphQLmap": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-graphqlmap"
+   ]
+  },
+  "https://github.com/akto-api-security/akto": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-akto"
    ]
   },
   "https://www.rfc-editor.org/rfc/rfc9700": {
@@ -261,6 +275,13 @@
     "d04-rfc9700"
    ]
   },
+  "https://github.com/shieldfy/API-Security-Checklist": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-api-checklist"
+   ]
+  },
   "https://www.w3.org/TR/webauthn-3/": {
    "status": "BLOCKED",
    "http": 403,
@@ -268,11 +289,15 @@
     "d04-webauthn"
    ]
   },
-  "https://github.com/vanhauser-thc/thc-hydra": {
+  "https://github.com/OWASP/ASVS": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d04-hydra"
+    "d05-asvs-v8",
+    "d04-asvs-v6",
+    "d04-asvs-v7",
+    "d04-asvs-v10",
+    "d06-asvs-v7"
    ]
   },
   "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/": {
@@ -282,11 +307,40 @@
     "d05-wstg-athz"
    ]
   },
-  "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/": {
+  "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d05-owasp-api1"
+    "d05-owasp-api5"
+   ]
+  },
+  "https://github.com/vanhauser-thc/thc-hydra": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-hydra"
+   ]
+  },
+  "https://www.keycloak.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-keycloak"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-wstg-sess",
+    "d06-wstg-sess"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-wstg-athn"
    ]
   },
   "https://github.com/jmk-foofus/medusa": {
@@ -296,11 +350,18 @@
     "d04-medusa"
    ]
   },
-  "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/": {
+  "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d05-owasp-api5"
+    "d05-owasp-api1"
+   ]
+  },
+  "https://openid.net/specs/openid-connect-core-1_0.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-oidc-core"
    ]
   },
   "https://github.com/digininja/DVWA": {
@@ -311,46 +372,44 @@
     "d07-dvwa"
    ]
   },
-  "https://www.keycloak.org/": {
+  "https://genai.owasp.org/llm-top-10/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d04-keycloak"
+    "d19-llm-top10"
    ]
   },
-  "https://openid.net/specs/openid-connect-core-1_0.html": {
+  "https://genai.owasp.org/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d04-oidc-core"
+    "d19-owasp-agentic",
+    "d20-owasp-agentic",
+    "d30-owasp-agentic"
    ]
   },
   "https://github.com/NVIDIA/garak": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d19-garak"
-   ]
-  },
-  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d04-wstg-sess"
-   ]
-  },
-  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d04-wstg-athn"
+    "d19-garak",
+    "d29-garak"
    ]
   },
   "https://github.com/Azure/PyRIT": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d19-pyrit"
+    "d19-pyrit",
+    "d29-pyrit"
+   ]
+  },
+  "https://atlas.mitre.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d19-atlas",
+    "d20-atlas"
    ]
   },
   "https://github.com/promptfoo/promptfoo": {
@@ -358,42 +417,17 @@
    "http": 200,
    "entries": [
     "d19-promptfoo",
-    "d20-promptfoo"
-   ]
-  },
-  "https://github.com/protectai/llm-guard": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d19-llm-guard"
-   ]
-  },
-  "https://github.com/protectai/rebuff": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d19-rebuff"
+    "d20-promptfoo",
+    "d29-promptfoo",
+    "d28-promptfoo"
    ]
   },
   "https://github.com/confident-ai/deepteam": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d19-deepteam"
-   ]
-  },
-  "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d20-bandit"
-   ]
-  },
-  "https://genai.owasp.org/llm-top-10/": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d19-llm-top10"
+    "d19-deepteam",
+    "d29-deepteam"
    ]
   },
   "https://rea.tools": {
@@ -424,22 +458,35 @@
     "d07-rea-listeners",
     "d21-rea-android",
     "d21-rea-android-class",
-    "d21-rea-android-res"
+    "d21-rea-android-res",
+    "d03-rea-bundle",
+    "d28-rea",
+    "d08-rea-listeners",
+    "d08-rea-scenario",
+    "d08-rea-page",
+    "d14-rea-capture",
+    "d16-rea-signing",
+    "d12-rea-capture",
+    "d13-rea-artifact",
+    "d06-rea-page",
+    "d15-rea",
+    "d23-rea"
    ]
   },
-  "https://genai.owasp.org/": {
+  "https://github.com/protectai/llm-guard": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d19-owasp-agentic",
-    "d20-owasp-agentic"
+    "d19-llm-guard",
+    "d29-llm-guard"
    ]
   },
-  "https://github.com/morluto/rea": {
+  "https://github.com/protectai/rebuff": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d20-rea"
+    "d19-rebuff",
+    "d29-rebuff"
    ]
   },
   "https://github.com/ethz-spylab/agentdojo": {
@@ -447,7 +494,8 @@
    "http": 200,
    "entries": [
     "d19-agentdojo",
-    "d20-agentdojo"
+    "d20-agentdojo",
+    "d28-agentdojo"
    ]
   },
   "https://gandalf.lakera.ai/": {
@@ -457,12 +505,18 @@
     "d19-gandalf"
    ]
   },
-  "https://atlas.mitre.org/": {
+  "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d19-atlas",
-    "d20-atlas"
+    "d04-device-code"
+   ]
+  },
+  "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d20-bandit"
    ]
   },
   "https://github.com/modelcontextprotocol/servers": {
@@ -472,46 +526,27 @@
     "d20-mcp-servers"
    ]
   },
-  "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins": {
+  "https://github.com/morluto/rea": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d04-device-code"
-   ]
-  },
-  "https://github.com/wader/fq": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d31-fq"
-   ]
-  },
-  "https://github.com/projectdiscovery/subfinder": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d02-subfinder"
-   ]
-  },
-  "https://github.com/invariantlabs-ai/mcp-scan": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d20-mcp-scan"
+    "d20-rea"
    ]
   },
   "https://www.chromium.org/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d31-chromium"
+    "d31-chromium",
+    "d08-chromium"
    ]
   },
-  "https://github.com/projectdiscovery/dnsx": {
+  "https://modelcontextprotocol.io/specification": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-dnsx"
+    "d20-spec",
+    "d28-spec"
    ]
   },
   "https://www.shodan.io/": {
@@ -521,32 +556,14 @@
     "d02-shodan-censys"
    ]
   },
-  "https://github.com/projectdiscovery/httpx": {
+  "https://github.com/wader/fq": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-httpx"
-   ]
-  },
-  "https://github.com/projectdiscovery/naabu": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d02-naabu"
-   ]
-  },
-  "https://modelcontextprotocol.io/specification": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d20-spec"
-   ]
-  },
-  "https://github.com/urbanadventurer/WhatWeb": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d02-whatweb"
+    "d31-fq",
+    "d29-fq",
+    "d13-fq",
+    "d15-fq"
    ]
   },
   "https://portswigger.net/bappstore": {
@@ -557,179 +574,113 @@
     "d04-saml-raider"
    ]
   },
-  "https://github.com/epi052/feroxbuster": {
+  "https://github.com/invariantlabs-ai/mcp-scan": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-feroxbuster"
+    "d20-mcp-scan",
+    "d29-mcp-scan",
+    "d28-mcp-scan"
+   ]
+  },
+  "https://github.com/projectdiscovery/dnsx": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d02-dnsx",
+    "d29-dnsx"
+   ]
+  },
+  "https://github.com/urbanadventurer/WhatWeb": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d02-whatweb",
+    "d29-whatweb",
+    "d03-whatweb"
+   ]
+  },
+  "https://github.com/projectdiscovery/httpx": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d02-httpx",
+    "d29-httpx",
+    "d03-httpx"
+   ]
+  },
+  "https://github.com/projectdiscovery/naabu": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d02-naabu",
+    "d29-naabu"
    ]
   },
   "https://github.com/projectdiscovery/katana": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-katana"
+    "d02-katana",
+    "d29-katana"
+   ]
+  },
+  "https://github.com/projectdiscovery/subfinder": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d02-subfinder",
+    "d29-subfinder"
    ]
   },
   "https://github.com/lc/gau": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-gau"
+    "d02-gau",
+    "d29-gau"
+   ]
+  },
+  "https://github.com/epi052/feroxbuster": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d02-feroxbuster",
+    "d29-feroxbuster"
    ]
   },
   "https://github.com/OJ/gobuster": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-gobuster"
+    "d02-gobuster",
+    "d29-gobuster"
    ]
   },
   "https://github.com/sqlmapproject/sqlmap": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d07-sqlmap"
-   ]
-  },
-  "https://github.com/commixproject/commix": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-commix"
-   ]
-  },
-  "https://github.com/hahwul/dalfox": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-dalfox"
-   ]
-  },
-  "https://github.com/frohoff/ysoserial": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-ysoserial"
-   ]
-  },
-  "https://github.com/pwntester/ysoserial.net": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-ysoserial-net"
-   ]
-  },
-  "https://github.com/vladko312/SSTImap": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-sstimap"
-   ]
-  },
-  "https://github.com/swisskyrepo/PayloadsAllTheThings": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-payloads"
-   ]
-  },
-  "https://github.com/prowler-cloud/prowler": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-prowler"
-   ]
-  },
-  "https://github.com/nccgroup/ScoutSuite": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-scoutsuite"
-   ]
-  },
-  "https://github.com/BishopFox/cloudfox": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-cloudfox"
-   ]
-  },
-  "https://portswigger.net/web-security/all-labs": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-portswigger"
-   ]
-  },
-  "https://github.com/RhinoSecurityLabs/pacu": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-pacu"
-   ]
-  },
-  "https://github.com/aquasecurity/trivy": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-trivy"
-   ]
-  },
-  "https://kubernetes.io/docs/": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-kubectl"
-   ]
-  },
-  "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-imds"
-   ]
-  },
-  "https://github.com/aquasecurity/kube-hunter": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-kube-hunter"
-   ]
-  },
-  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d07-wstg-inpv"
+    "d07-sqlmap",
+    "d29-sqlmap"
    ]
   },
   "https://nmap.org/book/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d02-nmap"
+    "d02-nmap",
+    "d29-nmap",
+    "d03-nmap"
    ]
   },
-  "https://aws.amazon.com/cli/": {
+  "https://github.com/hahwul/dalfox": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d17-awscli"
-   ]
-  },
-  "https://pathfinding.cloud/": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d17-cloudfox-ref"
-   ]
-  },
-  "https://github.com/skylot/jadx": {
-   "status": "OK",
-   "http": 200,
-   "entries": [
-    "d21-jadx"
+    "d07-dalfox",
+    "d29-dalfox",
+    "d08-dalfox"
    ]
   },
   "https://github.com/codingo/NoSQLMap": {
@@ -739,74 +690,97 @@
     "d07-nosqlmap"
    ]
   },
-  "https://github.com/frida/frida": {
+  "https://github.com/commixproject/commix": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-frida"
+    "d07-commix",
+    "d29-commix"
    ]
   },
-  "https://mas.owasp.org/MASTG/": {
+  "https://github.com/frohoff/ysoserial": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-mastg"
+    "d07-ysoserial",
+    "d15-ysoserial"
    ]
   },
-  "https://apktool.org/": {
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-apktool"
+    "d07-wstg-inpv",
+    "d15-wstg"
    ]
   },
-  "https://github.com/sensepost/objection": {
+  "https://github.com/vladko312/SSTImap": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-objection"
+    "d07-sstimap"
    ]
   },
-  "https://github.com/worawit/blutter": {
+  "https://github.com/pwntester/ysoserial.net": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-blutter"
+    "d07-ysoserial-net",
+    "d15-ysoserial-net"
    ]
   },
-  "https://github.com/MobSF/Mobile-Security-Framework-MobSF": {
+  "https://github.com/swisskyrepo/PayloadsAllTheThings": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-mobsf"
+    "d07-payloads",
+    "d08-payloads",
+    "d16-payloads",
+    "d13-payloads",
+    "d15-payloads"
    ]
   },
-  "https://mas.owasp.org/MASVS/": {
+  "https://portswigger.net/web-security/all-labs": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-masvs"
+    "d07-portswigger"
    ]
   },
-  "https://github.com/search?q=wxapkg+unpacker&type=repositories": {
+  "https://github.com/prowler-cloud/prowler": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d21-wxapkg"
+    "d17-prowler",
+    "d29-prowler"
    ]
   },
-  "https://book.hacktricks.wiki/": {
+  "https://github.com/nccgroup/ScoutSuite": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d07-hacktricks"
+    "d17-scoutsuite"
    ]
   },
-  "https://cloud.hacktricks.wiki/": {
+  "https://github.com/RhinoSecurityLabs/pacu": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d17-hacktricks-cloud"
+    "d17-pacu"
+   ]
+  },
+  "https://github.com/BishopFox/cloudfox": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-cloudfox"
+   ]
+  },
+  "https://kubernetes.io/docs/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-kubectl"
    ]
   },
   "https://github.com/DataDog/pathrunner": {
@@ -816,11 +790,58 @@
     "d17-pathrunner"
    ]
   },
-  "https://learn.microsoft.com/cli/azure/": {
+  "https://github.com/aquasecurity/kube-hunter": {
    "status": "OK",
    "http": 200,
    "entries": [
-    "d17-azurecli"
+    "d17-kube-hunter"
+   ]
+  },
+  "https://github.com/aquasecurity/trivy": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-trivy",
+    "d18-trivy"
+   ]
+  },
+  "https://aws.amazon.com/cli/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-awscli"
+   ]
+  },
+  "https://book.hacktricks.wiki/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d07-hacktricks",
+    "d22-hacktricks",
+    "d08-hacktricks-csti",
+    "d14-hacktricks",
+    "d09-hacktricks",
+    "d12-hacktricks",
+    "d13-hacktricks",
+    "d06-hacktricks",
+    "d15-hacktricks",
+    "d18-hacktricks",
+    "d23-hacktricks"
+   ]
+  },
+  "https://pathfinding.cloud/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-cloudfox-ref"
+   ]
+  },
+  "https://apktool.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-apktool",
+    "d29-apktool"
    ]
   },
   "https://www.cisecurity.org/cis-benchmarks": {
@@ -828,6 +849,817 @@
    "http": 200,
    "entries": [
     "d17-cis"
+   ]
+  },
+  "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-imds",
+    "d14-imds"
+   ]
+  },
+  "https://mas.owasp.org/MASVS/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-masvs"
+   ]
+  },
+  "https://mas.owasp.org/MASTG/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-mastg"
+   ]
+  },
+  "https://github.com/skylot/jadx": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-jadx",
+    "d29-jadx"
+   ]
+  },
+  "https://github.com/frida/frida": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-frida"
+   ]
+  },
+  "https://github.com/sensepost/objection": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-objection"
+   ]
+  },
+  "https://github.com/MobSF/Mobile-Security-Framework-MobSF": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-mobsf"
+   ]
+  },
+  "https://github.com/search?q=wxapkg+unpacker&type=repositories": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-wxapkg"
+   ]
+  },
+  "https://github.com/worawit/blutter": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d21-blutter"
+   ]
+  },
+  "https://github.com/ReFirmLabs/binwalk": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-binwalk"
+   ]
+  },
+  "https://cloud.hacktricks.wiki/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-hacktricks-cloud"
+   ]
+  },
+  "https://docs.mitmproxy.org/": {
+   "status": "DEAD",
+   "http": 404,
+   "entries": [
+    "d29-mitmproxy",
+    "d22-mitmproxy"
+   ]
+  },
+  "https://learn.microsoft.com/cli/azure/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-azurecli"
+   ]
+  },
+  "https://curl.se/docs/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-curl",
+    "d14-curl",
+    "d09-curl",
+    "d13-curl",
+    "d06-curl",
+    "d10-curl"
+   ]
+  },
+  "https://github.com/gitleaks/gitleaks": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-gitleaks",
+    "d16-gitleaks",
+    "d18-gitleaks"
+   ]
+  },
+  "https://hashcat.net/hashcat/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-hashcat"
+   ]
+  },
+  "https://rada.re/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-radare2"
+   ]
+  },
+  "https://github.com/sullo/nikto": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-nikto"
+   ]
+  },
+  "https://chromium.googlesource.com/chromium/src/+/main/docs/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-chromium",
+    "d22-chromium"
+   ]
+  },
+  "https://github.com/projectdiscovery/nuclei-templates": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-nuclei-templates"
+   ]
+  },
+  "https://github.com/danielmiessler/SecLists": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-seclists"
+   ]
+  },
+  "https://www.zaproxy.org/docs/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-zaproxy"
+   ]
+  },
+  "https://docs.astral.sh/uv/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-uv"
+   ]
+  },
+  "https://pipx.pypa.io/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-pipx"
+   ]
+  },
+  "https://schemathesis.readthedocs.io/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-schemathesis"
+   ]
+  },
+  "https://github.com/trufflesecurity/trufflehog": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-trufflehog",
+    "d16-trufflehog"
+   ]
+  },
+  "https://jqlang.github.io/jq/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-jq"
+   ]
+  },
+  "https://ghidra-sre.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-ghidra"
+   ]
+  },
+  "https://github.com/dev2be/awesome-favicon-hash": {
+   "status": "DEAD",
+   "http": 404,
+   "entries": [
+    "d03-favicon"
+   ]
+  },
+  "https://github.com/EnableSecurity/wafw00f": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-wafw00f",
+    "d03-wafw00f",
+    "d22-wafw00f"
+   ]
+  },
+  "https://github.com/mikefarah/yq": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d29-yq"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d03-wstg-info"
+   ]
+  },
+  "https://github.com/enthec/webappanalyzer": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d03-wappalyzer"
+   ]
+  },
+  "https://playwright.dev/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-playwright"
+   ]
+  },
+  "https://github.com/lexiforest/curl_cffi": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-curl_cffi"
+   ]
+  },
+  "https://github.com/FlorianREGAZ/Python-Tls-Client": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-tls-client"
+   ]
+  },
+  "https://github.com/lwthiker/curl-impersonate": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-curl-impersonate"
+   ]
+  },
+  "https://github.com/GreyDGL/PentestGPT": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-pentestgpt"
+   ]
+  },
+  "https://github.com/VeNoMouS/cloudscraper": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-cloudscraper"
+   ]
+  },
+  "https://github.com/ultrafunkamsterdam/undetected-chromedriver": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-undetected-chromedriver"
+   ]
+  },
+  "https://github.com/aliasrobotics/cai": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-cai"
+   ]
+  },
+  "https://www.first.org/cvss/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-cvss"
+   ]
+  },
+  "https://github.com/0xInfection/Awesome-WAF": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-awesome-waf"
+   ]
+  },
+  "https://github.com/vxcontrol/pentagi": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-pentagi"
+   ]
+  },
+  "https://github.com/salesforce/ja3": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d03-ja3"
+   ]
+  },
+  "https://github.com/usestrix/strix": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-strix"
+   ]
+  },
+  "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-sarif"
+   ]
+  },
+  "https://github.com/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-orchestration",
+    "d24-prove",
+    "d24-critic",
+    "d25-counters",
+    "d28-mcps",
+    "d28-skill"
+   ]
+  },
+  "https://github.com/BugTraceAI/BugTraceAI": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-bugtrace"
+   ]
+  },
+  "https://github.com/CyberStrikeus/CyberStrike": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-cyberstrike"
+   ]
+  },
+  "https://github.com/microsoft/autogen": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-autogen"
+   ]
+  },
+  "https://github.com/crewAIInc/crewAI": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-crewai"
+   ]
+  },
+  "https://github.com/openai/openai-agents-python": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-openai-agents"
+   ]
+  },
+  "https://www.cisa.gov/known-exploited-vulnerabilities-catalog": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-kev"
+   ]
+  },
+  "https://github.com/langchain-ai/langgraph": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d30-langgraph"
+   ]
+  },
+  "https://www.cve.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-cve"
+   ]
+  },
+  "https://github.com/OWASP/wstg": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-wstg-report"
+   ]
+  },
+  "https://github.com/OISF/suricata": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-suricata"
+   ]
+  },
+  "https://github.com/SigmaHQ/sigma": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-sigma"
+   ]
+  },
+  "https://github.com/VirusTotal/yara": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-yara"
+   ]
+  },
+  "https://github.com/wazuh/wazuh": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-wazuh"
+   ]
+  },
+  "https://github.com/coreruleset/coreruleset": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-crs"
+   ]
+  },
+  "https://github.com/zeek/zeek": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-zeek"
+   ]
+  },
+  "https://cwe.mitre.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-cwe"
+   ]
+  },
+  "https://github.com/elastic/detection-rules": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-elastic"
+   ]
+  },
+  "https://github.com/falcosecurity/falco": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-falco"
+   ]
+  },
+  "https://github.com/Yara-Rules/rules": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-yara-rules"
+   ]
+  },
+  "https://csrc.nist.gov/pubs/sp/800/115/final": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-nist115"
+   ]
+  },
+  "https://www.first.org/epss/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-epss"
+   ]
+  },
+  "https://github.com/mitre-attack/attack-stix-data": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-attack",
+    "d23-attack"
+   ]
+  },
+  "https://github.com/punkpeye/awesome-mcp-servers": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d28-awesome-mcp"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-wstg-clnt"
+   ]
+  },
+  "https://github.com/google/csp-evaluator": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-csp-eval"
+   ]
+  },
+  "https://github.com/cure53/DOMPurify": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-dompurify"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/19-Testing_for_Server-Side_Request_Forgery/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d14-wstg-ssrf"
+   ]
+  },
+  "https://github.com/msrkp/PPScan": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-ppscan"
+   ]
+  },
+  "https://github.com/projectdiscovery/interactsh": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d14-interactsh"
+   ]
+  },
+  "https://github.com/swisskyrepo/SSRFmap": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d14-ssrfmap"
+   ]
+  },
+  "https://github.com/tarunkant/Gopherus": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d14-gopherus"
+   ]
+  },
+  "https://github.com/defparam/smuggler": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-smuggler"
+   ]
+  },
+  "https://github.com/BishopFox/h2cSmuggler": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-h2c"
+   ]
+  },
+  "https://github.com/WICG/trusted-types": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-trusted-types"
+   ]
+  },
+  "https://www.rfc-editor.org/rfc/rfc9112": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-rfc9112"
+   ]
+  },
+  "https://github.com/hashcat/hashcat": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d16-hashcat"
+   ]
+  },
+  "https://github.com/openwall/john": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d16-john"
+   ]
+  },
+  "https://portswigger.net/web-security/request-smuggling": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-portswigger"
+   ]
+  },
+  "https://github.com/gchq/CyberChef": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d16-cyberchef"
+   ]
+  },
+  "https://jwt.io/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d16-jwtio"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d06-cheatsheet"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-wstg-busl"
+   ]
+  },
+  "https://github.com/TheHackerDev/race-the-web": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-race-the-web"
+   ]
+  },
+  "https://portswigger.net/research/http2": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-http2-research"
+   ]
+  },
+  "https://github.com/portswigger/turbo-intruder": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-turbo-intruder"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/15-Testing_for_HTTP_File_Upload/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d13-wstg-upload"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d13-wstg-traversal"
+   ]
+  },
+  "https://github.com/almandin/fuxploider": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d13-fuxploider"
+   ]
+  },
+  "https://github.com/AonCyberLabs/PadBuster": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d16-padbuster"
+   ]
+  },
+  "https://github.com/ambionics/phpggc": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d15-phpggc"
+   ]
+  },
+  "https://portswigger.net/web-security/race-conditions": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-ps-race"
+   ]
+  },
+  "https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d10-wcvs"
+   ]
+  },
+  "https://portswigger.net/web-security/file-path-traversal": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d13-ps-traversal"
+   ]
+  },
+  "https://portswigger.net/web-security/authentication": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d06-ps-auth"
+   ]
+  },
+  "https://portswigger.net/web-security/web-cache-poisoning": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d10-ps-poison"
+   ]
+  },
+  "https://portswigger.net/web-security/deserialization": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d15-ps-deser"
+   ]
+  },
+  "https://portswigger.net/web-security/web-cache-deception": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d10-ps-deception"
+   ]
+  },
+  "https://slsa.dev/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-slsa"
+   ]
+  },
+  "https://github.com/ossf/scorecard": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-scorecard"
+   ]
+  },
+  "https://github.com/sigstore/cosign": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-cosign"
+   ]
+  },
+  "https://github.com/anchore/syft": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-syft"
+   ]
+  },
+  "https://github.com/anchore/grype": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-grype"
+   ]
+  },
+  "https://github.com/jeremylong/DependencyCheck": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-depcheck"
+   ]
+  },
+  "https://www.rfc-editor.org/rfc/rfc9113": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-rfc9113"
+   ]
+  },
+  "https://frida.re/docs/": {
+   "status": "ERR",
+   "http": null,
+   "entries": [
+    "d29-frida"
    ]
   }
  }

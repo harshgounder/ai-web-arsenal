@@ -420,7 +420,7 @@
   {
    "id": "d29-frida",
    "name": "frida",
-   "url": "https://frida.re/docs/",
+   "url": "https://github.com/frida/frida",
    "role": "runtime instrumentation, ssl pinning and logic bypass at runtime",
    "driver": {
     "install": "pipx:frida-tools",
@@ -957,7 +957,7 @@
   {
    "id": "d29-mitmproxy",
    "name": "mitmproxy",
-   "url": "https://docs.mitmproxy.org/",
+   "url": "https://docs.mitmproxy.org/stable/",
    "role": "programmable intercepting proxy, the capture source for REA",
    "driver": {
     "install": "pacman:mitmproxy",

@@ -24,10 +24,10 @@ rot with the disposable half.
 | sources reconciled | **19** | awesome-lists, API lists, AI-security lists, MCP lists |
 | rows reconciled | **31,298** | `admitted 16,956 + excluded 14,127 + held 212 + residue 3` |
 | reconciliation identity | **holds** | checked per source and in aggregate |
-| tools in manifest | **57** | every install candidate verified against a real channel |
+| tools in manifest | **64** | every install candidate verified against a real channel |
 | unresolved installs | **0** | nothing invented, nothing guessed |
 | prompt packs | **5** | phase-shaped, with failure modes and verification |
-| domains | **37** | 10 authored deep (D02, D04, D05, D07, D11, D17, D19, D20, D21, D31), 27 stubs with declared required cells |
+| domains | **37** | 28 authored (389 enriched entries), 9 explicit pointers, 0 empty |
 | patterns in the atlas | **150** | W01 lifecycle, W02 authorisation, W03 second-order, gate passing |
 | taxonomy items mapped | **624 of 706** | WSTG, ASVS, VRT, API Top 10, ATLAS, LLM Top 10 to atoms, 88.4% |
 
@@ -91,6 +91,7 @@ own hallucinations. A critic that is rewarded for REFUTED does not.
 | `skills/web-arsenal/` | an agent skill that encodes the order of operations |
 | `trees/` | decision trees as JSON, so an agent can traverse them |
 | `docs/TAXONOMY-COVERAGE.md` | every taxonomy test ID mapped to an atom, with the unmapped list printed |
+| `domains/` | 37 files: 28 authored with trees, mirror and gaps, 9 pointers naming the artefact that implements them |
 | `RESUME.md` | how to continue: state, rebuild commands, traps already hit |
 | `LOG.md` | every step, every error, including the facts I got wrong |
 

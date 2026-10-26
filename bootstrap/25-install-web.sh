@@ -83,4 +83,7 @@ ok "curl-impersonate already present"
 log "--- tls-client: go backed python client with browser profiles"
 p_pipx tls-client || FAILED=$((FAILED+1))
 
+log "--- interactsh-client: out of band interaction server, the oracle for blind SSRF and blind injection"
+p_aur interactsh-client || FAILED=$((FAILED+1))
+
 summary "$FAILED"

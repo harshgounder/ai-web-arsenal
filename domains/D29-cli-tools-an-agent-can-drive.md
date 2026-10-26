@@ -50,14 +50,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [feroxbuster](https://github.com/epi052/feroxbuster) | L03 surface mapping | A2 | A08 | `aur:feroxbuster` | yes | recursive content discovery |
 | [ffuf](https://github.com/ffuf/ffuf) | L03 surface mapping | A2 | A08 | `aur:ffuf` | yes | content discovery and parameter fuzzing |
 | [fq](https://github.com/wader/fq) | L03 surface mapping | A2 | A08 | `pacman:fq` | yes | jq semantics over any binary format, the fastest unknown-format probe |
-| [frida](https://frida.re/docs/) | L03 surface mapping | A2 | A08 | `pipx:frida-tools` | yes | runtime instrumentation, ssl pinning and logic bypass at runtime |
+| [frida](https://github.com/frida/frida) | L03 surface mapping | A2 | A08 | `pipx:frida-tools` | yes | runtime instrumentation, ssl pinning and logic bypass at runtime |
 | [gau](https://github.com/lc/gau) | L03 surface mapping | A2 | A08 | `aur:gau` | no | known urls from wayback, commoncrawl, alienvault |
 | [ghidra](https://ghidra-sre.org/) | L03 surface mapping | A2 | A08 | `pacman:ghidra` | no | decompiler for native artifacts reached from a web target |
 | [gobuster](https://github.com/OJ/gobuster) | L03 surface mapping | A2 | A08 | `pacman:gobuster` | no | dir, dns and vhost brute force |
 | [httpx](https://github.com/projectdiscovery/httpx) | L03 surface mapping | A2 | A08 | `aur:httpx-bin` | yes | http probing and fingerprinting at scale |
 | [jadx](https://github.com/skylot/jadx) | L03 surface mapping | A2 | A08 | `pacman:jadx` | no | dex to java, the readable half of apk analysis |
 | [katana](https://github.com/projectdiscovery/katana) | L03 surface mapping | A2 | A08 | `aur:katana` | yes | crawler that understands js, endpoints and forms |
-| [mitmproxy](https://docs.mitmproxy.org/) | L03 surface mapping | A2 | A08 | `pacman:mitmproxy` | yes | programmable intercepting proxy, the capture source for REA |
+| [mitmproxy](https://docs.mitmproxy.org/stable/) | L03 surface mapping | A2 | A08 | `pacman:mitmproxy` | yes | programmable intercepting proxy, the capture source for REA |
 | [naabu](https://github.com/projectdiscovery/naabu) | L03 surface mapping | A2 | A08 | `aur:naabu` | yes | fast port scan |
 | [nmap](https://nmap.org/book/) | L03 surface mapping | A2 | A08 | `pacman:nmap` | yes | service and version truth, the fallback when http lies |
 | [radare2](https://rada.re/) | L03 surface mapping | A2 | A08 | `pacman:radare2` | yes | fast disassembly and binary triage |

@@ -34,7 +34,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
-| [Favicon hash matching](https://github.com/dev2be/awesome-favicon-hash) | L03 surface mapping | A2 | A08,A15 | `core:curl` | no | Shodan style favicon hash to identify a product across hosts you cannot otherwise correlate |
+| [Favicon hash via httpx -favicon](https://github.com/projectdiscovery/httpx) | L03 surface mapping | A2 | A08,A15 | `core:curl` | no | Shodan style favicon hash to identify a product across hosts you cannot otherwise correlate |
 | [httpx](https://github.com/projectdiscovery/httpx) | L03 surface mapping | A2 | A15,A08 | `aur:httpx-bin` | yes | Status, title, tech detect and TLS at scale |
 | [TLS fingerprint (JA3/JA4)](https://github.com/salesforce/ja3) | L03 surface mapping | A2 | A15,A03 | `pipx:pyja3` | yes | Identify the client stack and detect whether a target fingerprints you back |
 | [nmap](https://nmap.org/book/) | L03 surface mapping | A2 | A15 | `pacman:nmap` | yes | Service and version truth when headers disagree |
@@ -88,11 +88,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - defense levels it addresses: F1
 - note: The most reliable fingerprint for SPA stacks. Headers lie; the bundle's dependencies do not.
 
-**Favicon hash matching**  
+**Favicon hash via httpx -favicon**  
 - preconditions: `the favicon is served and stable`
 - oracle: `hash match across hosts`
 - defense levels it addresses: F1
-- note: The hash method is well known; the linked repo is not the authority. Treat the technique as established and the link as a pointer to verify.
+- note: The technique is well established, the repo originally cited here does not exist. httpx implements favicon hashing with -favicon, which is verified.
 
 **TLS fingerprint (JA3/JA4)**  
 - preconditions: `TLS traffic within scope`

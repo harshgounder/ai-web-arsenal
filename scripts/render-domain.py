@@ -181,7 +181,8 @@ def main():
     if not args:
         print(__doc__)
         return
-    files = sorted(DATA.glob("D*.json")) if args == ["--all"] else [DATA / f"{a}.json" for a in args]
+    files = ([f for f in sorted(DATA.glob("D*.json")) if not f.stem.endswith(".index")]
+             if args == ["--all"] else [DATA / f"{a}.json" for a in args])
     OUT.mkdir(exist_ok=True)
     for f in files:
         if not f.exists():
