@@ -296,6 +296,37 @@
    "status": "ESTABLISHED",
    "note": "IMDSv2 requires a token request first. If the fetcher cannot set a header, the class is closed and saying so is the finding.",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d14-singularity",
+   "name": "Singularity (DNS rebinding)",
+   "url": "https://github.com/nccgroup/singularity",
+   "role": "DNS rebinding attack framework, which tests a defence most SSRF filters forget",
+   "driver": {
+    "install": "git:https://github.com/nccgroup/singularity",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A06"
+   ],
+   "agency": "A3",
+   "stage": "L07",
+   "preconditions": [
+    "an SSRF or browser fetch primitive",
+    "a client that re-resolves the name"
+   ],
+   "oracle": [
+    "the second resolution reaches an internal address"
+   ],
+   "evades": [
+    "F3"
+   ],
+   "detected_by": [],
+   "status": "ESTABLISHED",
+   "note": "Rebinding defeats resolve-check-then-fetch filters. If the fetcher resolves once and pins the address, the class is closed."
   }
  ],
  "tree": {

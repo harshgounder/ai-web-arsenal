@@ -524,6 +524,152 @@
    "status": "ESTABLISHED",
    "note": "Check the authorisation scope covers querying third party indexes about the target. It usually does not.",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d02-rustscan",
+   "name": "RustScan",
+   "url": "https://github.com/rustscan/rustscan",
+   "role": "Fast port discovery that hands the result to nmap, the modern default for a first pass",
+   "driver": {
+    "install": "pacman:rustscan",
+    "verify": "rustscan --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "agency": "A2",
+   "stage": "L03",
+   "preconditions": [
+    "a host list"
+   ],
+   "oracle": [
+    "open ports enumerated, then nmap confirms service"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d02-masscan",
+   "name": "masscan",
+   "url": "https://github.com/robertdavidgraham/masscan",
+   "role": "Internet scale port scanning, use only with explicit authorisation and a rate the target can survive",
+   "driver": {
+    "install": "pacman:masscan",
+    "verify": "masscan --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A07"
+   ],
+   "agency": "A2",
+   "stage": "L03",
+   "preconditions": [
+    "a network range in scope",
+    "an agreed packet rate"
+   ],
+   "oracle": [
+    "ports reported with a rate you set deliberately"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "VERIFIED",
+   "note": "The only tool in this repo where the unsafe configuration is the default expectation. Set --rate explicitly, always."
+  },
+  {
+   "id": "d02-amass",
+   "name": "Amass",
+   "url": "https://github.com/owasp-amass/amass",
+   "role": "Asset mapping with passive and active modes, plus graph output",
+   "driver": {
+    "install": "aur:amass",
+    "verify": "amass -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "agency": "A3",
+   "stage": "L02",
+   "preconditions": [
+    "a root domain"
+   ],
+   "oracle": [
+    "asset list with sources attributed"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d02-spiderfoot",
+   "name": "SpiderFoot",
+   "url": "https://github.com/smicallef/spiderfoot",
+   "role": "OSINT automation across many sources, including leak and third party data",
+   "driver": {
+    "install": "aur:spiderfoot",
+    "verify": "spiderfoot -h",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "agency": "A3",
+   "stage": "L02",
+   "preconditions": [
+    "a seed domain or address",
+    "authorisation that covers third party queries"
+   ],
+   "oracle": [
+    "findings with the source named"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "VERIFIED",
+   "note": "Check that scope covers querying third party indexes. Passive does not mean permitted."
+  },
+  {
+   "id": "d02-theharvester",
+   "name": "theHarvester",
+   "url": "https://github.com/laramies/theHarvester",
+   "role": "Email, host and employee enumeration from public sources",
+   "driver": {
+    "install": "pipx:theHarvester",
+    "verify": "theHarvester --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "agency": "A2",
+   "stage": "L02",
+   "preconditions": [
+    "a target domain"
+   ],
+   "oracle": [
+    "addresses and hosts with the source named"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "ESTABLISHED"
   }
  ],
  "tree": {

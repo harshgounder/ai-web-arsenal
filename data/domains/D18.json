@@ -292,6 +292,35 @@
    "stage": "L05",
    "status": "ESTABLISHED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d18-semgrep",
+   "name": "Semgrep",
+   "url": "https://github.com/semgrep/semgrep",
+   "role": "Pattern based static analysis, useful for finding dangerous sinks in the target's own code when you have it",
+   "driver": {
+    "install": "pipx:semgrep",
+    "verify": "semgrep --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A11"
+   ],
+   "agency": "A3",
+   "stage": "L05",
+   "preconditions": [
+    "source access, which is often available through a leak or a public repo"
+   ],
+   "oracle": [
+    "rule match with the sink location"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "VERIFIED"
   }
  ],
  "tree": {

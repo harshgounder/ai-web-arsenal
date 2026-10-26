@@ -314,6 +314,36 @@
    "stage": "L05",
    "status": "ESTABLISHED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d13-lfisuite",
+   "name": "LFISuite",
+   "url": "https://github.com/D35m0nd142/LFISuite",
+   "role": "Local file inclusion detection and exploitation, including log poisoning paths",
+   "driver": {
+    "install": "git:https://github.com/D35m0nd142/LFISuite",
+    "verify": "python2 LFI-Suite.py --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A01"
+   ],
+   "agency": "A2",
+   "stage": "L07",
+   "preconditions": [
+    "a parameter reaching a file path"
+   ],
+   "oracle": [
+    "file content returned that you did not upload"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "status": "ESTABLISHED",
+   "note": "Python 2 only. The traversal probe is easy to do by hand; this earns its place for the log poisoning and wrapper paths."
   }
  ],
  "tree": {

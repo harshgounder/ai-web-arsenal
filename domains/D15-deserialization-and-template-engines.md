@@ -28,7 +28,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-9 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -39,6 +39,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [rea export_web_scripts](https://rea.tools) | L05 hypothesis | A3 | A05,A08 | `mcp:rea` | yes | Recover the client side serializer, which is often the only documentation of the format |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `n/a reference` | no | Serialization payload corpus per language |
 | [PHPGGC](https://github.com/ambionics/phpggc) | L07 exploitation | A2 | A01,A11 | `n/a reference` | no | PHP gadget chains against composer libraries |
+| [tplmap](https://github.com/epinna/tplmap) | L07 exploitation | A2 | A01 | `git:https://github.com/epinna/tplmap` | no | Template injection detection and exploitation, engine specific |
 | [ysoserial](https://github.com/frohoff/ysoserial) | L07 exploitation | A2 | A01,A11 | `n/a reference` | no | Java gadget chains, matched to the classpath in front of you |
 | [ysoserial.net](https://github.com/pwntester/ysoserial.net) | L07 exploitation | A2 | A01,A11 | `n/a reference` | no | The .NET counterpart, ViewState and BinaryFormatter sinks |
 | [WSTG Input Validation (33 tests)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/) | L10 reporting | A2 | A01 | `n/a reference` | no | Includes the deserialization test |
@@ -73,6 +74,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **rea export_web_scripts**  
 - preconditions: `a capture with script sources`
 - oracle: `the serialization routine in recovered source`
+
+**tplmap**  
+- preconditions: `user input rendered through a template engine`
+- oracle: `arithmetic evaluated, then code execution confirmed by callback`
+- defense levels it addresses: F2
+- note: Python 2 only. Legacy but still the widest engine coverage. Start with an arithmetic probe by hand, not the tool.
 
 ## Decision tree
 

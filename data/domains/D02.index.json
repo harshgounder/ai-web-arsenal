@@ -2,20 +2,13 @@
  "domain": "D02",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 16,
- "indexed_not_enriched": 182,
+ "enriched": 21,
+ "indexed_not_enriched": 178,
  "entries": [
   {
    "name": "NoSQLMap",
    "url": "https://github.com/codingo/NoSQLMap",
    "tier": "adjacent",
-   "n_sources": 4,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "RustScan",
-   "url": "https://github.com/rustscan/rustscan",
-   "tier": "core_web",
    "n_sources": 4,
    "status": "PROMOTABLE"
   },
@@ -30,27 +23,6 @@
    "name": "DNS rebinding resilience review",
    "url": "https://github.com/nccgroup/singularity",
    "tier": "core_web",
-   "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "SpiderFoot",
-   "url": "https://github.com/smicallef/spiderfoot",
-   "tier": "adjacent",
-   "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "amass",
-   "url": "https://github.com/owasp-amass/amass",
-   "tier": "adjacent",
-   "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "theHarvester",
-   "url": "https://github.com/laramies/theHarvester",
-   "tier": "adjacent",
    "n_sources": 3,
    "status": "PROMOTABLE"
   },

@@ -2,16 +2,9 @@
  "domain": "D15",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 9,
- "indexed_not_enriched": 9,
+ "enriched": 10,
+ "indexed_not_enriched": 8,
  "entries": [
-  {
-   "name": "tplmap",
-   "url": "https://github.com/epinna/tplmap",
-   "tier": "core_web",
-   "n_sources": 4,
-   "status": "PROMOTABLE"
-  },
   {
    "name": "SSTImap>",
    "url": "https://github.com/vladko312/SSTImap",

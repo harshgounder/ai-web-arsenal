@@ -607,6 +607,63 @@
    "mirror_note": "no mirror row covers this entry",
    "mirror_ref": 1,
    "mirror_provisional": true
+  },
+  {
+   "id": "d07-xsstrike",
+   "name": "XSStrike",
+   "url": "https://github.com/s0md3v/XSStrike",
+   "role": "XSS scanner with context aware payload generation and a fuzzer",
+   "driver": {
+    "install": "aur:xsstrike",
+    "verify": "python3 xsstrike.py --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "a reflected parameter"
+   ],
+   "oracle": [
+    "payload executes, confirmed by callback"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d07-ghauri",
+   "name": "Ghauri",
+   "url": "https://github.com/r0oth3x49/ghauri",
+   "role": "SQL injection with a modern engine and fewer false positives than the classic tools",
+   "driver": {
+    "install": "pipx:ghauri",
+    "verify": "ghauri --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "agency": "A2",
+   "stage": "L07",
+   "preconditions": [
+    "a parameter reaching a query"
+   ],
+   "oracle": [
+    "data extracted or delay proportional to payload"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "status": "ESTABLISHED"
   }
  ],
  "tree": {

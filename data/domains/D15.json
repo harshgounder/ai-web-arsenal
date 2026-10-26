@@ -297,6 +297,35 @@
    "status": "ESTABLISHED",
    "mirror_ref": 0,
    "mirror_provisional": true
+  },
+  {
+   "id": "d15-tplmap",
+   "name": "tplmap",
+   "url": "https://github.com/epinna/tplmap",
+   "role": "Template injection detection and exploitation, engine specific",
+   "driver": {
+    "install": "git:https://github.com/epinna/tplmap",
+    "verify": "python2 tplmap.py --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "agency": "A2",
+   "stage": "L07",
+   "preconditions": [
+    "user input rendered through a template engine"
+   ],
+   "oracle": [
+    "arithmetic evaluated, then code execution confirmed by callback"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "status": "ESTABLISHED",
+   "note": "Python 2 only. Legacy but still the widest engine coverage. Start with an arithmetic probe by hand, not the tool."
   }
  ],
  "tree": {

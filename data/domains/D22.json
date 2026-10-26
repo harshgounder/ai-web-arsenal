@@ -452,6 +452,36 @@
    "stage": "L05",
    "status": "VERIFIED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d22-gotestwaf",
+   "name": "GoTestWAF",
+   "url": "https://github.com/wallarm/gotestwaf",
+   "role": "Measures WAF detection coverage with a scoring report, the honest way to characterise a defence",
+   "driver": {
+    "install": "git:https://github.com/wallarm/gotestwaf",
+    "verify": "./gotestwaf --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A05"
+   ],
+   "agency": "A3",
+   "stage": "L06",
+   "preconditions": [
+    "an authorised target with a WAF"
+   ],
+   "oracle": [
+    "score per attack class with the encoder that passed"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "status": "ESTABLISHED",
+   "note": "This is the tool that answers the detection-cost question the rest of the domain cannot. Run it once and report the score, not a bypass list."
   }
  ],
  "tree": {

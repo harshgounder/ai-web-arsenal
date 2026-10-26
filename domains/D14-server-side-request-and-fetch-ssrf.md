@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-9 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -41,6 +41,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A08 | `pacman:mitmproxy` | yes | Observe the server side request from the outside when you cannot see logs |
 | [curl (metadata probe)](https://curl.se/docs/) | L07 exploitation | A2 | A02 | `pacman:curl` | no | The simplest test: does the fetcher reach the metadata address |
 | [Gopherus](https://github.com/tarunkant/Gopherus) | L07 exploitation | A2 | A01,A02 | `n/a reference` | no | Generates gopher payloads for internal services, the classic pivot from SSRF to redis or mysql |
+| [Singularity (DNS rebinding)](https://github.com/nccgroup/singularity) | L07 exploitation | A3 | A02,A06 | `git:https://github.com/nccgroup/singularity` | no | DNS rebinding attack framework, which tests a defence most SSRF filters forget |
 | [SSRFmap](https://github.com/swisskyrepo/SSRFmap) | L07 exploitation | A2 | A02,A01 | `n/a reference` | no | SSRF exploitation modules, including protocol smuggling through gopher |
 | [WSTG SSRF test](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/19-Testing_for_Server-Side_Request_Forgery/) | L10 reporting | A2 | A02 | `n/a reference` | no | The canonical test description |
 
@@ -77,6 +78,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 **AWS IMDS documentation**  
 - note: IMDSv2 requires a token request first. If the fetcher cannot set a header, the class is closed and saying so is the finding.
+
+**Singularity (DNS rebinding)**  
+- preconditions: `an SSRF or browser fetch primitive`, `a client that re-resolves the name`
+- oracle: `the second resolution reaches an internal address`
+- defense levels it addresses: F3
+- note: Rebinding defeats resolve-check-then-fetch filters. If the fetcher resolves once and pins the address, the class is closed.
 
 ## Decision tree
 

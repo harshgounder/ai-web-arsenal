@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+14 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -44,6 +44,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [cloudscraper](https://github.com/VeNoMouS/cloudscraper) | L06 probing | A2 | A15 | `pipx:cloudscraper` | no | Solves only the classic Cloudflare JS challenge |
 | [curl-impersonate](https://github.com/lwthiker/curl-impersonate) | L06 probing | A2 | A05 | `git:https://github.com/lwthiker/curl-impersonate` | no | The same idea from the shell, for quick differential checks |
 | [curl_cffi](https://github.com/lexiforest/curl_cffi) | L06 probing | A2 | A05,A03 | `pipx:curl-cffi` | no | Browser TLS fingerprint from python, the library route past JA3 and h2 checks |
+| [GoTestWAF](https://github.com/wallarm/gotestwaf) | L06 probing | A3 | A15,A05 | `git:https://github.com/wallarm/gotestwaf` | yes | Measures WAF detection coverage with a scoring report, the honest way to characterise a defence |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Intercept and replay with control over the exact bytes, including pacing |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15 | `aur:nuclei-bin` | yes | Template checks with rate limiting and known WAF friendly options |
 | [playwright](https://playwright.dev/) | L06 probing | A2 | A05,A08 | `pipx:playwright` | no | A real browser engine driven by script, the honest bot workflow |
@@ -119,6 +120,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `template match`
 - defense levels it addresses: F2
 - detected by: same session from many IPs
+
+**GoTestWAF**  
+- preconditions: `an authorised target with a WAF`
+- oracle: `score per attack class with the encoder that passed`
+- defense levels it addresses: F2
+- note: This is the tool that answers the detection-cost question the rest of the domain cannot. Run it once and report the score, not a bypass list.
 
 ## Decision tree
 

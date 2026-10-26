@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-17 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -46,7 +46,9 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [PortSwigger Web Security Academy labs](https://portswigger.net/web-security/all-labs) | L06 probing | A2 | A01 | `n/a web` | no | The best free lab set per class, each with an intended answer |
 | [rea inspect_web_event_listeners](https://rea.tools) | L06 probing | A3 | A01,A08 | `mcp:rea` | yes | Read the actual DOM handlers before guessing which sink a payload reaches |
 | [OWASP WebGoat](https://github.com/WebGoat/WebGoat) | L06 probing | A2 | A01,A04 | `docker` | no | Structured lessons including blind and second order |
+| [XSStrike](https://github.com/s0md3v/XSStrike) | L06 probing | A2 | A01,A05 | `aur:xsstrike` | no | XSS scanner with context aware payload generation and a fuzzer |
 | [commix](https://github.com/commixproject/commix) | L07 exploitation | A2 | A01 | `aur:commix` | no | OS command injection, the counterpart for the shell sink |
+| [Ghauri](https://github.com/r0oth3x49/ghauri) | L07 exploitation | A2 | A01 | `pipx:ghauri` | no | SQL injection with a modern engine and fewer false positives than the classic tools |
 | [NoSQLMap](https://github.com/codingo/NoSQLMap) | L07 exploitation | A2 | A01,A05 | `git:https://github.com/codingo/NoSQLMap` | no | NoSQL injection including operator injection through JSON bodies |
 | [sqlmap](https://github.com/sqlmapproject/sqlmap) | L07 exploitation | A2 | A01 | `pacman:sqlmap` | no | SQL injection detection and exploitation, the reference implementation |
 | [SSTImap](https://github.com/vladko312/SSTImap) | L07 exploitation | A2 | A01 | `pipx:sstimap` | no | Server side template injection across engine families |
@@ -151,6 +153,16 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - defense levels it addresses: F2
 - detected by: payload reflected unencoded
 - note: For DOM XSS this is the difference between guessing at sinks and reading them.
+
+**XSStrike**  
+- preconditions: `a reflected parameter`
+- oracle: `payload executes, confirmed by callback`
+- defense levels it addresses: F2
+
+**Ghauri**  
+- preconditions: `a parameter reaching a query`
+- oracle: `data extracted or delay proportional to payload`
+- defense levels it addresses: F2
 
 ## Decision tree
 

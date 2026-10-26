@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -42,6 +42,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A05 | `pacman:curl` | no | Craft the exact multipart body, the only way to test parser edge cases |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `n/a reference` | no | File inclusion and upload payload corpus |
 | [fuxploider](https://github.com/almandin/fuxploider) | L07 exploitation | A2 | A05,A06 | `n/a reference` | no | Upload bypass matrix: extension, content type, magic bytes, polyglot |
+| [LFISuite](https://github.com/D35m0nd142/LFISuite) | L07 exploitation | A2 | A06,A01 | `git:https://github.com/D35m0nd142/LFISuite` | no | Local file inclusion detection and exploitation, including log poisoning paths |
 | [WSTG Path Traversal and File Include](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include/) | L10 reporting | A2 | A06 | `n/a reference` | no | The traversal and LFI test |
 | [WSTG File Upload test](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/15-Testing_for_HTTP_File_Upload/) | L10 reporting | A2 | A05 | `n/a reference` | no | The canonical upload test |
 
@@ -73,6 +74,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a class and a context`
 - oracle: `a payload that works`
 - detected by: valid as two formats
+
+**LFISuite**  
+- preconditions: `a parameter reaching a file path`
+- oracle: `file content returned that you did not upload`
+- defense levels it addresses: F2
+- note: Python 2 only. The traversal probe is easy to do by hand; this earns its place for the log poisoning and wrapper paths.
 
 ## Decision tree
 

@@ -29,19 +29,24 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-16 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+21 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
+| [Amass](https://github.com/owasp-amass/amass) | L02 passive recon | A3 | A08,A06 | `aur:amass` | yes | Asset mapping with passive and active modes, plus graph output |
 | [dnsx](https://github.com/projectdiscovery/dnsx) | L02 passive recon | A3 | A08 | `aur:dnsx` | yes | DNS resolution, record types, resolver brute force |
 | [gau](https://github.com/lc/gau) | L02 passive recon | A3 | A08 | `aur:gau` | yes | Known URLs from wayback, commoncrawl and alienvault |
 | [Shodan and Censys (indexed scan data)](https://www.shodan.io/) | L02 passive recon | A2 | A08 | `api:key` | yes | What the internet already knows about the estate, with zero requests to the target |
+| [SpiderFoot](https://github.com/smicallef/spiderfoot) | L02 passive recon | A3 | A08 | `aur:spiderfoot` | yes | OSINT automation across many sources, including leak and third party data |
 | [subfinder](https://github.com/projectdiscovery/subfinder) | L02 passive recon | A3 | A08 | `aur:subfinder` | yes | Passive subdomain enumeration from public sources |
+| [theHarvester](https://github.com/laramies/theHarvester) | L02 passive recon | A2 | A08 | `pipx:theHarvester` | no | Email, host and employee enumeration from public sources |
 | [httpx](https://github.com/projectdiscovery/httpx) | L03 surface mapping | A3 | A08 | `aur:httpx-bin` | yes | HTTP probing, status, tech detect and titles at scale |
+| [masscan](https://github.com/robertdavidgraham/masscan) | L03 surface mapping | A2 | A06,A07 | `pacman:masscan` | no | Internet scale port scanning, use only with explicit authorisation and a rate the target can survive |
 | [naabu](https://github.com/projectdiscovery/naabu) | L03 surface mapping | A3 | A06 | `aur:naabu` | yes | Port scan, top ports, fast |
 | [nmap](https://nmap.org/book/) | L03 surface mapping | A3 | A15 | `pacman:nmap` | yes | Service and version truth when HTTP headers lie |
 | [rea inspect_web_network_capture](https://rea.tools) | L03 surface mapping | A3 | A08 | `mcp:rea` | yes | Endpoint inventory from real traffic, with auth requirement and UI reachability |
+| [RustScan](https://github.com/rustscan/rustscan) | L03 surface mapping | A2 | A06 | `pacman:rustscan` | no | Fast port discovery that hands the result to nmap, the modern default for a first pass |
 | [whatweb](https://github.com/urbanadventurer/WhatWeb) | L03 surface mapping | A3 | A15 | `aur:whatweb` | yes | Technology fingerprinting with plugin detail |
 | [arjun](https://github.com/s0md3v/Arjun) | L04 discovery | A3 | A05 | `pipx:arjun` | yes | HTTP parameter discovery |
 | [feroxbuster](https://github.com/epi052/feroxbuster) | L04 discovery | A3 | A06 | `aur:feroxbuster` | yes | Recursive content discovery |
@@ -146,6 +151,33 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `hosts and services attributed to the organisation`
 - defense levels it addresses: F1
 - note: Check the authorisation scope covers querying third party indexes about the target. It usually does not.
+
+**RustScan**  
+- preconditions: `a host list`
+- oracle: `open ports enumerated, then nmap confirms service`
+- defense levels it addresses: F1
+
+**masscan**  
+- preconditions: `a network range in scope`, `an agreed packet rate`
+- oracle: `ports reported with a rate you set deliberately`
+- defense levels it addresses: F1
+- note: The only tool in this repo where the unsafe configuration is the default expectation. Set --rate explicitly, always.
+
+**Amass**  
+- preconditions: `a root domain`
+- oracle: `asset list with sources attributed`
+- defense levels it addresses: F1
+
+**SpiderFoot**  
+- preconditions: `a seed domain or address`, `authorisation that covers third party queries`
+- oracle: `findings with the source named`
+- defense levels it addresses: F1
+- note: Check that scope covers querying third party indexes. Passive does not mean permitted.
+
+**theHarvester**  
+- preconditions: `a target domain`
+- oracle: `addresses and hosts with the source named`
+- defense levels it addresses: F1
 
 ## Decision tree
 

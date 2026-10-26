@@ -2,16 +2,9 @@
  "domain": "D13",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 10,
- "indexed_not_enriched": 37,
+ "enriched": 11,
+ "indexed_not_enriched": 36,
  "entries": [
-  {
-   "name": "LFISuite",
-   "url": "https://github.com/D35m0nd142/LFISuite",
-   "tier": "core_web",
-   "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
   {
    "name": "IntruderPayloads>",
    "url": "https://github.com/1N3/IntruderPayloads",

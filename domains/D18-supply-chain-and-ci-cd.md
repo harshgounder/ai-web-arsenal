@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-9 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -38,6 +38,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [syft](https://github.com/anchore/syft) | L03 surface mapping | A2 | A11,A08 | `pacman:syft` | yes | SBOM generation, the inventory a supply chain review needs |
 | [gitleaks](https://github.com/gitleaks/gitleaks) | L04 discovery | A2 | A08 | `pacman:gitleaks` | yes | Secret scanning across repos and bundles |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A2 | A11 | `n/a reference` | no | Supply chain technique reference |
+| [Semgrep](https://github.com/semgrep/semgrep) | L05 hypothesis | A3 | A01,A11 | `pipx:semgrep` | yes | Pattern based static analysis, useful for finding dangerous sinks in the target's own code when you have it |
 | [OWASP Dependency-Check](https://github.com/jeremylong/DependencyCheck) | L06 probing | A2 | A11 | `n/a reference` | no | CPE based matching, still the default in many pipelines |
 | [grype](https://github.com/anchore/grype) | L06 probing | A2 | A11 | `git:https://github.com/anchore/grype` | yes | Vulnerability matching against an SBOM, pairs with syft |
 | [trivy](https://github.com/aquasecurity/trivy) | L06 probing | A2 | A11,A15 | `pacman:trivy` | yes | Dependency, image and IaC scanning in one binary |
@@ -77,6 +78,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **gitleaks**  
 - preconditions: `a repo or bundle`
 - oracle: `secret candidates with location`
+
+**Semgrep**  
+- preconditions: `source access, which is often available through a leak or a public repo`
+- oracle: `rule match with the sink location`
+- defense levels it addresses: F1
 
 ## Decision tree
 

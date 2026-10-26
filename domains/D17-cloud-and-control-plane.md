@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-14 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+15 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -41,6 +41,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [HackTricks Cloud](https://cloud.hacktricks.wiki/) | L05 hypothesis | A0 | A02,A15 | `n/a reference` | no | Per provider technique reference including metadata and IAM paths |
 | [aws-cli](https://aws.amazon.com/cli/) | L06 probing | A3 | A02,A08 | `pacman:aws-cli` | yes | Direct control plane access, needed for everything the scanners cannot express |
 | [azure-cli](https://learn.microsoft.com/cli/azure/) | L06 probing | A3 | A02,A08 | `pacman:azure-cli` | yes | The Azure equivalent, including Entra and ARM enumeration |
+| [Dark-Moon](https://github.com/ASCIT31/Dark-Moon) | L06 probing | A2 | A02,A08 | `git:https://github.com/ASCIT31/Dark-Moon` | no | Cloud credential and exposure assessment tooling |
 | [kubectl](https://kubernetes.io/docs/) | L06 probing | A2 | A02 | `pacman:kubectl` | no | The control plane itself, and the fastest way to test what a token can do |
 | [Prowler](https://github.com/prowler-cloud/prowler) | L06 probing | A3 | A15,A02 | `pipx:prowler` | yes | Cloud posture and attack path checks across AWS, Azure and GCP |
 | [ScoutSuite](https://github.com/nccgroup/ScoutSuite) | L06 probing | A3 | A15 | `pipx:scoutsuite` | yes | Multi cloud configuration audit with a readable report |
@@ -115,6 +116,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - defense levels it addresses: F2
 - detected by: request to the metadata address from an application process
 - note: IMDSv2 changes the test: a token request first. If the fetch cannot set a header, the class is gone. Say so rather than reporting a false positive.
+
+**Dark-Moon**  
+- preconditions: `credentials in scope`, `an isolated account`
+- oracle: `reachable resources listed`
+- defense levels it addresses: F1
+- note: Low star count and thin documentation. Listed because four independent sources carry it, flagged PROBABLE because this project has not run it.
 
 ## Decision tree
 

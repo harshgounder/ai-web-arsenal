@@ -469,6 +469,37 @@
    "stage": "L11",
    "status": "VERIFIED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d17-darkmoon",
+   "name": "Dark-Moon",
+   "url": "https://github.com/ASCIT31/Dark-Moon",
+   "role": "Cloud credential and exposure assessment tooling",
+   "driver": {
+    "install": "git:https://github.com/ASCIT31/Dark-Moon",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A08"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "credentials in scope",
+    "an isolated account"
+   ],
+   "oracle": [
+    "reachable resources listed"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "status": "PROBABLE",
+   "note": "Low star count and thin documentation. Listed because four independent sources carry it, flagged PROBABLE because this project has not run it."
   }
  ],
  "tree": {
