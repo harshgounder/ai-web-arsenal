@@ -66,4 +66,21 @@ p_git https://github.com/projectdiscovery/nuclei-templates '$HOME/nuclei-templat
 log "--- jwt_tool: jwt inspection and the full attack set, none, alg confusion, kid, jku"
 p_aur jwt_tool || FAILED=$((FAILED+1))
 
+log "--- curl_cffi: python client with browser TLS fingerprints, the library route past JA3 checking"
+p_pipx curl-cffi || FAILED=$((FAILED+1))
+
+log "--- cloudscraper: solves the classic cloudflare JS challenge, useless against turnstile and modern bot management"
+p_pipx cloudscraper || FAILED=$((FAILED+1))
+
+log "--- undetected-chromedriver: patched chromedriver that avoids the usual automation flags"
+p_pipx undetected-chromedriver || FAILED=$((FAILED+1))
+
+log "--- playwright: scripted browser with real engine, the honest way to run a bot shaped workflow"
+p_pipx playwright || FAILED=$((FAILED+1))
+
+log "--- curl-impersonate: curl built with browser TLS and h2 fingerprints, the CLI route past JA3 checking"
+ok "curl-impersonate already present"
+log "--- tls-client: go backed python client with browser profiles"
+p_pipx tls-client || FAILED=$((FAILED+1))
+
 summary "$FAILED"

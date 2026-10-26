@@ -1,0 +1,48 @@
+{
+ "id": "d22-root",
+ "q": "Which defence level are you actually facing?",
+ "why": "Mapped to the defence scale in the ontology: F2 signature, F3 protocol aware, F4 in app, F5 bot management, F6 identity, F7 model based. Each needs a different approach and most of them need no payload at all.",
+ "branches": [
+  {
+   "a": "F2 signature WAF",
+   "action": "encoding and syntax mutation against the class, one axis at a time so you learn which axis is filtered",
+   "tools": [
+    "d22-mitmproxy",
+    "d22-ffuf"
+   ],
+   "oracle": "payload passes where a control is blocked"
+  },
+  {
+   "a": "F3 protocol aware",
+   "action": "semantic bypass, not encoding. the parser difference between two layers is the opening",
+   "tools": [
+    "d22-nuclei"
+   ],
+   "oracle": "two layers disagree about the same request"
+  },
+  {
+   "a": "F5 bot management",
+   "action": "differential test: same request from a plain client and a real browser profile. if the answers differ, the defence is the client",
+   "tools": [
+    "d22-curl_cffi",
+    "d22-playwright",
+    "d22-undetected-chromedriver"
+   ],
+   "oracle": "response obtained only with a browser shaped client"
+  },
+  {
+   "a": "F7 model based or rate based",
+   "action": "pace deliberately and keep a request budget. the goal is a result inside the budget, not speed",
+   "tools": [
+    "d22-ffuf"
+   ],
+   "oracle": "results obtained without a block"
+  },
+  {
+   "a": "A challenge (turnstile class)",
+   "action": "stop and report it. solving that is out of scope for an assessment and is a business decision, not a technical one",
+   "tools": [],
+   "oracle": "n/a"
+  }
+ ]
+}

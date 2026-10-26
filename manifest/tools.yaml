@@ -809,3 +809,83 @@ tools:
     agent_use: "mcp-scan scan, then hash descriptions and diff on each start"
     docs: https://github.com/invariantlabs-ai/mcp-scan
     profiles: [ai-agent, all]
+
+  # ---------------- D22 evasion and client impersonation ----------------
+  - id: curl_cffi
+    bin: null
+    domain: D22
+    role: python client with browser TLS fingerprints, the library route past JA3 checking
+    kind: lib
+    install: [{channel: pipx, pkg: curl-cffi}]
+    verify: "python3 -c 'import curl_cffi'"
+    json_out: false
+    stdin: false
+    agent_use: "requests.get(url, impersonate='chrome') then compare against a plain httpx request"
+    docs: https://github.com/lexiforest/curl_cffi
+    profiles: [web, all]
+
+  - id: cloudscraper
+    bin: null
+    domain: D22
+    role: solves the classic cloudflare JS challenge, useless against turnstile and modern bot management
+    kind: lib
+    install: [{channel: pipx, pkg: cloudscraper}]
+    verify: "python3 -c 'import cloudscraper'"
+    json_out: false
+    stdin: false
+    ambiguity: "works only on the old challenge. if it fails, that is data about the defence not a bug"
+    agent_use: "one attempt per host, then stop. repeated attempts are how you get blocked"
+    docs: https://github.com/VeNoMouS/cloudscraper
+    profiles: [web, all]
+
+  - id: undetected-chromedriver
+    bin: null
+    domain: D22
+    role: patched chromedriver that avoids the usual automation flags
+    kind: lib
+    install: [{channel: pipx, pkg: undetected-chromedriver}]
+    verify: "python3 -c 'import undetected_chromedriver'"
+    json_out: false
+    stdin: false
+    agent_use: "use when a plain chromium CDP target is fingerprinted. still detectable, just less obviously"
+    docs: https://github.com/ultrafunkamsterdam/undetected-chromedriver
+    profiles: [web, all]
+
+  - id: playwright
+    bin: playwright
+    domain: D22
+    role: scripted browser with real engine, the honest way to run a bot shaped workflow
+    kind: cli
+    install: [{channel: pipx, pkg: playwright}]
+    verify: "playwright --version"
+    json_out: false
+    stdin: false
+    agent_use: "playwright install chromium, then drive. set human timing deliberately, not randomly"
+    docs: https://playwright.dev/
+    profiles: [web, all]
+
+  - id: curl-impersonate
+    bin: curl-impersonate
+    domain: D22
+    role: curl built with browser TLS and h2 fingerprints, the CLI route past JA3 checking
+    kind: cli
+    install: [{channel: aur, pkg: curl-impersonate-bin}, {channel: git, pkg: https://github.com/lwthiker/curl-impersonate}]
+    verify: "curl-impersonate --version"
+    json_out: false
+    stdin: true
+    agent_use: "curl-impersonate-chrome -sS -o /dev/null -w '%{http_code}', compare to plain curl"
+    docs: https://github.com/lwthiker/curl-impersonate
+    profiles: [web, all]
+
+  - id: tls-client
+    bin: null
+    domain: D22
+    role: go backed python client with browser profiles
+    kind: lib
+    install: [{channel: pipx, pkg: tls-client}]
+    verify: "python3 -c 'import tls_client'"
+    json_out: false
+    stdin: false
+    agent_use: "session = tls_client.Session(client_identifier='chrome_120')"
+    docs: https://github.com/FlorianREGAZ/Python-Tls-Client
+    profiles: [web, all]

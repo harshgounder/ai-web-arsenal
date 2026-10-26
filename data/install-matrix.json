@@ -1642,6 +1642,173 @@
     }
    ],
    "ambiguity": null
+  },
+  {
+   "id": "curl_cffi",
+   "bin": null,
+   "domain": "D22",
+   "kind": "lib",
+   "role": "python client with browser TLS fingerprints, the library route past JA3 checking",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "curl-cffi",
+    "version": "0.17.0"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "curl-cffi",
+     "ok": true,
+     "version": "0.17.0"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "cloudscraper",
+   "bin": null,
+   "domain": "D22",
+   "kind": "lib",
+   "role": "solves the classic cloudflare JS challenge, useless against turnstile and modern bot management",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "cloudscraper",
+    "version": "1.2.71"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "cloudscraper",
+     "ok": true,
+     "version": "1.2.71"
+    }
+   ],
+   "ambiguity": "works only on the old challenge. if it fails, that is data about the defence not a bug"
+  },
+  {
+   "id": "undetected-chromedriver",
+   "bin": null,
+   "domain": "D22",
+   "kind": "lib",
+   "role": "patched chromedriver that avoids the usual automation flags",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "undetected-chromedriver",
+    "version": "3.5.5"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "undetected-chromedriver",
+     "ok": true,
+     "version": "3.5.5"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "playwright",
+   "bin": "playwright",
+   "domain": "D22",
+   "kind": "cli",
+   "role": "scripted browser with real engine, the honest way to run a bot shaped workflow",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "playwright",
+    "version": "1.64.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "playwright",
+     "ok": true,
+     "version": "1.64.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "curl-impersonate",
+   "bin": "curl-impersonate",
+   "domain": "D22",
+   "kind": "cli",
+   "role": "curl built with browser TLS and h2 fingerprints, the CLI route past JA3 checking",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": true,
+   "resolved": {
+    "channel": "git",
+    "pkg": "https://github.com/lwthiker/curl-impersonate",
+    "version": null
+   },
+   "status": "installed",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "curl-impersonate-bin",
+     "ok": false
+    },
+    {
+     "channel": "git",
+     "pkg": "https://github.com/lwthiker/curl-impersonate",
+     "ok": true,
+     "note": "clone url, unverified"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "tls-client",
+   "bin": null,
+   "domain": "D22",
+   "kind": "lib",
+   "role": "go backed python client with browser profiles",
+   "profiles": [
+    "web",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "tls-client",
+    "version": "2.0.0"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "tls-client",
+     "ok": true,
+     "version": "2.0.0"
+    }
+   ],
+   "ambiguity": null
   }
  ]
 }

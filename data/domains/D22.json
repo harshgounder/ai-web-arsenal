@@ -1,0 +1,519 @@
+{
+ "id": "D22",
+ "title": "WAF, bot and anti-automation evasion",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The offensive half of the defence mirror. Every entry states which defence level it addresses.",
+ "atoms": [
+  "A15",
+  "A05",
+  "A03",
+  "A07",
+  "A08"
+ ],
+ "atom_notes": {
+  "A15": "evasion starts by measuring which defence is actually deployed, not by assuming one",
+  "A05": "the mutation is a shape or encoding change that one layer normalises and another does not",
+  "A03": "client identity is the boundary when the defence is behavioural",
+  "A07": "rate is a resource on both sides, and pacing is the control that keeps a test legal",
+  "A08": "challenge solving and browser driving exist to make the client look like what it is not"
+ },
+ "required_cells": [
+  {
+   "cell": "S17/L03/A2",
+   "why": "identify the defence before choosing an evasion, or you are guessing",
+   "filled": true
+  },
+  {
+   "cell": "S17/L06/A3",
+   "why": "differential testing across client profiles is the only honest method",
+   "filled": true
+  },
+  {
+   "cell": "S17/L07/A2",
+   "why": "the payload path when the defence is protocol aware rather than signature based",
+   "filled": true
+  },
+  {
+   "cell": "S17/L08/A5",
+   "why": "prove the bypass with a control request that the defence does block",
+   "filled": true
+  },
+  {
+   "cell": "S17/L10/A2",
+   "why": "report the detection cost, since a bypass that alerts is not a bypass",
+   "filled": false
+  },
+  {
+   "cell": "S17/L12/A6",
+   "why": "defence drift, a WAF rule set changes weekly",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d22-wafw00f",
+   "name": "wafw00f",
+   "url": "https://github.com/EnableSecurity/wafw00f",
+   "role": "Fingerprint the WAF, which determines which evasion class applies at all",
+   "driver": {
+    "install": "pipx:wafw00f",
+    "verify": "wafw00f --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host"
+   ],
+   "oracle": [
+    "WAF product or none"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "Run before payload selection, never after. The WAF decides which mutation axis matters."
+  },
+  {
+   "id": "d22-curl_cffi",
+   "name": "curl_cffi",
+   "url": "https://github.com/lexiforest/curl_cffi",
+   "role": "Browser TLS fingerprint from python, the library route past JA3 and h2 checks",
+   "driver": {
+    "install": "pipx:curl-cffi",
+    "verify": "python3 -c 'import curl_cffi'",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A03"
+   ],
+   "preconditions": [
+    "the target fingerprints the client"
+   ],
+   "oracle": [
+    "a response the plain client did not get"
+   ],
+   "evades": [
+    "F5",
+    "F7"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "The comparison is the test: same request, one plain client and one impersonating. If the answers differ, the defence is fingerprinting."
+  },
+  {
+   "id": "d22-curl-impersonate",
+   "name": "curl-impersonate",
+   "url": "https://github.com/lwthiker/curl-impersonate",
+   "role": "The same idea from the shell, for quick differential checks",
+   "driver": {
+    "install": "git:https://github.com/lwthiker/curl-impersonate",
+    "verify": "curl-impersonate --version",
+    "json": false,
+    "stdin": true
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a shell and the target"
+   ],
+   "oracle": [
+    "differing status or body versus plain curl"
+   ],
+   "evades": [
+    "F5",
+    "F7"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d22-tls-client",
+   "name": "tls-client",
+   "url": "https://github.com/FlorianREGAZ/Python-Tls-Client",
+   "role": "Go backed python client with selectable browser profiles",
+   "driver": {
+    "install": "pipx:tls-client",
+    "verify": "python3 -c 'import tls_client'",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a script"
+   ],
+   "oracle": [
+    "response only obtainable with a specific profile"
+   ],
+   "evades": [
+    "F5"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d22-playwright",
+   "name": "playwright",
+   "url": "https://playwright.dev/",
+   "role": "A real browser engine driven by script, the honest bot workflow",
+   "driver": {
+    "install": "pipx:playwright",
+    "verify": "playwright --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A08"
+   ],
+   "preconditions": [
+    "a script and a browser install"
+   ],
+   "oracle": [
+    "a flow completed that a plain request could not"
+   ],
+   "evades": [
+    "F5"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "Set human timing deliberately rather than randomly. Random is itself a signal."
+  },
+  {
+   "id": "d22-undetected-chromedriver",
+   "name": "undetected-chromedriver",
+   "url": "https://github.com/ultrafunkamsterdam/undetected-chromedriver",
+   "role": "Patched driver that avoids the usual automation flags",
+   "driver": {
+    "install": "pipx:undetected-chromedriver",
+    "verify": "python3 -c 'import undetected_chromedriver'",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a browser target"
+   ],
+   "oracle": [
+    "page loads where headless chromium was refused"
+   ],
+   "evades": [
+    "F5"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "Still detectable, just less obviously. Treat success as evidence about the defence, not as invisibility."
+  },
+  {
+   "id": "d22-cloudscraper",
+   "name": "cloudscraper",
+   "url": "https://github.com/VeNoMouS/cloudscraper",
+   "role": "Solves only the classic Cloudflare JS challenge",
+   "driver": {
+    "install": "pipx:cloudscraper",
+    "verify": "python3 -c 'import cloudscraper'",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host with the old challenge"
+   ],
+   "oracle": [
+    "the challenge bypassed and content returned"
+   ],
+   "evades": [
+    "F5"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "If it fails, that is data about the defence, not a tool bug. One attempt per host, then stop."
+  },
+  {
+   "id": "d22-chromium",
+   "name": "chromium",
+   "url": "https://chromium.googlesource.com/chromium/src/+/main/docs/",
+   "role": "A real browser and a CDP target, which is also how REA inspects a page",
+   "driver": {
+    "install": "pacman:chromium",
+    "verify": "chromium --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a browser binary"
+   ],
+   "oracle": [
+    "rendered DOM and network activity"
+   ],
+   "evades": [
+    "F5"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d22-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/",
+   "role": "Intercept and replay with control over the exact bytes, including pacing",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "exact request replay with modified framing"
+   ],
+   "evades": [
+    "F2",
+    "F3"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d22-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Fuzzing that survives rate limits by being paced, not by being fast",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A07"
+   ],
+   "preconditions": [
+    "a wordlist and a host"
+   ],
+   "oracle": [
+    "results inside the rate budget without tripping the limiter"
+   ],
+   "evades": [
+    "F7"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "Set -rate. An agent that ignores rate turns a test into a denial of service."
+  },
+  {
+   "id": "d22-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Template checks with rate limiting and known WAF friendly options",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host and templates"
+   ],
+   "oracle": [
+    "template match"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d22-awesome-waf",
+   "name": "Awesome-WAF",
+   "url": "https://github.com/0xInfection/Awesome-WAF",
+   "role": "The WAF corpus: fingerprints, bypass notes and per product behaviour. 7,662 stars and still maintained",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d22-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per defence technique reference with current bypass context",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d22-root",
+  "q": "Which defence level are you actually facing?",
+  "why": "Mapped to the defence scale in the ontology: F2 signature, F3 protocol aware, F4 in app, F5 bot management, F6 identity, F7 model based. Each needs a different approach and most of them need no payload at all.",
+  "branches": [
+   {
+    "a": "F2 signature WAF",
+    "action": "encoding and syntax mutation against the class, one axis at a time so you learn which axis is filtered",
+    "tools": [
+     "d22-mitmproxy",
+     "d22-ffuf"
+    ],
+    "oracle": "payload passes where a control is blocked"
+   },
+   {
+    "a": "F3 protocol aware",
+    "action": "semantic bypass, not encoding. the parser difference between two layers is the opening",
+    "tools": [
+     "d22-nuclei"
+    ],
+    "oracle": "two layers disagree about the same request"
+   },
+   {
+    "a": "F5 bot management",
+    "action": "differential test: same request from a plain client and a real browser profile. if the answers differ, the defence is the client",
+    "tools": [
+     "d22-curl_cffi",
+     "d22-playwright",
+     "d22-undetected-chromedriver"
+    ],
+    "oracle": "response obtained only with a browser shaped client"
+   },
+   {
+    "a": "F7 model based or rate based",
+    "action": "pace deliberately and keep a request budget. the goal is a result inside the budget, not speed",
+    "tools": [
+     "d22-ffuf"
+    ],
+    "oracle": "results obtained without a block"
+   },
+   {
+    "a": "A challenge (turnstile class)",
+    "action": "stop and report it. solving that is out of scope for an assessment and is a business decision, not a technical one",
+    "tools": [],
+    "oracle": "n/a"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "encoding based WAF bypass",
+   "detect": "normalisation mismatch between proxy and app",
+   "control": "parse and normalise once, at the app",
+   "rule": "double encoded input"
+  },
+  {
+   "attack": "TLS fingerprint mismatch",
+   "detect": "client JA3 not matching the claimed browser",
+   "control": "fingerprint the client, challenge on mismatch",
+   "rule": "JA3 profile drift"
+  },
+  {
+   "attack": "automation flag detection",
+   "detect": "navigator.webdriver, CDP artefacts",
+   "control": "behavioural scoring, not single flags",
+   "rule": "automation signal cluster"
+  },
+  {
+   "attack": "rate limit evasion by distribution",
+   "detect": "same session from many IPs",
+   "control": "limit on identity, not only on IP",
+   "rule": "identity spread across sources"
+  },
+  {
+   "attack": "challenge bypass by replay",
+   "detect": "challenge token reused",
+   "control": "single use bound tokens",
+   "rule": "token replay"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool reports the detection cost of a bypass, only whether it worked",
+   "class": "no-tool",
+   "build_candidate": "attach an expected alert count per technique so a report can say what the bypass would trigger"
+  },
+  {
+   "gap": "No differential harness that runs the same request across N client fingerprints automatically",
+   "class": "no-tool",
+   "build_candidate": "one request, N clients (plain, curl_cffi profiles, playwright), diff the responses, emit a table"
+  },
+  {
+   "gap": "S17/L10 detection cost and L12 defence drift cells empty",
+   "class": "coverage",
+   "build_candidate": "alert expectation per technique plus a scheduled WAF rule fingerprint diff"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D22.index.json"
+ }
+}
