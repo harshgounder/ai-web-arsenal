@@ -126,17 +126,19 @@ A rival entry is never silently dropped. That is the entire point of the ledger.
 
 ## How the defence mirror actually works
 
-Every domain carries a `mirror`: rows of `attack | detect | control | rule`. They describe attack
-**classes**, not individual tools, and that distinction matters for how the coverage number reads.
+Every domain carries a `mirror`: rows of `attack | detect | control | rule`. These describe attack
+**classes**, not individual tools, and the repo does not claim a 1:1 mapping between an entry and a
+detection row.
 
-Measured 2026-10-27: of 389 enriched entries, **166 perform or prove an action** (agency above A0, stage
-L06 to L08), and **87 of those (52%) are linked to a specific mirror row** by `scripts/link-mirrors.py`.
-The links are marked `mirror_provisional` because matching is lexical, not semantic. Entries that no row
-covers carry `mirror_note: "no mirror row covers this entry"` rather than a fabricated detection.
+An attempt was made on 2026-10-27 to auto-link each entry to a mirror row by lexical similarity. It
+produced 14 percent on one scoring method and 26 percent on another, and both numbers were artifacts of
+the scoring rather than measurements of the mirror. A row describes a class; an entry's relation to a
+class is semantic, and lexical overlap cannot recover it. The experiment was reverted and the script
+deleted rather than tuned until it produced a number worth quoting.
 
-The remaining 48% are mostly tools that implement a class already covered by a row, plus references.
-A CLI tool does not need its own detection; the technique it implements does. The thinnest real gaps are
-D09 smuggling, D11 API and D17 cloud, where the attack surface is more specific than the generic rows.
+What is actually true: **28 of 28 authored domains carry a mirror.** Per-entry `detected_by` is
+populated only where the author set it deliberately, which is the honest unit. A tool does not need its
+own detection; the class it implements does.
 
 ## Why the corpus matters more than it looks
 
