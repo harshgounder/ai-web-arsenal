@@ -4,27 +4,32 @@ Everything below was verified by running it on 2026-10-26. No step here depends 
 
 ---
 
-## What is done
+## What is done, measured 2026-10-27
 
 | layer | state |
 |---|---|
 | scope derivation | `SCOPE-v1.md`, 11 axes, cell model, 37 domains declared |
-| rival reconciliation | 19 collections, 31,298 rows, identity holds, exclusions itemised |
+| rival reconciliation | 19 collections, 31,298 rows, identity holds, 17,516 exclusions itemised by reason |
+| corpus | 21,194 tool identities (21,397 by URL, 203 collapsed as duplicates) |
 | taxonomy mapping | 706 items from 6 taxonomies, 624 mapped to atoms (88.4%) |
-| tool manifest | 57 tools, every install candidate resolved against a real channel, 0 unresolved |
-| bootstrap | 8 profiles generated from the matrix, dry-run safe, syntax clean |
-| domains | 6 authored (D04, D05, D11, D19, D20, D31), 31 stubs with declared required cells |
-| AI-native layer | 5 prompt packs, 1 skill, MCP configs, orchestration doc, decision trees |
-| dated evidence | every entry stamped, 298 core links actually fetched, 3.0% problems |
-| corpus | 24,759 canonical entries from 19 sources plus 3 own collections |
+| tool manifest | 64 tools, 0 unresolved, every channel verified |
+| bootstrap | 11 scripts generated, 8 profiles, dry-run safe |
+| domains | 28 authored, 9 explicit pointers, 0 empty, 444 enriched entries |
+| AI-native layer | 5 prompt packs, 1 skill, MCP configs, orchestration doc, 28 decision trees |
+| dated evidence | every entry stamped, 265 domain URLs checked (264 live), 298 corpus links |
+| validator | passes on all 28 domain files |
 
 ## What is not done
 
-- 31 domains are stubs. Each declares its required cells and its live corpus count. None has content.
-- 12,749 entries are `HARVESTED`: seen in a source, never independently checked. Only the `core_web`
-  tier has been link checked.
+- 1,419 promotable candidates remain unenriched. Measured, not guessed: see `data/domains/*.index.json`.
+  The realistic yield is far lower than that number because the single-source tier is mostly
+  single-author tools, dead projects and blog posts.
+- 9 domains are explicit pointers rather than authored documents. Each names the artefact that
+  implements it. Turning them into documents would duplicate existing files.
 - The REA extraction gaps in D31 are named and unbuilt (10 of them).
-- The atlas (`web-attack-atlas`) has 3 of 23 waves done.
+- The atlas has 3 of 23 waves done.
+- Per-entry `detected_by` is hand authored for 22 entries, provisional for 113, empty for 254. The
+  mirror is per attack class, not per tool, and the README says so.
 
 ## Rebuild from scratch
 
@@ -114,3 +119,23 @@ fields, and they cannot be generated.
 `~/web-attack-atlas`. Join key is `entry_id`. That repo owns atoms, patterns, preconditions, oracles,
 chains and control classes. This repo owns tools, install, drivers and the corpus. Never restate a
 pattern here.
+
+
+---
+
+## Closing note, 2026-10-27
+
+This project's recurring failure mode was a **plausible-looking artifact that nothing validated**.
+Eight instances were caught, none by reading:
+
+1. two recalled facts wrong (a repo called stale that was active, one called live that was archived)
+2. link checker used HEAD, which real sites answer 404, producing 7 false dead links
+3. classifier fallback turned every unmatched counter into "authorisation", inflating a finding to 31%
+4. two repository URLs were invented and looked exactly like the 110 real ones
+5. a mirror coverage metric was measuring its own scoring, giving 14% then 26% then 52%
+6. the backlog was 10,476 until measured properly at 1,491
+7. the corpus was 24,759 until image URLs were removed, giving 21,397
+8. a name repair ran after its generator and was silently discarded, then the retry never matched
+
+Every one was found by a measurement disagreeing with a claim. That is the method this repo is trying
+to encode: if a number cannot be regenerated from disk, it is not a number, it is a memory.
