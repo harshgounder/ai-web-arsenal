@@ -1,0 +1,8 @@
+- id: mcp-rea
+  name: "@deepseek-ai/dsh-mcp-client"
+  config:
+    transport: stdio
+    command: npx
+    args: ["-y", "rea-agents@6.4.0", "mcp"]
+    toolCallTimeoutMs: 300000
+    failOnStartupError: false
