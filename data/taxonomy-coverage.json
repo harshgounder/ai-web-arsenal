@@ -1,0 +1,80 @@
+{
+ "generated_at": "2026-10-26",
+ "sources": {
+  "wstg": {
+   "count": 131,
+   "mapped": 112,
+   "unmapped": 19
+  },
+  "asvs": {
+   "count": 17,
+   "mapped": 11,
+   "unmapped": 6
+  },
+  "vrt": {
+   "count": 437,
+   "mapped": 416,
+   "unmapped": 21
+  },
+  "api_top10": {
+   "count": 10,
+   "mapped": 8,
+   "unmapped": 2
+  },
+  "atlas": {
+   "count": 101,
+   "mapped": 69,
+   "unmapped": 32
+  },
+  "llm_top10": {
+   "count": 10,
+   "mapped": 8,
+   "unmapped": 2
+  }
+ },
+ "total_items": 706,
+ "mapped": 624,
+ "coverage_pct": 88.4,
+ "atom_hits": {
+  "A15": 233,
+  "A01": 137,
+  "A03": 128,
+  "A08": 110,
+  "A16": 94,
+  "A02": 55,
+  "A09": 55,
+  "A07": 32,
+  "A10": 29,
+  "A06": 23,
+  "A05": 16,
+  "A04": 14,
+  "A11": 12,
+  "A13": 7,
+  "A12": 6,
+  "A14": 3
+ },
+ "atoms_unused": [],
+ "domain_hits": {
+  "unmapped": 208,
+  "D19": 93,
+  "D04": 84,
+  "D07": 56,
+  "D16": 41,
+  "D08": 38,
+  "D05": 32,
+  "D03": 31,
+  "D13": 24,
+  "D06": 24,
+  "D11": 15,
+  "D02": 9,
+  "D22": 9,
+  "D14": 8,
+  "D09": 6,
+  "D12": 6,
+  "D21": 6,
+  "D10": 5,
+  "D17": 5,
+  "D18": 5,
+  "D15": 1
+ }
+}

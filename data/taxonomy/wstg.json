@@ -1,0 +1,1183 @@
+{
+ "source": "wstg",
+ "count": 131,
+ "mapped": 112,
+ "unmapped": 19,
+ "items": [
+  {
+   "id": "WSTG-INFO-XX",
+   "title": "00-Information Gathering Overview",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "WSTG-INFO-01",
+   "title": "Conduct Search Engine Reconnaissance for Information Leakage",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "WSTG-INFO-02",
+   "title": "Fingerprint Web Server",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "WSTG-INFO-03",
+   "title": "Review Webserver Metafiles for Information Leakage",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-INFO-04",
+   "title": "Attack Surface Identification",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INFO-05",
+   "title": "Review Web Page Content for Information Leakage",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INFO-06",
+   "title": "Identify Application Entry Points",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INFO-07",
+   "title": "Map Execution Paths Through Application",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-INFO-08",
+   "title": "Fingerprint Web Application Framework",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "WSTG-INFO-09",
+   "title": "Fingerprint Web Application",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "WSTG-INFO-10",
+   "title": "Map Application Architecture",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CONF-01",
+   "title": "Network Infrastructure Configuration",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CONF-02",
+   "title": "Application Platform Configuration",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CONF-03",
+   "title": "File Extensions Handling for Sensitive Information",
+   "atoms": [
+    "A01",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-CONF-04",
+   "title": "Review Old Backup and Unreferenced Files for Sensitive Information",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-CONF-05",
+   "title": "Enumerate Infrastructure and Application Admin Interfaces",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "WSTG-CONF-06",
+   "title": "HTTP Methods",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D09"
+  },
+  {
+   "id": "WSTG-CONF-07",
+   "title": "HTTP Strict Transport Security",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CONF-08",
+   "title": "RIA Cross Domain Policy",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CONF-09",
+   "title": "File Permission",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-CONF-10",
+   "title": "Subdomain Takeover",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CONF-11",
+   "title": "Cloud Storage",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "WSTG-CONF-12",
+   "title": "Content Security Policy",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CONF-13",
+   "title": "Path Confusion",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-CONF-14",
+   "title": "Other HTTP Security Header Misconfigurations",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-IDEN-01",
+   "title": "Role Definitions",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-IDEN-02",
+   "title": "User Registration Process",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-IDEN-03",
+   "title": "Account Provisioning Process",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-IDEN-04",
+   "title": "Account Enumeration and Guessable User Account",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "WSTG-IDEN-05",
+   "title": "Weak or Unenforced Username Policy",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-AUTH-01",
+   "title": "Credentials Transported over an Encrypted Channel",
+   "atoms": [
+    "A03",
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-02",
+   "title": "Default Credentials",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-03",
+   "title": "Weak Lock Out Mechanism",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-AUTH-04",
+   "title": "Bypassing Authentication Schema",
+   "atoms": [
+    "A03",
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-05",
+   "title": "Vulnerable Remember Password",
+   "atoms": [
+    "A03",
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-06",
+   "title": "Browser Cache Weaknesses",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D10"
+  },
+  {
+   "id": "WSTG-AUTH-07",
+   "title": "Weak Authentication Methods",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-08",
+   "title": "Weak Security Question Answer",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-AUTH-09",
+   "title": "Weak Password Change or Reset Functionalities",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-10",
+   "title": "Weaker Authentication in Alternative Channel",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-11",
+   "title": "Multi-Factor Authentication",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-01",
+   "title": "Directory Traversal File Include",
+   "atoms": [
+    "A06",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-AUTH-02",
+   "title": "Bypassing Authorization Schema",
+   "atoms": [
+    "A02",
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "WSTG-AUTH-03",
+   "title": "Privilege Escalation",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "WSTG-AUTH-04",
+   "title": "Insecure Direct Object References",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-AUTH-05",
+   "title": "OAuth Weaknesses",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-XX",
+   "title": "05.1-OAuth Authorization Server Weaknesses",
+   "atoms": [
+    "A02",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-AUTH-XX",
+   "title": "05.2-OAuth Client Weaknesses",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "WSTG-SESS-01",
+   "title": "Session Management Schema",
+   "atoms": [
+    "A03",
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-02",
+   "title": "Cookies Attributes",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-03",
+   "title": "Session Fixation",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-04",
+   "title": "Exposed Session Variables",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-05",
+   "title": "Cross Site Request Forgery",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-SESS-06",
+   "title": "Logout Functionality",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-SESS-07",
+   "title": "Session Timeout",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-08",
+   "title": "Session Puzzling",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-09",
+   "title": "Session Hijacking",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-10",
+   "title": "JSON Web Tokens",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-SESS-11",
+   "title": "Concurrent Sessions",
+   "atoms": [
+    "A03",
+    "A04",
+    "A12"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "WSTG-INJE-01",
+   "title": "Reflected Cross Site Scripting",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-02",
+   "title": "Stored Cross Site Scripting",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-03",
+   "title": "HTTP Verb Tampering",
+   "atoms": [
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-04",
+   "title": "HTTP Parameter Pollution",
+   "atoms": [
+    "A05",
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D09"
+  },
+  {
+   "id": "WSTG-INJE-05",
+   "title": "SQL Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.1-Oracle",
+   "atoms": [
+    "A13"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.2-MySQL",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.3-SQL Server",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.4-PostgreSQL",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.5-MS Access",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.6-NoSQL Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.7-ORM Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "05.8-Client-side",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-INJE-06",
+   "title": "LDAP Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-07",
+   "title": "XML Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-08",
+   "title": "SSI Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-09",
+   "title": "XPath Injection",
+   "atoms": [
+    "A01",
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-10",
+   "title": "IMAP SMTP Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-11",
+   "title": "Code Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-XX",
+   "title": "11.1-File Inclusion",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-INJE-12",
+   "title": "Command Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-13",
+   "title": "Buffer Overflow",
+   "atoms": [
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-13",
+   "title": "Format String Injection",
+   "atoms": [
+    "A01",
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-14",
+   "title": "Incubated Vulnerability",
+   "atoms": [
+    "A04"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-15",
+   "title": "HTTP Response Splitting",
+   "atoms": [
+    "A01",
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-16",
+   "title": "HTTP Request Smuggling",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D09"
+  },
+  {
+   "id": "WSTG-INJE-17",
+   "title": "Host Header Injection",
+   "atoms": [
+    "A01",
+    "A06",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-18",
+   "title": "Server-side Template Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-19",
+   "title": "Server-Side Request Forgery",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D03"
+  },
+  {
+   "id": "WSTG-INJE-20",
+   "title": "Mass Assignment",
+   "atoms": [
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-21",
+   "title": "CSV Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-INJE-22",
+   "title": "Prototype Pollution",
+   "atoms": [
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-INJE-23",
+   "title": "Insecure Deserialization",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D15"
+  },
+  {
+   "id": "WSTG-ERRO-01",
+   "title": "Improper Error Handling",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-ERRO-02",
+   "title": "Stack Traces",
+   "atoms": [
+    "A04"
+   ],
+   "atom_complete": true,
+   "domain": "D12"
+  },
+  {
+   "id": "WSTG-WEAK-01",
+   "title": "Weak Transport Layer Security",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-WEAK-02",
+   "title": "Padding Oracle",
+   "atoms": [
+    "A09",
+    "A13"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-WEAK-03",
+   "title": "Sensitive Information Sent via Unencrypted Channels",
+   "atoms": [
+    "A01",
+    "A08",
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-WEAK-04",
+   "title": "Weak Cryptographic Primitives",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "WSTG-BUSI-00",
+   "title": "Introduction to Business Logic",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D12"
+  },
+  {
+   "id": "WSTG-BUSI-01",
+   "title": "Business Logic Data Validation",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D12"
+  },
+  {
+   "id": "WSTG-BUSI-02",
+   "title": "Ability to Forge Requests",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-BUSI-03",
+   "title": "Integrity Checks",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-BUSI-04",
+   "title": "Process Timing",
+   "atoms": [
+    "A10",
+    "A12"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-BUSI-05",
+   "title": "Number of Times a Function Can Be Used Limits",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-BUSI-06",
+   "title": "Circumvention of Work Flows",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-BUSI-07",
+   "title": "Defenses Against Application Misuse",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-BUSI-08",
+   "title": "Upload of Unexpected File Types",
+   "atoms": [
+    "A05",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-BUSI-09",
+   "title": "Upload of Malicious Files",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D13"
+  },
+  {
+   "id": "WSTG-BUSI-10",
+   "title": "Payment Functionality",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-01",
+   "title": "DOM-based Cross Site Scripting",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CLIE-XX",
+   "title": "01.1-Self DOM Based Cross Site Scripting",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CLIE-02",
+   "title": "JavaScript Execution",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-03",
+   "title": "HTML Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-CLIE-04",
+   "title": "Client-side URL Redirect",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CLIE-05",
+   "title": "CSS Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-CLIE-06",
+   "title": "Client-side Resource Manipulation",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CLIE-07",
+   "title": "Cross Origin Resource Sharing",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-08",
+   "title": "Cross Site Flashing",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-09",
+   "title": "Clickjacking",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D08"
+  },
+  {
+   "id": "WSTG-CLIE-10",
+   "title": "WebSockets",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-11",
+   "title": "Web Messaging",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-12",
+   "title": "Browser Storage",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D19"
+  },
+  {
+   "id": "WSTG-CLIE-13",
+   "title": "Cross Site Script Inclusion",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-14",
+   "title": "Reverse Tabnabbing",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "WSTG-CLIE-15",
+   "title": "Client-Side Template Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "WSTG-APIT-XX",
+   "title": "00-API Testing Overview",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D11"
+  },
+  {
+   "id": "WSTG-APIT-01",
+   "title": "API Reconnaissance",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D11"
+  },
+  {
+   "id": "WSTG-APIT-02",
+   "title": "API Broken Object Level Authorization",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "WSTG-APIT-03",
+   "title": "Excessive Data Exposure",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "WSTG-APIT-04",
+   "title": "API Broken Function Level Authorization",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "WSTG-APIT-99",
+   "title": "GraphQL",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D11"
+  }
+ ]
+}

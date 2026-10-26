@@ -1,0 +1,98 @@
+{
+ "source": "llm_top10",
+ "count": 10,
+ "mapped": 8,
+ "unmapped": 2,
+ "items": [
+  {
+   "id": "LLM01",
+   "title": "Prompt Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "LLM02",
+   "title": "Sensitive Information Disclosure",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "LLM03",
+   "title": "Supply Chain",
+   "atoms": [
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D18"
+  },
+  {
+   "id": "LLM04",
+   "title": "Data and Model Poisoning",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "LLM05",
+   "title": "Improper Output Handling",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "LLM06",
+   "title": "Excessive Agency",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "LLM07",
+   "title": "System Prompt Leakage",
+   "atoms": [
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "LLM08",
+   "title": "Vector and Embedding Weaknesses",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "LLM09",
+   "title": "Misinformation",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "LLM10",
+   "title": "Unbounded Consumption",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": null
+  }
+ ]
+}

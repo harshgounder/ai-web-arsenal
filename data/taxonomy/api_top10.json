@@ -1,0 +1,94 @@
+{
+ "source": "api_top10",
+ "count": 10,
+ "mapped": 8,
+ "unmapped": 2,
+ "items": [
+  {
+   "id": "API1:2023",
+   "title": "Broken Object Level Authorization",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "API2:2023",
+   "title": "Broken Authentication",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "API3:2023",
+   "title": "Broken Object Property Level Authorization",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "API4:2023",
+   "title": "Unrestricted Resource Consumption",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "API5:2023",
+   "title": "Broken Function Level Authorization",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "API6:2023",
+   "title": "Unrestricted Access To Sensitive Business Flows",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "API7:2023",
+   "title": "Server Side Request Forgery",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D14"
+  },
+  {
+   "id": "API8:2023",
+   "title": "Security Misconfiguration",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "API9:2023",
+   "title": "Improper Inventory Management",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "API10:2023",
+   "title": "Unsafe Consumption Of Apis",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  }
+ ]
+}

@@ -1,0 +1,4168 @@
+{
+ "source": "vrt",
+ "count": 437,
+ "mapped": 416,
+ "unmapped": 21,
+ "items": [
+  {
+   "id": "ai_application_security-adversarial_example_injection-ai_misclassification_attacks",
+   "title": "AI Application Security > Adversarial Example Injection > AI Misclassification Attacks",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-ai_safety-misinformation_wrong_factual_data",
+   "title": "AI Application Security > AI Safety > Misinformation / Wrong Factual Data",
+   "atoms": [
+    "A01",
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-denial_of_service_dos-application_wide",
+   "title": "AI Application Security > Denial-of-Service (DoS) > Application-Wide",
+   "atoms": [
+    "A07",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-denial_of_service_dos-tenant_scoped",
+   "title": "AI Application Security > Denial-of-Service (DoS) > Tenant-Scoped",
+   "atoms": [
+    "A02",
+    "A07",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-improper_input_handling-ansi_escape_codes",
+   "title": "AI Application Security > Improper Input Handling > ANSI Escape Codes",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-improper_input_handling-rtl_overrides",
+   "title": "AI Application Security > Improper Input Handling > RTL Overrides",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-improper_input_handling-unicode_confusables",
+   "title": "AI Application Security > Improper Input Handling > Unicode Confusables",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-improper_output_handling-cross_site_scripting_xss",
+   "title": "AI Application Security > Improper Output Handling > Cross-Site Scripting (XSS)",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-improper_output_handling-markdown_html_injection",
+   "title": "AI Application Security > Improper Output Handling > Markdown/HTML Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-insufficient_rate_limiting-query_flooding_api_token_abuse",
+   "title": "AI Application Security > Insufficient Rate Limiting > Query Flooding / API Token Abuse",
+   "atoms": [
+    "A03",
+    "A07",
+    "A10",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-model_extraction-api_query_based_model_reconstruction",
+   "title": "AI Application Security > Model Extraction > API Query-Based Model Reconstruction",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-prompt_injection-system_prompt_leakage",
+   "title": "AI Application Security > Prompt Injection > System Prompt Leakage",
+   "atoms": [
+    "A01",
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-remote_code_execution-full_system_compromise",
+   "title": "AI Application Security > Remote Code Execution > Full System Compromise",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-remote_code_execution-sandboxed_container_code_execution",
+   "title": "AI Application Security > Remote Code Execution > Sandboxed Container Code Execution",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-sensitive_information_disclosure-cross_tenant_pii_leakage_exposure",
+   "title": "AI Application Security > Sensitive Information Disclosure > Cross-Tenant PII Leakage/Exposure",
+   "atoms": [
+    "A01",
+    "A02",
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-sensitive_information_disclosure-key_leak",
+   "title": "AI Application Security > Sensitive Information Disclosure > Key Leak",
+   "atoms": [
+    "A01",
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-training_data_poisoning-backdoor_injection_bias_manipulation",
+   "title": "AI Application Security > Training Data Poisoning > Backdoor Injection / Bias Manipulation",
+   "atoms": [
+    "A01",
+    "A14",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-vector_and_embedding_weaknesses-embedding_exfiltration_model_extraction",
+   "title": "AI Application Security > Vector and Embedding Weaknesses > Embedding Exfiltration / Model Extraction",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "ai_application_security-vector_and_embedding_weaknesses-semantic_indexing",
+   "title": "AI Application Security > Vector and Embedding Weaknesses > Semantic Indexing",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "algorithmic_biases-aggregation_bias",
+   "title": "Algorithmic Biases > Aggregation Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "algorithmic_biases-processing_bias",
+   "title": "Algorithmic Biases > Processing Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "application_level_denial_of_service_dos-app_crash-malformed_android_intents",
+   "title": "Application-Level Denial-of-Service (DoS) > App Crash > Malformed Android Intents",
+   "atoms": [
+    "A01",
+    "A05",
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": "D21"
+  },
+  {
+   "id": "application_level_denial_of_service_dos-app_crash-malformed_ios_url_schemes",
+   "title": "Application-Level Denial-of-Service (DoS) > App Crash > Malformed iOS URL Schemes",
+   "atoms": [
+    "A01",
+    "A05",
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": "D21"
+  },
+  {
+   "id": "application_level_denial_of_service_dos-critical_impact_and_or_easy_difficulty",
+   "title": "Application-Level Denial-of-Service (DoS) > Critical Impact and/or Easy Difficulty",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "application_level_denial_of_service_dos-excessive_resource_consumption-injection_prompt",
+   "title": "Application-Level Denial-of-Service (DoS) > Excessive Resource Consumption > Injection (Prompt)",
+   "atoms": [
+    "A01",
+    "A07",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "application_level_denial_of_service_dos-high_impact_and_or_medium_difficulty",
+   "title": "Application-Level Denial-of-Service (DoS) > High Impact and/or Medium Difficulty",
+   "atoms": [
+    "A07"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-abs-unintended_acceleration_brake",
+   "title": "Automotive Security Misconfiguration > Automatic Braking System (ABS) > Unintended Acceleration / Brake",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-battery_management_system-firmware_dump",
+   "title": "Automotive Security Misconfiguration > Battery Management System > Firmware Dump",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-battery_management_system-fraudulent_interface",
+   "title": "Automotive Security Misconfiguration > Battery Management System > Fraudulent Interface",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_basic_safety_message",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Basic Safety Message)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_battery_management_system",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Battery Management System)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_disallowed_messages",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Disallowed Messages)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_dos",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (DoS)",
+   "atoms": [
+    "A01",
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_headlights",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Headlights)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_powertrain",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Powertrain)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_pyrotechnical_device_deployment_tool",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Pyrotechnical Device Deployment Tool)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_sensors",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Sensors)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_steering_control",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Steering Control)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-can-injection_vehicle_anti_theft_systems",
+   "title": "Automotive Security Misconfiguration > CAN > Injection (Vehicle Anti-theft Systems)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-gnss_gps-spoofing",
+   "title": "Automotive Security Misconfiguration > GNSS / GPS > Spoofing",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-immobilizer-engine_start",
+   "title": "Automotive Security Misconfiguration > Immobilizer > Engine Start",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-code_execution_can_bus_pivot",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Code Execution (CAN Bus Pivot)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-code_execution_no_can_bus_pivot",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Code Execution (No CAN Bus Pivot)",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-default_credentials",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Default Credentials",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-dos_brick",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Denial of Service (DoS / Brick)",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-ota_firmware_manipulation",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > OTA Firmware Manipulation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-sensitive_data_leakage_exposure",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Sensitive data Leakage/Exposure",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-source_code_dump",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Source Code Dump",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-infotainment_radio_head_unit-unauthorized_access_to_services",
+   "title": "Automotive Security Misconfiguration > Infotainment, Radio Head Unit > Unauthorized Access to Services (API / Endpoints)",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-can_injection_interaction",
+   "title": "Automotive Security Misconfiguration > RF Hub > CAN Injection / Interaction",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-data_leakage_pull_encryption_mechanism",
+   "title": "Automotive Security Misconfiguration > RF Hub > Data Leakage / Pull Encryption Mechanism",
+   "atoms": [
+    "A08",
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-key_fob_cloning",
+   "title": "Automotive Security Misconfiguration > RF Hub > Key Fob Cloning",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-relay",
+   "title": "Automotive Security Misconfiguration > RF Hub > Relay",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-replay",
+   "title": "Automotive Security Misconfiguration > RF Hub > Replay",
+   "atoms": [
+    "A04",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-roll_jam",
+   "title": "Automotive Security Misconfiguration > RF Hub > Roll Jam",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "automotive_security_misconfiguration-rf_hub-unauthorized_access_turn_on",
+   "title": "Automotive Security Misconfiguration > RF Hub > Unauthorized Access / Turn On",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "automotive_security_misconfiguration-rsu-sybil_attack",
+   "title": "Automotive Security Misconfiguration > Roadside Unit (RSU) > Sybil Attack",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "blockchain_infrastructure_misconfiguration-improper_bridge_validation_and_verification_logic",
+   "title": "Blockchain Infrastructure Misconfiguration > Improper Bridge Validation and Verification Logic",
+   "atoms": [
+    "A10",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "broken_access_control-bypass_of_password_confirmation-change_password",
+   "title": "Broken Access Control (BAC) > Bypass of Password Confirmation > Change Password",
+   "atoms": [
+    "A02",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_access_control-exposed_sensitive_android_intent",
+   "title": "Broken Access Control (BAC) > Exposed Sensitive Android Intent",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-exposed_sensitive_ios_url_scheme",
+   "title": "Broken Access Control (BAC) > Exposed Sensitive iOS URL Scheme",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-idor-modify_sensitive_information_iterable_object_identifiers",
+   "title": "Broken Access Control (BAC) > Insecure Direct Object References (IDOR) > Modify Sensitive Information(Iterable Object Identifiers)",
+   "atoms": [
+    "A01",
+    "A02",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-idor-modify_view_sensitive_information_guid",
+   "title": "Broken Access Control (BAC) > Insecure Direct Object References (IDOR) > Modify/View Sensitive Information(Complex Object Identifiers GUID/UUID)",
+   "atoms": [
+    "A01",
+    "A02",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-idor-modify_view_sensitive_information_iterable_object_identifiers",
+   "title": "Broken Access Control (BAC) > Insecure Direct Object References (IDOR) > Modify/View Sensitive Information(Iterable Object Identifiers)",
+   "atoms": [
+    "A01",
+    "A02",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-idor-view_non_sensitive_information",
+   "title": "Broken Access Control (BAC) > Insecure Direct Object References (IDOR) > View Non-Sensitive Information",
+   "atoms": [
+    "A01",
+    "A02",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-idor-view_sensitive_information_iterable_object_identifiers",
+   "title": "Broken Access Control (BAC) > Insecure Direct Object References (IDOR) > View Sensitive Information(Iterable Object Identifiers)",
+   "atoms": [
+    "A01",
+    "A02",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-privilege_escalation",
+   "title": "Broken Access Control (BAC) > Privilege Escalation",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_access_control-username_enumeration-non_brute_force",
+   "title": "Broken Access Control (BAC) > Username/Email Enumeration > Non-Brute Force",
+   "atoms": [
+    "A02",
+    "A07",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "broken_authentication_and_session_management-authentication_bypass",
+   "title": "Broken Authentication and Session Management > Authentication Bypass",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-cleartext_transmission_of_session_token",
+   "title": "Broken Authentication and Session Management > Cleartext Transmission of Session Token",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-concurrent_logins",
+   "title": "Broken Authentication and Session Management > Concurrent Logins",
+   "atoms": [
+    "A03",
+    "A04",
+    "A12"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-all_sessions",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > Concurrent Sessions On Logout",
+   "atoms": [
+    "A03",
+    "A04",
+    "A12"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-long_timeout",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > Long Timeout",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-on_email_change",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > On Email Change",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-on_logout",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > On Logout (Client and Server-Side)",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-on_logout_server_side_only",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > On Logout (Server-Side Only)",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-on_password_change",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > On Password Reset and/or Change",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-on_two_fa_activation_change",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > On 2FA Activation/Change",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-failure_to_invalidate_session-permission_change",
+   "title": "Broken Authentication and Session Management > Failure to Invalidate Session > On Permission Change",
+   "atoms": [
+    "A02",
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-saml_replay",
+   "title": "Broken Authentication and Session Management > SAML Replay",
+   "atoms": [
+    "A03",
+    "A04",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-session_fixation-local_attack_vector",
+   "title": "Broken Authentication and Session Management > Session Fixation > Local Attack Vector",
+   "atoms": [
+    "A03",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-session_fixation-remote_attack_vector",
+   "title": "Broken Authentication and Session Management > Session Fixation > Remote Attack Vector",
+   "atoms": [
+    "A03",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-two_fa_bypass",
+   "title": "Broken Authentication and Session Management > Second Factor Authentication (2FA) Bypass",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-weak_login_function-not_operational",
+   "title": "Broken Authentication and Session Management > Weak Login Function > Not Operational or Intended Public Access",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-weak_login_function-other_plaintext_protocol_no_secure_alternative",
+   "title": "Broken Authentication and Session Management > Weak Login Function > Other Plaintext Protocol with no Secure Alternative",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-weak_login_function-over_http",
+   "title": "Broken Authentication and Session Management > Weak Login Function > Over HTTP",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-weak_registration_implementation-over_http",
+   "title": "Broken Authentication and Session Management > Weak Registration Implementation > Over HTTP",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-excessive_jwt_lifetime",
+   "title": "Broken Authentication and Session Management > Excessive JSON Web Token (JWT) Lifetime",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "broken_authentication_and_session_management-secret_questions_account_verification",
+   "title": "Broken Authentication and Session Management > Secret Questions Used for Account Verification",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "client_side_injection-binary_planting-no_privilege_escalation",
+   "title": "Client-Side Injection > Binary Planting > No Privilege Escalation",
+   "atoms": [
+    "A01",
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "client_side_injection-binary_planting-non_default_folder_privilege_escalation",
+   "title": "Client-Side Injection > Binary Planting > Non-Default Folder Privilege Escalation",
+   "atoms": [
+    "A01",
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "client_side_injection-binary_planting-privilege_escalation",
+   "title": "Client-Side Injection > Binary Planting > Default Folder Privilege Escalation",
+   "atoms": [
+    "A01",
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "cloud_security-identity_and_access_management_iam_misconfigurations-overly_permissive_iam_roles",
+   "title": "Cloud Security > Identity and Access Management (IAM) Misconfigurations > Overly Permissive IAM Roles",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D17"
+  },
+  {
+   "id": "cloud_security-identity_and_access_management_iam_misconfigurations-publicly_accessible_iam_credentials",
+   "title": "Cloud Security > Identity and Access Management (IAM) Misconfigurations > Publicly Accessible IAM Credentials",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "cloud_security-logging_and_monitoring_issues-disabled_or_insufficient_logging",
+   "title": "Cloud Security > Logging and Monitoring Issues > Disabled or Insufficient Logging",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D17"
+  },
+  {
+   "id": "cloud_security-misconfigured_services_and_apis-exposed_debug_or_admin_interfaces",
+   "title": "Cloud Security > Misconfigured Services and APIs > Exposed Debug or Admin Interfaces",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "cloud_security-misconfigured_services_and_apis-insecure_api_endpoints",
+   "title": "Cloud Security > Misconfigured Services and APIs > Insecure API Endpoints",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "cloud_security-network_configuration_issues-lack_of_network_segmentation",
+   "title": "Cloud Security > Network Configuration Issues > Lack of Network Segmentation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D17"
+  },
+  {
+   "id": "cloud_security-network_configuration_issues-open_management_ports_to_the_internet",
+   "title": "Cloud Security > Network Configuration Issues > Open Management Ports to the Internet",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D17"
+  },
+  {
+   "id": "cloud_security-storage_misconfigurations-publicly_accessible_cloud_storage",
+   "title": "Cloud Security > Storage Misconfigurations > Publicly Accessible Cloud Storage",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "cloud_security-storage_misconfigurations-unencrypted_sensitive_data_at_rest",
+   "title": "Cloud Security > Storage Misconfigurations > Unencrypted Sensitive Data at Rest",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "cross_site_request_forgery_csrf-action_specific-authenticated_action",
+   "title": "Cross-Site Request Forgery (CSRF) > Action-Specific > Authenticated Action",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "cross_site_request_forgery_csrf-action_specific-logout",
+   "title": "Cross-Site Request Forgery (CSRF) > Action-Specific > Logout",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "cross_site_request_forgery_csrf-action_specific-unauthenticated_action",
+   "title": "Cross-Site Request Forgery (CSRF) > Action-Specific > Unauthenticated Action",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "cross_site_request_forgery_csrf-application_wide",
+   "title": "Cross-Site Request Forgery (CSRF) > Application-Wide",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "cross_site_request_forgery_csrf-csrf_token_not_unique_per_request",
+   "title": "Cross-Site Request Forgery (CSRF) > CSRF Token Not Unique Per Request",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "cross_site_request_forgery_csrf-flash_based",
+   "title": "Cross-Site Request Forgery (CSRF) > Flash-Based",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "cross_site_scripting_xss-cookie_based",
+   "title": "Cross-Site Scripting (XSS) > Cookie-Based",
+   "atoms": [
+    "A01",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "cross_site_scripting_xss-flash_based",
+   "title": "Cross-Site Scripting (XSS) > Flash-Based",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-ie_only",
+   "title": "Cross-Site Scripting (XSS) > IE-Only",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-off_domain-data_uri",
+   "title": "Cross-Site Scripting (XSS) > Off-Domain > Data URI",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-referer",
+   "title": "Cross-Site Scripting (XSS) > Referer",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-reflected-non_self",
+   "title": "Cross-Site Scripting (XSS) > Reflected > Non-Self",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-reflected-self",
+   "title": "Cross-Site Scripting (XSS) > Reflected > Self",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-stored-non_admin_to_anyone",
+   "title": "Cross-Site Scripting (XSS) > Stored > Non-Privileged User to Anyone",
+   "atoms": [
+    "A01",
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "cross_site_scripting_xss-stored-privileged_user_to_no_privilege_elevation",
+   "title": "Cross-Site Scripting (XSS) > Stored > Privileged User to No Privilege Elevation",
+   "atoms": [
+    "A01",
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "cross_site_scripting_xss-stored-privileged_user_to_privilege_elevation",
+   "title": "Cross-Site Scripting (XSS) > Stored > Privileged User to Privilege Elevation",
+   "atoms": [
+    "A01",
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "cross_site_scripting_xss-stored-self",
+   "title": "Cross-Site Scripting (XSS) > Stored > Self",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-stored-url_based",
+   "title": "Cross-Site Scripting (XSS) > Stored > CSRF/URL-Based",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-trace_method",
+   "title": "Cross-Site Scripting (XSS) > TRACE Method",
+   "atoms": [
+    "A01",
+    "A04"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cross_site_scripting_xss-universal_uxss",
+   "title": "Cross-Site Scripting (XSS) > Universal (UXSS)",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cryptographic_weakness-broken_cryptography-use_of_broken_cryptographic_primitive",
+   "title": "Cryptographic Weakness > Broken Cryptography > Use of Broken Cryptographic Primitive",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-broken_cryptography-use_of_vulnerable_cryptographic_library",
+   "title": "Cryptographic Weakness > Broken Cryptography > Use of Vulnerable Cryptographic Library",
+   "atoms": [
+    "A09",
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-incomplete_cleanup_of_keying_material",
+   "title": "Cryptographic Weakness > Incomplete Cleanup of Keying Material",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_implementation-improper_following_of_specification",
+   "title": "Cryptographic Weakness > Insecure Implementation > Improper Following of Specification (Other)",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_implementation-missing_cryptographic_step",
+   "title": "Cryptographic Weakness > Insecure Implementation > Missing Cryptographic Step",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_key_generation-improper_asymmetric_exponent_selection",
+   "title": "Cryptographic Weakness > Insecure Key Generation > Improper Asymmetric Exponent Selection",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_key_generation-improper_asymmetric_prime_selection",
+   "title": "Cryptographic Weakness > Insecure Key Generation > Improper Asymmetric Prime Selection",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_key_generation-insufficient_key_space",
+   "title": "Cryptographic Weakness > Insecure Key Generation > Insufficient Key Space",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_key_generation-insufficient_key_stretching",
+   "title": "Cryptographic Weakness > Insecure Key Generation > Insufficient Key Stretching",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insecure_key_generation-key_exchange_without_entity_authentication",
+   "title": "Cryptographic Weakness > Insecure Key Generation > Key Exchage Without Entity Authentication",
+   "atoms": [
+    "A03",
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-initialization_vector_reuse",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Initialization Vector (IV) Reuse",
+   "atoms": [
+    "A09",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-limited_rng_entropy_source",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Limited Random Number Generator (RNG) Entropy Source",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-predictable_initialization_vector",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Predictable Initialization Vector (IV)",
+   "atoms": [
+    "A09",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-predictable_prng_seed",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Predictable Pseudo-Random Number Generator (PRNG) Seed",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-prng_seed_reuse",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Pseudo-Random Number Generator (PRNG) Seed Reuse",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-small_seed_space_in_prng",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Small Seed Space in Pseudo-Random Number Generator (PRNG)",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_entropy-use_of_trng_for_nonsecurity_purpose",
+   "title": "Cryptographic Weakness > Insufficient Entropy > Use of True Random Number Generator (TRNG) for Non-Security Purpose",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_verification_of_data_authenticity-cryptographic_signature",
+   "title": "Cryptographic Weakness > Insufficient Verification of Data Authenticity > Cryptographic Signature",
+   "atoms": [
+    "A03",
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "cryptographic_weakness-insufficient_verification_of_data_authenticity-identity_check_value",
+   "title": "Cryptographic Weakness > Insufficient Verification of Data Authenticity > Integrity Check Value (ICV)",
+   "atoms": [
+    "A03",
+    "A09",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "cryptographic_weakness-key_reuse-inter_environment",
+   "title": "Cryptographic Weakness > Key Reuse > Inter-Environment",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-key_reuse-intra_environment",
+   "title": "Cryptographic Weakness > Key Reuse > Intra-Environment",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-key_reuse-lack_of_perfect_forward_secrecy",
+   "title": "Cryptographic Weakness > Key Reuse > Lack of Perfect Forward Secrecy",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-side_channel_attack-differential_fault_analysis",
+   "title": "Cryptographic Weakness > Side-Channel Attack > Differential Fault Analysis",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-side_channel_attack-emanations_attack",
+   "title": "Cryptographic Weakness > Side-Channel Attack > Emanations Attack",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-side_channel_attack-padding_oracle_attack",
+   "title": "Cryptographic Weakness > Side-Channel Attack > Padding Oracle Attack",
+   "atoms": [
+    "A09",
+    "A13"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-side_channel_attack-power_analysis_attack",
+   "title": "Cryptographic Weakness > Side-Channel Attack > Power Analysis Attack",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-side_channel_attack-timing_attack",
+   "title": "Cryptographic Weakness > Side-Channel Attack > Timing Attack",
+   "atoms": [
+    "A09",
+    "A12",
+    "A13"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-use_of_expired_cryptographic_key_or_cert",
+   "title": "Cryptographic Weakness > Use of Expired Cryptographic Key (or Certificate)",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-weak_hash-lack_of_salt",
+   "title": "Cryptographic Weakness > Weak Hash > Lack of Salt",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-weak_hash-predictable_hash_collision",
+   "title": "Cryptographic Weakness > Weak Hash > Predictable Hash Collision",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "cryptographic_weakness-weak_hash-use_of_predictable_salt",
+   "title": "Cryptographic Weakness > Weak Hash > Use of Predictable Salt",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "data_biases-pre_existing_bias",
+   "title": "Data Biases > Pre-existing Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "data_biases-representation_bias",
+   "title": "Data Biases > Representation Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-defi_security-flash_loan_attack",
+   "title": "Decentralized Application Misconfiguration > DeFi Security > Flash Loan Attack",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-defi_security-function_level_accounting_error",
+   "title": "Decentralized Application Misconfiguration > DeFi Security > Function-Level Accounting Error",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-defi_security-improper_implementation_of_governance",
+   "title": "Decentralized Application Misconfiguration > DeFi Security > Improper Implementation of Governance",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-defi_security-pricing_oracle_manipulation",
+   "title": "Decentralized Application Misconfiguration > DeFi Security > Pricing Oracle Manipulation",
+   "atoms": [
+    "A13",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-improper_authorization-insufficient_signature_validation",
+   "title": "Decentralized Application Misconfiguration > Improper Authorization > Insufficient Signature Validation",
+   "atoms": [
+    "A02",
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "decentralized_application_misconfiguration-insecure_data_storage-plaintext_private_key",
+   "title": "Decentralized Application Misconfiguration > Insecure Data Storage > Plaintext Private Key",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "decentralized_application_misconfiguration-insecure_data_storage-sensitive_information_exposure",
+   "title": "Decentralized Application Misconfiguration > Insecure Data Storage > Sensitive Information Exposure",
+   "atoms": [
+    "A01",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-denial_of_service",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Denial of Service",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-improper_validation_and_checks_for_deposits_and_withdrawals",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Improper Validation and Checks For Deposits and Withdrawals",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-malicious_order_offer",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Malicious Order Offer",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-miscalculated_accounting_logic",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Miscalculated Accounting Logic",
+   "atoms": [
+    "A10",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-ofac_bypass",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > OFAC Bypass",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-orderbook_manipulation",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Orderbook Manipulation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-price_or_fee_manipulation",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Price or Fee Manipulation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-signer_account_takeover",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Signer Account Takeover",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "decentralized_application_misconfiguration-marketplace_security-unauthorized_asset_transfer",
+   "title": "Decentralized Application Misconfiguration > Marketplace Security > Unauthorized Asset Transfer",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "decentralized_application_misconfiguration-protocol_security_misconfiguration-node_level_denial_of_service",
+   "title": "Decentralized Application Misconfiguration > Protocol Security Misconfiguration > Node-level Denial of Service",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "developer_biases-implicit_bias",
+   "title": "Developer Biases > Implicit Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "external_behavior-browser_feature-aggressive_offline_caching",
+   "title": "External Behavior > Browser Feature > Aggressive Offline Caching",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "external_behavior-browser_feature-autocomplete_enabled",
+   "title": "External Behavior > Browser Feature > Autocomplete Enabled",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "external_behavior-browser_feature-autocorrect_enabled",
+   "title": "External Behavior > Browser Feature > Autocorrect Enabled",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "external_behavior-browser_feature-plaintext_password_field",
+   "title": "External Behavior > Browser Feature > Plaintext Password Field",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "external_behavior-browser_feature-save_password",
+   "title": "External Behavior > Browser Feature > Save Password",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "external_behavior-captcha_bypass-crowdsourcing",
+   "title": "External Behavior > Captcha Bypass > Crowdsourcing",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "external_behavior-csv_injection",
+   "title": "External Behavior > CSV Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "external_behavior-system_clipboard_leak-shared_links",
+   "title": "External Behavior > System Clipboard Leak > Shared Links",
+   "atoms": [
+    "A02",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "external_behavior-user_password_persisted_in_memory",
+   "title": "External Behavior > User Password Persisted in Memory",
+   "atoms": [
+    "A03",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "indicators_of_compromise",
+   "title": "Indicators of Compromise",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "insecure_data_storage-non_sensitive_application_data_stored_unencrypted",
+   "title": "Insecure Data Storage > Non-Sensitive Application Data Stored Unencrypted",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_data_storage-screen_caching_enabled",
+   "title": "Insecure Data Storage > Screen Caching Enabled",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_data_storage-sensitive_application_data_stored_unencrypted-on_external_storage",
+   "title": "Insecure Data Storage > Sensitive Application Data Stored Unencrypted > On External Storage",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_data_storage-sensitive_application_data_stored_unencrypted-on_internal_storage",
+   "title": "Insecure Data Storage > Sensitive Application Data Stored Unencrypted > On Internal Storage",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_data_storage-server_side_credentials_storage-plaintext",
+   "title": "Insecure Data Storage > Server-Side Credentials Storage > Plaintext",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_data_transport-cleartext_transmission_of_sensitive_data",
+   "title": "Insecure Data Transport > Cleartext Transmission of Sensitive Data",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "insecure_data_transport-executable_download-no_secure_integrity_check",
+   "title": "Insecure Data Transport > Executable Download > No Secure Integrity Check",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insecure_data_transport-executable_download-secure_integrity_check",
+   "title": "Insecure Data Transport > Executable Download > Secure Integrity Check",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-command_injection",
+   "title": "Insecure OS/Firmware > Command Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "insecure_os_firmware-data_not_encrypted_at_rest-non_sensitive",
+   "title": "Insecure OS/Firmware > Data not encrypted at rest > Non sensitive",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "insecure_os_firmware-data_not_encrypted_at_rest-sensitive",
+   "title": "Insecure OS/Firmware > Data not encrypted at rest > Sensitive",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "insecure_os_firmware-failure_to_remove_sensitive_artifacts_from_disk",
+   "title": "Insecure OS/Firmware > Failure to Remove Sensitive Artifacts from Disk",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-hardcoded_password-non_privileged_user",
+   "title": "Insecure OS/Firmware > Hardcoded Password > Non-Privileged User",
+   "atoms": [
+    "A02",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insecure_os_firmware-hardcoded_password-privileged_user",
+   "title": "Insecure OS/Firmware > Hardcoded Password > Privileged User",
+   "atoms": [
+    "A02",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insecure_os_firmware-kiosk_escape_or_breakout",
+   "title": "Insecure OS/Firmware > Kiosk Escape or Breakout",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D21"
+  },
+  {
+   "id": "insecure_os_firmware-local_administrator_on_default_environment",
+   "title": "Insecure OS/Firmware > Local Administrator on default environment",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-over_permissioned_credentials_on_storage",
+   "title": "Insecure OS/Firmware > Over-Permissioned Credentials on Storage",
+   "atoms": [
+    "A02",
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_os_firmware-poorly_configured_disk_encryption",
+   "title": "Insecure OS/Firmware > Poorly Configured Disk Encryption",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-poorly_configured_operating_system_security",
+   "title": "Insecure OS/Firmware > Poorly Configured Operating System Security",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-recovery_of_disk_contains_sensitive_material",
+   "title": "Insecure OS/Firmware > Recovery of Disk Contains Sensitive Material",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-shared_credentials_on_storage",
+   "title": "Insecure OS/Firmware > Shared Credentials on Storage",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "insecure_os_firmware-weakness_in_firmware_updates-firmware_cannot_be_updated",
+   "title": "Insecure OS/Firmware > Weakness in Firmware Updates > Firmware cannot be updated",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-weakness_in_firmware_updates-firmware_does_not_validate_update_integrity",
+   "title": "Insecure OS/Firmware > Weakness in Firmware Updates > Firmware does not validate update integrity",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "insecure_os_firmware-weakness_in_firmware_updates-firmware_is_not_encrypted",
+   "title": "Insecure OS/Firmware > Weakness in Firmware Updates > Firmware is not encrypted",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-lack_of_notification_email",
+   "title": "Insufficient Security Configurability > Lack of Notification Email",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-no_password_policy",
+   "title": "Insufficient Security Configurability > No Password Policy",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-password_policy_bypass",
+   "title": "Insufficient Security Configurability > Password Policy Bypass",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-verification_of_contact_method_not_required",
+   "title": "Insufficient Security Configurability > Verification of Contact Method not Required",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_policy",
+   "title": "Insufficient Security Configurability > Weak Password Policy",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_reset_implementation-token_has_long_timed_expiry",
+   "title": "Insufficient Security Configurability > Weak Password Reset Implementation > Token Has Long Timed Expiry",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_reset_implementation-token_is_not_invalidated_after_email_change",
+   "title": "Insufficient Security Configurability > Weak Password Reset Implementation > Token is Not Invalidated After Email Change",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_reset_implementation-token_is_not_invalidated_after_login",
+   "title": "Insufficient Security Configurability > Weak Password Reset Implementation > Token is Not Invalidated After Login",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_reset_implementation-token_is_not_invalidated_after_new_token_is_requested",
+   "title": "Insufficient Security Configurability > Weak Password Reset Implementation > Token is Not Invalidated After New Token is Requested",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_reset_implementation-token_is_not_invalidated_after_password_change",
+   "title": "Insufficient Security Configurability > Weak Password Reset Implementation > Token is Not Invalidated After Password Change",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_password_reset_implementation-token_is_not_invalidated_after_use",
+   "title": "Insufficient Security Configurability > Weak Password Reset Implementation > Token is Not Invalidated After Use",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_registration_implementation-allows_disposable_email_addresses",
+   "title": "Insufficient Security Configurability > Weak Registration Implementation > Allows Disposable Email Addresses",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-weak_two_fa_implementation-missing_failsafe",
+   "title": "Insufficient Security Configurability > Weak 2FA Implementation > Missing Failsafe",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-weak_two_fa_implementation-old_two_fa_code_is_not_invalidated_after_new_code_is_generated",
+   "title": "Insufficient Security Configurability > Weak 2FA Implementation > Old 2FA Code is Not Invalidated After New Code is Generated",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_two_fa_implementation-two_fa_code_is_not_updated_after_new_code_is_requested",
+   "title": "Insufficient Security Configurability > Weak 2FA Implementation > 2FA Code is Not Updated After New Code is Requested",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-weak_two_fa_implementation-two_fa_secret_cannot_be_rotated",
+   "title": "Insufficient Security Configurability > Weak 2FA Implementation > 2FA Secret Cannot be Rotated",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "insufficient_security_configurability-weak_two_fa_implementation-two_fa_secret_remains_obtainable_after_two_fa_is_enabled",
+   "title": "Insufficient Security Configurability > Weak 2FA Implementation > 2FA Secret Remains Obtainable After 2FA is Enabled",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "insufficient_security_configurability-no_two_fa_implementation",
+   "title": "Insufficient Security Configurability > No 2FA Implementation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-no_account_lockout",
+   "title": "Insufficient Security Configurability > No Account Lockout",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "insufficient_security_configurability-weak_jwt_hashing_algorithm",
+   "title": "Insufficient Security Configurability > Weak JSON Web Token (JWT) Hashing Algorithm",
+   "atoms": [
+    "A03",
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "lack_of_binary_hardening-lack_of_exploit_mitigations",
+   "title": "Lack of Binary Hardening > Lack of Exploit Mitigations",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "lack_of_binary_hardening-lack_of_jailbreak_detection",
+   "title": "Lack of Binary Hardening > Lack of Jailbreak Detection",
+   "atoms": [
+    "A15",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "lack_of_binary_hardening-lack_of_obfuscation",
+   "title": "Lack of Binary Hardening > Lack of Obfuscation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "lack_of_binary_hardening-runtime_instrumentation_based",
+   "title": "Lack of Binary Hardening > Runtime Instrumentation-Based",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "misinterpretation_biases-context_ignorance",
+   "title": "Misinterpretation Biases > Context Ignorance",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "mobile_security_misconfiguration-auto_backup_allowed_by_default",
+   "title": "Mobile Security Misconfiguration > Auto Backup Allowed by Default",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D21"
+  },
+  {
+   "id": "mobile_security_misconfiguration-clipboard_enabled",
+   "title": "Mobile Security Misconfiguration > Clipboard Enabled",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D21"
+  },
+  {
+   "id": "mobile_security_misconfiguration-ssl_certificate_pinning-absent",
+   "title": "Mobile Security Misconfiguration > SSL Certificate Pinning > Absent",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "mobile_security_misconfiguration-ssl_certificate_pinning-defeatable",
+   "title": "Mobile Security Misconfiguration > SSL Certificate Pinning > Defeatable",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "mobile_security_misconfiguration-tapjacking",
+   "title": "Mobile Security Misconfiguration > Tapjacking",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D21"
+  },
+  {
+   "id": "network_security_misconfiguration-telnet_enabled",
+   "title": "Network Security Misconfiguration > Telnet Enabled",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "physical_security_issues-bypass_of_physical_access_control",
+   "title": "Physical Security Issues > Bypass of physical access control",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "physical_security_issues-weakness_in_physical_access_control-cloneable_key",
+   "title": "Physical Security Issues > Weakness in physical access control > Cloneable Key",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "physical_security_issues-weakness_in_physical_access_control-commonly_keyed_system",
+   "title": "Physical Security Issues > Weakness in physical access control > Commonly Keyed System",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "physical_security_issues-weakness_in_physical_access_control-master_key_identification",
+   "title": "Physical Security Issues > Weakness in physical access control > Master Key Identification",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "privacy_concerns-unnecessary_data_collection-wifi_ssid_password",
+   "title": "Privacy Concerns > Unnecessary Data Collection > WiFi SSID+Password",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "protocol_specific_misconfiguration-frontrunning_enabled_attack",
+   "title": "Protocol Specific Misconfiguration > Frontrunning-Enabled Attack",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "protocol_specific_misconfiguration-improper_validation_and_finalization_logic",
+   "title": "Protocol Specific Misconfiguration > Improper Validation and Finalization Logic",
+   "atoms": [
+    "A10",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "protocol_specific_misconfiguration-misconfigured_staking_logic",
+   "title": "Protocol Specific Misconfiguration > Misconfigured Staking Logic",
+   "atoms": [
+    "A10",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "protocol_specific_misconfiguration-sandwich_enabled_attack",
+   "title": "Protocol Specific Misconfiguration > Sandwich-Enabled Attack",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_known_public_information",
+   "title": "Sensitive Data Exposure > Disclosure of Known Public Information",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-data_traffic_spam",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > Data/Traffic Spam",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-for_internal_asset",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > For Internal Asset",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-for_publicly_accessible_asset",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > For Publicly Accessible Asset",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-intentionally_public_sample_or_invalid",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > Intentionally Public, Sample or Invalid",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-non_corporate_user",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > Non-Corporate User",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-pay_per_use_abuse",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > Pay-Per-Use Abuse",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-pii_leakage_exposure",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > PII Leakage/Exposure",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-sensitive_information_disclosed_jwt",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > Sensitive Information Disclosed in JSON Web Token (JWT)",
+   "atoms": [
+    "A01",
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-disclosure_of_secrets-publicly_accessible_robots",
+   "title": "Sensitive Data Exposure > Disclosure of Secrets > Publicly accessible Robots.txt",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "sensitive_data_exposure-exif_geolocation_data_not_stripped_from_uploaded_images-automatic_user_enumeration",
+   "title": "Sensitive Data Exposure > EXIF Geolocation Data Not Stripped From Uploaded Images > Automatic User Enumeration",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "sensitive_data_exposure-exif_geolocation_data_not_stripped_from_uploaded_images-manual_user_enumeration",
+   "title": "Sensitive Data Exposure > EXIF Geolocation Data Not Stripped From Uploaded Images > Manual User Enumeration",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "sensitive_data_exposure-graphql_introspection_enabled",
+   "title": "Sensitive Data Exposure > GraphQL Introspection Enabled",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D11"
+  },
+  {
+   "id": "sensitive_data_exposure-internal_ip_disclosure",
+   "title": "Sensitive Data Exposure > Internal IP Disclosure",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "sensitive_data_exposure-json_hijacking",
+   "title": "Sensitive Data Exposure > JSON Hijacking",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "sensitive_data_exposure-mixed_content",
+   "title": "Sensitive Data Exposure > Mixed Content (HTTPS Sourcing HTTP)",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "sensitive_data_exposure-non_sensitive_token_in_url",
+   "title": "Sensitive Data Exposure > Non-Sensitive Token in URL",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-sensitive_data_hardcoded-file_paths",
+   "title": "Sensitive Data Exposure > Sensitive Data Hardcoded > File Paths",
+   "atoms": [
+    "A06",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "sensitive_data_exposure-sensitive_data_hardcoded-oauth_secret",
+   "title": "Sensitive Data Exposure > Sensitive Data Hardcoded > OAuth Secret",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "sensitive_data_exposure-sensitive_token_in_url-in_the_background",
+   "title": "Sensitive Data Exposure > Sensitive Token in URL > In the Background",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-sensitive_token_in_url-on_password_reset",
+   "title": "Sensitive Data Exposure > Sensitive Token in URL > On Password Reset",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "sensitive_data_exposure-sensitive_token_in_url-user_facing",
+   "title": "Sensitive Data Exposure > Sensitive Token in URL > User Facing",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-token_leakage_via_referer-over_http",
+   "title": "Sensitive Data Exposure > Token Leakage via Referer > Over HTTP",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-token_leakage_via_referer-password_reset_token",
+   "title": "Sensitive Data Exposure > Token Leakage via Referer > Password Reset Token",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "sensitive_data_exposure-token_leakage_via_referer-trusted_third_party",
+   "title": "Sensitive Data Exposure > Token Leakage via Referer > Trusted 3rd Party",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-token_leakage_via_referer-untrusted_third_party",
+   "title": "Sensitive Data Exposure > Token Leakage via Referer > Untrusted 3rd Party",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "sensitive_data_exposure-via_localstorage_sessionstorage-non_sensitive_token",
+   "title": "Sensitive Data Exposure > Via localStorage/sessionStorage > Non-Sensitive Token",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "sensitive_data_exposure-via_localstorage_sessionstorage-sensitive_token",
+   "title": "Sensitive Data Exposure > Via localStorage/sessionStorage > Sensitive Token",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "sensitive_data_exposure-visible_detailed_error_page-descriptive_stack_trace",
+   "title": "Sensitive Data Exposure > Visible Detailed Error/Debug Page > Descriptive Stack Trace",
+   "atoms": [
+    "A01",
+    "A04",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D12"
+  },
+  {
+   "id": "sensitive_data_exposure-visible_detailed_error_page-detailed_server_configuration",
+   "title": "Sensitive Data Exposure > Visible Detailed Error/Debug Page > Detailed Server Configuration",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "sensitive_data_exposure-visible_detailed_error_page-full_path_disclosure",
+   "title": "Sensitive Data Exposure > Visible Detailed Error/Debug Page > Full Path Disclosure",
+   "atoms": [
+    "A06",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "sensitive_data_exposure-weak_password_reset_implementation-password_reset_token_sent_over_http",
+   "title": "Sensitive Data Exposure > Weak Password Reset Implementation > Password Reset Token Sent Over HTTP",
+   "atoms": [
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "sensitive_data_exposure-weak_password_reset_implementation-token_leakage_via_host_header_poisoning",
+   "title": "Sensitive Data Exposure > Weak Password Reset Implementation > Token Leakage via Host Header Poisoning",
+   "atoms": [
+    "A03",
+    "A06",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "sensitive_data_exposure-xssi",
+   "title": "Sensitive Data Exposure > Cross Site Script Inclusion (XSSI)",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-bitsquatting",
+   "title": "Server Security Misconfiguration > Bitsquatting",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-cache_deception",
+   "title": "Server Security Misconfiguration > Cache Deception",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D10"
+  },
+  {
+   "id": "server_security_misconfiguration-cache_poisoning",
+   "title": "Server Security Misconfiguration > Cache Poisoning",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D10"
+  },
+  {
+   "id": "server_security_misconfiguration-captcha-brute_force",
+   "title": "Server Security Misconfiguration > CAPTCHA > Brute Force",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-captcha-implementation_vulnerability",
+   "title": "Server Security Misconfiguration > CAPTCHA > Implementation Vulnerability",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-captcha-missing",
+   "title": "Server Security Misconfiguration > CAPTCHA > Missing",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-clickjacking-form_input",
+   "title": "Server Security Misconfiguration > Clickjacking > Form Input",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-clickjacking-non_sensitive_action",
+   "title": "Server Security Misconfiguration > Clickjacking > Non-Sensitive Action",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-clickjacking-sensitive_action",
+   "title": "Server Security Misconfiguration > Clickjacking > Sensitive Click-Based Action",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-cookie_scoped_to_parent_domain",
+   "title": "Server Security Misconfiguration > Cookie Scoped to Parent Domain",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "server_security_misconfiguration-dbms_misconfiguration-excessively_privileged_user_dba",
+   "title": "Server Security Misconfiguration > Database Management System (DBMS) Misconfiguration > Excessively Privileged User / DBA",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "server_security_misconfiguration-directory_listing_enabled-non_sensitive_data_exposure",
+   "title": "Server Security Misconfiguration > Directory Listing Enabled > Non-Sensitive Data Exposure",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-directory_listing_enabled-sensitive_data_exposure",
+   "title": "Server Security Misconfiguration > Directory Listing Enabled > Sensitive Data Exposure",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-email_verification_bypass",
+   "title": "Server Security Misconfiguration > Email Verification Bypass",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-exposed_portal-admin_portal",
+   "title": "Server Security Misconfiguration > Exposed Portal > Admin Portal",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-exposed_portal-non_admin_portal",
+   "title": "Server Security Misconfiguration > Exposed Portal > Non-Admin Portal",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-exposed_portal-protected",
+   "title": "Server Security Misconfiguration > Exposed Portal > Protected",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-fingerprinting_banner_disclosure-software_version_in_response_headers",
+   "title": "Server Security Misconfiguration > Fingerprinting/Banner Disclosure > Software Versions Disclosed in Response Headers",
+   "atoms": [
+    "A04",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "server_security_misconfiguration-insecure_ssl-certificate_error",
+   "title": "Server Security Misconfiguration > Insecure SSL > Certificate Error",
+   "atoms": [
+    "A08",
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "server_security_misconfiguration-insecure_ssl-insecure_cipher_suite",
+   "title": "Server Security Misconfiguration > Insecure SSL > Insecure Cipher Suite",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-insecure_ssl-lack_of_forward_secrecy",
+   "title": "Server Security Misconfiguration > Insecure SSL > Lack of Forward Secrecy",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_password_confirmation-change_email_address",
+   "title": "Server Security Misconfiguration > Lack of Password Confirmation > Change Email Address",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_password_confirmation-change_password",
+   "title": "Server Security Misconfiguration > Lack of Password Confirmation > Change Password",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_password_confirmation-delete_account",
+   "title": "Server Security Misconfiguration > Lack of Password Confirmation > Delete Account",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_password_confirmation-manage_two_fa",
+   "title": "Server Security Misconfiguration > Lack of Password Confirmation > Manage 2FA",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-cache_control_for_a_non_sensitive_page",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > Cache-Control for a Non-Sensitive Page",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D10"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-cache_control_for_a_sensitive_page",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > Cache-Control for a Sensitive Page",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D10"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-content_security_policy",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > Content-Security-Policy",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-content_security_policy_report_only",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > Content-Security-Policy-Report-Only",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-public_key_pins",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > Public-Key-Pins",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-strict_transport_security",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > Strict-Transport-Security",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-x_content_security_policy",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > X-Content-Security-Policy",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-x_content_type_options",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > X-Content-Type-Options",
+   "atoms": [
+    "A05",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-x_frame_options",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > X-Frame-Options",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-x_webkit_csp",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > X-Webkit-CSP",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-lack_of_security_headers-x_xss_protection",
+   "title": "Server Security Misconfiguration > Lack of Security Headers > X-XSS-Protection",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-mail_server_misconfiguration-email_spoofing_on_non_email_domain",
+   "title": "Server Security Misconfiguration > Mail Server Misconfiguration > Email Spoofing on Non-Email Domain",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-mail_server_misconfiguration-email_spoofing_to_inbox_due_to_missing_or_misconfigured_dmarc_on_email_domain",
+   "title": "Server Security Misconfiguration > Mail Server Misconfiguration > Email Spoofing to Inbox due to Missing or Misconfigured DMARC on Email Domain",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-mail_server_misconfiguration-email_spoofing_to_spam_folder",
+   "title": "Server Security Misconfiguration > Mail Server Misconfiguration > Email Spoofing to Spam Folder",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-mail_server_misconfiguration-missing_or_misconfigured_spf_and_or_dkim",
+   "title": "Server Security Misconfiguration > Mail Server Misconfiguration > Missing or Misconfigured SPF and/or DKIM",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-mail_server_misconfiguration-no_spoofing_protection_on_email_domain",
+   "title": "Server Security Misconfiguration > Mail Server Misconfiguration > No Spoofing Protection on Email Domain",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_dns-missing_caa_record",
+   "title": "Server Security Misconfiguration > Misconfigured DNS > Missing Certification Authority Authorization (CAA) Record",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_dns-subdomain_takeover",
+   "title": "Server Security Misconfiguration > Misconfigured DNS > Subdomain Takeover",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_dns-zone_transfer",
+   "title": "Server Security Misconfiguration > Misconfigured DNS > Zone Transfer",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-missing_dnssec",
+   "title": "Server Security Misconfiguration > Missing DNSSEC",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-missing_secure_or_httponly_cookie_flag-non_session_cookie",
+   "title": "Server Security Misconfiguration > Missing Secure or HTTPOnly Cookie Flag > Non-Session Cookie",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "server_security_misconfiguration-missing_secure_or_httponly_cookie_flag-session_token",
+   "title": "Server Security Misconfiguration > Missing Secure or HTTPOnly Cookie Flag > Session Token",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "server_security_misconfiguration-missing_subresource_integrity",
+   "title": "Server Security Misconfiguration > Missing Subresource Integrity",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-no_rate_limiting_on_form-change_password",
+   "title": "Server Security Misconfiguration > No Rate Limiting on Form > Change Password",
+   "atoms": [
+    "A01",
+    "A03",
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-no_rate_limiting_on_form-email_triggering",
+   "title": "Server Security Misconfiguration > No Rate Limiting on Form > Email-Triggering",
+   "atoms": [
+    "A01",
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "server_security_misconfiguration-no_rate_limiting_on_form-login",
+   "title": "Server Security Misconfiguration > No Rate Limiting on Form > Login",
+   "atoms": [
+    "A01",
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "server_security_misconfiguration-no_rate_limiting_on_form-registration",
+   "title": "Server Security Misconfiguration > No Rate Limiting on Form > Registration",
+   "atoms": [
+    "A01",
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "server_security_misconfiguration-no_rate_limiting_on_form-sms_triggering",
+   "title": "Server Security Misconfiguration > No Rate Limiting on Form > SMS-Triggering",
+   "atoms": [
+    "A01",
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "server_security_misconfiguration-oauth_misconfiguration-account_squatting",
+   "title": "Server Security Misconfiguration > OAuth Misconfiguration > Account Squatting",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-oauth_misconfiguration-account_takeover",
+   "title": "Server Security Misconfiguration > OAuth Misconfiguration > Account Takeover",
+   "atoms": [
+    "A02",
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-oauth_misconfiguration-insecure_redirect_uri",
+   "title": "Server Security Misconfiguration > OAuth Misconfiguration > Insecure Redirect URI",
+   "atoms": [
+    "A03",
+    "A06",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-oauth_misconfiguration-missing_state_parameter",
+   "title": "Server Security Misconfiguration > OAuth Misconfiguration > Missing/Broken State Parameter",
+   "atoms": [
+    "A03",
+    "A04",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-path_traversal",
+   "title": "Server Security Misconfiguration > Path Traversal",
+   "atoms": [
+    "A06",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-potentially_unsafe_http_method_enabled-options",
+   "title": "Server Security Misconfiguration > Potentially Unsafe HTTP Method Enabled > OPTIONS",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D09"
+  },
+  {
+   "id": "server_security_misconfiguration-potentially_unsafe_http_method_enabled-trace",
+   "title": "Server Security Misconfiguration > Potentially Unsafe HTTP Method Enabled > TRACE",
+   "atoms": [
+    "A04",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D09"
+  },
+  {
+   "id": "server_security_misconfiguration-race_condition",
+   "title": "Server Security Misconfiguration > Race Condition",
+   "atoms": [
+    "A04",
+    "A12",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D12"
+  },
+  {
+   "id": "server_security_misconfiguration-request_smuggling",
+   "title": "Server Security Misconfiguration > HTTP Request Smuggling",
+   "atoms": [
+    "A06",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D09"
+  },
+  {
+   "id": "server_security_misconfiguration-rfd",
+   "title": "Server Security Misconfiguration > Reflected File Download (RFD)",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-same_site_scripting",
+   "title": "Server Security Misconfiguration > Same-Site Scripting",
+   "atoms": [
+    "A01",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-external_dns_query_only",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > External - DNS Query Only",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-external_low_impact",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > External - Low impact",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-internal_secrets_exposure",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > Internal Secrets Exposure",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-internal_data_exposure",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > Internal Data Exposure",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-internal_port_service_scan",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > Internal Port Service Scan",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-internal_exposure_presence_data_secrets",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > Internal Exposure of the Presence of Data/Secrets",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-server_side_request_forgery_ssrf-internal_port_scan_only",
+   "title": "Server Security Misconfiguration > Server-Side Request Forgery (SSRF) > Internal Port Scan Only",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D14"
+  },
+  {
+   "id": "server_security_misconfiguration-software_package_takeover",
+   "title": "Server Security Misconfiguration > Software Package Takeover",
+   "atoms": [
+    "A02",
+    "A11",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-ssl_attack_breach_poodle_etc",
+   "title": "Server Security Misconfiguration > SSL Attack (BREACH, POODLE etc.)",
+   "atoms": [
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-unsafe_cross_origin_resource_sharing",
+   "title": "Server Security Misconfiguration > Unsafe Cross-Origin Resource Sharing",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_security_misconfiguration-unsafe_file_upload-file_extension_filter_bypass",
+   "title": "Server Security Misconfiguration > Unsafe File Upload > File Extension Filter Bypass",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-unsafe_file_upload-no_antivirus",
+   "title": "Server Security Misconfiguration > Unsafe File Upload > No Antivirus",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-unsafe_file_upload-no_size_limit",
+   "title": "Server Security Misconfiguration > Unsafe File Upload > No Size Limit",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-username_enumeration-brute_force",
+   "title": "Server Security Misconfiguration > Username/Email Enumeration > Brute Force",
+   "atoms": [
+    "A07",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D02"
+  },
+  {
+   "id": "server_security_misconfiguration-using_default_credentials",
+   "title": "Server Security Misconfiguration > Using Default Credentials",
+   "atoms": [
+    "A03",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_security_misconfiguration-waf_bypass-direct_server_access",
+   "title": "Server Security Misconfiguration > Web Application Firewall (WAF) Bypass > Direct Server Access",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_file_share-anonymous_ftp_enabled",
+   "title": "Server Security Misconfiguration > Misconfigured File Share > Anonymous FTP Enabled",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_file_share-anonymous_smb_enabled",
+   "title": "Server Security Misconfiguration > Misconfigured File Share > Anonymous SMB Enabled",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_file_share-non_sensitive_data_exposure_ftp_smb",
+   "title": "Server Security Misconfiguration > Misconfigured File Share > Non-Sensitive Data Exposure via Anonymous FTP/SMB Enabled",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "server_security_misconfiguration-misconfigured_security_headers-insecure_csp",
+   "title": "Server Security Misconfiguration > Misconfigured Security Headers  > Insecure Content-Security-Policy",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-email_html_injection",
+   "title": "Server-Side Injection > Content Spoofing > Email HTML Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-email_hyperlink_injection_based_on_email_provider",
+   "title": "Server-Side Injection > Content Spoofing > Email Hyperlink Injection Based on Email Provider",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-external_authentication_injection",
+   "title": "Server-Side Injection > Content Spoofing > External Authentication Injection",
+   "atoms": [
+    "A01",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-flash_based_external_authentication_injection",
+   "title": "Server-Side Injection > Content Spoofing > Flash Based External Authentication Injection",
+   "atoms": [
+    "A01",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-homograph_idn_based",
+   "title": "Server-Side Injection > Content Spoofing > Homograph/IDN-Based",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-html_content_injection",
+   "title": "Server-Side Injection > Content Spoofing > HTML Content Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-iframe_injection",
+   "title": "Server-Side Injection > Content Spoofing > iframe Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-impersonation_via_broken_link_hijacking",
+   "title": "Server-Side Injection > Content Spoofing > Impersonation via Broken Link Hijacking",
+   "atoms": [
+    "A01",
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-rtlo",
+   "title": "Server-Side Injection > Content Spoofing > Right-to-Left Override (RTLO)",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-text_injection",
+   "title": "Server-Side Injection > Content Spoofing > Text Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-content_spoofing-self_email_html_injection",
+   "title": "Server-Side Injection > Content Spoofing > Self Email HTML Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-exposed_data-non_sensitive_data",
+   "title": "Server-Side Injection > Exposed Data > Non Sensitive Data",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-exposed_data-sensitive_data",
+   "title": "Server-Side Injection > Exposed Data > Sensitive Data",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-file_inclusion-local",
+   "title": "Server-Side Injection > File Inclusion > Local",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-http_response_manipulation-response_splitting_crlf",
+   "title": "Server-Side Injection > HTTP Response Manipulation > Response Splitting (CRLF)",
+   "atoms": [
+    "A01",
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-ldap_injection",
+   "title": "Server-Side Injection > LDAP Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-parameter_pollution-social_media_sharing_buttons",
+   "title": "Server-Side Injection > Parameter Pollution > Social Media Sharing Buttons",
+   "atoms": [
+    "A01",
+    "A05",
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-remote_code_execution_rce",
+   "title": "Server-Side Injection > Remote Code Execution (RCE)",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-sql_injection",
+   "title": "Server-Side Injection > SQL Injection",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-ssti-basic",
+   "title": "Server-Side Injection > Server-Side Template Injection (SSTI) > Basic",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-ssti-custom",
+   "title": "Server-Side Injection > Server-Side Template Injection (SSTI) > Custom",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "server_side_injection-xml_external_entity_injection_xxe",
+   "title": "Server-Side Injection > XML External Entity Injection (XXE)",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "smart_contract_misconfiguration-bypass_of_function_modifiers_and_checks",
+   "title": "Smart Contract Misconfiguration > Bypass of Function Modifiers and Checks",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-function_level_denial_of_service",
+   "title": "Smart Contract Misconfiguration > Function-level Denial of Service",
+   "atoms": [
+    "A07",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-improper_decimals_implementation",
+   "title": "Smart Contract Misconfiguration > Improper Decimals Implementation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-improper_fee_implementation",
+   "title": "Smart Contract Misconfiguration > Improper Fee Implementation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-improper_use_of_modifier",
+   "title": "Smart Contract Misconfiguration > Improper Use of Modifier",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-inaccurate_rounding_calculation",
+   "title": "Smart Contract Misconfiguration > Inaccurate Rounding Calculation",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D22"
+  },
+  {
+   "id": "smart_contract_misconfiguration-integer_overflow_underflow",
+   "title": "Smart Contract Misconfiguration > Integer Overflow / Underflow",
+   "atoms": [
+    "A05",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-irreversible_function_call",
+   "title": "Smart Contract Misconfiguration > Irreversible Function Call",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-malicious_superuser_risk",
+   "title": "Smart Contract Misconfiguration > Malicious Superuser Risk",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-reentrancy_attack",
+   "title": "Smart Contract Misconfiguration > Reentrancy Attack",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-smart_contract_owner_takeover",
+   "title": "Smart Contract Misconfiguration > Smart Contract Owner Takeover",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "smart_contract_misconfiguration-unauthorized_smart_contract_approval",
+   "title": "Smart Contract Misconfiguration > Unauthorized Smart Contract Approval",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "smart_contract_misconfiguration-unauthorized_transfer_of_funds",
+   "title": "Smart Contract Misconfiguration > Unauthorized Transfer of Funds",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "smart_contract_misconfiguration-uninitialized_variables",
+   "title": "Smart Contract Misconfiguration > Uninitialized Variables",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "societal_biases-confirmation_bias",
+   "title": "Societal Biases > Confirmation Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "societal_biases-systemic_bias",
+   "title": "Societal Biases > Systemic Bias",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "unvalidated_redirects_and_forwards-lack_of_security_speed_bump_page",
+   "title": "Unvalidated Redirects and Forwards > Lack of Security Speed Bump Page",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "unvalidated_redirects_and_forwards-open_redirect-flash_based",
+   "title": "Unvalidated Redirects and Forwards > Open Redirect > Flash-Based",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "unvalidated_redirects_and_forwards-open_redirect-get_based",
+   "title": "Unvalidated Redirects and Forwards > Open Redirect > GET-Based",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "unvalidated_redirects_and_forwards-open_redirect-header_based",
+   "title": "Unvalidated Redirects and Forwards > Open Redirect > Header-Based",
+   "atoms": [
+    "A06",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "unvalidated_redirects_and_forwards-open_redirect-post_based",
+   "title": "Unvalidated Redirects and Forwards > Open Redirect > POST-Based",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "unvalidated_redirects_and_forwards-tabnabbing",
+   "title": "Unvalidated Redirects and Forwards > Tabnabbing",
+   "atoms": [
+    "A06"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "using_components_with_known_vulnerabilities-captcha_bypass-ocr_optical_character_recognition",
+   "title": "Using Components with Known Vulnerabilities > Captcha Bypass > OCR (Optical Character Recognition)",
+   "atoms": [
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D18"
+  },
+  {
+   "id": "using_components_with_known_vulnerabilities-outdated_software_version",
+   "title": "Using Components with Known Vulnerabilities > Outdated Software Version",
+   "atoms": [
+    "A04",
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D18"
+  },
+  {
+   "id": "using_components_with_known_vulnerabilities-rosetta_flash",
+   "title": "Using Components with Known Vulnerabilities > Rosetta Flash",
+   "atoms": [
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D18"
+  },
+  {
+   "id": "using_components_with_known_vulnerabilities-unpatched_javascript_libraries",
+   "title": "Using Components with Known Vulnerabilities > Unpatched Javascript Libraries",
+   "atoms": [
+    "A01",
+    "A11"
+   ],
+   "atom_complete": true,
+   "domain": "D18"
+  },
+  {
+   "id": "zero_knowledge_security_misconfiguration-deanonymization_of_data",
+   "title": "Zero Knowledge Security Misconfiguration > Deanonymization of Data",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "zero_knowledge_security_misconfiguration-improper_proof_validation_and_finalization_logic",
+   "title": "Zero Knowledge Security Misconfiguration > Improper Proof Validation and Finalization Logic",
+   "atoms": [
+    "A10",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "zero_knowledge_security_misconfiguration-misconfigured_trusted_setup",
+   "title": "Zero Knowledge Security Misconfiguration > Misconfigured Trusted Setup",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "zero_knowledge_security_misconfiguration-mismatching_bit_lengths",
+   "title": "Zero Knowledge Security Misconfiguration > Mismatching Bit Lengths",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "zero_knowledge_security_misconfiguration-missing_constraint",
+   "title": "Zero Knowledge Security Misconfiguration > Missing Constraint",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "zero_knowledge_security_misconfiguration-missing_range_check",
+   "title": "Zero Knowledge Security Misconfiguration > Missing Range Check",
+   "atoms": [
+    "A02",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "active_directory-sscm_abuse-pxe_boot_media_theft",
+   "title": "Active Directory (AD) > SCCM Abuse > PXE Boot Media Theft",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "active_directory-sscm_abuse-distribution_point_anonymous_access",
+   "title": "Active Directory (AD) > SCCM Abuse > Distribution Point Permits Anonymous Access",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "active_directory-sscm_abuse-automatic_device_approval",
+   "title": "Active Directory (AD) > SCCM Abuse > Automatic Device Approval Enabled",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "active_directory-sscm_abuse-ntlm_management_point_site_database",
+   "title": "Active Directory (AD) > SCCM Abuse > NTLM Relay From Management Point to Site Database",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "active_directory-sscm_abuse-ntlm_site_server_site_systems",
+   "title": "Active Directory (AD) > SCCM Abuse > NTLM Relay From Site Server To Site Systems",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D03"
+  },
+  {
+   "id": "active_directory-sscm_abuse-ntlm_automatic_push_installation",
+   "title": "Active Directory (AD) > SCCM Abuse > NTLM Relay Via Automatic Client Push Installation",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "active_directory-sscm_abuse-privileged_credentials_exposed",
+   "title": "Active Directory (AD) > SCCM Abuse > Privileged Credentials Exposed In Task Sequences, Collection Variables or Network Access Account",
+   "atoms": [
+    "A02",
+    "A03",
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "active_directory-kerberos_abuse-domain_compromise_unconstrained_delegated",
+   "title": "Active Directory (AD) > Kerberos Abuse > Domain Compromise via Unconstrained Delegated",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "active_directory-kerberos_abuse-insecure_service_account_management",
+   "title": "Active Directory (AD) > Kerberos Abuse > Insecure Service Account Management (Kerberoasting)",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "active_directory-kerberos_abuse-no_pre_authentication",
+   "title": "Active Directory (AD) > Kerberos Abuse > User Does Not Require Pre-authentication (ASREPRoasting)",
+   "atoms": [
+    "A03",
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "active_directory-misconfigured_active_directory_certificate_services",
+   "title": "Active Directory (AD) > Misconfigured Active Directory Certificate Services (ADCS)",
+   "atoms": [
+    "A08",
+    "A09",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "active_directory-configuration_weaknesses-passwords_found_domain_description",
+   "title": "Active Directory (AD) > Configuration Weaknesses > Passwords Found within Domain User Account Description",
+   "atoms": [
+    "A01",
+    "A03",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "active_directory-configuration_weaknesses-weak_domain_password_policy",
+   "title": "Active Directory (AD) > Configuration Weaknesses > Weak Domain Password Policy",
+   "atoms": [
+    "A03",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "active_directory-configuration_weaknesses-shared_administrator_passwords",
+   "title": "Active Directory (AD) > Configuration Weaknesses > Shared Administrator Passwords",
+   "atoms": [
+    "A03",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "active_directory-configuration_weaknesses-excessive_domain_admin_membership",
+   "title": "Active Directory (AD) > Configuration Weaknesses > Excessive Domain Admin Membership",
+   "atoms": [
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "active_directory-configuration_weaknesses-dormant_enabled_user_accounts",
+   "title": "Active Directory (AD) > Configuration Weaknesses > Dormant / Inactive User Accounts Enabled in the Domain",
+   "atoms": [
+    "A01",
+    "A08",
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": "D08"
+  },
+  {
+   "id": "active_directory-sensitive_data_exposure-ldap_anonymous_bind_enabled",
+   "title": "Active Directory (AD) > Sensitive Data Exposure > LDAP Anonymous Bind Enabled",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "active_directory-sensitive_data_exposure-sensitive_data_in_open_file_shares",
+   "title": "Active Directory (AD) > Sensitive Data Exposure > Sensitive Data in Open File Shares",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": "D13"
+  },
+  {
+   "id": "active_directory-dacl_abuse",
+   "title": "Active Directory (AD) > DACL Abuse",
+   "atoms": [
+    "A08",
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": null
+  }
+ ]
+}

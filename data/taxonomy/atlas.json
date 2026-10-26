@@ -1,0 +1,876 @@
+{
+ "source": "atlas",
+ "count": 101,
+ "mapped": 69,
+ "unmapped": 32,
+ "items": [
+  {
+   "id": "AML.T0000",
+   "title": "Search Open Technical Databases",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0001",
+   "title": "Search Open AI Vulnerability Analysis",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0003",
+   "title": "Search Victim-Owned Websites",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0004",
+   "title": "Search Application Repositories",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0006",
+   "title": "Active Scanning",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0002",
+   "title": "Acquire Public AI Artifacts",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0016",
+   "title": "Obtain Capabilities",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0017",
+   "title": "Develop Capabilities",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0008",
+   "title": "Acquire Infrastructure",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0019",
+   "title": "Publish Poisoned Datasets",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0010",
+   "title": "AI Supply Chain Compromise",
+   "atoms": [
+    "A11",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0040",
+   "title": "AI Model Inference API Access",
+   "atoms": [
+    "A13",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0047",
+   "title": "AI-Enabled Product or Service",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0041",
+   "title": "Physical Environment Access",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0044",
+   "title": "Full AI Model Access",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0013",
+   "title": "Discover AI Model Ontology",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0014",
+   "title": "Discover AI Model Family",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0020",
+   "title": "Poison Training Data",
+   "atoms": [
+    "A14",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0021",
+   "title": "Establish Accounts",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0005",
+   "title": "Create Proxy AI Model",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0007",
+   "title": "Discover AI Artifacts",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0011",
+   "title": "User Execution",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0012",
+   "title": "Valid Accounts",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0015",
+   "title": "Evade AI Model",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0018",
+   "title": "Manipulate AI Model",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0024",
+   "title": "Exfiltration via AI Inference API",
+   "atoms": [
+    "A13",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0025",
+   "title": "Exfiltration via Cyber Means",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0029",
+   "title": "Denial of AI Service",
+   "atoms": [
+    "A07",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0046",
+   "title": "Spamming AI System with Chaff Data",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0031",
+   "title": "Erode AI Model Integrity",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0034",
+   "title": "Cost Harvesting",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0035",
+   "title": "AI Artifact Collection",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0036",
+   "title": "Data from Information Repositories",
+   "atoms": [
+    "A01",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0037",
+   "title": "Data from Local System",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0042",
+   "title": "Verify Attack",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0043",
+   "title": "Craft Adversarial Data",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0048",
+   "title": "External Harms",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0049",
+   "title": "Exploit Public-Facing Application",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0050",
+   "title": "Command and Scripting Interpreter",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "AML.T0051",
+   "title": "LLM Prompt Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0052",
+   "title": "Phishing",
+   "atoms": [
+    "A14"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0053",
+   "title": "AI Agent Tool Invocation",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0054",
+   "title": "LLM Jailbreak",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0055",
+   "title": "Unsecured Credentials",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "AML.T0056",
+   "title": "Extract LLM System Prompt",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0057",
+   "title": "LLM Data Leakage",
+   "atoms": [
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0058",
+   "title": "Publish Poisoned Models",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0059",
+   "title": "Erode Dataset Integrity",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0060",
+   "title": "Publish Hallucinated Entities",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0061",
+   "title": "LLM Prompt Self-Replication",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0062",
+   "title": "Discover LLM Hallucinations",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0063",
+   "title": "Discover AI Model Outputs",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0064",
+   "title": "Gather RAG-Indexed Targets",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0065",
+   "title": "LLM Prompt Crafting",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0066",
+   "title": "Retrieval Content Crafting",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0067",
+   "title": "LLM Trusted Output Components Manipulation",
+   "atoms": [
+    "A11",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0068",
+   "title": "LLM Prompt Obfuscation",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0069",
+   "title": "Discover LLM System Information",
+   "atoms": [
+    "A01",
+    "A08",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0070",
+   "title": "RAG Poisoning",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0071",
+   "title": "False RAG Entry Injection",
+   "atoms": [
+    "A01",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0072",
+   "title": "Reverse Shell",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0073",
+   "title": "Impersonation",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0074",
+   "title": "Masquerading",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0075",
+   "title": "Cloud Service Discovery",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D17"
+  },
+  {
+   "id": "AML.T0076",
+   "title": "Corrupt AI Model",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0077",
+   "title": "LLM Response Rendering",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0078",
+   "title": "Drive-by Compromise",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0079",
+   "title": "Stage Capabilities",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0080",
+   "title": "AI Agent Context Poisoning",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0081",
+   "title": "Modify AI Agent Configuration",
+   "atoms": [
+    "A15",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0082",
+   "title": "RAG Credential Harvesting",
+   "atoms": [
+    "A03",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0083",
+   "title": "Credentials from AI Agent Configuration",
+   "atoms": [
+    "A03",
+    "A15",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0084",
+   "title": "Discover AI Agent Configuration",
+   "atoms": [
+    "A15",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0085",
+   "title": "Data from AI Services",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0086",
+   "title": "Exfiltration via AI Agent Tool Invocation",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0087",
+   "title": "Gather Victim Identity Information",
+   "atoms": [
+    "A01",
+    "A03",
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "AML.T0088",
+   "title": "Generate Deepfakes",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D22"
+  },
+  {
+   "id": "AML.T0089",
+   "title": "Process Discovery",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D02"
+  },
+  {
+   "id": "AML.T0090",
+   "title": "OS Credential Dumping",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "AML.T0091",
+   "title": "Use Alternate Authentication Material",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "AML.T0092",
+   "title": "Manipulate User LLM Chat History",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0093",
+   "title": "Prompt Infiltration via Public-Facing Application",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0094",
+   "title": "Delay Execution of LLM Instructions",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0095",
+   "title": "Search Open Websites/Domains",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D08"
+  },
+  {
+   "id": "AML.T0096",
+   "title": "AI Service API",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0097",
+   "title": "Virtualization/Sandbox Evasion",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0098",
+   "title": "AI Agent Tool Credential Harvesting",
+   "atoms": [
+    "A03",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0099",
+   "title": "AI Agent Tool Data Poisoning",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0100",
+   "title": "AI Agent Clickbait",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0101",
+   "title": "Data Destruction via AI Agent Tool Invocation",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0102",
+   "title": "Generate Malicious Commands",
+   "atoms": [
+    "A01"
+   ],
+   "atom_complete": true,
+   "domain": "D07"
+  },
+  {
+   "id": "AML.T0103",
+   "title": "Deploy AI Agent",
+   "atoms": [
+    "A15",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0104",
+   "title": "Publish Poisoned AI Agent Tool",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0105",
+   "title": "Escape to Host",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0106",
+   "title": "Exploitation for Credential Access",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "AML.T0107",
+   "title": "Exploitation for Defense Evasion",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "AML.T0108",
+   "title": "AI Agent",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0109",
+   "title": "AI Supply Chain Rug Pull",
+   "atoms": [
+    "A11",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0110",
+   "title": "AI Agent Tool Poisoning",
+   "atoms": [
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0111",
+   "title": "AI Supply Chain Reputation Inflation",
+   "atoms": [
+    "A11",
+    "A16"
+   ],
+   "atom_complete": true,
+   "domain": "D19"
+  },
+  {
+   "id": "AML.T0112",
+   "title": "Machine Compromise",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  }
+ ]
+}

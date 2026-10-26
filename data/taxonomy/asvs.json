@@ -1,0 +1,149 @@
+{
+ "source": "asvs",
+ "count": 17,
+ "mapped": 11,
+ "unmapped": 6,
+ "items": [
+  {
+   "id": "ASVS-V1",
+   "title": "Encoding and Sanitization",
+   "atoms": [
+    "A05"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V2",
+   "title": "Validation and Business Logic",
+   "atoms": [
+    "A10"
+   ],
+   "atom_complete": true,
+   "domain": "D12"
+  },
+  {
+   "id": "ASVS-V3",
+   "title": "Web Frontend Security",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V4",
+   "title": "API and Web Service",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D11"
+  },
+  {
+   "id": "ASVS-V5",
+   "title": "File Handling",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": "D13"
+  },
+  {
+   "id": "ASVS-V6",
+   "title": "Authentication",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "ASVS-V7",
+   "title": "Session Management",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "ASVS-V8",
+   "title": "Authorization",
+   "atoms": [
+    "A02"
+   ],
+   "atom_complete": true,
+   "domain": "D05"
+  },
+  {
+   "id": "ASVS-V9",
+   "title": "Self-contained Tokens",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D06"
+  },
+  {
+   "id": "ASVS-V10",
+   "title": "OAuth and OIDC",
+   "atoms": [
+    "A03"
+   ],
+   "atom_complete": true,
+   "domain": "D04"
+  },
+  {
+   "id": "ASVS-V11",
+   "title": "Cryptography",
+   "atoms": [
+    "A09"
+   ],
+   "atom_complete": true,
+   "domain": "D16"
+  },
+  {
+   "id": "ASVS-V12",
+   "title": "Secure Communication",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V13",
+   "title": "Configuration",
+   "atoms": [
+    "A15"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V14",
+   "title": "Data Protection",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V15",
+   "title": "Secure Coding and Architecture",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V16",
+   "title": "Security Logging and Error Handling",
+   "atoms": [
+    "A08"
+   ],
+   "atom_complete": true,
+   "domain": null
+  },
+  {
+   "id": "ASVS-V17",
+   "title": "WebRTC",
+   "atoms": [],
+   "atom_complete": false,
+   "domain": null
+  }
+ ]
+}
