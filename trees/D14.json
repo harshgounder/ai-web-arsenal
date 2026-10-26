@@ -1,0 +1,42 @@
+{
+ "id": "d14-root",
+ "q": "Can you see the response, or only its effect?",
+ "why": "Visible response means a full read primitive and possibly protocol smuggling. Blind means you need an out of band oracle, and without one you have nothing.",
+ "branches": [
+  {
+   "a": "Visible response",
+   "action": "enumerate internal services and try protocol smuggling through gopher where the client allows it",
+   "tools": [
+    "d14-ssrfmap",
+    "d14-gopherus"
+   ],
+   "oracle": "internal response body returned"
+  },
+  {
+   "a": "Blind",
+   "action": "out of band listener first. the callback is the finding, and its metadata is the impact",
+   "tools": [
+    "d14-interactsh",
+    "d14-mitmproxy"
+   ],
+   "oracle": "callback with request metadata"
+  },
+  {
+   "a": "Unknown whether it fires",
+   "action": "read the capture. server side fetches show up as outbound requests from the app, not from you",
+   "tools": [
+    "d14-rea-capture"
+   ],
+   "oracle": "outbound request attributable to the server"
+  },
+  {
+   "a": "Metadata reachable",
+   "action": "test IMDSv2 properly: a token request first. if the fetcher cannot set a header, report the class closed",
+   "tools": [
+    "d14-curl",
+    "d14-imds"
+   ],
+   "oracle": "credentials returned, or a documented denial"
+  }
+ ]
+}

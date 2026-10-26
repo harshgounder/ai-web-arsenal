@@ -1,0 +1,371 @@
+{
+ "id": "D14",
+ "title": "Server-side request and fetch (SSRF)",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. Small domain, high impact, and the one where the honest answer is often 'closed'.",
+ "atoms": [
+  "A02",
+  "A01",
+  "A07",
+  "A08"
+ ],
+ "atom_notes": {
+  "A02": "the fetcher makes a request with the server's authority, which is the whole primitive",
+  "A01": "the URL is data that an HTTP client interprets, and clients differ in what they accept",
+  "A07": "internal services are reachable resources that were never meant to be addressable",
+  "A08": "the response may come back to you, or may only be observable as a callback or a timing difference"
+ },
+ "required_cells": [
+  {
+   "cell": "S02/L06/A3",
+   "why": "finding the fetch primitive in real traffic beats guessing at parameters",
+   "filled": true
+  },
+  {
+   "cell": "S02/L07/A2",
+   "why": "escalation to an internal service is the impact",
+   "filled": true
+  },
+  {
+   "cell": "S02/L08/A5",
+   "why": "a blind SSRF needs an out of band oracle or it is not proven",
+   "filled": true
+  },
+  {
+   "cell": "S11/L07/A2",
+   "why": "metadata to credential is the highest value path and needs its own proof",
+   "filled": true
+  },
+  {
+   "cell": "S02/L11/A3",
+   "why": "retest after an allowlist change",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d14-interactsh",
+   "name": "interactsh-client",
+   "url": "https://github.com/projectdiscovery/interactsh",
+   "role": "Out of band interaction server, the oracle for blind SSRF",
+   "driver": {
+    "install": "aur:interactsh-client",
+    "verify": "interactsh-client -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A07",
+    "A02"
+   ],
+   "preconditions": [
+    "a payload position that causes a server side request"
+   ],
+   "oracle": [
+    "callback received with the request metadata"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "The callback is the oracle. Without one, a blind SSRF finding is a hypothesis."
+  },
+  {
+   "id": "d14-ssrfmap",
+   "name": "SSRFmap",
+   "url": "https://github.com/swisskyrepo/SSRFmap",
+   "role": "SSRF exploitation modules, including protocol smuggling through gopher",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A01"
+   ],
+   "preconditions": [
+    "a confirmed SSRF primitive"
+   ],
+   "oracle": [
+    "internal service response via the target"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d14-gopherus",
+   "name": "Gopherus",
+   "url": "https://github.com/tarunkant/Gopherus",
+   "role": "Generates gopher payloads for internal services, the classic pivot from SSRF to redis or mysql",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A02"
+   ],
+   "preconditions": [
+    "an SSRF that supports gopher"
+   ],
+   "oracle": [
+    "internal service interaction logged or answered"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d14-curl",
+   "name": "curl (metadata probe)",
+   "url": "https://curl.se/docs/",
+   "role": "The simplest test: does the fetcher reach the metadata address",
+   "driver": {
+    "install": "pacman:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "a server side fetch primitive"
+   ],
+   "oracle": [
+    "metadata response, or a distinguishable timing difference"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d14-rea-capture",
+   "name": "rea inspect_web_network_capture",
+   "url": "https://rea.tools",
+   "role": "Find every server side fetch in real traffic, including image and pdf renderers",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a capture"
+   ],
+   "oracle": [
+    "outbound requests attributable to the server"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d14-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/stable/",
+   "role": "Observe the server side request from the outside when you cannot see logs",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a listener you control"
+   ],
+   "oracle": [
+    "inbound request from the target"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d14-wstg-ssrf",
+   "name": "WSTG SSRF test",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/19-Testing_for_Server-Side_Request_Forgery/",
+   "role": "The canonical test description",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d14-hacktricks",
+   "name": "HackTricks: SSRF",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "SSRF technique reference including cloud metadata paths per provider",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d14-imds",
+   "name": "AWS IMDS documentation",
+   "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html",
+   "role": "What the metadata service requires, which decides whether the class is reachable",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A07"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "IMDSv2 requires a token request first. If the fetcher cannot set a header, the class is closed and saying so is the finding."
+  }
+ ],
+ "tree": {
+  "id": "d14-root",
+  "q": "Can you see the response, or only its effect?",
+  "why": "Visible response means a full read primitive and possibly protocol smuggling. Blind means you need an out of band oracle, and without one you have nothing.",
+  "branches": [
+   {
+    "a": "Visible response",
+    "action": "enumerate internal services and try protocol smuggling through gopher where the client allows it",
+    "tools": [
+     "d14-ssrfmap",
+     "d14-gopherus"
+    ],
+    "oracle": "internal response body returned"
+   },
+   {
+    "a": "Blind",
+    "action": "out of band listener first. the callback is the finding, and its metadata is the impact",
+    "tools": [
+     "d14-interactsh",
+     "d14-mitmproxy"
+    ],
+    "oracle": "callback with request metadata"
+   },
+   {
+    "a": "Unknown whether it fires",
+    "action": "read the capture. server side fetches show up as outbound requests from the app, not from you",
+    "tools": [
+     "d14-rea-capture"
+    ],
+    "oracle": "outbound request attributable to the server"
+   },
+   {
+    "a": "Metadata reachable",
+    "action": "test IMDSv2 properly: a token request first. if the fetcher cannot set a header, report the class closed",
+    "tools": [
+     "d14-curl",
+     "d14-imds"
+    ],
+    "oracle": "credentials returned, or a documented denial"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "SSRF to metadata",
+   "detect": "request to the metadata address from an app process",
+   "control": "IMDSv2, hop limit 1, egress deny",
+   "rule": "169.254.169.254 access"
+  },
+  {
+   "attack": "SSRF via renderer",
+   "detect": "pdf or image renderer making outbound requests",
+   "control": "renderer in a sandbox with no egress",
+   "rule": "renderer egress"
+  },
+  {
+   "attack": "DNS rebinding",
+   "detect": "host resolves differently on second lookup",
+   "control": "resolve and connect to the same address, block private ranges",
+   "rule": "resolution mismatch"
+  },
+  {
+   "attack": "gopher smuggling",
+   "detect": "non http scheme in a fetch parameter",
+   "control": "scheme allowlist",
+   "rule": "scheme not in allowlist"
+  },
+  {
+   "attack": "blind SSRF",
+   "detect": "unexpected outbound request from an app host",
+   "control": "egress logging and allowlist",
+   "rule": "new external destination"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool reports whether a fetcher can set a header, which decides the IMDSv2 question",
+   "class": "no-tool",
+   "build_candidate": "a probe that requires a header to succeed and reports the difference"
+  },
+  {
+   "gap": "No egress map derived from the app's own behaviour",
+   "class": "no-tool",
+   "build_candidate": "join capture data with callback attempts to build the reachable set"
+  },
+  {
+   "gap": "S02/L11 retest cell empty",
+   "class": "coverage",
+   "build_candidate": "replay the proving callback request after an allowlist change"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D14.index.json"
+ }
+}

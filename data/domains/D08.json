@@ -1,0 +1,455 @@
+{
+ "id": "D08",
+ "title": "Client-side and browser trust boundaries",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The surface where the server cannot help you, because the bug is in the browser.",
+ "atoms": [
+  "A01",
+  "A05",
+  "A15",
+  "A08"
+ ],
+ "atom_notes": {
+  "A01": "the DOM is an interpreter, and the sinks are its parser entry points",
+  "A05": "sanitiser versus renderer is a parser differential, which is the whole bypass technique",
+  "A15": "CSP, Trusted Types and SRI are configuration, and configuration is the defence",
+  "A08": "storage, postMessage and JSON shapes leak data across origins"
+ },
+ "required_cells": [
+  {
+   "cell": "S08/L03/A3",
+   "why": "read the actual handlers and storage before guessing at sinks",
+   "filled": true
+  },
+  {
+   "cell": "S08/L06/A3",
+   "why": "a browser is required, curl cannot test the DOM",
+   "filled": true
+  },
+  {
+   "cell": "S08/L07/A2",
+   "why": "execution in a real origin is the exploit",
+   "filled": true
+  },
+  {
+   "cell": "S08/L08/A5",
+   "why": "execution must be proven with a control payload that must not run",
+   "filled": true
+  },
+  {
+   "cell": "S15/L06/A2",
+   "why": "the webview bridge is the same class across a trust boundary",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d08-rea-listeners",
+   "name": "rea inspect_web_event_listeners",
+   "url": "https://rea.tools",
+   "role": "Every listener on a selector with source ownership and exact script text",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "a live page and a selector"
+   ],
+   "oracle": [
+    "listener list with native callback locations"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "The honest way to find DOM XSS: read what actually handles the event instead of guessing at sinks."
+  },
+  {
+   "id": "d08-rea-scenario",
+   "name": "rea capture_browser_scenario",
+   "url": "https://rea.tools",
+   "role": "Scripted browser flow with network, storage and DOM captured deterministically",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A05"
+   ],
+   "preconditions": [
+    "a browser executable or CDP endpoint"
+   ],
+   "oracle": [
+    "ordered artefacts with references"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d08-rea-page",
+   "name": "rea inspect_web_page",
+   "url": "https://rea.tools",
+   "role": "Storage key inventory, JSON body shapes and postMessage shapes, passively",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a CDP target"
+   ],
+   "oracle": [
+    "storage keys and observed shapes"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d08-chromium",
+   "name": "chromium (CDP host)",
+   "url": "https://www.chromium.org/",
+   "role": "A real engine, the only honest way to test client side behaviour",
+   "driver": {
+    "install": "pacman:chromium",
+    "verify": "chromium --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a browser binary"
+   ],
+   "oracle": [
+    "rendered DOM and console output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-dalfox",
+   "name": "dalfox",
+   "url": "https://github.com/hahwul/dalfox",
+   "role": "XSS scanning with DOM and parameter analysis",
+   "driver": {
+    "install": "aur:dalfox",
+    "verify": "dalfox version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a reflected or stored input"
+   ],
+   "oracle": [
+    "payload executes in a browser, confirmed by callback"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-csp-eval",
+   "name": "CSP Evaluator",
+   "url": "https://github.com/google/csp-evaluator",
+   "role": "Scores a CSP and names the bypass for each weakness",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a CSP header"
+   ],
+   "oracle": [
+    "weakness with the bypass class named"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-dompurify",
+   "name": "DOMPurify",
+   "url": "https://github.com/cure53/DOMPurify",
+   "role": "The sanitiser most apps use, so it is also the bypass target",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "the app's sanitiser"
+   ],
+   "oracle": [
+    "sanitised output that still executes"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED",
+   "note": "Test it as an attacker. Version matters: known bypasses exist per release, and a pinned old version is the finding."
+  },
+  {
+   "id": "d08-trusted-types",
+   "name": "Trusted Types (WICG)",
+   "url": "https://github.com/WICG/trusted-types",
+   "role": "The browser level defence that makes DOM XSS structurally hard",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-ppscan",
+   "name": "PPScan",
+   "url": "https://github.com/msrkp/PPScan",
+   "role": "Prototype pollution scanner for client side sinks",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a page with client side object merging"
+   ],
+   "oracle": [
+    "polluted property observable in behaviour"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-hacktricks-csti",
+   "name": "HackTricks: CSTI",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Client side template injection reference, per framework",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-wstg-clnt",
+   "name": "WSTG Client-side (16 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/",
+   "role": "The test list this domain implements",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d08-payloads",
+   "name": "PayloadsAllTheThings",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+   "role": "Payload corpus per client side context",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a class and a context"
+   ],
+   "oracle": [
+    "a payload that works for that context"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  }
+ ],
+ "tree": {
+  "id": "d08-root",
+  "q": "Does the value reach a DOM sink?",
+  "why": "Client side is entirely about sinks. If nothing reaches a sink, there is no class here, no matter how many sanitizer weaknesses you find.",
+  "branches": [
+   {
+    "a": "Unknown",
+    "action": "read the listeners and the bundle. do not guess at innerHTML",
+    "tools": [
+     "d08-rea-listeners",
+     "d08-rea-scenario"
+    ],
+    "oracle": "a sink identified in recovered source"
+   },
+   {
+    "a": "Yes, and CSP exists",
+    "action": "score the CSP first. a weak policy changes which payloads are worth trying",
+    "tools": [
+     "d08-csp-eval"
+    ],
+    "oracle": "bypass class named by the evaluator"
+   },
+   {
+    "a": "Yes, no CSP",
+    "action": "pick a context appropriate payload, confirm execution with a callback under a control",
+    "tools": [
+     "d08-dalfox",
+     "d08-payloads"
+    ],
+    "oracle": "execution confirmed, control does not execute"
+   },
+   {
+    "a": "Sanitiser in path",
+    "action": "test the sanitiser version and the parser differential. the bypass lives between the two parsers",
+    "tools": [
+     "d08-dompurify"
+    ],
+    "oracle": "output that survives sanitisation and executes"
+   },
+   {
+    "a": "Trusted Types enforced",
+    "action": "the class is largely closed. report it as a positive and look at the server side instead",
+    "tools": [
+     "d08-trusted-types"
+    ],
+    "oracle": "n/a"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "DOM XSS",
+   "detect": "CSP violation report, sink reachability scan",
+   "control": "Trusted Types, safe sinks, CSP with nonces",
+   "rule": "csp-report and unsafe sink in source"
+  },
+  {
+   "attack": "CSP bypass",
+   "detect": "policy allows an unsafe source",
+   "control": "nonce or hash based policy, no unsafe-inline",
+   "rule": "csp-evaluator weakness"
+  },
+  {
+   "attack": "postMessage abuse",
+   "detect": "message handler without origin check",
+   "control": "check origin and shape on every handler",
+   "rule": "message without origin validation"
+  },
+  {
+   "attack": "prototype pollution",
+   "detect": "merge into prototype from parsed input",
+   "control": "null prototype objects, schema validation",
+   "rule": "prototype key in payload"
+  },
+  {
+   "attack": "client side template injection",
+   "detect": "template expression evaluated in the browser",
+   "control": "no client side template from user input",
+   "rule": "expression in rendered output"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that maps recovered handlers to reachable sinks automatically",
+   "class": "no-tool",
+   "build_candidate": "join rea listener output with a sink table, emit reachable pairs with the data path"
+  },
+  {
+   "gap": "No sanitiser version to known bypass mapper using local data",
+   "class": "partial",
+   "build_candidate": "detect version, join with a bypass table maintained in the repo"
+  },
+  {
+   "gap": "S15 webview bridge cell empty",
+   "class": "coverage",
+   "build_candidate": "bridge enumeration from the page plus a type mutation fuzzer"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D08.index.json"
+ }
+}

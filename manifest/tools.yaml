@@ -889,3 +889,16 @@ tools:
     agent_use: "session = tls_client.Session(client_identifier='chrome_120')"
     docs: https://github.com/FlorianREGAZ/Python-Tls-Client
     profiles: [web, all]
+
+  - id: interactsh-client
+    bin: interactsh-client
+    domain: D14
+    role: out of band interaction server, the oracle for blind SSRF and blind injection
+    kind: cli
+    install: [{channel: aur, pkg: interactsh-client}, {channel: go, pkg: github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest}]
+    verify: "interactsh-client -version"
+    json_out: true
+    stdin: false
+    agent_use: "interactsh-client -json -o interactions.json while the payload fires. the callback is the oracle"
+    docs: https://github.com/projectdiscovery/interactsh
+    profiles: [web, api, all]

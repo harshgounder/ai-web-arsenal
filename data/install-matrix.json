@@ -1809,6 +1809,38 @@
     }
    ],
    "ambiguity": null
+  },
+  {
+   "id": "interactsh-client",
+   "bin": "interactsh-client",
+   "domain": "D14",
+   "kind": "cli",
+   "role": "out of band interaction server, the oracle for blind SSRF and blind injection",
+   "profiles": [
+    "web",
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "interactsh-client",
+    "version": "1.4.0-1",
+    "votes": 0,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "interactsh-client",
+     "ok": true,
+     "version": "1.4.0-1",
+     "votes": 0,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
   }
  ]
 }

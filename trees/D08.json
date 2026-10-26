@@ -1,0 +1,49 @@
+{
+ "id": "d08-root",
+ "q": "Does the value reach a DOM sink?",
+ "why": "Client side is entirely about sinks. If nothing reaches a sink, there is no class here, no matter how many sanitizer weaknesses you find.",
+ "branches": [
+  {
+   "a": "Unknown",
+   "action": "read the listeners and the bundle. do not guess at innerHTML",
+   "tools": [
+    "d08-rea-listeners",
+    "d08-rea-scenario"
+   ],
+   "oracle": "a sink identified in recovered source"
+  },
+  {
+   "a": "Yes, and CSP exists",
+   "action": "score the CSP first. a weak policy changes which payloads are worth trying",
+   "tools": [
+    "d08-csp-eval"
+   ],
+   "oracle": "bypass class named by the evaluator"
+  },
+  {
+   "a": "Yes, no CSP",
+   "action": "pick a context appropriate payload, confirm execution with a callback under a control",
+   "tools": [
+    "d08-dalfox",
+    "d08-payloads"
+   ],
+   "oracle": "execution confirmed, control does not execute"
+  },
+  {
+   "a": "Sanitiser in path",
+   "action": "test the sanitiser version and the parser differential. the bypass lives between the two parsers",
+   "tools": [
+    "d08-dompurify"
+   ],
+   "oracle": "output that survives sanitisation and executes"
+  },
+  {
+   "a": "Trusted Types enforced",
+   "action": "the class is largely closed. report it as a positive and look at the server side instead",
+   "tools": [
+    "d08-trusted-types"
+   ],
+   "oracle": "n/a"
+  }
+ ]
+}
