@@ -99,7 +99,11 @@ Seven structural defects that repeat across all of them:
 
 ## 2b. The generative layer
 
-`docs/ATTACK-ONTOLOGY-v0.md` defines the grammar every domain document writes instances of:
+DECIDED 2026-10-26: the atlas is a **separate repo**, `web-attack-atlas`. This repo keeps tools,
+installs, drivers, MCP wiring, REA, the corpus and the reconciliation ledger. That repo keeps atoms,
+patterns, preconditions, oracles, chains, playbooks and counters. Join key is `entry_id`.
+
+The grammar lives there, at `web-attack-atlas/docs/ONTOLOGY.md`:
 
 ```
 attack = atom(sink, carrier, preconditions, oracle) x mutation(encoding, context, protocol, timing)
