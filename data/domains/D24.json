@@ -1,0 +1,368 @@
+{
+ "id": "D24",
+ "title": "Evidence, proof and reporting",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain that decides whether any of the rest is believed.",
+ "atoms": [
+  "A08"
+ ],
+ "atom_notes": {
+  "A08": "evidence handling is the control over who learns what, and a report is deliberate disclosure. Everything else in this repo is worthless if this domain is weak"
+ },
+ "required_cells": [
+  {
+   "cell": "meta/L08/A5",
+   "why": "a claim without an oracle and a control is a rumour",
+   "filled": true
+  },
+  {
+   "cell": "meta/L10/A2",
+   "why": "impact framing, or the finding is closed as informational",
+   "filled": true
+  },
+  {
+   "cell": "meta/L11/A2",
+   "why": "retest evidence, the step clients actually pay for twice",
+   "filled": false
+  },
+  {
+   "cell": "meta/L01/A0",
+   "why": "authorisation recorded before the first request",
+   "filled": true
+  }
+ ],
+ "entries": [
+  {
+   "id": "d24-cvss",
+   "name": "CVSS",
+   "url": "https://www.first.org/cvss/",
+   "role": "The severity score everyone argues about. Use the vector, not just the number",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d24-epss",
+   "name": "EPSS",
+   "url": "https://www.first.org/epss/",
+   "role": "Exploit prediction, the number that actually orders a queue",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "note": "Use it to order, not to justify. A high EPSS does not mean your instance is reachable."
+  },
+  {
+   "id": "d24-kev",
+   "name": "CISA KEV",
+   "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+   "role": "Exploited in the wild. The only list that means immediate",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d24-sarif",
+   "name": "SARIF 2.1.0",
+   "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+   "role": "The interchange format, so findings land in the customer's tooling",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "note": "If a finding does not fit SARIF, the customer cannot ingest it, and that is how reports get ignored."
+  },
+  {
+   "id": "d24-cwe",
+   "name": "CWE",
+   "url": "https://cwe.mitre.org/",
+   "role": "The weakness taxonomy to map a finding onto",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d24-cve",
+   "name": "CVE Program",
+   "url": "https://www.cve.org/",
+   "role": "Identifier of record when the finding is a known product issue",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d24-nist115",
+   "name": "NIST SP 800-115",
+   "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
+   "role": "The methodology standard, useful when a client asks what process you follow",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L01",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d24-wstg-report",
+   "name": "WSTG Reporting",
+   "url": "https://github.com/OWASP/wstg",
+   "role": "The reporting section of the testing guide",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d24-prove",
+   "name": "This repo: prompts/04-prove-it.md",
+   "url": "https://github.com/",
+   "role": "The proving procedure: falsify first, control second, verdict last",
+   "driver": {
+    "install": "local",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a candidate finding"
+   ],
+   "oracle": [
+    "one of CONFIRMED, UNCONFIRMED, REFUTED, NEEDS_ACCESS"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A5",
+   "stage": "L08",
+   "status": "VERIFIED",
+   "note": "Local document. The rule it enforces: no CONFIRMED without a negative control."
+  },
+  {
+   "id": "d24-critic",
+   "name": "This repo: prompts/05-critic.md",
+   "url": "https://github.com/",
+   "role": "The adversarial review pack, the reason findings survive human review",
+   "driver": {
+    "install": "local",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "another agent's finding"
+   ],
+   "oracle": [
+    "SOUND, OVERSTATED, UNSAFE_TO_REPORT or REFUTED"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A5",
+   "stage": "L08",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d24-root",
+  "q": "Can you reproduce this finding from what you wrote down?",
+  "why": "If the answer is no, nothing else in this domain matters. The test is brutal and it kills most reports.",
+  "branches": [
+   {
+    "a": "No",
+    "action": "the finding is not ready. capture the exact request, the response, the control and the timestamp, then retry the question",
+    "tools": [
+     "d24-prove"
+    ],
+    "oracle": "a reproduction that a stranger can run"
+   },
+   {
+    "a": "Yes",
+    "next": {
+     "id": "d24-yes",
+     "q": "Does it have a negative control?",
+     "branches": [
+      {
+       "a": "No",
+       "action": "you have a hypothesis. run the control, or downgrade the claim",
+       "tools": [
+        "d24-critic"
+       ],
+       "oracle": "control behaves as predicted"
+      },
+      {
+       "a": "Yes",
+       "action": "write it up: what state changed, as whom, how it persists, and what stops it",
+       "tools": [
+        "d24-cvss",
+        "d24-epss",
+        "d24-kev",
+        "d24-sarif"
+       ],
+       "oracle": "report maps to CWE and SARIF"
+      }
+     ]
+    }
+   },
+   {
+    "a": "It is a known CVE",
+    "action": "check KEV first, then EPSS for ordering. do not use CVSS alone to prioritise",
+    "tools": [
+     "d24-kev",
+     "d24-epss",
+     "d24-cve"
+    ],
+    "oracle": "exploited status and probability"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "overstated finding",
+   "detect": "critic verdict OVERSTATED",
+   "control": "mandatory critic pass before reporting",
+   "rule": "finding without control"
+  },
+  {
+   "attack": "irreproducible report",
+   "detect": "engineer cannot replay",
+   "control": "verbatim request and response in the report",
+   "rule": "missing evidence path"
+  },
+  {
+   "attack": "scope breach in the report",
+   "detect": "finding outside the recorded scope",
+   "control": "scope check before writing",
+   "rule": "finding outside authorisation"
+  },
+  {
+   "attack": "data exposure in the report itself",
+   "detect": "secrets or personal data copied into the document",
+   "control": "redact, reference instead of embed",
+   "rule": "secret pattern in a report"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No reporting tool enforces the presence of a negative control",
+   "class": "no-tool",
+   "build_candidate": "a report generator that refuses to emit a confirmed finding without both requests"
+  },
+  {
+   "gap": "No retest harness that replays the exact proving request",
+   "class": "no-tool",
+   "build_candidate": "store the proving request per finding and replay it as the retest"
+  },
+  {
+   "gap": "meta/L11 retest cell empty",
+   "class": "coverage",
+   "build_candidate": "the replay harness above, plus a diff of the oracle outcome"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D24.index.json"
+ }
+}

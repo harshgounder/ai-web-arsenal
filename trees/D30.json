@@ -1,0 +1,41 @@
+{
+ "id": "d30-root",
+ "q": "Do you need one agent or several?",
+ "why": "Most campaigns need one executor and one critic. Adding agents multiplies requests and detection, not findings.",
+ "branches": [
+  {
+   "a": "One target, one stack",
+   "action": "Operator, Executor, Critic. stop there",
+   "tools": [
+    "d30-crewai",
+    "d30-openai-agents"
+   ],
+   "oracle": "critic verdict per finding"
+  },
+  {
+   "a": "Wide surface, many hosts",
+   "action": "add a read only recon fleet, keep judgement sequential",
+   "tools": [
+    "d30-langgraph"
+   ],
+   "oracle": "host inventory with per host confidence"
+  },
+  {
+   "a": "Long campaign",
+   "action": "add a bookkeeper that owns state and evidence paths, because context does not fit",
+   "tools": [
+    "d30-pentagi"
+   ],
+   "oracle": "resumable state file"
+  },
+  {
+   "a": "Comparing frameworks",
+   "action": "evaluate on handoff and guardrail primitives, not on agent count",
+   "tools": [
+    "d30-autogen",
+    "d30-cai"
+   ],
+   "oracle": "a critic loop implemented in under an hour"
+  }
+ ]
+}

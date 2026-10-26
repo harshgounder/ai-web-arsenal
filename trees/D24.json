@@ -1,0 +1,53 @@
+{
+ "id": "d24-root",
+ "q": "Can you reproduce this finding from what you wrote down?",
+ "why": "If the answer is no, nothing else in this domain matters. The test is brutal and it kills most reports.",
+ "branches": [
+  {
+   "a": "No",
+   "action": "the finding is not ready. capture the exact request, the response, the control and the timestamp, then retry the question",
+   "tools": [
+    "d24-prove"
+   ],
+   "oracle": "a reproduction that a stranger can run"
+  },
+  {
+   "a": "Yes",
+   "next": {
+    "id": "d24-yes",
+    "q": "Does it have a negative control?",
+    "branches": [
+     {
+      "a": "No",
+      "action": "you have a hypothesis. run the control, or downgrade the claim",
+      "tools": [
+       "d24-critic"
+      ],
+      "oracle": "control behaves as predicted"
+     },
+     {
+      "a": "Yes",
+      "action": "write it up: what state changed, as whom, how it persists, and what stops it",
+      "tools": [
+       "d24-cvss",
+       "d24-epss",
+       "d24-kev",
+       "d24-sarif"
+      ],
+      "oracle": "report maps to CWE and SARIF"
+     }
+    ]
+   }
+  },
+  {
+   "a": "It is a known CVE",
+   "action": "check KEV first, then EPSS for ordering. do not use CVSS alone to prioritise",
+   "tools": [
+    "d24-kev",
+    "d24-epss",
+    "d24-cve"
+   ],
+   "oracle": "exploited status and probability"
+  }
+ ]
+}

@@ -1,0 +1,456 @@
+{
+ "id": "D30",
+ "title": "Agent frameworks and orchestrators",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The composition layer. Read with docs/ORCHESTRATION.md, which is the opinion.",
+ "atoms": [
+  "A16",
+  "A02",
+  "A08"
+ ],
+ "atom_notes": {
+  "A16": "an orchestrator is a model deciding what to do next, so the manipulation surface is the plan",
+  "A02": "handoffs transfer authority between agents, and that is a trust boundary",
+  "A08": "evidence and memory are what an orchestrator carries forward, and where a finding can silently change"
+ },
+ "required_cells": [
+  {
+   "cell": "meta/L03/A4",
+   "why": "multi agent only pays off when acquisition parallelises",
+   "filled": true
+  },
+  {
+   "cell": "meta/L06/A4",
+   "why": "coordinated probing with distinct roles",
+   "filled": true
+  },
+  {
+   "cell": "meta/L07/A4",
+   "why": "chained exploitation needs a coordinator with state",
+   "filled": true
+  },
+  {
+   "cell": "meta/L08/A5",
+   "why": "the critic role is the only thing that makes findings trustworthy",
+   "filled": true
+  },
+  {
+   "cell": "meta/L10/A2",
+   "why": "multi agent output to one report schema",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d30-pentestgpt",
+   "name": "PentestGPT",
+   "url": "https://github.com/GreyDGL/PentestGPT",
+   "role": "The original reasoning-first pentest agent. Plans and reasons, delegates execution to tools",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A16"
+   ],
+   "preconditions": [
+    "a target and an AI key"
+   ],
+   "oracle": [
+    "plan plus tool calls that a human can follow"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Its contribution was the reasoning loop, not the tools. Read it as a design reference."
+  },
+  {
+   "id": "d30-cai",
+   "name": "Cybersecurity AI (CAI)",
+   "url": "https://github.com/aliasrobotics/cai",
+   "role": "Framework for building security agents with roles, tools and handoffs",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "a model and tool set"
+   ],
+   "oracle": [
+    "agent role output with tool trace"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "The role and handoff primitives are what a critic pattern needs."
+  },
+  {
+   "id": "d30-pentagi",
+   "name": "PentAGI",
+   "url": "https://github.com/vxcontrol/pentagi",
+   "role": "Multi agent pentest system with a sandboxed execution layer and persistent memory",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "a sandbox and model keys"
+   ],
+   "oracle": [
+    "findings with the execution log"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "The sandbox is the important design choice. Any agent with network access needs one."
+  },
+  {
+   "id": "d30-strix",
+   "name": "Strix",
+   "url": "https://github.com/usestrix/strix",
+   "role": "Autonomous security agents that validate findings rather than only reporting",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "a target in scope"
+   ],
+   "oracle": [
+    "validated finding with reproduction"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Validation first is the right design. Compare its validation step against prompts/04-prove-it.md."
+  },
+  {
+   "id": "d30-bugtrace",
+   "name": "BugTraceAI",
+   "url": "https://github.com/BugTraceAI/BugTraceAI",
+   "role": "Open source multi agent web testing with evidence capture and reporting",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02",
+    "A08"
+   ],
+   "preconditions": [
+    "a web target in scope"
+   ],
+   "oracle": [
+    "finding with evidence and report"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d30-cyberstrike",
+   "name": "CyberStrike",
+   "url": "https://github.com/CyberStrikeus/CyberStrike",
+   "role": "Terminal offensive harness claiming 13 plus agents and a large skill library",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "a target and model keys"
+   ],
+   "oracle": [
+    "per finding evidence trail"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L06",
+   "status": "PROBABLE",
+   "note": "Claim size is large and unverified by this project. Listed as PROBABLE on purpose."
+  },
+  {
+   "id": "d30-autogen",
+   "name": "AutoGen",
+   "url": "https://github.com/microsoft/autogen",
+   "role": "General multi agent framework, the substrate many security agents are built on",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a model"
+   ],
+   "oracle": [
+    "agent conversation trace"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d30-crewai",
+   "name": "CrewAI",
+   "url": "https://github.com/crewAIInc/crewAI",
+   "role": "Role based agent orchestration, the quickest way to express executor and critic",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a model"
+   ],
+   "oracle": [
+    "crew run with per role output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Executor and critic as two roles is the minimum viable reliability pattern. See docs/ORCHESTRATION.md."
+  },
+  {
+   "id": "d30-openai-agents",
+   "name": "OpenAI Agents SDK",
+   "url": "https://github.com/openai/openai-agents-python",
+   "role": "Lightweight agents with handoffs and guardrails, useful for the critic pattern",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a model"
+   ],
+   "oracle": [
+    "handoff trace and guardrail verdict"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d30-langgraph",
+   "name": "LangGraph",
+   "url": "https://github.com/langchain-ai/langgraph",
+   "role": "Stateful graph orchestration, the right shape for a campaign with memory",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a model"
+   ],
+   "oracle": [
+    "graph state at each node"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A4",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d30-orchestration",
+   "name": "This repo: docs/ORCHESTRATION.md",
+   "url": "https://github.com/",
+   "role": "The composition this repo recommends: Operator, Executor, Critic. The contract and the budgets",
+   "driver": {
+    "install": "local",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [
+    "critic verdict per finding"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED",
+   "note": "Local document, link is a placeholder to the repo root."
+  },
+  {
+   "id": "d30-owasp-agentic",
+   "name": "OWASP Top 10 for Agentic Applications",
+   "url": "https://genai.owasp.org/",
+   "role": "The risk taxonomy for agent deployments",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d30-root",
+  "q": "Do you need one agent or several?",
+  "why": "Most campaigns need one executor and one critic. Adding agents multiplies requests and detection, not findings.",
+  "branches": [
+   {
+    "a": "One target, one stack",
+    "action": "Operator, Executor, Critic. stop there",
+    "tools": [
+     "d30-crewai",
+     "d30-openai-agents"
+    ],
+    "oracle": "critic verdict per finding"
+   },
+   {
+    "a": "Wide surface, many hosts",
+    "action": "add a read only recon fleet, keep judgement sequential",
+    "tools": [
+     "d30-langgraph"
+    ],
+    "oracle": "host inventory with per host confidence"
+   },
+   {
+    "a": "Long campaign",
+    "action": "add a bookkeeper that owns state and evidence paths, because context does not fit",
+    "tools": [
+     "d30-pentagi"
+    ],
+    "oracle": "resumable state file"
+   },
+   {
+    "a": "Comparing frameworks",
+    "action": "evaluate on handoff and guardrail primitives, not on agent count",
+    "tools": [
+     "d30-autogen",
+     "d30-cai"
+    ],
+    "oracle": "a critic loop implemented in under an hour"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "agent action outside plan",
+   "detect": "tool call not in the planned phase",
+   "control": "per phase allowlist and budget",
+   "rule": "unplanned tool invocation"
+  },
+  {
+   "attack": "confirmation bias loop",
+   "detect": "finding rate high, survival rate low",
+   "control": "separate critic with fresh context",
+   "rule": "critic reject rate"
+  },
+  {
+   "attack": "context collapse",
+   "detect": "later agents repeat earlier work",
+   "control": "external state file, not context",
+   "rule": "duplicate work detection"
+  },
+  {
+   "attack": "scope drift",
+   "detect": "requests to hosts outside the allowlist",
+   "control": "enforce at the request layer",
+   "rule": "out of scope host"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No framework ships scope enforcement at the request layer",
+   "class": "no-tool",
+   "build_candidate": "a proxy that every agent request must pass, with an allowlist and a budget"
+  },
+  {
+   "gap": "No standard critic implementation that operators can drop in",
+   "class": "partial",
+   "build_candidate": "prompts/05-critic.md plus a harness that enforces the verdict vocabulary"
+  },
+  {
+   "gap": "meta/L10 multi agent to one report schema is empty",
+   "class": "coverage",
+   "build_candidate": "a finding schema all roles write into, with the evidence path required"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D30.index.json"
+ }
+}

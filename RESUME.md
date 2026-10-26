@@ -96,6 +96,13 @@ json.dump({"domain": did, "enriched": len(d["entries"]), "indexed_not_enriched":
    dominate some keyword sets. Author domains deliberately; publish the skipped count in
    `DXX.index.json` rather than padding the table.
 
+## Run order matters
+
+`normalize-atoms.py` must run before `validate-domains.py`. Atoms written as a string were shipped
+three separate times (D02, D03, D24) because the value was passed where a list was expected. It
+renders as garbage, throws nothing, and is only caught by validation. The normaliser repairs it
+idempotently so the class of bug cannot persist.
+
 ## The rule that decides quality here
 
 An entry without `preconditions`, `oracle` and a `counter` is a note, not an entry. If a domain document
