@@ -19,6 +19,14 @@ tiers = {}
 for l in open(R/"data"/"corpus.jsonl"):
     t = json.loads(l)["tier"]; tiers[t] = tiers.get(t,0)+1
 print(f"corpus_entries {corpus}")
+try:
+    print(f"corpus_identities {json.load(open(R/'data'/'corpus-merge-stats.json'))['entries_by_identity']}")
+except Exception:
+    print("corpus_identities ?")
+enr=sum(len(json.load(open(f))["entries"]) for f in glob.glob(str(R/"data"/"domains"/"D*.json")) if not f.endswith(".index.json"))
+cand=sum(json.load(open(f))["indexed_not_enriched"] for f in glob.glob(str(R/"data"/"domains"/"*.index.json")))
+print(f"enriched_entries {enr}")
+print(f"promotable_candidates {cand}")
 print(f"sources {rivals}")
 print(f"rows_total {summ['rows_total']}")
 print(f"admitted {summ['admitted']}")

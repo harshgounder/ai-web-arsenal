@@ -3,6 +3,23 @@
 An AI-native arsenal for testing web platforms. Capture first, reverse the artifacts, derive hypotheses
 from the actual stack, then prove with an oracle and a negative control.
 
+## What this is, precisely
+
+**It is the deduplicated superset of what 19 public collections knew as of October 2026, plus 28
+authored domains of method, mapped onto 16 primitives.**
+
+**It is not the set of everything that exists.** Three things bound it, and all three are measured rather
+than estimated:
+
+| bound | number | where it shows |
+|---|---|---|
+| the corpus is what 19 lists knew | 21,194 tool identities | `scripts/merge-identities.py` |
+| the authored content is what one session produced | 444 enriched entries | `data/domains/*.json` |
+| the backlog is real and mapped | 1,419 promotable candidates | `data/domains/*.index.json` |
+
+A repo that claims completeness is making a claim it cannot check. This one publishes its own shortfall
+as a table, and every number below is regenerated from disk before it is quoted.
+
 Two repos, one seam:
 
 | | this repo | [`web-attack-atlas`](../web-attack-atlas) |
@@ -16,18 +33,18 @@ rot with the disposable half.
 
 ---
 
-## Status, measured from disk on 2026-10-26
+## Status, measured from disk on 2026-10-27
 
 | metric | value | meaning |
 |---|---|---|
-| corpus entries | **21,397** | canonical, deduplicated across every source |
+| corpus entries | **21,194** | deduplicated by tool identity across every source |
 | sources reconciled | **19** | awesome-lists, API lists, AI-security lists, MCP lists |
 | rows reconciled | **31,298** | `admitted 13,575 + excluded 17,516 + held 204 + residue 3` |
 | reconciliation identity | **holds** | checked per source and in aggregate |
 | tools in manifest | **64** | every install candidate verified against a real channel |
 | unresolved installs | **0** | nothing invented, nothing guessed |
 | prompt packs | **5** | phase-shaped, with failure modes and verification |
-| domains | **37** | 28 authored (389 enriched entries), 9 explicit pointers, 0 empty |
+| domains | **37** | 28 authored (444 enriched entries), 9 explicit pointers, 0 empty |
 | patterns in the atlas | **150** | W01 lifecycle, W02 authorisation, W03 second-order, gate passing |
 | taxonomy items mapped | **624 of 706** | WSTG, ASVS, VRT, API Top 10, ATLAS, LLM Top 10 to atoms, 88.4% |
 
