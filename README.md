@@ -28,7 +28,7 @@ rot with the disposable half.
 | unresolved installs | **0** | nothing invented, nothing guessed |
 | prompt packs | **5** | phase-shaped, with failure modes and verification |
 | domains | **37** | 6 authored deep (D04, D05, D11, D19, D20, D31), 31 stubs with declared required cells |
-| patterns in the atlas | **50** | W02 authorisation on writes, gate passing |
+| patterns in the atlas | **150** | W01 lifecycle, W02 authorisation, W03 second-order, gate passing |
 | taxonomy items mapped | **624 of 706** | WSTG, ASVS, VRT, API Top 10, ATLAS, LLM Top 10 to atoms, 88.4% |
 
 These numbers are produced by `scripts/readme-stats.py`. If this table and that script disagree, the
