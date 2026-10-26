@@ -1,0 +1,445 @@
+{
+ "id": "D03",
+ "title": "Fingerprinting and stack identification",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. Small domain, high leverage: the stack profile it produces is the input to every hypothesis.",
+ "atoms": [
+  "A15",
+  "A08",
+  "A06",
+  "A05",
+  "A03"
+ ],
+ "atom_notes": {
+  "A15": "fingerprinting is measuring configuration divergence between what is claimed and what is running",
+  "A08": "banners, versions and build artefacts are information exposure",
+  "A06": "vhost and path differentials reveal namespaces that answer differently",
+  "A05": "version to feature mapping is how a fingerprint becomes a testable hypothesis",
+  "A03": "TLS and client fingerprints identify the stack on both sides of the connection"
+ },
+ "required_cells": [
+  {
+   "cell": "S02/L03/A2",
+   "why": "a stack profile is the input to every downstream hypothesis",
+   "filled": true
+  },
+  {
+   "cell": "S02/L05/A2",
+   "why": "version to known issue mapping is the payoff of fingerprinting",
+   "filled": true
+  },
+  {
+   "cell": "S02/L06/A2",
+   "why": "confirming a fingerprint with a second engine before acting on it",
+   "filled": true
+  },
+  {
+   "cell": "S02/L12/A6",
+   "why": "stack drift detection across deploys",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d03-whatweb",
+   "name": "whatweb",
+   "url": "https://github.com/urbanadventurer/WhatWeb",
+   "role": "Technology fingerprint with plugin detail",
+   "driver": {
+    "install": "aur:whatweb",
+    "verify": "whatweb --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A08"
+   ],
+   "preconditions": [
+    "a live host"
+   ],
+   "oracle": [
+    "framework, server, version and plugin list"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "Aggression 1 only. Higher is loud and rarely changes the answer."
+  },
+  {
+   "id": "d03-httpx",
+   "name": "httpx",
+   "url": "https://github.com/projectdiscovery/httpx",
+   "role": "Status, title, tech detect and TLS at scale",
+   "driver": {
+    "install": "aur:httpx-bin",
+    "verify": "httpx -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15",
+    "A08"
+   ],
+   "preconditions": [
+    "a host list"
+   ],
+   "oracle": [
+    "per host tech fingerprint in json"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "The tech-detect field is what feeds the stack profile that D01 hypotheses depend on."
+  },
+  {
+   "id": "d03-nmap",
+   "name": "nmap",
+   "url": "https://nmap.org/book/",
+   "role": "Service and version truth when headers disagree",
+   "driver": {
+    "install": "pacman:nmap",
+    "verify": "nmap --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host and port"
+   ],
+   "oracle": [
+    "service banner and version string"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "The arbiter. When httpx and the HTML disagree, this decides."
+  },
+  {
+   "id": "d03-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Fingerprint templates and exposure checks",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15",
+    "A05"
+   ],
+   "preconditions": [
+    "a host"
+   ],
+   "oracle": [
+    "template match identifying a product or version"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d03-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Vhost and virtual directory discovery by response differential",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06",
+    "A08"
+   ],
+   "preconditions": [
+    "a wordlist and a host"
+   ],
+   "oracle": [
+    "vhost or path that responds differently"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d03-wafw00f",
+   "name": "wafw00f",
+   "url": "https://github.com/EnableSecurity/wafw00f",
+   "role": "WAF fingerprint, which decides the evasion class",
+   "driver": {
+    "install": "pipx:wafw00f",
+    "verify": "wafw00f --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host"
+   ],
+   "oracle": [
+    "detected WAF product or none"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "Run before payload selection, never after. The WAF determines which mutation axis matters."
+  },
+  {
+   "id": "d03-rea-bundle",
+   "name": "rea analyze_web_bundle",
+   "url": "https://rea.tools",
+   "role": "Vendor fingerprints and framework evidence from the bundle, which headers cannot show",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A08"
+   ],
+   "preconditions": [
+    "a reachable origin"
+   ],
+   "oracle": [
+    "vendor and framework identification from code"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "The most reliable fingerprint for SPA stacks. Headers lie; the bundle's dependencies do not."
+  },
+  {
+   "id": "d03-favicon",
+   "name": "Favicon hash matching",
+   "url": "https://github.com/dev2be/awesome-favicon-hash",
+   "role": "Shodan style favicon hash to identify a product across hosts you cannot otherwise correlate",
+   "driver": {
+    "install": "core:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A15"
+   ],
+   "preconditions": [
+    "the favicon is served and stable"
+   ],
+   "oracle": [
+    "hash match across hosts"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "PROBABLE",
+   "note": "The hash method is well known; the linked repo is not the authority. Treat the technique as established and the link as a pointer to verify."
+  },
+  {
+   "id": "d03-ja3",
+   "name": "TLS fingerprint (JA3/JA4)",
+   "url": "https://github.com/salesforce/ja3",
+   "role": "Identify the client stack and detect whether a target fingerprints you back",
+   "driver": {
+    "install": "pipx:pyja3",
+    "verify": "python3 -c 'import ja3'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A03"
+   ],
+   "preconditions": [
+    "TLS traffic within scope"
+   ],
+   "oracle": [
+    "stable fingerprint per client"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "note": "Read this defensively too: if the target uses it, your default client is already identified."
+  },
+  {
+   "id": "d03-wappalyzer",
+   "name": "Wappalyzer technology rules",
+   "url": "https://github.com/enthec/webappanalyzer",
+   "role": "The rule set most tools copy, useful as a second opinion",
+   "driver": {
+    "install": "npm:wappalyzer",
+    "verify": "npx wappalyzer --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a rendered page"
+   ],
+   "oracle": [
+    "technology list"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d03-wstg-info",
+   "name": "WSTG Information Gathering (11 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/",
+   "role": "The test list this domain implements",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d03-root",
+  "q": "Do you have an origin, or only a DNS name?",
+  "why": "A DNS name gives you vhosts and certificates. An origin gives you behaviour. The strongest identification comes from combining them, and most people stop at headers.",
+  "branches": [
+   {
+    "a": "DNS name only",
+    "action": "certificate transparency for names, then vhost probing, then resolve each to a live origin",
+    "tools": [
+     "d03-ffuf",
+     "d03-httpx"
+    ],
+    "oracle": "additional names or vhosts that answer"
+   },
+   {
+    "a": "An origin",
+    "action": "headers, then bundle dependencies, then a second engine. if the three disagree, the bundle is usually right",
+    "tools": [
+     "d03-httpx",
+     "d03-rea-bundle",
+     "d03-whatweb"
+    ],
+    "oracle": "three sources agreeing on a stack"
+   },
+   {
+    "a": "A SPA or a bundle",
+    "action": "fingerprint from dependencies, not headers. headers for a SPA are usually the CDN",
+    "tools": [
+     "d03-rea-bundle",
+     "d03-wappalyzer"
+    ],
+    "oracle": "framework and version from bundle evidence"
+   },
+   {
+    "a": "A WAF in front",
+    "action": "fingerprint the WAF first, because it determines which evasion class applies to everything else",
+    "tools": [
+     "d03-wafw00f"
+    ],
+    "oracle": "WAF product identified"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "version disclosure",
+   "detect": "server and framework version in headers or body",
+   "control": "strip version headers, generic error pages",
+   "rule": "version string in response"
+  },
+  {
+   "attack": "stack based targeting",
+   "detect": "a scanner fingerprinting then immediately probing a known CVE",
+   "control": "uniform responses, no version banner",
+   "rule": "fingerprint followed by targeted probe"
+  },
+  {
+   "attack": "vhost discovery",
+   "detect": "requests with Host headers that do not match inventory",
+   "control": "default vhost denies",
+   "rule": "unknown host header"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool gives a confidence weighted stack profile as a single artifact",
+   "class": "no-tool",
+   "build_candidate": "merge http, bundle, tls and favicon evidence into one profile with per field confidence and source"
+  },
+  {
+   "gap": "No version to known issue mapper that uses the local corpus instead of a web lookup",
+   "class": "no-tool",
+   "build_candidate": "join the fingerprint with CVE and nuclei template metadata already on disk"
+  },
+  {
+   "gap": "S02/L12 drift detection cell empty",
+   "class": "coverage",
+   "build_candidate": "scheduled re-fingerprint plus a diff report keyed on stack fields"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D03.index.json"
+ }
+}

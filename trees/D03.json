@@ -1,0 +1,43 @@
+{
+ "id": "d03-root",
+ "q": "Do you have an origin, or only a DNS name?",
+ "why": "A DNS name gives you vhosts and certificates. An origin gives you behaviour. The strongest identification comes from combining them, and most people stop at headers.",
+ "branches": [
+  {
+   "a": "DNS name only",
+   "action": "certificate transparency for names, then vhost probing, then resolve each to a live origin",
+   "tools": [
+    "d03-ffuf",
+    "d03-httpx"
+   ],
+   "oracle": "additional names or vhosts that answer"
+  },
+  {
+   "a": "An origin",
+   "action": "headers, then bundle dependencies, then a second engine. if the three disagree, the bundle is usually right",
+   "tools": [
+    "d03-httpx",
+    "d03-rea-bundle",
+    "d03-whatweb"
+   ],
+   "oracle": "three sources agreeing on a stack"
+  },
+  {
+   "a": "A SPA or a bundle",
+   "action": "fingerprint from dependencies, not headers. headers for a SPA are usually the CDN",
+   "tools": [
+    "d03-rea-bundle",
+    "d03-wappalyzer"
+   ],
+   "oracle": "framework and version from bundle evidence"
+  },
+  {
+   "a": "A WAF in front",
+   "action": "fingerprint the WAF first, because it determines which evasion class applies to everything else",
+   "tools": [
+    "d03-wafw00f"
+   ],
+   "oracle": "WAF product identified"
+  }
+ ]
+}

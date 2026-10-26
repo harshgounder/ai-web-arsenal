@@ -1,0 +1,4978 @@
+{
+ "domain": "D29",
+ "generated_at": "2026-10-27",
+ "enriched": 57,
+ "indexed_not_enriched": 710,
+ "entries": [
+  {
+   "name": "THC Hydra",
+   "url": "https://github.com/vanhauser-thc/thc-hydra",
+   "tier": "adjacent",
+   "n_sources": 5,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NoSQLMap",
+   "url": "https://github.com/codingo/NoSQLMap",
+   "tier": "adjacent",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "RustScan",
+   "url": "https://github.com/rustscan/rustscan",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "masscan",
+   "url": "https://github.com/robertdavidgraham/masscan",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tplmap",
+   "url": "https://github.com/epinna/tplmap",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AQUATONE",
+   "url": "https://github.com/michenriksen/aquatone",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Amass",
+   "url": "https://github.com/OWASP/Amass",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Ghauri",
+   "url": "https://github.com/r0oth3x49/ghauri",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFISuite",
+   "url": "https://github.com/D35m0nd142/LFISuite",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP Zed Attack Proxy (ZAP)",
+   "url": "https://www.zaproxy.org/",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SpiderFoot",
+   "url": "https://github.com/smicallef/spiderfoot",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "VHostScan",
+   "url": "https://github.com/codingo/VHostScan",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "git-dumper",
+   "url": "https://github.com/arthaud/git-dumper",
+   "tier": "offscope",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nmap",
+   "url": "https://nmap.org/",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "retire.js",
+   "url": "https://github.com/retirejs/retire.js",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wpscan",
+   "url": "https://github.com/wpscanteam/wpscan",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ASlookup",
+   "url": "https://aslookup.com/",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Agentic Radar",
+   "url": "https://github.com/splx-ai/agentic-radar",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CAINE",
+   "url": "https://www.caine-live.net/",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CSP Scanner",
+   "url": "https://cspscanner.com/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cherrybomb",
+   "url": "https://github.com/blst-security/cherrybomb",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Ciphey",
+   "url": "https://github.com/ciphey/ciphey",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Depix",
+   "url": "https://github.com/beurtschipper/Depix",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ENG-16-profast",
+   "url": "https://github.com/RhinoSecurityLabs/cloudgoat",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Findsubdomains",
+   "url": "https://findsubdomains.com/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gato",
+   "url": "https://github.com/praetorian-inc/gato",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Git-Scanner",
+   "url": "https://github.com/HightechSec/git-scanner",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitMiner",
+   "url": "https://github.com/UnkL4b/GitMiner",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gopherus",
+   "url": "https://github.com/tarunkant/Gopherus",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HARNESS-IFACE",
+   "url": "https://github.com/trailofbits/mcp-context-protector",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Habu",
+   "url": "https://github.com/portantier/habu",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IPED - Indexador e Processador de Evid\u00eancias Digitais",
+   "url": "https://servicos.dpf.gov.br/ferramentas/IPED/",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ImmuniWeb SSL Security Test",
+   "url": "https://www.immuniweb.com/ssl/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Keyscope",
+   "url": "https://github.com/SpectralOps/keyscope",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Lonkero",
+   "url": "https://github.com/bountyyfi/lonkero",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Nessus",
+   "url": "https://www.tenable.com/products/nessus",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Raccoon",
+   "url": "https://github.com/evyatarmeged/Raccoon",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQLmap",
+   "url": "http://sqlmap.org/",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSRFmap>",
+   "url": "https://github.com/swisskyrepo/SSRFmap",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sublist3r",
+   "url": "https://github.com/aboul3la/Sublist3r",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vigolium",
+   "url": "https://github.com/vigolium/vigolium",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFtester",
+   "url": "https://github.com/waftester/waftester",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XRay",
+   "url": "https://github.com/evilsocket/xray",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXEinjector>",
+   "url": "https://github.com/enjoiz/XXEinjector",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cirt-fuzzer",
+   "url": "http://www.cirt.dk/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ctftool",
+   "url": "https://github.com/taviso/ctftool",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dnsReaper>",
+   "url": "https://github.com/punk-security/dnsReaper",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dotdotpwn",
+   "url": "https://github.com/wireghoul/dotdotpwn",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "fuzzapi",
+   "url": "https://github.com/Fuzzapi/fuzzapi",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gitrob",
+   "url": "https://github.com/michenriksen/Gitrob",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "interactsh>",
+   "url": "https://github.com/projectdiscovery/interactsh",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jwt-hack CLI",
+   "url": "https://github.com/hahwul/jwt-hack",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mimikatz",
+   "url": "https://github.com/gentilkiwi/mimikatz",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "phpggc>",
+   "url": "https://github.com/ambionics/phpggc",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pig",
+   "url": "https://github.com/rafael-santiago/pig",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "recursebuster",
+   "url": "https://github.com/c-sto/recursebuster",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "smuggler",
+   "url": "https://github.com/defparam/smuggler",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "subjack>",
+   "url": "https://github.com/haccer/subjack",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "subzy>",
+   "url": "https://github.com/PentestPad/subzy",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ysoserial>",
+   "url": "https://github.com/frohoff/ysoserial",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "zizmor",
+   "url": "https://github.com/zizmorcore/zizmor",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![9hannahnine-jpg/arc-gate-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/9hannahnine-jpg/arc-gate-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![AAR-Labs/snapdeploy-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/AAR-Labs/snapdeploy-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![AI-Directory-Partners/tooldirectory-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/AI-Directory-Partners/tooldirectory-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Alepha188838884/context-firewall MCP server",
+   "url": "https://glama.ai/mcp/servers/Alepha188838884/context-firewall/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![AperionAI/shield MCP server",
+   "url": "https://glama.ai/mcp/servers/AperionAI/shield/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![CTRLRun/ctrlrun MCP server",
+   "url": "https://glama.ai/mcp/servers/CTRLRun/ctrlrun/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Cubiczan/chp-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/Cubiczan/chp-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Cubiczan/governed-mcp-gateway MCP server",
+   "url": "https://glama.ai/mcp/servers/Cubiczan/governed-mcp-gateway/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![CydVilla/peckish MCP server",
+   "url": "https://glama.ai/mcp/servers/CydVilla/peckish/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Delx MCP Server",
+   "url": "https://glama.ai/mcp/servers/davidmosiah/delx-mcp-server/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![DotnetFastMCP MCP server",
+   "url": "https://glama.ai/mcp/servers/tekspry/DotnetFastMCP/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Drop-to-run/drop2run-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/Drop-to-run/drop2run-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![FailEcho/failecho MCP server",
+   "url": "https://glama.ai/mcp/servers/FailEcho/failecho/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ForeverTools/kiprio-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/ForeverTools/kiprio-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![GautamTalksDev/mcp-pin MCP server",
+   "url": "https://glama.ai/mcp/servers/GautamTalksDev/mcp-pin/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Glama",
+   "url": "https://glama.ai/mcp/servers/badge/@vinkius-labs/mcp-fusion",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Gowthaman90/mcp-bastion MCP server",
+   "url": "https://glama.ai/mcp/servers/Gowthaman90/mcp-bastion/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![MCP Server",
+   "url": "https://glama.ai/mcp/servers/goklab/guardvibe/badge",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![MCPSpend MCP server",
+   "url": "https://glama.ai/mcp/servers/andreisirbu91-lab/MCPSpend/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![MikkoParkkola/mcp-gateway MCP server",
+   "url": "https://glama.ai/mcp/servers/MikkoParkkola/mcp-gateway/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![MvikManners/aw1-circuit-breaker MCP server",
+   "url": "https://glama.ai/mcp/servers/MvikManners/aw1-circuit-breaker/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![NazarKalytiuk/tarn MCP server",
+   "url": "https://glama.ai/mcp/servers/NazarKalytiuk/tarn/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![OrygnsCode/opa-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/OrygnsCode/opa-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![P4ST4S/mcp-audit MCP server",
+   "url": "https://glama.ai/mcp/servers/P4ST4S/mcp-audit/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![PGHQdev/OpenScreenShot MCP server",
+   "url": "https://glama.ai/mcp/servers/PGHQdev/OpenScreenShot/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![PostWire MCP server",
+   "url": "https://glama.ai/mcp/servers/Perufitlife/postwire-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Proofpane/releases MCP server",
+   "url": "https://glama.ai/mcp/servers/Proofpane/releases/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![PsChina/deepseek-as-subagent MCP server",
+   "url": "https://glama.ai/mcp/servers/PsChina/deepseek-as-subagent/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Push To Display MCP server",
+   "url": "https://glama.ai/mcp/servers/pushtodisplay/cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Rendeverance/toolfunnel MCP server",
+   "url": "https://glama.ai/mcp/servers/Rendeverance/toolfunnel/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Rul1an/assay MCP server",
+   "url": "https://glama.ai/mcp/servers/Rul1an/assay/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![TheStack-ai/waypath MCP server",
+   "url": "https://glama.ai/mcp/servers/TheStack-ai/waypath/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![TikTok Agent Publisher MCP server",
+   "url": "https://glama.ai/mcp/servers/davidmosiah/tiktok-agent-publisher/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker MCP server",
+   "url": "https://glama.ai/mcp/servers/Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![UladzKha/samuraizer-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/UladzKha/samuraizer-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Yomiracle/trinity-lite MCP server",
+   "url": "https://glama.ai/mcp/servers/Yomiracle/trinity-lite/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![activeing123/mcptoon MCP server",
+   "url": "https://glama.ai/mcp/servers/activeing123/mcptoon/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![aegis MCP server",
+   "url": "https://glama.ai/mcp/servers/Acacian/aegis/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![agent-bom MCP server",
+   "url": "https://glama.ai/mcp/servers/@msaad00/agent-bom/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![agent-tool MCP server",
+   "url": "https://glama.ai/mcp/servers/knewstimek/agent-tool/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![agent-utils-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/@aparajithn/agent-utils-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![agent-ward MCP server",
+   "url": "https://glama.ai/mcp/servers/agentward-ai/agent-ward/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![aggrete/aggrete MCP server",
+   "url": "https://glama.ai/mcp/servers/Aggrete/aggrete/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ai-tool-optimizer MCP server",
+   "url": "https://glama.ai/mcp/servers/@TollboothLabs/ai-tool-optimizer/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![aimusicvideogen-com/music-video-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/aimusicvideogen-com/music-video-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![air-blackbox-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/@airblackbox/air-blackbox-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ajibadedapo/flowproof-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/ajibadedapo/flowproof-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![alejooroncoy/campus-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/alejooroncoy/campus-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![alexar76/argus MCP server",
+   "url": "https://glama.ai/mcp/servers/alexar76/argus/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![alexar76/warden MCP server",
+   "url": "https://glama.ai/mcp/servers/alexar76/warden/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![alforge-labs/alpha-forge-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/alforge-labs/alpha-forge-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![andypgray/resharper-cli-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/andypgray/resharper-cli-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![anythink-cloud/anythink-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/anythink-cloud/anythink-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![api7/aisix MCP server",
+   "url": "https://glama.ai/mcp/servers/api7/aisix/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![arnavranjan005/mcp-telemetry MCP server",
+   "url": "https://glama.ai/mcp/servers/arnavranjan005/mcp-telemetry/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![artgas1/yandex-metrika-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/artgas1/yandex-metrika-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![askalf/truecopy MCP server",
+   "url": "https://glama.ai/mcp/servers/askalf/truecopy/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![auroracapital/upres-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/auroracapital/upres-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![aurumflux20/effectfence MCP server",
+   "url": "https://glama.ai/mcp/servers/aurumflux20/effectfence/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![awkoy/notion-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/awkoy/notion-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![baobabcat/demandscope MCP server",
+   "url": "https://glama.ai/mcp/servers/baobabcat/demandscope/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![c-viper-work/cabal-radar-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/c-viper-work/cabal-radar-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![cablate/mcp-google-map MCP server",
+   "url": "https://glama.ai/mcp/servers/cablate/mcp-google-map/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![callstackincubator/agent-device MCP server",
+   "url": "https://glama.ai/mcp/servers/callstackincubator/agent-device/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![can4hou6joeng4/boss-agent-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/can4hou6joeng4/boss-agent-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![cerebrixos-org/tuning-engines-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/cerebrixos-org/tuning-engines-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![cgrtml/reasongate MCP server",
+   "url": "https://glama.ai/mcp/servers/cgrtml/reasongate/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![chrassy/klanex-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/chrassy/klanex-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![clawguard-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/joergmichno/clawguard-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![clickup-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/nicholasbester/clickup-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![clipugc/ClipUGC-CLI MCP server",
+   "url": "https://glama.ai/mcp/servers/clipugc/ClipUGC-CLI/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![codeinspectus MCP server",
+   "url": "https://glama.ai/mcp/servers/Synvoya/codeinspectus/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![cstamigo-droid/signal-scanner MCP server",
+   "url": "https://glama.ai/mcp/servers/cstamigo-droid/signal-scanner/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![cursor-delegate-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/andreilungeanu/cursor-delegate-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![dengyier/OpenWorkProof MCP server",
+   "url": "https://glama.ai/mcp/servers/dengyier/OpenWorkProof/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![distil MCP server",
+   "url": "https://glama.ai/mcp/servers/dshakes/distil/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![doteyeso-ops/mcp-server-vibes-coded MCP server",
+   "url": "https://glama.ai/mcp/servers/doteyeso-ops/mcp-server-vibes-coded/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![eamwhite1/xrpl-referee MCP server",
+   "url": "https://glama.ai/mcp/servers/eamwhite1/xrpl-referee/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![edithatogo/fyi-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/edithatogo/fyi-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![elang2/mcp-audit-gateway MCP server",
+   "url": "https://glama.ai/mcp/servers/elang2/mcp-audit-gateway/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![emektor/toolwrit MCP server",
+   "url": "https://glama.ai/mcp/servers/emektor/toolwrit/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![epistemedeus/skillguard MCP server",
+   "url": "https://glama.ai/mcp/servers/epistemedeus/skillguard/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ffroliva/gflow-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/ffroliva/gflow-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![forgemeshlabs/aso-score-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/forgemeshlabs/aso-score-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![forgemeshlabs/utility-grid-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/forgemeshlabs/utility-grid-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ganakailabs/cloudeval-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/ganakailabs/cloudeval-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![gautam-u/sieve-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/gautam-u/sieve-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![gebalamariusz/cloud-audit MCP server",
+   "url": "https://glama.ai/mcp/servers/gebalamariusz/cloud-audit/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![gerard-kanters/mcp-linux-tools MCP server",
+   "url": "https://glama.ai/mcp/servers/gerard-kanters/mcp-linux-tools/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![giorgio44/gateonai-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/giorgio44/gateonai-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![gomission/mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/gomission/mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![googlarz/proton-mail-bridge-client MCP server",
+   "url": "https://glama.ai/mcp/servers/googlarz/proton-mail-bridge-client/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![googlarz/signal-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/googlarz/signal-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![gostanos/smallprint-action MCP server",
+   "url": "https://glama.ai/mcp/servers/gostanos/smallprint-action/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![graph-tool-call MCP server",
+   "url": "https://glama.ai/mcp/servers/SonAIengine/graph-tool-call/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![gws-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/@conorbronsdon/gws-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![hampsterx/claude-mcp-bridge MCP server",
+   "url": "https://glama.ai/mcp/servers/hampsterx/claude-mcp-bridge/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![hamza-aziz-ai/codex-claude-council MCP server",
+   "url": "https://glama.ai/mcp/servers/hamza-aziz-ai/codex-claude-council/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![handsomejustin/mijia-control MCP server",
+   "url": "https://glama.ai/mcp/servers/handsomejustin/mijia-control/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![hernaninverso/eleion-scanner-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/hernaninverso/eleion-scanner-mcp/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![heymrun/heym MCP server",
+   "url": "https://glama.ai/mcp/servers/heymrun/heym/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![honeylabs-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/honeylabshq/honeylabs-mcp/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![icoretech/warden-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/icoretech/warden-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ieranama/discomcp MCP server",
+   "url": "https://glama.ai/mcp/servers/ieranama/discomcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![imqueue/mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/imqueue/mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![inth3shadows/terse MCP server",
+   "url": "https://glama.ai/mcp/servers/inth3shadows/terse/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![irisxc4/memoryguard MCP server",
+   "url": "https://glama.ai/mcp/servers/irisxc4/memoryguard/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![jaimenbell/github-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/jaimenbell/github-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![jamjet-policy MCP server",
+   "url": "https://glama.ai/mcp/servers/jamjet-labs/jamjet-policy/badges/score.svg",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![jigyasudham/veto MCP server",
+   "url": "https://glama.ai/mcp/servers/jigyasudham/veto/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![kaiser-data/kitsune-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/kaiser-data/kitsune-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![kinance/circle-agent-stack-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/kinance/circle-agent-stack-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![kindrat86/agentmail MCP server",
+   "url": "https://glama.ai/mcp/servers/kindrat86/agentmail/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![krystiangw/agenticpay MCP server",
+   "url": "https://glama.ai/mcp/servers/krystiangw/agenticpay/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![kumarganduri/legwork MCP server",
+   "url": "https://glama.ai/mcp/servers/kumarganduri/legwork/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![liagha/termgram MCP server",
+   "url": "https://glama.ai/mcp/servers/liagha/termgram/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![librarian-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/Terobyte/librarian-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![lightningfaucet/lightning-wallet-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/lightningfaucet/lightning-wallet-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ljppanda/mcp-longjobs MCP server",
+   "url": "https://glama.ai/mcp/servers/ljppanda/mcp-longjobs/badges/score.svg",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mambalabsdev/mcp-funding-press-signal-scanner MCP server",
+   "url": "https://glama.ai/mcp/servers/mambalabsdev/mcp-funding-press-signal-scanner/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mambalabsdev/mcp-github-organization-signal-scanner MCP server",
+   "url": "https://glama.ai/mcp/servers/mambalabsdev/mcp-github-organization-signal-scanner/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mambalabsdev/mcp-gtm-tech-stack-signal-scraper MCP server",
+   "url": "https://glama.ai/mcp/servers/mambalabsdev/mcp-gtm-tech-stack-signal-scraper/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mambalabsdev/mcp-job-board-keyword-signal-scanner MCP server",
+   "url": "https://glama.ai/mcp/servers/mambalabsdev/mcp-job-board-keyword-signal-scanner/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![marras0914/agent-toolbelt MCP server",
+   "url": "https://glama.ai/mcp/servers/marras0914/agent-toolbelt/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcp-eu-ai-act MCP server",
+   "url": "https://glama.ai/mcp/servers/@ark-forge/mcp-eu-ai-act/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcp-gatehouse MCP server",
+   "url": "https://glama.ai/mcp/servers/nickgeorgeseo/mcp-gatehouse/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcp-server-boilerplate MCP server",
+   "url": "https://glama.ai/mcp/servers/@shellsage-ai/mcp-server-boilerplate/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcp-shield MCP server",
+   "url": "https://glama.ai/mcp/servers/muhannad-hash/mcp-shield/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcpqueen/mcpqueen MCP server",
+   "url": "https://glama.ai/mcp/servers/mcpqueen/mcpqueen/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mishan/shotbox MCP server",
+   "url": "https://glama.ai/mcp/servers/mishan/shotbox/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![modus-agendi/managed-agent-control-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/modus-agendi/managed-agent-control-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mvtandas/wp-cli-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/mvtandas/wp-cli-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![nhost/nhost MCP server",
+   "url": "https://glama.ai/mcp/servers/nhost/nhost/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![nworks MCP server",
+   "url": "https://glama.ai/mcp/servers/yjcho9317/nworks/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![oddunits/pntr-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/oddunits/pntr-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![passbaton MCP server",
+   "url": "https://glama.ai/mcp/servers/leesgit/passbaton/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![perp-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/hypurrquant/perp-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![petrovicistefan/mcp-security-guard MCP server",
+   "url": "https://glama.ai/mcp/servers/petrovicistefan/mcp-security-guard/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![planning-copilot MCP server",
+   "url": "https://glama.ai/mcp/servers/SPL-BGU/planning-copilot/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![promptspeak-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/chrbailey/promptspeak-mcp-server/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![purinzan/gx3-cli-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/purinzan/gx3-cli-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![qualienai/qualien-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/qualienai/qualien-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rememb MCP server",
+   "url": "https://glama.ai/mcp/servers/LuizEduPP/Rememb/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rob925/mcp-shield MCP server",
+   "url": "https://glama.ai/mcp/servers/rob925/mcp-shield/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rocketride-org/rocketride-server MCP server",
+   "url": "https://glama.ai/mcp/servers/rocketride-org/rocketride-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rugsnare MCP server",
+   "url": "https://glama.ai/mcp/servers/Paraphern/rugsnare/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![sachinbkale27/label-image-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/sachinbkale27/label-image-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![scrapercity-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/scrapercity/scrapercity-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![seldonframe/reelier MCP server",
+   "url": "https://glama.ai/mcp/servers/seldonframe/reelier/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![sentien-labs/verdictswarm-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/sentien-labs/verdictswarm-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![sipyourdrink-ltd/bernstein MCP server",
+   "url": "https://glama.ai/mcp/servers/chernistry/bernstein/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![smart-mcp-proxy/mcpproxy-go MCP server",
+   "url": "https://glama.ai/mcp/servers/smart-mcp-proxy/mcpproxy-go/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![sp3ak/safenode-mcp-gateway MCP server",
+   "url": "https://glama.ai/mcp/servers/sp3ak/safenode-mcp-gateway/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![squidcode/timebook-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/squidcode/timebook-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![sshahzaiib/agy-bridge MCP server",
+   "url": "https://glama.ai/mcp/servers/sshahzaiib/agy-bridge/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![suhui-organization/pod MCP server",
+   "url": "https://glama.ai/mcp/servers/suhui-organization/pod/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![supertrained/rhumb MCP server",
+   "url": "https://glama.ai/mcp/servers/supertrained/rhumb/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![symbionix-sl/airstrings-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/symbionix-sl/airstrings-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tadas-github/a2asearch-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/tadas-github/a2asearch-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![taniwhaai/arai MCP server",
+   "url": "https://glama.ai/mcp/servers/taniwhaai/arai/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![taskbounty-check MCP server",
+   "url": "https://glama.ai/mcp/servers/eliottreich/taskbounty-check/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tech-lead-bunny/agenteyes-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/tech-lead-bunny/agenteyes-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![thyn-ai/algenta-sdk MCP server",
+   "url": "https://glama.ai/mcp/servers/thyn-ai/algenta-sdk/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tomjwxf/scopeblind-gateway MCP server",
+   "url": "https://glama.ai/mcp/servers/tomjwxf/scopeblind-gateway/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tomyangod/architectureviewer MCP server",
+   "url": "https://glama.ai/mcp/servers/tomyangod/architecture_viewer/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![toprakahmetaydogmus/TZeroAlgorithm MCP server",
+   "url": "https://glama.ai/mcp/servers/toprakahmetaydogmus/TZeroAlgorithm/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![true-alter/cli MCP server",
+   "url": "https://glama.ai/mcp/servers/true-alter/cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tunahanaliozturk/derbent MCP server",
+   "url": "https://glama.ai/mcp/servers/tunahanaliozturk/derbent/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![vikasny30/aletheia-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/vikasny30/aletheia-mcp/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![vshulcz/deja-vu MCP server",
+   "url": "https://glama.ai/mcp/servers/vshulcz/deja-vu/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![webaesbyamin/agent-receipts MCP server",
+   "url": "https://glama.ai/mcp/servers/webaesbyamin/agent-receipts/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![whatsinmycloud/aws-audit-scanner MCP server",
+   "url": "https://glama.ai/mcp/servers/whatsinmycloud/aws-audit-scanner/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![whdrnr2583-cmd/token-meter MCP server",
+   "url": "https://glama.ai/mcp/servers/whdrnr2583-cmd/token-meter/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![willianpinho/mcp-gateway-scan MCP server",
+   "url": "https://glama.ai/mcp/servers/willianpinho/mcp-gateway-scan/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![xsf0221/pattern-vista-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/xsf0221/pattern-vista-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![yonro/memory-os-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/yonro/memory-os-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![yuelinghuashu/story-cli MCP server",
+   "url": "https://glama.ai/mcp/servers/yuelinghuashu/story-cli/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![zekebuilds-lab/captcha-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/zekebuilds-lab/captcha-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![zhangpanda/gomcp MCP server",
+   "url": "https://glama.ai/mcp/servers/zhangpanda/gomcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "0",
+   "url": "https://github.com/0sec-labs/0",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "82ch/MCP-Dandan",
+   "url": "https://github.com/82ch/MCP-Dandan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "API Relay Audit",
+   "url": "https://github.com/toby-bridges/api-relay-audit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWS Tool Arsenal",
+   "url": "https://github.com/toniblyx/my-arsenal-of-aws-security-tools",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWSBucketDump",
+   "url": "https://github.com/jordanpotti/AWSBucketDump",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Acacian/aegis",
+   "url": "https://github.com/Acacian/aegis",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ActionsTOCTOU (Time Of Check to Time Of Use)",
+   "url": "https://github.com/AdnaneKhan/ActionsTOCTOU/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Aether",
+   "url": "https://github.com/l33tdawg/aether",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Agentic Security",
+   "url": "https://github.com/msoedov/agentic_security",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Aguara",
+   "url": "https://github.com/garagon/aguara",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AiAgentKarl",
+   "url": "https://glama.ai/mcp/servers?query=author%3AAiAgentKarl",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "All the Small Things: Azure CLI Leakage and Problematic Usage Patterns",
+   "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/secrets-leakage-user-error-azure-cli/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Anamorpher",
+   "url": "https://github.com/trailofbits/anamorpher",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AntiVirus Evasion Tool (AVET)",
+   "url": "https://github.com/govolution/avet",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AttackGen",
+   "url": "https://github.com/mrwadams/attackgen",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Augustus",
+   "url": "https://github.com/praetorian-inc/augustus",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Automatic API Attack Tool",
+   "url": "https://github.com/imperva/automatic-api-attack-tool",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Autonomous Agents 67",
+   "url": "https://glama.ai/mcp/servers?attributes=category%3Aautonomous-agents",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Awesome",
+   "url": "https://awesome.re/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Awesome CLI Tools 2026",
+   "url": "https://github.com/spinov001-art/awesome-cli-tools-2026",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bastet",
+   "url": "https://github.com/OneSavieLabs/Bastet",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bella",
+   "url": "https://github.com/kdaoudieh/Bella",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BigBountyRecon",
+   "url": "https://github.com/Viralmaniar/BigBountyRecon",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BinGoo",
+   "url": "https://github.com/Hood3dRob1n/BinGoo",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BlackWidow",
+   "url": "https://github.com/1N3/BlackWidow",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Brakeman",
+   "url": "https://github.com/presidentbeef/brakeman",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BruteXSS",
+   "url": "https://github.com/rajeshmajumdar/BruteXSS",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Burp Scanner active + path-traversal audit",
+   "url": "https://portswigger.net/burp/documentation/scanner/auditing",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CATS",
+   "url": "https://github.com/Endava/cats",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CMSmap",
+   "url": "https://github.com/Dionach/CMSmap",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CORStest",
+   "url": "https://github.com/RUB-NDS/CORStest",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CRLF-Injection-Scanner",
+   "url": "https://github.com/MichaelStott/CRLF-Injection-Scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CRLFsuite",
+   "url": "https://github.com/Nefcore/CRLFsuite",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CSPBypass",
+   "url": "https://github.com/renniepak/CSPBypass",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CarbonCopy",
+   "url": "https://github.com/paranoidninja/CarbonCopy",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Catphish",
+   "url": "https://github.com/ring0lab/catphish",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Checkov",
+   "url": "https://github.com/bridgecrewio/checkov",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Claude Code",
+   "url": "https://github%E2%80%8B.com/anthropics/claude-code",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Claudit",
+   "url": "https://github.com/marchev/claudit",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ClawMoat - Open-source runtime security scanner for AI agents. Detects prompt injection, jailbreak, PII leakage, memory poisoning, and tool misuse",
+   "url": "https://github.com/darfaz/clawmoat",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Clearwing",
+   "url": "https://github.com/Lazarus-AI/clearwing",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cloud Container Attack Tool (CCAT)",
+   "url": "https://rhinosecuritylabs.com/aws/cloud-container-attack-tool/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CloudRip",
+   "url": "https://github.com/staxsum/CloudRip",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CloudScraper",
+   "url": "https://github.com/jordanpotti/CloudScraper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CodeQL SARIF output",
+   "url": "https://codeql.github.com/docs/codeql-cli/using-the-advanced-functionality-of-the-codeql-cli/sarif-output/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Codex Security",
+   "url": "https://github.com/openai/codex-security",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Conditional Access gap analysis",
+   "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/what-if-tool",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CorsMe",
+   "url": "https://github.com/Shivangx01b/CorsMe",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Corser",
+   "url": "https://github.com/cyinnove/corser",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CryptoLyzer",
+   "url": "https://gitlab.com/coroner/cryptolyzer",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cybermes",
+   "url": "https://github.com/Zyrexnn/Cybermes",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CydVilla/peckish",
+   "url": "https://github.com/CydVilla/peckish",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Decepticon",
+   "url": "https://github.com/BitterSecurity/Decepticon",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DockSec",
+   "url": "https://github.com/OWASP/DockSec",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DomainPasswordSpray",
+   "url": "https://github.com/dafthack/DomainPasswordSpray",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DotDotPwn",
+   "url": "https://dotdotpwn.blogspot.com/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Dradis",
+   "url": "https://dradis.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Drop-to-run/drop2run-cli",
+   "url": "https://github.com/Drop-to-run/drop2run-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Eagle",
+   "url": "https://github.com/BitTheByte/Eagle",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Endgame",
+   "url": "https://endgame.readthedocs.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "EvoMaster",
+   "url": "https://github.com/WebFuzzing/EvoMaster",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FDsploit",
+   "url": "https://github.com/chrispetrou/FDsploit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FOCA",
+   "url": "https://github.com/ElevenPaths/FOCA",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Facebook Friend List Scraper",
+   "url": "https://github.com/narkopolo/fb_friend_list_scraper",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Fibratus",
+   "url": "https://github.com/rabbitstack/fibratus",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Forbidden Buster",
+   "url": "https://github.com/Sn1r/Forbidden-Buster",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ForeverTools/kiprio-mcp",
+   "url": "https://github.com/ForeverTools/kiprio-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FoxyProxy Browser Extension",
+   "url": "https://github.com/foxyproxy/browser-extension",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FuzzyAI",
+   "url": "https://github.com/cyberark/FuzzyAI",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GPTScan",
+   "url": "https://github.com/GPTScan/GPTScan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitFive",
+   "url": "https://github.com/mxrch/gitfive",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitGot",
+   "url": "https://github.com/BishopFox/GitGot",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHound",
+   "url": "https://github.com/tillson/git-hound",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub CLI",
+   "url": "https://cli.github.com/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHunter",
+   "url": "https://github.com/digininja/GitHunter",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitLab Secrets",
+   "url": "https://github.com/RichardoC/gitlab-secrets",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitPhish",
+   "url": "https://github.com/praetorian-inc/GitPhish",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GooDork",
+   "url": "https://github.com/k3170makan/GooDork",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Grype",
+   "url": "https://github.com/anchore/grype",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GyoiThon",
+   "url": "https://github.com/gyoisamurai/GyoiThon",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HOL Guard",
+   "url": "https://github.com/hashgraph-online/hol-guard",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HTTP Detection Agent",
+   "url": "https://github.com/ai-blueteam/http-detection-agent",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HackVertor Online tool",
+   "url": "https://hackvertor.co.uk/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacker-Scoper",
+   "url": "https://github.com/ItsIgnacioPortal/Hacker-Scoper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hashlock AI Audit",
+   "url": "https://aiaudit.hashlock.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Have I Been Squatted",
+   "url": "https://haveibeensquatted.com",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hidden GitHub Commits and How to Reveal Them",
+   "url": "https://neodyme.io/en/blog/github_secrets/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hound",
+   "url": "https://github.com/scabench-org/hound",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hwacha",
+   "url": "https://github.com/n00py/Hwacha",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IKEForce",
+   "url": "https://github.com/SpiderLabs/ikeforce",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IPObfuscator",
+   "url": "https://github.com/OsandaMalith/IPObfuscator",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IdentYwaf",
+   "url": "https://github.com/stamparm/identywaf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Injectus",
+   "url": "https://github.com/BountyStrike/Injectus",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Intrigue",
+   "url": "http://intrigue.io",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Inveigh",
+   "url": "https://github.com/Kevin-Robertson/Inveigh",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JCS",
+   "url": "https://github.com/TheM4hd1/JCS",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JS-Scan",
+   "url": "https://github.com/zseano/JS-Scan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Jenkins Attack Framework",
+   "url": "https://github.com/Accenture/jenkins-attack-framework",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Julius",
+   "url": "https://github.com/praetorian-inc/julius",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LLM SAST Skills",
+   "url": "https://github.com/utkusen/sast-skills",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LLM-Security-CTF",
+   "url": "https://github.com/TrustAI-laboratory/LLM-Security-CTF",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Lambda-Proxy",
+   "url": "https://github.com/puresec/lambda-proxy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Leaker",
+   "url": "https://github.com/vflame6/leaker",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "License: CC BY 4.0",
+   "url": "https://info.arxiv.org/help/license/index.html",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Low Orbit Ion Canon (LOIC)",
+   "url": "https://github.com/NewEraCracker/LOIC",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Lynis",
+   "url": "https://cisofy.com/lynis/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MCP Scanner",
+   "url": "https://github.com/cisco-ai-defense/mcp-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MEDUSA",
+   "url": "https://github.com/Pantheon-Security/medusa",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MailSniper",
+   "url": "https://github.com/dafthack/MailSniper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mantra",
+   "url": "https://github.com/MrEmpy/mantra",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Memcrashed",
+   "url": "https://github.com/649/Memcrashed-DDoS-Exploit",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Metadata Anonymization Toolkit (MAT)",
+   "url": "https://0xacab.org/jvoisin/mat2",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Metlo",
+   "url": "https://github.com/metlo-labs/metlo",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MladenSU/cli-mcp-server",
+   "url": "https://github.com/MladenSU/cli-mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Morpheus",
+   "url": "https://github.com/r00t-3xp10it/morpheus",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mr.SIP",
+   "url": "https://github.com/meliht/Mr.SIP",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MurMurHash",
+   "url": "https://github.com/Viralmaniar/MurMurHash",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NSBrute",
+   "url": "https://github.com/shivsahni/NSBrute",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NazarKalytiuk/tarn",
+   "url": "https://github.com/NazarKalytiuk/tarn",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Ncrack",
+   "url": "https://nmap.org/ncrack/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Netsparker Application Security Scanner",
+   "url": "https://www.netsparker.com/pricing/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NetworkMiner",
+   "url": "http://www.netresec.com/?page=NetworkMiner",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NeuroSploit",
+   "url": "https://github.com/JoasASantos/NeuroSploit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NimScan",
+   "url": "https://github.com/elddy/NimScan/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Nord Stream",
+   "url": "https://github.com/synacktiv/nord-stream",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OFFAT",
+   "url": "https://github.com/OWASP/OFFAT",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OPFOR",
+   "url": "https://github.com/KeyValueSoftwareSystems/agent-opfor",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OSINTGPT",
+   "url": "https://github.com/estebanpdl/osintgpt",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP PTK",
+   "url": "https://github.com/DenisPodgurskii/pentestkit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Official 63",
+   "url": "https://glama.ai/mcp/servers?attributes=author%3Aofficial",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OnionScan",
+   "url": "https://onionscan.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpalOPC",
+   "url": "https://opalopc.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenAI Codex",
+   "url": "https://github%E2%80%8B.com/openai/codex",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenHack",
+   "url": "https://github.com/openhackai/OpenHack",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenOSINT",
+   "url": "https://github.com/OpenOSINT/OpenOSINT",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenRedireX",
+   "url": "https://github.com/devanshbatham/OpenRedireX",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenVAS",
+   "url": "https://github.com/greenbone/openvas-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ParamPamPam",
+   "url": "https://github.com/Bo0oM/ParamPamPam",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Paraphern/rugsnare",
+   "url": "https://github.com/Paraphern/rugsnare",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pentest Tools - Network Vulnerability Scanner",
+   "url": "https://pentest-tools.com/network-vulnerability-scanning/network-security-scanner-online",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pentest Tools - Website Vulnerability Scanner",
+   "url": "https://pentest-tools.com/website-vulnerability-scanning/website-scanner",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pentest-AI",
+   "url": "https://github.com/0xSteph/pentest-ai",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PentestGPT: An LLM-empowered Automatic Penetration Testing Tool",
+   "url": "https://arxiv.org/abs/2308.06782",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PortSwigger \"Example path check\"",
+   "url": "https://portswigger.net/burp/documentation/scanner/bchecks/worked-examples/path",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PostMessageFuzzTool",
+   "url": "https://github.com/kiranreddyrebel/PostMessage_Fuzz_Tool",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Printer Exploitation Toolkit (PRET)",
+   "url": "https://github.com/RUB-NDS/PRET",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Private key usage verification",
+   "url": "https://github.com/trufflesecurity/driftwood",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Progpilot",
+   "url": "https://github.com/designsecurity/progpilot",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Project Muteki",
+   "url": "https://github.com/FishCodeTech/muteki",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pupy",
+   "url": "https://github.com/n1nj4sec/pupy",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PyRIT",
+   "url": "https://github.com/microsoft/PyRIT",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "REA",
+   "url": "https://github.com/morluto/rea",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rai220/think-mcp",
+   "url": "https://github.com/Rai220/think-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ReelPhish",
+   "url": "https://github.com/fireeye/ReelPhish",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Repository",
+   "url": "https://github.com/EdenYavin/Garak-MCP",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Repository",
+   "url": "https://github.com/serkanyasr/mcp-agent-tool-adapter",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "S3Cruze",
+   "url": "https://github.com/JR0ch17/S3Cruze",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SIP Proxy",
+   "url": "https://sourceforge.net/projects/sipproxy/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SIPp",
+   "url": "http://sipp.sourceforge.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SPL-BGU/PlanningCopilot",
+   "url": "https://github.com/SPL-BGU/PlanningCopilot",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "STRIDE GPT",
+   "url": "https://github.com/mrwadams/stride-gpt",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Scapy",
+   "url": "https://github.com/secdev/awesome-scapy",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SecuriTool",
+   "url": "https://securitool.js.org/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Shellter",
+   "url": "https://www.shellterproject.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SkillSpector",
+   "url": "https://github.com/NVIDIA/SkillSpector",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SlowLoris",
+   "url": "https://github.com/gkbrk/slowloris",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Smart Install Exploitation Tool (SIET)",
+   "url": "https://github.com/Sab0tag3d/SIET",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Social Mapper",
+   "url": "https://github.com/Greenwolf/social_mapper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SolidityGuard",
+   "url": "https://github.com/alt-research/SolidityGuard",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SonAIengine/graph-tool-call",
+   "url": "https://github.com/SonAIengine/graph-tool-call",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sourcegraph",
+   "url": "https://sourcegraph.com/search",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Spiderfoot",
+   "url": "http://www.spiderfoot.net/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "StegCracker",
+   "url": "https://github.com/Paradoxis/StegCracker",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "StringSifter - A machine learning tool that ranks strings based on their relevance for malware analysis",
+   "url": "https://github.com/fireeye/stringsifter",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SubFinder",
+   "url": "https://github.com/subfinder/subfinder",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SubOver",
+   "url": "https://github.com/Ice3man543/SubOver",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sudomy",
+   "url": "https://github.com/Screetsec/Sudomy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Swagger-EZ",
+   "url": "https://github.com/RhinoSecurityLabs/Swagger-EZ",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Synvoya/codeinspectus",
+   "url": "https://github.com/Synvoya/codeinspectus",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "T50",
+   "url": "https://gitlab.com/fredericopissarra/t50/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TRRespass",
+   "url": "https://github.com/vusec/trrespass",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Taranis AI",
+   "url": "https://github.com/taranis-ai/taranis-ai",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Terobyte/librarian-cli",
+   "url": "https://github.com/Terobyte/librarian-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TheStack-ai/waypath",
+   "url": "https://github.com/TheStack-ai/waypath",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TnT-Fuzzer",
+   "url": "https://github.com/Teebytes/TnT-Fuzzer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TollboothLabs/ai-tool-optimizer",
+   "url": "https://github.com/TollboothLabs/ai-tool-optimizer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Tool Definition Quality Score (TDQS)",
+   "url": "https://github.com/glama-ai/tool-definition-quality-score",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TrevorC2",
+   "url": "https://github.com/trustedsec/trevorc2",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Trivy",
+   "url": "https://github.com/aquasecurity/trivy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Trust Scan",
+   "url": "https://github.com/undeadlist/trust-scan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Tsunami",
+   "url": "https://github.com/google/tsunami-security-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Turbolist3r",
+   "url": "https://github.com/fleetcaptain/Turbolist3r",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "URLFinder",
+   "url": "https://github.com/projectdiscovery/urlfinder",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "UladzKha/samuraizer-cli",
+   "url": "https://github.com/UladzKha/samuraizer-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "UpClaw",
+   "url": "https://github.com/okdkebm/UpClaw",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Veles",
+   "url": "https://codisec.com/veles/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ViperJuice/mcp-gateway",
+   "url": "https://github.com/ViperJuice/mcp-gateway",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "VoIP Hopper",
+   "url": "https://github.com/iknowjason/voiphopper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vuls",
+   "url": "https://github.com/future-architect/vuls",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAF Bypass Tool",
+   "url": "https://github.com/nemesida-waf/waf-bypass",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAF Testing Framework",
+   "url": "https://www.imperva.com/lg/lgw_trial.asp?pid=483",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFNinja",
+   "url": "https://github.com/khalilbijjou/wafninja",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFTester",
+   "url": "https://github.com/Raz0r/waftester",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WPScan",
+   "url": "https://wpscan.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WPSpider",
+   "url": "https://github.com/cyc10n3/WPSpider",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Wapiti",
+   "url": "http://wapiti.sourceforge.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web Cache Deception Scanner",
+   "url": "https://portswigger.net/bappstore/7c1ca94a61474d9e897d307c858d52f0",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web Cache Deception Scanner source",
+   "url": "https://github.com/PortSwigger/web-cache-deception-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web-Cache-Vulnerability-Scanner>",
+   "url": "https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WebReaver",
+   "url": "https://www.webreaver.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Wifite",
+   "url": "https://github.com/derv82/wifite2",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Wifite",
+   "url": "https://github.com/derv82/wifite",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WitnessMe",
+   "url": "https://github.com/byt3bl33d3r/WitnessMe",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WuppieFuzz",
+   "url": "https://github.com/TNO-S3/WuppieFuzz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XFFenum",
+   "url": "https://github.com/vavkamil/XFFenum",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS-Radar",
+   "url": "https://github.com/bugbountyforum/XSS-Radar",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSSCon",
+   "url": "https://github.com/menkrep1337/XSSCon",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSSwagger",
+   "url": "https://github.com/vavkamil/XSSwagger",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSpear",
+   "url": "https://github.com/hahwul/XSpear",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Yang1Bai/claw-tsaver",
+   "url": "https://github.com/Yang1Bai/claw-tsaver",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Yomiracle/trinity-lite",
+   "url": "https://github.com/Yomiracle/trinity-lite",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ZAP",
+   "url": "https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Zarp",
+   "url": "https://github.com/hatRiot/zarp",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Zen-AI-Pentest",
+   "url": "https://github.com/SHAdd0WTAka/Zen-Ai-Pentest",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ZeroLeaks",
+   "url": "https://github.com/ZeroLeaks/zeroleaks",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ZeroSkills",
+   "url": "https://github.com/zerocoolailabs/ZeroSkills",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "a-25/ios-mcp-code-quality-server",
+   "url": "https://github.com/a-25/ios-mcp-code-quality-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aashari/mcp-server-aws-sso",
+   "url": "https://github.com/aashari/mcp-server-aws-sso",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "abuse-ssl-bypass-waf",
+   "url": "https://github.com/LandGrey/abuse-ssl-bypass-waf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aemscan",
+   "url": "https://github.com/Raz0r/aemscan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "agent-scan",
+   "url": "https://github.com/snyk/agent-scan",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "agentgg",
+   "url": "https://github.com/agentgg-dev/agentgg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "agentic-mcp-tools/owlex",
+   "url": "https://github.com/agentic-mcp-tools/owlex",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aggrete/aggrete",
+   "url": "https://github.com/aggrete/aggrete",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aimusicvideogen-com/music-video-cli",
+   "url": "https://github.com/aimusicvideogen-com/music-video-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "alejooroncoy/campus-cli",
+   "url": "https://github.com/alejooroncoy/campus-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "alexar76/warden",
+   "url": "https://github.com/alexar76/warden",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "alexey-pelykh/lhremote",
+   "url": "https://github.com/alexey-pelykh/lhremote",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "amidabuddha/jev-decision-mcp",
+   "url": "https://github.com/amidabuddha/jev-decision-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "andor",
+   "url": "https://github.com/sadicann/andor",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "andypgray/resharper-cli-mcp",
+   "url": "https://github.com/andypgray/resharper-cli-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "anew",
+   "url": "https://github.com/tomnomnom/anew",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "anwerj/youtube-uploader-mcp",
+   "url": "https://github.com/anwerj/youtube-uploader-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "anythink-cloud/anythink-cli",
+   "url": "https://github.com/anythink-cloud/anythink-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aparajithn/agent-utils-mcp",
+   "url": "https://github.com/aparajithn/agent-utils-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "api7/aisix",
+   "url": "https://github.com/api7/aisix",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "apifyforge",
+   "url": "https://github.com/apifyforge",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "arachni",
+   "url": "https://github.com/Arachni/arachni",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ark-forge/mcp-eu-ai-act",
+   "url": "https://github.com/ark-forge/mcp-eu-ai-act",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "asnmap",
+   "url": "https://github.com/projectdiscovery/asnmap",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "auroracapital/upres-cli",
+   "url": "https://github.com/auroracapital/upres-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "autoSubTakeover",
+   "url": "https://github.com/JordyZomer/autoSubTakeover",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aybelatchane/mcp-server-terminal",
+   "url": "https://github.com/aybelatchane/mcp-server-terminal",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aymericzip/intlayer",
+   "url": "https://github.com/aymericzip/intlayer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "backslash-powered-scanner",
+   "url": "https://github.com/PortSwigger/backslash-powered-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "baobabcat/demandscope",
+   "url": "https://github.com/baobabcat/demandscope",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bbot",
+   "url": "https://github.com/blacklanternsecurity/bbot",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bbscope",
+   "url": "https://github.com/sw33tLie/bbscope",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "behrensd/mcp-firewall",
+   "url": "https://github.com/behrensd/mcp-firewall",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "binwalk",
+   "url": "https://github.com/devttys0/binwalk",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bypass-firewalls-by-DNS-history",
+   "url": "https://github.com/vincentcox/bypass-firewalls-by-DNS-history",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "c2pa-rs",
+   "url": "https://github.com/contentauth/c2pa-rs",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "can4hou6joeng4/boss-agent-cli",
+   "url": "https://github.com/can4hou6joeng4/boss-agent-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cdncheck",
+   "url": "https://github.com/projectdiscovery/cdncheck",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "celerystalk",
+   "url": "https://github.com/sethsec/celerystalk",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cerebrixos-org/tuning-engines-cli",
+   "url": "https://github.com/cerebrixos-org/tuning-engines-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "certgrep",
+   "url": "https://certgrep.sh",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "changeme",
+   "url": "https://github.com/ztgrace/changeme",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "chrassy/klanex-mcp",
+   "url": "https://github.com/chrassy/klanex-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "chrishayuk/mcp-cli",
+   "url": "https://github.com/chrishayuk/mcp-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "clipugc/ClipUGC-CLI",
+   "url": "https://github.com/clipugc/ClipUGC-CLI",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cors-scanner",
+   "url": "https://github.com/laconicwolf/cors-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "creepy",
+   "url": "https://github.com/ilektrojohn/creepy",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "crlfuzz",
+   "url": "https://github.com/dwisiswant0/crlfuzz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cseguinlz/doubletick-cli",
+   "url": "https://github.com/cseguinlz/doubletick-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "csp evaluator",
+   "url": "https://csper.io/evaluator",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cstamigo-droid/signal-scanner",
+   "url": "https://github.com/cstamigo-droid/signal-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cvemap",
+   "url": "https://github.com/projectdiscovery/cvemap",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cyntrisec/cyntrisec-cli",
+   "url": "https://github.com/cyntrisec/cyntrisec-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dbt (data build tool)",
+   "url": "https://www.getdbt.com/product/what-is-dbt",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dbt-labs/dbt-mcp",
+   "url": "https://github.com/dbt-labs/dbt-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "deepsec",
+   "url": "https://github.com/vercel-labs/deepsec",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dirbuster-ng",
+   "url": "https://github.com/digination/dirbuster-ng",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dnscan",
+   "url": "https://github.com/rbsec/dnscan",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dnscat2",
+   "url": "https://github.com/iagox86/dnscat2",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dnsgen",
+   "url": "https://github.com/AlephNullSK/dnsgen",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "domained",
+   "url": "https://github.com/TypeError/domained",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "domato",
+   "url": "https://github.com/google/domato",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "domdig",
+   "url": "https://github.com/fcavallarin/domdig",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "domxssscanner",
+   "url": "https://github.com/yaph/domxssscanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "doobidoo/MCP-Context-Provider",
+   "url": "https://github.com/doobidoo/MCP-Context-Provider",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dork-cli",
+   "url": "https://github.com/jgor/dork-cli",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dorkbot",
+   "url": "https://github.com/utiso/dorkbot",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dorks",
+   "url": "https://github.com/USSCltd/dorks",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dos-over-tor",
+   "url": "https://github.com/skizap/dos-over-tor",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dredd",
+   "url": "https://github.com/apiaryio/dredd",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dshakes/distil",
+   "url": "https://github.com/dshakes/distil",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eamwhite1/xrpl-referee",
+   "url": "https://github.com/eamwhite1/xrpl-referee",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "earlybird",
+   "url": "https://github.com/americanexpress/earlybird",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eat-pray-ai/yutu",
+   "url": "https://github.com/eat-pray-ai/yutu",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "edithatogo/fyi-cli",
+   "url": "https://github.com/edithatogo/fyi-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eirikb/any-cli-mcp-server",
+   "url": "https://github.com/eirikb/any-cli-mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eltociear/skill-audit-mcp",
+   "url": "https://github.com/eltociear/skill-audit-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "endorhq/cli",
+   "url": "https://github.com/endorhq/cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "epistemedeus/skillguard",
+   "url": "https://github.com/epistemedeus/skillguard",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "extended-ssrf-search",
+   "url": "https://github.com/Damian89/extended-ssrf-search",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "extended-xss-search",
+   "url": "https://github.com/Damian89/extended-xss-search",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eyaltoledano/claude-task-master",
+   "url": "https://github.com/eyaltoledano/claude-task-master",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ezpzfile/ezpzfile-mcp",
+   "url": "https://github.com/ezpzfile/ezpzfile-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "farukkolip/instapdown-mcp",
+   "url": "https://github.com/farukkolip/instapdown-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ffroliva/gflow-cli",
+   "url": "https://github.com/ffroliva/gflow-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "fierce",
+   "url": "https://github.com/mschwager/fierce",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "filebuster",
+   "url": "https://github.com/henshin/filebuster",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "findom-xss",
+   "url": "https://github.com/dwisiswant0/findom-xss",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "fingerprintx",
+   "url": "https://github.com/praetorian-inc/fingerprintx",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "flan",
+   "url": "https://github.com/cloudflare/flan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "flux159/mcp-chat",
+   "url": "https://github.com/flux159/mcp-chat",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "forgemeshlabs/utility-grid-mcp",
+   "url": "https://github.com/forgemeshlabs/utility-grid-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "fuzzilli",
+   "url": "https://github.com/googleprojectzero/fuzzilli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gOSINT",
+   "url": "https://github.com/Nhoya/gOSINT",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ganakailabs/cloudeval-cli",
+   "url": "https://github.com/ganakailabs/cloudeval-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gautam-u/sieve-mcp",
+   "url": "https://github.com/gautam-u/sieve-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "get-convex/convex-backend",
+   "url": "https://stack.convex.dev/convex-mcp-server",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "getJS",
+   "url": "https://github.com/003random/getJS",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "getsploit",
+   "url": "https://github.com/vulnersCom/getsploit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "git-all-secrets",
+   "url": "https://github.com/anshumanbh/git-all-secrets",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "github-dorks",
+   "url": "https://github.com/techgaun/github-dorks",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "github-endpoints",
+   "url": "https://github.com/gwen001/github-endpoints",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "github-subdomains",
+   "url": "https://github.com/gwen001/github-subdomains",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gitkraken/gk-cli",
+   "url": "https://github.com/gitkraken/gk-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gitlab-subdomains",
+   "url": "https://github.com/gwen001/gitlab-subdomains",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "glama",
+   "url": "https://glama.ai/mcp/servers/joergmichno/clawguard-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "goaltdns",
+   "url": "https://github.com/subfinder/goaltdns",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "goklab/guardvibe",
+   "url": "https://github.com/goklab/guardvibe",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gomission/mcp",
+   "url": "https://github.com/gomission/mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "googlarz/signal-mcp",
+   "url": "https://github.com/googlarz/signal-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gotator",
+   "url": "https://github.com/Josue87/gotator",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gowitness",
+   "url": "https://github.com/sensepost/gowitness",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "graphql-path-enum",
+   "url": "https://gitlab.com/dee-see/graphql-path-enum",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hakoriginfinder",
+   "url": "https://github.com/hakluke/hakoriginfinder",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hakrevdns",
+   "url": "https://github.com/hakluke/hakrevdns",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hanselhansel/aeo-cli",
+   "url": "https://github.com/hanselhansel/aeo-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hatecrack",
+   "url": "https://github.com/trustedsec/hate_crack",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hernaninverso/eleion-scanner-mcp",
+   "url": "https://github.com/hernaninverso/eleion-scanner-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hping3",
+   "url": "https://github.com/antirez/hping",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "http-request-smuggling",
+   "url": "https://github.com/anshumanpattnaik/http-request-smuggling",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "httprebind",
+   "url": "https://github.com/daeken/httprebind",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "httpscreenshot",
+   "url": "https://github.com/breenmachine/httpscreenshot/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hypurrquant/perp-cli",
+   "url": "https://github.com/hypurrquant/perp-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "infernal-twin",
+   "url": "https://github.com/entropy1337/infernal-twin",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "isaac-levine/forage",
+   "url": "https://github.com/isaac-levine/forage",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jiraffe",
+   "url": "https://github.com/0x48piraj/jiraffe",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "joergmichno/clawguard-mcp",
+   "url": "https://github.com/joergmichno/clawguard-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "joomscan",
+   "url": "https://www.owasp.org/index.php/Category:OWASP_Joomla_Vulnerability_Scanner_Project",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "joomscan",
+   "url": "https://github.com/OWASP/joomscan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jsfinder",
+   "url": "https://github.com/kacakb/jsfinder",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jsleak",
+   "url": "https://github.com/byt3hx/jsleak",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jsluice",
+   "url": "https://github.com/BishopFox/jsluice",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jsmon",
+   "url": "https://github.com/robre/jsmon",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jwt-auditor",
+   "url": "https://github.com/mohelobeid/jwt-auditor",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jwtear",
+   "url": "https://github.com/KINGSABRI/jwtear",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "kicks3",
+   "url": "https://github.com/abuvanth/kicks3",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "knewstimek/agent-tool",
+   "url": "https://github.com/knewstimek/agent-tool",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "knock",
+   "url": "https://github.com/guelfoweb/knock",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "kube-hunter",
+   "url": "https://kube-hunter.aquasec.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "kumarganduri/legwork",
+   "url": "https://github.com/kumarganduri/legwork",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "liagha/termgram",
+   "url": "https://github.com/liagha/termgram",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "libinjection-fuzzer",
+   "url": "https://github.com/migolovanov/libinjection-fuzzer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "liffy",
+   "url": "https://github.com/hvqzao/liffy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "liffy",
+   "url": "https://github.com/mzfr/liffy",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "malzilla",
+   "url": "http://malzilla.sourceforge.net/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mambalabsdev/mcp-funding-press-signal-scanner",
+   "url": "https://github.com/mambalabsdev/mcp-funding-press-signal-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mambalabsdev/mcp-github-organization-signal-scanner",
+   "url": "https://github.com/mambalabsdev/mcp-github-organization-signal-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mambalabsdev/mcp-job-board-keyword-signal-scanner",
+   "url": "https://github.com/mambalabsdev/mcp-job-board-keyword-signal-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mapcidr",
+   "url": "https://github.com/projectdiscovery/mapcidr",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mark3labs/mcphost",
+   "url": "https://github.com/mark3labs/mcphost",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "marras0914/agent-toolbelt",
+   "url": "https://github.com/marras0914/agent-toolbelt",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mcp-rs-template",
+   "url": "https://github.com/linux-china/mcp-rs-template",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "merterbak/Grok-MCP",
+   "url": "https://github.com/merterbak/Grok-MCP",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mimikatz",
+   "url": "http://blog.gentilkiwi.com/mimikatz",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "minhyeoky/mcp-server-ledger",
+   "url": "https://github.com/minhyeoky/mcp-server-ledger",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "msaad00/agent-bom",
+   "url": "https://github.com/msaad00/agent-bom",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "muhannad-hash/mcp-shield",
+   "url": "https://github.com/muhannad-hash/mcp-shield",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mvtandas/wp-cli-mcp",
+   "url": "https://github.com/mvtandas/wp-cli-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "netdiscover",
+   "url": "https://github.com/netdiscover-scanner/netdiscover",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nhost/nhost",
+   "url": "https://github.com/nhost/nhost/tree/main/cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nicholasbester/clickup-cli",
+   "url": "https://github.com/nicholasbester/clickup-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nomore403",
+   "url": "https://github.com/devploit/nomore403",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nonatofabio/local-faiss-mcp",
+   "url": "https://github.com/nonatofabio/local_faiss_mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nosqli",
+   "url": "https://github.com/Charlie-belmer/nosqli",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nrich",
+   "url": "https://gitlab.com/shodan-public/nrich",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nudge4j",
+   "url": "https://github.com/lorenzoongithub/nudge4j",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "oddunits/pntr-cli",
+   "url": "https://github.com/oddunits/pntr-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "oxmlxxe",
+   "url": "https://github.com/BuffaloWill/oxml_xxe",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "parameth",
+   "url": "https://github.com/maK-/parameth",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "parry-guard",
+   "url": "https://github.com/vaporif/parry-guard",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "passivedns-client",
+   "url": "https://github.com/chrislee35/passivedns-client",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "peCloakCapstone",
+   "url": "https://github.com/v-p-b/peCloakCapstone",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "peepdf",
+   "url": "https://eternal-todo.com/tools/peepdf-pdf-analysis-tool",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "planetscale/mcp",
+   "url": "https://github.com/planetscale/cli?tab=readme-ov-file#mcp-server-integration",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pmptwiki/pmpt-cli",
+   "url": "https://github.com/pmptwiki/pmpt-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "portel-dev/ncp",
+   "url": "https://github.com/portel-dev/ncp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "promptexecution/just-mcp",
+   "url": "https://github.com/promptexecution/just-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "prowler",
+   "url": "https://github.com/Alfresco/prowler",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "purinzan/gx3-cli-mcp",
+   "url": "https://github.com/purinzan/gx3-cli-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pushtodisplay/cli",
+   "url": "https://github.com/pushtodisplay/cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pyfiscan",
+   "url": "https://github.com/fgeek/pyfiscan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "rVMI",
+   "url": "https://github.com/fireeye/rVMI",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "raven",
+   "url": "https://github.com/0x09AL/raven",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "razzer",
+   "url": "https://github.com/compsec-snu/razzer",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "redsnarf",
+   "url": "https://github.com/nccgroup/redsnarf",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "related-domains",
+   "url": "https://github.com/gwen001/related-domains",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "rob925/mcp-shield",
+   "url": "https://github.com/rob925/mcp-shield",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "rtpnatscan",
+   "url": "https://github.com/kapejod/rtpnatscan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "s3cario",
+   "url": "https://github.com/0xspade/s3cario",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "s7scan",
+   "url": "https://github.com/klsecservices/s7scan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "sandmap",
+   "url": "https://github.com/trimstray/sandmap",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "scanless",
+   "url": "https://github.com/vesche/scanless",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "scilla",
+   "url": "https://github.com/edoardottt/scilla",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "scrapercity/scrapercity-cli",
+   "url": "https://github.com/scrapercity/scrapercity-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "scrying",
+   "url": "https://github.com/nccgroup/scrying",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "second-order",
+   "url": "https://github.com/mhmdiaa/second-order",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "seldonframe/reelier",
+   "url": "https://github.com/seldonframe/reelier",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "sentrySSRF",
+   "url": "https://github.com/xawdxawdx/sentrySSRF",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "shapeshifter",
+   "url": "https://github.com/szski/shapeshifter",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "shosubgo",
+   "url": "https://github.com/incogbyte/shosubgo",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "silenttrinity",
+   "url": "https://github.com/byt3bl33d3r/SILENTTRINITY",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "sim-xia/skill-cortex-server",
+   "url": "https://github.com/Sim-xia/skill-cortex-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "skipfish",
+   "url": "https://www.kali.org/tools/skipfish/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "smbmap",
+   "url": "https://github.com/ShawnDEvans/smbmap",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "snallygaster",
+   "url": "https://github.com/hannob/snallygaster",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "sqliv",
+   "url": "https://github.com/the-robot/sqliv",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "squidcode/timebook-cli",
+   "url": "https://github.com/squidcode/timebook-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "stunner",
+   "url": "https://github.com/firefart/stunner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "subDomainsBrute",
+   "url": "https://github.com/lijiejie/subDomainsBrute",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "supertrained/rhumb",
+   "url": "https://github.com/supertrained/rhumb",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "sylkie",
+   "url": "https://dlrobertson.github.io/sylkie/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "symbionix-sl/airstrings-cli",
+   "url": "https://github.com/symbionix-sl/airstrings-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "takeover",
+   "url": "https://github.com/mzfr/takeover",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "testssl.sh",
+   "url": "https://github.com/drwetter/testssl.sh",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tgcd",
+   "url": "http://tgcd.sourceforge.net/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "thinkchainai/mcpbundles",
+   "url": "https://github.com/thinkchainai/mcpbundles",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tinfoleak",
+   "url": "https://github.com/vaguileradiaz/tinfoleak",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tko-subs",
+   "url": "https://github.com/anshumanbh/tko-subs",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tlsmate",
+   "url": "https://gitlab.com/guballa/tlsmate",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "toxicache",
+   "url": "https://github.com/xhzeem/toxicache",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tracy",
+   "url": "https://github.com/nccgroup/tracy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "true-alter/cli",
+   "url": "https://github.com/true-alter/cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tugarecon",
+   "url": "https://github.com/LordNeoStark/tugarecon",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "turnproxy",
+   "url": "https://github.com/trichimtrich/turnproxy/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "twilio-security-scanner",
+   "url": "https://github.com/relayhawk/twilio-security-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "urlgrab",
+   "url": "https://github.com/IAmStoxe/urlgrab",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "vaf",
+   "url": "https://github.com/d4rckh/vaf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "vaf",
+   "url": "https://github.com/andreiverse/vaf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "vcsmap",
+   "url": "https://github.com/melvinsh/vcsmap",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "vinkius-labs/mcp-fusion",
+   "url": "https://github.com/vinkius-labs/mcp-fusion",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wazionapps/mcp-server",
+   "url": "https://github.com/wazionapps/mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "whatsinmycloud/aws-audit-scanner",
+   "url": "https://github.com/whatsinmycloud/aws-audit-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wong2/mcp-cli",
+   "url": "https://github.com/wong2/mcp-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "x51xxx/codex-mcp-tool",
+   "url": "https://github.com/x51xxx/codex-mcp-tool",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "x51xxx/copilot-mcp-server",
+   "url": "https://github.com/x51xxx/copilot-mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xnLinkFinder",
+   "url": "https://github.com/xnl-h4ck3r/xnLinkFinder",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xortool",
+   "url": "https://github.com/hellman/xortool",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xsf0221/pattern-vista-cli",
+   "url": "https://github.com/xsf0221/pattern-vista-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xsshunterclient",
+   "url": "https://github.com/mandatoryprogrammer/xsshunter_client",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xxexploiter",
+   "url": "https://github.com/luisfontes19/xxexploiter",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "yar",
+   "url": "https://github.com/nielsing/yar",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "yonro/memory-os-cli",
+   "url": "https://github.com/yonro/memory-os-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "yuelinghuashu/story-cli",
+   "url": "https://github.com/yuelinghuashu/story-cli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "zmap",
+   "url": "https://zmap.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  }
+ ]
+}

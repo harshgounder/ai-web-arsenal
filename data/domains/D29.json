@@ -1,0 +1,1731 @@
+{
+ "id": "D29",
+ "title": "CLI tools an agent can drive",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. Generated from the verified manifest, so every driver here was resolved against a real channel. Nothing in this file is invented.",
+ "atoms": [
+  "A01",
+  "A02",
+  "A03",
+  "A05",
+  "A08",
+  "A09",
+  "A15",
+  "A16"
+ ],
+ "atom_notes": {
+  "A01": "most injection tooling drives an interpreter sink",
+  "A02": "cloud and authz tooling drives a permission decision",
+  "A03": "session and token tooling drives identity",
+  "A05": "fuzzing and corpus tooling exercises shape",
+  "A08": "recon and extraction expose what is already there",
+  "A15": "posture and fingerprint tooling measures configuration",
+  "A16": "AI tooling exercises the model surface",
+  "A09": "crypto tooling attacks a property assumed true"
+ },
+ "required_cells": [
+  {
+   "cell": "S02/L03/A2",
+   "why": "an agent must know what it can call before planning",
+   "filled": true
+  },
+  {
+   "cell": "S02/L06/A3",
+   "why": "calling tools in a loop is the core of automated testing",
+   "filled": true
+  },
+  {
+   "cell": "S02/L08/A2",
+   "why": "a tool's json output is what makes its result evidence",
+   "filled": true
+  },
+  {
+   "cell": "S02/L10/A2",
+   "why": "mapping tool output to a finding schema",
+   "filled": false
+  },
+  {
+   "cell": "S02/L11/A3",
+   "why": "using the same tool for retest",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d29-apktool",
+   "name": "apktool",
+   "url": "https://apktool.org/",
+   "role": "manifest and resource decode, smali",
+   "driver": {
+    "install": "aur:android-apktool",
+    "verify": "apktool --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D21",
+   "agent_use": "apktool d -s app.apk, then read AndroidManifest for exported components"
+  },
+  {
+   "id": "d29-arjun",
+   "name": "arjun",
+   "url": "https://github.com/s0md3v/Arjun",
+   "role": "http parameter discovery",
+   "driver": {
+    "install": "pipx:arjun",
+    "verify": "arjun --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "arjun -u endpoint -oJ params.json, hidden params are a logic bug source"
+  },
+  {
+   "id": "d29-binwalk",
+   "name": "binwalk",
+   "url": "https://github.com/ReFirmLabs/binwalk",
+   "role": "firmware and embedded container signature scan",
+   "driver": {
+    "install": "pacman:binwalk",
+    "verify": "binwalk --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D31",
+   "agent_use": "binwalk -e image.bin, or REA firmware lane for unblob based extraction"
+  },
+  {
+   "id": "d29-chromium",
+   "name": "chromium",
+   "url": "https://chromium.googlesource.com/chromium/src/+/main/docs/",
+   "role": "real browser for cdp work, the only honest way to test client side",
+   "driver": {
+    "install": "pacman:chromium",
+    "verify": "chromium --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D08",
+   "agent_use": "chromium --remote-debugging-port=9222 --user-data-dir=/tmp/p, then REA inspects the page"
+  },
+  {
+   "id": "d29-clairvoyance",
+   "name": "clairvoyance",
+   "url": "https://github.com/nikitastupin/clairvoyance",
+   "role": "graphql schema recovery when introspection is disabled",
+   "driver": {
+    "install": "pipx:clairvoyance",
+    "verify": "clairvoyance --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "clairvoyance -o schema.json -w wordlist url/graphql, this is the introspection-off path"
+  },
+  {
+   "id": "d29-commix",
+   "name": "commix",
+   "url": "https://github.com/commixproject/commix",
+   "role": "os command injection",
+   "driver": {
+    "install": "aur:commix",
+    "verify": "commix --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D07",
+   "agent_use": "commix --url target --batch"
+  },
+  {
+   "id": "d29-curl",
+   "name": "curl",
+   "url": "https://curl.se/docs/",
+   "role": "raw http, the ground truth for every request claim",
+   "driver": {
+    "install": "pacman:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L01",
+   "status": "VERIFIED",
+   "home_domain": "D00",
+   "agent_use": "curl -sS -D- -o- with no client cookies, to confirm what a browser tool reported"
+  },
+  {
+   "id": "d29-dalfox",
+   "name": "dalfox",
+   "url": "https://github.com/hahwul/dalfox",
+   "role": "xss scanner with dom and parameter analysis",
+   "driver": {
+    "install": "aur:dalfox",
+    "verify": "dalfox version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D08",
+   "agent_use": "dalfox url target --json, then verify by hand, dalfox reports candidates"
+  },
+  {
+   "id": "d29-deepteam",
+   "name": "deepteam",
+   "url": "https://github.com/confident-ai/deepteam",
+   "role": "red teaming framework with OWASP and NIST aligned sets",
+   "driver": {
+    "install": "pipx:deepteam",
+    "verify": "python3 -c 'import deepteam'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D19",
+   "agent_use": "risk report per category, comparable across runs"
+  },
+  {
+   "id": "d29-dnsx",
+   "name": "dnsx",
+   "url": "https://github.com/projectdiscovery/dnsx",
+   "role": "dns toolkit, resolver brute force, record types",
+   "driver": {
+    "install": "aur:dnsx",
+    "verify": "dnsx -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "dnsx -l subs -a -cname -json to separate dangling cname from live host"
+  },
+  {
+   "id": "d29-feroxbuster",
+   "name": "feroxbuster",
+   "url": "https://github.com/epi052/feroxbuster",
+   "role": "recursive content discovery",
+   "driver": {
+    "install": "aur:feroxbuster",
+    "verify": "feroxbuster --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "feroxbuster -u target --json, recursion finds nested apps"
+  },
+  {
+   "id": "d29-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "content discovery and parameter fuzzing",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "ffuf -w list -u https://t/FUZZ -of json -o out.json, one job per host"
+  },
+  {
+   "id": "d29-fq",
+   "name": "fq",
+   "url": "https://github.com/wader/fq",
+   "role": "jq semantics over any binary format, the fastest unknown-format probe",
+   "driver": {
+    "install": "pacman:fq",
+    "verify": "fq --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D31",
+   "agent_use": "fq '.boxes[0]' file.mp4 to walk an unknown container without a parser"
+  },
+  {
+   "id": "d29-frida",
+   "name": "frida",
+   "url": "https://frida.re/docs/",
+   "role": "runtime instrumentation, ssl pinning and logic bypass at runtime",
+   "driver": {
+    "install": "pipx:frida-tools",
+    "verify": "frida --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D21",
+   "agent_use": "frida -U -f pkg -l hook.js, pinning bypass is a script not a flag"
+  },
+  {
+   "id": "d29-garak",
+   "name": "garak",
+   "url": "https://github.com/NVIDIA/garak",
+   "role": "LLM vulnerability probe set",
+   "driver": {
+    "install": "pipx:garak",
+    "verify": "garak --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D19",
+   "agent_use": "garak --model_type rest --probes injection, one probe family per run so results are readable"
+  },
+  {
+   "id": "d29-gau",
+   "name": "gau",
+   "url": "https://github.com/lc/gau",
+   "role": "known urls from wayback, commoncrawl, alienvault",
+   "driver": {
+    "install": "aur:gau",
+    "verify": "gau --version",
+    "json": false,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "gau --subs target.tld to harvest historical endpoints before touching the host"
+  },
+  {
+   "id": "d29-ghidra",
+   "name": "ghidra",
+   "url": "https://ghidra-sre.org/",
+   "role": "decompiler for native artifacts reached from a web target",
+   "driver": {
+    "install": "pacman:ghidra",
+    "verify": "ghidra --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D31",
+   "agent_use": "analyzeHeadless with a script, or drive it through the rea MCP bridge"
+  },
+  {
+   "id": "d29-gitleaks",
+   "name": "gitleaks",
+   "url": "https://github.com/gitleaks/gitleaks",
+   "role": "fast regex secret scan for repos and bundles",
+   "driver": {
+    "install": "pacman:gitleaks",
+    "verify": "gitleaks version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D16",
+   "agent_use": "gitleaks detect --source bundle.js --report-format json, works on a single file"
+  },
+  {
+   "id": "d29-gobuster",
+   "name": "gobuster",
+   "url": "https://github.com/OJ/gobuster",
+   "role": "dir, dns and vhost brute force",
+   "driver": {
+    "install": "pacman:gobuster",
+    "verify": "gobuster version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "gobuster vhost -u target -w names --append-domain, the vhost mode is the underused one"
+  },
+  {
+   "id": "d29-graphql-cop",
+   "name": "graphql-cop",
+   "url": "https://github.com/dolevf/graphql-cop",
+   "role": "graphql misconfiguration audit, the cheap wins first",
+   "driver": {
+    "install": "git:https://github.com/dolevf/graphql-cop",
+    "verify": "graphql-cop -h",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "graphql-cop -t https://target/graphql, json output maps to the defense mirror directly"
+  },
+  {
+   "id": "d29-graphw00f",
+   "name": "graphw00f",
+   "url": "https://github.com/dolevf/graphw00f",
+   "role": "graphql engine fingerprint, decides which bypass class applies",
+   "driver": {
+    "install": "git:https://github.com/dolevf/graphw00f",
+    "verify": "graphw00f -h",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "graphw00f -d -t https://target/graphql, engine determines introspection bypass route"
+  },
+  {
+   "id": "d29-grpcurl",
+   "name": "grpcurl",
+   "url": "https://github.com/fullstorydev/grpcurl",
+   "role": "grpc reflection and call, the whole grpc attack surface in one binary",
+   "driver": {
+    "install": "aur:grpcurl",
+    "verify": "grpcurl --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "grpcurl -plaintext host:443 list, then describe, then call. reflection on means full schema"
+  },
+  {
+   "id": "d29-hashcat",
+   "name": "hashcat",
+   "url": "https://hashcat.net/hashcat/",
+   "role": "offline cracking for hashes recovered from artifacts",
+   "driver": {
+    "install": "pacman:hashcat",
+    "verify": "hashcat --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D16",
+   "agent_use": "hashcat -m 1400 -a 0 hash.txt rockyou.txt, identify mode first with hashid"
+  },
+  {
+   "id": "d29-httpx",
+   "name": "httpx",
+   "url": "https://github.com/projectdiscovery/httpx",
+   "role": "http probing and fingerprinting at scale",
+   "driver": {
+    "install": "aur:httpx-bin",
+    "verify": "httpx -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "httpx -l hosts -json -tech-detect -status-code, gives the stack per host"
+  },
+  {
+   "id": "d29-inql",
+   "name": "inql",
+   "url": "https://github.com/doyensec/inql",
+   "role": "graphql introspection to queries, burp extension plus cli",
+   "driver": {
+    "install": "pipx:inql",
+    "verify": "inql --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "inql -t https://target/graphql -o out, generates ready queries per field"
+  },
+  {
+   "id": "d29-jadx",
+   "name": "jadx",
+   "url": "https://github.com/skylot/jadx",
+   "role": "dex to java, the readable half of apk analysis",
+   "driver": {
+    "install": "pacman:jadx",
+    "verify": "jadx --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D21",
+   "agent_use": "jadx -d out app.apk, then grep for endpoints. REA does class level lookup without writing source"
+  },
+  {
+   "id": "d29-jq",
+   "name": "jq",
+   "url": "https://jqlang.github.io/jq/",
+   "role": "json slicing, the glue for every other tool",
+   "driver": {
+    "install": "pacman:jq",
+    "verify": "jq --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L01",
+   "status": "VERIFIED",
+   "home_domain": "D00",
+   "agent_use": "pipe any tool's json through jq -r to get one field per line"
+  },
+  {
+   "id": "d29-jwt_tool",
+   "name": "jwt_tool",
+   "url": "https://github.com/ticarpi/jwt_tool",
+   "role": "jwt inspection and the full attack set, none, alg confusion, kid, jku",
+   "driver": {
+    "install": "aur:jwt_tool",
+    "verify": "jwt_tool --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D06",
+   "agent_use": "jwt_tool <token> -M at to run all tests, then -T for a specific tamper"
+  },
+  {
+   "id": "d29-katana",
+   "name": "katana",
+   "url": "https://github.com/projectdiscovery/katana",
+   "role": "crawler that understands js, endpoints and forms",
+   "driver": {
+    "install": "aur:katana",
+    "verify": "katana -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "katana -u target -jc -json -d 3, js crawl is the part that finds api routes"
+  },
+  {
+   "id": "d29-kiterunner",
+   "name": "kiterunner",
+   "url": "https://github.com/assetnote/kiterunner",
+   "role": "api route brute force with real wordlists",
+   "driver": {
+    "install": "aur:kiterunner-bin",
+    "verify": "kr version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "kr scan target -w routes.kite -j json, finds routes docs do not mention"
+  },
+  {
+   "id": "d29-llm-guard",
+   "name": "llm-guard",
+   "url": "https://github.com/protectai/llm-guard",
+   "role": "defensive scanner set, listed as the mirror side",
+   "driver": {
+    "install": "pipx:llm-guard",
+    "verify": "python3 -c 'import llm_guard'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D19",
+   "agent_use": "evaluate it as a bypass target, not as a wall"
+  },
+  {
+   "id": "d29-mcp-scan",
+   "name": "mcp-scan",
+   "url": "https://github.com/invariantlabs-ai/mcp-scan",
+   "role": "scans MCP configs and tool descriptions for injection and tool poisoning",
+   "driver": {
+    "install": "pipx:mcp-scan",
+    "verify": "mcp-scan --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D20",
+   "agent_use": "mcp-scan scan, then hash descriptions and diff on each start"
+  },
+  {
+   "id": "d29-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/",
+   "role": "programmable intercepting proxy, the capture source for REA",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D31",
+   "agent_use": "mitmdump -w flows.mitm, then rea inspect_web_network_capture reads it natively"
+  },
+  {
+   "id": "d29-mitmproxy2swagger",
+   "name": "mitmproxy2swagger",
+   "url": "https://github.com/alufers/mitmproxy2swagger",
+   "role": "recover an openapi spec from a har or flow dump",
+   "driver": {
+    "install": "pipx:mitmproxy2swagger",
+    "verify": "mitmproxy2swagger --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "mitmproxy2swagger -i flows -o spec.yml -p https://api, then fix ignored paths by hand"
+  },
+  {
+   "id": "d29-naabu",
+   "name": "naabu",
+   "url": "https://github.com/projectdiscovery/naabu",
+   "role": "fast port scan",
+   "driver": {
+    "install": "aur:naabu",
+    "verify": "naabu -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "naabu -list hosts -top-ports 1000 -json"
+  },
+  {
+   "id": "d29-newman",
+   "name": "newman",
+   "url": "https://github.com/postmanlabs/newman",
+   "role": "run a postman collection as a test suite, includes auth flows",
+   "driver": {
+    "install": "npm:newman",
+    "verify": "newman --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "newman run collection.json -r json --reporter-json-export r.json"
+  },
+  {
+   "id": "d29-nikto",
+   "name": "nikto",
+   "url": "https://github.com/sullo/nikto",
+   "role": "classic server misconfiguration scanner",
+   "driver": {
+    "install": "pacman:nikto",
+    "verify": "nikto -Version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D22",
+   "agent_use": "nikto -h target -Format json -output n.json, noisy, use once per host not per path"
+  },
+  {
+   "id": "d29-nmap",
+   "name": "nmap",
+   "url": "https://nmap.org/book/",
+   "role": "service and version truth, the fallback when http lies",
+   "driver": {
+    "install": "pacman:nmap",
+    "verify": "nmap --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "nmap -sV -Pn -oX - | xml to json, good for adhoc service checks"
+  },
+  {
+   "id": "d29-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "template based scanning, the cve and misconfig workhorse",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D22",
+   "agent_use": "nuclei -l live -jsonl -severity high,critical -rl 30, rate limit is not optional"
+  },
+  {
+   "id": "d29-nuclei-templates",
+   "name": "nuclei-templates",
+   "url": "https://github.com/projectdiscovery/nuclei-templates",
+   "role": "the template corpus nuclei runs",
+   "driver": {
+    "install": "git:https://github.com/projectdiscovery/nuclei-templates",
+    "verify": "test -d ~/nuclei-templates",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "home_domain": "D27",
+   "agent_use": "nuclei -update-templates, then -tags for a class instead of all"
+  },
+  {
+   "id": "d29-pipx",
+   "name": "pipx",
+   "url": "https://pipx.pypa.io/",
+   "role": "isolated python cli installs",
+   "driver": {
+    "install": "pacman:python-pipx",
+    "verify": "pipx --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L01",
+   "status": "VERIFIED",
+   "home_domain": "D35",
+   "agent_use": "pipx install <pkg> for single file python tools"
+  },
+  {
+   "id": "d29-promptfoo",
+   "name": "promptfoo",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "role": "eval harness and red team plugins, CI for prompt injection regression",
+   "driver": {
+    "install": "npm:promptfoo",
+    "verify": "promptfoo --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D19",
+   "agent_use": "promptfoo redteam run, then diff results across model versions"
+  },
+  {
+   "id": "d29-prowler",
+   "name": "prowler",
+   "url": "https://github.com/prowler-cloud/prowler",
+   "role": "cloud posture and attack path checks",
+   "driver": {
+    "install": "pipx:prowler",
+    "verify": "prowler --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A15"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D17",
+   "agent_use": "prowler aws -M json-ocsf -o out, needs scoped read credentials, never prod root"
+  },
+  {
+   "id": "d29-pyrit",
+   "name": "pyrit",
+   "url": "https://github.com/Azure/PyRIT",
+   "role": "orchestrators, converters and scorers for LLM red teaming",
+   "driver": {
+    "install": "pipx:pyrit",
+    "verify": "python3 -c 'import pyrit'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D19",
+   "agent_use": "python API. converter chains are how you test whether a guard survives encoding"
+  },
+  {
+   "id": "d29-radare2",
+   "name": "radare2",
+   "url": "https://rada.re/",
+   "role": "fast disassembly and binary triage",
+   "driver": {
+    "install": "pacman:radare2",
+    "verify": "r2 -v",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D31",
+   "agent_use": "r2 -q -c 'aaa; aflj' file, json output is the agent usable form"
+  },
+  {
+   "id": "d29-rebuff",
+   "name": "rebuff",
+   "url": "https://github.com/protectai/rebuff",
+   "role": "prompt injection detector, useful as a false negative source",
+   "driver": {
+    "install": "pipx:rebuff",
+    "verify": "python3 -c 'import rebuff'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D19",
+   "agent_use": "run payloads through it and record verdicts as a guard baseline"
+  },
+  {
+   "id": "d29-restler",
+   "name": "restler",
+   "url": "https://github.com/microsoft/restler-fuzzer",
+   "role": "stateful rest api fuzzing from an openapi spec, finds sequences not single calls",
+   "driver": {
+    "install": "git:https://github.com/microsoft/restler-fuzzer",
+    "verify": "Restler.dll --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "restler fuzz --grammar_file g.json --dictionary_file d.json --settings s.json"
+  },
+  {
+   "id": "d29-schemathesis",
+   "name": "schemathesis",
+   "url": "https://schemathesis.readthedocs.io/",
+   "role": "property based testing straight from an openapi or graphql schema",
+   "driver": {
+    "install": "pipx:schemathesis",
+    "verify": "schemathesis --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D11",
+   "agent_use": "schemathesis run spec.yml --checks all --hypothesis-seed 0, reproducible failures"
+  },
+  {
+   "id": "d29-seclists",
+   "name": "seclists",
+   "url": "https://github.com/danielmiessler/SecLists",
+   "role": "the wordlist corpus everything else consumes",
+   "driver": {
+    "install": "git:https://github.com/danielmiessler/SecLists",
+    "verify": "test -d /usr/share/seclists",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "home_domain": "D27",
+   "agent_use": "point -w at /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt"
+  },
+  {
+   "id": "d29-sqlmap",
+   "name": "sqlmap",
+   "url": "https://github.com/sqlmapproject/sqlmap",
+   "role": "sql injection detection and exploitation",
+   "driver": {
+    "install": "pacman:sqlmap",
+    "verify": "sqlmap --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D07",
+   "agent_use": "sqlmap -u url --batch --level 2 --risk 1 --output-dir, never --dump against production"
+  },
+  {
+   "id": "d29-subfinder",
+   "name": "subfinder",
+   "url": "https://github.com/projectdiscovery/subfinder",
+   "role": "passive subdomain enumeration",
+   "driver": {
+    "install": "aur:subfinder",
+    "verify": "subfinder -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D02",
+   "agent_use": "subfinder -d target.tld -silent -json, then dedupe on host"
+  },
+  {
+   "id": "d29-trufflehog",
+   "name": "trufflehog",
+   "url": "https://github.com/trufflesecurity/trufflehog",
+   "role": "verified secret detection in repos and filesystems",
+   "driver": {
+    "install": "aur:trufflehog",
+    "verify": "trufflehog --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D16",
+   "agent_use": "trufflehog filesystem . --json --only-verified, only-verified cuts the noise to near zero"
+  },
+  {
+   "id": "d29-uv",
+   "name": "uv",
+   "url": "https://docs.astral.sh/uv/",
+   "role": "python env and tool runner, the install engine for python tooling",
+   "driver": {
+    "install": "pacman:uv",
+    "verify": "uv --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "human readable output"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L01",
+   "status": "VERIFIED",
+   "home_domain": "D35",
+   "agent_use": "uv tool install <pkg> keeps system python untouched"
+  },
+  {
+   "id": "d29-wafw00f",
+   "name": "wafw00f",
+   "url": "https://github.com/EnableSecurity/wafw00f",
+   "role": "waf fingerprint, decides which evasion class applies",
+   "driver": {
+    "install": "pipx:wafw00f",
+    "verify": "wafw00f --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D22",
+   "agent_use": "wafw00f -a target -o json, run before payload selection, not after"
+  },
+  {
+   "id": "d29-whatweb",
+   "name": "whatweb",
+   "url": "https://github.com/urbanadventurer/WhatWeb",
+   "role": "technology fingerprinting with plugin detail",
+   "driver": {
+    "install": "aur:whatweb",
+    "verify": "whatweb --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "home_domain": "D03",
+   "agent_use": "whatweb --log-json=w.json --aggression 1, aggression 3 is loud"
+  },
+  {
+   "id": "d29-yq",
+   "name": "yq",
+   "url": "https://github.com/mikefarah/yq",
+   "role": "yaml and xml to json, for specs and configs",
+   "driver": {
+    "install": "pacman:go-yq",
+    "verify": "yq --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L01",
+   "status": "VERIFIED",
+   "home_domain": "D00",
+   "agent_use": "yq -o=json openapi.yaml to normalize a spec before diffing"
+  },
+  {
+   "id": "d29-zaproxy",
+   "name": "zaproxy",
+   "url": "https://www.zaproxy.org/docs/",
+   "role": "full scanner with api driven automation",
+   "driver": {
+    "install": "pacman:zaproxy",
+    "verify": "zaproxy -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "the tool is installed and its verify command passes"
+   ],
+   "oracle": [
+    "json output parseable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "home_domain": "D22",
+   "agent_use": "zap.sh -daemon then the rest api, or -cmd for one shot. json report is machine readable"
+  }
+ ],
+ "tree": {
+  "id": "d29-root",
+  "q": "Does the tool emit JSON?",
+  "why": "This is the single property that decides whether an agent can use the result or must parse prose. Prose output forces a model to guess, and guessing is where false findings come from.",
+  "branches": [
+   {
+    "a": "Yes, JSON",
+    "action": "call it, pipe to jq, and keep the raw output as evidence",
+    "tools": [
+     "d29-jq"
+    ],
+    "oracle": "parseable json with the field you need"
+   },
+   {
+    "a": "No, prose or table",
+    "action": "either find a flag that changes output, or wrap it and parse deliberately, and record that the parse is lossy",
+    "tools": [],
+    "oracle": "stable parse over three runs"
+   },
+   {
+    "a": "It is a library not a CLI",
+    "action": "wrap it in a small script that emits JSON. do not let a model read a Python object repr",
+    "tools": [],
+    "oracle": "deterministic json schema"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "tool abuse by an agent",
+   "detect": "tool invoked outside the planned phase",
+   "control": "per phase allowlist of runnable tools",
+   "rule": "tool invocation outside plan"
+  },
+  {
+   "attack": "unbounded tool use",
+   "detect": "call volume per run",
+   "control": "budget per tool and per run",
+   "rule": "rate and count ceilings"
+  },
+  {
+   "attack": "evidence loss",
+   "detect": "finding with no raw tool output attached",
+   "control": "require the artifact path in the finding schema",
+   "rule": "finding without evidence path"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No standard agent facing schema for tool output across the ecosystem",
+   "class": "no-tool",
+   "build_candidate": "a thin adapter per tool that normalises into one finding record, kept in harness/"
+  },
+  {
+   "gap": "Most tools have no machine readable capability declaration",
+   "class": "partial",
+   "build_candidate": "generate one from the manifest, which is what this domain already is"
+  },
+  {
+   "gap": "No tool reports its own rate limits or expected detection footprint",
+   "class": "no-tool",
+   "build_candidate": "add a footprint field per tool: requests per second default, user agent, known signatures"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "generated from the manifest, so nothing is unreviewed"
+ }
+}

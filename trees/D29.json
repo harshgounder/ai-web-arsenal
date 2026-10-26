@@ -1,0 +1,27 @@
+{
+ "id": "d29-root",
+ "q": "Does the tool emit JSON?",
+ "why": "This is the single property that decides whether an agent can use the result or must parse prose. Prose output forces a model to guess, and guessing is where false findings come from.",
+ "branches": [
+  {
+   "a": "Yes, JSON",
+   "action": "call it, pipe to jq, and keep the raw output as evidence",
+   "tools": [
+    "d29-jq"
+   ],
+   "oracle": "parseable json with the field you need"
+  },
+  {
+   "a": "No, prose or table",
+   "action": "either find a flag that changes output, or wrap it and parse deliberately, and record that the parse is lossy",
+   "tools": [],
+   "oracle": "stable parse over three runs"
+  },
+  {
+   "a": "It is a library not a CLI",
+   "action": "wrap it in a small script that emits JSON. do not let a model read a Python object repr",
+   "tools": [],
+   "oracle": "deterministic json schema"
+  }
+ ]
+}
