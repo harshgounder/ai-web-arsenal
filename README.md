@@ -136,9 +136,10 @@ the scoring rather than measurements of the mirror. A row describes a class; an 
 class is semantic, and lexical overlap cannot recover it. The experiment was reverted and the script
 deleted rather than tuned until it produced a number worth quoting.
 
-What is actually true: **28 of 28 authored domains carry a mirror.** Per-entry `detected_by` is
-populated only where the author set it deliberately, which is the honest unit. A tool does not need its
-own detection; the class it implements does.
+What is actually true: **28 of 28 authored domains carry a mirror.** Per-entry `detected_by` breaks
+down as 22 hand authored, 113 auto-linked and flagged `mirror_provisional` (lexical match, treat
+as a hint not a claim), and 254 deliberately empty. A tool does not need its own detection; the class
+it implements does.
 
 ## Why the corpus matters more than it looks
 
