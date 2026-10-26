@@ -1,0 +1,19 @@
+{
+ "generated_at": "2026-10-26",
+ "entries": 24759,
+ "evidence_status": {
+  "HARVESTED": 12749,
+  "NO_URL": 11712,
+  "LINK_OK": 289,
+  "LINK_DEAD": 3,
+  "LINK_ERROR": 3,
+  "LINK_BLOCKED": 3
+ },
+ "checked_this_run": 16,
+ "link_results_this_run": {
+  "LINK_ERROR": 3,
+  "LINK_OK": 7,
+  "LINK_DEAD": 3,
+  "LINK_BLOCKED": 3
+ }
+}
