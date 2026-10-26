@@ -1,106 +1,72 @@
 {
  "domain": "D09",
  "generated_at": "2026-10-27",
+ "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 10,
- "indexed_not_enriched": 14,
+ "indexed_not_enriched": 9,
  "entries": [
   {
-   "name": "![Kjopstad-IT/rqwstr-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Kjopstad-IT/rqwstr-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "name": "http-request-smuggler",
+   "url": "https://github.com/PortSwigger/http-request-smuggler",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "PROMOTABLE"
   },
   {
    "name": "Browser-Powered Desync research",
    "url": "https://portswigger.net/research/browser-powered-desync-attacks",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "CL.TE, TE.CL, TE.TE labels",
    "url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Request%20Smuggling/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "CRLF-Injection-Scanner",
-   "url": "https://github.com/MichaelStott/CRLF-Injection-Scanner",
+   "name": "HTTP Detection Agent",
+   "url": "https://github.com/ai-blueteam/http-detection-agent",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "HTTP Request Smuggler",
+   "url": "https://portswigger.net/bappstore/aaaa60ef945341e8a450217a54a11646",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "CRLFsuite",
-   "url": "https://github.com/Nefcore/CRLFsuite",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Client-side desync guidance",
-   "url": "https://portswigger.net/web-security/request-smuggling/browser/client-side-desync",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Injectus",
-   "url": "https://github.com/BountyStrike/Injectus",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Merlin",
-   "url": "https://github.com/Ne0nd0g/merlin",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Nemesis Auditor",
    "url": "https://github.com/0xiehnnkta/nemesis-auditor",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "Setting arbitrary request headers in Chromium via CRLF injection",
-   "url": "https://blog.bentkowski.info/2018/06/setting-arbitrary-request-headers-in.html",
+   "name": "Smuggler project page",
+   "url": "https://l0lsec.github.io/smuggler/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "WebSocket and HTTP/2 proxy-abuse review",
-   "url": "https://www.rfc-editor.org/rfc/rfc6455",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "crlfuzz",
-   "url": "https://github.com/dwisiswant0/crlfuzz",
+   "name": "http-request-smuggling",
+   "url": "https://github.com/anshumanpattnaik/http-request-smuggling",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "impersonate-proxy",
-   "url": "https://github.com/ytkoka/impersonate-proxy",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "tiscripts",
    "url": "https://github.com/defparam/tiscripts",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   }
  ]
 }

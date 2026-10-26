@@ -1,1548 +1,198 @@
 {
  "domain": "D16",
  "generated_at": "2026-10-27",
+ "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 10,
- "indexed_not_enriched": 220,
+ "indexed_not_enriched": 27,
  "entries": [
   {
    "name": "John the Ripper",
    "url": "http://www.openwall.com/john/",
    "tier": "adjacent",
    "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Authentication Bypass on airbnb via oauth tokens theft",
-   "url": "https://www.arneswinnen.net/2017/06/authentication-bypass-on-airbnb-via-oauth-tokens-theft/",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Authentication bypass in CISCO meraki",
-   "url": "https://blog.takemyhand.xyz/2018/06/authentication-bypass-in-cisco-meraki.html",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Authentication bypass on SSO ubnt.com via Subdomain takeover of ping.ubnt.com",
-   "url": "https://www.arneswinnen.net/2016/11/authentication-bypass-on-sso-ubnt-com-via-subdomain-takeover-of-ping-ubnt-com/",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Hashcat",
    "url": "http://hashcat.net/hashcat/",
    "tier": "adjacent",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Inspect element leads to stripe account lockout authentication Bypass",
-   "url": "https://www.jonbottarini.com/2017/04/03/inspect-element-leads-to-stripe-account-lockout-authentication-bypass/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "JWT Cracker",
    "url": "https://github.com/lmammino/jwt-cracker",
    "tier": "adjacent",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "JWT Security Cheat Sheet",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Keyscope",
-   "url": "https://github.com/SpectralOps/keyscope",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Slack SAML authentocation bypass",
-   "url": "https://blog.intothesymmetry.com/2017/10/slack-saml-authentication-bypass.html",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Symantec authentication Bypass",
-   "url": "https://artkond.com/2018/10/10/symantec-authentication-bypass/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Two factor authentication bypass",
-   "url": "https://gauravnarwani.com/two-factor-authentication-bypass/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "c-jwt-cracker>",
    "url": "https://github.com/brendan-rius/c-jwt-cracker",
    "tier": "adjacent",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "gitleaks",
+   "url": "https://github.com/zricethezav/gitleaks",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "PROMOTABLE"
   },
   {
    "name": "jwt-hack CLI",
    "url": "https://github.com/hahwul/jwt-hack",
    "tier": "adjacent",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "labs.detectify.com",
-   "url": "http://labs.detectify.com/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![0xDegenMo/lighter-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/0xDegenMo/lighter-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![APIbase MCP server",
-   "url": "https://glama.ai/mcp/servers/whiteknightonhorse/APIbase/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Avazbek22/DevProjex MCP server",
-   "url": "https://glama.ai/mcp/servers/Avazbek22/DevProjex/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Bidsketch/signwell-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Bidsketch/signwell-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![CoinRithm/coinrithm-agent-trading MCP server",
-   "url": "https://glama.ai/mcp/servers/CoinRithm/coinrithm-agent-trading/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![CryptoGuardClient MCP server",
-   "url": "https://glama.ai/mcp/servers/gpartin/CryptoGuardClient/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Dusheh/myclaw-toolkit MCP server",
-   "url": "https://glama.ai/mcp/servers/Dusheh/myclaw-toolkit/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Easton-OU/rootpilot-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Easton-OU/rootpilot-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![EmblemCompany/Agent-skills MCP server",
-   "url": "https://glama.ai/mcp/servers/EmblemCompany/Agent-skills/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Fabio662/yieldagentx402-sdks MCP server",
-   "url": "https://glama.ai/mcp/servers/Fabio662/yieldagentx402-sdks/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![FalsifyLab/falsifylab-alpha-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/FalsifyLab/falsifylab-alpha-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![GTCC777/pulsenetwork-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/GTCC777/pulsenetwork-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![GarphenGate/moltline-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/GarphenGate/moltline-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Gliana-Labs/gliana-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Gliana-Labs/gliana-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Gowthaman90/mcp-bastion MCP server",
-   "url": "https://glama.ai/mcp/servers/Gowthaman90/mcp-bastion/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![HBarefoot/engram MCP server",
-   "url": "https://glama.ai/mcp/servers/HBarefoot/engram/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![HasanJahidul/terminal-history-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/HasanJahidul/terminal-history-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Jambozx/onlinecybertools-mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/Jambozx/onlinecybertools-mcp-server/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Jimil-Joshi/blastradius-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Jimil-Joshi/blastradius-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![JoeGlenn1213/lgh MCP server",
-   "url": "https://glama.ai/mcp/servers/JoeGlenn1213/lgh/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![KongFangXun/sofagent MCP server",
-   "url": "https://glama.ai/mcp/servers/KongFangXun/sofagent/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Logitale/toreador-mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/Logitale/toreador-mcp-server/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![OSOJDJD/deeplook MCP server",
-   "url": "https://glama.ai/mcp/servers/OSOJDJD/deeplook/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Octodamus/octodamus-core MCP server",
-   "url": "https://glama.ai/mcp/servers/Octodamus/octodamus-core/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Octonove/crbro-memory MCP server",
-   "url": "https://glama.ai/mcp/servers/Octonove/crbro-memory/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Perufitlife/web-exposure-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Perufitlife/web-exposure-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![QuantOracledev/quantoracle MCP server",
-   "url": "https://glama.ai/mcp/servers/QuantOracledev/quantoracle/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![ShieldZCash/shieldz-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/ShieldZCash/shieldz-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![SiftingIO/siftingio-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/SiftingIO/siftingio-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Tokenectomy-Razor MCP server",
-   "url": "https://glama.ai/mcp/servers/Tokenectomy-Labs/Tokenectomy/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![agent-memory MCP server",
-   "url": "https://glama.ai/mcp/servers/xChuCx/agent-memory/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![airblock2026/bit-monk-signal-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/airblock2026/bit-monk-signal-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![aisenseapi/aamio-python MCP server",
-   "url": "https://glama.ai/mcp/servers/aisenseapi/aamio-python/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![atilaahmettaner/tradingview-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/atilaahmettaner/tradingview-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![bakyang2/kr-crypto-intelligence MCP server",
-   "url": "https://glama.ai/mcp/servers/bakyang2/kr-crypto-intelligence/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![bevanding/signaldaemon MCP server",
-   "url": "https://glama.ai/mcp/servers/bevanding/signaldaemon/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![bitcompare/mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/bitcompare/mcp-server/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![blazephoenixxyz-crypto/blazephoenix-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/blazephoenixxyz-crypto/blazephoenix-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![blinkingbit-oss/execkit MCP server",
-   "url": "https://glama.ai/mcp/servers/blinkingbit-oss/execkit/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![carrierone/verilexdata-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/carrierone/verilexdata-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![chopmob-cloud/AlgoVoi-Platform-Adapters MCP server",
-   "url": "https://glama.ai/mcp/servers/chopmob-cloud/AlgoVoi-Platform-Adapters/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![crypto-signals-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/@MarcinDudekDev/crypto-signals-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![cryptobriefing/gloria-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/cryptobriefing/gloria-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![cstamigo-droid/signal-scanner MCP server",
-   "url": "https://glama.ai/mcp/servers/cstamigo-droid/signal-scanner/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![decksaga/market-pulse-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/decksaga/market-pulse-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![deficlow/zipp-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/deficlow/zipp-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![dockndevai/mcp-oci MCP server",
-   "url": "https://glama.ai/mcp/servers/dockndevai/mcp-oci/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![dolar-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/dan1d/dolar-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![eamwhite1/xrpl-referee MCP server",
-   "url": "https://glama.ai/mcp/servers/eamwhite1/xrpl-referee/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![eliasfire617/crypto-market-data-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/eliasfire617/crypto-market-data-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![felixpg13-glitch/spendshield MCP server",
-   "url": "https://glama.ai/mcp/servers/felixpg13-glitch/spendshield/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![flyto-core MCP server",
-   "url": "https://glama.ai/mcp/servers/@flytohub/flyto-core/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![forgemeshlabs/coinopai-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/forgemeshlabs/coinopai-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![forgemeshlabs/crypto-signals-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/forgemeshlabs/crypto-signals-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![gainium-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/Gainium/gainium-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![hifriendbot/agentwallet-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/hifriendbot/agentwallet-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![hikmahtech/drwhome MCP server",
-   "url": "https://glama.ai/mcp/servers/hikmahtech/drwhome/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![horustechltd/horus-flow-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/horustechltd/horus-flow-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![hypeprinter007-stack/signalfuse-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/hypeprinter007-stack/signalfuse-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![ilyautov/diadoc-mcp-ru MCP server",
-   "url": "https://glama.ai/mcp/servers/ilyautov/diadoc-mcp-ru/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![john-broadway/proximo MCP server",
-   "url": "https://glama.ai/mcp/servers/john-broadway/proximo/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![jorkal-crypto/jorkal-nft-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/jorkal-crypto/jorkal-nft-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![kaka-milan-22/kops MCP server",
-   "url": "https://glama.ai/mcp/servers/kaka-milan-22/kops/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![lisamaraventano-spine/mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/lisamaraventano-spine/mcp-server/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mcp-gatehouse MCP server",
-   "url": "https://glama.ai/mcp/servers/nickgeorgeseo/mcp-gatehouse/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mcp-server-devutils MCP server",
-   "url": "https://glama.ai/mcp/servers/ofershap/mcp-server-devutils/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mcp-server-insumer MCP server",
-   "url": "https://glama.ai/mcp/servers/@douglasborthwick-crypto/mcp-server-insumer/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![meloliva14/verity-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/meloliva14/verity-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mikusnuz/pexbot-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/mikusnuz/pexbot-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![minhoyoo-iotrust/WAIaaS MCP server",
-   "url": "https://glama.ai/mcp/servers/minhoyoo-iotrust/WAIaaS/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![minia2auk/minia2a-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/minia2auk/minia2a-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![namixai/signer-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/namixai/signer-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![noor202401938-netizen/cyber-chef-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/noor202401938-netizen/cyber-chef-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![openmm-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/QBT-Labs/openmm-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![opticparse-public MCP server",
-   "url": "https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![ozers/hooksense-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/ozers/hooksense-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![pad01g/proxy-shopping-web MCP server",
-   "url": "https://glama.ai/mcp/servers/pad01g/proxy-shopping-web/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![paladini/devutils-mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![pythia-the-oracle/pythia-oracle-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/pythia-the-oracle/pythia-oracle-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![qinisolabs/qiniso MCP server",
-   "url": "https://glama.ai/mcp/servers/qinisolabs/qiniso/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![rabdulsal/appstore-release-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/rabdulsal/appstore-release-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![rafim-dev/mcp-smart-git MCP server",
-   "url": "https://glama.ai/mcp/servers/rafim-dev/mcp-smart-git/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![recon-crypto-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/szhygulin/recon-crypto-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![rug-munch-intelligence MCP server",
-   "url": "https://glama.ai/mcp/servers/@CryptoRugMunch/rug-munch-intelligence/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![sapph1re/findata-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/sapph1re/findata-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![sentien-labs/verdictswarm-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/sentien-labs/verdictswarm-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![shyshlakov/pci-dss-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/shyshlakov/pci-dss-mcp/badges/score.svg",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![signdocsbrasil/signdocs-mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/signdocsbrasil/signdocs-mcp-server/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![sitelauncher-mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/@trackerfitness729-jpg/sitelauncher-mcp-server/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![soren-achebe/backscroll MCP server",
-   "url": "https://glama.ai/mcp/servers/soren-achebe/backscroll/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![swaltersjrtest/microtap-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/swaltersjrtest/microtap-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![tamasPetki/HeadlessTracker MCP server",
-   "url": "https://glama.ai/mcp/servers/tamasPetki/HeadlessTracker/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![thebrierfox/the-stall MCP server",
-   "url": "https://glama.ai/mcp/servers/thebrierfox/the-stall/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![tickerdb/tickerdb-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/tickerdb/tickerdb-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![traql/mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/traql/mcp-server/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![tunedforai/x402-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/tunedforai/x402-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![vdalhambra/financekit-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/vdalhambra/financekit-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![vshulcz/deja-vu MCP server",
-   "url": "https://glama.ai/mcp/servers/vshulcz/deja-vu/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![wundervault/wundervault-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/wundervault/wundervault-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![wuzenghai616-lang/goldbean MCP server",
-   "url": "https://glama.ai/mcp/servers/wuzenghai616-lang/goldbean/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![yessGlory17/job-verify MCP server",
-   "url": "https://glama.ai/mcp/servers/yessGlory17/job-verify/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![yolfinance/yolfi-agent MCP server",
-   "url": "https://glama.ai/mcp/servers/yolfinance/yolfi-agent/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "(The) Postman Carries Lots of Secrets",
    "url": "https://trufflesecurity.com/blog/postman-carries-lots-of-secrets",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "0xDegenMo/lighter-mcp",
-   "url": "https://github.com/0xDegenMo/lighter-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "@John Dos",
-   "url": "https://www.exploit-db.com/?author=1996",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Amit Rastogi",
-   "url": "https://www.encryptionconsulting.com/author/amit-rastogi/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "An Open-Source Framework for Efficient Side-Channel Analysis on Cryptographic Implementations",
-   "url": "https://eprint.iacr.org/2025/1130.pdf",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "AnChain.AI",
-   "url": "https://www.anchain.ai/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Applied Crypto Hardening",
-   "url": "https://bettercrypto.org/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "EmblemCompany/Agent-skills",
-   "url": "https://github.com/EmblemCompany/Agent-skills",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Event Espresso",
-   "url": "http://eventespresso.com/report-a-security-vulnerability",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "GitHub Secret Scanning",
    "url": "https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "GitLab Pipeline Secret Detection",
-   "url": "https://docs.gitlab.com/user/application_security/secret_detection/pipeline/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "GoCrack",
    "url": "https://github.com/fireeye/gocrack",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "HARNESS-IFACE",
-   "url": "https://kubernetes.io/docs/concepts/configuration/secret/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "HOL Guard",
-   "url": "https://github.com/hashgraph-online/hol-guard",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Hardcoded secrets, unverified tokens, and other common JWT mistakes",
    "url": "https://semgrep.dev/blog/2020/hardcoded-secrets-unverified-tokens-and-other-common-jwt-mistakes/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "J.M Porup",
-   "url": "https://www.csoonline.com/author/J.M.-Porup/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "JSON Web Token (JWT) Security Checklist",
    "url": "https://auth0.com/docs/security/tokens/json-web-tokens/json-web-token-security",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "JWT Editor",
    "url": "https://github.com/PortSwigger/jwt-editor",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "John Deere security flaw lets anyone download sensitive files from its site",
-   "url": "https://www.vice.com/en/article/epn5jw/john-deere-security-flaw-lets-anyone-download-sensitive-files-from-its-site",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Laravel CSP Generator",
-   "url": "https://csp-generator.shakiltech.com",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Laravel Content Security Policy: Complete Implementation Guide",
-   "url": "https://blog.shakiltech.com/laravel-content-security-policy-guide/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Manual key-source and JWKS review",
-   "url": "https://portswigger.net/web-security/jwt",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "MarcinDudekDev/crypto-signals-mcp",
-   "url": "https://github.com/MarcinDudekDev/crypto-signals-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Octodamus/octodamus-core",
-   "url": "https://github.com/Octodamus/octodamus-core",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Pipelock",
-   "url": "https://github.com/pipelab-org/pipelock",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Roppers CTF Fundamentals Course",
-   "url": "https://www.roppers.org/courses/ctf",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "SaintDoresh/Crypto-Trader-MCP-ClaudeDesktop",
-   "url": "https://github.com/SaintDoresh/Crypto-Trader-MCP-ClaudeDesktop.git",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SecretFinder",
    "url": "https://github.com/m4ll0k/SecretFinder",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SecuriTool",
    "url": "https://securitool.js.org/",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "ShieldZCash/shieldz-mcp",
-   "url": "https://github.com/ShieldZCash/shieldz-mcp",
+   "name": "TruffleHog",
+   "url": "https://trufflesecurity.com/docs",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "Some Tricks From My Secret Group",
-   "url": "https://www.leavesongs.com/SHARE/some-tricks-from-my-secret-group.html",
-   "tier": "adjacent",
+   "name": "Trufflehog-Chrome-Extension",
+   "url": "https://github.com/trufflesecurity/Trufflehog-Chrome-Extension",
+   "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Telerik upload/crypto chain: CVE-2014-2217, CVE-2017-11317,",
-   "url": "https://community.progress.com/s/article/resolving-security-vulnerability-cve-2017-9248",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Tutorial: Implement OAuth 2.0 and JWT",
-   "url": "https://auth0.com/docs/quickstart/backend/nodejs",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Understanding JSON Web Tokens (JWT)",
    "url": "https://jwt.io/introduction/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "VENTURE-AI-LABS/cryptodataapi-mcp",
-   "url": "https://github.com/VENTURE-AI-LABS/cryptodataapi-mcp",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Vault",
-   "url": "https://github.com/hashicorp/vault",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Web Hacking 101",
-   "url": "https://leanpub.com/web-hacking-101",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "What is a Side-Channel Attack ?",
-   "url": "https://www.csoonline.com/article/567149/what-is-a-side-channel-attack-how-these-end-runs-around-encryption-put-everyone-at-risk.html",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "aaronjmars/web3-research-mcp",
-   "url": "https://github.com/aaronjmars/web3-research-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "ajipurn/fida",
-   "url": "https://github.com/ajipurn/fida",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "armorwallet/armor-crypto-mcp",
-   "url": "https://github.com/armorwallet/armor-crypto-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "bakyang2/kr-crypto-intelligence",
-   "url": "https://github.com/bakyang2/kr-crypto-intelligence",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "behrensd/mcp-firewall",
-   "url": "https://github.com/behrensd/mcp-firewall",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "bitcompare/mcp-server",
-   "url": "https://github.com/bitcompare/mcp-server",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "blazephoenixxyz-crypto/blazephoenix-mcp",
-   "url": "https://github.com/blazephoenixxyz-crypto/blazephoenix-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "breakingmesh.blogspot.in",
-   "url": "http://breakingmesh.blogspot.in/",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "breaksec.com",
-   "url": "https://www.breaksec.com/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "bubilife1202/crossfin",
-   "url": "https://github.com/bubilife1202/crossfin",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "c0rni3sm.blogspot.in",
-   "url": "http://c0rni3sm.blogspot.in/",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "cliffordtrigo.info",
-   "url": "https://www.cliffordtrigo.info/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "cryptobriefing/gloria-mcp",
-   "url": "https://github.com/cryptobriefing/gloria-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "deficlow/zipp-mcp",
-   "url": "https://github.com/deficlow/zipp-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "douglasborthwick-crypto/mcp-server-insumer",
-   "url": "https://github.com/douglasborthwick-crypto/mcp-server-insumer",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "eliasfire617/crypto-market-data-mcp",
-   "url": "https://github.com/eliasfire617/crypto-market-data-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "forgemeshlabs/coinopai-mcp",
-   "url": "https://github.com/forgemeshlabs/coinopai-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "forgemeshlabs/crypto-signals-mcp",
-   "url": "https://github.com/forgemeshlabs/crypto-signals-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "glama",
-   "url": "https://glama.ai/mcp/servers/@loglux/auth-mcp-gateway",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "hatecrack",
    "url": "https://github.com/trustedsec/hate_crack",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "hive-intel/hive-crypto-mcp",
-   "url": "https://github.com/hive-intel/hive-crypto-mcp",
+   "name": "js-snitch",
+   "url": "https://github.com/vavkamil/js-snitch",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "horustechltd/horus-flow-mcp",
-   "url": "https://github.com/horustechltd/horus-flow-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "ibreak.software",
-   "url": "https://ibreak.software/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "john-broadway/proximo",
-   "url": "https://github.com/john-broadway/proximo",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "jorkal-crypto/jorkal-nft-mcp",
-   "url": "https://github.com/jorkal-crypto/jorkal-nft-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "jsleak",
-   "url": "https://github.com/byt3hx/jsleak",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "jwt-auditor",
    "url": "https://github.com/mohelobeid/jwt-auditor",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "jwt-heartbreaker",
    "url": "https://github.com/wallarm/jwt-heartbreaker",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "jwt-key-id-injector",
    "url": "https://github.com/dariusztytko/jwt-key-id-injector",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "jwtXploiter>",
+   "url": "https://github.com/DontPanicO/jwtXploiter",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
   },
   {
    "name": "jwtear",
    "url": "https://github.com/KINGSABRI/jwtear",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-feargreed-mcp",
-   "url": "https://github.com/kukapay/crypto-feargreed-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-funds-mcp",
-   "url": "https://github.com/kukapay/crypto-funds-mcp",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-indicators-mcp",
-   "url": "https://github.com/kukapay/crypto-indicators-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-liquidations-mcp",
-   "url": "https://github.com/kukapay/crypto-liquidations-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-news-mcp",
-   "url": "https://github.com/kukapay/crypto-news-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-orderbook-mcp",
-   "url": "https://github.com/kukapay/crypto-orderbook-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-pegmon-mcp",
-   "url": "https://github.com/kukapay/crypto-pegmon-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-portfolio-mcp",
-   "url": "https://github.com/kukapay/crypto-portfolio-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-projects-mcp",
-   "url": "https://github.com/kukapay/crypto-projects-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-rss-mcp",
-   "url": "https://github.com/kukapay/crypto-rss-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-sentiment-mcp",
-   "url": "https://github.com/kukapay/crypto-sentiment-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-stocks-mcp",
-   "url": "https://github.com/kukapay/crypto-stocks-mcp",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-trending-mcp",
-   "url": "https://github.com/kukapay/crypto-trending-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "kukapay/crypto-whitepapers-mcp",
-   "url": "https://github.com/kukapay/crypto-whitepapers-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "loglux/authmcp-gateway",
    "url": "https://github.com/loglux/authmcp-gateway",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "mikusnuz/pexbot-mcp",
-   "url": "https://github.com/mikusnuz/pexbot-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "namixai/signer-mcp",
-   "url": "https://github.com/namixai/signer-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "nikicat/mcp-wallet-signer",
-   "url": "https://github.com/nikicat/mcp-wallet-signer",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "panchocosil.blogspot.in",
-   "url": "http://panchocosil.blogspot.in/",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "pwndizzle.blogspot.in",
-   "url": "http://pwndizzle.blogspot.in/",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "pwnsecurity.net",
-   "url": "http://www.pwnsecurity.net/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "qbt-labs/openmm-mcp",
-   "url": "https://github.com/qbt-labs/openmm-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "rusty-hog",
    "url": "https://github.com/newrelic/rusty-hog",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "sakurity.com/blog",
-   "url": "http://sakurity.com/blog",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "sasi2103.blogspot.co.il",
-   "url": "http://sasi2103.blogspot.co.il/",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "secinfinity.net",
-   "url": "http://www.secinfinity.net/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "secret-bridge",
-   "url": "https://github.com/duo-labs/secret-bridge",
+   "name": "truffleHog",
+   "url": "https://github.com/dxa4481/truffleHog",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "securitylearn.net",
-   "url": "http://www.securitylearn.net/about/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "snallygaster",
-   "url": "https://github.com/hannob/snallygaster",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "stephensclafani.com",
-   "url": "http://stephensclafani.com/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "szhygulin/recon-crypto-mcp",
-   "url": "https://github.com/szhygulin/recon-crypto-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "traql/mcp-server",
-   "url": "https://github.com/traql/mcp-server",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "tunedforai/x402-mcp",
-   "url": "https://github.com/tunedforai/x402-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "websecresearch.com",
-   "url": "http://www.websecresearch.com/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "websecuritylog.com",
-   "url": "http://www.websecuritylog.com/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   }
  ]
 }

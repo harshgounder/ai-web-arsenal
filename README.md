@@ -141,6 +141,24 @@ down as 22 hand authored, 113 auto-linked and flagged `mirror_provisional` (lexi
 as a hint not a claim), and 254 deliberately empty. A tool does not need its own detection; the class
 it implements does.
 
+## The real backlog, measured properly
+
+An earlier version of this repo quoted **10,476 indexed, not enriched**. That number was produced by a
+keyword matcher that matched the word `server` against all 8,183 rows of an MCP server directory, and
+pulled in badge SVGs, book listings and cheat sheets. It was a measure of matcher noise, not a backlog.
+
+Rebuilt on 2026-10-27 with rules that match on name and description only, require domain specific terms,
+and exclude directory, book and social URLs at generation:
+
+| | count |
+|---|---|
+| enriched entries in authored domains | **389** |
+| genuinely promotable candidates | **1496** |
+| ratio | 21% of the real candidate set is enriched |
+
+So the gap is about 3x, not 27x. Still a lot of work, but a number that survives inspection.
+The generator is `scripts/build-indexes.py`; the counts are re-derived on every run.
+
 ## Why the corpus matters more than it looks
 
 Of 24,759 canonical entries, only **548 appear in two or more source collections**. The awesome-lists

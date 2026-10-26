@@ -1,456 +1,156 @@
 {
  "domain": "D05",
- "generated_at": "2026-10-26",
+ "generated_at": "2026-10-27",
+ "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 20,
- "indexed_not_enriched": 64,
+ "indexed_not_enriched": 21,
  "entries": [
-  {
-   "name": "Deleting Anyone's Video Poll",
-   "url": "https://bugreader.com/testgrounds@deleting-anyones-video-poll-175",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Disclose Private Dashboard Chart's name and data in Facebook Analytics",
-   "url": "https://bugreader.com/jubabaghdad@disclose-private-dashboard-charts-name-and-data-in-facebook-analytics-184",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Disclosing privately shared gaming clips of any user",
-   "url": "https://bugreader.com/rony@disclosing-privately-shared-gaming-clips-of-any-user-128",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "GTFOBins",
-   "url": "https://gtfobins.github.io/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "GraphQL Cheat Sheet",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "How I pwned a company using IDOR and Blind XSS",
-   "url": "https://www.ansariosama.com/2017/11/how-i-pwned-company-using-idor-blind-xss.html",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "IDOR to RCE",
-   "url": "https://www.rahulr.in/2019/10/idor-to-rce.html?m=1",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Leveraging angularjs based XSS to privilege escalation",
-   "url": "https://www.shawarkhan.com/2019/08/leveraging-angularjs-based-xss-to-privilege-escalation.html",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Magento \u2013 RCE & Local File Read with low privilege admin rights",
-   "url": "https://blog.scrt.ch/2019/01/24/magento-rce-local-file-read-with-low-privilege-admin-rights/",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Page analyst could view job application details",
-   "url": "https://bugreader.com/rony@page-analyst-could-view-job-application-details-213",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![The-40-Thieves/obsidian-tc MCP server",
-   "url": "https://glama.ai/mcp/servers/The-40-Thieves/obsidian-tc/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![agent-ward MCP server",
-   "url": "https://glama.ai/mcp/servers/agentward-ai/agent-ward/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![anythink-cloud/anythink-cli MCP server",
-   "url": "https://glama.ai/mcp/servers/anythink-cloud/anythink-cli/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![api7/aisix MCP server",
-   "url": "https://glama.ai/mcp/servers/api7/aisix/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![cite-caddy MCP server",
-   "url": "https://glama.ai/mcp/servers/herbertkokholm/cite-caddy/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![ictinnovations/ictpbx-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/ictinnovations/ictpbx-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![nonameuserd/paybond-kit MCP server",
-   "url": "https://glama.ai/mcp/servers/nonameuserd/paybond-kit/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![shieldly-io/mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/shieldly-io/mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![suhui-organization/pod MCP server",
-   "url": "https://glama.ai/mcp/servers/suhui-organization/pod/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![willianpinho/mcp-gateway-scan MCP server",
-   "url": "https://glama.ai/mcp/servers/willianpinho/mcp-gateway-scan/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![yamantaka520/Agent-Memory-OS MCP server",
-   "url": "https://glama.ai/mcp/servers/yamantaka520/Agent-Memory-OS/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![zaebee/codegraph-brain MCP server",
-   "url": "https://glama.ai/mcp/servers/zaebee/codegraph-brain/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
   {
    "name": "10 real-world stories of how we've compromised CI/CD pipelines",
    "url": "https://www.nccgroup.com/research-blog/10-real-world-stories-of-how-we-ve-compromised-cicd-pipelines/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Active Directory and Privilege Escalation (ADAPE)",
    "url": "https://github.com/hausec/ADAPE-Script",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Adding anyone including non-friend and blocked people as co-host in personal event!",
-   "url": "https://bugreader.com/binit@adding-anyone-including-non-friend-and-blocked-people-as-co-host-in-personal-event-181",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "BFLA/function-level differential",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Regression_Testing_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Burp Repeater",
-   "url": "https://portswigger.net/burp/documentation/desktop/tools/repeater",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Cloudsplaining",
-   "url": "https://cloudsplaining.readthedocs.io/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "D-2 SAS exposure and privilege review",
-   "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "DomainPasswordSpray",
-   "url": "https://github.com/dafthack/DomainPasswordSpray",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Financial and receipt objects",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Forced browsing to unlinked routes",
-   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "GCPBucketBrute",
    "url": "https://github.com/RhinoSecurityLabs/GCPBucketBrute",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "GraphQL Shield",
    "url": "https://github.com/maticzav/graphql-shield",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Hacking Terraform State for Privilege Escalation",
    "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "I-5 Tenant-wide delegated grant enumeration",
    "url": "https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "IDOR and broken object-level authorization",
-   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Insecure_Direct_Object_References",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "IDOR/BOLA object differential",
-   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/12-API_Testing/02-API_Broken_Object_Level_Authorization",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Imperva SecureSphere <= v13 - Privilege Escalation",
    "url": "https://www.exploit-db.com/exploits/45130",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "LOLBAS (Living Off The Land Binaries and Scripts)",
-   "url": "https://lolbas-project.github.io/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "LinEnum",
    "url": "https://github.com/rebootuser/LinEnum",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Mass assignment/property binding",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Mufaddal Masalawala",
    "url": "https://github.com/harsh-bothra",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "OWASP Authorization Testing Automation",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Ownership-check bypass",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Postenum",
    "url": "https://github.com/mbahadou/postenum",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "R-1 ARM role-assignment enumeration",
    "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-list-rest",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Response-difference triage",
-   "url": "https://portswigger.net/burp/documentation/desktop/tools/comparer",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "SprayingToolkit",
-   "url": "https://github.com/byt3bl33d3r/SprayingToolkit",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Stop-at-first-proof discipline",
-   "url": "https://www.access-board.gov/about/vulnerability-disclosure-policy/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Tenant/campus isolation differential",
    "url": "https://learn.microsoft.com/en-us/compliance/assurance/assurance-microsoft-365-isolation-controls",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "The 200 That Proved Nothing",
    "url": "https://aivist.dev/the-200-that-proved-nothing",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "UI privilege-escalation chain review",
-   "url": "https://portswigger.net/web-security/access-control",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Vulnerable GitHub Actions Workflows Part 1: Privilege Escalation Inside Your CI/CD Pipeline",
    "url": "https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "WinPwn",
    "url": "https://github.com/SecureThisShit/WinPwn",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "glama",
-   "url": "https://glama.ai/mcp/servers/@loglux/auth-mcp-gateway",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "hackingBuddyGPT",
    "url": "https://github.com/ipa-lab/hackingBuddyGPT",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "idoru/influxdb-mcp-server",
+   "url": "https://github.com/idoru/influxdb-mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
   },
   {
    "name": "loglux/authmcp-gateway",
    "url": "https://github.com/loglux/authmcp-gateway",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "mcafee-xpass",
    "url": "https://github.com/SujalMeghwal/mcafee-xpass",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "nonameuserd/paybond-kit",
    "url": "https://github.com/nonameuserd/paybond-kit",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "pspy",
-   "url": "https://github.com/DominicBreuker/pspy",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "suhui-organization/pod",
-   "url": "https://github.com/suhui-organization/pod",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "unix-privesc-check",
    "url": "https://github.com/pentestmonkey/unix-privesc-check",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "zap-extensions>",
-   "url": "https://github.com/zaproxy/zap-extensions",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   }
  ]
 }

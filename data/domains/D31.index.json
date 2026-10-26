@@ -1,1065 +1,408 @@
 {
  "domain": "D31",
- "generated_at": "2026-10-26",
+ "generated_at": "2026-10-27",
+ "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 21,
- "indexed_not_enriched": 151,
+ "indexed_not_enriched": 57,
  "entries": [
-  {
-   "name": "mitmproxy",
-   "url": "https://github.com/mitmproxy/mitmproxy",
-   "tier": "core_web",
-   "n_sources": 4,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "ARS3NAL",
-   "url": "https://github.com/inflictx/Arsenal",
-   "tier": "core_web",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Amass",
-   "url": "https://github.com/OWASP/Amass",
-   "tier": "core_web",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Charles Proxy",
-   "url": "https://charlesproxy.com",
-   "tier": "adjacent",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
   {
    "name": "Ghidra",
    "url": "https://ghidra-sre.org/",
    "tier": "tail",
    "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "Hexinator",
-   "url": "https://hexinator.com/",
-   "tier": "tail",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "LFISuite",
-   "url": "https://github.com/D35m0nd142/LFISuite",
-   "tier": "core_web",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "VHostScan",
-   "url": "https://github.com/codingo/VHostScan",
-   "tier": "core_web",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Wireshark",
-   "url": "https://www.wireshark.org/",
-   "tier": "tail",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Begin RE: A Reverse Engineering Tutorial Workshop",
-   "url": "https://www.begin.re/the-workshop",
+   "name": "Decompiler.com",
+   "url": "https://www.decompiler.com/",
    "tier": "tail",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "BinText",
-   "url": "https://web.archive.org/web/http://www.mcafee.com/kr/downloads/free-tools/bintext.aspx",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "CodeEngn",
-   "url": "http://codeengn.com/challenges/",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Crackmes.de",
-   "url": "http://crackmes.de/",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Evilginx2",
-   "url": "https://github.com/kgretzky/evilginx2",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Hopper",
    "url": "https://www.hopperapp.com",
    "tier": "offscope",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "HxD",
-   "url": "http://mh-nexus.de/en/hxd/",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "IDA",
    "url": "https://www.hex-rays.com/products/ida/",
    "tier": "tail",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "OllyDbg",
-   "url": "http://www.ollydbg.de/",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Reverse Shell as a Service",
-   "url": "https://github.com/lukechilds/reverse-shell",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "dnSpy",
    "url": "https://github.com/0xd4d/dnSpy",
    "tier": "tail",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "mitmproxy2swagger",
    "url": "https://github.com/alufers/mitmproxy2swagger",
    "tier": "core_web",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "plasma",
    "url": "https://github.com/joelpx/plasma",
    "tier": "tail",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "radare2",
    "url": "https://github.com/radare/radare2",
    "tier": "offscope",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "tcpdump",
-   "url": "http://www.tcpdump.org/",
-   "tier": "offscope",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "zinja-coder/apktool-mcp-server",
    "url": "https://github.com/zinja-coder/apktool-mcp-server",
    "tier": "adjacent",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "",
-   "url": "ziggy42/epsilon",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "",
-   "url": "nasa/spacewasm",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "",
-   "url": "HeyPuter/firefox-wasm",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "",
-   "url": "bytecodealliance/endive",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "",
-   "url": "zwasm/zwasm",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![AIops-tools/Proxy-AIops MCP server",
-   "url": "https://glama.ai/mcp/servers/AIops-tools/Proxy-AIops/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![atlasfetch-dev/atlasfetch-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/atlasfetch-dev/atlasfetch-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![boy-offi9-inc/hexforge-gateway MCP server",
-   "url": "https://glama.ai/mcp/servers/boy-offi9-inc/hexforge-gateway/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![emirmrkaljevic/usb-rea MCP server",
-   "url": "https://glama.ai/mcp/servers/emirmrkaljevic/usb-rea/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![gridpin/gridpin MCP server",
-   "url": "https://glama.ai/mcp/servers/gridpin/gridpin/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![healthchainai/HealthChain MCP server",
-   "url": "https://glama.ai/mcp/servers/healthchainai/HealthChain/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mcp-server-dns MCP server",
-   "url": "https://glama.ai/mcp/servers/ofershap/mcp-server-dns/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mcp-server-npm-plus MCP server",
-   "url": "https://glama.ai/mcp/servers/ofershap/mcp-server-npm-plus/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mcpware/ui-annotator-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/mcpware/ui-annotator-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![paulf280-ui/solana-safe-sniper-mcp-template MCP server",
-   "url": "https://glama.ai/mcp/servers/paulf280-ui/solana-safe-sniper-mcp-template/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![sthan-io/mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/sthan-io/mcp-server/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![telleroutlook/agentkit-js MCP server",
-   "url": "https://glama.ai/mcp/servers/telleroutlook/agentkit-js/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "0",
    "url": "https://github.com/0sec-labs/0",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "13bm/GhidraMCP",
    "url": "https://github.com/13bm/GhidraMCP",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "AIops-tools/Proxy-AIops",
-   "url": "https://github.com/AIops-tools/Proxy-AIops",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Binwalk",
-   "url": "https://github.com/ReFirmLabs/binwalk",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Blog of Osanda",
    "url": "https://osandamalith.com/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "Brida",
-   "url": "https://github.com/federicodotta/Brida",
+   "name": "CFR",
+   "url": "https://www.benf.org/other/cfr/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "CVE-2017-2446 or JSC::JSGlobalObject::isHavingABadTime.",
    "url": "https://doar-e.github.io/blog/2018/07/14/cve-2017-2446-or-jscjsglobalobjectishavingabadtime/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Capstone",
    "url": "http://www.capstone-engine.org/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Capstone",
-   "url": "https://github.com/aquynh/capstone",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Claude-BugHunter",
-   "url": "https://github.com/elementalsouls/Claude-BugHunter",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Cutter",
    "url": "https://cutter.re/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "DBeaver",
-   "url": "https://github.com/dbeaver/dbeaver",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "DarunGrim",
-   "url": "https://github.com/ohjeongwook/DarunGrim",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Dependencies",
-   "url": "https://github.com/lucasg/Dependencies",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Detect It Easy(DiE)",
-   "url": "https://github.com/horsicq/Detect-It-Easy",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Diary of a reverse-engineer",
-   "url": "https://doar-e.github.io/",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Evan's Debugger",
-   "url": "http://www.codef00.com/projects#debugger",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Frida",
    "url": "https://www.frida.re/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Fridax",
-   "url": "https://github.com/NorthwaveNL/fridax",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Ghidra",
    "url": "https://github.com/NationalSecurityAgency/ghidra",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Ghidra MCP",
    "url": "https://github.com/bethington/ghidra-mcp",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Gray Hat Hacking The Ethical Hacker's Handbook by Daniel Regalado et al., 2015",
-   "url": "http://www.amazon.com/Hacking-Ethical-Hackers-Handbook-Edition/dp/0071832386",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Hacking the Xbox by Andrew Huang, 2003",
-   "url": "https://nostarch.com/xbox.htm",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Hex-Rays",
-   "url": "https://www.hex-rays.com/products/decompiler/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "How To Reverse Engineer A Web Application Firewall Using Regular Expression Reversing",
    "url": "https://www.sunnyhoi.com/reverse-engineer-web-application-firewall-using-regular-expression-reversing/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "IDA Free",
-   "url": "https://www.hex-rays.com/products/ida/support/download_freeware.shtml",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "IDAssist",
    "url": "https://github.com/symgraph/IDAssist",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "ILSpy",
    "url": "https://github.com/icsharpcode/ILSpy/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Iait\u014d",
    "url": "https://github.com/hteso/iaito",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "ImHex",
    "url": "https://github.com/WerWolv/ImHex",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Immunity Debugger",
-   "url": "https://immunityinc.com/products/debugger/",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "JAD",
    "url": "http://varaneckas.com/jad/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "JADX",
    "url": "https://github.com/skylot/jadx",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "JADX MCP Server",
    "url": "https://github.com/zinja-coder/jadx-mcp-server",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "JD-GUI",
-   "url": "https://github.com/java-decompiler/jd-gui",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "JS Beautifier",
-   "url": "https://github.com/beautify-web/js-beautify",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "JS Nice",
-   "url": "http://jsnice.org/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Jailbreak Brewing Company Security Summit: Whatsup with WhatsApp: A Detailed Walk Through of Reverse Engineering CVE-2019-3568 - Maddie Stone",
-   "url": "https://vimeo.com/377181218",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Kaitai Struct",
    "url": "https://github.com/kaitai-io/kaitai_struct",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Krakatau",
    "url": "https://github.com/Storyyeller/Krakatau",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "LaurieWired/GhidraMCP",
    "url": "https://github.com/LaurieWired/GhidraMCP",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Lena151: Reversing With Lena",
-   "url": "https://archive.org/details/lena151",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "LogiSheets",
    "url": "https://github.com/logisky/LogiSheets",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Luyten",
-   "url": "https://github.com/deathmarine/Luyten",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Malware Analysis Tutorials: a Reverse Engineering Approach",
-   "url": "http://fumalwareanalysis.blogspot.kr/p/malware-analysis-tutorials-reverse.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Malware Unicorn Reverse Engineering Tutorial",
-   "url": "https://malwareunicorn.org/workshops/re101.html#0",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Medusa",
    "url": "https://github.com/wisk/medusa",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Modlishka",
-   "url": "https://github.com/drk1wi/Modlishka",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Netzob",
    "url": "https://github.com/netzob/netzob",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Open Malware",
-   "url": "http://www.offensivecomputing.net/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "PEview",
-   "url": "http://wjradburn.com/software/",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Practical Reverse Engineering by Bruce Dang et al., 2014",
-   "url": "http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Protobuf inspector",
-   "url": "https://github.com/jmendeth/protobuf-inspector",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "PyREBox",
    "url": "https://github.com/Cisco-Talos/pyrebox",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "REA",
    "url": "https://github.com/morluto/rea",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "Radare2",
+   "url": "https://github.com/radareorg/radare2",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
   },
   {
    "name": "Radare2",
    "url": "http://rada.re/r/index.html",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Reverse Engineering",
    "url": "https://github.com/onethawt/reverseengineering-reading-list",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Reverse Engineering for Beginners by Dennis Yurichev",
-   "url": "http://beginners.re/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Reverse-Shell-Manager",
-   "url": "https://github.com/WangYihang/Reverse-Shell-Manager",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Reversing",
    "url": "https://github.com/HACKE-RC/awesome-reversing",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Reversing.kr",
-   "url": "http://www.reversing.kr/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "ScratchABit",
    "url": "https://github.com/pfalcon/ScratchABit",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Synalize It",
-   "url": "https://www.synalysis.net/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "TRRespass",
    "url": "https://github.com/vusec/trrespass",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "The IDA Pro Book by Chris Eagle, 2011",
-   "url": "https://nostarch.com/idapro2.htm",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "UEFITool",
-   "url": "https://github.com/LongSoft/UEFITool",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "UPX",
-   "url": "http://upx.sourceforge.net/",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "USBPcap",
-   "url": "https://github.com/desowin/usbpcap",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Veles",
-   "url": "https://github.com/codilime/veles",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Voltron",
-   "url": "https://github.com/snare/voltron",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "WDK/WinDbg",
-   "url": "https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "WatermelonBros/reado",
-   "url": "https://github.com/WatermelonBros/reado",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "androguard",
    "url": "https://code.google.com/p/androguard/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "angr",
-   "url": "https://angr.io/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "antinet",
-   "url": "https://github.com/0xd4d/antinet",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "atlasfetch-dev/atlasfetch-mcp",
-   "url": "https://github.com/atlasfetch-dev/atlasfetch-mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "awesome-reversing",
-   "url": "https://github.com/tylerha97/awesome-reversing",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "binwalk",
    "url": "https://github.com/devttys0/binwalk",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "boxxy",
-   "url": "https://github.com/kpcyrd/boxxy-rs",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "cutter",
    "url": "https://github.com/radareorg/cutter",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "de4dot",
    "url": "https://github.com/0xd4d/de4dot",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "dex2jar",
-   "url": "https://github.com/pxb1988/dex2jar",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "dnsenum",
-   "url": "https://github.com/fwaeytens/dnsenum/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "dotPeek",
    "url": "https://www.jetbrains.com/decompiler/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "drltrace",
-   "url": "https://github.com/mxmssh/drltrace",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "dynStruct",
-   "url": "https://github.com/ampotos/dynStruct",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "emirmrkaljevic/usb-rea",
    "url": "https://github.com/emirmrkaljevic/usb-rea",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "gridpin/gridpin",
-   "url": "https://github.com/gridpin/gridpin/tree/main/mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "hakoriginfinder",
-   "url": "https://github.com/hakluke/hakoriginfinder",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "hakrevdns",
-   "url": "https://github.com/hakluke/hakrevdns",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "jtang613/GhidrAssistMCP",
    "url": "https://github.com/jtang613/GhidrAssistMCP",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "nudge4j",
-   "url": "https://github.com/lorenzoongithub/nudge4j",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "ofershap/mcp-server-dns",
-   "url": "https://github.com/ofershap/mcp-server-dns",
+   "name": "malware-jail",
+   "url": "https://github.com/HynekPetrak/malware-jail",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "procyon",
-   "url": "https://bitbucket.org/mstrobel/procyon/wiki/Java%20Decompiler",
-   "tier": "tail",
+   "name": "plasma",
+   "url": "https://github.com/plasma-disassembler/plasma",
+   "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "pwndbg",
    "url": "https://github.com/pwndbg/pwndbg",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "qinisolabs/icdwise",
-   "url": "https://github.com/qinisolabs/icdwise",
-   "tier": "tail",
+   "name": "radareorg/r2mcp",
+   "url": "https://github.com/radareorg/radare2-mcp",
+   "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "rVMI",
-   "url": "https://github.com/fireeye/rVMI",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "retdec",
-   "url": "https://github.com/avast-tl/retdec",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "rizin",
    "url": "https://rizin.re/",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "shellpop",
-   "url": "https://github.com/0x00-0x00/shellpop",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "simples.kr",
-   "url": "http://simples.kr/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "snowman",
-   "url": "https://github.com/yegord/snowman",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "uncompyle6",
    "url": "https://github.com/rocky/python-uncompyle6",
    "tier": "tail",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
-   "name": "usbmon",
-   "url": "https://www.kernel.org/doc/Documentation/usb/usbmon.txt",
-   "tier": "offscope",
+   "name": "wakaru",
+   "url": "https://github.com/pionxzh/wakaru",
+   "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "wxHexEditor",
-   "url": "https://github.com/EUA/wxHexEditor",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "x64dbg",
-   "url": "http://x64dbg.com/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "x64dbg",
-   "url": "https://github.com/x64dbg/x64dbg",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "zboralski/ida-headless-mcp",
    "url": "https://github.com/zboralski/ida-headless-mcp",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "zinja-coder/jadx-ai-mcp",
    "url": "https://github.com/zinja-coder/jadx-ai-mcp",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   }
  ]
 }

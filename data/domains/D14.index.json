@@ -1,512 +1,254 @@
 {
  "domain": "D14",
  "generated_at": "2026-10-27",
+ "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 9,
- "indexed_not_enriched": 72,
+ "indexed_not_enriched": 35,
  "entries": [
-  {
-   "name": "API Key Leaks: Tools and exploits",
-   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks",
-   "tier": "core_web",
-   "n_sources": 5,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
   {
    "name": "DNS rebinding resilience review",
    "url": "https://github.com/nccgroup/singularity",
    "tier": "core_web",
    "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "GitHub",
-   "url": "https://github.com/juice-shop/juice-shop",
-   "tier": "offscope",
-   "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Into the borg of SSRF inside google production network",
    "url": "https://opnsec.com/2018/07/into-the-borg-ssrf-inside-google-production-network/",
    "tier": "adjacent",
    "n_sources": 3,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "AWS takeover SSRF javascript",
-   "url": "http://10degres.net/aws-takeover-ssrf-javascript/",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "DNS Rebind Toolkit",
    "url": "https://github.com/brannondorsey/dns-rebind-toolkit",
    "tier": "offscope",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Downnotifeer SSRF",
-   "url": "https://m-q-t.github.io/notes/downnotifer-ssrf/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Escalating XSS in phantomjs image rendering to SSRF",
-   "url": "https://buer.haus/2017/06/29/escalating-xss-in-phantomjs-image-rendering-to-ssrflocal-file-read/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Google VRP SSRF in Google cloud platform stackdriver",
-   "url": "https://ngailong.wordpress.com/2019/12/19/google-vrp-ssrf-in-google-cloud-platform-stackdriver/",
-   "tier": "knowledge",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "My first SSRF using DNS rebinding",
-   "url": "https://geleta.eu/2019/my-first-ssrf-using-dns-rebinfing/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "SSRF vulnerability",
-   "url": "https://evanricafort.blogspot.com/2019/08/ssrf-vulnerability-in.html",
-   "tier": "knowledge",
-   "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Whonow DNS Server",
    "url": "https://github.com/brannondorsey/whonow",
    "tier": "offscope",
    "n_sources": 2,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![Bristlecone-Logic/bristlecone-logic MCP server",
-   "url": "https://glama.ai/mcp/servers/Bristlecone2026/bristlecone-logic/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![alexar76/aimarket-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/alexar76/aimarket-mcp/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![bumbaRasch/searxng-mcp-server MCP server",
-   "url": "https://glama.ai/mcp/servers/bumbaRasch/searxng-mcp-server/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![mastyf-ai/mastyf.ai MCP server",
-   "url": "https://glama.ai/mcp/servers/mastyf-ai/mastyf.ai/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![srbsa/diffgate MCP server",
-   "url": "https://glama.ai/mcp/servers/srbsa/diffgate/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![vikasny30/aletheia-mcp MCP server",
-   "url": "https://glama.ai/mcp/servers/vikasny30/aletheia-mcp/badges/score.svg",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "@swisskyrepo",
-   "url": "https://github.com/swisskyrepo",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "A New Era of SSRF - Exploiting URL Parser in Trending Programming Languages!",
    "url": "https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "API7:2023 - Server Side Request Forgery",
    "url": "https://owasp.org/API-Security/editions/2023/en/0xa7-server-side-request-forgery/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "AWS takeover through SSRF in JavaScript",
    "url": "https://10degres.net/aws-takeover-through-ssrf-in-javascript/",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Airbnb chaining third party open redirect into SSRF via liveperson chat",
-   "url": "https://buer.haus/2017/03/09/airbnb-chaining-third-party-open-redirect-into-server-side-request-forgery-ssrf-via-liveperson-chat/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "All you need to know about SSRF and how may we write tools to do auto-detect",
    "url": "https://www.auxy.xyz/web%20security/2017/07/06/all-ssrf-knowledge.html",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Azure IMDS reachability assessment",
-   "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Azure managed-identity token exposure assessment",
-   "url": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-to-use-vm-token",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "B-XSSRF",
    "url": "https://github.com/SpiderMate/B-XSSRF",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Blind SSRF validation",
-   "url": "https://portswigger.net/web-security/ssrf/blind",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Bugbounty simple SSRF",
-   "url": "https://jin0ne.blogspot.com/2019/11/bugbounty-simple-ssrf.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Candidate sink inventory",
-   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Enguerran Gillier",
-   "url": "https://opnsec.com/",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Gwen",
-   "url": "https://10degres.net/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "HTTP Detection Agent",
    "url": "https://github.com/ai-blueteam/http-detection-agent",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "How I Chained 4 vulnerabilities on GitHub Enterprise, From SSRF Execution Chain to RCE!",
    "url": "https://blog.orange.tw/posts/2017-07-how-i-chained-4-vulnerabilities-on/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "IPv6 \u4e09\u4e2a\u8bbf\u95ee\u672c\u5730\u5730\u5740\u7684\u5c0fTips",
-   "url": "https://www.tttang.com/archive/1293/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Internal-plane discovery via SSRF",
-   "url": "https://portswigger.net/web-security/ssrf",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "MITRE CWE-601",
-   "url": "https://cwe.mitre.org/data/definitions/601.html",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "OWASP Top 10 A10:2021 SSRF",
    "url": "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Orange",
-   "url": "https://blog.orange.tw/",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Redirect and URL-parser confusion review",
-   "url": "https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet",
-   "tier": "knowledge",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SSRF bible. Cheatsheet",
    "url": "https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM/edit",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SSRF in Exchange leads to ROOT access in all instances",
    "url": "https://hackerone.com/reports/341876",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SSRF in https://imgur.com/vidgif/url",
    "url": "https://hackerone.com/reports/115748",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "SSRF reading local files from downnotifier server",
-   "url": "https://www.openbugbounty.org/blog/leonmugen/ssrf-reading-local-files-from-downnotifier-server/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "SSRF to Local File Read Exploit in Hassan's blog",
-   "url": "http://hassankhanyusufzai.com/SSRF-to-LFI/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SSRFire",
    "url": "https://github.com/micha3lb3n/SSRFire",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "SSRF\u6f0f\u6d1e\u4e2d\u7ed5\u8fc7IP\u9650\u5236\u7684\u51e0\u79cd\u65b9\u6cd5\u603b\u7ed3",
    "url": "https://www.freebuf.com/articles/web/135342.html",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Scheme allowlist review",
-   "url": "https://cwe.mitre.org/data/definitions/918.html",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Source-to-sink review for ASP.NET URL fetches",
-   "url": "https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "Stored XSS, and SSRF in Google using the Dataset Publishing Language",
    "url": "https://s1gnalcha0s.github.io/dspl/2018/03/07/Stored-XSS-and-SSRF-Google.html",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "Wallarm",
-   "url": "https://wallarm.com/",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "WebSocket and HTTP/2 proxy-abuse review",
-   "url": "https://www.rfc-editor.org/rfc/rfc6455",
-   "tier": "core_web",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "XXE OOB extracting via HTTP+FTP using single opened port",
-   "url": "https://skavans.ru/en/2017/12/02/xxe-oob-extracting-via-httpftp-using-single-opened-port/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "aesteral",
-   "url": "https://hackerone.com/aesteral",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "alexar76/aimarket-mcp",
    "url": "https://github.com/alexar76/aimarket-mcp",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "arkteam",
-   "url": "https://www.freebuf.com/author/arkteam",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "blind-ssrf-chains>",
    "url": "https://github.com/assetnote/blind-ssrf-chains",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "dnsFookup",
    "url": "https://github.com/makuga01/dnsFookup",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "dref",
+   "url": "https://github.com/mwrlabs/dref",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
   },
   {
    "name": "dref",
    "url": "https://github.com/FSecureLABS/dref",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "extended-ssrf-search",
    "url": "https://github.com/Damian89/extended-ssrf-search",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "gaussrf",
    "url": "https://github.com/KathanP19/gaussrf",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "grafana-ssrf",
    "url": "https://github.com/RandomRobbieBF/grafana-ssrf",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "ground-control",
    "url": "https://github.com/jobertabma/ground-control",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "htb-writeups",
    "url": "https://github.com/momenbasel/htb-writeups",
    "tier": "core_web",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "httprebind",
    "url": "https://github.com/daeken/httprebind",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "lorsrf",
    "url": "https://github.com/knassar702/lorsrf",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "phith0n",
-   "url": "https://www.tttang.com/user/phith0n",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "rbndr",
    "url": "https://github.com/taviso/rbndr",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "sentrySSRF",
    "url": "https://github.com/xawdxawdx/sentrySSRF",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "ssrf-sheriff",
    "url": "https://github.com/teknogeek/ssrf-sheriff",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "ssrfDetector",
    "url": "https://github.com/JacobReynolds/ssrfDetector",
    "tier": "offscope",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   },
   {
    "name": "surf",
    "url": "https://github.com/assetnote/surf",
    "tier": "adjacent",
    "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
+   "status": "PROMOTABLE"
   }
  ]
 }
