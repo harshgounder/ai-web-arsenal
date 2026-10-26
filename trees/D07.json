@@ -1,0 +1,59 @@
+{
+ "id": "d07-root",
+ "q": "Do you know which interpreter receives the value?",
+ "why": "Every injection class is defined by its sink, and the payload is a consequence of the sink. Choosing a payload before a sink is how scanners produce false positives.",
+ "branches": [
+  {
+   "a": "No, sink unknown",
+   "action": "find the sink first. arithmetic or syntax that only one interpreter evaluates beats a payload list",
+   "tools": [
+    "d07-rea-listeners",
+    "d07-sstimap"
+   ],
+   "oracle": "a response only that interpreter could produce"
+  },
+  {
+   "a": "Yes, a renderer",
+   "action": "read the handlers, pick a context payload, confirm with a callback under a control",
+   "tools": [
+    "d07-dalfox",
+    "d07-rea-listeners"
+   ],
+   "oracle": "execution confirmed by callback"
+  },
+  {
+   "a": "Yes, a query",
+   "action": "boolean and time based pairs, never a destructive statement",
+   "tools": [
+    "d07-sqlmap",
+    "d07-nosqlmap"
+   ],
+   "oracle": "differential or timing with a matched control"
+  },
+  {
+   "a": "Yes, a shell",
+   "action": "blind time based first, then a reversible side effect",
+   "tools": [
+    "d07-commix"
+   ],
+   "oracle": "timing control plus a benign artefact"
+  },
+  {
+   "a": "Yes, a deserializer",
+   "action": "identify the sink and the classpath, then match a gadget",
+   "tools": [
+    "d07-ysoserial",
+    "d07-ysoserial-net"
+   ],
+   "oracle": "callback from the target process"
+  },
+  {
+   "a": "Second order suspected",
+   "action": "store then trigger a different read. the oracle is in the second request",
+   "tools": [
+    "d07-webgoat"
+   ],
+   "oracle": "effect appears on a later read"
+  }
+ ]
+}

@@ -1,0 +1,676 @@
+{
+ "id": "D07",
+ "title": "Injection family",
+ "version": "0.1",
+ "generated": "2026-10-26",
+ "status": "AUTHORED. The classic surface, with the context-first rule most scanners violate.",
+ "atoms": [
+  "A01",
+  "A05",
+  "A11",
+  "A04"
+ ],
+ "atom_notes": {
+  "A01": "the primitive: data the first layer treated as inert is executed downstream",
+  "A05": "the same bytes parse differently in two layers, which is how filters get bypassed",
+  "A11": "deserialization needs a gadget, so the dependency set is part of the attack",
+  "A04": "second order injection means the sink is a different request than the source"
+ },
+ "required_cells": [
+  {
+   "cell": "S06/L05/A2",
+   "why": "identify sink and context before choosing a payload, or you are spraying",
+   "filled": true
+  },
+  {
+   "cell": "S06/L06/A3",
+   "why": "detection at scale needs a differential oracle, not a payload list",
+   "filled": true
+  },
+  {
+   "cell": "S06/L07/A2",
+   "why": "exploitation confirms reach and impact",
+   "filled": true
+  },
+  {
+   "cell": "S06/L08/A5",
+   "why": "arithmetic or timing control proves the sink is real",
+   "filled": true
+  },
+  {
+   "cell": "S07/L06/A2",
+   "why": "serialization classes need the dependency set, not just the parameter",
+   "filled": true
+  },
+  {
+   "cell": "S06/L11/A3",
+   "why": "retest after a filter change, the class most likely to regress",
+   "filled": false
+  },
+  {
+   "cell": "S06/L12/A6",
+   "why": "continuous injection regression as code changes",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d07-sqlmap",
+   "name": "sqlmap",
+   "url": "https://github.com/sqlmapproject/sqlmap",
+   "role": "SQL injection detection and exploitation, the reference implementation",
+   "driver": {
+    "install": "pacman:sqlmap",
+    "verify": "sqlmap --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "a parameter that reaches a query",
+    "error, boolean or time based signal available"
+   ],
+   "oracle": [
+    "extracted data that could not come from the application",
+    "time delay proportional to the payload"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "Never dump against production. Level 2 risk 1 is usually enough; higher is loud."
+  },
+  {
+   "id": "d07-commix",
+   "name": "commix",
+   "url": "https://github.com/commixproject/commix",
+   "role": "OS command injection, the counterpart for the shell sink",
+   "driver": {
+    "install": "aur:commix",
+    "verify": "commix --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "a parameter that reaches a shell"
+   ],
+   "oracle": [
+    "timing or output consistent with execution"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "Blind time based first, then a reversible side effect. No destructive commands."
+  },
+  {
+   "id": "d07-dalfox",
+   "name": "dalfox",
+   "url": "https://github.com/hahwul/dalfox",
+   "role": "XSS scanning with DOM and parameter analysis",
+   "driver": {
+    "install": "aur:dalfox",
+    "verify": "dalfox version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a reflected or stored input and a sink"
+   ],
+   "oracle": [
+    "payload executes in a browser, confirmed by callback"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "Reports candidates. A candidate is a finding only when it executes under a control."
+  },
+  {
+   "id": "d07-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Fuzz the injection position to find a working context",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "a fuzz position and a differential signal"
+   ],
+   "oracle": [
+    "status, length or timing cluster per payload"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d07-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Known CVE and misconfiguration injection templates",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A01",
+    "A15"
+   ],
+   "preconditions": [
+    "a fingerprint matching the template"
+   ],
+   "oracle": [
+    "template match with evidence"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d07-nosqlmap",
+   "name": "NoSQLMap",
+   "url": "https://github.com/codingo/NoSQLMap",
+   "role": "NoSQL injection including operator injection through JSON bodies",
+   "driver": {
+    "install": "git:https://github.com/codingo/NoSQLMap",
+    "verify": "python3 nosqlmap.py --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a JSON body accepted and parsed",
+    "operator syntax reaches the query"
+   ],
+   "oracle": [
+    "authentication bypass or data the query should not match"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Operator injection in JSON is what most scanners miss, because the payload is not a string."
+  },
+  {
+   "id": "d07-ysoserial",
+   "name": "ysoserial",
+   "url": "https://github.com/frohoff/ysoserial",
+   "role": "Java deserialization gadget chains matched to the classpath",
+   "driver": {
+    "install": "git:https://github.com/frohoff/ysoserial",
+    "verify": "java -jar ysoserial.jar",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A11"
+   ],
+   "preconditions": [
+    "a Java deserialization sink",
+    "a gadget present in the target classpath"
+   ],
+   "oracle": [
+    "execution or a callback from the target"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "The finding is the sink, not the gadget. Identify the sink, then match a gadget."
+  },
+  {
+   "id": "d07-ysoserial-net",
+   "name": "ysoserial.net",
+   "url": "https://github.com/pwntester/ysoserial.net",
+   "role": "The .NET counterpart, for ViewState and BinaryFormatter sinks",
+   "driver": {
+    "install": "git:https://github.com/pwntester/ysoserial.net",
+    "verify": "ysoserial.exe -h",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A11"
+   ],
+   "preconditions": [
+    ".NET deserialization sink",
+    "machineKey or equivalent known or recoverable"
+   ],
+   "oracle": [
+    "execution confirmed by callback"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d07-sstimap",
+   "name": "SSTImap",
+   "url": "https://github.com/vladko312/SSTImap",
+   "role": "Server side template injection across engine families",
+   "driver": {
+    "install": "pipx:sstimap",
+    "verify": "sstimap --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "user input rendered through a template engine"
+   ],
+   "oracle": [
+    "arithmetic evaluation confirmed in the output"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Arithmetic first, never a shell payload. 7*7 is the only safe first test."
+  },
+  {
+   "id": "d07-payloads",
+   "name": "PayloadsAllTheThings",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+   "role": "The payload corpus, organised by class and context",
+   "driver": {
+    "install": "git:https://github.com/swisskyrepo/PayloadsAllTheThings",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a class and a context"
+   ],
+   "oracle": [
+    "a payload that works for that context"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "A lookup after identifying the context, not a spray list."
+  },
+  {
+   "id": "d07-portswigger",
+   "name": "PortSwigger Web Security Academy labs",
+   "url": "https://portswigger.net/web-security/all-labs",
+   "role": "The best free lab set per class, each with an intended answer",
+   "driver": {
+    "install": "n/a web",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "a browser"
+   ],
+   "oracle": [
+    "lab solved"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Calibration: if a tool cannot solve the basic lab, do not point it at a real target."
+  },
+  {
+   "id": "d07-dvwa",
+   "name": "DVWA",
+   "url": "https://github.com/digininja/DVWA",
+   "role": "Classic injection modules",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "docker"
+   ],
+   "oracle": [
+    "module completed"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d07-webgoat",
+   "name": "OWASP WebGoat",
+   "url": "https://github.com/WebGoat/WebGoat",
+   "role": "Structured lessons including blind and second order",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A04"
+   ],
+   "preconditions": [
+    "docker"
+   ],
+   "oracle": [
+    "lesson completed"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d07-wstg-inpv",
+   "name": "WSTG Input Validation (33 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/",
+   "role": "The closest thing to a complete injection test list",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d07-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per class technique reference with payload context",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d07-atlas-w04",
+   "name": "Atlas W04: datastore writes",
+   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "role": "Technique pointer. W04 is queued and this says so.",
+   "driver": {
+    "install": "n/a data",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A04"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "PROBABLE",
+   "note": "Injection technique depth belongs in the atlas as write patterns. The pointer is honest about being queued."
+  },
+  {
+   "id": "d07-rea-listeners",
+   "name": "rea inspect_web_event_listeners",
+   "url": "https://rea.tools",
+   "role": "Read the actual DOM handlers before guessing which sink a payload reaches",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A08"
+   ],
+   "preconditions": [
+    "a live page and a selector"
+   ],
+   "oracle": [
+    "listener list with source ownership"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "For DOM XSS this is the difference between guessing at sinks and reading them."
+  }
+ ],
+ "tree": {
+  "id": "d07-root",
+  "q": "Do you know which interpreter receives the value?",
+  "why": "Every injection class is defined by its sink, and the payload is a consequence of the sink. Choosing a payload before a sink is how scanners produce false positives.",
+  "branches": [
+   {
+    "a": "No, sink unknown",
+    "action": "find the sink first. arithmetic or syntax that only one interpreter evaluates beats a payload list",
+    "tools": [
+     "d07-rea-listeners",
+     "d07-sstimap"
+    ],
+    "oracle": "a response only that interpreter could produce"
+   },
+   {
+    "a": "Yes, a renderer",
+    "action": "read the handlers, pick a context payload, confirm with a callback under a control",
+    "tools": [
+     "d07-dalfox",
+     "d07-rea-listeners"
+    ],
+    "oracle": "execution confirmed by callback"
+   },
+   {
+    "a": "Yes, a query",
+    "action": "boolean and time based pairs, never a destructive statement",
+    "tools": [
+     "d07-sqlmap",
+     "d07-nosqlmap"
+    ],
+    "oracle": "differential or timing with a matched control"
+   },
+   {
+    "a": "Yes, a shell",
+    "action": "blind time based first, then a reversible side effect",
+    "tools": [
+     "d07-commix"
+    ],
+    "oracle": "timing control plus a benign artefact"
+   },
+   {
+    "a": "Yes, a deserializer",
+    "action": "identify the sink and the classpath, then match a gadget",
+    "tools": [
+     "d07-ysoserial",
+     "d07-ysoserial-net"
+    ],
+    "oracle": "callback from the target process"
+   },
+   {
+    "a": "Second order suspected",
+    "action": "store then trigger a different read. the oracle is in the second request",
+    "tools": [
+     "d07-webgoat"
+    ],
+    "oracle": "effect appears on a later read"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "SQL injection",
+   "detect": "query error signatures, unusual query time",
+   "control": "parameterised queries everywhere",
+   "rule": "error and time based pairs"
+  },
+  {
+   "attack": "XSS",
+   "detect": "payload reflected unencoded",
+   "control": "context aware output encoding plus CSP",
+   "rule": "reflected markup in a response"
+  },
+  {
+   "attack": "command injection",
+   "detect": "process spawn from a request handler",
+   "control": "no shell, argv only",
+   "rule": "shell spawn in request context"
+  },
+  {
+   "attack": "SSTI",
+   "detect": "arithmetic evaluation in output",
+   "control": "logic-less templates, no user template source",
+   "rule": "expression evaluation attempt"
+  },
+  {
+   "attack": "deserialization",
+   "detect": "unexpected class in a deserialised stream",
+   "control": "allowlisted types, signed blobs",
+   "rule": "deserialisation type anomaly"
+  },
+  {
+   "attack": "NoSQL operator injection",
+   "detect": "operator syntax in a JSON body",
+   "control": "type checking, no object pass through",
+   "rule": "operator key in body"
+  },
+  {
+   "attack": "second order injection",
+   "detect": "stored value re-entering a sink",
+   "control": "encode at the sink not the source",
+   "rule": "sink receives previously stored data"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool identifies the sink from behaviour without a class specific probe",
+   "class": "no-tool",
+   "build_candidate": "a polyglot probe set where each member is evaluated by exactly one interpreter, ordered by safety"
+  },
+  {
+   "gap": "No second order scanner that tracks a value from store to later sink",
+   "class": "no-tool",
+   "build_candidate": "tag a benign canary, store it, then watch every later response for the tag in a sink context"
+  },
+  {
+   "gap": "No safe SSTI prober that never sends an execution payload",
+   "class": "partial",
+   "build_candidate": "arithmetic only, with a control that must not evaluate"
+  },
+  {
+   "gap": "L11 retest and L12 regression cells empty",
+   "class": "coverage",
+   "build_candidate": "replay the exact proving request per finding after a filter change"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D07.index.json"
+ }
+}
