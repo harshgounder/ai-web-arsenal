@@ -29,6 +29,7 @@ rot with the disposable half.
 | prompt packs | **5** | phase-shaped, with failure modes and verification |
 | domains with authored data | **1 of 37** | D11 API protocols is the template |
 | patterns in the atlas | **50** | W02 authorisation on writes, gate passing |
+| taxonomy items mapped | **624 of 706** | WSTG, ASVS, VRT, API Top 10, ATLAS, LLM Top 10 to atoms, 88.4% |
 
 These numbers are produced by `scripts/readme-stats.py`. If this table and that script disagree, the
 script is right.
@@ -89,7 +90,8 @@ own hallucinations. A critic that is rewarded for REFUTED does not.
 | `mcps/` | MCP configs, with the rule that a server is listed only with a working config |
 | `skills/web-arsenal/` | an agent skill that encodes the order of operations |
 | `trees/` | decision trees as JSON, so an agent can traverse them |
-| `LOG.md` | every step, every error, including the two facts I got wrong |
+| `docs/TAXONOMY-COVERAGE.md` | every taxonomy test ID mapped to an atom, with the unmapped list printed |
+| `LOG.md` | every step, every error, including the facts I got wrong |
 
 ---
 
