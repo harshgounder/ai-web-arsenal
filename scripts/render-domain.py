@@ -94,7 +94,7 @@ def render(d):
     a("")
 
     # detail for entries that carry preconditions or notes
-    rich = [e for e in entries if e.get("preconditions") or e.get("note")]
+    rich = [e for e in entries if e.get("preconditions") or e.get("note") or e.get("procedure")]
     if rich:
         a("### Details that matter")
         a("")
@@ -108,6 +108,8 @@ def render(d):
                 a(f"- defense levels it addresses: {', '.join(e['evades'])}")
             if e.get("detected_by"):
                 a(f"- detected by: {', '.join(e['detected_by'])}")
+            if e.get("procedure"):
+                a("- runnable: " + " -> ".join(e["procedure"]))
             if e.get("note"):
                 a(f"- note: {e['note']}")
             a("")

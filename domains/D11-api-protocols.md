@@ -76,6 +76,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `differential_response`, `status_code_divergence`
 - defense levels it addresses: F2
 - detected by: 404 volume anomaly, WAF path enumeration rule
+- runnable: capture one authenticated request from the API -> kr scan <host> -w routes.kite -x 8, wait for 429 before raising -> diff the discovered routes against the captured set, the delta is the target
 - note: The route wordlists matter more than the tool. Assetnote's kite files encode real API shapes.
 
 **ffuf**  
@@ -83,6 +84,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `differential_response`, `size_or_status_cluster`
 - defense levels it addresses: F2, F3
 - detected by: request rate anomaly, CRS 913100 scanner user agent
+- runnable: pick one fuzz position and one signal, status or size -> ffuf -w list -u URL -of json -rate 30 -> re-run the top hits with a control value that should 404
 - note: Set -rate. An agent that ignores rate is a denial of service, not a tester.
 
 **arjun**  
@@ -90,12 +92,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `response_delta_per_parameter`, `reflection_detection`
 - defense levels it addresses: F2
 - detected by: parameter count anomaly
+- runnable: arjun -u endpoint -oJ params.json -> for each new parameter, send it with a benign value and with an absurd one -> the parameter that changes behaviour is the hypothesis
 
 **clairvoyance**  
 - preconditions: `introspection disabled but field suggestions enabled`, `or error messages leak field names`
 - oracle: `schema_partial_recovery`, `suggestion_error_differential`
 - defense levels it addresses: F3
 - detected by: introspection query signature and field suggestion probing
+- runnable: confirm introspection is actually off with a direct query -> clairvoyance -o schema.json -w wordlist URL/graphql -> compare recovered fields to what the UI calls, the gap is unauthorised surface
 - note: This is the canonical example of a tool that exists because a defence (introspection off) was assumed sufficient and was not.
 
 **InQL**  
@@ -103,12 +107,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `query_success`, `data_exposure_differential`
 - defense levels it addresses: F2
 - detected by: introspection query signature
+- runnable: inql -t URL/graphql -o out -> pick the mutation with the most privileged sounding name -> send it with a minimal body and read the error, the error describes the input shape
 
 **graphw00f**  
 - preconditions: `an exposed graphql endpoint`
 - oracle: `engine_identification`
 - defense levels it addresses: F1
 - detected by: operations per request ratio
+- runnable: graphw00f -d -t URL/graphql -> note engine and version -> look up that engine's introspection and batching quirks before payload selection
 - note: Engine matters because batching, alias limits and introspection quirks differ per engine. Fingerprint before you payload.
 
 **mitmproxy2swagger**  
@@ -116,6 +122,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `spec_parses`, `spec_matches_observed_responses`
 - defense levels it addresses: F1
 - detected by: not detectable, this is offline
+- runnable: mitmdump -w flows while using the product normally -> mitmproxy2swagger -i flows -o spec.yml -p https://api -> open spec.yml, every path marked ignored is a question: why did it not match
 - note: The single highest leverage API step. A spec turns guessing into property testing.
 
 **grpcurl**  
@@ -123,6 +130,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `rpc_response`, `reflection_service_listing`
 - defense levels it addresses: F2
 - detected by: reflection service calls
+- runnable: grpcurl -plaintext host:443 list -> if reflection answers, describe every service -> call the least privileged looking method with an empty message and read the field error
 - note: Reflection on is equivalent to a free full schema. Nobody checks it.
 
 **schemathesis**  
@@ -130,6 +138,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `crash`, `status_code_violation`, `schema_response_mismatch`
 - defense levels it addresses: F3
 - detected by: introspection query signature and field suggestion probing
+- runnable: obtain or recover a spec -> schemathesis run spec.yml --checks all --hypothesis-seed 0 -> for each failure, replay with the recorded seed, that is the evidence
 - note: Reproducible failures with hypothesis seeds, which makes it usable as evidence.
 
 **RESTler**  
@@ -137,6 +146,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `sequence_crash`, `state_invariant_violation`
 - defense levels it addresses: F3
 - detected by: abnormal call sequence graph
+- runnable: restler compile --api_spec spec.json, this generates the grammar -> restler test --grammar_file g.json, then restler fuzz -> inspect sequence bugs, they need more than one call to reproduce
 - note: The only credible stateful API fuzzer. Heavy build, worth it for logic bugs.
 
 **graphql-cop**  
@@ -144,12 +154,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `misconfiguration_confirmed_by_response`
 - defense levels it addresses: F2
 - detected by: introspection query signature and field suggestion probing
+- runnable: graphql-cop -t URL/graphql -> take each finding and confirm it by hand, the tool over-reports -> record the response, not the tool verdict
 
 **Damn Vulnerable GraphQL Application**  
 - preconditions: `you want a lab, not a target`
 - oracle: `intended_vulnerability_reproduced`
 - defense levels it addresses: F1
 - detected by: n/a lab
+- runnable: docker run the DVGA image -> run the tool under evaluation against it -> if the tool cannot solve the known bugs, do not point it at a real target
 - note: Use this to calibrate a tool before pointing it at a real target. A tool that fails DVGA is a broken tool.
 
 **OWASP crAPI**  
@@ -157,6 +169,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `intended_vulnerability_reproduced`
 - defense levels it addresses: F1
 - detected by: n/a lab
+- runnable: docker compose up crAPI -> create two users and one object owned by user A -> replay A's object requests as B, that is the BOLA harness
 - note: Best API lab for BOLA because it has real object ownership and multiple users.
 
 **VAmPI**  
@@ -164,12 +177,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `intended_vulnerability_reproduced`
 - defense levels it addresses: F1
 - detected by: n/a lab
+- runnable: docker run VAmPI -> enumerate with the tool -> use only as a smoke test, it is too small to be a benchmark
 
 **jwt_tool**  
 - preconditions: `token based auth with a JWT you can decode`
 - oracle: `token_accepted_by_server`, `claim_change_reflected`
 - defense levels it addresses: F2, F6
 - detected by: alg mismatch at verifier, kid path anomaly
+- runnable: jwt_tool <token> -M at, run the full set -> for each success, verify the token actually grants something -> the accepted token with no privilege difference is not a finding
 - note: In D06 mostly, listed here because every API test hits tokens first.
 
 **Cherrybomb**  
@@ -177,12 +192,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `spec_violation_confirmed_live`
 - defense levels it addresses: F1
 - detected by: n/a static
+- runnable: cherrybomb -f spec.yml -> each finding is a spec defect, confirm against the live API -> the ones that survive contact with the API are the report
 
 **Akto**  
 - preconditions: `mirrored traffic or a reachable API`
 - oracle: `test_result_with_violation`
 - defense levels it addresses: F2
 - detected by: test traffic pattern
+- runnable: point akto at mirrored traffic or a reachable API -> run its test suite for the detected API shapes -> triage by whether the endpoint holds objects, not by severity
 - note: Useful when you want automated coverage over many endpoints, weak on logic.
 
 **Astra**  
@@ -190,6 +207,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `reported_vulnerability`
 - defense levels it addresses: F2
 - detected by: scan pattern
+- runnable: astra --url spec.json -> review auth findings first, they are the highest hit rate -> ignore the injection findings until you have confirmed one by hand
 - note: Last release is old. Kept because nothing newer covers swagger native auth testing the same way.
 
 **BatchQL**  
@@ -197,6 +215,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `response_count_vs_request_count`, `rate_limit_bypass_proof`
 - defense levels it addresses: F7
 - detected by: operations per request ratio
+- runnable: confirm batching is enabled with a two alias query -> send N aliases of one mutation against one rate limited endpoint -> compare operation count to request count, that ratio is the finding
 - note: Targets a defence (rate limiting) that assumes one request equals one operation.
 
 **GraphQLmap**  
@@ -204,15 +223,24 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `data_dump`, `injection_effect`
 - defense levels it addresses: F2
 - detected by: introspection query signature and field suggestion probing
+- runnable: graphqlmap -u URL/graphql -> dump schema if introspection is on, otherwise skip to injection modules -> confirm any dump against a second query, never trust one tool
 
 **newman**  
 - preconditions: `a collection exists, or you built one from a HAR`
 - oracle: `assertion_pass_fail`
 - defense levels it addresses: F2
 - detected by: n/a
+- runnable: export the collection from captured traffic -> run it as identity A, save the responses -> run it as identity B, diff, the diffs are the access matrix
+
+**OWASP API Security Top 10 (2023)**  
+- runnable: map each finding to exactly one of A1 to A10 -> if it maps to none, the finding is probably not an API issue -> use the mapping in the report, it is what the client recognises
 
 **MindAPI**  
+- runnable: walk the mind map for the protocol in front of you -> each leaf is a test you have not run -> record negatives, the map's value is coverage not hits
 - note: Closest prior art to what this repo does. It is a mind map, not machine readable, which is the gap we fill.
+
+**API-Security-Checklist**  
+- runnable: read the section matching the finding class -> each countermeasure is the control column for your report -> any countermeasure missing at the target is a hardening recommendation
 
 ## Decision tree
 
