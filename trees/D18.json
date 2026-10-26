@@ -1,0 +1,41 @@
+{
+ "id": "d18-root",
+ "q": "What is the trust decision: a package, an action, or a build?",
+ "why": "Three different supply chains with three different checks. Most reviews only cover packages and call it done.",
+ "branches": [
+  {
+   "a": "A package",
+   "action": "check registry priority and namespace scope, then whether a private name could resolve publicly",
+   "tools": [
+    "d18-trivy",
+    "d18-grype"
+   ],
+   "oracle": "a package resolved from the wrong registry"
+  },
+  {
+   "a": "A CI action or plugin",
+   "action": "an action is code executed with your token. read what it does and check whether the tag is mutable",
+   "tools": [
+    "d18-scorecard"
+   ],
+   "oracle": "mutable tag or unreviewed action executing"
+  },
+  {
+   "a": "A build",
+   "action": "provenance and signing. an unsigned artefact is a claim, not a fact",
+   "tools": [
+    "d18-slsa",
+    "d18-cosign"
+   ],
+   "oracle": "signature verified against the expected identity"
+  },
+  {
+   "a": "A secret leak",
+   "action": "scan the repo and the bundle, then verify the secret is live",
+   "tools": [
+    "d18-gitleaks"
+   ],
+   "oracle": "secret verified against its service"
+  }
+ ]
+}

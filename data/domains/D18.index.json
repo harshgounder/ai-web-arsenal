@@ -1,0 +1,974 @@
+{
+ "domain": "D18",
+ "generated_at": "2026-10-27",
+ "enriched": 9,
+ "indexed_not_enriched": 138,
+ "entries": [
+  {
+   "name": "git-dumper",
+   "url": "https://github.com/arthaud/git-dumper",
+   "tier": "offscope",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gato",
+   "url": "https://github.com/praetorian-inc/gato",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ysoserial.net>",
+   "url": "https://github.com/pwntester/ysoserial.net",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "zizmor",
+   "url": "https://github.com/zizmorcore/zizmor",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![JoeGlenn1213/ActionD MCP server",
+   "url": "https://glama.ai/mcp/servers/JoeGlenn1213/ActionD/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![OFODevelopment/cerebrochain-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/OFODevelopment/cerebrochain-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![SECRET4422/guardrail-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/SECRET4422/guardrail-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Skyrxin/sast-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/Skyrxin/sast-mcp-server/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![SupplyMaven-SCR/supplymaven-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/SupplyMaven-SCR/supplymaven-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![The-40-Thieves/obsidian-tc MCP server",
+   "url": "https://glama.ai/mcp/servers/The-40-Thieves/obsidian-tc/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![TimurRakhmatullin86/mcp-drill MCP server",
+   "url": "https://glama.ai/mcp/servers/TimurRakhmatullin86/mcp-drill/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![YugantM/hvtracker-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/YugantM/hvtracker-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![agent-bom MCP server",
+   "url": "https://glama.ai/mcp/servers/@msaad00/agent-bom/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![alexbypa/github-projectpulse-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/alexbypa/github-projectpulse-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![askalf/truecopy MCP server",
+   "url": "https://glama.ai/mcp/servers/askalf/truecopy/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![codemagic-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/todah-zg/codemagic-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![datanexusmcp/mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/datanexusmcp/mcp-server/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![doteyeso-ops/mcp-server-vibes-coded MCP server",
+   "url": "https://glama.ai/mcp/servers/doteyeso-ops/mcp-server-vibes-coded/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcp-server-github-actions MCP server",
+   "url": "https://glama.ai/mcp/servers/ofershap/mcp-server-github-actions/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mopanc/depguard MCP server",
+   "url": "https://glama.ai/mcp/servers/mopanc/depguard/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mshegolev/gitlab-ci-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/mshegolev/gitlab-ci-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![piiiico/proof-of-commitment MCP server",
+   "url": "https://glama.ai/mcp/servers/piiiico/proof-of-commitment/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tp322d/lastping-app MCP server",
+   "url": "https://glama.ai/mcp/servers/tp322d/lastping-app/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![transfa MCP server",
+   "url": "https://glama.ai/mcp/servers/colapsis/transfa/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![willianpinho/mcp-gateway-scan MCP server",
+   "url": "https://glama.ai/mcp/servers/willianpinho/mcp-gateway-scan/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ze6ad36390 MCP server",
+   "url": "https://glama.ai/mcp/servers/ze6ad36390/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "(The) Postman Carries Lots of Secrets",
+   "url": "https://trufflesecurity.com/blog/postman-carries-lots-of-secrets",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "10 real-world stories of how we've compromised CI/CD pipelines",
+   "url": "https://www.nccgroup.com/research-blog/10-real-world-stories-of-how-we-ve-compromised-cicd-pipelines/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A0 owner-side or offline review",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ADOKit",
+   "url": "https://github.com/xforcered/ADOKit",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ASP.NET resource-handler inventory",
+   "url": "https://learn.microsoft.com/en-us/answers/questions/1180460/webresource-axd-scriptresource-axd-files",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWS Targeted by a Package Backfill Attack",
+   "url": "https://www.mend.io/blog/aws-targeted-by-a-package-backfill-attack/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Abusing Repository Webhooks to Access Internal CI/CD Systems at Scale",
+   "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/repository-webhook-abuse-access-ci-cd-systems-at-scale/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ActionsTOCTOU (Time Of Check to Time Of Use)",
+   "url": "https://github.com/AdnaneKhan/ActionsTOCTOU/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "All the Small Things: Azure CLI Leakage and Problematic Usage Patterns",
+   "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/secrets-leakage-user-error-azure-cli/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Anyone can Access Deleted and Private Repository Data on GitHub",
+   "url": "https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Badsecrets",
+   "url": "https://github.com/blacklanternsecurity/badsecrets",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bastet",
+   "url": "https://github.com/OneSavieLabs/Bastet",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Beyond S3: Exposed Resources on AWS",
+   "url": "https://duo.com/blog/beyond-s3-exposed-resources-on-aws",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Burp ViewState Editor",
+   "url": "https://portswigger.net/bappstore/ba17d9fb487448b48368c22cb70048dc",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CI/CD Attacks",
+   "url": "https://github.com/TupleType/awesome-cicd-attacks",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Can You Trust Your VSCode Extensions?",
+   "url": "https://www.aquasec.com/blog/can-you-trust-your-vscode-extensions/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Can you trust ChatGPT's package recommendations?",
+   "url": "https://vulcan.io/blog/ai-hallucinations-package-risk",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CloudQuarry: Digging for secrets in public AMIs",
+   "url": "https://securitycafe.ro/2024/05/08/aws-cloudquarry-digging-for-secrets-in-public-amis/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Common Threat Matrix for CI/CD Pipeline",
+   "url": "https://github.com/rung/threat-matrix-cicd",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Daghis/teamcity-mcp",
+   "url": "https://github.com/Daghis/teamcity-mcp",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Deep dive into Visual Studio Code extension security vulnerabilities",
+   "url": "https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Dependency Confusions in Docker and remote pwning of your infra",
+   "url": "https://www.errno.fr/DockerDependencyConfusion.html",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Employee Personal GitHub Repos Expose Internal Azure and Red Hat Secrets",
+   "url": "https://www.aquasec.com/blog/github-repos-expose-azure-and-red-hat-secrets/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Erosion of Trust: Unmasking Supply Chain Vulnerabilities in the Terraform Registry",
+   "url": "https://boostsecurity.io/blog/erosion-of-trust-unmasking-supply-chain-vulnerabilities-in-the-terraform-registry",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "EventValidation coverage review",
+   "url": "https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.page.enableeventvalidation?view=netframework-4.8.1",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Fixing typos and breaching microsoft's perimeter",
+   "url": "https://johnstawinski.com/2024/04/15/fixing-typos-and-breaching-microsofts-perimeter/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Forging signed commits on GitHub",
+   "url": "https://iter.ca/post/gh-sig-pwn/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Fortune 500 at Risk: 250M Artifacts Exposed via Misconfigured Registries",
+   "url": "https://www.aquasec.com/blog/250m-artifacts-exposed-via-misconfigured-registries/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "From Self-Hosted GitHub Runner to Self-Hosted Backdoor",
+   "url": "https://www.praetorian.com/blog/self-hosted-github-runners-are-backdoors/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GH Archive",
+   "url": "https://www.gharchive.org/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GHTorrent Project",
+   "url": "http://ghtorrent-downloads.ewi.tudelft.nl/mysql/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gato-X",
+   "url": "https://github.com/AdnaneKhan/Gato-X",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitFive",
+   "url": "https://github.com/mxrch/gitfive",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub Actions Attack Diagram",
+   "url": "https://github.com/jstawinski/GitHub-Actions-Attack-Diagram",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub Dataset Research Reveals Millions Potentially Vulnerable to RepoJacking",
+   "url": "https://www.aquasec.com/blog/github-dataset-research-reveals-millions-potentially-vulnerable-to-repojacking/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub comments abused to push malware via Microsoft repo URLs",
+   "url": "https://www.bleepingcomputer.com/news/security/github-comments-abused-to-push-malware-via-microsoft-repo-urls/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitLab Secrets",
+   "url": "https://github.com/RichardoC/gitlab-secrets",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gitloker attacks abuse GitHub notifications to push malicious OAuth apps",
+   "url": "https://www.bleepingcomputer.com/news/security/gitloker-attacks-abuse-github-notifications-to-push-malicious-oauth-apps/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Grep.app",
+   "url": "https://grep.app/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacking GitHub AWS integrations again",
+   "url": "https://dagrz.com/writing/aws-security/hacking-github-aws-oidc/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacking Terraform State for Privilege Escalation",
+   "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hidden GitHub Commits and How to Reveal Them",
+   "url": "https://neodyme.io/en/blog/github_secrets/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hijacking GitHub runners to compromise the organization",
+   "url": "https://www.synacktiv.com/publications/hijacking-github-runners-to-compromise-the-organization",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Holes in Your Bitbucket: Why Your CI/CD Pipeline Is Leaking Secrets",
+   "url": "https://cloud.google.com/blog/topics/threat-intelligence/bitbucket-pipeline-leaking-secrets",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How I hacked into Google's internal corporate assets",
+   "url": "https://observationsinsecurity.com/2024/04/25/how-i-hacked-into-googles-internal-corporate-assets/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How We Discovered Vulnerabilities in CI/CD Pipelines of Popular Open-Source Projects",
+   "url": "https://cycode.com/blog/github-actions-vulnerabilities",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How We Hacked a Software Supply Chain for $50K",
+   "url": "https://www.landh.tech/blog/20250211-hack-supply-chain-for-50k/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How a Single Vulnerability Can Bring Down the JavaScript Ecosystem",
+   "url": "https://www.landh.tech/blog/20240603-npm-cache-poisoning/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How to completely own an airline in 3 easy steps",
+   "url": "https://maia.crimew.gay/posts/how-to-hack-an-airline/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Introducing MavenGate: a supply chain attack method for Java and Android applications",
+   "url": "https://blog.oversecured.com/Introducing-MavenGate-a-supply-chain-attack-method-for-Java-and-Android-applications/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Invisible Ghost: Alarming Vulnerability in GitHub Copilot",
+   "url": "https://www.apexhq.ai/blog/blog/invisible-ghost-alarming-vulnerability-in-github-copilot/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Jenkins Attack Framework",
+   "url": "https://github.com/Accenture/jenkins-attack-framework",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JoeGlenn1213/ActionD",
+   "url": "https://github.com/JoeGlenn1213/ActionD",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Keeping your GitHub Actions and workflows secure Part 1: Preventing pwn requests",
+   "url": "https://securitylab.github.com/research/github-actions-preventing-pwn-requests/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Keeping your GitHub Actions and workflows secure Part 2: Untrusted input",
+   "url": "https://securitylab.github.com/research/github-actions-untrusted-input/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Leaking Secrets From GitHub Actions: Reading Files And Environment Variables, Intercepting Network/Process Communication, Dumping Memory",
+   "url": "https://karimrahal.com/2023/01/05/github-actions-leaking-secrets/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Living off the pipeline",
+   "url": "https://github.com/boostsecurityio/lotp",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Millions of Secrets Exposed via Web Application Frontends",
+   "url": "https://web.archive.org/web/20230531032433/https://redhuntlabs.com/blog/millions-of-secrets-exposed-via-web-application-frontend/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Nord Stream",
+   "url": "https://github.com/synacktiv/nord-stream",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Nuclei",
+   "url": "https://docs.projectdiscovery.io/opensource/nuclei/running",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Nuclei MCP",
+   "url": "https://github.com/addcontent/nuclei-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP .NET Security Cheat Sheet",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP ASVS",
+   "url": "https://github.com/OWASP/ASVS",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Octane Security",
+   "url": "https://www.octane.security/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "One Supply Chain Attack to Rule Them All \u2013 Poisoning GitHub's Runner Images",
+   "url": "https://adnanthekhan.com/2023/12/20/one-supply-chain-attack-to-rule-them-all/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Open Software Supply Chain Attack Reference (OSC&R)",
+   "url": "https://pbom.dev/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PR sneaking",
+   "url": "https://github.com/mortenson/pr-sneaking",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Passive Web Forms field inventory",
+   "url": "https://learn.microsoft.com/en-us/dotnet/api/system.web.configuration.machinekeysection.validationkey?view=netframework-4.8.1",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Playing with Fire \u2013 How We Executed a Critical Supply Chain Attack on PyTorch",
+   "url": "https://johnstawinski.com/2024/01/11/playing-with-fire-how-we-executed-a-critical-supply-chain-attack-on-pytorch/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Publicly Exposed AWS Document DB Snapshots",
+   "url": "https://ramimac.me/exposed-docdb",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Repository",
+   "url": "https://github.com/jmstar85/DevSecOps-MCP",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Risk Explorer for Software Supply Chains",
+   "url": "https://riskexplorer.endorlabs.com/#/attack-tree",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SDLC Infrastructure Threat Framework (SITF)",
+   "url": "https://github.com/wiz-sec-public/SITF",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Safe ViewState differential review",
+   "url": "https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.viewstateencryptionmode?view=netframework-4.8.1",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Secrets Patterns Database",
+   "url": "https://github.com/mazen160/secrets-patterns-db",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Security alert: social engineering campaign targets technology industry employees",
+   "url": "https://github.blog/2023-07-18-security-alert-social-engineering-campaign-targets-technology-industry-employees/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SkillFortify - Formal analysis and supply chain security for agentic AI skills. Sound static analysis, SAT-based dependency resolution, trust scoring, CycloneDX ASBOM. 5 theorems, F1=96.95%, 0% FP rat",
+   "url": "https://github.com/varun369/skillfortify",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sourcegraph",
+   "url": "https://sourcegraph.com/search",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Telerik assembly and handler inventory",
+   "url": "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/common-cryptographic-weakness",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Telerik deserialization: CVE-2019-18935",
+   "url": "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/common-allows-javascriptserializer-deserialization",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Telerik upload/crypto chain: CVE-2014-2217, CVE-2017-11317,",
+   "url": "https://community.progress.com/s/article/resolving-security-vulnerability-cve-2017-9248",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The (In)security Landscape of AI-Powered GitHub Actions (Part 2/2)",
+   "url": "https://www.wiz.io/blog/github-actions-security-ai-powered-actions-vulnerabilities",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The GitHub Actions Worm: Compromising GitHub Repositories Through the Actions Dependency Tree",
+   "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/github-actions-worm-dependencies/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Monsters in Your Build Cache \u2013 GitHub Actions Cache Poisoning",
+   "url": "https://adnanthekhan.com/2024/05/06/the-monsters-in-your-build-cache-github-actions-cache-poisoning/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The massive bug at the heart of the npm ecosystem",
+   "url": "https://blog.vlt.sh/blog/the-massive-hole-in-the-npm-ecosystem",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Thousands of images on Docker Hub leak auth secrets, private keys",
+   "url": "https://www.bleepingcomputer.com/news/security/thousands-of-images-on-docker-hub-leak-auth-secrets-private-keys/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Thousands of npm accounts use email addresses with expired domains",
+   "url": "https://therecord.media/thousands-of-npm-accounts-use-email-addresses-with-expired-domains",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Token-Spray",
+   "url": "https://blog.projectdiscovery.io/nuclei-v2-5-3-release/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Trojan Source",
+   "url": "https://trojansource.codes/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Tutorial",
+   "url": "https://ghtorrent.github.io/tutorial/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Understanding typosquatting methods - for a secure supply chain",
+   "url": "https://bytesafe.dev/posts/understanding-typosquatting-methods/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Unpinnable Actions: How Malicious Code Can Sneak into Your GitHub Actions Workflows",
+   "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/unpinnable-actions-github-security/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vulnerable GitHub Actions Workflows Part 1: Privilege Escalation Inside Your CI/CD Pipeline",
+   "url": "https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "What the fork? Imposter commits in GitHub Actions and CI/CD",
+   "url": "https://www.chainguard.dev/unchained/what-the-fork-imposter-commits-in-github-actions-and-ci-cd",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Why npm lockfiles can be a security blindspot for injecting malicious modules",
+   "url": "https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WordPress Plugin Confusion: How an update can get you pwned",
+   "url": "https://vavkamil.cz/2021/11/25/wordpress-plugin-confusion-update-can-get-you-pwned/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Working as unexpected",
+   "url": "https://www.chainguard.dev/unchained/working-as-unexpected",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "YugantM/hvtracker-mcp",
+   "url": "https://github.com/YugantM/hvtracker-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Zuckerpunch - Abusing Self Hosted GitHub Runners at Facebook",
+   "url": "https://marcyoung.us/post/zuckerpunch/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "askalf/truecopy",
+   "url": "https://github.com/askalf/truecopy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "avisangle/jenkins-mcp-server",
+   "url": "https://github.com/avisangle/jenkins-mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "colapsis/transfa",
+   "url": "https://github.com/colapsis/transfa",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eltociear/skill-audit-mcp",
+   "url": "https://github.com/eltociear/skill-audit-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jQuery family: CVE-2015-9251",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-9251",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jQuery family: CVE-2019-11358",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11358",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jQuery family: CVE-2020-11022 and CVE-2020-11023",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11022",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "meacheal-ai/mrc-data",
+   "url": "https://github.com/meacheal-ai/mrc-data",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "msaad00/agent-bom",
+   "url": "https://github.com/msaad00/agent-bom",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mshegolev/gitlab-ci-mcp",
+   "url": "https://github.com/mshegolev/gitlab-ci-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pwnjenkins",
+   "url": "https://github.com/gquere/pwn_jenkins",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "verifyfetch",
+   "url": "https://github.com/hamzaydia/verifyfetch",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "whoAMI: A cloud image name confusion attack",
+   "url": "https://securitylabs.datadoghq.com/articles/whoami-a-cloud-image-name-confusion-attack/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  }
+ ]
+}

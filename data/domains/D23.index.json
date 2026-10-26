@@ -1,0 +1,155 @@
+{
+ "domain": "D23",
+ "generated_at": "2026-10-27",
+ "enriched": 7,
+ "indexed_not_enriched": 21,
+ "entries": [
+  {
+   "name": "Chaining Two 0-Days to Compromise An Uber Wordpress",
+   "url": "https://www.rcesecurity.com/2019/09/H1-4420-From-Quiz-to-Admin-Chaining-Two-0-Days-to-Compromise-an-Uber-Wordpress/",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GTFOBins",
+   "url": "https://gtfobins.github.io/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Leveraging angularjs based XSS to privilege escalation",
+   "url": "https://www.shawarkhan.com/2019/08/leveraging-angularjs-based-xss-to-privilege-escalation.html",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![shieldly-io/mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/shieldly-io/mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Active Directory and Privilege Escalation (ADAPE)",
+   "url": "https://github.com/hausec/ADAPE-Script",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Airbnb chaining third party open redirect into SSRF via liveperson chat",
+   "url": "https://buer.haus/2017/03/09/airbnb-chaining-third-party-open-redirect-into-server-side-request-forgery-ssrf-via-liveperson-chat/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DomainPasswordSpray",
+   "url": "https://github.com/dafthack/DomainPasswordSpray",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacking Terraform State for Privilege Escalation",
+   "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Imperva SecureSphere <= v13 - Privilege Escalation",
+   "url": "https://www.exploit-db.com/exploits/45130",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LOLBAS (Living Off The Land Binaries and Scripts)",
+   "url": "https://lolbas-project.github.io/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LinEnum",
+   "url": "https://github.com/rebootuser/LinEnum",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Postenum",
+   "url": "https://github.com/mbahadou/postenum",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SprayingToolkit",
+   "url": "https://github.com/byt3bl33d3r/SprayingToolkit",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "UI privilege-escalation chain review",
+   "url": "https://portswigger.net/web-security/access-control",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vulnerable GitHub Actions Workflows Part 1: Privilege Escalation Inside Your CI/CD Pipeline",
+   "url": "https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WinPwn",
+   "url": "https://github.com/SecureThisShit/WinPwn",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hackingBuddyGPT",
+   "url": "https://github.com/ipa-lab/hackingBuddyGPT",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mcafee-xpass",
+   "url": "https://github.com/SujalMeghwal/mcafee-xpass",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pspy",
+   "url": "https://github.com/DominicBreuker/pspy",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "unix-privesc-check",
+   "url": "https://github.com/pentestmonkey/unix-privesc-check",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "video-edit-mcp",
+   "url": "https://github.com/Aditya2755/video-edit-mcp",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  }
+ ]
+}

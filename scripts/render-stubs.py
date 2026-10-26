@@ -68,8 +68,16 @@ def main():
         a = L.append
         a(f"# {did}: {d['title']}")
         a("")
-        a("Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the")
-        a("top rather than discovered by reading.")
+        if d.get("delegates"):
+            a("Status: **POINTER**. This domain is implemented as an artefact elsewhere in the repo, not as a")
+            a("document here. A second document would be a worse copy that drifts.")
+            a("")
+            a(f"**Implemented at:** `{d['delegates']}`")
+            a("")
+            a(f"**Why not here:** {d['delegates_note']}")
+        else:
+            a("Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the")
+            a("top rather than discovered by reading.")
         a("")
         a("## What this domain covers")
         a("")

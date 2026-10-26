@@ -1,0 +1,38 @@
+{
+ "id": "d23-root",
+ "q": "Does hop one give you something hop two needs?",
+ "why": "Capability transfer is the only thing that makes a chain real. A token, a role, a file write, a network position, a parser state, a cache entry, a timing window. If nothing transfers, it is not a chain.",
+ "branches": [
+  {
+   "a": "No capability transfers",
+   "action": "it is not a chain. report the individual finding and stop pretending",
+   "tools": [],
+   "oracle": "n/a"
+  },
+  {
+   "a": "A credential or token transfers",
+   "action": "use it against the highest value reachable surface, proving each hop separately",
+   "tools": [
+    "d23-newman",
+    "d23-mitmproxy"
+   ],
+   "oracle": "each hop has its own oracle"
+  },
+  {
+   "a": "A file write transfers",
+   "action": "find what reads that path next, then aim the next hop at the reader",
+   "tools": [
+    "d23-rea"
+   ],
+   "oracle": "the reader executes or includes your content"
+  },
+  {
+   "a": "A network position transfers",
+   "action": "enumerate what is reachable from there, usually more than from outside",
+   "tools": [
+    "d23-mitmproxy"
+   ],
+   "oracle": "a service reachable only from the new position"
+  }
+ ]
+}

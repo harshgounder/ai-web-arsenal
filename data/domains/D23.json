@@ -1,0 +1,300 @@
+{
+ "id": "D23",
+ "title": "Exploitation and chaining",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain where a single finding becomes an incident.",
+ "atoms": [
+  "A02",
+  "A04",
+  "A10",
+  "A06"
+ ],
+ "atom_notes": {
+  "A02": "almost every chain hop crosses a trust boundary, which is why authz is the usual link",
+  "A04": "state carried between hops is what makes a chain possible at all",
+  "A10": "logic bugs are the links scanners never find",
+  "A06": "path and namespace confusion is a frequent pivot between two components"
+ },
+ "required_cells": [
+  {
+   "cell": "all/L07/A3",
+   "why": "chaining is the step everything else serves",
+   "filled": true
+  },
+  {
+   "cell": "all/L08/A5",
+   "why": "every hop needs its own oracle, or the chain contains an assumed link",
+   "filled": true
+  },
+  {
+   "cell": "all/L09/A3",
+   "why": "escalation is where a finding becomes an incident",
+   "filled": true
+  },
+  {
+   "cell": "all/L10/A2",
+   "why": "a chain without a stated narrative is three unrelated findings",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d23-rea",
+   "name": "rea analyze_web_bundle",
+   "url": "https://rea.tools",
+   "role": "Chain discovery starts in the bundle: which routes call which, and what the client trusts",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A08"
+   ],
+   "preconditions": [
+    "a reachable origin"
+   ],
+   "oracle": [
+    "the call graph and the trust assumptions"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d23-newman",
+   "name": "newman",
+   "url": "https://github.com/postmanlabs/newman",
+   "role": "A chain is a sequence. Replay it end to end, not in pieces",
+   "driver": {
+    "install": "npm:newman",
+    "verify": "newman --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A10"
+   ],
+   "preconditions": [
+    "a collection with the chain steps"
+   ],
+   "oracle": [
+    "the final state after the sequence"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d23-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/stable/",
+   "role": "Carry state between hops by hand when the chain is not scriptable",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A04"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "the token or state carried into the next hop"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d23-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Confirm a hop with a template before chaining past it",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host"
+   ],
+   "oracle": [
+    "template match with evidence"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d23-attack",
+   "name": "ATT&CK STIX data",
+   "url": "https://github.com/mitre-attack/attack-stix-data",
+   "role": "Technique taxonomy, useful for naming the chain in a report",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d23-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per class escalation reference, where most chain links come from",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d23-atlas",
+   "name": "Atlas: chains and escalation (X01)",
+   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "role": "Technique pointer. X01 is queued; the atlas already names nine canonical chain shapes.",
+   "driver": {
+    "install": "n/a data",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A10"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "PROBABLE"
+  }
+ ],
+ "tree": {
+  "id": "d23-root",
+  "q": "Does hop one give you something hop two needs?",
+  "why": "Capability transfer is the only thing that makes a chain real. A token, a role, a file write, a network position, a parser state, a cache entry, a timing window. If nothing transfers, it is not a chain.",
+  "branches": [
+   {
+    "a": "No capability transfers",
+    "action": "it is not a chain. report the individual finding and stop pretending",
+    "tools": [],
+    "oracle": "n/a"
+   },
+   {
+    "a": "A credential or token transfers",
+    "action": "use it against the highest value reachable surface, proving each hop separately",
+    "tools": [
+     "d23-newman",
+     "d23-mitmproxy"
+    ],
+    "oracle": "each hop has its own oracle"
+   },
+   {
+    "a": "A file write transfers",
+    "action": "find what reads that path next, then aim the next hop at the reader",
+    "tools": [
+     "d23-rea"
+    ],
+    "oracle": "the reader executes or includes your content"
+   },
+   {
+    "a": "A network position transfers",
+    "action": "enumerate what is reachable from there, usually more than from outside",
+    "tools": [
+     "d23-mitmproxy"
+    ],
+    "oracle": "a service reachable only from the new position"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "privilege chain",
+   "detect": "sequence of individually low severity actions",
+   "control": "break the chain at any hop, none is the only defence",
+   "rule": "correlated low severity events"
+  },
+  {
+   "attack": "SSRF to metadata to control plane",
+   "detect": "metadata access then cloud API calls",
+   "control": "IMDSv2 and least privilege roles",
+   "rule": "metadata then API sequence"
+  },
+  {
+   "attack": "upload to include to RCE",
+   "detect": "upload followed by inclusion of the same path",
+   "control": "separate origin, no dynamic include",
+   "rule": "upload path appears in an include"
+  },
+  {
+   "attack": "cache to session theft",
+   "detect": "poisoned cache then a session token",
+   "control": "key every varying input",
+   "rule": "cache variance then token use"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that records a chain as a graph with per hop evidence",
+   "class": "no-tool",
+   "build_candidate": "a chain record: nodes are hops, each with request, response, oracle and the capability transferred"
+  },
+  {
+   "gap": "No way to score a chain by shortest path to crown jewels",
+   "class": "no-tool",
+   "build_candidate": "graph search over hops toward named assets, report the shortest path and missing edges"
+  },
+  {
+   "gap": "all/L10 chain narrative cell empty",
+   "class": "coverage",
+   "build_candidate": "a narrative template stating the transfer at each hop"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D23.index.json"
+ }
+}

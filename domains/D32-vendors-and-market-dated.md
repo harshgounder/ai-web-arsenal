@@ -1,7 +1,11 @@
 # D32: vendors and market, dated
 
-Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the
-top rather than discovered by reading.
+Status: **POINTER**. This domain is implemented as an artefact elsewhere in the repo, not as a
+document here. A second document would be a worse copy that drifts.
+
+**Implemented at:** `raw/vendors.json (460 vendors, 14 categories, dated 2026-10-18)`
+
+**Why not here:** the dataset is the artefact
 
 ## What this domain covers
 

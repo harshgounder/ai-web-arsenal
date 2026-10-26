@@ -1,0 +1,374 @@
+{
+ "id": "D18",
+ "title": "Supply chain and CI/CD",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. Your target's dependency graph is part of your target.",
+ "atoms": [
+  "A11",
+  "A08",
+  "A15",
+  "A09"
+ ],
+ "atom_notes": {
+  "A11": "an upstream artefact is trusted and is not trustworthy, which is the whole domain",
+  "A08": "SBOMs and lockfiles are exposure, and are often public by default",
+  "A15": "pipeline configuration is where the trust decision actually lives",
+  "A09": "signing and provenance make the trust decision checkable"
+ },
+ "required_cells": [
+  {
+   "cell": "S12/L03/A2",
+   "why": "inventory the dependency graph and the pipeline before testing either",
+   "filled": true
+  },
+  {
+   "cell": "S12/L06/A3",
+   "why": "scanning at scale needs automation with a real oracle, not a CVE count",
+   "filled": true
+  },
+  {
+   "cell": "S12/L07/A2",
+   "why": "dependency confusion or a poisoned action is the exploitation step",
+   "filled": true
+  },
+  {
+   "cell": "S12/L08/A5",
+   "why": "prove the artefact was pulled, not merely referenced",
+   "filled": true
+  },
+  {
+   "cell": "S12/L11/A2",
+   "why": "verify the fix: pinned, signed and reachable from the registry",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d18-slsa",
+   "name": "SLSA",
+   "url": "https://slsa.dev/",
+   "role": "Build integrity framework, used as the control column",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d18-scorecard",
+   "name": "OpenSSF Scorecard",
+   "url": "https://github.com/ossf/scorecard",
+   "role": "Scores a repo on supply chain hygiene, the fastest external read on a dependency",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11",
+    "A15"
+   ],
+   "preconditions": [
+    "a repository"
+   ],
+   "oracle": [
+    "score with per check detail"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "note": "Run it on your own dependencies before someone runs it on you."
+  },
+  {
+   "id": "d18-cosign",
+   "name": "cosign",
+   "url": "https://github.com/sigstore/cosign",
+   "role": "Image and artefact signing and verification",
+   "driver": {
+    "install": "pacman:cosign",
+    "verify": "cosign version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11",
+    "A09"
+   ],
+   "preconditions": [
+    "a container image or artefact"
+   ],
+   "oracle": [
+    "signature verified or absent"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d18-syft",
+   "name": "syft",
+   "url": "https://github.com/anchore/syft",
+   "role": "SBOM generation, the inventory a supply chain review needs",
+   "driver": {
+    "install": "pacman:syft",
+    "verify": "syft version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A11",
+    "A08"
+   ],
+   "preconditions": [
+    "an image or a filesystem"
+   ],
+   "oracle": [
+    "component list with versions"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d18-trivy",
+   "name": "trivy",
+   "url": "https://github.com/aquasecurity/trivy",
+   "role": "Dependency, image and IaC scanning in one binary",
+   "driver": {
+    "install": "pacman:trivy",
+    "verify": "trivy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A11",
+    "A15"
+   ],
+   "preconditions": [
+    "an image, lockfile or manifest"
+   ],
+   "oracle": [
+    "vulnerability and misconfig list"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d18-grype",
+   "name": "grype",
+   "url": "https://github.com/anchore/grype",
+   "role": "Vulnerability matching against an SBOM, pairs with syft",
+   "driver": {
+    "install": "git:https://github.com/anchore/grype",
+    "verify": "grype version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "preconditions": [
+    "an SBOM or an image"
+   ],
+   "oracle": [
+    "matches with severity"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Not in the AUR or official repos on this machine. Build from source or use the anchore install script."
+  },
+  {
+   "id": "d18-depcheck",
+   "name": "OWASP Dependency-Check",
+   "url": "https://github.com/jeremylong/DependencyCheck",
+   "role": "CPE based matching, still the default in many pipelines",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "preconditions": [
+    "a project directory"
+   ],
+   "oracle": [
+    "CPE matches with CVEs"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d18-gitleaks",
+   "name": "gitleaks",
+   "url": "https://github.com/gitleaks/gitleaks",
+   "role": "Secret scanning across repos and bundles",
+   "driver": {
+    "install": "pacman:gitleaks",
+    "verify": "gitleaks version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a repo or bundle"
+   ],
+   "oracle": [
+    "secret candidates with location"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d18-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Supply chain technique reference",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  }
+ ],
+ "tree": {
+  "id": "d18-root",
+  "q": "What is the trust decision: a package, an action, or a build?",
+  "why": "Three different supply chains with three different checks. Most reviews only cover packages and call it done.",
+  "branches": [
+   {
+    "a": "A package",
+    "action": "check registry priority and namespace scope, then whether a private name could resolve publicly",
+    "tools": [
+     "d18-trivy",
+     "d18-grype"
+    ],
+    "oracle": "a package resolved from the wrong registry"
+   },
+   {
+    "a": "A CI action or plugin",
+    "action": "an action is code executed with your token. read what it does and check whether the tag is mutable",
+    "tools": [
+     "d18-scorecard"
+    ],
+    "oracle": "mutable tag or unreviewed action executing"
+   },
+   {
+    "a": "A build",
+    "action": "provenance and signing. an unsigned artefact is a claim, not a fact",
+    "tools": [
+     "d18-slsa",
+     "d18-cosign"
+    ],
+    "oracle": "signature verified against the expected identity"
+   },
+   {
+    "a": "A secret leak",
+    "action": "scan the repo and the bundle, then verify the secret is live",
+    "tools": [
+     "d18-gitleaks"
+    ],
+    "oracle": "secret verified against its service"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "dependency confusion",
+   "detect": "a private name resolved from the public registry",
+   "control": "scoped registry, priority rules",
+   "rule": "registry source mismatch"
+  },
+  {
+   "attack": "typosquat",
+   "detect": "a name one character from a popular package",
+   "control": "allowlist, review new dependencies",
+   "rule": "new dependency added"
+  },
+  {
+   "attack": "malicious CI action",
+   "detect": "action tag changed or unpinned",
+   "control": "pin to digest, review actions",
+   "rule": "action reference change"
+  },
+  {
+   "attack": "unsigned artefact",
+   "detect": "no signature or unexpected identity",
+   "control": "enforce signing and verify identity",
+   "rule": "signature absent"
+  },
+  {
+   "attack": "public SBOM disclosure",
+   "detect": "build metadata published",
+   "control": "strip version detail from public artefacts",
+   "rule": "version string in public asset"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that answers 'could this private name resolve publicly' before the attack",
+   "class": "partial",
+   "build_candidate": "check each scoped dependency name against the public registry and report collisions"
+  },
+  {
+   "gap": "No single check that a fix is pinned AND signed AND reachable",
+   "class": "no-tool",
+   "build_candidate": "three check pipeline per dependency: pinned, signature valid, source reachable"
+  },
+  {
+   "gap": "S12/L11 fix verification cell empty",
+   "class": "coverage",
+   "build_candidate": "the three check pipeline above, run as a retest"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D18.index.json"
+ }
+}

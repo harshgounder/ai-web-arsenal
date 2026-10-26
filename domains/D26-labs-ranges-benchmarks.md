@@ -1,7 +1,11 @@
 # D26: labs, ranges, benchmarks
 
-Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the
-top rather than discovered by reading.
+Status: **POINTER**. This domain is implemented as an artefact elsewhere in the repo, not as a
+document here. A second document would be a worse copy that drifts.
+
+**Implemented at:** `D05, D11, D12 and the atlas X06 gaps`
+
+**Why not here:** labs are distributed per domain, not centralised, because a lab without its domain context is useless
 
 ## What this domain covers
 

@@ -1,0 +1,280 @@
+{
+ "id": "D10",
+ "title": "Cache, CDN, edge behaviour",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain where the vulnerability is in the infrastructure the app does not own.",
+ "atoms": [
+  "A06",
+  "A04",
+  "A08",
+  "A05"
+ ],
+ "atom_notes": {
+  "A06": "the cache key and the origin path are two namespaces that can disagree",
+  "A04": "a poisoned cache is state divergence that persists for every later requester",
+  "A08": "cache deception is information exposure caused by a caching decision",
+  "A05": "normalisation differences between cache and origin are the whole technique"
+ },
+ "required_cells": [
+  {
+   "cell": "S01/L05/A2",
+   "why": "map the caching layers and what is in the key before testing anything",
+   "filled": true
+  },
+  {
+   "cell": "S01/L06/A3",
+   "why": "unkeyed input discovery needs systematic header variation",
+   "filled": true
+  },
+  {
+   "cell": "S01/L07/A2",
+   "why": "poisoning or deception is the exploitation step",
+   "filled": true
+  },
+  {
+   "cell": "S01/L08/A5",
+   "why": "a second clean session receiving the effect is the only proof",
+   "filled": true
+  },
+  {
+   "cell": "S17/L10/A2",
+   "why": "report the cache behaviour to the CDN owner, not only the app owner",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d10-wcvs",
+   "name": "Web Cache Vulnerability Scanner",
+   "url": "https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner",
+   "role": "Detects cache poisoning and deception candidates across CDN behaviours",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A04"
+   ],
+   "preconditions": [
+    "a shared cache in front of the app"
+   ],
+   "oracle": [
+    "a cached response that should not be cacheable"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Candidates only. A hit becomes a finding when a second session receives the poisoned or private response."
+  },
+  {
+   "id": "d10-ps-deception",
+   "name": "PortSwigger: cache deception",
+   "url": "https://portswigger.net/web-security/web-cache-deception",
+   "role": "The class definition and labs",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d10-ps-poison",
+   "name": "PortSwigger: cache poisoning",
+   "url": "https://portswigger.net/web-security/web-cache-poisoning",
+   "role": "Unkeyed input and the poisoning classes",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "The single most useful idea here: find the unkeyed input, then ask what it controls."
+  },
+  {
+   "id": "d10-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/stable/",
+   "role": "Control headers exactly, which is required to test keying",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "differing cached response per unkeyed header"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d10-curl",
+   "name": "curl",
+   "url": "https://curl.se/docs/",
+   "role": "Read the cache headers and age, which is the evidence",
+   "driver": {
+    "install": "pacman:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a shell"
+   ],
+   "oracle": [
+    "age and cache status differing per request"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "duc-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Templates for known cache misconfigurations",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host and templates"
+   ],
+   "oracle": [
+    "template match with evidence"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d10-root",
+  "q": "Is there a shared cache in front of the app?",
+  "why": "Without a shared cache there is no class here. Confirm with headers and age before spending time on keying.",
+  "branches": [
+   {
+    "a": "Unknown",
+    "action": "read the response headers and repeat one request. age, x-cache and cf-cache-status answer it",
+    "tools": [
+     "d10-curl"
+    ],
+    "oracle": "cache hit indicator"
+   },
+   {
+    "a": "Yes, and you want poisoning",
+    "action": "vary headers one at a time and watch the cached response. the first input that changes it and is not in the key is the opening",
+    "tools": [
+     "d10-wcvs",
+     "d10-mitmproxy"
+    ],
+    "oracle": "a second clean session receives your value"
+   },
+   {
+    "a": "Yes, and you want deception",
+    "action": "find a private route the cache will store under a static looking path, then request it without a session",
+    "tools": [
+     "d10-wcvs",
+     "d10-ps-deception"
+    ],
+    "oracle": "private content served without authentication"
+   },
+   {
+    "a": "No shared cache",
+    "action": "no finding. say so and move on",
+    "tools": [],
+    "oracle": "n/a"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "cache poisoning",
+   "detect": "cached response containing attacker influenced content",
+   "control": "key every varying input, never cache by default",
+   "rule": "response variance per unkeyed input"
+  },
+  {
+   "attack": "cache deception",
+   "detect": "private page cached under a public path",
+   "control": "cache only explicit routes, normalise before keying",
+   "rule": "cache hit on an authenticated route"
+  },
+  {
+   "attack": "cache key normalisation abuse",
+   "detect": "origin and cache disagree on path",
+   "control": "one normalisation layer",
+   "rule": "path normalisation mismatch"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that maps the key space automatically and reports which inputs are unkeyed",
+   "class": "partial",
+   "build_candidate": "controlled header variation with a cache hit oracle, emit the keyed set"
+  },
+  {
+   "gap": "No report path for CDN owner versus app owner, which are different teams",
+   "class": "no-tool",
+   "build_candidate": "split the finding into the two recipient views with the shared responsibility line"
+  },
+  {
+   "gap": "S17/L10 recipient cell empty",
+   "class": "coverage",
+   "build_candidate": "impact template naming the cache owner explicitly"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D10.index.json"
+ }
+}

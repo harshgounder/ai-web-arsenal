@@ -1,0 +1,5650 @@
+{
+ "domain": "D10",
+ "generated_at": "2026-10-27",
+ "enriched": 6,
+ "indexed_not_enriched": 806,
+ "entries": [
+  {
+   "name": "SQLMap Tamper Scripts",
+   "url": "https://github.com/sqlmapproject/sqlmap",
+   "tier": "core_web",
+   "n_sources": 6,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Seclists/Fuzzing",
+   "url": "https://github.com/danielmiessler/SecLists/tree/master/Fuzzing",
+   "tier": "core_web",
+   "n_sources": 6,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "API Key Leaks: Tools and exploits",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks",
+   "tier": "core_web",
+   "n_sources": 5,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Commix",
+   "url": "https://github.com/commixproject/commix",
+   "tier": "offscope",
+   "n_sources": 5,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Fuzz-DB/Attack",
+   "url": "https://github.com/fuzzdb-project/fuzzdb/tree/master/attack",
+   "tier": "core_web",
+   "n_sources": 5,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Burp Suite",
+   "url": "https://portswigger.net/burp/",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploit DB",
+   "url": "https://exploit-db.com",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Shodan",
+   "url": "https://www.shodan.io/",
+   "tier": "adjacent",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFW00F",
+   "url": "https://github.com/enablesecurity/wafw00f",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSStrike",
+   "url": "https://github.com/s0md3v/XSStrike",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mitmproxy",
+   "url": "https://github.com/mitmproxy/mitmproxy",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tplmap",
+   "url": "https://github.com/epinna/tplmap",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![CC0",
+   "url": "http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "36k Google app engine RCE",
+   "url": "https://sites.google.com/site/testsitehacking/-36k-google-app-engine-rce",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@OWASP",
+   "url": "https://owasp.org",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AQUATONE",
+   "url": "https://github.com/michenriksen/aquatone",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ARS3NAL",
+   "url": "https://github.com/inflictx/Arsenal",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Another XSS in google collaboratory",
+   "url": "https://blog.bentkowski.info/2018/09/another-xss-in-google-colaboratory.html",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Charles Proxy",
+   "url": "https://charlesproxy.com",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DNS rebinding resilience review",
+   "url": "https://github.com/nccgroup/singularity",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DVCS Ripper",
+   "url": "https://github.com/kost/dvcs-ripper",
+   "tier": "offscope",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Darkmoon",
+   "url": "https://github.com/ASCIT31/Dark-Moon",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Filenames by fuzz.txt",
+   "url": "https://github.com/Bo0oM/fuzz.txt",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub",
+   "url": "https://github.com/juice-shop/juice-shop",
+   "tier": "offscope",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GoTestWAF",
+   "url": "https://github.com/wallarm/gotestwaf",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Into the borg of SSRF inside google production network",
+   "url": "https://opnsec.com/2018/07/into-the-borg-ssrf-inside-google-production-network/",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP Zed Attack Proxy (ZAP)",
+   "url": "https://www.zaproxy.org/",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PhpSploit",
+   "url": "https://github.com/nil0x42/phpsploit",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PortSwigger Web Security Academy",
+   "url": "https://portswigger.net/web-security",
+   "tier": "knowledge",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SpiderFoot",
+   "url": "https://github.com/smicallef/spiderfoot",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Virus Total",
+   "url": "https://www.virustotal.com/",
+   "tier": "offscope",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSRFProbe>",
+   "url": "https://github.com/0xInfection/XSRFProbe",
+   "tier": "adjacent",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "retire.js",
+   "url": "https://github.com/retirejs/retire.js",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wfuzz",
+   "url": "https://github.com/xmendez/wfuzz",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wpscan",
+   "url": "https://github.com/wpscanteam/wpscan",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "(0xInfection)",
+   "url": "https://github.com/0xinfection",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "0Day Inject0r DB",
+   "url": "https://0day.today",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Secjuice",
+   "url": "https://www.secjuice.com",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Airbnb when bypassing json encoding XSS filter WAF CSP and auditior turns into eight vulnerabilities",
+   "url": "https://buer.haus/2017/03/08/airbnb-when-bypassing-json-encoding-xss-filter-waf-csp-and-auditor-turns-into-eight-vulnerabilities/",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Astra",
+   "url": "https://github.com/flipkart-incubator/Astra",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BlackHat",
+   "url": "https://blackhat.com",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Browser Exploitation Framework (BeEF)",
+   "url": "https://github.com/beefproject/beef",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bug Bounty",
+   "url": "https://github.com/djadmin/awesome-bug-bounty",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bug Bounty Reference",
+   "url": "https://github.com/ngalongc/bug-bounty-reference",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CTF Field Guide",
+   "url": "https://trailofbits.github.io/ctf/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Censys",
+   "url": "https://www.censys.io/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CyberChef",
+   "url": "https://github.com/gchq/CyberChef",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DNS Rebind Toolkit",
+   "url": "https://github.com/brannondorsey/dns-rebind-toolkit",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ENG-16-profast",
+   "url": "https://github.com/RhinoSecurityLabs/cloudgoat",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "EyeWitness",
+   "url": "https://github.com/ChrisTruncer/EyeWitness",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitMiner",
+   "url": "https://github.com/UnkL4b/GitMiner",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How we abused Slack's TURN servers to gain access to internal services",
+   "url": "https://www.enablesecurity.com/blog/slack-webrtc-turn-compromise-and-bug-bounty/",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Imperva",
+   "url": "https://imperva.com",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Infosec Reference",
+   "url": "https://github.com/rmusser01/Infosec_Reference",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LinkFinder",
+   "url": "https://github.com/GerbenJavado/LinkFinder",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Machine Learning for Cyber Security",
+   "url": "https://github.com/jivoi/awesome-ml-for-cybersecurity",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OopsSec Store",
+   "url": "https://github.com/kOaDT/oss-oopssec-store",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Other Payloads",
+   "url": "https://github.com/foospidy/payloads",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Other XSS Bypasses",
+   "url": "https://github.com/EdOverflow/bugbounty-cheatsheet/blob/master/cheatsheets/xss.md",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Photon",
+   "url": "https://github.com/s0md3v/Photon",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Phrack Magazine",
+   "url": "http://www.phrack.org/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Raccoon",
+   "url": "https://github.com/evyatarmeged/Raccoon",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Reverse Shell as a Service",
+   "url": "https://github.com/lukechilds/reverse-shell",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SANS",
+   "url": "https://www.sans.org",
+   "tier": "knowledge",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Security Weekly",
+   "url": "https://securityweekly.com/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sublist3r",
+   "url": "https://github.com/aboul3la/Sublist3r",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vigolium",
+   "url": "https://github.com/vigolium/vigolium",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFtester",
+   "url": "https://github.com/waftester/waftester",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Whonow DNS Server",
+   "url": "https://github.com/brannondorsey/whonow",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XRay",
+   "url": "https://github.com/evilsocket/xray",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS in google collaboratory CSP bypass",
+   "url": "https://blog.bentkowski.info/2018/06/xss-in-google-colaboratory-csp-bypass.html",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ZoomEye",
+   "url": "https://www.zoomeye.org/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bXSS",
+   "url": "https://github.com/LewisArdern/bXSS",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cai>",
+   "url": "https://github.com/aliasrobotics/cai",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ctftool",
+   "url": "https://github.com/taviso/ctftool",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dtd-finder",
+   "url": "https://github.com/GoSecure/dtd-finder",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gitleaks",
+   "url": "https://github.com/zricethezav/gitleaks",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "gitrob",
+   "url": "https://github.com/michenriksen/Gitrob",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "keyFinder",
+   "url": "https://github.com/momenbasel/keyFinder",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "labs.detectify.com",
+   "url": "http://labs.detectify.com/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mXSS regression method",
+   "url": "https://github.com/cure53/DOMPurify/security/advisories/GHSA-h8r8-wccr-v5f2",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nowafpls",
+   "url": "https://github.com/assetnote/nowafpls",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "numasec",
+   "url": "https://github.com/FrancescoStabile/numasec",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "radare2",
+   "url": "https://github.com/radare/radare2",
+   "tier": "offscope",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wayparam",
+   "url": "https://github.com/aleff-github/wayparam",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "weevely3",
+   "url": "https://github.com/epinna/weevely3",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xssor2",
+   "url": "https://github.com/evilcos/xssor2",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![BlazingCDN/BlazingCDN-MCP MCP server",
+   "url": "https://glama.ai/mcp/servers/BlazingCDN/BlazingCDN-MCP/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![corewebvitals/state-of-cwv-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/corewebvitals/state-of-cwv-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "$7.5k Google services mix-up",
+   "url": "https://sites.google.com/site/testsitehacking/-7-5k-Google-services-mix-up",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "0Day Labs",
+   "url": "https://blog.0daylabs.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "0day Rubbish",
+   "url": "https://github.com/Exploit-Garbage/0day-Rubbish",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "1000php",
+   "url": "https://github.com/Xyntax/1000php",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "360\u7f51\u7edc\u653b\u9632\u5b9e\u9a8c\u5ba4",
+   "url": "https://weibo.com/360adlab",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "5\u6587\u5b57\u3067\u66f8\u304fJavaScript",
+   "url": "https://speakerdeck.com/masatokinugawa/shibuya-dot-xss-techtalk-number-10",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5logoandwordmark.svg\" align=\"right\" width=\"70\">",
+   "url": "https://www.w3.org/TR/html5/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@0x09AL",
+   "url": "https://www.exploit-db.com/?author=8991",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@0x09AL",
+   "url": "https://github.com/0x09AL",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@3nock",
+   "url": "https://github.com/3nock",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ASCIT31",
+   "url": "https://github.com/ASCIT31",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Alfresco",
+   "url": "https://github.com/Alfresco",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Anastasios Monachos",
+   "url": "https://www.exploit-db.com/?author=2932",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Anonymous",
+   "url": "https://www.exploit-db.com/?author=2168",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@BGA Security",
+   "url": "https://www.exploit-db.com/?author=7396",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Benjamin Mejri",
+   "url": "https://www.exploit-db.com/?author=7854",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Binar10",
+   "url": "https://www.exploit-db.com/exploits/18840",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Bo0oM",
+   "url": "https://github.com/Bo0oM",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ChALkeR",
+   "url": "https://github.com/ChALkeR",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ChrisTruncer",
+   "url": "https://github.com/ChrisTruncer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@DRK1WI",
+   "url": "https://www.exploit-db.com/?author=7740",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@DavidK",
+   "url": "https://www.exploit-db.com/?author=2741",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@EnableSecurity",
+   "url": "https://enablesecurity.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@EnableSecurity",
+   "url": "https://github.com/enablesecurity",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@FeeiCN",
+   "url": "https://github.com/FeeiCN",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@FrancescoStabile",
+   "url": "https://github.com/FrancescoStabile",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@GCHQ",
+   "url": "https://github.com/gchq",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@GerbenJavado",
+   "url": "https://github.com/GerbenJavado",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Giuseppe D'Amore",
+   "url": "https://www.exploit-db.com/?author=6413",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Global-Evolution",
+   "url": "https://www.exploit-db.com/?author=2016",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@GoSecure",
+   "url": "https://github.com/GoSecure",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Hakky54",
+   "url": "https://github.com/Hakky54",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@HoLyVieR",
+   "url": "https://github.com/HoLyVieR",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@HynekPetrak",
+   "url": "https://github.com/HynekPetrak",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Ivan1ee",
+   "url": "https://github.com/Ivan1ee",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@JakobKallin",
+   "url": "https://github.com/JakobKallin",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@John Dos",
+   "url": "https://www.exploit-db.com/?author=1996",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@LewisArdern",
+   "url": "https://github.com/LewisArdern",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Masato Kinugawa",
+   "url": "https://github.com/masatokinugawa",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Metnew",
+   "url": "https://github.com/Metnew",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Michael Brooks",
+   "url": "https://www.exploit-db.com/?author=628",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@MustLive",
+   "url": "https://www.exploit-db.com/?author=1293",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@NNPoster",
+   "url": "https://www.exploit-db.com/?author=6654",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@OWASP",
+   "url": "https://owasp.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@OsandaMalith",
+   "url": "https://github.com/OsandaMalith",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Raz0r",
+   "url": "https://github.com/Raz0r/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ReplikanteK",
+   "url": "https://github.com/ReplikanteK",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@RetireJS",
+   "url": "https://github.com/RetireJS",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@RhinoSecurityLabs",
+   "url": "https://github.com/RhinoSecurityLabs",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@SQLMap Devs",
+   "url": "http://sqlmap.sourceforge.net/#developers",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Sec Consult",
+   "url": "https://www.exploit-db.com/?author=1614",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@SecureSkyTechnology",
+   "url": "https://github.com/SecureSkyTechnology",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@SpiderLabs",
+   "url": "https://trustwave.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@UnkL4b",
+   "url": "https://github.com/UnkL4b",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Voxel",
+   "url": "https://www.exploit-db.com/?author=8505",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@WAFNinja",
+   "url": "https://waf.ninja",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@WallArm",
+   "url": "https://labs.wallarm.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@WangYihang",
+   "url": "https://github.com/WangYihang",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@We5ter",
+   "url": "https://github.com/We5ter",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@Xyntax",
+   "url": "https://github.com/Xyntax",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ZeQ3uL",
+   "url": "http://www.exploit-db.com/author/?a=1275",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@aboul3la",
+   "url": "https://github.com/aboul3la",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@aleff-github",
+   "url": "https://github.com/aleff-github",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@allyshka",
+   "url": "https://github.com/allyshka",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@b17zr",
+   "url": "https://github.com/b17zr",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@bad-antics",
+   "url": "https://github.com/bad-antics",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@bitvijays",
+   "url": "http://web.archive.org/web/20230519134723/https://bitvijays.github.io/aboutme.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@bkimminich",
+   "url": "https://github.com/bkimminich",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@brannondorsey",
+   "url": "https://github.com/brannondorsey",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@brunofacca",
+   "url": "https://github.com/brunofacca",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@capacitorset",
+   "url": "https://github.com/capacitorset",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@coffeehb",
+   "url": "https://github.com/coffeehb",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@commixproject",
+   "url": "https://github.com/commixproject",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@cossacklabs",
+   "url": "https://www.cossacklabs.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@crtsh",
+   "url": "https://github.com/crtsh",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@cure53",
+   "url": "https://github.com/cure53",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@dagrz",
+   "url": "https://github.com/dagrz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@denandz",
+   "url": "https://github.com/denandz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@djadmin",
+   "url": "https://github.com/djadmin",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@drego85",
+   "url": "https://github.com/drego85",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@drigg3r",
+   "url": "https://github.com/drigg3r",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@dxa4481",
+   "url": "https://github.com/dxa4481",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ed0x21son",
+   "url": "https://www.exploit-db.com/?author=9901",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@eldraco",
+   "url": "https://github.com/eldraco",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@emanuele-em",
+   "url": "https://github.com/emanuele-em",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@epidemics-scepticism",
+   "url": "https://github.com/epidemics-scepticism",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@epinna",
+   "url": "https://github.com/epinna",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@espi0n",
+   "url": "https://github.com/espi0n",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@evilcos",
+   "url": "https://github.com/evilcos",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@evilpacket",
+   "url": "https://github.com/evilpacket",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@evilsocket",
+   "url": "https://github.com/evilsocket",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@evyatarmeged",
+   "url": "https://github.com/evyatarmeged",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@flipkart-incubator",
+   "url": "https://github.com/flipkart-incubator",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@google",
+   "url": "https://github.com/google",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@gregose",
+   "url": "https://github.com/gregose",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hack-all-the-things",
+   "url": "https://github.com/hack-all-the-things",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hahwul",
+   "url": "https://github.com/hahwul",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hamzaydia",
+   "url": "https://github.com/hamzaydia",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hannob",
+   "url": "https://github.com/hannob",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hehnope",
+   "url": "https://github.com/hehnope",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hteso",
+   "url": "https://github.com/hteso",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@hyp3rlinx",
+   "url": "http://hyp3rlinx.altervista.org",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@iblue",
+   "url": "https://github.com/iblue",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@inflictx",
+   "url": "https://github.com/inflictx",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@itxshakil",
+   "url": "https://github.com/itxshakil",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@j3ssie",
+   "url": "https://github.com/j3ssie",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@kOaDT",
+   "url": "https://github.com/kOaDT",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@khalilbijjou",
+   "url": "https://github.com/khalilbijjou/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@kost",
+   "url": "https://github.com/kost",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@leizongmin",
+   "url": "https://github.com/leizongmin",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@lijiejie",
+   "url": "https://github.com/lijiejie",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@lukechilds",
+   "url": "https://github.com/lukechilds",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@maxchehab",
+   "url": "https://github.com/maxchehab",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@michenriksen",
+   "url": "https://github.com/michenriksen",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@mitmproxy",
+   "url": "https://github.com/mitmproxy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@momenbasel",
+   "url": "https://github.com/momenbasel",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@mwrlabs",
+   "url": "https://github.com/mwrlabs",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@nccgroup",
+   "url": "https://github.com/nccgroup",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@nekmo",
+   "url": "https://github.com/Nekmo",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ngalongc",
+   "url": "https://github.com/ngalongc",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@nil0x42",
+   "url": "https://github.com/nil0x42",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@phith0n",
+   "url": "https://github.com/phith0n",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@plasma-disassembler",
+   "url": "https://github.com/plasma-disassembler",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@presidentbeef",
+   "url": "https://github.com/presidentbeef",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@projectdiscovery",
+   "url": "https://github.com/projectdiscovery",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ptoomey3",
+   "url": "https://github.com/ptoomey3",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@radare",
+   "url": "https://github.com/radare",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@rmusser01",
+   "url": "https://github.com/rmusser01",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@rsp3ar",
+   "url": "https://www.exploit-db.com/?author=9396",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@s0md3v",
+   "url": "https://github.com/s0md3v",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@sattyamjjain",
+   "url": "https://github.com/sattyamjjain",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@stamparm",
+   "url": "https://github.com/stamparm",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@swisskyrepo",
+   "url": "https://github.com/swisskyrepo",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@tID",
+   "url": "https://github.com/theInfectedDrake",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@taviso",
+   "url": "https://github.com/taviso",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@tennc",
+   "url": "https://github.com/tennc",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@tunz",
+   "url": "https://github.com/tunz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@undeadlist",
+   "url": "https://github.com/undeadlist",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@uppusaikiran",
+   "url": "https://github.com/uppusaikiran",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@vaguileradiaz",
+   "url": "https://github.com/vaguileradiaz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@wallarm",
+   "url": "https://github.com/wallarm",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@wpscanteam",
+   "url": "https://github.com/wpscanteam",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@x0rz",
+   "url": "https://github.com/x0rz",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@xmendez",
+   "url": "https://github.com/xmendez",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@xort",
+   "url": "https://www.exploit-db.com/?author=479#",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@ytkoka",
+   "url": "https://github.com/ytkoka",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@zricethezav",
+   "url": "https://github.com/zricethezav",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@\u50bb\u86cb\u641c\u7d22",
+   "url": "https://weibo.com/shadansou",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A Methodical Approach to Browser Exploitation",
+   "url": "https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A Methodology for Formalizing Model-Inversion Attacks",
+   "url": "https://andrewxiwu.github.io/public/papers/2016/WFJN16-a-methodology-for-modeling-model-inversion-attacks.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A New Era of SSRF - Exploiting URL Parser in Trending Programming Languages!",
+   "url": "https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A glimpse into GitHub's Bug Bounty workflow",
+   "url": "https://github.blog/2017-02-22-githubs-bug-bounty-workflow/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A talk about XSS thousand knocks",
+   "url": "https://speakerdeck.com/yagihashoo/a-talk-about-xss-thousand-knocks-shibuya-dot-xss-techtalk-number-10",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "A2SV",
+   "url": "https://github.com/hahwul/a2sv",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "APTIVE",
+   "url": "https://www.aptive.co.uk/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWS Firewall Factory",
+   "url": "https://github.com/globaldatanet/aws-firewall-factory",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWS PENETRATION TESTING PART 1. S3 BUCKETS",
+   "url": "https://www.virtuesecurity.com/aws-penetration-testing-part-1-s3-buckets/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWS PENETRATION TESTING PART 2. S3, IAM, EC2",
+   "url": "https://www.virtuesecurity.com/aws-penetration-testing-part-2-s3-iam-ec2/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AWS takeover through SSRF in JavaScript",
+   "url": "https://10degres.net/aws-takeover-through-ssrf-in-javascript/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition",
+   "url": "https://www.cs.cmu.edu/~sbhagava/papers/face-rec-ccs16.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Acra",
+   "url": "https://github.com/cossacklabs/acra",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Attacks against Intrusion Detection Systems: Taxonomy, Solutions and Open Issues",
+   "url": "https://pdfs.semanticscholar.org/d4e8/aed54dc4c6bed41651254a49d47885648142.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Attacks on Neural Network Policies",
+   "url": "http://rll.berkeley.edu/adversarial/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Data Mining for Cyber Security",
+   "url": "https://www.utdallas.edu/~muratk/CCS-tutorial.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Examples and their implications",
+   "url": "https://hackernoon.com/the-implications-of-adversarial-examples-deep-learning-bits-3-4086108287c7",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Examples for Evaluating Reading Comprehension Systems",
+   "url": "https://nlp.stanford.edu/pubs/jia2017adversarial.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Generative Nets: Neural Network Attacks on State-of-the-Art Face Recognition",
+   "url": "https://arxiv.org/abs/1801.00349",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Images for Variational Autoencoders",
+   "url": "https://arxiv.org/abs/1612.00155",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Learning for Good: My Talk at #34c3 on Deep Learning Blindspots",
+   "url": "http://blog.kjamistan.com/adversarial-learning-for-good-my-talk-at-34c3-on-deep-learning-blindspots/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Machine Learning - PRA Lab",
+   "url": "https://pralab.diee.unica.it/en/AdversarialMachineLearning",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Machine Learning Library(Ad-lib)",
+   "url": "https://github.com/vu-aml/adlib",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Manipulation of Deep Representations",
+   "url": "https://arxiv.org/abs/1511.05122",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Patch",
+   "url": "https://arxiv.org/abs/1712.09665",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Perturbations Against Deep Neural Networks for Malware Classification",
+   "url": "https://arxiv.org/abs/1606.04435",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Robustness: Softmax versus Openmax",
+   "url": "https://arxiv.org/abs/1708.01697",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial Task Allocation",
+   "url": "https://arxiv.org/abs/1709.00358",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Adversarial examples in the physical world",
+   "url": "https://arxiv.org/abs/1607.02533",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Advisory: Java/Python FTP Injections Allow for Firewall Bypass",
+   "url": "http://blog.blindspotsecurity.com/2017/02/advisory-javapython-ftp-injections.html",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Alexander Klink",
+   "url": "https://shiftordie.de/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "All you need to know about SSRF and how may we write tools to do auto-detect",
+   "url": "https://www.auxy.xyz/web%20security/2017/07/06/all-ssrf-knowledge.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Allen Own",
+   "url": "https://devco.re/blog/author/allenown",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Altus iX Developer XAML Deserialization RCE",
+   "url": "https://0day-rubbish.com/blog/altus-ix-developer-xaml-rce",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Ambionics Security",
+   "url": "https://www.ambionics.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "An example why NAT is NOT security",
+   "url": "https://0day.work/an-example-why-nat-is-not-security/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Andy",
+   "url": "https://blog.zsec.uk/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Antti Rantasaari",
+   "url": "https://blog.netspi.com/author/antti-rantasaari/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Any protection against dynamic module import?",
+   "url": "https://github.com/w3c/webappsec-csp/issues/243",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Applied Crypto Hardening",
+   "url": "https://bettercrypto.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Arseniy Sharoglazov",
+   "url": "https://mohemiv.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Auscert",
+   "url": "https://conference.auscert.org.au",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Automatically Evading Classifiers A Case Study on PDF Malware Classifiers",
+   "url": "http://evademl.org/docs/evademl.pdf",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Automating local DTD discovery for XXE exploitation",
+   "url": "https://gosecure.ai/blog/2019/07/16/automating-local-dtd-discovery-for-xxe-exploitation",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "AwesomeXSS",
+   "url": "https://github.com/s0md3v/AwesomeXSS",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BAIMAOHUI",
+   "url": "https://baimaohui.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BRETT BUERHAUS",
+   "url": "https://buer.haus/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BSides Manchester",
+   "url": "https://www.bsidesmcr.org.uk/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BadLibrary",
+   "url": "https://github.com/SecureSkyTechnology/BadLibrary",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Barracuda Spam & Virus Firewall 5.1.3 - Remote Command Execution (Metasploit)",
+   "url": "https://www.exploit-db.com/exploits/40147",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Barracuda WAF 8.0.1 - Remote Command Execution (Metasploit)",
+   "url": "https://www.exploit-db.com/exploits/40146",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Belfer Center for Science and International Affairs",
+   "url": "https://www.belfercenter.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BlackHat US 13",
+   "url": "https://blackhat.com/html/bh-us-13",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BlackHat US 16",
+   "url": "https://www.blackhat.com/html/bh-us-16/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BlackHat USA 09",
+   "url": "https://www.blackhat.com/html/bh-us-09/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BlackHat USA 12",
+   "url": "https://blackhat.com/html/bh-us-12",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Blog of Osanda",
+   "url": "https://osandamalith.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bo0oM",
+   "url": "https://bo0om.ru/author/admin",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Breaking Agent Backbones: Evaluating the Security of Backbone LLMs in AI Agents",
+   "url": "https://arxiv.org/abs/2510.22620",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Breaking UC Browser",
+   "url": "https://habr.com/en/company/drweb/blog/452076/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Broken Browser",
+   "url": "https://www.brokenbrowser.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Brute Forcing Your Facebook Email and Phone Number",
+   "url": "https://pwndizzle.blogspot.jp/2014/02/brute-forcing-your-facebook-email-and.html",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bug Bounty \u734e\u91d1\u7375\u4eba\u7518\u82e6\u8ac7 - \u90a3\u4e9b\u5e74\u6211\u56de\u5831\u904e\u7684\u6f0f\u6d1e",
+   "url": "https://speakerdeck.com/p8361/bug-bounty-jiang-jin-lie-ren-gan-ku-tan-na-xie-nian-wo-hui-bao-guo-de-lou-dong",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "BunkerWeb",
+   "url": "https://www.bunkerweb.io",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bunkerity",
+   "url": "https://github.com/bunkerity",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bypass WAF BurpSuite Plugin",
+   "url": "https://portswigger.net/bappstore/ae2611da3bbc4687953a1f4ba6a4e04c",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bypassing Mobile Browser Security For Fun And Profit",
+   "url": "https://www.blackhat.com/docs/asia-16/materials/asia-16-Baloch-Bypassing-Browser-Security-Policies-For-Fun-And-Profit-wp.pdf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bypassing Web Cache Poisoning Countermeasures",
+   "url": "https://portswigger.net/blog/bypassing-web-cache-poisoning-countermeasures",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Bypassing Web-Application Firewalls by abusing SSL/TLS",
+   "url": "https://0x09al.github.io/waf/bypass/ssl/2018/07/02/web-application-firewall-bypass.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "C.XSS Guide",
+   "url": "https://excess-xss.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CFR",
+   "url": "https://www.benf.org/other/cfr/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CODE WHITE",
+   "url": "https://www.code-white.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CRISTIAN CORNEA",
+   "url": "https://pentest-tools.com/blog/author/pentest-cristian/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CSP: bypassing form-action with reflected XSS",
+   "url": "https://labs.detectify.com/2016/04/04/csp-bypassing-form-action-with-reflected-xss/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CSS-Keylogging",
+   "url": "https://github.com/maxchehab/CSS-Keylogging",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CSV Injection -> Meterpreter on Pornhub",
+   "url": "https://news.webamooz.com/wp-content/uploads/bot/offsecmag/147.pdf",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CTF\u6bd4\u8d5b\u603b\u662f\u8f93\uff1f\u4f60\u8fd8\u5dee\u70b9Tricks!",
+   "url": "https://docs.google.com/presentation/d/1Cx0vI2Mzy0zwdTrgic3S3TwGMCpH-QhMUdHU1r3AYfI/edit#slide=id.g35f391192_065",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CVE-2017-2446 or JSC::JSGlobalObject::isHavingABadTime.",
+   "url": "https://doar-e.github.io/blog/2018/07/14/cve-2017-2446-or-jscjsglobalobjectishavingabadtime/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CVE-2019-1306: ARE YOU MY INDEX?",
+   "url": "https://www.thezdi.com/blog/2019/10/23/cve-2019-1306-are-you-my-index",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cache poisoning and other dirty tricks",
+   "url": "https://lab.wallarm.com/cache-poisoning-and-other-dirty-tricks-120468f1053f",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Camouflage from face detection - CV Dazzle",
+   "url": "https://www.cvdazzle.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Can Machine Learning Be Secure?",
+   "url": "https://people.eecs.berkeley.edu/~adj/publications/paper-files/asiaccs06.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Can you fool AI with adversarial examples on a visual Turing test?",
+   "url": "https://arxiv.org/abs/1709.08693",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Capture the Flag CheatSheet",
+   "url": "https://github.com/uppusaikiran/awesome-ctf-cheatsheet",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Certificate Search",
+   "url": "https://crt.sh/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Certificate Transparency",
+   "url": "https://github.com/google/certificate-transparency",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Chris Palmer",
+   "url": "https://noncombatant.org/about/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Claude Code",
+   "url": "https://claude.com/claude-code",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ClawMoat - Open-source runtime security scanner for AI agents. Detects prompt injection, jailbreak, PII leakage, memory poisoning, and tool misuse",
+   "url": "https://github.com/darfaz/clawmoat",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CleverHans - Python library to benchmark machine learning systems vulnerability to adversarial examples",
+   "url": "https://github.com/tensorflow/cleverhans",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Clickjacking",
+   "url": "https://www.imperva.com/learn/application-security/clickjacking/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cloud Security Risks (Part 1): Azure CSV Injection Vulnerability",
+   "url": "https://rhinosecuritylabs.com/azure/cloud-security-risks-part-1-azure-csv-injection-vulnerability/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Codex",
+   "url": "https://github.com/openai/codex",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Common Azure Security Vulnerabilities and Misconfigurations",
+   "url": "https://rhinosecuritylabs.com/cloud-security/common-azure-security-vulnerabilities/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Crafting Adversarial Input Sequences for Recurrent Neural Networks",
+   "url": "https://arxiv.org/abs/1604.08275",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cross-Site Scripting \u2013 Application Security \u2013 Google",
+   "url": "https://www.google.com/intl/sw/about/appsecurity/learning/xss/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CrowdSec",
+   "url": "https://www.crowdsec.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CrowdSec",
+   "url": "https://github.com/crowdsecurity",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Csper",
+   "url": "https://csper.io",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cure53",
+   "url": "https://cure53.de/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Cybersecurity Campaign Playbook",
+   "url": "https://www.belfercenter.org/publication/cybersecurity-campaign-playbook",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DNS Trails",
+   "url": "https://securitytrails.com/dns-trails",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DOM based Angular sandbox escapes",
+   "url": "https://portswigger.net/research/dom-based-angularjs-sandbox-escapes",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DON'T TRUST THE DOM: BYPASSING XSS MITIGATIONS VIA SCRIPT GADGETS",
+   "url": "https://www.blackhat.com/docs/us-17/thursday/us-17-Lekies-Dont-Trust-The-DOM-Bypassing-XSS-Mitigations-Via-Script-Gadgets.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DRUPAL 7.X SERVICES MODULE UNSERIALIZE() TO RCE",
+   "url": "https://www.ambionics.io/blog/drupal-services-module-rce",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DVCS-Pillage",
+   "url": "https://github.com/evilpacket/DVCS-Pillage",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Daniel LeCheminant",
+   "url": "http://danlec.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Dark Reading",
+   "url": "https://www.darkreading.com/Default.asp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Data Driven Exploratory Attacks on Black Box Classifiers in Adversarial Domains",
+   "url": "https://arxiv.org/abs/1703.07909",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Deep-pwning",
+   "url": "https://github.com/cchio/deep-pwning",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DeepFool",
+   "url": "https://github.com/lts4/deepfool",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DeepFool: a simple and accurate method to fool deep neural networks",
+   "url": "https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Moosavi-Dezfooli_DeepFool_A_Simple_CVPR_2016_paper.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Defcon 16",
+   "url": "http://www.defcon.org/html/defcon-16/dc-16-post.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Defensive Distillation is Not Robust to Adversarial Examples",
+   "url": "http://nicholas.carlini.com/papers/2016_defensivedistillation.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Delving into Transferable Adversarial Examples and Black-box Attacks",
+   "url": "https://arxiv.org/abs/1611.02770",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Delving into adversarial attacks on deep policies",
+   "url": "https://arxiv.org/abs/1705.06452",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Diary of a reverse-engineer",
+   "url": "https://doar-e.github.io/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Did you hear that? Adversarial Examples Against Automatic Speech Recognition",
+   "url": "https://arxiv.org/abs/1801.00554",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DogeWatch",
+   "url": "https://dogewatch.github.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ECMAScript 6 from an Attacker's Perspective - Breaking Frameworks, Sandboxes, and everything else",
+   "url": "https://www.slideshare.net/x00mario/es6-en",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "EQGRP",
+   "url": "https://github.com/x0rz/EQGRP",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Efficient Label Contamination Attacks Against Black-Box Learning Models",
+   "url": "https://www.ijcai.org/proceedings/2017/0551.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ElevenPaths",
+   "url": "https://www.elevenpaths.com/index.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Enguerran Gillier",
+   "url": "https://opnsec.com/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Error Based SQL Injection - MySQL",
+   "url": "https://dogewatch.github.io/2017/02/27/mysql-Error-Based-Injection/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Escape and Evasion Egressing Restricted Networks",
+   "url": "https://www.optiv.com/blog/escape-and-evasion-egressing-restricted-networks",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "EvadeML - Machine Learning in the Presence of Adversaries",
+   "url": "http://evademl.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Evading CSP with DOM-based dangling markup",
+   "url": "https://portswigger.net/blog/evading-csp-with-dom-based-dangling-markup",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Evasion attacks against machine learning at test time",
+   "url": "https://pralab.diee.unica.it/sites/default/files/Biggio13-ecml.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Evi1cg",
+   "url": "https://evi1cg.me/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Evil XML with two encodings",
+   "url": "https://mohemiv.com/all/evil-xml/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Explaining and Harnessing Adversarial Examples",
+   "url": "https://arxiv.org/abs/1412.6572",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploiting XXE with local DTD files",
+   "url": "https://mohemiv.com/all/exploiting-xxe-with-local-dtd-files/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploring the Space of Adversarial Images",
+   "url": "https://arxiv.org/abs/1510.05328",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploring the Space of Adversarial Images",
+   "url": "https://github.com/tabacof/adversarial",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Ezequiel Pereira",
+   "url": "https://sites.google.com/site/testsitehacking/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FCaptcha",
+   "url": "https://github.com/WebDecoy/FCaptcha",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FLAWS",
+   "url": "http://flaws.cloud/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FOCA",
+   "url": "https://github.com/ElevenPaths/FOCA",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FOFA",
+   "url": "https://fofa.so/?locale=en",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FOFA",
+   "url": "https://fofa.so/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Fast Feature Fool: A data independent approach to universal adversarial perturbations",
+   "url": "https://arxiv.org/abs/1707.05572v1",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "File Upload Restrictions Bypass",
+   "url": "https://www.exploit-db.com/docs/english/45074-file-upload-restrictions-bypass.pdf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Finding The Real Origin IPs Hiding Behind CloudFlare or TOR",
+   "url": "https://www.secjuice.com/finding-real-ips-of-origin-servers-behind-cloudflare-or-tor/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Fingerprinting Filter Rules of Web Application Firewalls - Side Channeling Attacks",
+   "url": "https://www.usenix.org/conference/woot12/workshop-program/presentation/schmitt",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Foolbox - Python toolbox to create adversarial examples",
+   "url": "https://github.com/bethgelab/foolbox",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Forcing XXE Reflection through Server Error Messages",
+   "url": "https://blog.netspi.com/forcing-xxe-reflection-server-error-messages/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Framework for Testing WAFs (FTW)",
+   "url": "https://github.com/coreruleset/ftw",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Freebuf",
+   "url": "https://www.freebuf.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "From DNS Evidence to a Finding: DNS and Mail Security Methodology",
+   "url": "https://admintoolkit.io/guides/dns-mail-security-methodology/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GET Type CSRF Attack",
+   "url": "https://www.exploit-db.com/exploits/7919",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GSDF",
+   "url": "https://github.com/We5ter/GSDF",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GSIL",
+   "url": "https://github.com/FeeiCN/GSIL",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gareth Heyes",
+   "url": "https://www.blogger.com/profile/10856178524811553475",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN",
+   "url": "https://arxiv.org/abs/1702.05983",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Generic Black-Box End-to-End Attack against RNNs and Other API Calls Based Malware Classifiers",
+   "url": "https://arxiv.org/abs/1707.05970",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "George Mauer",
+   "url": "https://georgemauer.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub Enterprise Remote Code Execution",
+   "url": "https://bounty.github.com/researchers/iblue.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub Enterprise SQL Injection",
+   "url": "https://blog.orange.tw/posts/2017-01-bug-bounty-github-enterprise-sql-injection/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub's CSP journey",
+   "url": "https://github.blog/2016-04-12-githubs-csp-journey/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GitHub's post-CSP journey",
+   "url": "https://github.blog/2017-01-19-githubs-post-csp-journey/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Google",
+   "url": "https://www.google.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Google Dorks Cheat Sheet",
+   "url": "http://pdf.textfiles.com/security/googlehackers.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Google VRP and Unicorns",
+   "url": "https://sites.google.com/site/bughunteruniversity/behind-the-scenes/presentations/google-vrp-and-unicorns",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GraphQL NoSQL Injection Through JSON Types",
+   "url": "https://www.petecorey.com/blog/2017/06/12/graphql-nosql-injection-through-json-types/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Grokking Web Application Security",
+   "url": "https://www.manning.com/books/grokking-web-application-security",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GuardRails",
+   "url": "https://github.com/apps/guardrails",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Gwen",
+   "url": "https://10degres.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "H5SC",
+   "url": "https://github.com/cure53/H5SC",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HOW TO EXPLOIT LIFERAY CVE-2020-7961 : QUICK JOURNEY TO POC",
+   "url": "https://www.synacktiv.com/en/publications/how-to-exploit-liferay-cve-2020-7961-quick-journey-to-poc.html",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HPing3",
+   "url": "http://www.hping.org",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HQL : Hyperinsane Query Language (or how to access the whole SQL API within a HQL injection ?)",
+   "url": "https://www.synacktiv.com/ressources/hql2sql_sstic_2015_en.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HQL for pentesters",
+   "url": "https://blog.h3xstream.com/2014/02/hql-for-pentesters.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HTML Injection",
+   "url": "https://www.securityfocus.com/bid/69815/info",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HTML Injection",
+   "url": "https://hackerone.com/reports/263226",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HTTPLeaks",
+   "url": "https://github.com/cure53/HTTPLeaks",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Haboob Team",
+   "url": "https://www.exploit-db.com/author/?a=9381",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HackDig",
+   "url": "http://en.hackdig.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacker101",
+   "url": "https://www.hacker101.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacking with JSP Shells",
+   "url": "https://blog.netspi.com/hacking-with-jsp-shells/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hackxor",
+   "url": "https://hackxor.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hardcoded secrets, unverified tokens, and other common JWT mistakes",
+   "url": "https://semgrep.dev/blog/2020/hardcoded-secrets-unverified-tokens-and-other-common-jwt-mistakes/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "High Dimensional Spaces, Deep Learning and Adversarial Examples",
+   "url": "https://arxiv.org/abs/1801.00634",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How I Chained 4 vulnerabilities on GitHub Enterprise, From SSRF Execution Chain to RCE!",
+   "url": "https://blog.orange.tw/posts/2017-07-how-i-chained-4-vulnerabilities-on/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How I exploited ACME TLS-SNI-01 issuing Let's Encrypt SSL-certs for any domain using shared hosting",
+   "url": "https://labs.detectify.com/2018/01/12/how-i-exploited-acme-tls-sni-01-issuing-lets-encrypt-ssl-certs-for-any-domain-using-shared-hosting/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How To Exploit PHP Remotely To Bypass Filters & WAF Rules",
+   "url": "https://www.secjuice.com/php-rce-bypass-filters-sanitization-waf/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How To Reverse Engineer A Web Application Firewall Using Regular Expression Reversing",
+   "url": "https://www.sunnyhoi.com/reverse-engineer-web-application-firewall-using-regular-expression-reversing/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How do we Stop Spilling the Beans Across Origins?",
+   "url": "https://docs.google.com/document/d/1cbL-X0kV_tQ5rL8XJ3lXkV-j0pt_CfTu5ZSzYrncPDc/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How to Hunt Bugs in SAML; a Methodology - Part I",
+   "url": "https://epi052.gitlab.io/notes-to-self/blog/2019-03-07-how-to-test-saml-a-methodology/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How to Hunt Bugs in SAML; a Methodology - Part II",
+   "url": "https://epi052.gitlab.io/notes-to-self/blog/2019-03-13-how-to-test-saml-a-methodology-part-two/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How to Hunt Bugs in SAML; a Methodology - Part III",
+   "url": "https://epi052.gitlab.io/notes-to-self/blog/2019-03-16-how-to-test-saml-a-methodology-part-three/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How to exploit the DotNetNuke Cookie Deserialization",
+   "url": "https://pentest-tools.com/blog/exploit-dotnetnuke-cookie-deserialization/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "How we exploited a remote code execution vulnerability in math.js",
+   "url": "https://capacitorset.github.io/mathjs/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hudson Rock",
+   "url": "https://www.hudsonrock.com/threat-intelligence-cybercrime-tools",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hudson Rock",
+   "url": "https://www.hudsonrock.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hunting for Web Shells",
+   "url": "https://www.tenable.com/blog/hunting-for-web-shells",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IP History",
+   "url": "http://www.iphistory.ch/en/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IPObfuscator",
+   "url": "https://github.com/OsandaMalith/IPObfuscator",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IPv6 \u4e09\u4e2a\u8bbf\u95ee\u672c\u5730\u5730\u5740\u7684\u5c0fTips",
+   "url": "https://www.tttang.com/archive/1293/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Iait\u014d",
+   "url": "https://github.com/hteso/iaito",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "IdentYwaf",
+   "url": "https://github.com/stamparm/identywaf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Imperva SecureSphere 13 - Remote Command Execution",
+   "url": "https://www.exploit-db.com/exploits/45542",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Imperva SecureSphere <= v13 - Privilege Escalation",
+   "url": "https://www.exploit-db.com/exploits/45130",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Inducing DNS Leaks in Onion Web Services",
+   "url": "https://github.com/epidemics-scepticism/writing/blob/master/onion-dns-leaks.md",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Infosec Newbie",
+   "url": "https://www.sneakymonkey.net/2017/04/23/infosec-newbie/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Introduction to OAuth 2.0 and OpenID Connect",
+   "url": "https://pragmaticwebsecurity.com/courses/introduction-oauth-oidc.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Introduction to Web Application Security",
+   "url": "https://www.slideshare.net/nragupathy/introduction-to-web-application-security-blackhoodie-us-2018",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Is Feature Selection Secure against Training Data Poisoning?",
+   "url": "https://pralab.diee.unica.it/en/node/1191",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "J.M Porup",
+   "url": "https://www.csoonline.com/author/J.M.-Porup/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JJEncode",
+   "url": "http://utf-8.jp/public/jjencode.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JSFuck",
+   "url": "http://www.jsfuck.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JSON hijacking for the modern web",
+   "url": "https://portswigger.net/research/json-hijacking-for-the-modern-web",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JShell",
+   "url": "https://github.com/s0md3v/JShell",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Jacob Baines",
+   "url": "https://www.tenable.com/profile/jacob-baines",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Jacob Wilkin (Greenwolf)",
+   "url": "https://github.com/Greenwolf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "James Kettle",
+   "url": "http://albinowax.skeletonscribe.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JavaScript MVC and Templating Frameworks",
+   "url": "https://www.slideshare.net/x00mario/jsmvcomfg-to-sternly-look-at-javascript-mvc-and-templating-frameworks",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Jayson",
+   "url": "https://techvomit.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "JoomlaScan",
+   "url": "https://github.com/drego85/JoomlaScan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "K0rz3n",
+   "url": "https://www.freebuf.com/author/K0rz3n",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LOTS about Attacking Deep Features",
+   "url": "https://arxiv.org/abs/1611.06179",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Laravel CSP Generator",
+   "url": "https://csp-generator.shakiltech.com",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Laravel Content Security Policy: Complete Implementation Guide",
+   "url": "https://blog.shakiltech.com/laravel-content-security-policy-guide/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Large-scale analysis of style injection by relative path overwrite",
+   "url": "https://blog.acolyer.org/2018/05/28/large-scale-analysis-of-style-injection-by-relative-path-overwrite/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Lightbulb Framework",
+   "url": "https://github.com/lightbulb-framework/lightbulb-framework",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Linux\u540e\u95e8\u6574\u7406\u5408\u96c6\uff08\u8109\u640f\u63a8\u8350\uff09",
+   "url": "https://www.secpulse.com/archives/59674.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "List of bug bounty writeups",
+   "url": "https://pentester.land/list-of-bug-bounty-writeups.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LoRexxar",
+   "url": "https://lorexxar.cn/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Looking at the Bag is not Enough to Find the Bomb: An Evasion of Structural Methods for Malicious PDF Files Detection",
+   "url": "https://pralab.diee.unica.it/sites/default/files/maiorca_ASIACCS13.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MBSD Technical Whitepaper - A few RPO exploitation techniques",
+   "url": "https://www.mbsd.jp/Whitepaper/rpo.pdf",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Malware Env for OpenAI Gym",
+   "url": "https://github.com/endgameinc/gym-malware",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mariem",
+   "url": "https://pentester.land/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mario Heiderich",
+   "url": "https://www.slideshare.net/x00mario",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mark Robinson",
+   "url": "https://www.sneakymonkey.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Marshall Extensions",
+   "url": "https://github.com/bad-antics/marshall-extensions",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Micha\u0142 Bentkowski",
+   "url": "https://blog.bentkowski.info/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Microsoft",
+   "url": "https://github.com/microsoft",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mikhail Egorov",
+   "url": "https://0ang3el.blogspot.tw/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mitsui Bussan Secure Directions, Inc.",
+   "url": "https://www.mbsd.jp/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ModSecurity / OWASP ModSecurity Core Rule Set",
+   "url": "https://www.netnea.com/cms/apache-tutorials/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures",
+   "url": "https://www.cs.cmu.edu/~mfredrik/papers/fjr2015ccs.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Model extraction attacks on Machine-Learning-as-a-Service platforms",
+   "url": "https://github.com/ftramer/Steal-ML",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Muneaki Nishimura",
+   "url": "https://speakerdeck.com/nishimunea",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MySQL Error Based SQL Injection Using EXP",
+   "url": "https://www.exploit-db.com/docs/english/37953-mysql-error-based-sql-injection-using-exp.pdf",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NETSPI",
+   "url": "https://www.netspi.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NFS | PENETRATION TESTING ACADEMY",
+   "url": "https://pentestacademy.wordpress.com/2017/09/20/nfs/?t=1&cn=ZmxleGlibGVfcmVjc18y&refsrc=email&iid=b34422ce15164e99a193fea0ccc7a02f&uid=1959680352&nid=244+289476616",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "NSFOCUS",
+   "url": "https://nti.nsfocus.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Neat tricks to bypass CSRF-protection",
+   "url": "https://zhuanlan.zhihu.com/p/32716181",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Neatly bypassing CSP",
+   "url": "https://lab.wallarm.com/how-to-trick-csp-in-letting-you-run-whatever-you-want-73cb5ff428aa",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Netsparker",
+   "url": "https://www.netsparker.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Neural Networks in Adversarial Setting and Ill-Conditioned Weight Space",
+   "url": "https://arxiv.org/abs/1801.00905",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Note on Attacking Object Detectors with Adversarial Stickers",
+   "url": "https://arxiv.org/abs/1712.08062",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ORM Injection",
+   "url": "https://www.slideshare.net/simone.onofri/orm-injection",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ORM2Pwn: Exploiting injections in Hibernate ORM",
+   "url": "https://www.slideshare.net/0ang3el/orm2pwn-exploiting-injections-in-hibernate-orm",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OSINT x UCCU Workshop on Open Source Intelligence",
+   "url": "https://www.slideshare.net/miaoski/osint-x-uccu-workshop-on-open-source-intelligence",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP CRS team",
+   "url": "https://coreruleset.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Offensive Security",
+   "url": "https://www.offensive-security.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Official Rails Security Guide",
+   "url": "https://guides.rubyonrails.org/security.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "On The Integrity Of Deep Learning Systems In Adversarial Settings",
+   "url": "https://etda.libraries.psu.edu/catalog/28680",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "On the (Statistical) Detection of Adversarial Examples",
+   "url": "https://arxiv.org/abs/1702.06280",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "One pixel attack for fooling deep neural networks",
+   "url": "https://arxiv.org/abs/1710.08864v1",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Open Redirect Vulnerability",
+   "url": "https://s0cket7.com/open-redirect-vulnerability/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenBuckets",
+   "url": "https://openbuckets.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OpenRASP",
+   "url": "https://github.com/baidu/openrasp",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Orange",
+   "url": "https://blog.orange.tw/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PCI DSS IS 6.6",
+   "url": "https://www.pcisecuritystandards.org/documents/information_supplement_6.6.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PENETRATION ACADEMY",
+   "url": "https://pentestacademy.wordpress.com/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PENETRATION TESTING AWS STORAGE: KICKING THE S3 BUCKET",
+   "url": "https://rhinosecuritylabs.com/penetration-testing/penetration-testing-aws-storage/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PHP\u4ee3\u7801\u5ba1\u8ba1\u4e2d\u7684\u4e00\u4e9bTips",
+   "url": "http://zeroyu.xyz/2018/10/13/php-audit-tips/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PHP\u5783\u573e\u56de\u6536\u673a\u5236UAF\u6f0f\u6d1e\u5206\u6790",
+   "url": "https://www.freebuf.com/vuls/122938.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PUSHING WEBKIT'S BUTTONS WITH A MOBILE PWN2OWN EXPLOIT",
+   "url": "https://www.zerodayinitiative.com/blog/2018/2/12/pushing-webkits-buttons-with-a-mobile-pwn2own-exploit",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Paper - \u5b89\u5168\u6280\u672f\u7cbe\u7cb9",
+   "url": "http://paper.seebug.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pastebin",
+   "url": "https://pastebin.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Patreon",
+   "url": "https://www.patreon.com/boik",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Paul Dannewitz",
+   "url": "https://www.secjuice.com/author/paul-dannewitz/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Paulos Yibelo",
+   "url": "https://www.paulosyibelo.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pentest + Exploit dev Cheatsheet wallpaper",
+   "url": "https://i.imgur.com/Mr9pvq9.jpg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pete",
+   "url": "https://www.petecorey.com/work/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Philippe Lin",
+   "url": "https://www.slideshare.net/miaoski",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Phishing with Unicode Domains",
+   "url": "https://www.xudongz.com/blog/2017/idn-phishing/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Poisoning Behavioral Malware Clustering",
+   "url": "http://pralab.diee.unica.it/en/node/1121",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pompelmi",
+   "url": "https://github.com/pompelmi/pompelmi",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Poor RichFaces",
+   "url": "https://codewhitesec.blogspot.com/2018/05/poor-richfaces.html",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PortSwigger",
+   "url": "https://portswigger.net/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Positive Technologies",
+   "url": "https://ptsecurity.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Potential command injection in resolv.rb",
+   "url": "https://github.com/ruby/ruby/pull/1777",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Practical Black-Box Attacks against Machine Learning",
+   "url": "https://arxiv.org/abs/1602.02697",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Practical Web Cache Poisoning",
+   "url": "https://portswigger.net/blog/practical-web-cache-poisoning",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Practical introduction to SSL/TLS",
+   "url": "https://github.com/Hakky54/mutual-tls-ssl",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pre-authentication XXE vulnerability in the Services Drupal module",
+   "url": "https://www.synacktiv.com/ressources/synacktiv_drupal_xxe_services.pdf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Prototype pollution attack in NodeJS application",
+   "url": "https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Proxelar",
+   "url": "https://github.com/emanuele-em/proxelar",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PwnDizzle",
+   "url": "https://pwndizzle.blogspot.jp/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Qualys",
+   "url": "https://www.qualys.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Qualys SSL Labs",
+   "url": "https://www.ssllabs.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Query Strategies for Evading Convex-Inducing Classifiers",
+   "url": "https://people.eecs.berkeley.edu/~adj/publications/paper-files/1007-0484v1.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Query parameter reordering causes redirect page to render unsafe URL",
+   "url": "https://hackerone.com/reports/293689",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "RCE Payload Detection Bypass",
+   "url": "https://www.secjuice.com/web-application-firewall-waf-evasion/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "RET2 SYSTEMS, INC",
+   "url": "https://blog.ret2.io/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "RHMD: Evasion-Resilient Hardware Malware Detectors",
+   "url": "http://www.cs.ucr.edu/~kkhas001/pubs/micro17-rhmd.pdf",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "RPO\u653b\u51fb\u65b9\u5f0f\u7684\u63a2\u7a76",
+   "url": "https://www.freebuf.com/articles/web/166731.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rafay Bloch",
+   "url": "http://rafaybaloch.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rails SQL Injection",
+   "url": "https://rails-sqli.org",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rails Security - First part",
+   "url": "https://hackmd.io/s/SkuTVw5O-",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rails team",
+   "url": "https://rubyonrails.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rails \u52d5\u614b\u6a23\u677f\u8def\u5f91\u7684\u98a8\u96aa",
+   "url": "https://devco.re/blog/2015/07/24/the-vulnerability-of-dynamic-render-paths-in-rails/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ReconDog",
+   "url": "https://github.com/s0md3v/ReconDog",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Red Team Tales 0x01: From MSSQL to RCE",
+   "url": "https://www.tarlogic.com/en/blog/red-team-tales-0x01/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Remote Code Execution on a Facebook server",
+   "url": "https://blog.scrt.ch/2018/08/24/remote-code-execution-on-a-facebook-server/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Request Encoding to Bypass WAFs",
+   "url": "https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/august/request-encoding-to-bypass-web-application-firewalls/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Reverse-Shell-Manager",
+   "url": "https://github.com/WangYihang/Reverse-Shell-Manager",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Rhino Security Labs",
+   "url": "https://rhinosecuritylabs.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Robust Physical-World Attacks on Deep Learning Models",
+   "url": "https://arxiv.org/abs/1707.08945",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SELinux Game",
+   "url": "https://selinuxgame.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SMTP over XXE \u2212 how to send emails using Java's XML parser",
+   "url": "https://shiftordie.de/blog/2017/02/18/smtp-over-xxe/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SOBUG\u6f0f\u6d1e\u60ac\u8d4f\u5e73\u53f0",
+   "url": "https://sobug.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SPLOITUS",
+   "url": "https://sploitus.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQL INJECTION AND POSTGRES - AN ADVENTURE TO EVENTUAL RCE",
+   "url": "https://pulsesecurity.co.nz/articles/postgres-sqli",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQL Injection Bypassing WAF",
+   "url": "https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQL Injection Cheat Sheet",
+   "url": "https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQL Injection Pocket Reference",
+   "url": "https://websec.ca/kb/sql_injection",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQL Injection Wiki",
+   "url": "https://sqlwiki.netspi.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQLi Bypass",
+   "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/modsecurity-sql-injection-challenge-lessons-learned/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SQLi Bypass",
+   "url": "https://github.com/enkaskal/aws-waf-sqli-bypass-PoC",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSD Advisory \u2013 Chrome Turbofan Remote Code Execution",
+   "url": "https://blogs.securiteam.com/index.php/archives/3379",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSL & TLS Penetration Testing",
+   "url": "https://www.aptive.co.uk/blog/tls-ssl-security-testing/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSLScan",
+   "url": "https://github.com/rbsec/sslscan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSRF bible. Cheatsheet",
+   "url": "https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM/edit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSRF in Exchange leads to ROOT access in all instances",
+   "url": "https://hackerone.com/reports/341876",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSRF in https://imgur.com/vidgif/url",
+   "url": "https://hackerone.com/reports/115748",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSRF\u6f0f\u6d1e\u4e2d\u7ed5\u8fc7IP\u9650\u5236\u7684\u51e0\u79cd\u65b9\u6cd5\u603b\u7ed3",
+   "url": "https://www.freebuf.com/articles/web/135342.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Scapy",
+   "url": "https://scapy.net",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Scrutiny",
+   "url": "https://datarift.blogspot.tw/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SecuriTeam Secure Disclosure (SSD)",
+   "url": "https://blogs.securiteam.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SecuriTool",
+   "url": "https://securitool.js.org/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sending arbitrary IPC messages via overriding Function.prototype.apply",
+   "url": "https://hackerone.com/reports/188086",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Sergey Bobrov",
+   "url": "https://blog.blackfan.ru/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Setting arbitrary request headers in Chromium via CRLF injection",
+   "url": "https://blog.bentkowski.info/2018/06/setting-arbitrary-request-headers-in.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Shaolin",
+   "url": "https://devco.re/blog/author/shaolin/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Simone Onofri",
+   "url": "https://onofri.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Simple Black-Box Adversarial Perturbations for Deep Networks",
+   "url": "https://arxiv.org/abs/1612.06299",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SkillFortify - Formal analysis and supply chain security for agentic AI skills. Sound static analysis, SAT-based dependency resolution, trust scoring, CycloneDX ASBOM. 5 theorems, F1=96.95%, 0% FP rat",
+   "url": "https://github.com/varun369/skillfortify",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "So you want to be a web security researcher?",
+   "url": "https://portswigger.net/blog/so-you-want-to-be-a-web-security-researcher",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Social Mapper",
+   "url": "https://github.com/Greenwolf/social_mapper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Some Problems Of URLs",
+   "url": "https://noncombatant.org/2017/11/07/problems-of-urls/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Some Tricks From My Secret Group",
+   "url": "https://www.leavesongs.com/SHARE/some-tricks-from-my-secret-group.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Some-PoC-oR-ExP",
+   "url": "https://github.com/coffeehb/Some-PoC-oR-ExP",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Source",
+   "url": "http://html5sec.org/#71",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SpiderSuite",
+   "url": "https://github.com/spidersuite/SpiderSuite",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Stack Overflow",
+   "url": "https://stackoverflow.com/questions/tagged/security",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "State of TLS on the public web",
+   "url": "https://securemonk.io/insights/state-of-tls",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Stealing CSRF tokens with CSS injection (without iFrames)",
+   "url": "https://github.com/dxa4481/cssInjection",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Stealing Machine Learning Models via Prediction APIs",
+   "url": "https://arxiv.org/abs/1609.02943",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Stored XSS on Facebook",
+   "url": "https://opnsec.com/2018/03/stored-xss-on-facebook/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Stored XSS, and SSRF in Google using the Dataset Publishing Language",
+   "url": "https://s1gnalcha0s.github.io/dspl/2018/03/07/Stored-XSS-and-SSRF-Google.html",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "StringSifter - A machine learning tool that ranks strings based on their relevance for malware analysis",
+   "url": "https://github.com/fireeye/stringsifter",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Synthesizing Robust Adversarial Examples",
+   "url": "https://arxiv.org/abs/1707.07397",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "T00LS",
+   "url": "https://www.t00ls.net/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "THE BIG BAD WOLF - XSS AND MAINTAINING ACCESS",
+   "url": "https://www.paulosyibelo.com/2018/06/the-big-bad-wolf-xss-and-maintaining.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TIDoS-Framework",
+   "url": "https://github.com/theInfectedDrake/TIDoS-Framework",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TL:DR: VPN leaks users\u2019 IPs via WebRTC. I\u2019ve tested seventy VPN providers and 16 of them leaks users\u2019 IPs via WebRTC (23%)",
+   "url": "https://voidsec.com/vpn-leak/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TWITTER XSS + CSP BYPASS",
+   "url": "https://www.paulosyibelo.com/2017/05/twitter-xss-csp-bypass.html",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Tactics of Adversarial Attack on Deep Reinforcement Learning Agents",
+   "url": "http://yclin.me/adversarial_attack_RL/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Tarlogic",
+   "url": "https://www.tarlogic.com/en/cybersecurity-blog/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "TechBridge",
+   "url": "https://blog.techbridge.cc/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The 200 That Proved Nothing",
+   "url": "https://aivist.dev/the-200-that-proved-nothing",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Absurdly Underestimated Dangers of CSV Injection",
+   "url": "https://georgemauer.net/2017/10/07/csv-injection.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Bug Hunters Methodology v2.1",
+   "url": "https://docs.google.com/presentation/d/1VpRT8dFyTaFpQa9jhehtmGaC7TqQniMSYbUdlHN6VrY/edit?usp=sharing",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Cookie Monster in Your Browsers",
+   "url": "https://speakerdeck.com/filedescriptor/the-cookie-monster-in-your-browsers",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Daily Swig - Web security digest",
+   "url": "https://portswigger.net/daily-swig",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Definitive Security Data Science and Machine Learning Guide",
+   "url": "https://www.covert.io/the-definitive-security-datascience-and-machinelearning-guide/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Hacker News",
+   "url": "https://thehackernews.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Magic of Learning",
+   "url": "https://bitvijays.github.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Morning Paper",
+   "url": "https://blog.acolyer.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Next.js security-headers pitfall",
+   "url": "https://poszo.com/security/nextjs-headers-pitfall",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Register",
+   "url": "https://www.theregister.co.uk/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Space of Transferable Adversarial Examples",
+   "url": "https://arxiv.org/abs/1704.03453",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The bug bounty program that changed my life",
+   "url": "https://10degres.net/the-bug-bounty-program-that-changed-my-life/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The inception bar: a new phishing method",
+   "url": "https://jameshfisher.com/2019/04/27/the-inception-bar-a-new-phishing-method/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The most complete guide to finding anyone\u2019s email",
+   "url": "https://www.blurbiz.io/blog/the-most-complete-guide-to-finding-anyones-email",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The world of Site Isolation and compromised renderer",
+   "url": "https://speakerdeck.com/shhnjk/the-world-of-site-isolation-and-compromised-renderer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey",
+   "url": "https://arxiv.org/abs/1801.00553",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Timothy Morgan",
+   "url": "https://plus.google.com/105917618099766831589",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Timur Daudpota",
+   "url": "https://www.blurbiz.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Towards Poisoning of Deep Learning Algorithms with Back-gradient Optimization",
+   "url": "https://arxiv.org/abs/1708.08689",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Trail of Bits",
+   "url": "https://www.trailofbits.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples",
+   "url": "https://arxiv.org/abs/1605.07277",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Trend Micro Threat Discovery Appliance - Session Generation Authentication Bypass (CVE-2016-8584)",
+   "url": "https://blog.malerisch.net/2017/04/trend-micro-threat-discovery-appliance-session-generation-authentication-bypass-cve-2016-8584.html",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Troy Hunt",
+   "url": "https://www.troyhunt.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Trust Scan",
+   "url": "https://github.com/undeadlist/trust-scan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Twosecurity",
+   "url": "https://twosecurity.io/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "UUCORP",
+   "url": "https://github.com/Safe3/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "UUSEC WAF",
+   "url": "https://github.com/Safe3/uusec-waf/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Uber XSS via Cookie",
+   "url": "https://zhchbin.github.io/2017/08/30/Uber-XSS-via-Cookie/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Unicode Domains are bad and you should feel bad for supporting them",
+   "url": "https://www.vgrsec.com/post20170219.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Universal adversarial perturbations",
+   "url": "https://arxiv.org/abs/1610.08401",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Universal adversarial perturbations",
+   "url": "https://github.com/LTS4/universal",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "University of Amsterdam",
+   "url": "http://www.uva.nl",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "University of Michigan",
+   "url": "https://umich.edu/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "UseNix Woot'12",
+   "url": "https://www.usenix.org/conference/woot12",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "VRGSEC",
+   "url": "https://www.vgrsec.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "VWGen",
+   "url": "https://github.com/qazbnm456/VWGen",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "VirtueSecurity",
+   "url": "https://www.virtuesecurity.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "VirusTotal domain information",
+   "url": "https://www.virustotal.com/en/documentation/searching/#getting-domain-information",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vulnerability of Deep Reinforcement Learning to Policy Induction Attacks",
+   "url": "https://arxiv.org/abs/1701.04143",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vulnerability of machine learning models to adversarial examples",
+   "url": "http://ceur-ws.org/Vol-1649/187.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAF Bypass Tool",
+   "url": "https://github.com/nemesida-waf/waf-bypass",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAF Testing Framework",
+   "url": "https://www.imperva.com/lg/lgw_trial.asp?pid=483",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFBench",
+   "url": "https://github.com/microsoft/wafbench",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFNinja",
+   "url": "https://github.com/khalilbijjou/wafninja",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WAFTester",
+   "url": "https://github.com/Raz0r/waftester",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WCTF2019: Gyotaku The Flag",
+   "url": "https://westerns.tokyo/wctf2019-gtf/wctf2019-gtf-slides.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WEB APPLICATION PENETRATION TESTING NOTES",
+   "url": "https://techvomit.net/web-application-penetration-testing-notes/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Wallarm",
+   "url": "https://wallarm.com/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web Application Security Consortium",
+   "url": "http://www.webappsec.org",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web Application Security Zone by Netsparker",
+   "url": "https://www.netsparker.com/blog/web-security/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web Cache Deception Scanner",
+   "url": "https://portswigger.net/bappstore/7c1ca94a61474d9e897d307c858d52f0",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Web Cache Deception Scanner source",
+   "url": "https://github.com/PortSwigger/web-cache-deception-scanner",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WebDecoy",
+   "url": "https://github.com/WebDecoy/wordpress-plugin",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WebDecoy",
+   "url": "https://github.com/WebDecoy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WebLogic RCE (CVE-2019-2725) Debug Diary",
+   "url": "https://paper.seebug.org/910/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "WebLogic RCE(CVE-2019-2725)\u6f0f\u6d1e\u4e4b\u65c5",
+   "url": "https://paper.seebug.org/909/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Weblogic \u53cd\u5e8f\u5217\u5316\u6f0f\u6d1e(CVE-2018-2628)\u6f2b\u8c08",
+   "url": "https://paper.seebug.org/584/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Webmail-Hacking",
+   "url": "https://github.com/mottoin/SecPaper/blob/master/Webmail-Hacking.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Webshell-Sniper",
+   "url": "https://github.com/WangYihang/Webshell-Sniper",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "What Do WebLogic, WebSphere, JBoss, Jenkins, OpenNMS, and Your Application Have in Common? This Vulnerability.",
+   "url": "https://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "What is Security?",
+   "url": "https://kingx.me/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "What is a Side-Channel Attack ?",
+   "url": "https://www.csoonline.com/article/567149/what-is-a-side-channel-attack-how-these-end-runs-around-encryption-put-everyone-at-risk.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Where the LLM Stops: Deterministic Scoring in an AI-Assisted VAPT Pipeline",
+   "url": "https://aayushyadav.hashnode.dev/where-the-llm-stops-deterministic-scoring-in-an-ai-assisted-vapt-pipeline",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Why Facebook's api starts with a for loop",
+   "url": "https://dev.to/antogarand/why-facebooks-api-starts-with-a-for-loop-1eob",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Wild Patterns: Ten Years After the Rise of Adversarial Machine Learning",
+   "url": "https://arxiv.org/abs/1712.03141",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "X-Frame-Options: All about Clickjacking?",
+   "url": "https://github.com/cure53/Publications/blob/master/xfo-clickjacking.pdf?raw=true",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XChars.JS",
+   "url": "https://syllab.fr/projets/experiments/xcharsjs/5chars.pipeline.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XML Out-Of-Band Data Retrieval",
+   "url": "https://media.blackhat.com/eu-13/briefings/Osipov/bh-eu-13-XML-data-osipov-slides.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XML external entity (XXE) injection",
+   "url": "https://portswigger.net/web-security/xxe",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XML\u5b9e\u4f53\u653b\u51fb - \u4ece\u5185\u7f51\u63a2\u6d4b\u5230\u547d\u4ee4\u6267\u884c\u6b65\u6b65\u60ca\u5fc3",
+   "url": "https://www.freebuf.com/video/49961.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Bypass",
+   "url": "https://github.com/kmkz/Pentesting/blob/master/Pentest-Cheat-Sheet#L285",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Bypass",
+   "url": "https://www.sysdig.com/blog/fuzzing-and-bypassing-the-aws-waf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Bypass",
+   "url": "https://pastebin.com/i8Ans4d4",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Bypass",
+   "url": "https://www.securityfocus.com/bid/35053/info",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Challenges",
+   "url": "http://xss-quiz.int21h.jp/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Cheat Sheet - 2018 Edition",
+   "url": "https://leanpub.com/xss",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS Exploit",
+   "url": "https://www.securityfocus.com/bid/56159/info",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS game",
+   "url": "https://xss-game.appspot.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS on Facebook instagram CDN server bypassing signature protection",
+   "url": "https://www.amolbaikar.com/xss-on-facebook-instagram-cdn-server-bypassing-signature-protection/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS via a spoofed React element",
+   "url": "http://danlec.com/blog/xss-via-a-spoofed-react-element",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS without HTML: Client-Side Template Injection with AngularJS",
+   "url": "https://portswigger.net/research/xss-without-html-client-side-template-injection-with-angularjs",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS without parentheses and semi-colons",
+   "url": "https://portswigger.net/blog/xss-without-parentheses-and-semi-colons",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XSS.png",
+   "url": "https://github.com/LucaBongiorni/XSS.png",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE",
+   "url": "https://phonexicum.github.io/infosec/xxe.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE OOB extracting via HTTP+FTP using single opened port",
+   "url": "https://skavans.ru/en/2017/12/02/xxe-oob-extracting-via-httpftp-using-single-opened-port/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE in WeChat Pay Sdk ( WeChat leave a backdoor on merchant websites)",
+   "url": "https://seclists.org/fulldisclosure/2018/Jul/3",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE that can Bypass WAF",
+   "url": "https://lab.wallarm.com/xxe-that-can-bypass-waf-protection-98f679452ce0",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Xudong Zheng",
+   "url": "https://www.xudongz.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Yu Yagihashi",
+   "url": "https://speakerdeck.com/yagihashoo",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Zen Rails Security Checklist",
+   "url": "https://github.com/brunofacca/zen-rails-security-checklist",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ZeroTrust",
+   "url": "https://github.com/sattyamjjain/zerotrust",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\\\u963f\u70e8",
+   "url": "https://www.jianshu.com/u/121bf0f6b3d2",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "abuse-ssl-bypass-waf",
+   "url": "https://github.com/LandGrey/abuse-ssl-bypass-waf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "aesteral",
+   "url": "https://hackerone.com/aesteral",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "alert(1) to win",
+   "url": "https://alf.nu/alert1",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "all contributors",
+   "url": "https://github.com/0xInfection/awesome-waf/graphs/contributors",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "arkteam",
+   "url": "https://www.freebuf.com/author/arkteam",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "armyzer0",
+   "url": "https://www.secpulse.com/archives/author/armyzer0",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "awesome-adversarial-machine-learning",
+   "url": "https://github.com/yenchenlin/awesome-adversarial-machine-learning",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "awesome-cve-poc",
+   "url": "https://github.com/qazbnm456/awesome-cve-poc",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "awesome-machine-learning",
+   "url": "https://github.com/josephmisiti/awesome-machine-learning/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "awspwn",
+   "url": "https://github.com/dagrz/aws_pwn",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "beefproject",
+   "url": "https://beefproject.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "blogpost here",
+   "url": "https://0xinfection.github.io/posts/fingerprinting-wafs-side-channel/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bypass Google Cloud Platform WAF",
+   "url": "https://kloudle.com/blog/piercing-the-cloud-armor-the-8kb-bypass-in-google-cloud-platform-waf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bypass-firewalls-by-DNS-history",
+   "url": "https://github.com/vincentcox/bypass-firewalls-by-DNS-history",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cefdebug",
+   "url": "https://github.com/taviso/cefdebug",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "chaitin",
+   "url": "https://chaitin.com",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "charsetinspect",
+   "url": "https://github.com/hack-all-the-things/charsetinspect",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cheat sheet",
+   "url": "https://github.com/attackercan/cpp-sql-fuzzer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "csp evaluator",
+   "url": "https://csper.io/evaluator",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cure53.de/m",
+   "url": "https://cure53.de/m",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "cut-cdn",
+   "url": "https://github.com/ImAyrix/cut-cdn",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dirhunt",
+   "url": "https://github.com/Nekmo/dirhunt",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "domainanalyzer",
+   "url": "https://github.com/eldraco/domain_analyzer",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "domato",
+   "url": "https://github.com/google/domato",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dref",
+   "url": "https://github.com/mwrlabs/dref",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dstack - Confidential AI framework for secure ML/LLM deployment with hardware-enforced isolation and data privacy",
+   "url": "https://github.com/Dstack-TEE/dstack",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "enumXFF",
+   "url": "https://github.com/infosec-au/enumXFF",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "epi",
+   "url": "https://epi052.gitlab.io/notes-to-self/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "espi0n/Dockerfiles",
+   "url": "https://github.com/espi0n/Dockerfiles",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "eval\u957f\u5ea6\u9650\u5236\u7ed5\u8fc7 && PHP5.6\u65b0\u7279\u6027",
+   "url": "https://www.leavesongs.com/PHP/bypass-eval-length-restrict.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "genericapicall.pl XSS",
+   "url": "https://www.exploit-db.com/exploits/30777",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "getJS",
+   "url": "https://github.com/003random/getJS",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "grayhatwarfare",
+   "url": "https://buckets.grayhatwarfare.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "grayhatwarfare",
+   "url": "https://www.grayhatwarfare.com/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "hackerone",
+   "url": "http://web.archive.org/web/20200630164946/https://www.hackerone.com/start-hacking",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "haveibeenpwned",
+   "url": "https://haveibeenpwned.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "here",
+   "url": "http://lists.webappsec.org/pipermail/websecurity_lists.webappsec.org/2009-August/005673.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "here",
+   "url": "https://github.com/Hack-with-Github/Free-Security-eBooks",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "htb-writeups",
+   "url": "https://github.com/momenbasel/htb-writeups",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "impersonate-proxy",
+   "url": "https://github.com/ytkoka/impersonate-proxy",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "inventer-dev/mcp-internet-speed-test",
+   "url": "https://github.com/inventer-dev/mcp-internet-speed-test",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "jameshfisher",
+   "url": "https://jameshfisher.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "js-vuln-db",
+   "url": "https://github.com/tunz/js-vuln-db",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "js-xss",
+   "url": "https://github.com/leizongmin/js-xss",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "kenziy",
+   "url": "https://hackerone.com/kenziy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "knownsec",
+   "url": "https://www.knownsec.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "libinjection-fuzzer",
+   "url": "https://github.com/migolovanov/libinjection-fuzzer",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "malware-jail",
+   "url": "https://github.com/HynekPetrak/malware-jail",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mikey",
+   "url": "https://www.freebuf.com/author/mikey",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "n0tr00t",
+   "url": "https://www.n0tr00t.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nano",
+   "url": "https://github.com/s0md3v/nano",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "notes",
+   "url": "https://github.com/ChALkeR/notes",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ntlmchallenger",
+   "url": "https://github.com/b17zr/ntlm_challenger",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "peoplefindThor",
+   "url": "https://peoplefindthor.dk/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ph1re",
+   "url": "https://www.freebuf.com/author/ph1re",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "phith0n",
+   "url": "https://www.tttang.com/user/phith0n",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "phith0n/Mind-Map",
+   "url": "https://github.com/phith0n/Mind-Map",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "phithon",
+   "url": "https://www.leavesongs.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "plasma",
+   "url": "https://github.com/plasma-disassembler/plasma",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pompelmi",
+   "url": "https://github.com/pompelmi",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "prowler",
+   "url": "https://github.com/Alfresco/prowler",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "pwngitmanager",
+   "url": "https://github.com/allyshka/pwngitmanager",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "raven",
+   "url": "https://github.com/0x09AL/raven",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "repo-supervisor",
+   "url": "https://github.com/auth0/repo-supervisor",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "reporttype XSS",
+   "url": "https://www.securityfocus.com/bid/27462/info",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "repos",
+   "url": "https://github.com/qazbnm456",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "s0cket7",
+   "url": "https://s0cket7.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "skavans",
+   "url": "https://skavans.ru/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "slurp",
+   "url": "https://github.com/hehnope/slurp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "snallygaster",
+   "url": "https://github.com/hannob/snallygaster",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "sqlchop",
+   "url": "https://sqlchop.chaitin.cn/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ssltest",
+   "url": "https://www.ssllabs.com/ssltest/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "subDomainsBrute",
+   "url": "https://github.com/lijiejie/subDomainsBrute",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "this",
+   "url": "https://www.url-encode-decode.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "this",
+   "url": "https://hackerone.com/reports/231444",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "this",
+   "url": "https://hackerone.com/reports/231389",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "this blog",
+   "url": "https://osandamalith.com/2019/10/12/bypassing-the-webarx-web-application-firewall-waf/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tinfoleak",
+   "url": "https://github.com/vaguileradiaz/tinfoleak",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tl;dr sec",
+   "url": "https://tldrsec.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "urlscan.io",
+   "url": "https://urlscan.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "uxss-db",
+   "url": "https://github.com/Metnew/uxss-db",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "verifyfetch",
+   "url": "https://github.com/hamzaydia/verifyfetch",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "voidsec",
+   "url": "https://voidsec.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "walkerfuz",
+   "url": "https://www.freebuf.com/author/walkerfuz",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "webshell",
+   "url": "https://github.com/tennc/webshell",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "web\u72d7\u8981\u61c2\u7684\u5185\u7f51\u7aef\u53e3\u8f6c\u53d1",
+   "url": "https://www.jianshu.com/p/735e8f1746f0",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xsschop",
+   "url": "https://xsschop.chaitin.cn/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "z3r0yu",
+   "url": "http://zeroyu.xyz/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "zhchbin",
+   "url": "https://zhchbin.github.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0412\u0435\u0431",
+   "url": "https://www.drweb.ru/",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u041e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438 Safari \u0432 client-side \u0430\u0442\u0430\u043a\u0430\u0445",
+   "url": "https://bo0om.ru/safari-client-side",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u30d6\u30e9\u30a6\u30b6\u306e\u8106\u5f31\u6027\u3068\u305d\u306e\u30a4\u30f3\u30d1\u30af\u30c8",
+   "url": "https://speakerdeck.com/nishimunea/burauzafalsecui-ruo-xing-tosofalseinpakuto",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u4ece\u4e00\u9053CTF\u9898\u96f6\u57fa\u7840\u5b66V8\u6f0f\u6d1e\u5229\u7528",
+   "url": "https://www.freebuf.com/vuls/203721.html",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u50bb\u86cb\u8054\u7f51\u8bbe\u5907\u641c\u7d22",
+   "url": "https://www.oshadan.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u5343\u57df\u5343\u5bfb",
+   "url": "https://blog.csdn.net/f1n4lly/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u5982\u4f55\u6b63\u78ba\u7684\u53d6\u5f97\u4f7f\u7528\u8005 IP \uff1f",
+   "url": "https://devco.re/blog/2014/06/19/client-ip-detection/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u5b89\u5168\u5ba2",
+   "url": "https://www.anquanke.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u5b89\u5168\u8109\u640f",
+   "url": "https://www.secpulse.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u603b\u7ed3\u4e86\u5341\u7bc7.Net\u53cd\u5e8f\u5217\u5316\u6587\u7ae0\uff0c\u6301\u7eed\u66f4\u65b0",
+   "url": "https://github.com/Ivan1ee/NET-Deserialize",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u6307\u5c16\u5b89\u5168",
+   "url": "https://www.secfree.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u6d45\u8c08Web\u5ba2\u6237\u7aef\u8ffd\u8e2a",
+   "url": "https://www.freebuf.com/articles/web/127266.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u6d4f\u89c8\u5668\u6f0f\u6d1e\u6316\u6398\u601d\u8def",
+   "url": "https://zhuanlan.zhihu.com/p/28719766",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u6df1\u5165\u7406\u89e3 JavaScript Prototype \u6c61\u67d3\u653b\u51fb",
+   "url": "https://www.leavesongs.com/PENETRATION/javascript-prototype-pollution-attack.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u7834\u58f3\uff08Beta\uff09",
+   "url": "https://pockr.org/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u817e\u8baf\u7384\u6b66\u5b9e\u9a8c\u5ba4",
+   "url": "https://xlab.tencent.com/cn/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u817e\u8baf\u7384\u6b66\u5b9e\u9a8c\u5ba4\u5b89\u5168\u52a8\u6001\u63a8\u9001",
+   "url": "https://xuanwulab.github.io/cn/secnews/2018/01/01/index.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u89c1\u62db\u62c6\u62db\uff1a\u7ed5\u8fc7WAF\u7ee7\u7eedSQL\u6ce8\u5165\u5e38\u7528\u65b9\u6cd5",
+   "url": "https://www.freebuf.com/articles/web/36683.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u8b93\u6211\u5011\u4f86\u8ac7\u8ac7 CSRF",
+   "url": "https://blog.techbridge.cc/2017/02/25/csrf-introduction/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u957f\u4ead\u6280\u672f\u4e13\u680f",
+   "url": "https://zhuanlan.zhihu.com/chaitin-tech",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u957f\u4ead\u79d1\u6280",
+   "url": "https://www.chaitin.cn/zh/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "\u96b1\u533f\u7684\u653b\u64ca\u4e4b-Domain Fronting",
+   "url": "https://evi1cg.me/archives/Domain_Fronting.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  }
+ ]
+}

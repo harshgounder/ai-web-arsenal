@@ -10,8 +10,10 @@
    ],
    "atoms": [],
    "cells": [],
-   "status": "STUB",
-   "why": "navigation, not capability"
+   "status": "POINTER",
+   "why": "navigation, not capability",
+   "delegates": "README.md",
+   "delegates_note": "the hub itself"
   },
   {
    "id": "D01",
@@ -29,7 +31,9 @@
     "meta/L05/A2",
     "meta/L07/A4"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "prompts/03-hypothesis.md and trees/",
+   "delegates_note": "the reasoning layer"
   },
   {
    "id": "D02",
@@ -200,7 +204,7 @@
     "S01/L07/A2",
     "S01/L08/A5"
    ],
-   "status": "STUB"
+   "status": "DEEP"
   },
   {
    "id": "D11",
@@ -356,7 +360,7 @@
     "S12/L06/A3",
     "S12/L07/A2"
    ],
-   "status": "STUB"
+   "status": "DEEP"
   },
   {
    "id": "D19",
@@ -452,7 +456,7 @@
     "all/L08/A5",
     "all/L09/A3"
    ],
-   "status": "STUB"
+   "status": "DEEP"
   },
   {
    "id": "D24",
@@ -491,7 +495,9 @@
     "all/L06/A3",
     "all/L08/A5"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "D05, D11, D12 and the atlas X06 gaps",
+   "delegates_note": "labs are distributed per domain, not centralised, because a lab without its domain context is useless"
   },
   {
    "id": "D27",
@@ -504,7 +510,9 @@
     "all/L05/A0",
     "all/L10/A0"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "data/corpus.jsonl and data/domains/*.index.json",
+   "delegates_note": "the corpora are the corpus, not a document about corpora"
   },
   {
    "id": "D28",
@@ -581,7 +589,9 @@
    "cells": [
     "meta/L01/A0"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "raw/vendors.json (460 vendors, 14 categories, dated 2026-10-18)",
+   "delegates_note": "the dataset is the artefact"
   },
   {
    "id": "D33",
@@ -593,7 +603,9 @@
    "cells": [
     "meta/L01/A0"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "data/rivals.json, data/reconcile/*.json",
+   "delegates_note": "the ledger is machine readable, a document would be a worse copy"
   },
   {
    "id": "D34",
@@ -605,7 +617,9 @@
    "cells": [
     "meta/L12/A6"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "scripts/stamp-and-check.py, data/evidence-summary.json",
+   "delegates_note": "freshness is executable here"
   },
   {
    "id": "D35",
@@ -617,7 +631,9 @@
    "cells": [
     "meta/L01/A0"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "BOOTSTRAP.md, manifest/tools.yaml, bootstrap/",
+   "delegates_note": "the onboarding is generated from the manifest"
   },
   {
    "id": "D36",
@@ -646,7 +662,9 @@
    "cells": [
     "meta/L05/A2"
    ],
-   "status": "STUB"
+   "status": "POINTER",
+   "delegates": "../web-attack-atlas/docs/ONTOLOGY.md and data/atoms.json",
+   "delegates_note": "the ontology lives in the atlas, by design"
   }
  ]
 }

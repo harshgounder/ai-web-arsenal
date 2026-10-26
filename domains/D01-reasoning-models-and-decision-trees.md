@@ -1,7 +1,11 @@
 # D01: reasoning models and decision trees
 
-Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the
-top rather than discovered by reading.
+Status: **POINTER**. This domain is implemented as an artefact elsewhere in the repo, not as a
+document here. A second document would be a worse copy that drifts.
+
+**Implemented at:** `prompts/03-hypothesis.md and trees/`
+
+**Why not here:** the reasoning layer
 
 ## What this domain covers
 

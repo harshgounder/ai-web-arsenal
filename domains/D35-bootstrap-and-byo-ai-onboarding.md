@@ -1,7 +1,11 @@
 # D35: bootstrap and BYO-AI onboarding
 
-Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the
-top rather than discovered by reading.
+Status: **POINTER**. This domain is implemented as an artefact elsewhere in the repo, not as a
+document here. A second document would be a worse copy that drifts.
+
+**Implemented at:** `BOOTSTRAP.md, manifest/tools.yaml, bootstrap/`
+
+**Why not here:** the onboarding is generated from the manifest
 
 ## What this domain covers
 

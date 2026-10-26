@@ -1,0 +1,39 @@
+{
+ "id": "d10-root",
+ "q": "Is there a shared cache in front of the app?",
+ "why": "Without a shared cache there is no class here. Confirm with headers and age before spending time on keying.",
+ "branches": [
+  {
+   "a": "Unknown",
+   "action": "read the response headers and repeat one request. age, x-cache and cf-cache-status answer it",
+   "tools": [
+    "d10-curl"
+   ],
+   "oracle": "cache hit indicator"
+  },
+  {
+   "a": "Yes, and you want poisoning",
+   "action": "vary headers one at a time and watch the cached response. the first input that changes it and is not in the key is the opening",
+   "tools": [
+    "d10-wcvs",
+    "d10-mitmproxy"
+   ],
+   "oracle": "a second clean session receives your value"
+  },
+  {
+   "a": "Yes, and you want deception",
+   "action": "find a private route the cache will store under a static looking path, then request it without a session",
+   "tools": [
+    "d10-wcvs",
+    "d10-ps-deception"
+   ],
+   "oracle": "private content served without authentication"
+  },
+  {
+   "a": "No shared cache",
+   "action": "no finding. say so and move on",
+   "tools": [],
+   "oracle": "n/a"
+  }
+ ]
+}

@@ -1,7 +1,11 @@
 # D34: freshness engine and maintenance
 
-Status: **STUB**. The shape is declared, the content is not written yet. This is stated at the
-top rather than discovered by reading.
+Status: **POINTER**. This domain is implemented as an artefact elsewhere in the repo, not as a
+document here. A second document would be a worse copy that drifts.
+
+**Implemented at:** `scripts/stamp-and-check.py, data/evidence-summary.json`
+
+**Why not here:** freshness is executable here
 
 ## What this domain covers
 
