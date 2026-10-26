@@ -69,7 +69,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "Aggression 1 only. Higher is loud and rarely changes the answer."
+   "note": "Aggression 1 only. Higher is loud and rarely changes the answer.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-httpx",
@@ -99,7 +100,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "The tech-detect field is what feeds the stack profile that D01 hypotheses depend on."
+   "note": "The tech-detect field is what feeds the stack profile that D01 hypotheses depend on.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-nmap",
@@ -124,11 +126,15 @@
    "evades": [
     "F1"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "server and framework version in headers or body"
+   ],
    "agency": "A2",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "The arbiter. When httpx and the HTML disagree, this decides."
+   "note": "The arbiter. When httpx and the HTML disagree, this decides.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d03-nuclei",
@@ -157,7 +163,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-ffuf",
@@ -183,10 +190,14 @@
    "evades": [
     "F1"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "requests with Host headers that do not match inventory"
+   ],
    "agency": "A2",
    "stage": "L04",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d03-wafw00f",
@@ -215,7 +226,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "Run before payload selection, never after. The WAF determines which mutation axis matters."
+   "note": "Run before payload selection, never after. The WAF determines which mutation axis matters.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-rea-bundle",
@@ -241,11 +253,15 @@
    "evades": [
     "F1"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "server and framework version in headers or body"
+   ],
    "agency": "A3",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "The most reliable fingerprint for SPA stacks. Headers lie; the bundle's dependencies do not."
+   "note": "The most reliable fingerprint for SPA stacks. Headers lie; the bundle's dependencies do not.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d03-favicon",
@@ -275,7 +291,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "PROBABLE",
-   "note": "The technique is well established, the repo originally cited here does not exist. httpx implements favicon hashing with -favicon, which is verified."
+   "note": "The technique is well established, the repo originally cited here does not exist. httpx implements favicon hashing with -favicon, which is verified.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-ja3",
@@ -305,7 +322,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "note": "Read this defensively too: if the target uses it, your default client is already identified."
+   "note": "Read this defensively too: if the target uses it, your default client is already identified.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-wappalyzer",
@@ -333,7 +351,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d03-wstg-info",
@@ -355,7 +374,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

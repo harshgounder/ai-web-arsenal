@@ -76,7 +76,8 @@
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Only against infrastructure you own or a lab. A desync can corrupt other users' requests, which makes it the most dangerous class here."
+   "note": "Only against infrastructure you own or a lab. A desync can corrupt other users' requests, which makes it the most dangerous class here.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d09-h2c",
@@ -100,10 +101,14 @@
     "an internal request reaching a path the front end would block"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "upgrade header forwarded to a backend that speaks h2c"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d09-mitmproxy",
@@ -129,7 +134,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d09-curl",
@@ -155,7 +161,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d09-portswigger",
@@ -177,7 +184,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d09-http2-research",
@@ -197,11 +205,15 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "header injection through pseudo header conversion"
+   ],
    "agency": "A2",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "HTTP/2 smuggling separated this domain into two eras. Anything that only tests HTTP/1.1 is testing half the surface."
+   "note": "HTTP/2 smuggling separated this domain into two eras. Anything that only tests HTTP/1.1 is testing half the surface.",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d09-rfc9112",
@@ -224,7 +236,8 @@
    "agency": "A2",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "Read the message body length section. Every smuggling variant is a disagreement about that section."
+   "note": "Read the message body length section. Every smuggling variant is a disagreement about that section.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d09-rfc9113",
@@ -243,10 +256,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "upgrade header forwarded to a backend that speaks h2c"
+   ],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d09-nuclei",
@@ -273,7 +290,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d09-hacktricks",
@@ -295,7 +313,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

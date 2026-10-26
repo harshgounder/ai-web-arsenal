@@ -50,6 +50,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **fuxploider**  
 - preconditions: `an upload endpoint`
 - oracle: `a file accepted that the app said it would reject`
+- detected by: extension or type outside the allowlist
 - note: Not on PyPI. Build from source. The finding is acceptance AND execution: a stored file that is never rendered is not impact.
 
 **curl**  
@@ -71,6 +72,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **PayloadsAllTheThings**  
 - preconditions: `a class and a context`
 - oracle: `a payload that works`
+- detected by: valid as two formats
 
 ## Decision tree
 

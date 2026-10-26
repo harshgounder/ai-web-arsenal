@@ -66,11 +66,15 @@
     "callback received with the request metadata"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "unexpected outbound request from an app host"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "The callback is the oracle. Without one, a blind SSRF finding is a hypothesis."
+   "note": "The callback is the oracle. Without one, a blind SSRF finding is a hypothesis.",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d14-ssrfmap",
@@ -94,10 +98,14 @@
     "internal service response via the target"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "non http scheme in a fetch parameter"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d14-gopherus",
@@ -124,7 +132,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d14-curl",
@@ -147,10 +156,14 @@
     "metadata response, or a distinguishable timing difference"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "request to the metadata address from an app process"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d14-rea-capture",
@@ -176,7 +189,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d14-mitmproxy",
@@ -199,10 +213,15 @@
     "inbound request from the target"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "request to the metadata address from an app process"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d14-wstg-ssrf",
@@ -224,7 +243,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d14-hacktricks",
@@ -243,10 +263,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "request to the metadata address from an app process"
+   ],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d14-imds",
@@ -270,7 +294,8 @@
    "agency": "A2",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "IMDSv2 requires a token request first. If the fetcher cannot set a header, the class is closed and saying so is the finding."
+   "note": "IMDSv2 requires a token request first. If the fetcher cannot set a header, the class is closed and saying so is the finding.",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -78,7 +78,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "Run before payload selection, never after. The WAF decides which mutation axis matters."
+   "note": "Run before payload selection, never after. The WAF decides which mutation axis matters.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d22-curl_cffi",
@@ -105,11 +106,15 @@
     "F5",
     "F7"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "client JA3 not matching the claimed browser"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "The comparison is the test: same request, one plain client and one impersonating. If the answers differ, the defence is fingerprinting."
+   "note": "The comparison is the test: same request, one plain client and one impersonating. If the answers differ, the defence is fingerprinting.",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d22-curl-impersonate",
@@ -135,10 +140,15 @@
     "F5",
     "F7"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "same session from many IPs"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d22-tls-client",
@@ -163,10 +173,14 @@
    "evades": [
     "F5"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "client JA3 not matching the claimed browser"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d22-playwright",
@@ -196,7 +210,8 @@
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "Set human timing deliberately rather than randomly. Random is itself a signal."
+   "note": "Set human timing deliberately rather than randomly. Random is itself a signal.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d22-undetected-chromedriver",
@@ -221,11 +236,16 @@
    "evades": [
     "F5"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "navigator.webdriver, CDP artefacts"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "Still detectable, just less obviously. Treat success as evidence about the defence, not as invisibility."
+   "note": "Still detectable, just less obviously. Treat success as evidence about the defence, not as invisibility.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d22-cloudscraper",
@@ -250,11 +270,16 @@
    "evades": [
     "F5"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "challenge token reused"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "If it fails, that is data about the defence, not a tool bug. One attempt per host, then stop."
+   "note": "If it fails, that is data about the defence, not a tool bug. One attempt per host, then stop.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d22-chromium",
@@ -282,7 +307,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d22-mitmproxy",
@@ -308,10 +334,15 @@
     "F2",
     "F3"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "challenge token reused"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d22-ffuf",
@@ -340,7 +371,8 @@
    "agency": "A2",
    "stage": "L04",
    "status": "VERIFIED",
-   "note": "Set -rate. An agent that ignores rate turns a test into a denial of service."
+   "note": "Set -rate. An agent that ignores rate turns a test into a denial of service.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d22-nuclei",
@@ -365,10 +397,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "same session from many IPs"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d22-awesome-waf",
@@ -390,7 +427,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d22-hacktricks",
@@ -412,7 +450,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -65,12 +65,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a device or emulator you control`, `the app installed`
 - oracle: `hook output showing the decrypted value or bypassed check`
 - defense levels it addresses: F2
+- detected by: instrumentation present, hooking framework loaded
 - note: frida.re did not resolve from the checking host. GitHub is the stable reference.
 
 **objection**  
 - preconditions: `a rooted device or emulator`
 - oracle: `bypass applied and the app proceeding`
 - defense levels it addresses: F2
+- detected by: instrumentation present, hooking framework loaded
 
 **Mobile Security Framework**  
 - preconditions: `an APK or IPA`

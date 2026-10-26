@@ -80,11 +80,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "output containing prompt fragments"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Probe based, not exploit based. It tells you a class is present, not what it lets you do."
+   "note": "Probe based, not exploit based. It tells you a class is present, not what it lets you do.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d19-pyrit",
@@ -114,7 +119,8 @@
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "The converter chain is the useful part: it is how you test whether a guard survives encoding."
+   "note": "The converter chain is the useful part: it is how you test whether a guard survives encoding.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d19-promptfoo",
@@ -140,11 +146,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "user input containing instruction override patterns"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "The only credible answer to 'did the fix actually hold'. Everything else is a one time demo."
+   "note": "The only credible answer to 'did the fix actually hold'. Everything else is a one time demo.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d19-llm-guard",
@@ -170,11 +181,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "user input containing instruction override patterns"
+   ],
    "agency": "A2",
    "stage": "L11",
    "status": "ESTABLISHED",
-   "note": "Listed as the defence side of the mirror. Test it as an attacker: a guard is a bypass target, not a wall."
+   "note": "Listed as the defence side of the mirror. Test it as an attacker: a guard is a bypass target, not a wall.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d19-rebuff",
@@ -203,7 +218,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L11",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d19-deepteam",
@@ -231,7 +247,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d19-gandalf",
@@ -256,11 +273,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "user input containing instruction override patterns"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Use it to calibrate whether your agent can actually get a secret past a guard, cheaply."
+   "note": "Use it to calibrate whether your agent can actually get a secret past a guard, cheaply.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d19-agentdojo",
@@ -286,11 +308,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "user input containing instruction override patterns"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "The utility loss number is the one that matters. A defence that breaks the agent is not a defence."
+   "note": "The utility loss number is the one that matters. A defence that breaks the agent is not a defence.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d19-llm-top10",
@@ -313,7 +340,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d19-atlas",
@@ -335,7 +363,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d19-owasp-agentic",
@@ -355,10 +384,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "agent action outside the stated task"
+   ],
    "agency": "A0",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 5,
+   "mirror_provisional": true
   }
  ],
  "tree": {

@@ -52,6 +52,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **mcp-scan**  
 - preconditions: `an MCP client config`
 - oracle: `flagged tool description with reason`
+- detected by: description hash change
 
 **awesome-mcp-servers**  
 - note: Included because it is the index of record, and because its size is the warning: an unpinned MCP registry is a supply chain.
@@ -63,6 +64,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **AgentDojo**  
 - preconditions: `an agent harness`
 - oracle: `attack success and utility loss`
+- detected by: instructions in tool output followed by a call
 
 **This repo: mcps/**  
 - oracle: `a config that starts`

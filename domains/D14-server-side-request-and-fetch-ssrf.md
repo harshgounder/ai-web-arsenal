@@ -49,11 +49,13 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **interactsh-client**  
 - preconditions: `a payload position that causes a server side request`
 - oracle: `callback received with the request metadata`
+- detected by: unexpected outbound request from an app host
 - note: The callback is the oracle. Without one, a blind SSRF finding is a hypothesis.
 
 **SSRFmap**  
 - preconditions: `a confirmed SSRF primitive`
 - oracle: `internal service response via the target`
+- detected by: non http scheme in a fetch parameter
 
 **Gopherus**  
 - preconditions: `an SSRF that supports gopher`
@@ -62,6 +64,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **curl (metadata probe)**  
 - preconditions: `a server side fetch primitive`
 - oracle: `metadata response, or a distinguishable timing difference`
+- detected by: request to the metadata address from an app process
 
 **rea inspect_web_network_capture**  
 - preconditions: `a capture`
@@ -70,6 +73,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **mitmproxy**  
 - preconditions: `a listener you control`
 - oracle: `inbound request from the target`
+- detected by: request to the metadata address from an app process
 
 **AWS IMDS documentation**  
 - note: IMDSv2 requires a token request first. If the fetcher cannot set a header, the class is closed and saying so is the finding.

@@ -69,11 +69,15 @@
     "a file accepted that the app said it would reject"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "extension or type outside the allowlist"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Not on PyPI. Build from source. The finding is acceptance AND execution: a stored file that is never rendered is not impact."
+   "note": "Not on PyPI. Build from source. The finding is acceptance AND execution: a stored file that is never rendered is not impact.",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d13-curl",
@@ -99,7 +103,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d13-ffuf",
@@ -125,7 +130,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L04",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d13-rea-artifact",
@@ -152,7 +158,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d13-fq",
@@ -178,7 +185,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d13-wstg-upload",
@@ -200,7 +208,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d13-wstg-traversal",
@@ -219,10 +228,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "archive entry with traversal"
+   ],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d13-ps-traversal",
@@ -244,7 +257,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d13-payloads",
@@ -268,10 +282,15 @@
     "a payload that works"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "valid as two formats"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d13-hacktricks",
@@ -293,7 +312,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -78,7 +78,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D21",
-   "agent_use": "apktool d -s app.apk, then read AndroidManifest for exported components"
+   "agent_use": "apktool d -s app.apk, then read AndroidManifest for exported components",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-arjun",
@@ -106,7 +107,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "arjun -u endpoint -oJ params.json, hidden params are a logic bug source"
+   "agent_use": "arjun -u endpoint -oJ params.json, hidden params are a logic bug source",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-binwalk",
@@ -134,7 +136,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D31",
-   "agent_use": "binwalk -e image.bin, or REA firmware lane for unblob based extraction"
+   "agent_use": "binwalk -e image.bin, or REA firmware lane for unblob based extraction",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-chromium",
@@ -162,7 +165,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D08",
-   "agent_use": "chromium --remote-debugging-port=9222 --user-data-dir=/tmp/p, then REA inspects the page"
+   "agent_use": "chromium --remote-debugging-port=9222 --user-data-dir=/tmp/p, then REA inspects the page",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-clairvoyance",
@@ -191,7 +195,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "clairvoyance -o schema.json -w wordlist url/graphql, this is the introspection-off path"
+   "agent_use": "clairvoyance -o schema.json -w wordlist url/graphql, this is the introspection-off path",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-commix",
@@ -219,7 +224,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D07",
-   "agent_use": "commix --url target --batch"
+   "agent_use": "commix --url target --batch",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-curl",
@@ -247,7 +253,8 @@
    "stage": "L01",
    "status": "VERIFIED",
    "home_domain": "D00",
-   "agent_use": "curl -sS -D- -o- with no client cookies, to confirm what a browser tool reported"
+   "agent_use": "curl -sS -D- -o- with no client cookies, to confirm what a browser tool reported",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-dalfox",
@@ -275,7 +282,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D08",
-   "agent_use": "dalfox url target --json, then verify by hand, dalfox reports candidates"
+   "agent_use": "dalfox url target --json, then verify by hand, dalfox reports candidates",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-deepteam",
@@ -303,7 +311,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D19",
-   "agent_use": "risk report per category, comparable across runs"
+   "agent_use": "risk report per category, comparable across runs",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-dnsx",
@@ -331,7 +340,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "dnsx -l subs -a -cname -json to separate dangling cname from live host"
+   "agent_use": "dnsx -l subs -a -cname -json to separate dangling cname from live host",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-feroxbuster",
@@ -359,7 +369,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "feroxbuster -u target --json, recursion finds nested apps"
+   "agent_use": "feroxbuster -u target --json, recursion finds nested apps",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-ffuf",
@@ -387,7 +398,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "ffuf -w list -u https://t/FUZZ -of json -o out.json, one job per host"
+   "agent_use": "ffuf -w list -u https://t/FUZZ -of json -o out.json, one job per host",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-fq",
@@ -415,7 +427,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D31",
-   "agent_use": "fq '.boxes[0]' file.mp4 to walk an unknown container without a parser"
+   "agent_use": "fq '.boxes[0]' file.mp4 to walk an unknown container without a parser",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-frida",
@@ -443,7 +456,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D21",
-   "agent_use": "frida -U -f pkg -l hook.js, pinning bypass is a script not a flag"
+   "agent_use": "frida -U -f pkg -l hook.js, pinning bypass is a script not a flag",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-garak",
@@ -471,7 +485,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D19",
-   "agent_use": "garak --model_type rest --probes injection, one probe family per run so results are readable"
+   "agent_use": "garak --model_type rest --probes injection, one probe family per run so results are readable",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-gau",
@@ -499,7 +514,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "gau --subs target.tld to harvest historical endpoints before touching the host"
+   "agent_use": "gau --subs target.tld to harvest historical endpoints before touching the host",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-ghidra",
@@ -527,7 +543,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D31",
-   "agent_use": "analyzeHeadless with a script, or drive it through the rea MCP bridge"
+   "agent_use": "analyzeHeadless with a script, or drive it through the rea MCP bridge",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-gitleaks",
@@ -555,7 +572,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D16",
-   "agent_use": "gitleaks detect --source bundle.js --report-format json, works on a single file"
+   "agent_use": "gitleaks detect --source bundle.js --report-format json, works on a single file",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-gobuster",
@@ -583,7 +601,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "gobuster vhost -u target -w names --append-domain, the vhost mode is the underused one"
+   "agent_use": "gobuster vhost -u target -w names --append-domain, the vhost mode is the underused one",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-graphql-cop",
@@ -612,7 +631,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "graphql-cop -t https://target/graphql, json output maps to the defense mirror directly"
+   "agent_use": "graphql-cop -t https://target/graphql, json output maps to the defense mirror directly",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-graphw00f",
@@ -641,7 +661,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "graphw00f -d -t https://target/graphql, engine determines introspection bypass route"
+   "agent_use": "graphw00f -d -t https://target/graphql, engine determines introspection bypass route",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-grpcurl",
@@ -665,12 +686,17 @@
     "json output parseable"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "call volume per run"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "grpcurl -plaintext host:443 list, then describe, then call. reflection on means full schema"
+   "agent_use": "grpcurl -plaintext host:443 list, then describe, then call. reflection on means full schema",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d29-hashcat",
@@ -698,7 +724,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D16",
-   "agent_use": "hashcat -m 1400 -a 0 hash.txt rockyou.txt, identify mode first with hashid"
+   "agent_use": "hashcat -m 1400 -a 0 hash.txt rockyou.txt, identify mode first with hashid",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-httpx",
@@ -726,7 +753,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "httpx -l hosts -json -tech-detect -status-code, gives the stack per host"
+   "agent_use": "httpx -l hosts -json -tech-detect -status-code, gives the stack per host",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-inql",
@@ -755,7 +783,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "inql -t https://target/graphql -o out, generates ready queries per field"
+   "agent_use": "inql -t https://target/graphql -o out, generates ready queries per field",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-jadx",
@@ -783,7 +812,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D21",
-   "agent_use": "jadx -d out app.apk, then grep for endpoints. REA does class level lookup without writing source"
+   "agent_use": "jadx -d out app.apk, then grep for endpoints. REA does class level lookup without writing source",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-jq",
@@ -811,7 +841,8 @@
    "stage": "L01",
    "status": "VERIFIED",
    "home_domain": "D00",
-   "agent_use": "pipe any tool's json through jq -r to get one field per line"
+   "agent_use": "pipe any tool's json through jq -r to get one field per line",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-jwt_tool",
@@ -839,7 +870,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D06",
-   "agent_use": "jwt_tool <token> -M at to run all tests, then -T for a specific tamper"
+   "agent_use": "jwt_tool <token> -M at to run all tests, then -T for a specific tamper",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-katana",
@@ -867,7 +899,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "katana -u target -jc -json -d 3, js crawl is the part that finds api routes"
+   "agent_use": "katana -u target -jc -json -d 3, js crawl is the part that finds api routes",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-kiterunner",
@@ -896,7 +929,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "kr scan target -w routes.kite -j json, finds routes docs do not mention"
+   "agent_use": "kr scan target -w routes.kite -j json, finds routes docs do not mention",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-llm-guard",
@@ -924,7 +958,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D19",
-   "agent_use": "evaluate it as a bypass target, not as a wall"
+   "agent_use": "evaluate it as a bypass target, not as a wall",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-mcp-scan",
@@ -947,12 +982,17 @@
     "json output parseable"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "tool invoked outside the planned phase"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D20",
-   "agent_use": "mcp-scan scan, then hash descriptions and diff on each start"
+   "agent_use": "mcp-scan scan, then hash descriptions and diff on each start",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d29-mitmproxy",
@@ -980,7 +1020,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D31",
-   "agent_use": "mitmdump -w flows.mitm, then rea inspect_web_network_capture reads it natively"
+   "agent_use": "mitmdump -w flows.mitm, then rea inspect_web_network_capture reads it natively",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-mitmproxy2swagger",
@@ -1009,7 +1050,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "mitmproxy2swagger -i flows -o spec.yml -p https://api, then fix ignored paths by hand"
+   "agent_use": "mitmproxy2swagger -i flows -o spec.yml -p https://api, then fix ignored paths by hand",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-naabu",
@@ -1037,7 +1079,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "naabu -list hosts -top-ports 1000 -json"
+   "agent_use": "naabu -list hosts -top-ports 1000 -json",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-newman",
@@ -1061,12 +1104,17 @@
     "json output parseable"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "call volume per run"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "newman run collection.json -r json --reporter-json-export r.json"
+   "agent_use": "newman run collection.json -r json --reporter-json-export r.json",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d29-nikto",
@@ -1094,7 +1142,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D22",
-   "agent_use": "nikto -h target -Format json -output n.json, noisy, use once per host not per path"
+   "agent_use": "nikto -h target -Format json -output n.json, noisy, use once per host not per path",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-nmap",
@@ -1122,7 +1171,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "nmap -sV -Pn -oX - | xml to json, good for adhoc service checks"
+   "agent_use": "nmap -sV -Pn -oX - | xml to json, good for adhoc service checks",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-nuclei",
@@ -1150,7 +1200,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D22",
-   "agent_use": "nuclei -l live -jsonl -severity high,critical -rl 30, rate limit is not optional"
+   "agent_use": "nuclei -l live -jsonl -severity high,critical -rl 30, rate limit is not optional",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-nuclei-templates",
@@ -1178,7 +1229,8 @@
    "stage": "L04",
    "status": "VERIFIED",
    "home_domain": "D27",
-   "agent_use": "nuclei -update-templates, then -tags for a class instead of all"
+   "agent_use": "nuclei -update-templates, then -tags for a class instead of all",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-pipx",
@@ -1206,7 +1258,8 @@
    "stage": "L01",
    "status": "VERIFIED",
    "home_domain": "D35",
-   "agent_use": "pipx install <pkg> for single file python tools"
+   "agent_use": "pipx install <pkg> for single file python tools",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-promptfoo",
@@ -1234,7 +1287,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D19",
-   "agent_use": "promptfoo redteam run, then diff results across model versions"
+   "agent_use": "promptfoo redteam run, then diff results across model versions",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-prowler",
@@ -1263,7 +1317,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D17",
-   "agent_use": "prowler aws -M json-ocsf -o out, needs scoped read credentials, never prod root"
+   "agent_use": "prowler aws -M json-ocsf -o out, needs scoped read credentials, never prod root",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-pyrit",
@@ -1291,7 +1346,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D19",
-   "agent_use": "python API. converter chains are how you test whether a guard survives encoding"
+   "agent_use": "python API. converter chains are how you test whether a guard survives encoding",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-radare2",
@@ -1319,7 +1375,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D31",
-   "agent_use": "r2 -q -c 'aaa; aflj' file, json output is the agent usable form"
+   "agent_use": "r2 -q -c 'aaa; aflj' file, json output is the agent usable form",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-rebuff",
@@ -1347,7 +1404,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D19",
-   "agent_use": "run payloads through it and record verdicts as a guard baseline"
+   "agent_use": "run payloads through it and record verdicts as a guard baseline",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-restler",
@@ -1376,7 +1434,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "restler fuzz --grammar_file g.json --dictionary_file d.json --settings s.json"
+   "agent_use": "restler fuzz --grammar_file g.json --dictionary_file d.json --settings s.json",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-schemathesis",
@@ -1405,7 +1464,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D11",
-   "agent_use": "schemathesis run spec.yml --checks all --hypothesis-seed 0, reproducible failures"
+   "agent_use": "schemathesis run spec.yml --checks all --hypothesis-seed 0, reproducible failures",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-seclists",
@@ -1433,7 +1493,8 @@
    "stage": "L04",
    "status": "VERIFIED",
    "home_domain": "D27",
-   "agent_use": "point -w at /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt"
+   "agent_use": "point -w at /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-sqlmap",
@@ -1461,7 +1522,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D07",
-   "agent_use": "sqlmap -u url --batch --level 2 --risk 1 --output-dir, never --dump against production"
+   "agent_use": "sqlmap -u url --batch --level 2 --risk 1 --output-dir, never --dump against production",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-subfinder",
@@ -1489,7 +1551,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D02",
-   "agent_use": "subfinder -d target.tld -silent -json, then dedupe on host"
+   "agent_use": "subfinder -d target.tld -silent -json, then dedupe on host",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-trufflehog",
@@ -1517,7 +1580,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D16",
-   "agent_use": "trufflehog filesystem . --json --only-verified, only-verified cuts the noise to near zero"
+   "agent_use": "trufflehog filesystem . --json --only-verified, only-verified cuts the noise to near zero",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-uv",
@@ -1545,7 +1609,8 @@
    "stage": "L01",
    "status": "VERIFIED",
    "home_domain": "D35",
-   "agent_use": "uv tool install <pkg> keeps system python untouched"
+   "agent_use": "uv tool install <pkg> keeps system python untouched",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-wafw00f",
@@ -1573,7 +1638,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D22",
-   "agent_use": "wafw00f -a target -o json, run before payload selection, not after"
+   "agent_use": "wafw00f -a target -o json, run before payload selection, not after",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-whatweb",
@@ -1601,7 +1667,8 @@
    "stage": "L03",
    "status": "VERIFIED",
    "home_domain": "D03",
-   "agent_use": "whatweb --log-json=w.json --aggression 1, aggression 3 is loud"
+   "agent_use": "whatweb --log-json=w.json --aggression 1, aggression 3 is loud",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-yq",
@@ -1629,7 +1696,8 @@
    "stage": "L01",
    "status": "VERIFIED",
    "home_domain": "D00",
-   "agent_use": "yq -o=json openapi.yaml to normalize a spec before diffing"
+   "agent_use": "yq -o=json openapi.yaml to normalize a spec before diffing",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d29-zaproxy",
@@ -1657,7 +1725,8 @@
    "stage": "L06",
    "status": "VERIFIED",
    "home_domain": "D22",
-   "agent_use": "zap.sh -daemon then the rest api, or -cmd for one shot. json report is machine readable"
+   "agent_use": "zap.sh -daemon then the rest api, or -cmd for one shot. json report is machine readable",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

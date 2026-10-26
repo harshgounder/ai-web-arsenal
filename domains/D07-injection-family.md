@@ -60,40 +60,47 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a parameter that reaches a query`, `error, boolean or time based signal available`
 - oracle: `extracted data that could not come from the application`, `time delay proportional to the payload`
 - defense levels it addresses: F2
+- detected by: query error signatures, unusual query time
 - note: Never dump against production. Level 2 risk 1 is usually enough; higher is loud.
 
 **commix**  
 - preconditions: `a parameter that reaches a shell`
 - oracle: `timing or output consistent with execution`
 - defense levels it addresses: F2
+- detected by: process spawn from a request handler
 - note: Blind time based first, then a reversible side effect. No destructive commands.
 
 **dalfox**  
 - preconditions: `a reflected or stored input and a sink`
 - oracle: `payload executes in a browser, confirmed by callback`
 - defense levels it addresses: F2
+- detected by: payload reflected unencoded
 - note: Reports candidates. A candidate is a finding only when it executes under a control.
 
 **ffuf**  
 - preconditions: `a fuzz position and a differential signal`
 - oracle: `status, length or timing cluster per payload`
 - defense levels it addresses: F2
+- detected by: process spawn from a request handler
 
 **nuclei**  
 - preconditions: `a fingerprint matching the template`
 - oracle: `template match with evidence`
 - defense levels it addresses: F2
+- detected by: process spawn from a request handler
 
 **NoSQLMap**  
 - preconditions: `a JSON body accepted and parsed`, `operator syntax reaches the query`
 - oracle: `authentication bypass or data the query should not match`
 - defense levels it addresses: F2
+- detected by: operator syntax in a JSON body
 - note: Operator injection in JSON is what most scanners miss, because the payload is not a string.
 
 **ysoserial**  
 - preconditions: `a Java deserialization sink`, `a gadget present in the target classpath`
 - oracle: `execution or a callback from the target`
 - defense levels it addresses: F2
+- detected by: unexpected class in a deserialised stream
 - note: The finding is the sink, not the gadget. Identify the sink, then match a gadget.
 
 **ysoserial.net**  
@@ -105,29 +112,34 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `user input rendered through a template engine`
 - oracle: `arithmetic evaluation confirmed in the output`
 - defense levels it addresses: F2
+- detected by: process spawn from a request handler
 - note: Arithmetic first, never a shell payload. 7*7 is the only safe first test.
 
 **PayloadsAllTheThings**  
 - preconditions: `a class and a context`
 - oracle: `a payload that works for that context`
 - defense levels it addresses: F2
+- detected by: payload reflected unencoded
 - note: A lookup after identifying the context, not a spray list.
 
 **PortSwigger Web Security Academy labs**  
 - preconditions: `a browser`
 - oracle: `lab solved`
 - defense levels it addresses: F2
+- detected by: unexpected class in a deserialised stream
 - note: Calibration: if a tool cannot solve the basic lab, do not point it at a real target.
 
 **DVWA**  
 - preconditions: `docker`
 - oracle: `module completed`
 - defense levels it addresses: F2
+- detected by: process spawn from a request handler
 
 **OWASP WebGoat**  
 - preconditions: `docker`
 - oracle: `lesson completed`
 - defense levels it addresses: F2
+- detected by: stored value re-entering a sink
 
 **Atlas W04: datastore writes**  
 - defense levels it addresses: F2
@@ -137,6 +149,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a live page and a selector`
 - oracle: `listener list with source ownership`
 - defense levels it addresses: F2
+- detected by: payload reflected unencoded
 - note: For DOM XSS this is the difference between guessing at sinks and reading them.
 
 ## Decision tree

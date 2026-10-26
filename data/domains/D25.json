@@ -53,7 +53,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-suricata",
@@ -75,7 +76,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-yara",
@@ -97,7 +99,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-crs",
@@ -121,7 +124,8 @@
    "agency": "A2",
    "stage": "L10",
    "status": "ESTABLISHED",
-   "note": "The highest value defensive artefact in this domain. A bypass that still trips a CRS rule is not a bypass."
+   "note": "The highest value defensive artefact in this domain. A bypass that still trips a CRS rule is not a bypass.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-wazuh",
@@ -140,10 +144,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "a technique with no rule and no log source"
+   ],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d25-zeek",
@@ -165,7 +173,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-falco",
@@ -188,7 +197,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-elastic",
@@ -211,7 +221,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-yara-rules",
@@ -233,7 +244,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d25-attack",
@@ -252,10 +264,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "a technique with no rule and no log source"
+   ],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d25-counters",
@@ -279,7 +295,8 @@
    "agency": "A0",
    "stage": "L10",
    "status": "VERIFIED",
-   "note": "Local document in web-attack-atlas. It is the defensive view of the pattern corpus."
+   "note": "Local document in web-attack-atlas. It is the defensive view of the pattern corpus.",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -48,15 +48,18 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **ysoserial**  
 - preconditions: `a Java deserialization sink`, `a gadget present in the target dependencies`
 - oracle: `execution or a callback from the target`
+- detected by: unexpected class in a stream
 - note: The finding is the sink, not the gadget. Identify the sink first, then match a gadget to the classpath. Doing it the other way round wastes days.
 
 **ysoserial.net**  
 - preconditions: `.NET deserialization sink`, `machineKey or equivalent known or recoverable`
 - oracle: `execution confirmed by callback`
+- detected by: invalid MAC or unsigned viewstate
 
 **PHPGGC**  
 - preconditions: `a PHP unserialize sink`, `a framework present in the target`
 - oracle: `execution or a callback`
+- detected by: unserialize on user input
 - note: Not in the AUR. Clone and run. Most PHP RCE chains come from a framework gadget, not custom code.
 
 **PayloadsAllTheThings**  

@@ -65,11 +65,16 @@
     "execution or a callback from the target"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "unexpected class in a stream"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "The finding is the sink, not the gadget. Identify the sink first, then match a gadget to the classpath. Doing it the other way round wastes days."
+   "note": "The finding is the sink, not the gadget. Identify the sink first, then match a gadget to the classpath. Doing it the other way round wastes days.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d15-ysoserial-net",
@@ -94,10 +99,15 @@
     "execution confirmed by callback"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "invalid MAC or unsigned viewstate"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d15-phpggc",
@@ -122,11 +132,16 @@
     "execution or a callback"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "unserialize on user input"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Not in the AUR. Clone and run. Most PHP RCE chains come from a framework gadget, not custom code."
+   "note": "Not in the AUR. Clone and run. Most PHP RCE chains come from a framework gadget, not custom code.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d15-ps-deser",
@@ -148,7 +163,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d15-payloads",
@@ -175,7 +191,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d15-hacktricks",
@@ -197,7 +214,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d15-fq",
@@ -223,7 +241,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d15-rea",
@@ -250,7 +269,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d15-wstg",
@@ -269,10 +289,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "unexpected class in a stream"
+   ],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   }
  ],
  "tree": {

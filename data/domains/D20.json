@@ -73,11 +73,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "tool description changed or containing instructions"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Tool descriptions are attacker controlled text that the model reads as instructions. That is the whole class."
+   "note": "Tool descriptions are attacker controlled text that the model reads as instructions. That is the whole class.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d20-rea",
@@ -107,7 +111,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "note": "Listed here as an agent surface too: any MCP server you wire is also an attack surface for the agent."
+   "note": "Listed here as an agent surface too: any MCP server you wire is also an attack surface for the agent.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d20-mcp-servers",
@@ -135,7 +140,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d20-agentdojo",
@@ -161,10 +167,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "tool output containing instructions followed by a call"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d20-promptfoo",
@@ -193,7 +204,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d20-bandit",
@@ -215,10 +227,14 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "tool description changed or containing instructions"
+   ],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d20-owasp-agentic",
@@ -238,10 +254,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "tool description changed or containing instructions"
+   ],
    "agency": "A0",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d20-atlas",
@@ -260,10 +280,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "skill file added or modified"
+   ],
    "agency": "A0",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d20-spec",
@@ -285,7 +309,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d20-atlas-w12",
@@ -308,7 +333,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

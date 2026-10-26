@@ -50,6 +50,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **jwt_tool**  
 - preconditions: `a token you can decode`
 - oracle: `token accepted after tampering`
+- detected by: token still valid after logout
 
 **rea inspect_web_page**  
 - preconditions: `a CDP target`
@@ -59,6 +60,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **mitmproxy**  
 - preconditions: `a client you can proxy`
 - oracle: `session id behaviour across login and logout`
+- detected by: token still valid after logout
 
 **curl**  
 - preconditions: `a shell`

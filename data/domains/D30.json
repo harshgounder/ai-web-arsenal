@@ -68,7 +68,8 @@
    "agency": "A3",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "Its contribution was the reasoning loop, not the tools. Read it as a design reference."
+   "note": "Its contribution was the reasoning loop, not the tools. Read it as a design reference.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-cai",
@@ -92,11 +93,16 @@
     "agent role output with tool trace"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "later agents repeat earlier work"
+   ],
    "agency": "A4",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "The role and handoff primitives are what a critic pattern needs."
+   "note": "The role and handoff primitives are what a critic pattern needs.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d30-pentagi",
@@ -124,7 +130,8 @@
    "agency": "A4",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "The sandbox is the important design choice. Any agent with network access needs one."
+   "note": "The sandbox is the important design choice. Any agent with network access needs one.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-strix",
@@ -152,7 +159,8 @@
    "agency": "A4",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Validation first is the right design. Compare its validation step against prompts/04-prove-it.md."
+   "note": "Validation first is the right design. Compare its validation step against prompts/04-prove-it.md.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-bugtrace",
@@ -180,7 +188,8 @@
    "detected_by": [],
    "agency": "A4",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-cyberstrike",
@@ -208,7 +217,8 @@
    "agency": "A4",
    "stage": "L06",
    "status": "PROBABLE",
-   "note": "Claim size is large and unverified by this project. Listed as PROBABLE on purpose."
+   "note": "Claim size is large and unverified by this project. Listed as PROBABLE on purpose.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-autogen",
@@ -234,7 +244,8 @@
    "detected_by": [],
    "agency": "A4",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-crewai",
@@ -261,7 +272,8 @@
    "agency": "A4",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "Executor and critic as two roles is the minimum viable reliability pattern. See docs/ORCHESTRATION.md."
+   "note": "Executor and critic as two roles is the minimum viable reliability pattern. See docs/ORCHESTRATION.md.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-openai-agents",
@@ -287,7 +299,8 @@
    "detected_by": [],
    "agency": "A4",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-langgraph",
@@ -313,7 +326,8 @@
    "detected_by": [],
    "agency": "A4",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-orchestration",
@@ -339,7 +353,8 @@
    "agency": "A0",
    "stage": "L05",
    "status": "VERIFIED",
-   "note": "Local document, link is a placeholder to the repo root."
+   "note": "Local document, link is a placeholder to the repo root.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d30-owasp-agentic",
@@ -362,7 +377,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -75,7 +75,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-apktool",
@@ -104,7 +105,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-frida",
@@ -131,11 +133,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "instrumentation present, hooking framework loaded"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "frida.re did not resolve from the checking host. GitHub is the stable reference."
+   "note": "frida.re did not resolve from the checking host. GitHub is the stable reference.",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d21-objection",
@@ -160,10 +166,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "instrumentation present, hooking framework loaded"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d21-mobsf",
@@ -192,7 +203,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-rea-android",
@@ -220,7 +232,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-rea-android-class",
@@ -248,7 +261,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-rea-android-res",
@@ -276,7 +290,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-blutter",
@@ -306,7 +321,8 @@
    "agency": "A2",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "Named as a gap in D31 and listed here as the tool that closes it. Not packaged, build from source."
+   "note": "Named as a gap in D31 and listed here as the tool that closes it. Not packaged, build from source.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-wxapkg",
@@ -335,7 +351,8 @@
    "agency": "A2",
    "stage": "L05",
    "status": "PROBABLE",
-   "note": "No single canonical unpacker repo verified. Link goes to a GitHub search. Marked PROBABLE deliberately."
+   "note": "No single canonical unpacker repo verified. Link goes to a GitHub search. Marked PROBABLE deliberately.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-mastg",
@@ -359,7 +376,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-masvs",
@@ -383,7 +401,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L11",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d21-atlas-w05",
@@ -408,7 +427,8 @@
    "agency": "A0",
    "stage": "L05",
    "status": "PROBABLE",
-   "note": "Mobile technique depth belongs in the atlas. The pointer is honest about being queued."
+   "note": "Mobile technique depth belongs in the atlas. The pointer is honest about being queued.",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

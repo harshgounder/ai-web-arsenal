@@ -86,7 +86,8 @@
    "stage": "L03",
    "status": "ESTABLISHED",
    "call": "analyze_web_bundle",
-   "note": "The single highest yield call on a modern target. Start here, not with a scanner."
+   "note": "The single highest yield call on a modern target. Start here, not with a scanner.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-export-web-scripts",
@@ -115,7 +116,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "export_web_scripts"
+   "call": "export_web_scripts",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-inspect-web-page",
@@ -145,7 +147,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "inspect_web_page"
+   "call": "inspect_web_page",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-event-listeners",
@@ -170,12 +173,17 @@
    "evades": [
     "F1"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "a .map file served in production"
+   ],
    "agency": "A3",
    "stage": "L06",
    "status": "ESTABLISHED",
    "call": "inspect_web_event_listeners",
-   "note": "The honest way to find DOM XSS: read what actually handles the event."
+   "note": "The honest way to find DOM XSS: read what actually handles the event.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d31-capture",
@@ -204,7 +212,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "inspect_web_network_capture"
+   "call": "inspect_web_network_capture",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-source-location",
@@ -229,11 +238,15 @@
    "evades": [
     "F1"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "a .map file served in production"
+   ],
    "agency": "A3",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "call": "trace_web_source_location"
+   "call": "trace_web_source_location",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d31-recover",
@@ -264,7 +277,8 @@
    "stage": "L05",
    "status": "ESTABLISHED",
    "call": "recover_javascript_sources",
-   "note": "The step that turns a minified blob into something a model can actually reason about."
+   "note": "The step that turns a minified blob into something a model can actually reason about.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-app-graph",
@@ -293,7 +307,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "analyze_javascript_application"
+   "call": "analyze_javascript_application",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-reconcile-js",
@@ -323,7 +338,8 @@
    "agency": "A3",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "call": "reconcile_javascript_runtime"
+   "call": "reconcile_javascript_runtime",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-webmcp",
@@ -349,12 +365,16 @@
    "evades": [
     "F1"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "page registers tools with broad schemas"
+   ],
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
    "call": "discover_webmcp_tools",
-   "note": "New in 2026 and almost nobody inventories it. A page that registers tools exposes an interface."
+   "note": "New in 2026 and almost nobody inventories it. A page that registers tools exposes an interface.",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d31-scenario",
@@ -385,7 +405,8 @@
    "stage": "L06",
    "status": "ESTABLISHED",
    "call": "capture_browser_scenario",
-   "note": "This is how you get a deterministic capture instead of hand clicking and hoping."
+   "note": "This is how you get a deterministic capture instead of hand clicking and hoping.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-compare",
@@ -415,7 +436,8 @@
    "stage": "L12",
    "status": "ESTABLISHED",
    "call": "compare_web_captures",
-   "note": "Regression detection for free. Most teams have no version of this."
+   "note": "Regression detection for free. Most teams have no version of this.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-android",
@@ -445,7 +467,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "inspect_android_package"
+   "call": "inspect_android_package",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-android-class",
@@ -474,7 +497,8 @@
    "agency": "A3",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "call": "inspect_android_method"
+   "call": "inspect_android_method",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-wasm",
@@ -504,7 +528,8 @@
    "agency": "A3",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "call": "inspect_wasm_artifact"
+   "call": "inspect_wasm_artifact",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-sqlite",
@@ -533,7 +558,8 @@
    "agency": "A3",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "call": "inspect_sqlite_database"
+   "call": "inspect_sqlite_database",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-artifact",
@@ -562,7 +588,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "inspect_artifact"
+   "call": "inspect_artifact",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-electron",
@@ -592,7 +619,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "inspect_electron_fuses"
+   "call": "inspect_electron_fuses",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-mitmproxy",
@@ -622,7 +650,8 @@
    "stage": "L02",
    "status": "ESTABLISHED",
    "call": "https://docs.mitmproxy.org/",
-   "note": "rea inspect_web_network_capture reads mitmproxy dumps directly. No conversion step."
+   "note": "rea inspect_web_network_capture reads mitmproxy dumps directly. No conversion step.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-chromium",
@@ -651,7 +680,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "https://www.chromium.org/"
+   "call": "https://www.chromium.org/",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d31-fq",
@@ -680,7 +710,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "call": "https://github.com/wader/fq"
+   "call": "https://github.com/wader/fq",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -65,11 +65,16 @@
     "final state impossible sequentially"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "workflow state jumped"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Not on PyPI. Build from source. The control matters more than the tool: run the same requests sequentially first and show it does not reproduce."
+   "note": "Not on PyPI. Build from source. The control matters more than the tool: run the same requests sequentially first and show it does not reproduce.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d12-turbo-intruder",
@@ -97,7 +102,8 @@
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Single packet attack over HTTP/2 is the only reliable way to test a race on a modern stack. Anything else is hoping."
+   "note": "Single packet attack over HTTP/2 is the only reliable way to test a race on a modern stack. Anything else is hoping.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d12-newman",
@@ -120,10 +126,15 @@
     "a sequence producing an impossible outcome"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "workflow state jumped"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d12-mitmproxy",
@@ -147,10 +158,15 @@
     "the same request replayed with a different outcome"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "same intent applied twice"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d12-wstg-busl",
@@ -172,7 +188,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d12-ps-race",
@@ -194,7 +211,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d12-hacktricks",
@@ -216,7 +234,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d12-rea-capture",
@@ -242,7 +261,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -52,11 +52,13 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **rea inspect_web_event_listeners**  
 - preconditions: `a live page and a selector`
 - oracle: `listener list with native callback locations`
+- detected by: policy allows an unsafe source
 - note: The honest way to find DOM XSS: read what actually handles the event instead of guessing at sinks.
 
 **rea capture_browser_scenario**  
 - preconditions: `a browser executable or CDP endpoint`
 - oracle: `ordered artefacts with references`
+- detected by: template expression evaluated in the browser
 
 **rea inspect_web_page**  
 - preconditions: `a CDP target`
@@ -65,14 +67,17 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **chromium (CDP host)**  
 - preconditions: `a browser binary`
 - oracle: `rendered DOM and console output`
+- detected by: template expression evaluated in the browser
 
 **dalfox**  
 - preconditions: `a reflected or stored input`
 - oracle: `payload executes in a browser, confirmed by callback`
+- detected by: CSP violation report, sink reachability scan
 
 **CSP Evaluator**  
 - preconditions: `a CSP header`
 - oracle: `weakness with the bypass class named`
+- detected by: policy allows an unsafe source
 
 **DOMPurify**  
 - preconditions: `the app's sanitiser`
@@ -82,10 +87,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **PPScan**  
 - preconditions: `a page with client side object merging`
 - oracle: `polluted property observable in behaviour`
+- detected by: merge into prototype from parsed input
 
 **PayloadsAllTheThings**  
 - preconditions: `a class and a context`
 - oracle: `a payload that works for that context`
+- detected by: template expression evaluated in the browser
 
 ## Decision tree
 

@@ -89,7 +89,8 @@
    "agency": "A1",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "The single highest leverage authz tool. It automates the comparison that humans do by hand and forget to do consistently."
+   "note": "The single highest leverage authz tool. It automates the comparison that humans do by hand and forget to do consistently.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-authmatrix",
@@ -116,11 +117,13 @@
     "F2"
    ],
    "detected_by": [
-    "role to endpoint access matrix per run"
+    "role to endpoint matrix anomaly"
    ],
    "agency": "A1",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d05-crapi",
@@ -147,12 +150,14 @@
     "F1"
    ],
    "detected_by": [
-    "n/a lab"
+    "write to an object not in the session scope"
    ],
    "agency": "A3",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "Use this to calibrate a tool before pointing it at a real target."
+   "note": "Use this to calibrate a tool before pointing it at a real target.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d05-vampi",
@@ -178,11 +183,14 @@
     "F1"
    ],
    "detected_by": [
-    "n/a lab"
+    "heterogeneous ownership in one batch"
    ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d05-juiceshop",
@@ -210,11 +218,14 @@
     "F1"
    ],
    "detected_by": [
-    "n/a lab"
+    "write to a field absent from the role's request schema"
    ],
    "agency": "A3",
    "stage": "L07",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d05-webgoat",
@@ -244,7 +255,8 @@
    ],
    "agency": "A1",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-ffuf",
@@ -276,7 +288,8 @@
    ],
    "agency": "A2",
    "stage": "L04",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-kiterunner",
@@ -308,7 +321,8 @@
    ],
    "agency": "A2",
    "stage": "L04",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-newman",
@@ -335,12 +349,15 @@
     "F2"
    ],
    "detected_by": [
-    "n/a"
+    "heterogeneous ownership in one batch"
    ],
    "agency": "A3",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "Two runs of the same collection with different tokens is the cheapest authz harness that exists."
+   "note": "Two runs of the same collection with different tokens is the cheapest authz harness that exists.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d05-schemathesis",
@@ -372,7 +389,8 @@
    ],
    "agency": "A3",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-nuclei",
@@ -404,7 +422,8 @@
    ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-zap",
@@ -435,7 +454,8 @@
    ],
    "agency": "A3",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-mitmproxy",
@@ -466,7 +486,8 @@
    ],
    "agency": "A2",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-atlas-w02",
@@ -492,7 +513,8 @@
    "agency": "A0",
    "stage": "L05",
    "status": "VERIFIED",
-   "note": "This document does not restate those patterns. It joins on entry_id."
+   "note": "This document does not restate those patterns. It joins on entry_id.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-owasp-api1",
@@ -514,7 +536,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-owasp-api5",
@@ -536,7 +559,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-wstg-athz",
@@ -558,7 +582,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-asvs-v8",
@@ -580,7 +605,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L11",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-mindapi",
@@ -603,7 +629,8 @@
    "agency": "A0",
    "stage": "L05",
    "status": "VERIFIED",
-   "note": "Closest prior art. It is a mind map, not machine readable, which is the gap this repo fills."
+   "note": "Closest prior art. It is a mind map, not machine readable, which is the gap this repo fills.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d05-supabase-rls",
@@ -631,12 +658,15 @@
     "F2"
    ],
    "detected_by": [
-    "policy bypass query"
+    "query returning rows outside policy"
    ],
    "agency": "A2",
    "stage": "L06",
    "status": "PROBABLE",
-   "note": "Common in modern stacks and almost never in authz test checklists, because the test surface is the client SDK not an HTTP endpoint."
+   "note": "Common in modern stacks and almost never in authz test checklists, because the test surface is the client SDK not an HTTP endpoint.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 6,
+   "mirror_provisional": true
   }
  ],
  "tree": {

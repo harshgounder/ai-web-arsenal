@@ -46,6 +46,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Web Cache Vulnerability Scanner**  
 - preconditions: `a shared cache in front of the app`
 - oracle: `a cached response that should not be cacheable`
+- detected by: cached response containing attacker influenced content
 - note: Candidates only. A hit becomes a finding when a second session receives the poisoned or private response.
 
 **PortSwigger: cache poisoning**  
@@ -58,10 +59,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **curl**  
 - preconditions: `a shell`
 - oracle: `age and cache status differing per request`
+- detected by: origin and cache disagree on path
 
 **nuclei**  
 - preconditions: `a host and templates`
 - oracle: `template match with evidence`
+- detected by: origin and cache disagree on path
 
 ## Decision tree
 

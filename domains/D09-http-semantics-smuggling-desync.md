@@ -56,6 +56,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **h2cSmuggler**  
 - preconditions: `a front end that forwards an upgrade header`, `a backend that speaks h2c`
 - oracle: `an internal request reaching a path the front end would block`
+- detected by: upgrade header forwarded to a backend that speaks h2c
 
 **mitmproxy**  
 - preconditions: `a client you can proxy`
@@ -66,6 +67,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `differential response when framing is changed`
 
 **PortSwigger HTTP/2 research**  
+- detected by: header injection through pseudo header conversion
 - note: HTTP/2 smuggling separated this domain into two eras. Anything that only tests HTTP/1.1 is testing half the surface.
 
 **RFC 9112 (HTTP/1.1)**  

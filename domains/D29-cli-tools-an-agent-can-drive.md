@@ -185,6 +185,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **grpcurl**  
 - preconditions: `the tool is installed and its verify command passes`
 - oracle: `json output parseable`
+- detected by: call volume per run
 
 **hashcat**  
 - preconditions: `the tool is installed and its verify command passes`
@@ -225,6 +226,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **mcp-scan**  
 - preconditions: `the tool is installed and its verify command passes`
 - oracle: `json output parseable`
+- detected by: tool invoked outside the planned phase
 
 **mitmproxy**  
 - preconditions: `the tool is installed and its verify command passes`
@@ -241,6 +243,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **newman**  
 - preconditions: `the tool is installed and its verify command passes`
 - oracle: `json output parseable`
+- detected by: call volume per run
 
 **nikto**  
 - preconditions: `the tool is installed and its verify command passes`

@@ -70,7 +70,8 @@
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "Start with -M at to run everything, then narrow. Hand crafting a claim before that wastes time."
+   "note": "Start with -M at to run everything, then narrow. Hand crafting a claim before that wastes time.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-hashcat",
@@ -96,7 +97,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L07",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-john",
@@ -122,7 +124,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L07",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-cyberchef",
@@ -150,7 +153,8 @@
    "agency": "A2",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "Recipe export is the useful part: it makes the decode reproducible instead of a screenshot."
+   "note": "Recipe export is the useful part: it makes the decode reproducible instead of a screenshot.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-padbuster",
@@ -174,10 +178,14 @@
     "decrypted plaintext or a forged ciphertext"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "distinguishable decrypt error classes"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d16-gitleaks",
@@ -204,7 +212,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L04",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-trufflehog",
@@ -231,7 +240,8 @@
    "agency": "A2",
    "stage": "L04",
    "status": "VERIFIED",
-   "note": "--only-verified is the flag that makes this usable. Everything else is a candidate list."
+   "note": "--only-verified is the flag that makes this usable. Everything else is a candidate list.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-rea-signing",
@@ -259,7 +269,8 @@
    "agency": "A3",
    "stage": "L05",
    "status": "VERIFIED",
-   "note": "Request signing lives in client code by definition. If the app signs, the algorithm is in the bundle."
+   "note": "Request signing lives in client code by definition. If the app signs, the algorithm is in the bundle.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d16-payloads",
@@ -282,10 +293,15 @@
     "a payload for that class"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "fast hash used for passwords"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d16-jwtio",
@@ -308,7 +324,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "note": "Client side tool. Pasting a live token into a website is a disclosure, and it happens constantly."
+   "note": "Client side tool. Pasting a live token into a website is a disclosure, and it happens constantly.",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

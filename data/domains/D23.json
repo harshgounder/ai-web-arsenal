@@ -64,7 +64,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d23-newman",
@@ -87,10 +88,14 @@
     "the final state after the sequence"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "sequence of individually low severity actions"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d23-mitmproxy",
@@ -113,10 +118,15 @@
     "the token or state carried into the next hop"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "sequence of individually low severity actions"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d23-nuclei",
@@ -142,7 +152,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d23-attack",
@@ -164,7 +175,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d23-hacktricks",
@@ -186,7 +198,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d23-atlas",
@@ -209,7 +222,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "PROBABLE"
+   "status": "PROBABLE",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

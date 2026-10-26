@@ -56,6 +56,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Cybersecurity AI (CAI)**  
 - preconditions: `a model and tool set`
 - oracle: `agent role output with tool trace`
+- detected by: later agents repeat earlier work
 - note: The role and handoff primitives are what a critic pattern needs.
 
 **PentAGI**  

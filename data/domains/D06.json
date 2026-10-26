@@ -66,10 +66,15 @@
     "token accepted after tampering"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "token still valid after logout"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d06-rea-page",
@@ -97,7 +102,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "Read the storage inventory before assuming where the session lives. It is often not the cookie."
+   "note": "Read the storage inventory before assuming where the session lives. It is often not the cookie.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d06-mitmproxy",
@@ -121,10 +127,14 @@
     "session id behaviour across login and logout"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "token still valid after logout"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d06-curl",
@@ -150,7 +160,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d06-wstg-sess",
@@ -173,7 +184,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d06-asvs-v7",
@@ -195,7 +207,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L11",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d06-cheatsheet",
@@ -217,7 +230,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L11",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d06-ps-auth",
@@ -238,10 +252,15 @@
     "lab solved as intended"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "id unchanged after authentication"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d06-hacktricks",
@@ -263,7 +282,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d06-atlas-w07",
@@ -286,7 +306,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "PROBABLE"
+   "status": "PROBABLE",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

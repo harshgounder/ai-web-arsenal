@@ -55,6 +55,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a model endpoint you are authorised to probe`
 - oracle: `probe result with a reproducible prompt and seed`
 - defense levels it addresses: F2
+- detected by: output containing prompt fragments
 - note: Probe based, not exploit based. It tells you a class is present, not what it lets you do.
 
 **PyRIT**  
@@ -67,12 +68,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a prompt or app config`
 - oracle: `pass or fail per plugin, comparable across runs`
 - defense levels it addresses: F2
+- detected by: user input containing instruction override patterns
 - note: The only credible answer to 'did the fix actually hold'. Everything else is a one time demo.
 
 **LLM Guard**  
 - preconditions: `the app's own pipeline`
 - oracle: `scanner verdict per input`
 - defense levels it addresses: F2
+- detected by: user input containing instruction override patterns
 - note: Listed as the defence side of the mirror. Test it as an attacker: a guard is a bypass target, not a wall.
 
 **Rebuff**  
@@ -89,12 +92,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a browser`
 - oracle: `password extracted from a level`
 - defense levels it addresses: F2
+- detected by: user input containing instruction override patterns
 - note: Use it to calibrate whether your agent can actually get a secret past a guard, cheaply.
 
 **AgentDojo**  
 - preconditions: `an agent with tools`
 - oracle: `attack success and utility loss reported separately`
 - defense levels it addresses: F2
+- detected by: user input containing instruction override patterns
 - note: The utility loss number is the one that matters. A defence that breaks the agent is not a defence.
 
 ## Decision tree

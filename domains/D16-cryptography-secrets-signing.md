@@ -68,6 +68,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **PadBuster**  
 - preconditions: `a CBC mode ciphertext`, `an oracle that distinguishes padding errors`
 - oracle: `decrypted plaintext or a forged ciphertext`
+- detected by: distinguishable decrypt error classes
 
 **gitleaks**  
 - preconditions: `a repo or a bundle`
@@ -86,6 +87,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **PayloadsAllTheThings**  
 - preconditions: `a class`
 - oracle: `a payload for that class`
+- detected by: fast hash used for passwords
 
 **jwt.io**  
 - note: Client side tool. Pasting a live token into a website is a disclosure, and it happens constantly.

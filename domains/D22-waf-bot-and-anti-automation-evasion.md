@@ -62,17 +62,20 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `the target fingerprints the client`
 - oracle: `a response the plain client did not get`
 - defense levels it addresses: F5, F7
+- detected by: client JA3 not matching the claimed browser
 - note: The comparison is the test: same request, one plain client and one impersonating. If the answers differ, the defence is fingerprinting.
 
 **curl-impersonate**  
 - preconditions: `a shell and the target`
 - oracle: `differing status or body versus plain curl`
 - defense levels it addresses: F5, F7
+- detected by: same session from many IPs
 
 **tls-client**  
 - preconditions: `a script`
 - oracle: `response only obtainable with a specific profile`
 - defense levels it addresses: F5
+- detected by: client JA3 not matching the claimed browser
 
 **playwright**  
 - preconditions: `a script and a browser install`
@@ -84,12 +87,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a browser target`
 - oracle: `page loads where headless chromium was refused`
 - defense levels it addresses: F5
+- detected by: navigator.webdriver, CDP artefacts
 - note: Still detectable, just less obviously. Treat success as evidence about the defence, not as invisibility.
 
 **cloudscraper**  
 - preconditions: `a host with the old challenge`
 - oracle: `the challenge bypassed and content returned`
 - defense levels it addresses: F5
+- detected by: challenge token reused
 - note: If it fails, that is data about the defence, not a tool bug. One attempt per host, then stop.
 
 **chromium**  
@@ -101,6 +106,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a client you can proxy`
 - oracle: `exact request replay with modified framing`
 - defense levels it addresses: F2, F3
+- detected by: challenge token reused
 
 **ffuf**  
 - preconditions: `a wordlist and a host`
@@ -112,6 +118,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a host and templates`
 - oracle: `template match`
 - defense levels it addresses: F2
+- detected by: same session from many IPs
 
 ## Decision tree
 

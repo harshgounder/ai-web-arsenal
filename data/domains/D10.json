@@ -66,11 +66,15 @@
     "a cached response that should not be cacheable"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "cached response containing attacker influenced content"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Candidates only. A hit becomes a finding when a second session receives the poisoned or private response."
+   "note": "Candidates only. A hit becomes a finding when a second session receives the poisoned or private response.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d10-ps-deception",
@@ -93,7 +97,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d10-ps-poison",
@@ -116,7 +121,8 @@
    "agency": "A2",
    "stage": "L05",
    "status": "ESTABLISHED",
-   "note": "The single most useful idea here: find the unkeyed input, then ask what it controls."
+   "note": "The single most useful idea here: find the unkeyed input, then ask what it controls.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d10-mitmproxy",
@@ -142,7 +148,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d10-curl",
@@ -165,10 +172,15 @@
     "age and cache status differing per request"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "origin and cache disagree on path"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "duc-nuclei",
@@ -191,10 +203,15 @@
     "template match with evidence"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "origin and cache disagree on path"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   }
  ],
  "tree": {

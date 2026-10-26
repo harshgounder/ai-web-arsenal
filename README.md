@@ -124,6 +124,20 @@ A rival entry is never silently dropped. That is the entire point of the ledger.
 
 ---
 
+## How the defence mirror actually works
+
+Every domain carries a `mirror`: rows of `attack | detect | control | rule`. They describe attack
+**classes**, not individual tools, and that distinction matters for how the coverage number reads.
+
+Measured 2026-10-27: of 389 enriched entries, **166 perform or prove an action** (agency above A0, stage
+L06 to L08), and **87 of those (52%) are linked to a specific mirror row** by `scripts/link-mirrors.py`.
+The links are marked `mirror_provisional` because matching is lexical, not semantic. Entries that no row
+covers carry `mirror_note: "no mirror row covers this entry"` rather than a fabricated detection.
+
+The remaining 48% are mostly tools that implement a class already covered by a row, plus references.
+A CLI tool does not need its own detection; the technique it implements does. The thinnest real gaps are
+D09 smuggling, D11 API and D17 cloud, where the attack surface is more specific than the generic rows.
+
 ## Why the corpus matters more than it looks
 
 Of 24,759 canonical entries, only **548 appear in two or more source collections**. The awesome-lists

@@ -79,11 +79,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "query error signatures, unusual query time"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "Never dump against production. Level 2 risk 1 is usually enough; higher is loud."
+   "note": "Never dump against production. Level 2 risk 1 is usually enough; higher is loud.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d07-commix",
@@ -108,11 +112,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "process spawn from a request handler"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "Blind time based first, then a reversible side effect. No destructive commands."
+   "note": "Blind time based first, then a reversible side effect. No destructive commands.",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d07-dalfox",
@@ -138,11 +146,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "payload reflected unencoded"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "Reports candidates. A candidate is a finding only when it executes under a control."
+   "note": "Reports candidates. A candidate is a finding only when it executes under a control.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d07-ffuf",
@@ -167,10 +180,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "process spawn from a request handler"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d07-nuclei",
@@ -196,10 +214,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "process spawn from a request handler"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d07-nosqlmap",
@@ -226,11 +249,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "operator syntax in a JSON body"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Operator injection in JSON is what most scanners miss, because the payload is not a string."
+   "note": "Operator injection in JSON is what most scanners miss, because the payload is not a string.",
+   "mirror_ref": 5,
+   "mirror_provisional": true
   },
   {
    "id": "d07-ysoserial",
@@ -257,11 +284,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "unexpected class in a deserialised stream"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "The finding is the sink, not the gadget. Identify the sink, then match a gadget."
+   "note": "The finding is the sink, not the gadget. Identify the sink, then match a gadget.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d07-ysoserial-net",
@@ -291,7 +323,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L07",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d07-sstimap",
@@ -316,11 +349,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "process spawn from a request handler"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "ESTABLISHED",
-   "note": "Arithmetic first, never a shell payload. 7*7 is the only safe first test."
+   "note": "Arithmetic first, never a shell payload. 7*7 is the only safe first test.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d07-payloads",
@@ -346,11 +384,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "payload reflected unencoded"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "A lookup after identifying the context, not a spray list."
+   "note": "A lookup after identifying the context, not a spray list.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d07-portswigger",
@@ -375,11 +418,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "unexpected class in a deserialised stream"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Calibration: if a tool cannot solve the basic lab, do not point it at a real target."
+   "note": "Calibration: if a tool cannot solve the basic lab, do not point it at a real target.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d07-dvwa",
@@ -404,10 +452,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "process spawn from a request handler"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d07-webgoat",
@@ -433,10 +486,14 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "stored value re-entering a sink"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 6,
+   "mirror_provisional": true
   },
   {
    "id": "d07-wstg-inpv",
@@ -460,7 +517,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d07-hacktricks",
@@ -485,7 +543,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L05",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d07-atlas-w04",
@@ -511,7 +570,8 @@
    "agency": "A0",
    "stage": "L05",
    "status": "PROBABLE",
-   "note": "Injection technique depth belongs in the atlas as write patterns. The pointer is honest about being queued."
+   "note": "Injection technique depth belongs in the atlas as write patterns. The pointer is honest about being queued.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d07-rea-listeners",
@@ -537,11 +597,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "payload reflected unencoded"
+   ],
    "agency": "A3",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "For DOM XSS this is the difference between guessing at sinks and reading them."
+   "note": "For DOM XSS this is the difference between guessing at sinks and reading them.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   }
  ],
  "tree": {

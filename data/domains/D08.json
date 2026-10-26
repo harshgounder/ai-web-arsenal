@@ -65,11 +65,16 @@
     "listener list with native callback locations"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "policy allows an unsafe source"
+   ],
    "agency": "A3",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "The honest way to find DOM XSS: read what actually handles the event instead of guessing at sinks."
+   "note": "The honest way to find DOM XSS: read what actually handles the event instead of guessing at sinks.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d08-rea-scenario",
@@ -93,10 +98,15 @@
     "ordered artefacts with references"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "template expression evaluated in the browser"
+   ],
    "agency": "A3",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d08-rea-page",
@@ -122,7 +132,8 @@
    "detected_by": [],
    "agency": "A3",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d08-chromium",
@@ -145,10 +156,14 @@
     "rendered DOM and console output"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "template expression evaluated in the browser"
+   ],
    "agency": "A2",
    "stage": "L03",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d08-dalfox",
@@ -172,10 +187,14 @@
     "payload executes in a browser, confirmed by callback"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "CSP violation report, sink reachability scan"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d08-csp-eval",
@@ -198,10 +217,14 @@
     "weakness with the bypass class named"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "policy allows an unsafe source"
+   ],
    "agency": "A3",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d08-dompurify",
@@ -228,7 +251,8 @@
    "agency": "A2",
    "stage": "L11",
    "status": "ESTABLISHED",
-   "note": "Test it as an attacker. Version matters: known bypasses exist per release, and a pinned old version is the finding."
+   "note": "Test it as an attacker. Version matters: known bypasses exist per release, and a pinned old version is the finding.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d08-trusted-types",
@@ -247,10 +271,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "CSP violation report, sink reachability scan"
+   ],
    "agency": "A2",
    "stage": "L11",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d08-ppscan",
@@ -273,10 +301,14 @@
     "polluted property observable in behaviour"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "merge into prototype from parsed input"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d08-hacktricks-csti",
@@ -295,10 +327,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "template expression evaluated in the browser"
+   ],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d08-wstg-clnt",
@@ -320,7 +356,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L10",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d08-payloads",
@@ -344,10 +381,14 @@
     "a payload that works for that context"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "template expression evaluated in the browser"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   }
  ],
  "tree": {

@@ -87,11 +87,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "alg or kid mismatch at the verifier"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "Runs all tests with -M at, then a specific tamper with -T. Start there, not with a hand written payload."
+   "note": "Runs all tests with -M at, then a specific tamper with -T. Start there, not with a hand written payload.",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d04-hydra",
@@ -119,11 +123,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "failed login distribution per IP and per account"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "The lockout test matters more than the cracking. Run one account first and watch for lockout before any list."
+   "note": "The lockout test matters more than the cracking. Run one account first and watch for lockout before any list.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d04-medusa",
@@ -150,11 +159,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "failed login distribution per IP and per account"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "Parallelism is both the feature and the reason to be careful: it is the fastest way to lock out every account at once."
+   "note": "Parallelism is both the feature and the reason to be careful: it is the fastest way to lock out every account at once.",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d04-mitmproxy",
@@ -179,7 +192,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-ffuf",
@@ -205,10 +219,14 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "response or timing difference for unknown accounts"
+   ],
    "agency": "A2",
    "stage": "L04",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d04-nuclei",
@@ -235,7 +253,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-burp-jwt",
@@ -260,11 +279,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "alg or kid mismatch at the verifier"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "VERIFIED",
-   "note": "BApp store deep links change. Link goes to the store; search for JWT Editor."
+   "note": "BApp store deep links change. Link goes to the store; search for JWT Editor.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 2,
+   "mirror_provisional": true
   },
   {
    "id": "d04-saml-raider",
@@ -291,11 +315,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "signature not verified over the signed element"
+   ],
    "agency": "A2",
    "stage": "L07",
    "status": "PROBABLE",
-   "note": "BApp store URL changes; resolve the current listing from the store rather than trusting a fixed path."
+   "note": "BApp store URL changes; resolve the current listing from the store rather than trusting a fixed path.",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d04-keycloak",
@@ -320,11 +348,16 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "redirect URI not exact matched"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "VERIFIED",
-   "note": "Most OAuth findings are configuration findings. A local IdP lets you confirm the class before touching a target."
+   "note": "Most OAuth findings are configuration findings. A local IdP lets you confirm the class before touching a target.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d04-dvwa",
@@ -348,10 +381,15 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "session id unchanged after authentication"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 6,
+   "mirror_provisional": true
   },
   {
    "id": "d04-webgoat",
@@ -374,10 +412,14 @@
    "evades": [
     "F2"
    ],
-   "detected_by": [],
+   "detected_by": [
+    "session id unchanged after authentication"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 6,
+   "mirror_provisional": true
   },
   {
    "id": "d04-atlas-w07",
@@ -402,7 +444,8 @@
    "agency": "A0",
    "stage": "L05",
    "status": "PROBABLE",
-   "note": "Declared before it exists, so the dependency is visible. A pointer to a queued wave is honest; a pointer to nothing is not."
+   "note": "Declared before it exists, so the dependency is visible. A pointer to a queued wave is honest; a pointer to nothing is not.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-wstg-athn",
@@ -424,7 +467,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-wstg-sess",
@@ -447,7 +491,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-asvs-v6",
@@ -469,7 +514,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L11",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-asvs-v7",
@@ -488,10 +534,14 @@
    "preconditions": [],
    "oracle": [],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "session id unchanged after authentication"
+   ],
    "agency": "A0",
    "stage": "L11",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 6,
+   "mirror_provisional": true
   },
   {
    "id": "d04-asvs-v10",
@@ -513,7 +563,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L11",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-rfc9700",
@@ -535,7 +586,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-oidc-core",
@@ -557,7 +609,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-webauthn",
@@ -580,7 +633,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d04-device-code",
@@ -603,7 +657,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L10",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -95,7 +95,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `introspection disabled but field suggestions enabled`, `or error messages leak field names`
 - oracle: `schema_partial_recovery`, `suggestion_error_differential`
 - defense levels it addresses: F3
-- detected by: field suggestion abuse pattern, high error rate on graphql endpoint
+- detected by: introspection query signature and field suggestion probing
 - note: This is the canonical example of a tool that exists because a defence (introspection off) was assumed sufficient and was not.
 
 **InQL**  
@@ -108,7 +108,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an exposed graphql endpoint`
 - oracle: `engine_identification`
 - defense levels it addresses: F1
-- detected by: fingerprint probe pattern
+- detected by: operations per request ratio
 - note: Engine matters because batching, alias limits and introspection quirks differ per engine. Fingerprint before you payload.
 
 **mitmproxy2swagger**  
@@ -122,14 +122,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `server reflection enabled, common in internal services exposed by mistake`
 - oracle: `rpc_response`, `reflection_service_listing`
 - defense levels it addresses: F2
-- detected by: reflection service access
+- detected by: reflection service calls
 - note: Reflection on is equivalent to a free full schema. Nobody checks it.
 
 **schemathesis**  
 - preconditions: `a schema exists, real or recovered`
 - oracle: `crash`, `status_code_violation`, `schema_response_mismatch`
 - defense levels it addresses: F3
-- detected by: high volume of invalid requests
+- detected by: introspection query signature and field suggestion probing
 - note: Reproducible failures with hypothesis seeds, which makes it usable as evidence.
 
 **RESTler**  
@@ -143,7 +143,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `graphql endpoint reachable`
 - oracle: `misconfiguration_confirmed_by_response`
 - defense levels it addresses: F2
-- detected by: introspection and field suggestion probes
+- detected by: introspection query signature and field suggestion probing
 
 **Damn Vulnerable GraphQL Application**  
 - preconditions: `you want a lab, not a target`
@@ -196,14 +196,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `batching enabled, or query name allows cost bypass`
 - oracle: `response_count_vs_request_count`, `rate_limit_bypass_proof`
 - defense levels it addresses: F7
-- detected by: request count vs operation count mismatch
+- detected by: operations per request ratio
 - note: Targets a defence (rate limiting) that assumes one request equals one operation.
 
 **GraphQLmap**  
 - preconditions: `graphql endpoint`
 - oracle: `data_dump`, `injection_effect`
 - defense levels it addresses: F2
-- detected by: anomalous query depth
+- detected by: introspection query signature and field suggestion probing
 
 **newman**  
 - preconditions: `a collection exists, or you built one from a HAR`

@@ -47,6 +47,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **race-the-web**  
 - preconditions: `an endpoint whose state matters`, `a way to observe final state`
 - oracle: `final state impossible sequentially`
+- detected by: workflow state jumped
 - note: Not on PyPI. Build from source. The control matters more than the tool: run the same requests sequentially first and show it does not reproduce.
 
 **Turbo Intruder (Burp extension)**  
@@ -57,10 +58,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **newman**  
 - preconditions: `a collection built from captured traffic`
 - oracle: `a sequence producing an impossible outcome`
+- detected by: workflow state jumped
 
 **mitmproxy**  
 - preconditions: `a client you can proxy`
 - oracle: `the same request replayed with a different outcome`
+- detected by: same intent applied twice
 
 **rea capture_browser_scenario**  
 - preconditions: `a browser or CDP endpoint`

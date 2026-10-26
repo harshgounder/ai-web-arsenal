@@ -66,39 +66,46 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a JWT you can decode`, `the verifier accepts a header you can influence`
 - oracle: `token accepted after tampering`, `claim change reflected server side`
 - defense levels it addresses: F2
+- detected by: alg or kid mismatch at the verifier
 - note: Runs all tests with -M at, then a specific tamper with -T. Start there, not with a hand written payload.
 
 **hydra**  
 - preconditions: `a login endpoint`, `no lockout, or a lockout policy you have tested`
 - oracle: `valid credential in the output`
 - defense levels it addresses: F2
+- detected by: failed login distribution per IP and per account
 - note: The lockout test matters more than the cracking. Run one account first and watch for lockout before any list.
 
 **medusa**  
 - preconditions: `login endpoint`, `no per IP throttle`
 - oracle: `valid credential found`
 - defense levels it addresses: F2
+- detected by: failed login distribution per IP and per account
 - note: Parallelism is both the feature and the reason to be careful: it is the fastest way to lock out every account at once.
 
 **ffuf**  
 - preconditions: `an auth endpoint that behaves differently for known and unknown accounts`
 - oracle: `status, length or timing cluster separating existent from non existent`
 - defense levels it addresses: F2
+- detected by: response or timing difference for unknown accounts
 
 **JWT Editor (Burp extension)**  
 - oracle: `modified token accepted by the server`, `claim change reflected in the session`
 - defense levels it addresses: F2
+- detected by: alg or kid mismatch at the verifier
 - note: BApp store deep links change. Link goes to the store; search for JWT Editor.
 
 **SAML Raider (Burp extension)**  
 - preconditions: `SAML SSO in front of the app`, `a captured assertion`
 - oracle: `assertion accepted after modification`
 - defense levels it addresses: F2
+- detected by: signature not verified over the signed element
 - note: BApp store URL changes; resolve the current listing from the store rather than trusting a fixed path.
 
 **Keycloak (as a test IdP)**  
 - oracle: `behaviour differs from the specification`, `redirect accepted to an unregistered URI`
 - defense levels it addresses: F2
+- detected by: redirect URI not exact matched
 - note: Most OAuth findings are configuration findings. A local IdP lets you confirm the class before touching a target.
 
 **Atlas W07: identity state patterns**  

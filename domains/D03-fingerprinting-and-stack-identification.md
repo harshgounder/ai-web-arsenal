@@ -64,6 +64,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a host and port`
 - oracle: `service banner and version string`
 - defense levels it addresses: F1
+- detected by: server and framework version in headers or body
 - note: The arbiter. When httpx and the HTML disagree, this decides.
 
 **nuclei**  
@@ -75,6 +76,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a wordlist and a host`
 - oracle: `vhost or path that responds differently`
 - defense levels it addresses: F1
+- detected by: requests with Host headers that do not match inventory
 
 **wafw00f**  
 - preconditions: `a host`
@@ -86,6 +88,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a reachable origin`
 - oracle: `vendor and framework identification from code`
 - defense levels it addresses: F1
+- detected by: server and framework version in headers or body
 - note: The most reliable fingerprint for SPA stacks. Headers lie; the bundle's dependencies do not.
 
 **Favicon hash via httpx -favicon**  

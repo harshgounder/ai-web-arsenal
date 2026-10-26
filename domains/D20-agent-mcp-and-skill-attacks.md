@@ -52,6 +52,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an MCP client config`
 - oracle: `flagged tool description or config with the reason`
 - defense levels it addresses: F2
+- detected by: tool description changed or containing instructions
 - note: Tool descriptions are attacker controlled text that the model reads as instructions. That is the whole class.
 
 **REA, the extraction spine**  
@@ -69,6 +70,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an agent harness`
 - oracle: `attack success and utility loss`
 - defense levels it addresses: F2
+- detected by: tool output containing instructions followed by a call
 
 **promptfoo**  
 - preconditions: `a config`

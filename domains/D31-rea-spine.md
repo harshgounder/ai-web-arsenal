@@ -81,6 +81,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a selector and a live page`
 - oracle: `listener list with native callback locations`
 - defense levels it addresses: F1
+- detected by: a .map file served in production
 - note: The honest way to find DOM XSS: read what actually handles the event.
 
 **inspect_web_network_capture**  
@@ -92,6 +93,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an exported script and its map`
 - oracle: `original file, line and column`
 - defense levels it addresses: F1
+- detected by: a .map file served in production
 
 **recover_javascript_sources**  
 - preconditions: `a bundle and its related chunks`
@@ -113,6 +115,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a CDP target`
 - oracle: `tool inventory and schema summary`
 - defense levels it addresses: F1
+- detected by: page registers tools with broad schemas
 - note: New in 2026 and almost nobody inventories it. A page that registers tools exposes an interface.
 
 **capture_browser_scenario**  

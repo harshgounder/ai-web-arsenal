@@ -71,26 +71,26 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `several roles configured`, `request set captured`
 - oracle: `matrix cell that should be denied but is allowed`
 - defense levels it addresses: F2
-- detected by: role to endpoint access matrix per run
+- detected by: role to endpoint matrix anomaly
 
 **OWASP crAPI**  
 - preconditions: `lab`
 - oracle: `intended vulnerability reproduced`
 - defense levels it addresses: F1
-- detected by: n/a lab
+- detected by: write to an object not in the session scope
 - note: Use this to calibrate a tool before pointing it at a real target.
 
 **VAmPI**  
 - preconditions: `lab`
 - oracle: `intended vulnerability reproduced`
 - defense levels it addresses: F1
-- detected by: n/a lab
+- detected by: heterogeneous ownership in one batch
 
 **OWASP Juice Shop**  
 - preconditions: `lab`
 - oracle: `challenge solved`
 - defense levels it addresses: F1
-- detected by: n/a lab
+- detected by: write to a field absent from the role's request schema
 
 **OWASP WebGoat**  
 - preconditions: `lab`
@@ -114,7 +114,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a collection exists or was built from a HAR`
 - oracle: `assertion pass for one identity, expected denial for the other`
 - defense levels it addresses: F2
-- detected by: n/a
+- detected by: heterogeneous ownership in one batch
 - note: Two runs of the same collection with different tokens is the cheapest authz harness that exists.
 
 **schemathesis**  
@@ -151,7 +151,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `authorisation delegated to row level policies`, `client talks to the database directly`
 - oracle: `row visible that the policy should hide`
 - defense levels it addresses: F2
-- detected by: policy bypass query
+- detected by: query returning rows outside policy
 - note: Common in modern stacks and almost never in authz test checklists, because the test surface is the client SDK not an HTTP endpoint.
 
 ## Decision tree

@@ -64,7 +64,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L11",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d18-scorecard",
@@ -92,7 +93,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "note": "Run it on your own dependencies before someone runs it on you."
+   "note": "Run it on your own dependencies before someone runs it on you.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d18-cosign",
@@ -119,7 +121,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L11",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d18-syft",
@@ -146,7 +149,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L03",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d18-trivy",
@@ -170,10 +174,15 @@
     "vulnerability and misconfig list"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "a name one character from a popular package"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 1,
+   "mirror_provisional": true
   },
   {
    "id": "d18-grype",
@@ -196,11 +205,16 @@
     "matches with severity"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "build metadata published"
+   ],
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED",
-   "note": "Not in the AUR or official repos on this machine. Build from source or use the anchore install script."
+   "note": "Not in the AUR or official repos on this machine. Build from source or use the anchore install script.",
+   "mirror_note": "no mirror row covers this entry",
+   "mirror_ref": 4,
+   "mirror_provisional": true
   },
   {
    "id": "d18-depcheck",
@@ -226,7 +240,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d18-gitleaks",
@@ -252,7 +267,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L04",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d18-hacktricks",
@@ -274,7 +290,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

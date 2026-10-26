@@ -67,7 +67,8 @@
    "agency": "A3",
    "stage": "L03",
    "status": "VERIFIED",
-   "note": "Every MCP server you wire is also a tool the model will obey. Treat its metadata as untrusted input."
+   "note": "Every MCP server you wire is also a tool the model will obey. Treat its metadata as untrusted input.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d28-mcp-scan",
@@ -90,10 +91,14 @@
     "flagged tool description with reason"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "description hash change"
+   ],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 0,
+   "mirror_provisional": true
   },
   {
    "id": "d28-spec",
@@ -115,7 +120,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L05",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d28-awesome-mcp",
@@ -138,7 +144,8 @@
    "agency": "A2",
    "stage": "L03",
    "status": "ESTABLISHED",
-   "note": "Included because it is the index of record, and because its size is the warning: an unpinned MCP registry is a supply chain."
+   "note": "Included because it is the index of record, and because its size is the warning: an unpinned MCP registry is a supply chain.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d28-promptfoo",
@@ -164,7 +171,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d28-agentdojo",
@@ -188,10 +196,14 @@
     "attack success and utility loss"
    ],
    "evades": [],
-   "detected_by": [],
+   "detected_by": [
+    "instructions in tool output followed by a call"
+   ],
    "agency": "A2",
    "stage": "L07",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_ref": 3,
+   "mirror_provisional": true
   },
   {
    "id": "d28-mcps",
@@ -216,7 +228,8 @@
    "agency": "A0",
    "stage": "L01",
    "status": "VERIFIED",
-   "note": "Local directory. The rule matters: MCP catalogs are where link rot and prompt injection enter."
+   "note": "Local directory. The rule matters: MCP catalogs are where link rot and prompt injection enter.",
+   "mirror_note": "no mirror row covers this entry"
   },
   {
    "id": "d28-skill",
@@ -240,7 +253,8 @@
    "detected_by": [],
    "agency": "A0",
    "stage": "L01",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry"
   }
  ],
  "tree": {

@@ -52,6 +52,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **This repo: prompts/04-prove-it.md**  
 - preconditions: `a candidate finding`
 - oracle: `one of CONFIRMED, UNCONFIRMED, REFUTED, NEEDS_ACCESS`
+- detected by: critic verdict OVERSTATED
 - note: Local document. The rule it enforces: no CONFIRMED without a negative control.
 
 **This repo: prompts/05-critic.md**  

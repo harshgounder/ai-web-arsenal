@@ -80,6 +80,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an IAM principal in a sandbox account`
 - oracle: `an escalation path proven end to end`
 - defense levels it addresses: F2
+- detected by: action permitted by a policy that should not
 - note: New this month. Pairs with pathfinding.cloud, the IAM privesc technique catalogue. Not packaged, build from source.
 
 **trivy**  
@@ -112,6 +113,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a server side fetch primitive in scope`
 - oracle: `role credentials returned by the metadata endpoint`
 - defense levels it addresses: F2
+- detected by: request to the metadata address from an application process
 - note: IMDSv2 changes the test: a token request first. If the fetch cannot set a header, the class is gone. Say so rather than reporting a false positive.
 
 ## Decision tree

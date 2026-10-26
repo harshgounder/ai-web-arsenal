@@ -62,10 +62,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **trivy**  
 - preconditions: `an image, lockfile or manifest`
 - oracle: `vulnerability and misconfig list`
+- detected by: a name one character from a popular package
 
 **grype**  
 - preconditions: `an SBOM or an image`
 - oracle: `matches with severity`
+- detected by: build metadata published
 - note: Not in the AUR or official repos on this machine. Build from source or use the anchore install script.
 
 **OWASP Dependency-Check**  
