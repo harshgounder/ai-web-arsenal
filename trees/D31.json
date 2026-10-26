@@ -1,0 +1,87 @@
+{
+ "id": "d31-root",
+ "q": "What do you already have: nothing, a capture, or a client artifact?",
+ "why": "Each starting point has a different cheapest path, and starting at the wrong one wastes the most expensive resource, which is attention.",
+ "branches": [
+  {
+   "a": "Nothing yet",
+   "action": "browse once through the proxy, then inventory the capture. no probing",
+   "tools": [
+    "d31-mitmproxy",
+    "d31-capture"
+   ],
+   "oracle": "endpoint inventory grounded in bytes"
+  },
+  {
+   "a": "A capture",
+   "next": {
+    "id": "d31-cap",
+    "q": "Does the capture include response bodies for scripts and API calls?",
+    "branches": [
+     {
+      "a": "Yes",
+      "action": "export scripts, analyze the bundle, then map endpoints to source locations",
+      "tools": [
+       "d31-export-web-scripts",
+       "d31-analyze-web-bundle",
+       "d31-source-location"
+      ],
+      "oracle": "route present in bundle and absent in capture"
+     },
+     {
+      "a": "No",
+      "action": "recapture with bodies enabled. a capture without bodies cannot answer the questions that matter",
+      "tools": [
+       "d31-mitmproxy"
+      ],
+      "oracle": "n/a recapture"
+     }
+    ]
+   }
+  },
+  {
+   "a": "A client artifact (APK, IPA, asar, wasm)",
+   "next": {
+    "id": "d31-art",
+    "q": "Is the logic in bytecode or in a bundle inside the package?",
+    "branches": [
+     {
+      "a": "Bytecode",
+      "action": "inspect the package, then class or method level, then trace references to the API client",
+      "tools": [
+       "d31-android",
+       "d31-android-class"
+      ],
+      "oracle": "endpoint or secret recovered from code"
+     },
+     {
+      "a": "Bundle",
+      "action": "extract, then treat as a web bundle. check for webview bridge code",
+      "tools": [
+       "d31-artifact",
+       "d31-analyze-web-bundle"
+      ],
+      "oracle": "bridge interface recovered"
+     },
+     {
+      "a": "WASM",
+      "action": "validate and read imports and exports. the interface is the contract",
+      "tools": [
+       "d31-wasm"
+      ],
+      "oracle": "import and export list"
+     }
+    ]
+   }
+  },
+  {
+   "a": "Only a URL",
+   "action": "fetch the page, inventory scripts and storage keys, then decide what to acquire next",
+   "tools": [
+    "d31-inspect-web-page",
+    "d31-analyze-web-bundle"
+   ],
+   "oracle": "script and storage inventory"
+  }
+ ]
+}

@@ -1,0 +1,861 @@
+{
+ "id": "D31",
+ "title": "REA spine: target artifact extraction",
+ "version": "0.1",
+ "generated": "2026-10-26",
+ "status": "AUTHORED. The domain the whole repo is ordered around: artifact before request.",
+ "atoms": [
+  "A08",
+  "A06",
+  "A05",
+  "A01",
+  "A16"
+ ],
+ "atom_notes": {
+  "A08": "extraction is information exposure from the client's own artifacts before any request is sent",
+  "A06": "bundler paths, chunk names and routes are namespace structure worth reading before probing",
+  "A05": "minified and compiled code hides shape. deobfuscation is shape recovery",
+  "A01": "recovered script text tells you which sinks exist, so injection is found by reading not guessing",
+  "A16": "a page that registers WebMCP tools exposes an interface to the agent layer"
+ },
+ "required_cells": [
+  {
+   "cell": "S02/L03/A3",
+   "why": "the artifact inventory replaces blind probing and is the entry point of the pipeline",
+   "filled": true
+  },
+  {
+   "cell": "S08/L03/A3",
+   "why": "bundle and source map give routes and logic no response would reveal",
+   "filled": true
+  },
+  {
+   "cell": "S15/L03/A3",
+   "why": "the mobile or Electron client is often less guarded than the web app",
+   "filled": true
+  },
+  {
+   "cell": "S02/L05/A2",
+   "why": "recovered source to hypothesis. this is where extraction pays for itself",
+   "filled": true
+  },
+  {
+   "cell": "S02/L06/A2",
+   "why": "targeted probing informed by code, instead of a wordlist",
+   "filled": true
+  },
+  {
+   "cell": "S08/L12/A6",
+   "why": "bundle diffing across deploys to catch new endpoints",
+   "filled": false
+  },
+  {
+   "cell": "S15/L12/A6",
+   "why": "mobile app version diffing as a monitoring input",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d31-analyze-web-bundle",
+   "name": "analyze_web_bundle",
+   "url": "https://rea.tools",
+   "role": "Chunk graph, route and endpoint candidates, vendor fingerprints, WebMCP metadata, optional source map fetch",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "preconditions": [
+    "a reachable page origin"
+   ],
+   "oracle": [
+    "route and endpoint candidate list",
+    "chunk graph"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "analyze_web_bundle",
+   "note": "The single highest yield call on a modern target. Start here, not with a scanner."
+  },
+  {
+   "id": "d31-export-web-scripts",
+   "name": "export_web_scripts",
+   "url": "https://rea.tools",
+   "role": "JS bytes out of an existing capture, with provenance, a manifest and an analysis_input for the next step",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a capture with script sources included"
+   ],
+   "oracle": [
+    "files on disk plus a digest manifest"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "export_web_scripts"
+  },
+  {
+   "id": "d31-inspect-web-page",
+   "name": "inspect_web_page",
+   "url": "https://rea.tools",
+   "role": "DOM, accessibility tree, scripts, resources, storage key inventory, JSON body shapes, WebSocket shapes",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A05"
+   ],
+   "preconditions": [
+    "a loopback CDP endpoint and target id"
+   ],
+   "oracle": [
+    "page structure and observed body shapes"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "inspect_web_page"
+  },
+  {
+   "id": "d31-event-listeners",
+   "name": "inspect_web_event_listeners",
+   "url": "https://rea.tools",
+   "role": "Every listener on a selector, with source ownership and exact script text",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "a selector and a live page"
+   ],
+   "oracle": [
+    "listener list with native callback locations"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "call": "inspect_web_event_listeners",
+   "note": "The honest way to find DOM XSS: read what actually handles the event."
+  },
+  {
+   "id": "d31-capture",
+   "name": "inspect_web_network_capture",
+   "url": "https://rea.tools",
+   "role": "HAR, mitmproxy, SAZ and qlog with exact byte ranges and preserved producer fields",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a capture file"
+   ],
+   "oracle": [
+    "endpoint inventory grounded in bytes"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "inspect_web_network_capture"
+  },
+  {
+   "id": "d31-source-location",
+   "name": "trace_web_source_location",
+   "url": "https://rea.tools",
+   "role": "Generated position back to original source through a paired source map, with embedded sourcesContent",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "an exported script and its map"
+   ],
+   "oracle": [
+    "original file, line and column"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "call": "trace_web_source_location"
+  },
+  {
+   "id": "d31-recover",
+   "name": "recover_javascript_sources",
+   "url": "https://rea.tools",
+   "role": "Wakaru deobfuscation into readable modules with source maps emitted",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a bundle and its related chunks"
+   ],
+   "oracle": [
+    "readable modules plus extraction ranges"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "call": "recover_javascript_sources",
+   "note": "The step that turns a minified blob into something a model can actually reason about."
+  },
+  {
+   "id": "d31-app-graph",
+   "name": "analyze_javascript_application",
+   "url": "https://rea.tools",
+   "role": "ASAR or extracted JS app as an execution free graph: modules, exports, requires, routes",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "an ASAR or a directory"
+   ],
+   "oracle": [
+    "application graph and module inventory"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "analyze_javascript_application"
+  },
+  {
+   "id": "d31-reconcile-js",
+   "name": "reconcile_javascript_runtime",
+   "url": "https://rea.tools",
+   "role": "Static bundle graph against observed runtime scripts, so dead code and hidden chunks separate",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A08"
+   ],
+   "preconditions": [
+    "a static graph and a runtime observation"
+   ],
+   "oracle": [
+    "loaded versus present, per script"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "call": "reconcile_javascript_runtime"
+  },
+  {
+   "id": "d31-webmcp",
+   "name": "discover_webmcp_tools",
+   "url": "https://rea.tools",
+   "role": "Every page registered WebMCP tool and its input schema, passively",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A08"
+   ],
+   "preconditions": [
+    "a CDP target"
+   ],
+   "oracle": [
+    "tool inventory and schema summary"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "discover_webmcp_tools",
+   "note": "New in 2026 and almost nobody inventories it. A page that registers tools exposes an interface."
+  },
+  {
+   "id": "d31-scenario",
+   "name": "capture_browser_scenario",
+   "url": "https://rea.tools",
+   "role": "Controlled scenario: launch or connect, act, capture network, storage, DOM and screenshots",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A05"
+   ],
+   "preconditions": [
+    "a browser executable or CDP endpoint"
+   ],
+   "oracle": [
+    "ordered artifacts with references"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "call": "capture_browser_scenario",
+   "note": "This is how you get a deterministic capture instead of hand clicking and hoping."
+  },
+  {
+   "id": "d31-compare",
+   "name": "compare_web_captures",
+   "url": "https://rea.tools",
+   "role": "Before and after capture comparison across network, storage and DOM, with alignment failures explicit",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A04"
+   ],
+   "preconditions": [
+    "two captures of the same flow"
+   ],
+   "oracle": [
+    "delta per artefact"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L12",
+   "status": "ESTABLISHED",
+   "call": "compare_web_captures",
+   "note": "Regression detection for free. Most teams have no version of this."
+  },
+  {
+   "id": "d31-android",
+   "name": "inspect_android_package",
+   "url": "https://rea.tools",
+   "role": "Package, SDK, permissions, decoded manifest, class and resource counts, no source written",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "preconditions": [
+    "an APK"
+   ],
+   "oracle": [
+    "manifest and declaration inventory"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "inspect_android_package"
+  },
+  {
+   "id": "d31-android-class",
+   "name": "inspect_android_class / inspect_android_method",
+   "url": "https://rea.tools",
+   "role": "Class members and a single decompiled method, plus reference tracing for an overload",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "an APK and a class name"
+   ],
+   "oracle": [
+    "methods, fields, decompiled body"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "call": "inspect_android_method"
+  },
+  {
+   "id": "d31-wasm",
+   "name": "inspect_wasm_artifact",
+   "url": "https://rea.tools",
+   "role": "WASM validation, sections, imports, exports and WAT, with optional JS glue association",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a .wasm file"
+   ],
+   "oracle": [
+    "import and export interface and WAT"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "call": "inspect_wasm_artifact"
+  },
+  {
+   "id": "d31-sqlite",
+   "name": "inspect_sqlite_database",
+   "url": "https://rea.tools",
+   "role": "Client side database schema and rows, with source and WAL digests",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a sqlite file"
+   ],
+   "oracle": [
+    "schema inventory and selected rows"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "call": "inspect_sqlite_database"
+  },
+  {
+   "id": "d31-artifact",
+   "name": "inspect_artifact / extract_artifact",
+   "url": "https://rea.tools",
+   "role": "Archive and package inventory with integrity observations, then safe extraction",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a zip, apk, ipa, dmg or asar"
+   ],
+   "oracle": [
+    "typed inventory plus extracted tree"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "inspect_artifact"
+  },
+  {
+   "id": "d31-electron",
+   "name": "inspect_electron_page / inspect_electron_fuses",
+   "url": "https://rea.tools",
+   "role": "Electron page contents and packaged fuse state, which tells you what the app allows",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A08"
+   ],
+   "preconditions": [
+    "an Electron app and CDP endpoint"
+   ],
+   "oracle": [
+    "fuse state and page structure"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "inspect_electron_fuses"
+  },
+  {
+   "id": "d31-mitmproxy",
+   "name": "mitmproxy (capture source)",
+   "url": "https://docs.mitmproxy.org/",
+   "role": "The proxy that produces the captures REA reads natively",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "flows file"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L02",
+   "status": "ESTABLISHED",
+   "call": "https://docs.mitmproxy.org/",
+   "note": "rea inspect_web_network_capture reads mitmproxy dumps directly. No conversion step."
+  },
+  {
+   "id": "d31-chromium",
+   "name": "chromium (CDP host)",
+   "url": "https://www.chromium.org/",
+   "role": "The only honest way to exercise client side behaviour and a CDP target for REA",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a browser binary"
+   ],
+   "oracle": [
+    "remote debugging endpoint"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "https://www.chromium.org/"
+  },
+  {
+   "id": "d31-fq",
+   "name": "fq",
+   "url": "https://github.com/wader/fq",
+   "role": "jq semantics over any binary format, the fastest probe of an unknown container",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a binary file"
+   ],
+   "oracle": [
+    "structural query result"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "call": "https://github.com/wader/fq"
+  }
+ ],
+ "tree": {
+  "id": "d31-root",
+  "q": "What do you already have: nothing, a capture, or a client artifact?",
+  "why": "Each starting point has a different cheapest path, and starting at the wrong one wastes the most expensive resource, which is attention.",
+  "branches": [
+   {
+    "a": "Nothing yet",
+    "action": "browse once through the proxy, then inventory the capture. no probing",
+    "tools": [
+     "d31-mitmproxy",
+     "d31-capture"
+    ],
+    "oracle": "endpoint inventory grounded in bytes"
+   },
+   {
+    "a": "A capture",
+    "next": {
+     "id": "d31-cap",
+     "q": "Does the capture include response bodies for scripts and API calls?",
+     "branches": [
+      {
+       "a": "Yes",
+       "action": "export scripts, analyze the bundle, then map endpoints to source locations",
+       "tools": [
+        "d31-export-web-scripts",
+        "d31-analyze-web-bundle",
+        "d31-source-location"
+       ],
+       "oracle": "route present in bundle and absent in capture"
+      },
+      {
+       "a": "No",
+       "action": "recapture with bodies enabled. a capture without bodies cannot answer the questions that matter",
+       "tools": [
+        "d31-mitmproxy"
+       ],
+       "oracle": "n/a recapture"
+      }
+     ]
+    }
+   },
+   {
+    "a": "A client artifact (APK, IPA, asar, wasm)",
+    "next": {
+     "id": "d31-art",
+     "q": "Is the logic in bytecode or in a bundle inside the package?",
+     "branches": [
+      {
+       "a": "Bytecode",
+       "action": "inspect the package, then class or method level, then trace references to the API client",
+       "tools": [
+        "d31-android",
+        "d31-android-class"
+       ],
+       "oracle": "endpoint or secret recovered from code"
+      },
+      {
+       "a": "Bundle",
+       "action": "extract, then treat as a web bundle. check for webview bridge code",
+       "tools": [
+        "d31-artifact",
+        "d31-analyze-web-bundle"
+       ],
+       "oracle": "bridge interface recovered"
+      },
+      {
+       "a": "WASM",
+       "action": "validate and read imports and exports. the interface is the contract",
+       "tools": [
+        "d31-wasm"
+       ],
+       "oracle": "import and export list"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Only a URL",
+    "action": "fetch the page, inventory scripts and storage keys, then decide what to acquire next",
+    "tools": [
+     "d31-inspect-web-page",
+     "d31-analyze-web-bundle"
+    ],
+    "oracle": "script and storage inventory"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "source map exposure",
+   "detect": "a .map file served in production",
+   "control": "do not publish maps, or publish without sourcesContent",
+   "rule": "map request in production logs"
+  },
+  {
+   "attack": "secret in bundle",
+   "detect": "key-like strings in shipped JS",
+   "control": "no secrets client side, short lived tokens",
+   "rule": "secret pattern in served asset"
+  },
+  {
+   "attack": "debug endpoint exposure",
+   "detect": "debug or dev routes in the bundle",
+   "control": "build time stripping, environment gating",
+   "rule": "dev route request"
+  },
+  {
+   "attack": "webview bridge abuse",
+   "detect": "bridge method callable from loaded content",
+   "control": "allowlist origins and methods",
+   "rule": "bridge call from unexpected origin"
+  },
+  {
+   "attack": "WebMCP tool exposure",
+   "detect": "page registers tools with broad schemas",
+   "control": "declare only what is needed, validate inputs",
+   "rule": "tool registration change"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No Chromium LevelDB reader for LocalStorage and IndexedDB",
+   "class": "no-tool",
+   "build_candidate": "unzip plus a LevelDB library, expose profile and origin scoping"
+  },
+  {
+   "gap": "No WeChat or Alipay mini program unpacking",
+   "class": "no-tool",
+   "build_candidate": "wxapkg parser with entry mapping, China only lane and currently the only way into that surface"
+  },
+  {
+   "gap": "No Flutter AOT recovery (blutter class)",
+   "class": "no-tool",
+   "build_candidate": "libapp.so parsing plus symbol mapping, needed for apps whose logic is not in DEX"
+  },
+  {
+   "gap": "No Hermes or React Native bundle recovery",
+   "class": "no-tool",
+   "build_candidate": "extract the bundle and recover the JS, then treat as a web bundle"
+  },
+  {
+   "gap": "No HarmonyOS HAP or ABC bytecode support",
+   "class": "no-tool",
+   "build_candidate": "HAP unpack plus ABC inspection"
+  },
+  {
+   "gap": "No WARC archive reader",
+   "class": "no-tool",
+   "build_candidate": "WARC record walker emitting the same shape as a HAR"
+  },
+  {
+   "gap": "No service worker and CacheStorage reconstruction",
+   "class": "no-tool",
+   "build_candidate": "CDP CacheStorage enumeration plus stored response bodies"
+  },
+  {
+   "gap": "No WebAuthn attestation parser",
+   "class": "no-tool",
+   "build_candidate": "parse attestation objects and report origin, RP id hash and UV"
+  },
+  {
+   "gap": "No request signing recovery from obfuscated JS",
+   "class": "no-tool",
+   "build_candidate": "locate the signing function, lift it, and test replayed signatures against a control"
+  },
+  {
+   "gap": "Source map recovery when the map is absent",
+   "class": "partial",
+   "build_candidate": "bundle structure heuristics plus name demangling, honest about confidence"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D31.index.json"
+ }
+}
