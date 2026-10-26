@@ -3,25 +3,11 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 24,
- "indexed_not_enriched": 149,
+ "indexed_not_enriched": 146,
  "entries": [
-  {
-   "name": "@Secjuice",
-   "url": "https://www.secjuice.com",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
   {
    "name": "OpenAPI",
    "url": "https://swagger.io/specification/",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Security Weekly",
-   "url": "https://securityweekly.com/",
    "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
@@ -204,13 +190,6 @@
   {
    "name": "Abusing Repository Webhooks to Access Internal CI/CD Systems at Scale",
    "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/repository-webhook-abuse-access-ci-cd-systems-at-scale/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Application Security Weekly",
-   "url": "https://securityweekly.com/shows/appsec-weekly/",
    "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"

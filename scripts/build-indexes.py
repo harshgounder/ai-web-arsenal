@@ -20,7 +20,9 @@ E = [json.loads(l) for l in (ROOT / "data" / "corpus.jsonl").read_text(encoding=
 
 NOISE = re.compile(r"(glama\.ai|mcp\.so|smithery\.ai|pulsemcp\.com|mcpservers\.org|amazon\.|manning\.com|"
                    r"goodreads\.|oreilly\.|packtpub\.|youtube\.com|youtu\.be|medium\.com|twitter\.com|x\.com|"
-                   r"reddit\.com|linkedin\.com|facebook\.com|discord\.|t\.me|substack\.com)", re.I)
+                   r"reddit\.com|linkedin\.com|facebook\.com|discord\.|t\.me|substack\.com|"
+                   r"secjuice\.com|securityweekly\.com|thehackernews\.com|bleepingcomputer\.com|"
+                   r"securityweek\.com|darkreading\.com|krebsonsecurity\.com|thehackernews\.com)", re.I)
 BAD = re.compile(r"\.(svg|png|jpe?g|gif|ico)(\?|$)", re.I)
 
 P = {
