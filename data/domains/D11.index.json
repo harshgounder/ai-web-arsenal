@@ -2,8 +2,8 @@
  "domain": "D11",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 24,
- "indexed_not_enriched": 146,
+ "enriched": 37,
+ "indexed_not_enriched": 133,
  "entries": [
   {
    "name": "OpenAPI",
@@ -17,13 +17,6 @@
    "url": "https://github.com/Fuzzapi/fuzzapi",
    "tier": "core_web",
    "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "31 days of API Security Tips",
-   "url": "https://github.com/smodnix/31-days-of-API-Security-Tips",
-   "tier": "adjacent",
-   "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
@@ -51,13 +44,6 @@
    "name": "API Security Audit Checklist",
    "url": "https://www.apicasystems.com/blog/api-security-audit-checklist/",
    "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "API Security Empire",
-   "url": "https://github.com/cyprosecurity/API-SecurityEmpire",
-   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -167,20 +153,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "APIFuzzer",
-   "url": "https://github.com/KissPeter/APIFuzzer",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "APISandbox",
-   "url": "https://github.com/API-Security/APISandbox",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "APIsecure",
    "url": "https://apisecure.co",
    "tier": "adjacent",
@@ -197,13 +169,6 @@
   {
    "name": "Burp API enumeration",
    "url": "https://portswigger.net/support/using-burp-to-enumerate-a-rest-api",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "CATS",
-   "url": "https://github.com/Endava/cats",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
@@ -233,13 +198,6 @@
    "name": "Episode 38 API Security Best Practices",
    "url": "https://wehackpurple.com/podcast/episode-38-api-security-best-practices/",
    "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "EvoMaster",
-   "url": "https://github.com/WebFuzzing/EvoMaster",
-   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -330,13 +288,6 @@
   {
    "name": "GraphQL challenges",
    "url": "https://www.hackerone.com/ethical-hacker/graphql-week-hacker101-capture-flag-challenges",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "GraphQL wordlist",
-   "url": "https://github.com/Escape-Technologies/graphql-wordlist",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
@@ -433,22 +384,8 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Optic",
-   "url": "https://github.com/opticdev/optic",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "Pingfyr/mcp",
    "url": "https://github.com/Pingfyr/mcp",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Practical API Security Walkthrough",
-   "url": "https://github.com/approov/shipfast-api-protection",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
@@ -463,13 +400,6 @@
   {
    "name": "REST API Design Guide",
    "url": "https://www.apiopscycles.com/resources/rest-api-design-guide",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "REST API Goat",
-   "url": "https://github.com/optiv/rest-api-goat",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
@@ -531,20 +461,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Step CI",
-   "url": "https://github.com/stepci/stepci",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Swagger-EZ",
-   "url": "https://github.com/RhinoSecurityLabs/Swagger-EZ",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "The 200 That Proved Nothing",
    "url": "https://aivist.dev/the-200-that-proved-nothing",
    "tier": "core_web",
@@ -590,13 +506,6 @@
    "name": "The Secure Developer",
    "url": "https://www.heavybit.com/library/podcasts/the-secure-developer/",
    "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "TnT-Fuzzer",
-   "url": "https://github.com/Teebytes/TnT-Fuzzer",
-   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1027,5 +936,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 0
 }

@@ -3,20 +3,13 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 29,
- "indexed_not_enriched": 170,
+ "indexed_not_enriched": 167,
  "entries": [
   {
    "name": "NoSQLMap",
    "url": "https://github.com/codingo/NoSQLMap",
    "tier": "adjacent",
    "n_sources": 4,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Amass",
-   "url": "https://github.com/OWASP/Amass",
-   "tier": "core_web",
-   "n_sources": 3,
    "status": "PROMOTABLE"
   },
   {
@@ -468,23 +461,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Spiderfoot",
-   "url": "http://www.spiderfoot.net/",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "Spyse",
    "url": "https://spyse.com/",
    "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "SubFinder",
-   "url": "https://github.com/subfinder/subfinder",
-   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1195,5 +1174,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 3
 }

@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 12,
- "indexed_not_enriched": 9,
+ "indexed_not_enriched": 8,
  "entries": [
   {
    "name": "Agent Threat Rules",
@@ -23,13 +23,6 @@
    "name": "PacketTotal",
    "url": "https://packettotal.com/",
    "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Suricata",
-   "url": "https://github.com/satta/awesome-suricata",
-   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -68,5 +61,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 1
 }

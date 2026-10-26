@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 15,
- "indexed_not_enriched": 49,
+ "indexed_not_enriched": 47,
  "entries": [
   {
    "name": "10 real-world stories of how we've compromised CI/CD pipelines",
@@ -195,13 +195,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "kube-hunter",
-   "url": "https://kube-hunter.aquasec.com/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "luisgf/infrabroker",
    "url": "https://github.com/luisgf/infrabroker",
    "tier": "adjacent",
@@ -232,13 +225,6 @@
   {
    "name": "mrostamii/rancher-mcp-server",
    "url": "https://github.com/mrostamii/rancher-mcp-server",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "prowler",
-   "url": "https://github.com/Alfresco/prowler",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
@@ -348,5 +334,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 2
 }

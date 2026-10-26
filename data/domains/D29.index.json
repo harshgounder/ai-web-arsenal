@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 60,
- "indexed_not_enriched": 151,
+ "indexed_not_enriched": 149,
  "entries": [
   {
    "name": "RustScan",
@@ -37,13 +37,6 @@
    "name": "VHostScan",
    "url": "https://github.com/codingo/VHostScan",
    "tier": "core_web",
-   "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "nmap",
-   "url": "https://nmap.org/",
-   "tier": "adjacent",
    "n_sources": 3,
    "status": "PROMOTABLE"
   },
@@ -135,13 +128,6 @@
    "name": "phpggc>",
    "url": "https://github.com/ambionics/phpggc",
    "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "radare2",
-   "url": "https://github.com/radare/radare2",
-   "tier": "offscope",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -1062,5 +1048,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 2
 }

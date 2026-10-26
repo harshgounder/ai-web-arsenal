@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 13,
- "indexed_not_enriched": 38,
+ "indexed_not_enriched": 37,
  "entries": [
   {
    "name": "Airbnb when bypassing json encoding XSS filter WAF CSP and auditior turns into eight vulnerabilities",
@@ -223,13 +223,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "csp evaluator",
-   "url": "https://csper.io/evaluator",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "csprecon",
    "url": "https://github.com/edoardottt/csprecon",
    "tier": "adjacent",
@@ -271,5 +264,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 1
 }

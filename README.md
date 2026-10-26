@@ -152,11 +152,11 @@ and exclude directory, book and social URLs at generation:
 
 | | count |
 |---|---|
-| enriched entries in authored domains | **431** |
-| genuinely promotable candidates | **1451** |
-| ratio | 23% of the real candidate set is enriched |
+| enriched entries in authored domains | **444** |
+| genuinely promotable candidates | **1418** |
+| ratio | 24% of the real candidate set is enriched |
 
-So the gap is about 3.4x, not 27x. Still a lot of work, but a number that survives inspection.
+So the gap is about 3.2x, not 27x. Still a lot of work, but a number that survives inspection.
 The generator is `scripts/build-indexes.py`; the counts are re-derived on every run.
 
 ## Why the corpus matters more than it looks

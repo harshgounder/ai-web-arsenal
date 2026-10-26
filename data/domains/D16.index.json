@@ -3,20 +3,13 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 10,
- "indexed_not_enriched": 27,
+ "indexed_not_enriched": 23,
  "entries": [
   {
    "name": "John the Ripper",
    "url": "http://www.openwall.com/john/",
    "tier": "adjacent",
    "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Hashcat",
-   "url": "http://hashcat.net/hashcat/",
-   "tier": "adjacent",
-   "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
@@ -29,13 +22,6 @@
   {
    "name": "c-jwt-cracker>",
    "url": "https://github.com/brendan-rius/c-jwt-cracker",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "gitleaks",
-   "url": "https://github.com/zricethezav/gitleaks",
    "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
@@ -100,13 +86,6 @@
    "name": "SecuriTool",
    "url": "https://securitool.js.org/",
    "tier": "core_web",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "TruffleHog",
-   "url": "https://trufflesecurity.com/docs",
-   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -186,13 +165,7 @@
    "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
-  },
-  {
-   "name": "truffleHog",
-   "url": "https://github.com/dxa4481/truffleHog",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 4
 }

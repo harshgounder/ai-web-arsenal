@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 12,
- "indexed_not_enriched": 38,
+ "indexed_not_enriched": 37,
  "entries": [
   {
    "name": "API Relay Audit",
@@ -146,13 +146,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "PyRIT",
-   "url": "https://github.com/microsoft/PyRIT",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "SECRET4422/guardrail-mcp",
    "url": "https://github.com/SECRET4422/guardrail-mcp",
    "tier": "adjacent",
@@ -271,5 +264,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 1
 }

@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 11,
- "indexed_not_enriched": 24,
+ "indexed_not_enriched": 22,
  "entries": [
   {
    "name": "graphw00f",
@@ -97,20 +97,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Wappalyzer",
-   "url": "https://github.com/wappalyzer/wappalyzer",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Wappalyzer",
-   "url": "https://www.wappalyzer.com/",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "WebDecoy",
    "url": "https://github.com/WebDecoy/wordpress-plugin",
    "tier": "adjacent",
@@ -173,5 +159,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 2
 }

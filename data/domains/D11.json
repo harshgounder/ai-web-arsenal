@@ -1005,6 +1005,347 @@
     "each countermeasure is the control column for your report",
     "any countermeasure missing at the target is a hardening recommendation"
    ]
+  },
+  {
+   "id": "d11-apifuzzer",
+   "name": "APIFuzzer",
+   "url": "https://github.com/KissPeter/APIFuzzer",
+   "role": "Fuzzes a running API from its OpenAPI spec, no source needed",
+   "driver": {
+    "install": "pipx:apifuzzer",
+    "verify": "apifuzzer --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "an OpenAPI spec and a reachable API"
+   ],
+   "oracle": [
+    "crash or status violation against the spec"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d11-cats",
+   "name": "CATS",
+   "url": "https://github.com/Endava/cats",
+   "role": "OpenAPI fuzzer that generates tests from the schema and reports by category",
+   "driver": {
+    "install": "git:https://github.com/Endava/cats",
+    "verify": "cats --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "agency": "A3",
+   "stage": "L06",
+   "preconditions": [
+    "an OpenAPI spec"
+   ],
+   "oracle": [
+    "fuzz report per rule with a reproducible request"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d11-evomaster",
+   "name": "EvoMaster",
+   "url": "https://github.com/WebFuzzing/EvoMaster",
+   "role": "Evolutionary API test generator, reaches states a rule based fuzzer does not",
+   "driver": {
+    "install": "git:https://github.com/WebFuzzing/EvoMaster",
+    "verify": "evomaster --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A10",
+    "A04"
+   ],
+   "agency": "A3",
+   "stage": "L07",
+   "preconditions": [
+    "an API with stateful endpoints"
+   ],
+   "oracle": [
+    "a sequence that violates an invariant"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "ESTABLISHED",
+   "note": "Slow and needs setup. Justified when dependencies between calls matter, which is most real APIs."
+  },
+  {
+   "id": "d11-graphql-wordlist",
+   "name": "graphql-wordlist",
+   "url": "https://github.com/Escape-Technologies/graphql-wordlist",
+   "role": "Field and type name corpus for schema recovery when introspection is off",
+   "driver": {
+    "install": "git:https://github.com/Escape-Technologies/graphql-wordlist",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "agency": "A2",
+   "stage": "L04",
+   "preconditions": [
+    "introspection disabled but suggestions or errors leak"
+   ],
+   "oracle": [
+    "a field name that resolves"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED",
+   "note": "Pairs with clairvoyance. The wordlist quality decides the recovery rate."
+  },
+  {
+   "id": "d11-optic",
+   "name": "Optic",
+   "url": "https://github.com/opticdev/optic",
+   "role": "API spec diffing and linting, the fastest way to spot a breaking change between versions",
+   "driver": {
+    "install": "npm:@opticdev/cli",
+    "verify": "optic --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A15"
+   ],
+   "agency": "A2",
+   "stage": "L05",
+   "preconditions": [
+    "two specs, or live traffic and a spec"
+   ],
+   "oracle": [
+    "a diff naming the change"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d11-rest-api-goat",
+   "name": "REST API Goat",
+   "url": "https://github.com/optiv/rest-api-goat",
+   "role": "Deliberately vulnerable API for practising the whole Top 10",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A05"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "docker"
+   ],
+   "oracle": [
+    "intended vulnerability reproduced"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d11-swagger-ez",
+   "name": "Swagger-EZ",
+   "url": "https://github.com/RhinoSecurityLabs/Swagger-EZ",
+   "role": "Turns a swagger file into a testing surface with auth handling",
+   "driver": {
+    "install": "git:https://github.com/RhinoSecurityLabs/Swagger-EZ",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A02"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "a swagger document"
+   ],
+   "oracle": [
+    "endpoint called with your identity"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d11-tnt-fuzzer",
+   "name": "TnT-Fuzzer",
+   "url": "https://github.com/Teebytes/TnT-Fuzzer",
+   "role": "OpenAPI 3 fuzzer focused on parameter and body mutation",
+   "driver": {
+    "install": "git:https://github.com/Teebytes/TnT-Fuzzer",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "an OpenAPI 3 spec"
+   ],
+   "oracle": [
+    "an unexpected status or body"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d11-stepci",
+   "name": "Step CI",
+   "url": "https://github.com/stepci/stepci",
+   "role": "Declarative API test runner, useful for replaying an authorised workflow as evidence",
+   "driver": {
+    "install": "npm:stepci",
+    "verify": "stepci --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A10"
+   ],
+   "agency": "A2",
+   "stage": "L08",
+   "preconditions": [
+    "a workflow description"
+   ],
+   "oracle": [
+    "assertion pass or fail per step"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED",
+   "note": "Reproducible evidence matters more than coverage here. A commit-able test is a better finding than a screenshot."
+  },
+  {
+   "id": "d11-api-sec-empire",
+   "name": "API-SecurityEmpire",
+   "url": "https://github.com/cyprosecurity/API-SecurityEmpire",
+   "role": "Curated API security resource set, useful as a completeness cross check",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "agency": "A0",
+   "stage": "L05",
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d11-apisandbox",
+   "name": "APISandbox",
+   "url": "https://github.com/API-Security/APISandbox",
+   "role": "Deliberately weak API sandbox covering the OWASP API flaws",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A05"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "docker"
+   ],
+   "oracle": [
+    "flaw reproduced"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d11-shipfast",
+   "name": "ShipFast API protection walkthrough",
+   "url": "https://github.com/approov/shipfast-api-protection",
+   "role": "A worked API protection lab with client and server, good for testing whether a tool handles a real app",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "preconditions": [
+    "docker"
+   ],
+   "oracle": [
+    "the walkthrough step reproduced"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d11-31days",
+   "name": "31 Days of API Security Tips",
+   "url": "https://github.com/smodnix/31-days-of-API-Security-Tips",
+   "role": "Practical tips corpus, the kind of thing that fills gaps a taxonomy misses",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "agency": "A0",
+   "stage": "L05",
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "status": "VERIFIED"
   }
  ],
  "tree": {

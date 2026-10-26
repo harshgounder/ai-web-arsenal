@@ -39,7 +39,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-24 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+37 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -50,22 +50,35 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | L03 surface mapping | A3 | A08 | `pipx:mitmproxy2swagger` | yes | Turn captured traffic into an OpenAPI spec, the reverse of codegen |
 | [arjun](https://github.com/s0md3v/Arjun) | L04 discovery | A1 | A01,A10 | `pipx:arjun` | yes | HTTP parameter discovery, including parameters the API does not document |
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A1 | A01,A06 | `aur:ffuf` | yes | Generic fuzzer, the fallback when a protocol specific tool does not exist |
+| [graphql-wordlist](https://github.com/Escape-Technologies/graphql-wordlist) | L04 discovery | A2 | A08 | `git:https://github.com/Escape-Technologies/graphql-wordlist` | no | Field and type name corpus for schema recovery when introspection is off |
 | [kiterunner](https://github.com/assetnote/kiterunner) | L04 discovery | A2 | A06,A01 | `aur:kiterunner-bin` | yes | API route brute force with real-world route wordlists |
+| [31 Days of API Security Tips](https://github.com/smodnix/31-days-of-API-Security-Tips) | L05 hypothesis | A0 | A08 | `n/a reference` | no | Practical tips corpus, the kind of thing that fills gaps a taxonomy misses |
+| [API-SecurityEmpire](https://github.com/cyprosecurity/API-SecurityEmpire) | L05 hypothesis | A0 | A08 | `n/a reference` | no | Curated API security resource set, useful as a completeness cross check |
 | [Cherrybomb](https://github.com/blst-security/cherrybomb) | L05 hypothesis | A1 | A15,A02 | `cargo:cherrybomb` | yes | OpenAPI spec audit, undocumented auth, missing rate limit, weak schema |
 | [InQL](https://github.com/doyensec/inql) | L05 hypothesis | A2 | A01,A02 | `pipx:inql` | yes | Introspection to ready-made queries, one per field, plus IDE integration |
 | [MindAPI](https://dsopas.github.io/MindAPI/play/) | L05 hypothesis | A0 | A02,A05,A10 | `n/a reference` | no | Decision tree for API testing, the manual equivalent of this domain |
+| [Optic](https://github.com/opticdev/optic) | L05 hypothesis | A2 | A05,A15 | `npm:@opticdev/cli` | yes | API spec diffing and linting, the fastest way to spot a breaking change between versions |
 | [Akto](https://github.com/akto-api-security/akto) | L06 probing | A3 | A02,A05,A15 | `docker` | yes | API discovery and testing platform, runs tests against traffic |
+| [APIFuzzer](https://github.com/KissPeter/APIFuzzer) | L06 probing | A2 | A01,A05 | `pipx:apifuzzer` | yes | Fuzzes a running API from its OpenAPI spec, no source needed |
+| [APISandbox](https://github.com/API-Security/APISandbox) | L06 probing | A2 | A02,A05 | `docker` | no | Deliberately weak API sandbox covering the OWASP API flaws |
 | [Astra](https://github.com/flipkart-incubator/Astra) | L06 probing | A2 | A01,A02 | `pipx:astra` | no | REST API security scanner, auth and injection across swagger |
+| [CATS](https://github.com/Endava/cats) | L06 probing | A3 | A01,A05 | `git:https://github.com/Endava/cats` | yes | OpenAPI fuzzer that generates tests from the schema and reports by category |
 | [Damn Vulnerable GraphQL Application](https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application) | L06 probing | A3 | A01,A02,A07,A10 | `docker` | no | Practice target that exercises the whole GraphQL attack set |
 | [graphql-cop](https://github.com/dolevf/graphql-cop) | L06 probing | A2 | A15,A02 | `git:https://github.com/dolevf/graphql-cop` | yes | GraphQL misconfiguration audit, the cheap wins first |
 | [newman](https://github.com/postmanlabs/newman) | L06 probing | A2 | A02,A10 | `npm:newman` | yes | Run a postman collection, the cheapest way to replay an authenticated flow |
+| [REST API Goat](https://github.com/optiv/rest-api-goat) | L06 probing | A2 | A02,A05 | `docker` | no | Deliberately vulnerable API for practising the whole Top 10 |
 | [schemathesis](https://github.com/schemathesis/schemathesis) | L06 probing | A3 | A01,A05,A10 | `pipx:schemathesis` | yes | Property based testing from an OpenAPI or GraphQL schema |
+| [ShipFast API protection walkthrough](https://github.com/approov/shipfast-api-protection) | L06 probing | A2 | A02 | `docker` | no | A worked API protection lab with client and server, good for testing whether a tool handles a real app |
+| [Swagger-EZ](https://github.com/RhinoSecurityLabs/Swagger-EZ) | L06 probing | A2 | A08,A02 | `git:https://github.com/RhinoSecurityLabs/Swagger-EZ` | no | Turns a swagger file into a testing surface with auth handling |
+| [TnT-Fuzzer](https://github.com/Teebytes/TnT-Fuzzer) | L06 probing | A2 | A01,A05 | `git:https://github.com/Teebytes/TnT-Fuzzer` | no | OpenAPI 3 fuzzer focused on parameter and body mutation |
 | [VAmPI](https://github.com/erev0s/VAmPI) | L06 probing | A2 | A02,A01 | `docker` | no | Small vulnerable API, fastest way to smoke test an agent |
 | [BatchQL](https://github.com/assetnote/batchql) | L07 exploitation | A2 | A07,A10 | `git:https://github.com/assetnote/batchql` | no | GraphQL batching and query name based attacks, rate limit bypass |
 | [OWASP crAPI](https://github.com/OWASP/crAPI) | L07 exploitation | A4 | A02,A03,A05,A10 | `docker` | no | Completely Ridiculous API, a full microservice target with all Top 10 classes |
+| [EvoMaster](https://github.com/WebFuzzing/EvoMaster) | L07 exploitation | A3 | A10,A04 | `git:https://github.com/WebFuzzing/EvoMaster` | yes | Evolutionary API test generator, reaches states a rule based fuzzer does not |
 | [GraphQLmap](https://github.com/swisskyrepo/GraphQLmap) | L07 exploitation | A2 | A01,A02 | `git:https://github.com/swisskyrepo/GraphQLmap` | no | GraphQL exploitation console, dump schema, inject, escalate |
 | [jwt_tool](https://github.com/ticarpi/jwt_tool) | L07 exploitation | A2 | A09,A03 | `aur:jwt_tool` | no | JWT attack set, alg confusion, none, kid traversal, jku injection |
 | [RESTler](https://github.com/microsoft/restler-fuzzer) | L07 exploitation | A3 | A10,A12,A04 | `git:https://github.com/microsoft/restler-fuzzer` | yes | Stateful REST fuzzing, finds sequences that single call scanners cannot see |
+| [Step CI](https://github.com/stepci/stepci) | L08 proof | A2 | A10 | `npm:stepci` | yes | Declarative API test runner, useful for replaying an authorised workflow as evidence |
 | [OWASP API Security Top 10 (2023)](https://owasp.org/API-Security/editions/2023/en/0x11-t10/) | L10 reporting | A0 | A02,A03,A05,A07,A10,A15 | `n/a reference` | no | The taxonomy every API finding should map to |
 | [API-Security-Checklist](https://github.com/shieldfy/API-Security-Checklist) | L11 fix verification | A0 | A15 | `n/a reference` | no | Defensive checklist, useful as the mirror for every offensive row |
 
@@ -241,6 +254,53 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 **API-Security-Checklist**  
 - runnable: read the section matching the finding class -> each countermeasure is the control column for your report -> any countermeasure missing at the target is a hardening recommendation
+
+**APIFuzzer**  
+- preconditions: `an OpenAPI spec and a reachable API`
+- oracle: `crash or status violation against the spec`
+
+**CATS**  
+- preconditions: `an OpenAPI spec`
+- oracle: `fuzz report per rule with a reproducible request`
+
+**EvoMaster**  
+- preconditions: `an API with stateful endpoints`
+- oracle: `a sequence that violates an invariant`
+- note: Slow and needs setup. Justified when dependencies between calls matter, which is most real APIs.
+
+**graphql-wordlist**  
+- preconditions: `introspection disabled but suggestions or errors leak`
+- oracle: `a field name that resolves`
+- note: Pairs with clairvoyance. The wordlist quality decides the recovery rate.
+
+**Optic**  
+- preconditions: `two specs, or live traffic and a spec`
+- oracle: `a diff naming the change`
+
+**REST API Goat**  
+- preconditions: `docker`
+- oracle: `intended vulnerability reproduced`
+
+**Swagger-EZ**  
+- preconditions: `a swagger document`
+- oracle: `endpoint called with your identity`
+
+**TnT-Fuzzer**  
+- preconditions: `an OpenAPI 3 spec`
+- oracle: `an unexpected status or body`
+
+**Step CI**  
+- preconditions: `a workflow description`
+- oracle: `assertion pass or fail per step`
+- note: Reproducible evidence matters more than coverage here. A commit-able test is a better finding than a screenshot.
+
+**APISandbox**  
+- preconditions: `docker`
+- oracle: `flaw reproduced`
+
+**ShipFast API protection walkthrough**  
+- preconditions: `docker`
+- oracle: `the walkthrough step reproduced`
 
 ## Decision tree
 

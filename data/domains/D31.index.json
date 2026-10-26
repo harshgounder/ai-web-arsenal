@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 23,
- "indexed_not_enriched": 55,
+ "indexed_not_enriched": 54,
  "entries": [
   {
    "name": "Ghidra",
@@ -335,13 +335,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "plasma",
-   "url": "https://github.com/plasma-disassembler/plasma",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "pwndbg",
    "url": "https://github.com/pwndbg/pwndbg",
    "tier": "adjacent",
@@ -390,5 +383,6 @@
    "n_sources": 1,
    "status": "PROMOTABLE"
   }
- ]
+ ],
+ "duplicate_names_removed": 1
 }
