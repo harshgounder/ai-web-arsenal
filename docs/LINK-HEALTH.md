@@ -13,7 +13,7 @@ ecosystem, not a defect in the list.
 | LINK_ERROR | 3 | timeout or transport failure, status unknown |
 | LINK_BLOCKED | 3 | 401/403/429, exists but refuses automated clients |
 | HARVESTED | 12749 | seen in a source, never independently checked |
-| NO_URL | 11712 | taxonomy nodes and name only rows, nothing to check |
+| NO_URL | 11712 | taxonomy nodes and name-only rows, nothing to check |
 
 ## A correction, because the first run was wrong
 
@@ -23,10 +23,11 @@ false: the checker sent `HEAD` first, and several real sites answer `HEAD` with 
 gone is what triggered the second look.
 
 Two bugs, both fixed:
+
 1. `HEAD` is unreliable. The checker now does `GET`, reads one byte, follows redirects, and sends a
    realistic browser user agent.
-2. A 404 is now recheckable. `--recheck-failures` re-tests every non-OK entry, which is how the seven
-   false failures were recovered.
+2. There was no recheck path. `--recheck-failures` now re-tests every non-OK entry, which is how the
+   seven false failures were recovered.
 
 The corrected failure rate is **3.0 percent**, and every failure below was re-verified with the
 corrected method rather than inherited from the buggy one.
@@ -47,11 +48,11 @@ corrected method rather than inherited from the buggy one.
 
 ## Why this matters
 
-The collections we reconciled never check their own links, and do not carry dates. A 3 percent dead
+The collections we reconciled never check their own links and do not carry dates. A 3 percent dead
 rate on core entries means roughly one in thirty recommendations points at nothing, and the reader has
 no way to tell which. That is what a list without dates and without a verification pass looks like
 after a few years in service.
 
 Nothing is deleted. A `LINK_DEAD` entry is marked, because deleting it loses the information that the
-tool existed and died, which is itself useful. `LINK_BLOCKED` is not a defect at all: it means the site
-is alive and refuses bots, which is a fact worth recording rather than a failure.
+tool existed and died, which is itself useful. `LINK_BLOCKED` is not a defect: it means the site is
+alive and refuses bots, which is a fact worth recording rather than a failure.
