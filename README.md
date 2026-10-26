@@ -27,7 +27,7 @@ rot with the disposable half.
 | tools in manifest | **50** | every install candidate verified against a real channel |
 | unresolved installs | **0** | nothing invented, nothing guessed |
 | prompt packs | **5** | phase-shaped, with failure modes and verification |
-| domains with authored data | **1 of 37** | D11 API protocols is the template |
+| domains | **37** | 1 authored deep (D11), 36 stubs with declared required cells |
 | patterns in the atlas | **50** | W02 authorisation on writes, gate passing |
 | taxonomy items mapped | **624 of 706** | WSTG, ASVS, VRT, API Top 10, ATLAS, LLM Top 10 to atoms, 88.4% |
 
