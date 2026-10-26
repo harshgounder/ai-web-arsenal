@@ -1,20 +1,21 @@
 {
  "source": "punkpeye__awesome-mcp-servers",
  "rows": 11777,
- "admitted": 11342,
- "excluded": 435,
+ "admitted": 7980,
+ "excluded": 3797,
  "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 119,
-  "MCP_NON_SECURITY": 299,
-  "SOCIAL_OR_VIDEO": 17
+  "MCP_NON_SECURITY": 320,
+  "OUT_OF_SCOPE_NONWEB": 46,
+  "SOCIAL_OR_VIDEO": 17,
+  "IMAGE_NOT_ENTRY": 3414
  },
  "unique_entries": {
-  "admit": 7891,
-  "exclude": 292,
+  "admit": 4612,
+  "exclude": 222,
   "hold": 0
  },
  "identity_holds": true,

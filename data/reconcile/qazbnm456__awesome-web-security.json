@@ -1,20 +1,21 @@
 {
  "source": "qazbnm456__awesome-web-security",
  "rows": 2262,
- "admitted": 1623,
- "excluded": 639,
+ "admitted": 1614,
+ "excluded": 648,
  "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "SOCIAL_OR_VIDEO": 385,
+  "IMAGE_NOT_ENTRY": 9,
   "OUT_OF_SCOPE_NONWEB": 180,
   "KNOWLEDGE_NOT_TOOL": 39,
   "TAXONOMY_NODE": 35
  },
  "unique_entries": {
-  "admit": 522,
+  "admit": 519,
   "exclude": 207,
   "hold": 0
  },

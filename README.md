@@ -20,9 +20,9 @@ rot with the disposable half.
 
 | metric | value | meaning |
 |---|---|---|
-| corpus entries | **24,759** | canonical, deduplicated across every source |
+| corpus entries | **21,397** | canonical, deduplicated across every source |
 | sources reconciled | **19** | awesome-lists, API lists, AI-security lists, MCP lists |
-| rows reconciled | **31,298** | `admitted 16,956 + excluded 14,127 + held 212 + residue 3` |
+| rows reconciled | **31,298** | `admitted 13,578 + excluded 17,513 + held 204 + residue 3` |
 | reconciliation identity | **holds** | checked per source and in aggregate |
 | tools in manifest | **64** | every install candidate verified against a real channel |
 | unresolved installs | **0** | nothing invented, nothing guessed |
@@ -153,7 +153,7 @@ and exclude directory, book and social URLs at generation:
 | | count |
 |---|---|
 | enriched entries in authored domains | **444** |
-| genuinely promotable candidates | **1418** |
+| genuinely promotable candidates | **1419** |
 | ratio | 24% of the real candidate set is enriched |
 
 So the gap is about 3.2x, not 27x. Still a lot of work, but a number that survives inspection.

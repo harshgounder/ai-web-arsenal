@@ -1,18 +1,19 @@
 {
  "source": "vavkamil__awesome-bugbounty-tools",
  "rows": 410,
- "admitted": 390,
- "excluded": 14,
+ "admitted": 389,
+ "excluded": 15,
  "held": 6,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "OUT_OF_SCOPE_NONWEB": 14,
-  "UNCLASSIFIED_LOW_SIGNAL": 6
+  "UNCLASSIFIED_LOW_SIGNAL": 6,
+  "IMAGE_NOT_ENTRY": 1
  },
  "unique_entries": {
-  "admit": 378,
+  "admit": 377,
   "exclude": 14,
   "hold": 6
  },

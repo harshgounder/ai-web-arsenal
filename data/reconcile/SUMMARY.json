@@ -2,27 +2,28 @@
  "generated_at": "2026-10-26",
  "sources": 22,
  "rows_total": 31298,
- "admitted": 16956,
- "excluded": 14127,
- "held": 212,
+ "admitted": 13578,
+ "excluded": 17513,
+ "held": 204,
  "orphan": 2,
  "unresolved": 1,
  "identity_holds": true,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 12009,
+  "IMAGE_NOT_ENTRY": 3439,
   "SOCIAL_OR_VIDEO": 930,
-  "OUT_OF_SCOPE_NONWEB": 556,
+  "OUT_OF_SCOPE_NONWEB": 482,
   "KNOWLEDGE_NOT_TOOL": 329,
-  "MCP_NON_SECURITY": 303,
-  "UNCLASSIFIED_LOW_SIGNAL": 212,
+  "MCP_NON_SECURITY": 324,
+  "UNCLASSIFIED_LOW_SIGNAL": 204,
   "not_in_corpus": 2
  },
  "per_source": {
   "0xinfection__awesome-waf": {
    "rows": 305,
    "admitted": 177,
-   "excluded": 119,
-   "held": 9,
+   "excluded": 123,
+   "held": 5,
    "orphan": 0,
    "identity_holds": true
   },
@@ -52,17 +53,17 @@
   },
   "enablesecurity__awesome-rtc-hacking": {
    "rows": 108,
-   "admitted": 59,
-   "excluded": 49,
+   "admitted": 58,
+   "excluded": 50,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "enaqx__awesome-pentest": {
    "rows": 618,
-   "admitted": 481,
-   "excluded": 100,
-   "held": 37,
+   "admitted": 480,
+   "excluded": 105,
+   "held": 33,
    "orphan": 0,
    "identity_holds": true
   },
@@ -84,8 +85,8 @@
   },
   "jbahire__awesome-api-security-essentials": {
    "rows": 191,
-   "admitted": 107,
-   "excluded": 82,
+   "admitted": 106,
+   "excluded": 83,
    "held": 0,
    "orphan": 2,
    "identity_holds": true
@@ -100,8 +101,8 @@
   },
   "own-byok-cyber-arsenal": {
    "rows": 1580,
-   "admitted": 1010,
-   "excluded": 505,
+   "admitted": 1007,
+   "excluded": 508,
    "held": 65,
    "orphan": 0,
    "identity_holds": true
@@ -132,16 +133,16 @@
   },
   "punkpeye__awesome-mcp-servers": {
    "rows": 11777,
-   "admitted": 11342,
-   "excluded": 435,
+   "admitted": 7980,
+   "excluded": 3797,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "qazbnm456__awesome-web-security": {
    "rows": 2262,
-   "admitted": 1623,
-   "excluded": 639,
+   "admitted": 1614,
+   "excluded": 648,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
@@ -180,8 +181,8 @@
   },
   "vavkamil__awesome-bugbounty-tools": {
    "rows": 410,
-   "admitted": 390,
-   "excluded": 14,
+   "admitted": 389,
+   "excluded": 15,
    "held": 6,
    "orphan": 0,
    "identity_holds": true

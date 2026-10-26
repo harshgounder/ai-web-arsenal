@@ -160,6 +160,10 @@ def main():
                 r = json.loads(line)
             except Exception:
                 continue
+            # badge and image URLs are not entries. glama.ai alone contributed 3,348 of them.
+            _u = (r.get("url") or "")
+            if re.search(r"\.(svg|png|jpe?g|gif|ico|webp)(\?|$)", _u, re.I):
+                continue
             key = r.get("canonical") or ("name:" + slug(r.get("name")))
             if not key or key == "name:":
                 per_source[r["source"]]["unresolved"] += 1

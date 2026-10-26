@@ -1,8 +1,8 @@
 {
  "source": "jbahire__awesome-api-security-essentials",
  "rows": 191,
- "admitted": 107,
- "excluded": 82,
+ "admitted": 106,
+ "excluded": 83,
  "held": 0,
  "orphan": 2,
  "unresolved": 0,
@@ -12,10 +12,11 @@
   "KNOWLEDGE_NOT_TOOL": 26,
   "OUT_OF_SCOPE_NONWEB": 17,
   "not_in_corpus": 2,
-  "SOCIAL_OR_VIDEO": 16
+  "SOCIAL_OR_VIDEO": 16,
+  "IMAGE_NOT_ENTRY": 1
  },
  "unique_entries": {
-  "admit": 103,
+  "admit": 102,
   "exclude": 78,
   "hold": 0
  },

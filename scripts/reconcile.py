@@ -82,6 +82,11 @@ def main():
             except Exception:
                 c["unparsed"] += 1
                 continue
+            _u = r.get("url") or ""
+            if re.search(r"\.(svg|png|jpe?g|gif|ico|webp)(\?|$)", _u, re.I):
+                c["exclude"] += 1
+                reasons["IMAGE_NOT_ENTRY"] += 1
+                continue
             key = r.get("canonical") or ("name:" + slug(r.get("name")))
             if not r.get("canonical") and not r.get("name"):
                 c["unresolved"] += 1

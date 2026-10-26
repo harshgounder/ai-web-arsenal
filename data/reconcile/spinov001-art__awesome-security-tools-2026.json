@@ -8,7 +8,8 @@
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 20,
+  "OUT_OF_SCOPE_NONWEB": 19,
+  "IMAGE_NOT_ENTRY": 1,
   "TAXONOMY_NODE": 16,
   "UNCLASSIFIED_LOW_SIGNAL": 4,
   "SOCIAL_OR_VIDEO": 1,
@@ -16,7 +17,7 @@
  },
  "unique_entries": {
   "admit": 83,
-  "exclude": 22,
+  "exclude": 21,
   "hold": 4
  },
  "identity_holds": true,

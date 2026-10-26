@@ -1,58 +1,58 @@
 {
  "generated_at": "2026-10-26",
- "rows_parsed": 31295,
- "entries_canonical": 24759,
+ "rows_parsed": 27856,
+ "entries_canonical": 21397,
  "unresolved_rows": 3,
  "tiers": {
-  "core_web": 537,
-  "adjacent": 19004,
-  "offscope": 420,
+  "core_web": 475,
+  "adjacent": 15786,
+  "offscope": 346,
   "knowledge": 824,
-  "tail": 3974
+  "tail": 3966
  },
  "kinds": {
-  "tool": 12223,
+  "tool": 8861,
   "taxonomy_node": 11712,
   "social": 577,
   "knowledge": 247
  },
  "domains": {
-  "unclassified": 11960,
-  "D28": 7702,
+  "unclassified": 11932,
+  "D28": 4379,
   "D08": 683,
-  "D10": 679,
+  "D10": 676,
   "D02": 637,
-  "D24": 635,
+  "D24": 634,
   "D17": 288,
   "D22": 262,
-  "D26": 212,
-  "D19": 188,
+  "D26": 211,
+  "D19": 187,
   "D11": 185,
   "D07": 182,
   "D16": 134,
   "D14": 127,
   "D21": 127,
   "D18": 108,
-  "D06": 96,
+  "D06": 95,
   "D13": 93,
   "D12": 60,
   "D25": 59,
   "D15": 57,
   "D04": 53,
-  "D31": 45,
+  "D31": 42,
   "D20": 39,
   "D23": 35,
   "D05": 34,
-  "D30": 34,
+  "D30": 33,
   "D03": 18,
   "D09": 17,
   "D01": 10
  },
- "unique_to_one_source": 24211,
- "multi_source_ge2": 548,
+ "unique_to_one_source": 20854,
+ "multi_source_ge2": 543,
  "per_source": {
   "0xinfection__awesome-waf": {
-   "rows": 305
+   "rows": 301
   },
   "arainho__awesome-api-security": {
    "rows": 227
@@ -64,10 +64,10 @@
    "rows": 620
   },
   "enablesecurity__awesome-rtc-hacking": {
-   "rows": 108
+   "rows": 107
   },
   "enaqx__awesome-pentest": {
-   "rows": 618
+   "rows": 613
   },
   "hack-with-github__awesome-hacking": {
    "rows": 83
@@ -76,14 +76,14 @@
    "rows": 42
   },
   "jbahire__awesome-api-security-essentials": {
-   "rows": 189,
+   "rows": 188,
    "unresolved": 2
   },
   "marchev__awesome-ai-web3-security": {
    "rows": 62
   },
   "own-byok-cyber-arsenal": {
-   "rows": 1580
+   "rows": 1577
   },
   "own-rea-expansion": {
    "rows": 687
@@ -95,10 +95,10 @@
    "rows": 35
   },
   "punkpeye__awesome-mcp-servers": {
-   "rows": 11777
+   "rows": 8363
   },
   "qazbnm456__awesome-web-security": {
-   "rows": 2262
+   "rows": 2253
   },
   "randomadversary__awesome-ai-security": {
    "rows": 97
@@ -107,13 +107,13 @@
    "rows": 197
   },
   "spinov001-art__awesome-security-tools-2026": {
-   "rows": 125
+   "rows": 124
   },
   "tupletype__awesome-cicd-attacks": {
    "rows": 89
   },
   "vavkamil__awesome-bugbounty-tools": {
-   "rows": 410
+   "rows": 409
   },
   "wangyihang__awesome-web-security": {
    "unresolved": 1

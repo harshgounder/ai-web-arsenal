@@ -1,0 +1,109 @@
+{
+ "generated_at": "2026-10-27",
+ "entries_by_url": 21397,
+ "entries_by_identity": 21160,
+ "collapsed": 237,
+ "duplicate_groups": 148,
+ "largest_groups": [
+  {
+   "name": "XSS Bypass",
+   "count": 20,
+   "urls": [
+    "https://medium.com/@jonathanbouman/reflected-xss-at-philips-com-e48bf8f9cd3c",
+    "https://twitter.com/SalahHasoneh1/status/1281254703360344064",
+    "https://twitter.com/RakeshMane10/status/1109008686041759744",
+    "https://twitter.com/ArbazKiraak/status/1090654066986823680"
+   ]
+  },
+  {
+   "name": "HARNESS-IFACE",
+   "count": 20,
+   "urls": [
+    "https://github.com/trailofbits/mcp-context-protector",
+    "https://nmap.org/book/output-formats-xml-output.html",
+    "https://docs.semgrep.dev/semgrep-appsec-platform/json-and-sarif",
+    "https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway"
+   ]
+  },
+  {
+   "name": "ENB-04",
+   "count": 13,
+   "urls": [
+    "https://developer.hashicorp.com/terraform/mcp-server",
+    "http://localhost:4444/servers/UUID_OF_SERVER_1/mcp",
+    "https://pipelab.org/pipelock",
+    "https://chaos-mesh.org/docs"
+   ]
+  },
+  {
+   "name": "playlist",
+   "count": 9,
+   "urls": [
+    "https://youtube.com/playlist?list=PLKUnjn-fSXRTy8sPPXGrNNBDPVOOi3U49",
+    "https://www.youtube.com/playlist?list=PLyqga7AXMtPPuibxp1N0TdyDrKwP9H_jD",
+    "https://youtube.com/playlist?list=PLiUwrB-tuUUpJIQxo4qqHWKJBfFCTeqh9",
+    "https://youtube.com/playlist?list=PLSId5Ee-5md9FdqzaLrnB30k7Z4YPjBAk"
+   ]
+  },
+  {
+   "name": "ENG-16-profast",
+   "count": 6,
+   "urls": [
+    "https://github.com/RhinoSecurityLabs/cloudgoat",
+    "https://github.com/madhuakula/kubernetes-goat",
+    "https://mcp.deepwiki.com/mcp",
+    "https://github.com/MCP-Security/MCP-Artifact"
+   ]
+  },
+  {
+   "name": "ENG-17",
+   "count": 6,
+   "urls": [
+    "https://github.com/TheaneshwaranRavi/Verilog-agent.git",
+    "http://127.0.0.1:8080/",
+    "https://github.com/DfX-NYUAD/GNN4CIRCUITS.git",
+    "https://github.com/albertan017/LLM4Decompile.git"
+   ]
+  },
+  {
+   "name": "Orange",
+   "count": 5,
+   "urls": [
+    "https://blog.orange.tw/",
+    "https://img.shields.io/badge/\u7b80\u4f53\u4e2d\u6587-\u70b9\u51fb\u67e5\u770b-orange",
+    "https://img.shields.io/badge/\u4e2d\u6587\u6587\u6863-\u70b9\u51fb\u67e5\u770b-orange",
+    "https://img.shields.io/badge/\u7e41\u9ad4\u4e2d\u6587-\u9ede\u64ca\u67e5\u770b-orange"
+   ]
+  },
+  {
+   "name": "XSS Bypass",
+   "count": 4,
+   "urls": [
+    "https://github.com/kmkz/Pentesting/blob/master/Pentest-Cheat-Sheet#L285",
+    "https://www.sysdig.com/blog/fuzzing-and-bypassing-the-aws-waf",
+    "https://pastebin.com/i8Ans4d4",
+    "https://www.securityfocus.com/bid/35053/info"
+   ]
+  },
+  {
+   "name": "Hacking-APIs",
+   "count": 4,
+   "urls": [
+    "https://github.com/hAPI-hacker/Hacking-APIs",
+    "https://www.google.co.in/books/edition/Hacking_APIs/gHpPEAAAQBAJ?hl=en&gbpv=0",
+    "https://forallsecure.com/blog/the-hacker-mind-podcast-hacking-apis",
+    "https://sway.office.com/HVrL2AXUlWGNDHqy"
+   ]
+  },
+  {
+   "name": "GitBook",
+   "count": 4,
+   "urls": [
+    "https://kathan19.gitbook.io/",
+    "https://www.hoppersroppers.org/fundamentals/",
+    "https://www.hoppersroppers.org/ctf/",
+    "https://www.hoppersroppers.org/security/"
+   ]
+  }
+ ]
+}
