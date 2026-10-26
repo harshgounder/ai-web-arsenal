@@ -716,3 +716,96 @@ tools:
     agent_use: "restler fuzz --grammar_file g.json --dictionary_file d.json --settings s.json"
     docs: https://github.com/microsoft/restler-fuzzer
     profiles: [api, all]
+
+  # ---------------- D19 / D20 AI and agent security ----------------
+  - id: garak
+    bin: garak
+    domain: D19
+    role: LLM vulnerability probe set
+    kind: cli
+    install: [{channel: pipx, pkg: garak}]
+    verify: "garak --version"
+    json_out: true
+    stdin: false
+    agent_use: "garak --model_type rest --probes injection, one probe family per run so results are readable"
+    docs: https://github.com/NVIDIA/garak
+    profiles: [ai-agent, all]
+
+  - id: pyrit
+    bin: null
+    domain: D19
+    role: orchestrators, converters and scorers for LLM red teaming
+    kind: lib
+    install: [{channel: pipx, pkg: pyrit}]
+    verify: "python3 -c 'import pyrit'"
+    json_out: true
+    stdin: false
+    agent_use: "python API. converter chains are how you test whether a guard survives encoding"
+    docs: https://github.com/Azure/PyRIT
+    profiles: [ai-agent, all]
+
+  - id: promptfoo
+    bin: promptfoo
+    domain: D19
+    role: eval harness and red team plugins, CI for prompt injection regression
+    kind: cli
+    install: [{channel: npm, pkg: promptfoo}]
+    verify: "promptfoo --version"
+    json_out: true
+    stdin: false
+    ambiguity: "PyPI 'promptfoo' is 0.2.0, a placeholder. The real package is npm. Never pip install it."
+    agent_use: "promptfoo redteam run, then diff results across model versions"
+    docs: https://github.com/promptfoo/promptfoo
+    profiles: [ai-agent, all]
+
+  - id: llm-guard
+    bin: null
+    domain: D19
+    role: defensive scanner set, listed as the mirror side
+    kind: lib
+    install: [{channel: pipx, pkg: llm-guard}]
+    verify: "python3 -c 'import llm_guard'"
+    json_out: true
+    stdin: false
+    agent_use: "evaluate it as a bypass target, not as a wall"
+    docs: https://github.com/protectai/llm-guard
+    profiles: [ai-agent, all]
+
+  - id: rebuff
+    bin: null
+    domain: D19
+    role: prompt injection detector, useful as a false negative source
+    kind: lib
+    install: [{channel: pipx, pkg: rebuff}]
+    verify: "python3 -c 'import rebuff'"
+    json_out: true
+    stdin: false
+    agent_use: "run payloads through it and record verdicts as a guard baseline"
+    docs: https://github.com/protectai/rebuff
+    profiles: [ai-agent, all]
+
+  - id: deepteam
+    bin: null
+    domain: D19
+    role: red teaming framework with OWASP and NIST aligned sets
+    kind: lib
+    install: [{channel: pipx, pkg: deepteam}]
+    verify: "python3 -c 'import deepteam'"
+    json_out: true
+    stdin: false
+    agent_use: "risk report per category, comparable across runs"
+    docs: https://github.com/confident-ai/deepteam
+    profiles: [ai-agent, all]
+
+  - id: mcp-scan
+    bin: mcp-scan
+    domain: D20
+    role: scans MCP configs and tool descriptions for injection and tool poisoning
+    kind: cli
+    install: [{channel: pipx, pkg: mcp-scan}]
+    verify: "mcp-scan --help"
+    json_out: true
+    stdin: false
+    agent_use: "mcp-scan scan, then hash descriptions and diff on each start"
+    docs: https://github.com/invariantlabs-ai/mcp-scan
+    profiles: [ai-agent, all]

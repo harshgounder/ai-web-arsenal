@@ -1,0 +1,69 @@
+{
+ "id": "d19-root",
+ "q": "Does the application let the model act, or only talk?",
+ "why": "This single question splits the entire domain. Talking models leak and mislead. Acting models change state with borrowed authority, which is a write.",
+ "branches": [
+  {
+   "a": "Only talks",
+   "next": {
+    "id": "d19-talk",
+    "q": "Does untrusted text reach the model's context (retrieval, user content, web)?",
+    "branches": [
+     {
+      "a": "Yes",
+      "action": "attempt indirect injection through the retrieved content, then look for what the answer reveals and whether output is rendered",
+      "tools": [
+       "d19-garak",
+       "d19-promptfoo"
+      ],
+      "oracle": "behaviour change attributable to injected text"
+     },
+     {
+      "a": "No",
+      "action": "the class is thin. test system prompt leakage and output handling instead",
+      "tools": [
+       "d19-pyrit"
+      ],
+      "oracle": "system prompt or context disclosed"
+     }
+    ]
+   }
+  },
+  {
+   "a": "Acts (tools, functions, code)",
+   "next": {
+    "id": "d19-act",
+    "q": "Can you see the tool list and arguments?",
+    "branches": [
+     {
+      "a": "Yes",
+      "action": "inject content that induces a tool call, then check the side effect. the finding is the effect, not the call",
+      "tools": [
+       "d19-agentdojo",
+       "d19-gandalf"
+      ],
+      "oracle": "state changed by an injected tool call"
+     },
+     {
+      "a": "No",
+      "action": "infer tools from error messages and observed actions, then inject and watch for a tool shaped effect",
+      "tools": [
+       "d19-pyrit"
+      ],
+      "oracle": "side effect consistent with an unseen tool"
+     }
+    ]
+   }
+  },
+  {
+   "a": "Guard present",
+   "action": "treat the guard as the target: encoding, language switch, context splitting. then re-run the same payload through promptfoo to prove regression",
+   "tools": [
+    "d19-llm-guard",
+    "d19-rebuff",
+    "d19-promptfoo"
+   ],
+   "oracle": "payload passes the guard and changes behaviour"
+  }
+ ]
+}

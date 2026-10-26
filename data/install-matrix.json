@@ -1453,6 +1453,195 @@
     }
    ],
    "ambiguity": null
+  },
+  {
+   "id": "garak",
+   "bin": "garak",
+   "domain": "D19",
+   "kind": "cli",
+   "role": "LLM vulnerability probe set",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "garak",
+    "version": "0.17.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "garak",
+     "ok": true,
+     "version": "0.17.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "pyrit",
+   "bin": null,
+   "domain": "D19",
+   "kind": "lib",
+   "role": "orchestrators, converters and scorers for LLM red teaming",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "pyrit",
+    "version": "1.1.0"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "pyrit",
+     "ok": true,
+     "version": "1.1.0"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "promptfoo",
+   "bin": "promptfoo",
+   "domain": "D19",
+   "kind": "cli",
+   "role": "eval harness and red team plugins, CI for prompt injection regression",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "npm",
+    "pkg": "promptfoo",
+    "version": "0.125.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "npm",
+     "pkg": "promptfoo",
+     "ok": true,
+     "version": "0.125.1"
+    }
+   ],
+   "ambiguity": "PyPI 'promptfoo' is 0.2.0, a placeholder. The real package is npm. Never pip install it."
+  },
+  {
+   "id": "llm-guard",
+   "bin": null,
+   "domain": "D19",
+   "kind": "lib",
+   "role": "defensive scanner set, listed as the mirror side",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "llm-guard",
+    "version": "0.3.16"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "llm-guard",
+     "ok": true,
+     "version": "0.3.16"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "rebuff",
+   "bin": null,
+   "domain": "D19",
+   "kind": "lib",
+   "role": "prompt injection detector, useful as a false negative source",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "rebuff",
+    "version": "0.1.1"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "rebuff",
+     "ok": true,
+     "version": "0.1.1"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "deepteam",
+   "bin": null,
+   "domain": "D19",
+   "kind": "lib",
+   "role": "red teaming framework with OWASP and NIST aligned sets",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "deepteam",
+    "version": "1.0.10"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "deepteam",
+     "ok": true,
+     "version": "1.0.10"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "mcp-scan",
+   "bin": "mcp-scan",
+   "domain": "D20",
+   "kind": "cli",
+   "role": "scans MCP configs and tool descriptions for injection and tool poisoning",
+   "profiles": [
+    "ai-agent",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "mcp-scan",
+    "version": "0.4.3"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "mcp-scan",
+     "ok": true,
+     "version": "0.4.3"
+    }
+   ],
+   "ambiguity": null
   }
  ]
 }

@@ -63,4 +63,7 @@ p_git https://github.com/danielmiessler/SecLists  || FAILED=$((FAILED+1))
 log "--- nuclei-templates: the template corpus nuclei runs"
 p_git https://github.com/projectdiscovery/nuclei-templates '$HOME/nuclei-templates' || FAILED=$((FAILED+1))
 
+log "--- jwt_tool: jwt inspection and the full attack set, none, alg confusion, kid, jku"
+p_aur jwt_tool || FAILED=$((FAILED+1))
+
 summary "$FAILED"

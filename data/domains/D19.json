@@ -1,0 +1,503 @@
+{
+ "id": "D19",
+ "title": "AI application attacks",
+ "version": "0.1",
+ "generated": "2026-10-26",
+ "status": "AUTHORED. Technique layer in web-attack-atlas W12 (queued). This is the surface every other list omits.",
+ "atoms": [
+  "A16",
+  "A01",
+  "A02",
+  "A08",
+  "A15"
+ ],
+ "atom_notes": {
+  "A16": "the core primitive: the model's instruction following is the trust boundary",
+  "A01": "retrieved or user text reaches a component that treats it as instructions",
+  "A02": "the agent acts with a principal's authority on attacker chosen input",
+  "A08": "the model discloses context, secrets or other users' data",
+  "A15": "guard configuration is the defence and the bypass target"
+ },
+ "required_cells": [
+  {
+   "cell": "S13/L05/A2",
+   "why": "map the app: system prompt, tools, retrieval, output path, before any payload",
+   "filled": true
+  },
+  {
+   "cell": "S13/L06/A3",
+   "why": "probe with a harness, not one clever prompt",
+   "filled": true
+  },
+  {
+   "cell": "S13/L07/A2",
+   "why": "exploit by chaining injection to a tool call with real effect",
+   "filled": true
+  },
+  {
+   "cell": "S13/L08/A5",
+   "why": "an output that looks injected is not a finding until it changes state",
+   "filled": true
+  },
+  {
+   "cell": "S13/L11/A3",
+   "why": "guard regression testing, the only fix verification that exists for this class",
+   "filled": true
+  },
+  {
+   "cell": "S13/L10/A2",
+   "why": "impact framing: what the agent can reach, not what it said",
+   "filled": false
+  },
+  {
+   "cell": "S13/L12/A6",
+   "why": "continuous injection regression as prompts and models change",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d19-garak",
+   "name": "garak",
+   "url": "https://github.com/NVIDIA/garak",
+   "role": "LLM vulnerability scanner: prompt injection, jailbreak, leakage, toxicity probes across model families",
+   "driver": {
+    "install": "pipx:garak",
+    "verify": "garak --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A08"
+   ],
+   "preconditions": [
+    "a model endpoint you are authorised to probe"
+   ],
+   "oracle": [
+    "probe result with a reproducible prompt and seed"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Probe based, not exploit based. It tells you a class is present, not what it lets you do."
+  },
+  {
+   "id": "d19-pyrit",
+   "name": "PyRIT",
+   "url": "https://github.com/Azure/PyRIT",
+   "role": "Microsoft's risk identification toolkit: orchestrators, converters, scorers for red teaming generative apps",
+   "driver": {
+    "install": "pipx:pyrit",
+    "verify": "python -c 'import pyrit'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A01"
+   ],
+   "preconditions": [
+    "a target endpoint and a scorer"
+   ],
+   "oracle": [
+    "scored attack success with the converter recorded"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "The converter chain is the useful part: it is how you test whether a guard survives encoding."
+  },
+  {
+   "id": "d19-promptfoo",
+   "name": "promptfoo",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "role": "Eval harness with red team plugins, the closest thing to CI for prompt injection regression",
+   "driver": {
+    "install": "npm:promptfoo",
+    "verify": "promptfoo --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A08"
+   ],
+   "preconditions": [
+    "a prompt or app config"
+   ],
+   "oracle": [
+    "pass or fail per plugin, comparable across runs"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "The only credible answer to 'did the fix actually hold'. Everything else is a one time demo."
+  },
+  {
+   "id": "d19-llm-guard",
+   "name": "LLM Guard",
+   "url": "https://github.com/protectai/llm-guard",
+   "role": "Defensive scanner set: input sanitisation, output scanning, PII, prompt injection detection",
+   "driver": {
+    "install": "pipx:llm-guard",
+    "verify": "python -c 'import llm_guard'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A16"
+   ],
+   "preconditions": [
+    "the app's own pipeline"
+   ],
+   "oracle": [
+    "scanner verdict per input"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED",
+   "note": "Listed as the defence side of the mirror. Test it as an attacker: a guard is a bypass target, not a wall."
+  },
+  {
+   "id": "d19-rebuff",
+   "name": "Rebuff",
+   "url": "https://github.com/protectai/rebuff",
+   "role": "Prompt injection detector, useful as a false negative source when evaluating guards",
+   "driver": {
+    "install": "pipx:rebuff",
+    "verify": "python -c 'import rebuff'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A16"
+   ],
+   "preconditions": [
+    "a guard you want to evaluate"
+   ],
+   "oracle": [
+    "detector verdict vs your payload"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d19-deepteam",
+   "name": "DeepTeam",
+   "url": "https://github.com/confident-ai/deepteam",
+   "role": "Red teaming framework with OWASP and NIST aligned vulnerability sets",
+   "driver": {
+    "install": "pipx:deepteam",
+    "verify": "python -c 'import deepteam'",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a model or app"
+   ],
+   "oracle": [
+    "risk report per category"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d19-gandalf",
+   "name": "Lakera Gandalf",
+   "url": "https://gandalf.lakera.ai/",
+   "role": "Public prompt injection range, the calibration target before touching a real app",
+   "driver": {
+    "install": "n/a web",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a browser"
+   ],
+   "oracle": [
+    "password extracted from a level"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Use it to calibrate whether your agent can actually get a secret past a guard, cheaply."
+  },
+  {
+   "id": "d19-agentdojo",
+   "name": "AgentDojo",
+   "url": "https://github.com/ethz-spylab/agentdojo",
+   "role": "Benchmark for prompt injection against tool using agents, with real tool environments",
+   "driver": {
+    "install": "git:https://github.com/ethz-spylab/agentdojo",
+    "verify": "python -m agentdojo",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "an agent with tools"
+   ],
+   "oracle": [
+    "attack success and utility loss reported separately"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "The utility loss number is the one that matters. A defence that breaks the agent is not a defence."
+  },
+  {
+   "id": "d19-llm-top10",
+   "name": "OWASP Top 10 for LLM Applications",
+   "url": "https://genai.owasp.org/llm-top-10/",
+   "role": "The taxonomy every LLM finding maps to",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d19-atlas",
+   "name": "MITRE ATLAS",
+   "url": "https://atlas.mitre.org/",
+   "role": "Adversarial technique knowledge base for AI systems",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d19-owasp-agentic",
+   "name": "OWASP Top 10 for Agentic Applications",
+   "url": "https://genai.owasp.org/",
+   "role": "Agent specific risks: tool abuse, excessive agency, memory poisoning",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  }
+ ],
+ "tree": {
+  "id": "d19-root",
+  "q": "Does the application let the model act, or only talk?",
+  "why": "This single question splits the entire domain. Talking models leak and mislead. Acting models change state with borrowed authority, which is a write.",
+  "branches": [
+   {
+    "a": "Only talks",
+    "next": {
+     "id": "d19-talk",
+     "q": "Does untrusted text reach the model's context (retrieval, user content, web)?",
+     "branches": [
+      {
+       "a": "Yes",
+       "action": "attempt indirect injection through the retrieved content, then look for what the answer reveals and whether output is rendered",
+       "tools": [
+        "d19-garak",
+        "d19-promptfoo"
+       ],
+       "oracle": "behaviour change attributable to injected text"
+      },
+      {
+       "a": "No",
+       "action": "the class is thin. test system prompt leakage and output handling instead",
+       "tools": [
+        "d19-pyrit"
+       ],
+       "oracle": "system prompt or context disclosed"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Acts (tools, functions, code)",
+    "next": {
+     "id": "d19-act",
+     "q": "Can you see the tool list and arguments?",
+     "branches": [
+      {
+       "a": "Yes",
+       "action": "inject content that induces a tool call, then check the side effect. the finding is the effect, not the call",
+       "tools": [
+        "d19-agentdojo",
+        "d19-gandalf"
+       ],
+       "oracle": "state changed by an injected tool call"
+      },
+      {
+       "a": "No",
+       "action": "infer tools from error messages and observed actions, then inject and watch for a tool shaped effect",
+       "tools": [
+        "d19-pyrit"
+       ],
+       "oracle": "side effect consistent with an unseen tool"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Guard present",
+    "action": "treat the guard as the target: encoding, language switch, context splitting. then re-run the same payload through promptfoo to prove regression",
+    "tools": [
+     "d19-llm-guard",
+     "d19-rebuff",
+     "d19-promptfoo"
+    ],
+    "oracle": "payload passes the guard and changes behaviour"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "direct prompt injection",
+   "detect": "user input containing instruction override patterns",
+   "control": "treat user text as data, delimit and label it",
+   "rule": "instruction override detection"
+  },
+  {
+   "attack": "indirect injection",
+   "detect": "retrieved content containing instructions",
+   "control": "no instruction following from retrieved text",
+   "rule": "retrieval content anomaly"
+  },
+  {
+   "attack": "tool call abuse",
+   "detect": "tool invoked with arguments not derived from a legitimate user request",
+   "control": "least privilege tools, argument validation, confirmation for state changes",
+   "rule": "tool argument anomaly"
+  },
+  {
+   "attack": "system prompt leakage",
+   "detect": "output containing prompt fragments",
+   "control": "never rely on prompt secrecy",
+   "rule": "prompt fragment in output"
+  },
+  {
+   "attack": "RAG poisoning",
+   "detect": "document ingested with instruction content",
+   "control": "ingest review, content hashing, provenance",
+   "rule": "ingest content scan"
+  },
+  {
+   "attack": "excessive agency",
+   "detect": "agent action outside the stated task",
+   "control": "scope per session, no standing credentials",
+   "rule": "action outside task scope"
+  },
+  {
+   "attack": "guard bypass",
+   "detect": "payload class that the guard has not seen",
+   "control": "defence in depth, not one classifier",
+   "rule": "guard verdict vs outcome mismatch"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool reports what an agent can actually reach, as a permission graph",
+   "class": "no-tool",
+   "build_candidate": "instrument the tool dispatcher, record every call, and emit the reachable set per injection"
+  },
+  {
+   "gap": "No standard negative control for prompt injection findings",
+   "class": "no-tool",
+   "build_candidate": "a control prompt of identical shape that must not change state, run alongside every attempt"
+  },
+  {
+   "gap": "No cross-model regression harness that survives model version changes",
+   "class": "coverage",
+   "build_candidate": "promptfoo based suite pinned per model version with a diff report"
+  },
+  {
+   "gap": "L10 impact and L12 continuous cells empty",
+   "class": "coverage",
+   "build_candidate": "reachability based impact template plus scheduled injection regression"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D19.index.json"
+ }
+}

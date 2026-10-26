@@ -34,4 +34,25 @@ p_pipx mitmproxy2swagger || FAILED=$((FAILED+1))
 log "--- mitmproxy: programmable intercepting proxy, the capture source for REA"
 p_pacman mitmproxy || FAILED=$((FAILED+1))
 
+log "--- schemathesis: property based testing straight from an openapi or graphql schema"
+p_pipx schemathesis || FAILED=$((FAILED+1))
+
+log "--- newman: run a postman collection as a test suite, includes auth flows"
+warn "newman: channel npm not scripted, see manifest"
+
+log "--- jwt_tool: jwt inspection and the full attack set, none, alg confusion, kid, jku"
+p_aur jwt_tool || FAILED=$((FAILED+1))
+
+log "--- graphw00f: graphql engine fingerprint, decides which bypass class applies"
+p_git https://github.com/dolevf/graphw00f  || FAILED=$((FAILED+1))
+
+log "--- graphql-cop: graphql misconfiguration audit, the cheap wins first"
+p_git https://github.com/dolevf/graphql-cop  || FAILED=$((FAILED+1))
+
+log "--- inql: graphql introspection to queries, burp extension plus cli"
+p_pipx inql || FAILED=$((FAILED+1))
+
+log "--- restler: stateful rest api fuzzing from an openapi spec, finds sequences not single calls"
+p_git https://github.com/microsoft/restler-fuzzer  || FAILED=$((FAILED+1))
+
 summary "$FAILED"
