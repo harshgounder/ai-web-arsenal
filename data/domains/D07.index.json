@@ -2,8 +2,8 @@
  "domain": "D07",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 19,
- "indexed_not_enriched": 146,
+ "enriched": 22,
+ "indexed_not_enriched": 143,
  "entries": [
   {
    "name": "Another XSS in google collaboratory",
@@ -34,13 +34,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "XXEinjector>",
-   "url": "https://github.com/enjoiz/XXEinjector",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "bXSS",
    "url": "https://github.com/LewisArdern/bXSS",
    "tier": "adjacent",
@@ -55,23 +48,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "dtd-finder",
-   "url": "https://github.com/GoSecure/dtd-finder",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "mXSS regression method",
    "url": "https://github.com/cure53/DOMPurify/security/advisories/GHSA-h8r8-wccr-v5f2",
    "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "xsser",
-   "url": "https://github.com/epsylon/xsser",
-   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

@@ -2,8 +2,8 @@
  "domain": "D29",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 57,
- "indexed_not_enriched": 154,
+ "enriched": 60,
+ "indexed_not_enriched": 151,
  "entries": [
   {
    "name": "RustScan",
@@ -62,13 +62,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Agentic Radar",
-   "url": "https://github.com/splx-ai/agentic-radar",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "CSP Scanner",
    "url": "https://cspscanner.com/",
    "tier": "adjacent",
@@ -86,13 +79,6 @@
    "name": "Git-Scanner",
    "url": "https://github.com/HightechSec/git-scanner",
    "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Lonkero",
-   "url": "https://github.com/bountyyfi/lonkero",
-   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -142,13 +128,6 @@
    "name": "fuzzapi",
    "url": "https://github.com/Fuzzapi/fuzzapi",
    "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "numasec",
-   "url": "https://github.com/FrancescoStabile/numasec",
-   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

@@ -335,6 +335,34 @@
    "stage": "L05",
    "status": "ESTABLISHED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d20-mcp-context-protector",
+   "name": "MCP Context Protector",
+   "url": "https://github.com/trailofbits/mcp-context-protector",
+   "role": "Proxy that inspects MCP tool calls and context for injection",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "an MCP client config"
+   ],
+   "oracle": [
+    "blocked call with the reason"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Defensive side of the tool-call boundary. Test it as a bypass target too."
   }
  ],
  "tree": {

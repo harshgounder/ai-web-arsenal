@@ -297,6 +297,30 @@
    "status": "VERIFIED",
    "note": "Local document in web-attack-atlas. It is the defensive view of the pattern corpus.",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d25-awesome-yara",
+   "name": "awesome-yara",
+   "url": "https://github.com/InQuest/awesome-yara",
+   "role": "Curated YARA rules and tooling, the detection corpus entry point",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [
+    "a rule set per class"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
   }
  ],
  "tree": {

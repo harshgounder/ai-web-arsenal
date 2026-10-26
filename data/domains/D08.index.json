@@ -2,8 +2,8 @@
  "domain": "D08",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 12,
- "indexed_not_enriched": 39,
+ "enriched": 13,
+ "indexed_not_enriched": 38,
  "entries": [
   {
    "name": "Airbnb when bypassing json encoding XSS filter WAF CSP and auditior turns into eight vulnerabilities",
@@ -16,13 +16,6 @@
    "name": "CSP Scanner",
    "url": "https://cspscanner.com/",
    "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Corsy",
-   "url": "https://github.com/s0md3v/Corsy",
-   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

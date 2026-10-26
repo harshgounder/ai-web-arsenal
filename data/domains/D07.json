@@ -664,6 +664,87 @@
    ],
    "detected_by": [],
    "status": "ESTABLISHED"
+  },
+  {
+   "id": "d07-xxeinjector",
+   "name": "XXEinjector",
+   "url": "https://github.com/enjoiz/XXEinjector",
+   "role": "XXE exploitation including OOB exfiltration and DTD abuse",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [
+    "an XML parser that resolves entities"
+   ],
+   "oracle": [
+    "file content or OOB callback"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Ruby. OOB mode needs a listener, which is also the control."
+  },
+  {
+   "id": "d07-dtd-finder",
+   "name": "dtd-finder",
+   "url": "https://github.com/GoSecure/dtd-finder",
+   "role": "Finds DTD files reachable on the target, which turns blind XXE into file read",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A06"
+   ],
+   "preconditions": [
+    "a target that parses XML"
+   ],
+   "oracle": [
+    "a reachable DTD you can influence"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d07-xsser",
+   "name": "xsser",
+   "url": "https://github.com/epsylon/xsser",
+   "role": "XSS scanner with a large context and encoding matrix",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a reflected parameter"
+   ],
+   "oracle": [
+    "execution confirmed by callback"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
   }
  ],
  "tree": {

@@ -26,12 +26,13 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [ATT&CK STIX data](https://github.com/mitre-attack/attack-stix-data) | L10 reporting | A2 | A02 | `n/a reference` | no | The technique taxonomy to map detection coverage against |
+| [awesome-yara](https://github.com/InQuest/awesome-yara) | L10 reporting | A0 | A01 | `n/a reference` | no | Curated YARA rules and tooling, the detection corpus entry point |
 | [This repo: counters/COUNTERS.md](https://github.com/) | L10 reporting | A0 | A01,A02 | `local` | no | 74 control mechanisms across 150 patterns, grouped into 13 classes, each with a precondition and cost |
 | [OWASP Core Rule Set](https://github.com/coreruleset/coreruleset) | L10 reporting | A2 | A01,A05 | `n/a reference` | no | The CRS rule family most WAFs run, so 'which CRS rule catches this' is the real question |
 | [Elastic detection rules](https://github.com/elastic/detection-rules) | L10 reporting | A2 | A01,A02 | `n/a reference` | no | A large maintained rule set, useful as a coverage cross check |

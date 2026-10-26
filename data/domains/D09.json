@@ -315,6 +315,34 @@
    "stage": "L05",
    "status": "ESTABLISHED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d09-hrs",
+   "name": "HTTP Request Smuggler (Burp extension)",
+   "url": "https://github.com/PortSwigger/http-request-smuggler",
+   "role": "The reference desync tool, including h2 and TE variants",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A04"
+   ],
+   "preconditions": [
+    "a lab or infrastructure you own"
+   ],
+   "oracle": [
+    "a desync with a paired timing control"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Same safety rule as the domain: not on shared infrastructure. The extension has a safe mode, use it."
   }
  ],
  "tree": {

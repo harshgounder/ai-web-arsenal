@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+22 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -39,6 +39,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Atlas W04: datastore writes](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A01,A04 | `n/a data` | yes | Technique pointer. W04 is queued and this says so. |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A0 | A01,A05 | `n/a reference` | no | Per class technique reference with payload context |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
+| [dtd-finder](https://github.com/GoSecure/dtd-finder) | L06 probing | A2 | A01,A06 | `git` | no | Finds DTD files reachable on the target, which turns blind XXE into file read |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A01 | `docker` | no | Classic injection modules |
 | [ffuf](https://github.com/ffuf/ffuf) | L06 probing | A2 | A01 | `aur:ffuf` | yes | Fuzz the injection position to find a working context |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A01,A15 | `aur:nuclei-bin` | yes | Known CVE and misconfiguration injection templates |
@@ -46,12 +47,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [PortSwigger Web Security Academy labs](https://portswigger.net/web-security/all-labs) | L06 probing | A2 | A01 | `n/a web` | no | The best free lab set per class, each with an intended answer |
 | [rea inspect_web_event_listeners](https://rea.tools) | L06 probing | A3 | A01,A08 | `mcp:rea` | yes | Read the actual DOM handlers before guessing which sink a payload reaches |
 | [OWASP WebGoat](https://github.com/WebGoat/WebGoat) | L06 probing | A2 | A01,A04 | `docker` | no | Structured lessons including blind and second order |
+| [xsser](https://github.com/epsylon/xsser) | L06 probing | A2 | A01,A05 | `git` | no | XSS scanner with a large context and encoding matrix |
 | [XSStrike](https://github.com/s0md3v/XSStrike) | L06 probing | A2 | A01,A05 | `aur:xsstrike` | no | XSS scanner with context aware payload generation and a fuzzer |
 | [commix](https://github.com/commixproject/commix) | L07 exploitation | A2 | A01 | `aur:commix` | no | OS command injection, the counterpart for the shell sink |
 | [Ghauri](https://github.com/r0oth3x49/ghauri) | L07 exploitation | A2 | A01 | `pipx:ghauri` | no | SQL injection with a modern engine and fewer false positives than the classic tools |
 | [NoSQLMap](https://github.com/codingo/NoSQLMap) | L07 exploitation | A2 | A01,A05 | `git:https://github.com/codingo/NoSQLMap` | no | NoSQL injection including operator injection through JSON bodies |
 | [sqlmap](https://github.com/sqlmapproject/sqlmap) | L07 exploitation | A2 | A01 | `pacman:sqlmap` | no | SQL injection detection and exploitation, the reference implementation |
 | [SSTImap](https://github.com/vladko312/SSTImap) | L07 exploitation | A2 | A01 | `pipx:sstimap` | no | Server side template injection across engine families |
+| [XXEinjector](https://github.com/enjoiz/XXEinjector) | L07 exploitation | A2 | A01 | `git` | no | XXE exploitation including OOB exfiltration and DTD abuse |
 | [ysoserial](https://github.com/frohoff/ysoserial) | L07 exploitation | A2 | A01,A11 | `git:https://github.com/frohoff/ysoserial` | no | Java deserialization gadget chains matched to the classpath |
 | [ysoserial.net](https://github.com/pwntester/ysoserial.net) | L07 exploitation | A2 | A01,A11 | `git:https://github.com/pwntester/ysoserial.net` | no | The .NET counterpart, for ViewState and BinaryFormatter sinks |
 | [WSTG Input Validation (33 tests)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/) | L10 reporting | A0 | A01 | `n/a reference` | no | The closest thing to a complete injection test list |
@@ -163,6 +166,19 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a parameter reaching a query`
 - oracle: `data extracted or delay proportional to payload`
 - defense levels it addresses: F2
+
+**XXEinjector**  
+- preconditions: `an XML parser that resolves entities`
+- oracle: `file content or OOB callback`
+- note: Ruby. OOB mode needs a listener, which is also the control.
+
+**dtd-finder**  
+- preconditions: `a target that parses XML`
+- oracle: `a reachable DTD you can influence`
+
+**xsser**  
+- preconditions: `a reflected parameter`
+- oracle: `execution confirmed by callback`
 
 ## Decision tree
 

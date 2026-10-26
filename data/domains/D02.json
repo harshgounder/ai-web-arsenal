@@ -670,6 +670,220 @@
    ],
    "detected_by": [],
    "status": "ESTABLISHED"
+  },
+  {
+   "id": "d02-photon",
+   "name": "Photon",
+   "url": "https://github.com/s0md3v/Photon",
+   "role": "Fast crawler that extracts endpoints, keys and parameters from JS and markup",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a live host"
+   ],
+   "oracle": [
+    "endpoint and key candidates with source page"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED",
+   "note": "Extracts from JS, not just links. That is why it finds routes a plain crawler misses."
+  },
+  {
+   "id": "d02-sublist3r",
+   "name": "Sublist3r",
+   "url": "https://github.com/aboul3la/Sublist3r",
+   "role": "Classic subdomain enumeration across search engines and CT logs",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a root domain"
+   ],
+   "oracle": [
+    "hostname list with source"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "ESTABLISHED",
+   "note": "Dated but still installed. Prefer subfinder where possible, keep this for source diversity."
+  },
+  {
+   "id": "d02-xray",
+   "name": "XRay",
+   "url": "https://github.com/evilsocket/xray",
+   "role": "Recon framework that maps endpoints and parameters into a graph",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "preconditions": [
+    "a seeded URL"
+   ],
+   "oracle": [
+    "endpoint graph"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED",
+   "note": "Unmaintained. Listed because two lists carry it and its graph model was ahead of its time."
+  },
+  {
+   "id": "d02-gato",
+   "name": "Gato",
+   "url": "https://github.com/praetorian-inc/gato",
+   "role": "GitHub Actions pipeline enumeration, finds secrets and misconfigurations in CI",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11",
+    "A08"
+   ],
+   "preconditions": [
+    "an authorised org or repo set"
+   ],
+   "oracle": [
+    "workflow findings with the trigger path"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED",
+   "note": "This is the bridge between recon and supply chain. Same tool, two domains."
+  },
+  {
+   "id": "d02-dnsreaper",
+   "name": "dnsReaper",
+   "url": "https://github.com/punk-security/dnsReaper",
+   "role": "Subdomain takeover detection at scale, the practical version",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A08"
+   ],
+   "preconditions": [
+    "a hostname list"
+   ],
+   "oracle": [
+    "a dangling record pointing at an unclaimed service"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED",
+   "note": "The difference between this and subjack is maintenance and speed. Use one, not both."
+  },
+  {
+   "id": "d02-subjack",
+   "name": "subjack",
+   "url": "https://github.com/haccer/subjack",
+   "role": "Subdomain takeover with a fingerprint database",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "a hostname list"
+   ],
+   "oracle": [
+    "dangling cname to an unclaimed service"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d02-subzy",
+   "name": "subzy",
+   "url": "https://github.com/PentestPad/subzy",
+   "role": "Takeover detection with a current fingerprint set, concurrency aware",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "a hostname list"
+   ],
+   "oracle": [
+    "takeover candidate with the claimable service named"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d02-takeover-xyz",
+   "name": "can-i-take-over-xyz",
+   "url": "https://github.com/EdOverflow/can-i-take-over-xyz",
+   "role": "The reference table: which services allow claiming an abandoned name",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [
+    "a service present in the table"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
   }
  ],
  "tree": {

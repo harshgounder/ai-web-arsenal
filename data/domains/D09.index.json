@@ -2,16 +2,9 @@
  "domain": "D09",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 10,
- "indexed_not_enriched": 9,
+ "enriched": 11,
+ "indexed_not_enriched": 8,
  "entries": [
-  {
-   "name": "http-request-smuggler",
-   "url": "https://github.com/PortSwigger/http-request-smuggler",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
   {
    "name": "Browser-Powered Desync research",
    "url": "https://portswigger.net/research/browser-powered-desync-attacks",

@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -40,7 +40,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A03 | `pacman:curl` | no | Attribute level control over cookies and headers |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A04,A03 | `pacman:mitmproxy` | yes | Observe and replay the whole session lifecycle, including logout and rotation |
 | [PortSwigger: authentication](https://portswigger.net/web-security/authentication) | L06 probing | A2 | A03 | `n/a reference` | no | Labs that calibrate the auth and session tools |
+| [ctftool](https://github.com/taviso/ctftool) | L07 exploitation | A3 | A02,A06 | `git` | no | Explores the Windows CTF protocol, where the attached text service is an unexpected IPC surface |
+| [jwt-hack](https://github.com/hahwul/jwt-hack) | L07 exploitation | A2 | A03,A09 | `git` | no | JWT attack CLI with a cleaner interface than the classic tools |
 | [jwt_tool](https://github.com/ticarpi/jwt_tool) | L07 exploitation | A2 | A03,A09 | `aur:jwt_tool` | no | The full token attack set, plus claim tampering |
+| [ssh-mitm](https://github.com/jtesta/ssh-mitm) | L07 exploitation | A2 | A03 | `git` | no | SSH man in the middle for credential capture in an authorised test |
 | [WSTG Session Management (11 tests)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/) | L10 reporting | A2 | A03,A04 | `n/a reference` | no | The test list for this domain |
 | [ASVS V7 Session Management](https://github.com/OWASP/ASVS) | L11 fix verification | A2 | A03 | `n/a reference` | no | Requirements for the fix side |
 | [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) | L11 fix verification | A2 | A15 | `n/a reference` | no | The implementation guidance, useful as the control column |
@@ -65,6 +68,19 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **curl**  
 - preconditions: `a shell`
 - oracle: `a response that changes with one attribute altered`
+
+**jwt-hack**  
+- preconditions: `a token you can decode`
+- oracle: `token accepted after tampering`
+
+**ssh-mitm**  
+- preconditions: `a client that will connect to you`, `authorisation covering the credential path`
+- oracle: `credentials captured and session relayed`
+- note: Only with explicit authorisation over the users involved. This collects real credentials.
+
+**ctftool**  
+- preconditions: `a Windows host in scope`
+- oracle: `interaction with a text service process`
 
 ## Decision tree
 

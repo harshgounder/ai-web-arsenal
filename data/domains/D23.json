@@ -224,6 +224,32 @@
    "stage": "L05",
    "status": "PROBABLE",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d23-powersploit",
+   "name": "PowerSploit",
+   "url": "https://github.com/PowerShellMafia/PowerSploit",
+   "role": "Post exploitation PowerShell modules, a common chain link after a Windows foothold",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "a Windows foothold in scope"
+   ],
+   "oracle": [
+    "the capability demonstrated, never persistence"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L09",
+   "status": "ESTABLISHED"
   }
  ],
  "tree": {

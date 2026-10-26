@@ -30,7 +30,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -42,6 +42,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [RFC 9113 (HTTP/2)](https://www.rfc-editor.org/rfc/rfc9113) | L05 hypothesis | A2 | A06 | `n/a reference` | no | Connection and request specific header rules, the basis of downgrade smuggling |
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A05 | `pacman:curl` | no | Manual probes: no reason to use a tool before you can hand craft the request |
 | [h2cSmuggler](https://github.com/BishopFox/h2cSmuggler) | L06 probing | A2 | A06 | `n/a reference` | no | HTTP/2 cleartext upgrade smuggling, the class most scanners completely miss |
+| [HTTP Request Smuggler (Burp extension)](https://github.com/PortSwigger/http-request-smuggler) | L06 probing | A2 | A06,A04 | `git` | no | The reference desync tool, including h2 and TE variants |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Byte level control over the request, which is the only way to send a malformed frame |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15,A06 | `aur:nuclei-bin` | yes | Template checks for known desync misconfigurations and proxy behaviour |
 | [smuggler](https://github.com/defparam/smuggler) | L06 probing | A2 | A06,A04 | `n/a reference` | no | Desync detection across CL.TE, TE.CL, TE.TE and TE.TE obfuscation variants |
@@ -76,6 +77,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **nuclei**  
 - preconditions: `a host and templates`
 - oracle: `template match with evidence`
+
+**HTTP Request Smuggler (Burp extension)**  
+- preconditions: `a lab or infrastructure you own`
+- oracle: `a desync with a paired timing control`
+- note: Same safety rule as the domain: not on shared infrastructure. The extension has a safe mode, use it.
 
 ## Decision tree
 

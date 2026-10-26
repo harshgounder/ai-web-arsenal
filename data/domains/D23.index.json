@@ -2,21 +2,14 @@
  "domain": "D23",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 7,
- "indexed_not_enriched": 25,
+ "enriched": 8,
+ "indexed_not_enriched": 24,
  "entries": [
   {
    "name": "VHostScan",
    "url": "https://github.com/codingo/VHostScan",
    "tier": "core_web",
    "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "PowerSploit",
-   "url": "https://github.com/PowerShellMafia/PowerSploit",
-   "tier": "tail",
-   "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {

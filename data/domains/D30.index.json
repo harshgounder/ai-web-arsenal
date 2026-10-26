@@ -2,21 +2,14 @@
  "domain": "D30",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 12,
- "indexed_not_enriched": 43,
+ "enriched": 13,
+ "indexed_not_enriched": 42,
  "entries": [
   {
    "name": "Darkmoon",
    "url": "https://github.com/ASCIT31/Dark-Moon",
    "tier": "adjacent",
    "n_sources": 3,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Shuffle",
-   "url": "https://github.com/Shuffle/Shuffle",
-   "tier": "adjacent",
-   "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {

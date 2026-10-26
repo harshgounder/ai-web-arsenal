@@ -379,6 +379,33 @@
    "stage": "L05",
    "status": "VERIFIED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d30-shuffle",
+   "name": "Shuffle",
+   "url": "https://github.com/Shuffle/Shuffle",
+   "role": "Open source SOAR, useful for wiring agent output into a response workflow",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16"
+   ],
+   "preconditions": [
+    "a workflow to automate"
+   ],
+   "oracle": [
+    "an app that runs on a trigger"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED",
+   "note": "The defensive counterpart to an orchestrator. Same primitives, opposite intent."
   }
  ],
  "tree": {

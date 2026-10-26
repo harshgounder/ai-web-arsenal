@@ -2,8 +2,8 @@
  "domain": "D31",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 21,
- "indexed_not_enriched": 57,
+ "enriched": 23,
+ "indexed_not_enriched": 55,
  "entries": [
   {
    "name": "Ghidra",
@@ -34,23 +34,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "dnSpy",
-   "url": "https://github.com/0xd4d/dnSpy",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "mitmproxy2swagger",
    "url": "https://github.com/alufers/mitmproxy2swagger",
    "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "plasma",
-   "url": "https://github.com/joelpx/plasma",
-   "tier": "tail",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

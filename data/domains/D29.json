@@ -1727,6 +1727,87 @@
    "home_domain": "D22",
    "agent_use": "zap.sh -daemon then the rest api, or -cmd for one shot. json report is machine readable",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d29-agentic-radar",
+   "name": "Agentic Radar",
+   "url": "https://github.com/splx-ai/agentic-radar",
+   "role": "Scans agentic AI applications for tool and workflow risks",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A08"
+   ],
+   "preconditions": [
+    "an agent app or its config"
+   ],
+   "oracle": [
+    "risk findings with the component named"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d29-lonkero",
+   "name": "Lonkero",
+   "url": "https://github.com/bountyyfi/lonkero",
+   "role": "Web fuzzer focused on finding endpoints and parameters fast",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A08"
+   ],
+   "preconditions": [
+    "a host"
+   ],
+   "oracle": [
+    "endpoints and parameters with a differential signal"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d29-numasec",
+   "name": "numasec",
+   "url": "https://github.com/FrancescoStabile/numasec",
+   "role": "Nuclei template assistant, helps write and validate a template before running it",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a finding you want to make repeatable"
+   ],
+   "oracle": [
+    "a template that fires on the proving request and not on a control"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "The missing link between a one off finding and a rule the client can keep."
   }
  ],
  "tree": {

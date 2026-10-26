@@ -429,6 +429,33 @@
    "status": "PROBABLE",
    "note": "Mobile technique depth belongs in the atlas. The pointer is honest about being queued.",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d21-apktool-mcp",
+   "name": "apktool MCP server",
+   "url": "https://github.com/zinja-coder/apktool-mcp-server",
+   "role": "MCP wrapper that exposes APK analysis to an agent",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "an APK and an MCP client"
+   ],
+   "oracle": [
+    "decoded resources through a tool call"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "note": "An agent facing wrapper. Compare against REA's native android calls before adding a dependency."
   }
  ],
  "tree": {

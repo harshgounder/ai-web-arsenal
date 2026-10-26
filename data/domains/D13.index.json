@@ -2,19 +2,12 @@
  "domain": "D13",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 11,
- "indexed_not_enriched": 36,
+ "enriched": 12,
+ "indexed_not_enriched": 35,
  "entries": [
   {
    "name": "IntruderPayloads>",
    "url": "https://github.com/1N3/IntruderPayloads",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "dotdotpwn",
-   "url": "https://github.com/wireghoul/dotdotpwn",
    "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"

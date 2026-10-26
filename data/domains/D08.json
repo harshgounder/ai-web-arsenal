@@ -389,6 +389,34 @@
    "status": "ESTABLISHED",
    "mirror_ref": 4,
    "mirror_provisional": true
+  },
+  {
+   "id": "d08-corsy",
+   "name": "Corsy",
+   "url": "https://github.com/s0md3v/Corsy",
+   "role": "CORS misconfiguration scanner by origin reflection class",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A05"
+   ],
+   "preconditions": [
+    "an endpoint that reflects Origin"
+   ],
+   "oracle": [
+    "a response with a permissive ACAO for an attacker origin"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Test with an origin you control. Reflected does not mean exploitable without credentials."
   }
  ],
  "tree": {

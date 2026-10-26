@@ -308,6 +308,88 @@
    "stage": "L05",
    "status": "PROBABLE",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d06-jwt-hack",
+   "name": "jwt-hack",
+   "url": "https://github.com/hahwul/jwt-hack",
+   "role": "JWT attack CLI with a cleaner interface than the classic tools",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A09"
+   ],
+   "preconditions": [
+    "a token you can decode"
+   ],
+   "oracle": [
+    "token accepted after tampering"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-ssh-mitm",
+   "name": "ssh-mitm",
+   "url": "https://github.com/jtesta/ssh-mitm",
+   "role": "SSH man in the middle for credential capture in an authorised test",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [
+    "a client that will connect to you",
+    "authorisation covering the credential path"
+   ],
+   "oracle": [
+    "credentials captured and session relayed"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Only with explicit authorisation over the users involved. This collects real credentials."
+  },
+  {
+   "id": "d06-ctftool",
+   "name": "ctftool",
+   "url": "https://github.com/taviso/ctftool",
+   "role": "Explores the Windows CTF protocol, where the attached text service is an unexpected IPC surface",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A06"
+   ],
+   "preconditions": [
+    "a Windows host in scope"
+   ],
+   "oracle": [
+    "interaction with a text service process"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L07",
+   "status": "PROBABLE"
   }
  ],
  "tree": {

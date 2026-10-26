@@ -482,6 +482,34 @@
    "detected_by": [],
    "status": "ESTABLISHED",
    "note": "This is the tool that answers the detection-cost question the rest of the domain cannot. Run it once and report the score, not a bypass list."
+  },
+  {
+   "id": "d22-nowafpls",
+   "name": "nowafpls",
+   "url": "https://github.com/assetnote/nowafpls",
+   "role": "Payload padding to defeat body size limits in WAF inspection",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A07"
+   ],
+   "preconditions": [
+    "a WAF that inspects only the first N bytes"
+   ],
+   "oracle": [
+    "the payload reaches the app while the WAF sees only benign noise"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "The class most WAF bypass lists miss entirely: it is not an encoding trick, it is a size assumption."
   }
  ],
  "tree": {

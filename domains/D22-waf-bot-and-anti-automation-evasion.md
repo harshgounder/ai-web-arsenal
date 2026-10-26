@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-14 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+15 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -50,6 +50,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [playwright](https://playwright.dev/) | L06 probing | A2 | A05,A08 | `pipx:playwright` | no | A real browser engine driven by script, the honest bot workflow |
 | [tls-client](https://github.com/FlorianREGAZ/Python-Tls-Client) | L06 probing | A2 | A05 | `pipx:tls-client` | no | Go backed python client with selectable browser profiles |
 | [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) | L06 probing | A2 | A15 | `pipx:undetected-chromedriver` | no | Patched driver that avoids the usual automation flags |
+| [nowafpls](https://github.com/assetnote/nowafpls) | L07 exploitation | A2 | A05,A07 | `git` | no | Payload padding to defeat body size limits in WAF inspection |
 
 ### Details that matter
 
@@ -126,6 +127,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `score per attack class with the encoder that passed`
 - defense levels it addresses: F2
 - note: This is the tool that answers the detection-cost question the rest of the domain cannot. Run it once and report the score, not a bypass list.
+
+**nowafpls**  
+- preconditions: `a WAF that inspects only the first N bytes`
+- oracle: `the payload reaches the app while the WAF sees only benign noise`
+- note: The class most WAF bypass lists miss entirely: it is not an encoding trick, it is a size assumption.
 
 ## Decision tree
 

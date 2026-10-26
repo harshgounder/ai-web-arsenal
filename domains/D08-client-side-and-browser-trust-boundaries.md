@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -37,6 +37,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [chromium (CDP host)](https://www.chromium.org/) | L03 surface mapping | A2 | A08 | `pacman:chromium` | no | A real engine, the only honest way to test client side behaviour |
 | [rea inspect_web_page](https://rea.tools) | L03 surface mapping | A3 | A08 | `mcp:rea` | yes | Storage key inventory, JSON body shapes and postMessage shapes, passively |
 | [HackTricks: CSTI](https://book.hacktricks.wiki/) | L05 hypothesis | A2 | A01 | `n/a reference` | no | Client side template injection reference, per framework |
+| [Corsy](https://github.com/s0md3v/Corsy) | L06 probing | A2 | A15,A05 | `git` | no | CORS misconfiguration scanner by origin reflection class |
 | [CSP Evaluator](https://github.com/google/csp-evaluator) | L06 probing | A3 | A15 | `n/a reference` | no | Scores a CSP and names the bypass for each weakness |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `n/a reference` | no | Payload corpus per client side context |
@@ -93,6 +94,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a class and a context`
 - oracle: `a payload that works for that context`
 - detected by: template expression evaluated in the browser
+
+**Corsy**  
+- preconditions: `an endpoint that reflects Origin`
+- oracle: `a response with a permissive ACAO for an attacker origin`
+- note: Test with an origin you control. Reflected does not mean exploitable without credentials.
 
 ## Decision tree
 

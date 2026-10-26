@@ -30,12 +30,13 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+14 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [apktool](https://apktool.org/) | L03 surface mapping | A2 | A08,A06 | `aur:android-apktool` | no | Manifest and resource decode, smali, and a rebuild path |
+| [apktool MCP server](https://github.com/zinja-coder/apktool-mcp-server) | L03 surface mapping | A2 | A08 | `git` | no | MCP wrapper that exposes APK analysis to an agent |
 | [jadx](https://github.com/skylot/jadx) | L03 surface mapping | A2 | A08 | `pacman:jadx` | no | DEX to Java, the readable half of APK analysis |
 | [rea inspect_android_package](https://rea.tools) | L03 surface mapping | A3 | A08 | `mcp:rea` | yes | Manifest, permissions, classes and resources without writing source to disk |
 | [rea decode_android_resources](https://rea.tools) | L03 surface mapping | A3 | A08 | `mcp:rea` | yes | Readable AndroidManifest and string resources, the fastest way to find endpoints and keys |
@@ -109,6 +110,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Atlas W05: file materialisation**  
 - defense levels it addresses: F2
 - note: Mobile technique depth belongs in the atlas. The pointer is honest about being queued.
+
+**apktool MCP server**  
+- preconditions: `an APK and an MCP client`
+- oracle: `decoded resources through a tool call`
+- note: An agent facing wrapper. Compare against REA's native android calls before adding a dependency.
 
 ## Decision tree
 

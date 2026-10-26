@@ -33,7 +33,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-57 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+60 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -63,8 +63,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [radare2](https://rada.re/) | L03 surface mapping | A2 | A08 | `pacman:radare2` | yes | fast disassembly and binary triage |
 | [subfinder](https://github.com/projectdiscovery/subfinder) | L03 surface mapping | A2 | A08 | `aur:subfinder` | yes | passive subdomain enumeration |
 | [whatweb](https://github.com/urbanadventurer/WhatWeb) | L03 surface mapping | A2 | A15 | `aur:whatweb` | yes | technology fingerprinting with plugin detail |
+| [Lonkero](https://github.com/bountyyfi/lonkero) | L04 discovery | A2 | A06,A08 | `git` | no | Web fuzzer focused on finding endpoints and parameters fast |
 | [nuclei-templates](https://github.com/projectdiscovery/nuclei-templates) | L04 discovery | A2 | A05 | `git:https://github.com/projectdiscovery/nuclei-templates` | no | the template corpus nuclei runs |
 | [seclists](https://github.com/danielmiessler/SecLists) | L04 discovery | A2 | A05 | `git:https://github.com/danielmiessler/SecLists` | no | the wordlist corpus everything else consumes |
+| [numasec](https://github.com/FrancescoStabile/numasec) | L05 hypothesis | A2 | A05 | `git` | no | Nuclei template assistant, helps write and validate a template before running it |
+| [Agentic Radar](https://github.com/splx-ai/agentic-radar) | L06 probing | A3 | A16,A08 | `git` | no | Scans agentic AI applications for tool and workflow risks |
 | [chromium](https://chromium.googlesource.com/chromium/src/+/main/docs/) | L06 probing | A2 | A08 | `pacman:chromium` | no | real browser for cdp work, the only honest way to test client side |
 | [clairvoyance](https://github.com/nikitastupin/clairvoyance) | L06 probing | A2 | A01,A05 | `pipx:clairvoyance` | yes | graphql schema recovery when introspection is disabled |
 | [commix](https://github.com/commixproject/commix) | L06 probing | A2 | A01 | `aur:commix` | no | os command injection |
@@ -328,6 +331,19 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **zaproxy**  
 - preconditions: `the tool is installed and its verify command passes`
 - oracle: `json output parseable`
+
+**Agentic Radar**  
+- preconditions: `an agent app or its config`
+- oracle: `risk findings with the component named`
+
+**Lonkero**  
+- preconditions: `a host`
+- oracle: `endpoints and parameters with a differential signal`
+
+**numasec**  
+- preconditions: `a finding you want to make repeatable`
+- oracle: `a template that fires on the proving request and not on a control`
+- note: The missing link between a one off finding and a rule the client can keep.
 
 ## Decision tree
 

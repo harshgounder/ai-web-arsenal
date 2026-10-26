@@ -2,8 +2,8 @@
  "domain": "D22",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 14,
- "indexed_not_enriched": 42,
+ "enriched": 15,
+ "indexed_not_enriched": 41,
  "entries": [
   {
    "name": "SQLMap Tamper Scripts",
@@ -36,13 +36,6 @@
   {
    "name": "WAFtester",
    "url": "https://github.com/waftester/waftester",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "nowafpls",
-   "url": "https://github.com/assetnote/nowafpls",
    "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"

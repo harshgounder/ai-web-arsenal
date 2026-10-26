@@ -2,8 +2,8 @@
  "domain": "D06",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 10,
- "indexed_not_enriched": 124,
+ "enriched": 13,
+ "indexed_not_enriched": 121,
  "entries": [
   {
    "name": "Firesheep",
@@ -27,30 +27,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "ctftool",
-   "url": "https://github.com/taviso/ctftool",
-   "tier": "offscope",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "jwt-hack CLI",
-   "url": "https://github.com/hahwul/jwt-hack",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "keyFinder",
    "url": "https://github.com/momenbasel/keyFinder",
    "tier": "offscope",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "ssh-mitm",
-   "url": "https://github.com/jtesta/ssh-mitm",
-   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

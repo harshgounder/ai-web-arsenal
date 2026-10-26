@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-21 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+29 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -40,6 +40,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Shodan and Censys (indexed scan data)](https://www.shodan.io/) | L02 passive recon | A2 | A08 | `api:key` | yes | What the internet already knows about the estate, with zero requests to the target |
 | [SpiderFoot](https://github.com/smicallef/spiderfoot) | L02 passive recon | A3 | A08 | `aur:spiderfoot` | yes | OSINT automation across many sources, including leak and third party data |
 | [subfinder](https://github.com/projectdiscovery/subfinder) | L02 passive recon | A3 | A08 | `aur:subfinder` | yes | Passive subdomain enumeration from public sources |
+| [Sublist3r](https://github.com/aboul3la/Sublist3r) | L02 passive recon | A2 | A08 | `git` | no | Classic subdomain enumeration across search engines and CT logs |
 | [theHarvester](https://github.com/laramies/theHarvester) | L02 passive recon | A2 | A08 | `pipx:theHarvester` | no | Email, host and employee enumeration from public sources |
 | [httpx](https://github.com/projectdiscovery/httpx) | L03 surface mapping | A3 | A08 | `aur:httpx-bin` | yes | HTTP probing, status, tech detect and titles at scale |
 | [masscan](https://github.com/robertdavidgraham/masscan) | L03 surface mapping | A2 | A06,A07 | `pacman:masscan` | no | Internet scale port scanning, use only with explicit authorisation and a rate the target can survive |
@@ -49,11 +50,18 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [RustScan](https://github.com/rustscan/rustscan) | L03 surface mapping | A2 | A06 | `pacman:rustscan` | no | Fast port discovery that hands the result to nmap, the modern default for a first pass |
 | [whatweb](https://github.com/urbanadventurer/WhatWeb) | L03 surface mapping | A3 | A15 | `aur:whatweb` | yes | Technology fingerprinting with plugin detail |
 | [arjun](https://github.com/s0md3v/Arjun) | L04 discovery | A3 | A05 | `pipx:arjun` | yes | HTTP parameter discovery |
+| [dnsReaper](https://github.com/punk-security/dnsReaper) | L04 discovery | A2 | A02,A08 | `git` | no | Subdomain takeover detection at scale, the practical version |
 | [feroxbuster](https://github.com/epi052/feroxbuster) | L04 discovery | A3 | A06 | `aur:feroxbuster` | yes | Recursive content discovery |
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A3 | A06 | `aur:ffuf` | yes | Content discovery and parameter fuzzing |
+| [Gato](https://github.com/praetorian-inc/gato) | L04 discovery | A2 | A11,A08 | `git` | no | GitHub Actions pipeline enumeration, finds secrets and misconfigurations in CI |
 | [gobuster](https://github.com/OJ/gobuster) | L04 discovery | A3 | A06 | `pacman:gobuster` | yes | Directory, DNS and vhost brute force |
 | [katana](https://github.com/projectdiscovery/katana) | L04 discovery | A3 | A08 | `aur:katana` | yes | Crawler that executes and parses JS to find endpoints |
+| [Photon](https://github.com/s0md3v/Photon) | L04 discovery | A2 | A08 | `git` | no | Fast crawler that extracts endpoints, keys and parameters from JS and markup |
 | [rea analyze_web_bundle](https://rea.tools) | L04 discovery | A3 | A08,A06 | `mcp:rea` | yes | Routes and endpoints from the bundle, which no crawler will find because they are not linked |
+| [subjack](https://github.com/haccer/subjack) | L04 discovery | A2 | A02 | `git` | no | Subdomain takeover with a fingerprint database |
+| [subzy](https://github.com/PentestPad/subzy) | L04 discovery | A2 | A02 | `git` | no | Takeover detection with a current fingerprint set, concurrency aware |
+| [XRay](https://github.com/evilsocket/xray) | L04 discovery | A2 | A08,A06 | `git` | no | Recon framework that maps endpoints and parameters into a graph |
+| [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) | L05 hypothesis | A0 | A02 | `n/a reference` | no | The reference table: which services allow claiming an abandoned name |
 | [rea capture_browser_scenario](https://rea.tools) | L06 probing | A3 | A08,A05 | `mcp:rea` | yes | Deterministic capture of a scripted flow instead of hand clicking |
 
 ### Details that matter
@@ -178,6 +186,39 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a target domain`
 - oracle: `addresses and hosts with the source named`
 - defense levels it addresses: F1
+
+**Photon**  
+- preconditions: `a live host`
+- oracle: `endpoint and key candidates with source page`
+- note: Extracts from JS, not just links. That is why it finds routes a plain crawler misses.
+
+**Sublist3r**  
+- preconditions: `a root domain`
+- oracle: `hostname list with source`
+- note: Dated but still installed. Prefer subfinder where possible, keep this for source diversity.
+
+**XRay**  
+- preconditions: `a seeded URL`
+- oracle: `endpoint graph`
+- note: Unmaintained. Listed because two lists carry it and its graph model was ahead of its time.
+
+**Gato**  
+- preconditions: `an authorised org or repo set`
+- oracle: `workflow findings with the trigger path`
+- note: This is the bridge between recon and supply chain. Same tool, two domains.
+
+**dnsReaper**  
+- preconditions: `a hostname list`
+- oracle: `a dangling record pointing at an unclaimed service`
+- note: The difference between this and subjack is maintenance and speed. Use one, not both.
+
+**subjack**  
+- preconditions: `a hostname list`
+- oracle: `dangling cname to an unclaimed service`
+
+**subzy**  
+- preconditions: `a hostname list`
+- oracle: `takeover candidate with the claimable service named`
 
 ## Decision tree
 

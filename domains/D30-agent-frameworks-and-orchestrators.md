@@ -28,7 +28,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -45,6 +45,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [CyberStrike](https://github.com/CyberStrikeus/CyberStrike) | L06 probing | A4 | A16,A02 | `git` | no | Terminal offensive harness claiming 13 plus agents and a large skill library |
 | [PentAGI](https://github.com/vxcontrol/pentagi) | L07 exploitation | A4 | A16,A02 | `git` | no | Multi agent pentest system with a sandboxed execution layer and persistent memory |
 | [Strix](https://github.com/usestrix/strix) | L07 exploitation | A4 | A16,A02 | `git` | no | Autonomous security agents that validate findings rather than only reporting |
+| [Shuffle](https://github.com/Shuffle/Shuffle) | L11 fix verification | A2 | A16 | `git` | no | Open source SOAR, useful for wiring agent output into a response workflow |
 
 ### Details that matter
 
@@ -98,6 +99,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **This repo: docs/ORCHESTRATION.md**  
 - oracle: `critic verdict per finding`
 - note: Local document, link is a placeholder to the repo root.
+
+**Shuffle**  
+- preconditions: `a workflow to automate`
+- oracle: `an app that runs on a trigger`
+- note: The defensive counterpart to an orchestrator. Same primitives, opposite intent.
 
 ## Decision tree
 

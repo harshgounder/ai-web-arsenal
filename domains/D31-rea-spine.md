@@ -32,7 +32,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-21 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+23 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -50,6 +50,8 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [inspect_web_page](https://rea.tools) | L03 surface mapping | A3 | A08,A05 | `mcp:rea` | yes | DOM, accessibility tree, scripts, resources, storage key inventory, JSON body shapes, WebSocket shapes |
 | [discover_webmcp_tools](https://rea.tools) | L03 surface mapping | A3 | A16,A08 | `mcp:rea` | yes | Every page registered WebMCP tool and its input schema, passively |
 | [inspect_android_class / inspect_android_method](https://rea.tools) | L05 hypothesis | A3 | A06 | `mcp:rea` | yes | Class members and a single decompiled method, plus reference tracing for an overload |
+| [dnSpy](https://github.com/0xd4d/dnSpy) | L05 hypothesis | A2 | A08,A06 | `git` | no | .NET decompiler and debugger, the readable path into a managed binary |
+| [plasma](https://github.com/joelpx/plasma) | L05 hypothesis | A2 | A06 | `git` | no | Interactive x86 and ARM disassembler with a terminal UI |
 | [reconcile_javascript_runtime](https://rea.tools) | L05 hypothesis | A3 | A05,A08 | `mcp:rea` | yes | Static bundle graph against observed runtime scripts, so dead code and hidden chunks separate |
 | [recover_javascript_sources](https://rea.tools) | L05 hypothesis | A3 | A01,A05 | `mcp:rea` | yes | Wakaru deobfuscation into readable modules with source maps emitted |
 | [trace_web_source_location](https://rea.tools) | L05 hypothesis | A3 | A08 | `mcp:rea` | yes | Generated position back to original source through a paired source map, with embedded sourcesContent |
@@ -175,6 +177,15 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a binary file`
 - oracle: `structural query result`
 - defense levels it addresses: F1
+
+**dnSpy**  
+- preconditions: `a .NET assembly`
+- oracle: `decompiled source or a live debug session`
+- note: Archived upstream. Still the best free .NET debugger, use ILSpy where you only need to read.
+
+**plasma**  
+- preconditions: `a native binary`
+- oracle: `annotated disassembly`
 
 ## Decision tree
 

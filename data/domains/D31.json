@@ -712,6 +712,60 @@
    "status": "ESTABLISHED",
    "call": "https://github.com/wader/fq",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d31-dnspy",
+   "name": "dnSpy",
+   "url": "https://github.com/0xd4d/dnSpy",
+   "role": ".NET decompiler and debugger, the readable path into a managed binary",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "preconditions": [
+    "a .NET assembly"
+   ],
+   "oracle": [
+    "decompiled source or a live debug session"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Archived upstream. Still the best free .NET debugger, use ILSpy where you only need to read."
+  },
+  {
+   "id": "d31-plasma",
+   "name": "plasma",
+   "url": "https://github.com/joelpx/plasma",
+   "role": "Interactive x86 and ARM disassembler with a terminal UI",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a native binary"
+   ],
+   "oracle": [
+    "annotated disassembly"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
   }
  ],
  "tree": {

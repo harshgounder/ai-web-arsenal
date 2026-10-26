@@ -344,6 +344,33 @@
    "detected_by": [],
    "status": "ESTABLISHED",
    "note": "Python 2 only. The traversal probe is easy to do by hand; this earns its place for the log poisoning and wrapper paths."
+  },
+  {
+   "id": "d13-dotdotpwn",
+   "name": "dotdotpwn",
+   "url": "https://github.com/wireghoul/dotdotpwn",
+   "role": "Traversal fuzzer across protocols and encodings",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A05"
+   ],
+   "preconditions": [
+    "a parameter reaching a file path"
+   ],
+   "oracle": [
+    "a file read outside the intended root"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
   }
  ],
  "tree": {

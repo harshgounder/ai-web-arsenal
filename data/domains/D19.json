@@ -392,6 +392,34 @@
    "status": "ESTABLISHED",
    "mirror_ref": 5,
    "mirror_provisional": true
+  },
+  {
+   "id": "d19-purplllama",
+   "name": "PurpleLlama",
+   "url": "https://github.com/meta-llama/PurpleLlama",
+   "role": "Meta's LLM safety toolset: risk taxonomy, benchmarks and guard models",
+   "driver": {
+    "install": "git",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A15"
+   ],
+   "preconditions": [
+    "a model endpoint"
+   ],
+   "oracle": [
+    "risk category scores"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Its value is the taxonomy and the benchmark, not the guard. Use the taxonomy to structure findings."
   }
  ],
  "tree": {

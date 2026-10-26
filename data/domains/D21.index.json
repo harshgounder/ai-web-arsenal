@@ -2,8 +2,8 @@
  "domain": "D21",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 13,
- "indexed_not_enriched": 60,
+ "enriched": 14,
+ "indexed_not_enriched": 59,
  "entries": [
   {
    "name": "Android Security",
@@ -30,13 +30,6 @@
    "name": "MCP Compatible",
    "url": "https://modelcontextprotocol.io/",
    "tier": "offscope",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "zinja-coder/apktool-mcp-server",
-   "url": "https://github.com/zinja-coder/apktool-mcp-server",
-   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

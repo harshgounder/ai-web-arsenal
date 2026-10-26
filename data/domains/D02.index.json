@@ -2,8 +2,8 @@
  "domain": "D02",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 21,
- "indexed_not_enriched": 178,
+ "enriched": 29,
+ "indexed_not_enriched": 170,
  "entries": [
   {
    "name": "NoSQLMap",
@@ -41,27 +41,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Gato",
-   "url": "https://github.com/praetorian-inc/gato",
-   "tier": "tail",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Photon",
-   "url": "https://github.com/s0md3v/Photon",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Sublist3r",
-   "url": "https://github.com/aboul3la/Sublist3r",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "Whonow DNS Server",
    "url": "https://github.com/brannondorsey/whonow",
    "tier": "offscope",
@@ -69,44 +48,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "XRay",
-   "url": "https://github.com/evilsocket/xray",
-   "tier": "adjacent",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "awesome-osint",
    "url": "https://github.com/jivoi/awesome-osint",
    "tier": "tail",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "can-i-take-over-xyz>",
-   "url": "https://github.com/EdOverflow/can-i-take-over-xyz",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "dnsReaper>",
-   "url": "https://github.com/punk-security/dnsReaper",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "subjack>",
-   "url": "https://github.com/haccer/subjack",
-   "tier": "core_web",
-   "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "subzy>",
-   "url": "https://github.com/PentestPad/subzy",
-   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },

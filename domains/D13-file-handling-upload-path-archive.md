@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -41,6 +41,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [rea inspect_artifact / extract_artifact](https://rea.tools) | L05 hypothesis | A3 | A06,A05 | `mcp:rea` | yes | Inventory and safely extract an archive before trusting it |
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A05 | `pacman:curl` | no | Craft the exact multipart body, the only way to test parser edge cases |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `n/a reference` | no | File inclusion and upload payload corpus |
+| [dotdotpwn](https://github.com/wireghoul/dotdotpwn) | L07 exploitation | A2 | A06,A05 | `git` | no | Traversal fuzzer across protocols and encodings |
 | [fuxploider](https://github.com/almandin/fuxploider) | L07 exploitation | A2 | A05,A06 | `n/a reference` | no | Upload bypass matrix: extension, content type, magic bytes, polyglot |
 | [LFISuite](https://github.com/D35m0nd142/LFISuite) | L07 exploitation | A2 | A06,A01 | `git:https://github.com/D35m0nd142/LFISuite` | no | Local file inclusion detection and exploitation, including log poisoning paths |
 | [WSTG Path Traversal and File Include](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include/) | L10 reporting | A2 | A06 | `n/a reference` | no | The traversal and LFI test |
@@ -80,6 +81,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `file content returned that you did not upload`
 - defense levels it addresses: F2
 - note: Python 2 only. The traversal probe is easy to do by hand; this earns its place for the log poisoning and wrapper paths.
+
+**dotdotpwn**  
+- preconditions: `a parameter reaching a file path`
+- oracle: `a file read outside the intended root`
 
 ## Decision tree
 

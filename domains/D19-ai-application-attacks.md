@@ -32,7 +32,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -43,6 +43,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Lakera Gandalf](https://gandalf.lakera.ai/) | L06 probing | A2 | A16 | `n/a web` | no | Public prompt injection range, the calibration target before touching a real app |
 | [garak](https://github.com/NVIDIA/garak) | L06 probing | A2 | A16,A08 | `pipx:garak` | yes | LLM vulnerability scanner: prompt injection, jailbreak, leakage, toxicity probes across model families |
 | [promptfoo](https://github.com/promptfoo/promptfoo) | L06 probing | A2 | A16,A08 | `npm:promptfoo` | yes | Eval harness with red team plugins, the closest thing to CI for prompt injection regression |
+| [PurpleLlama](https://github.com/meta-llama/PurpleLlama) | L06 probing | A2 | A16,A15 | `git` | no | Meta's LLM safety toolset: risk taxonomy, benchmarks and guard models |
 | [AgentDojo](https://github.com/ethz-spylab/agentdojo) | L07 exploitation | A2 | A16,A02 | `git:https://github.com/ethz-spylab/agentdojo` | yes | Benchmark for prompt injection against tool using agents, with real tool environments |
 | [PyRIT](https://github.com/Azure/PyRIT) | L07 exploitation | A2 | A16,A01 | `pipx:pyrit` | yes | Microsoft's risk identification toolkit: orchestrators, converters, scorers for red teaming generative apps |
 | [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) | L10 reporting | A0 | A16,A08 | `n/a reference` | no | The taxonomy every LLM finding maps to |
@@ -101,6 +102,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - defense levels it addresses: F2
 - detected by: user input containing instruction override patterns
 - note: The utility loss number is the one that matters. A defence that breaks the agent is not a defence.
+
+**PurpleLlama**  
+- preconditions: `a model endpoint`
+- oracle: `risk category scores`
+- note: Its value is the taxonomy and the benchmark, not the guard. Use the taxonomy to structure findings.
 
 ## Decision tree
 
