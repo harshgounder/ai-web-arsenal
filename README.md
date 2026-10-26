@@ -22,7 +22,7 @@ rot with the disposable half.
 |---|---|---|
 | corpus entries | **21,397** | canonical, deduplicated across every source |
 | sources reconciled | **19** | awesome-lists, API lists, AI-security lists, MCP lists |
-| rows reconciled | **31,298** | `admitted 13,578 + excluded 17,513 + held 204 + residue 3` |
+| rows reconciled | **31,298** | `admitted 13,575 + excluded 17,516 + held 204 + residue 3` |
 | reconciliation identity | **holds** | checked per source and in aggregate |
 | tools in manifest | **64** | every install candidate verified against a real channel |
 | unresolved installs | **0** | nothing invented, nothing guessed |

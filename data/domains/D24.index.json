@@ -90,20 +90,6 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "HARNESS-IFACE",
-   "url": "https://docs.semgrep.dev/semgrep-appsec-platform/json-and-sarif",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "HARNESS-IFACE",
-   "url": "https://github.com/microsoft/sarif-tutorials",
-   "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "MITRE CWE-601",
    "url": "https://cwe.mitre.org/data/definitions/601.html",
    "tier": "adjacent",
@@ -230,9 +216,23 @@
    "status": "PROMOTABLE"
   },
   {
+   "name": "json and sarif",
+   "url": "https://docs.semgrep.dev/semgrep-appsec-platform/json-and-sarif",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
+  },
+  {
    "name": "kensaurus/mushi-mushi",
    "url": "https://github.com/kensaurus/mushi-mushi",
    "tier": "adjacent",
+   "n_sources": 1,
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "microsoft/sarif-tutorials",
+   "url": "https://github.com/microsoft/sarif-tutorials",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

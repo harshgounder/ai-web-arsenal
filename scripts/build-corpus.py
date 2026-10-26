@@ -143,6 +143,31 @@ def domain_of(text):
     return None
 
 
+
+JUNK_NAME = re.compile(r"^(github|gitlab|gitee|codeberg|repository|repo|link|here|this|site|website|web|page|"
+                       r"read more|more|source|docs|documentation|tool|article|blog|post|glama|mcp|server|"
+                       r"homepage|home|download|click here|unknown|n a|na|"
+                       r"HARNESS-IFACE|BENCH-\d+|(OFF|DEF|ENG|GOV|HUM|PHY|ENB|DATA)-\d{2})$", re.I)
+
+
+def derive_name(url):
+    """Recover a usable name when the anchor text was generic, a header, or a taxonomy id."""
+    if not url:
+        return None
+    m = re.match(r"https?://(?:www\.)?github\.com/([^/]+)/([^/#?]+)", url)
+    if m:
+        return f"{m.group(1)}/{re.sub(r'\.git$', '', m.group(2))}"
+    m = re.match(r"https?://(?:www\.)?(gitlab|gitee|codeberg)\.(?:com|org)/([^/]+)/([^/#?]+)", url)
+    if m:
+        return f"{m.group(2)}/{re.sub(r'\.git$', '', m.group(3))}"
+    p = re.sub(r"^https?://(?:www\.)?", "", url).split("?")[0].rstrip("/")
+    seg = [x for x in p.split("/") if x]
+    if len(seg) >= 2:
+        cand = seg[-1] if "." not in seg[-1] else seg[-2]
+        return re.sub(r"[_\-]+", " ", cand).strip()[:60] or None
+    return None
+
+
 def slug(s):
     s = re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
     return s[:80]
@@ -193,6 +218,15 @@ def main():
     out = []
     for e in corpus.values():
         blob = " ".join([e["name"], e["desc"], " ".join(e["sections"]), e["url"] or ""])
+        # name repair happens at build time. Doing it afterwards is pointless because this script
+        # regenerates the corpus from the raw entries every run.
+        if (JUNK_NAME.match((e.get("name") or "").strip())
+                or (e.get("name") or "").startswith("![")):
+            d = derive_name(e.get("url") or "")
+            if d:
+                e["name_original"] = e.get("name")
+                e["name"] = d
+                e["name_derived"] = True
         e["kind"] = kind_of(e["url"], e["name"], " ".join(e["sections"]), e["desc"])
         scored = wscore(" ".join([e["name"], e["desc"], " ".join(e["sections"])]))
         e["web_score"], e["strong_hits"], e["weak_hits"] = scored

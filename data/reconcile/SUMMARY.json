@@ -2,8 +2,8 @@
  "generated_at": "2026-10-26",
  "sources": 22,
  "rows_total": 31298,
- "admitted": 13578,
- "excluded": 17513,
+ "admitted": 13575,
+ "excluded": 17516,
  "held": 204,
  "orphan": 2,
  "unresolved": 1,
@@ -12,9 +12,9 @@
   "TAXONOMY_NODE": 12009,
   "IMAGE_NOT_ENTRY": 3439,
   "SOCIAL_OR_VIDEO": 930,
-  "OUT_OF_SCOPE_NONWEB": 482,
+  "OUT_OF_SCOPE_NONWEB": 481,
   "KNOWLEDGE_NOT_TOOL": 329,
-  "MCP_NON_SECURITY": 324,
+  "MCP_NON_SECURITY": 328,
   "UNCLASSIFIED_LOW_SIGNAL": 204,
   "not_in_corpus": 2
  },
@@ -101,8 +101,8 @@
   },
   "own-byok-cyber-arsenal": {
    "rows": 1580,
-   "admitted": 1007,
-   "excluded": 508,
+   "admitted": 1004,
+   "excluded": 511,
    "held": 65,
    "orphan": 0,
    "identity_holds": true

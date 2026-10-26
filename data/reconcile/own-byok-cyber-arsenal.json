@@ -1,24 +1,24 @@
 {
  "source": "own-byok-cyber-arsenal",
  "rows": 1580,
- "admitted": 1007,
- "excluded": 508,
+ "admitted": 1004,
+ "excluded": 511,
  "held": 65,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 304,
-  "OUT_OF_SCOPE_NONWEB": 36,
+  "OUT_OF_SCOPE_NONWEB": 35,
   "KNOWLEDGE_NOT_TOOL": 114,
   "IMAGE_NOT_ENTRY": 3,
   "SOCIAL_OR_VIDEO": 48,
-  "MCP_NON_SECURITY": 3,
+  "MCP_NON_SECURITY": 7,
   "UNCLASSIFIED_LOW_SIGNAL": 65
  },
  "unique_entries": {
-  "admit": 781,
-  "exclude": 424,
+  "admit": 778,
+  "exclude": 427,
   "hold": 64
  },
  "identity_holds": true,

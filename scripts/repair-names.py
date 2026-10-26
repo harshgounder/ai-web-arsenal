@@ -17,6 +17,8 @@ P = ROOT / "data" / "corpus.jsonl"
 JUNK = re.compile(r"^(github|gitlab|gitee|codeberg|repository|repo|link|here|this|site|website|web|page|"
                   r"read more|more|source|docs|documentation|tool|article|blog|post|glama|mcp|server|"
                   r"homepage|home|download|click here|unknown|n a|na)$", re.I)
+# taxonomy ids and table column headers that leaked into the name field
+JUNK2 = re.compile(r"^(OFF|DEF|ENG|GOV|HUM|PHY|ENB|DATA)-\d{2}$|^HARNESS-IFACE$|^BENCH-\d+$", re.I)
 
 
 def derive(url):
@@ -41,7 +43,7 @@ def main():
     fixed = 0
     for e in rows:
         n = (e.get("name") or "").strip()
-        if not JUNK.match(n) and not n.startswith("!["):
+        if not JUNK.match(n) and not JUNK2.match(n) and not n.startswith("!["):
             continue
         d = derive(e.get("url") or "")
         if d and d.lower() != n.lower():
