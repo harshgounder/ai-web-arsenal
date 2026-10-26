@@ -1,0 +1,763 @@
+{
+ "id": "D05",
+ "title": "Authorization, tenancy, field-level access",
+ "version": "0.1",
+ "generated": "2026-10-26",
+ "status": "AUTHORED. Technique layer lives in web-attack-atlas W02 (50 gated patterns). This document is the tooling and the decision path.",
+ "atoms": [
+  "A02",
+  "A03",
+  "A05",
+  "A06"
+ ],
+ "atom_notes": {
+  "A02": "the core primitive: a lower principal borrows higher authority",
+  "A03": "identity confusion makes the authorisation decision use the wrong subject",
+  "A05": "shape confusion lets a value pass validation and mean something else when written",
+  "A06": "path and namespace confusion makes the route authorise a different object than the handler uses"
+ },
+ "required_cells": [
+  {
+   "cell": "S05/L03/A3",
+   "why": "object inventory and ownership mapping before any test",
+   "filled": true
+  },
+  {
+   "cell": "S05/L04/A3",
+   "why": "enumerate ids, roles and tenants systematically",
+   "filled": true
+  },
+  {
+   "cell": "S05/L06/A3",
+   "why": "differential probing across two identities",
+   "filled": true
+  },
+  {
+   "cell": "S05/L07/A2",
+   "why": "prove the write lands on another principal's object",
+   "filled": true
+  },
+  {
+   "cell": "S05/L08/A5",
+   "why": "negative control that the same request fails for a third identity",
+   "filled": true
+  },
+  {
+   "cell": "S05/L10/A2",
+   "why": "impact framing, or the finding closes as informational",
+   "filled": false
+  },
+  {
+   "cell": "S05/L11/A3",
+   "why": "retest after the fix, replaying the exact request",
+   "filled": false
+  },
+  {
+   "cell": "S05/L12/A6",
+   "why": "continuous drift detection on role and scope changes",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d05-autorize",
+   "name": "Autorize",
+   "url": "https://github.com/Quitten/Autorize",
+   "role": "Burp extension that replays every request as a second lower privileged identity and flags differences",
+   "driver": {
+    "install": "burp-extension",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "two accounts at different privilege levels",
+    "traffic through Burp"
+   ],
+   "oracle": [
+    "response differential across identities"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "same object requested by two identities in quick succession"
+   ],
+   "agency": "A1",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "The single highest leverage authz tool. It automates the comparison that humans do by hand and forget to do consistently."
+  },
+  {
+   "id": "d05-authmatrix",
+   "name": "AuthMatrix",
+   "url": "https://github.com/SecurityInnovation/AuthMatrix",
+   "role": "Burp extension that builds a role by endpoint matrix and highlights unexpected access",
+   "driver": {
+    "install": "burp-extension",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "several roles configured",
+    "request set captured"
+   ],
+   "oracle": [
+    "matrix cell that should be denied but is allowed"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "role to endpoint access matrix per run"
+   ],
+   "agency": "A1",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-crapi",
+   "name": "OWASP crAPI",
+   "url": "https://github.com/OWASP/crAPI",
+   "role": "Microservice target with real object ownership, built for BOLA practice",
+   "driver": {
+    "install": "docker",
+    "verify": "docker compose ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A05"
+   ],
+   "preconditions": [
+    "lab"
+   ],
+   "oracle": [
+    "intended vulnerability reproduced"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [
+    "n/a lab"
+   ],
+   "agency": "A3",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "Use this to calibrate a tool before pointing it at a real target."
+  },
+  {
+   "id": "d05-vampi",
+   "name": "VAmPI",
+   "url": "https://github.com/erev0s/VAmPI",
+   "role": "Small vulnerable API, fastest smoke test for an authz agent",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "lab"
+   ],
+   "oracle": [
+    "intended vulnerability reproduced"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [
+    "n/a lab"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-juiceshop",
+   "name": "OWASP Juice Shop",
+   "url": "https://github.com/juice-shop/juice-shop",
+   "role": "Broad lab covering access control, mass assignment and logic in one app",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A05",
+    "A10"
+   ],
+   "preconditions": [
+    "lab"
+   ],
+   "oracle": [
+    "challenge solved"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [
+    "n/a lab"
+   ],
+   "agency": "A3",
+   "stage": "L07",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-webgoat",
+   "name": "OWASP WebGoat",
+   "url": "https://github.com/WebGoat/WebGoat",
+   "role": "Teaching target with explicit access control lessons",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "lab"
+   ],
+   "oracle": [
+    "lesson completion"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [
+    "n/a lab"
+   ],
+   "agency": "A1",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-ffuf",
+   "name": "ffuf",
+   "bin": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Enumerate object ids and tenant prefixes at scale",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A02",
+    "A06"
+   ],
+   "preconditions": [
+    "ids are enumerable or partially predictable"
+   ],
+   "oracle": [
+    "differential status or body per id"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "sequential id access pattern"
+   ],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-kiterunner",
+   "name": "kiterunner",
+   "bin": "kr",
+   "url": "https://github.com/assetnote/kiterunner",
+   "role": "Find the undocumented routes where authz is usually weakest",
+   "driver": {
+    "install": "aur:kiterunner-bin",
+    "verify": "kr version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06",
+    "A02"
+   ],
+   "preconditions": [
+    "route naming is conventional"
+   ],
+   "oracle": [
+    "status divergence on undocumented route"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "404 volume anomaly"
+   ],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-newman",
+   "name": "newman",
+   "bin": "newman",
+   "url": "https://github.com/postmanlabs/newman",
+   "role": "Replay the same collection as two identities, the mechanical core of authz testing",
+   "driver": {
+    "install": "npm:newman",
+    "verify": "newman --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "a collection exists or was built from a HAR"
+   ],
+   "oracle": [
+    "assertion pass for one identity, expected denial for the other"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "n/a"
+   ],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "Two runs of the same collection with different tokens is the cheapest authz harness that exists."
+  },
+  {
+   "id": "d05-schemathesis",
+   "name": "schemathesis",
+   "bin": "schemathesis",
+   "url": "https://github.com/schemathesis/schemathesis",
+   "role": "Property based testing that surfaces object level failures across every operation",
+   "driver": {
+    "install": "pipx:schemathesis",
+    "verify": "schemathesis --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A05"
+   ],
+   "preconditions": [
+    "a schema, real or recovered"
+   ],
+   "oracle": [
+    "status violation against the schema"
+   ],
+   "evades": [
+    "F3"
+   ],
+   "detected_by": [
+    "high volume of invalid requests"
+   ],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-nuclei",
+   "name": "nuclei",
+   "bin": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Known misconfiguration and exposure checks before manual work",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A02",
+    "A15"
+   ],
+   "preconditions": [
+    "templates relevant to the stack"
+   ],
+   "oracle": [
+    "template match with extracted evidence"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "template signature"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-zap",
+   "name": "OWASP ZAP",
+   "bin": "zaproxy",
+   "url": "https://www.zaproxy.org/",
+   "role": "Access control scan mode plus authenticated context",
+   "driver": {
+    "install": "pacman:zaproxy",
+    "verify": "zaproxy -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "authenticated contexts configured"
+   ],
+   "oracle": [
+    "access control report per rule"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "scan pattern"
+   ],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-mitmproxy",
+   "name": "mitmproxy",
+   "bin": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/",
+   "role": "Capture two identities side by side, the input to every comparison",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "two authenticated sessions"
+   ],
+   "oracle": [
+    "capture comparison"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [
+    "n/a offline"
+   ],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-atlas-w02",
+   "name": "Atlas W02: 50 authorisation-on-write patterns",
+   "url": "../../web-attack-atlas/waves/W02/patterns.jsonl",
+   "role": "The technique layer. Object substitution, tenant escape, mass assignment, function level gaps, ownership transfer, soft delete resurrection, bulk skips, alternate parsers, stale authorisation and 41 more, each with preconditions, oracle and counter.",
+   "driver": {
+    "install": "n/a data",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A03",
+    "A05",
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED",
+   "note": "This document does not restate those patterns. It joins on entry_id."
+  },
+  {
+   "id": "d05-owasp-api1",
+   "name": "OWASP API1:2023 Broken Object Level Authorization",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization.md",
+   "role": "The canonical definition and mitigation set for BOLA",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-owasp-api5",
+   "name": "OWASP API5:2023 Broken Function Level Authorization",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization.md",
+   "role": "The role and function counterpart to BOLA",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-wstg-athz",
+   "name": "WSTG Authorization (7 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/",
+   "role": "The classic test list, for coverage checking",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-asvs-v8",
+   "name": "ASVS V8 Authorization",
+   "url": "https://github.com/OWASP/ASVS",
+   "role": "Requirement set, useful as the fix side of a finding",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d05-mindapi",
+   "name": "MindAPI",
+   "url": "https://dsopas.github.io/MindAPI/play/",
+   "role": "Manual decision tree for API authorisation testing",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED",
+   "note": "Closest prior art. It is a mind map, not machine readable, which is the gap this repo fills."
+  },
+  {
+   "id": "d05-supabase-rls",
+   "name": "Row level security reasoning (Postgres/Supabase class)",
+   "url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+   "role": "When authorisation lives in the database, the test is an RLS bypass class, not an endpoint check",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A05"
+   ],
+   "preconditions": [
+    "authorisation delegated to row level policies",
+    "client talks to the database directly"
+   ],
+   "oracle": [
+    "row visible that the policy should hide"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [
+    "policy bypass query"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "PROBABLE",
+   "note": "Common in modern stacks and almost never in authz test checklists, because the test surface is the client SDK not an HTTP endpoint."
+  }
+ ],
+ "tree": {
+  "id": "d05-root",
+  "q": "Does the application authorise on objects (BOLA) or on functions (BFLA) or both?",
+  "why": "The test procedure diverges completely. BOLA needs two identities and object ids. BFLA needs a role matrix.",
+  "branches": [
+   {
+    "a": "Both, typical",
+    "next": {
+     "id": "d05-both",
+     "q": "Do you have two accounts at different privilege levels and at least one object owned by a third?",
+     "branches": [
+      {
+       "a": "Yes",
+       "action": "run the same request set as both identities, diff responses, then substitute ids across owners",
+       "tools": [
+        "d05-newman",
+        "d05-autorize",
+        "d05-mitmproxy"
+       ],
+       "oracle": "differential across identities",
+       "next": {
+        "id": "d05-both-found",
+        "q": "Does the difference survive a third identity and a negative control?",
+        "action": "third identity must be denied; a nonexistent id must 404. Otherwise it is an artifact",
+        "oracle": "negative_control"
+       }
+      },
+      {
+       "a": "No",
+       "action": "create them. authz cannot be tested with one identity, and this is the most common reason it is not tested",
+       "tools": []
+      }
+     ]
+    }
+   },
+   {
+    "a": "Authorisation is in the database (RLS, policies)",
+    "action": "test the client SDK path directly, not the HTTP API. look for policies that reference a user supplied claim",
+    "tools": [
+     "d05-supabase-rls"
+    ],
+    "oracle": "row visible that policy should hide"
+   },
+   {
+    "a": "Authorisation is in a gateway or policy engine",
+    "action": "test the gateway and the service independently. the gap between them is the finding surface",
+    "tools": [],
+    "oracle": "same request, different decision at two layers"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "BOLA write",
+   "detect": "write to an object not in the session scope",
+   "control": "object level check on every item",
+   "rule": "ownership mismatch per write"
+  },
+  {
+   "attack": "BFLA",
+   "detect": "role to endpoint matrix anomaly",
+   "control": "function level authz, deny by default",
+   "rule": "403 to 200 transition per role"
+  },
+  {
+   "attack": "mass assignment",
+   "detect": "write to a field absent from the role's request schema",
+   "control": "explicit allowlist binding",
+   "rule": "unexpected field in write payload"
+  },
+  {
+   "attack": "tenant escape",
+   "detect": "cross tenant reference",
+   "control": "tenant from token, never body",
+   "rule": "cross tenant reference audit"
+  },
+  {
+   "attack": "bulk authz skip",
+   "detect": "heterogeneous ownership in one batch",
+   "control": "authorise each element",
+   "rule": "batch ownership mix"
+  },
+  {
+   "attack": "stale authz",
+   "detect": "decision timestamp older than revocation",
+   "control": "authorise against authoritative store",
+   "rule": "revocation to decision lag"
+  },
+  {
+   "attack": "RLS bypass",
+   "detect": "query returning rows outside policy",
+   "control": "policy tested against the client SDK path",
+   "rule": "policy coverage per table"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool automatically creates N identities and replays a full captured session as each",
+   "class": "no-tool",
+   "build_candidate": "given a HAR and N credentials, replay every request N times and emit the access matrix as JSON"
+  },
+  {
+   "gap": "No tool diffs gateway decisions against service decisions for the same request",
+   "class": "no-tool",
+   "build_candidate": "dual-send the request to both layers and compare status plus body hash"
+  },
+  {
+   "gap": "No credible RLS/policy tester that works from the client SDK rather than the REST layer",
+   "class": "no-tool",
+   "build_candidate": "wrap the client SDK, enumerate tables via the API surface, probe row visibility per identity"
+  },
+  {
+   "gap": "L10 impact framing, L11 retest and L12 drift cells are empty",
+   "class": "coverage",
+   "build_candidate": "impact template per authz class plus a replay based retest harness"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D05.index.json"
+ }
+}

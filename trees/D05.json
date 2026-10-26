@@ -1,0 +1,51 @@
+{
+ "id": "d05-root",
+ "q": "Does the application authorise on objects (BOLA) or on functions (BFLA) or both?",
+ "why": "The test procedure diverges completely. BOLA needs two identities and object ids. BFLA needs a role matrix.",
+ "branches": [
+  {
+   "a": "Both, typical",
+   "next": {
+    "id": "d05-both",
+    "q": "Do you have two accounts at different privilege levels and at least one object owned by a third?",
+    "branches": [
+     {
+      "a": "Yes",
+      "action": "run the same request set as both identities, diff responses, then substitute ids across owners",
+      "tools": [
+       "d05-newman",
+       "d05-autorize",
+       "d05-mitmproxy"
+      ],
+      "oracle": "differential across identities",
+      "next": {
+       "id": "d05-both-found",
+       "q": "Does the difference survive a third identity and a negative control?",
+       "action": "third identity must be denied; a nonexistent id must 404. Otherwise it is an artifact",
+       "oracle": "negative_control"
+      }
+     },
+     {
+      "a": "No",
+      "action": "create them. authz cannot be tested with one identity, and this is the most common reason it is not tested",
+      "tools": []
+     }
+    ]
+   }
+  },
+  {
+   "a": "Authorisation is in the database (RLS, policies)",
+   "action": "test the client SDK path directly, not the HTTP API. look for policies that reference a user supplied claim",
+   "tools": [
+    "d05-supabase-rls"
+   ],
+   "oracle": "row visible that policy should hide"
+  },
+  {
+   "a": "Authorisation is in a gateway or policy engine",
+   "action": "test the gateway and the service independently. the gap between them is the finding surface",
+   "tools": [],
+   "oracle": "same request, different decision at two layers"
+  }
+ ]
+}

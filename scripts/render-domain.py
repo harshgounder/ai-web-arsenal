@@ -188,7 +188,8 @@ def main():
             print(f"missing {f}")
             continue
         d = json.load(open(f))
-        slug = d["title"].split(":")[0].strip().lower().replace(" ", "-")
+        import re as _re
+        slug = _re.sub(r"[^a-z0-9]+", "-", d["title"].split(":")[0].strip().lower()).strip("-")
         target = OUT / f"{d['id']}-{slug}.md"
         target.write_text(render(d))
         tdir = ROOT / "trees"
