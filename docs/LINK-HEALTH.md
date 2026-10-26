@@ -99,3 +99,28 @@ Four problems found and fixed:
 ## Standing rule
 
 A URL that has not been fetched is a hypothesis. Two invented repositories and one guessed BApp slug is enough evidence for that. Every URL in this repo now has a fetch date behind it.
+
+---
+
+# Final verification sweep (2026-10-27, round 38)
+
+Full pipeline, all 13 stages, then every URL in every authored domain.
+
+```
+parse        31,298 rows
+corpus       21,397 by url, 21,194 by tool identity
+reconcile    13,575 admitted + 17,516 excluded + 204 held + 3 residue, identity holds
+taxonomy     624 of 706 mapped (88.4%)
+tools        64, 0 unresolved
+bootstrap    11 scripts generated
+domains      28 authored + 9 pointers, validator passes
+links        264 of 265 live
+```
+
+The only non-live URL is `https://www.w3.org/TR/webauthn-3/` returning 403 to automated clients.
+That is the W3C refusing bots, not a dead link, recorded BLOCKED.
+
+Nothing was fixed this round because nothing was broken. That is the first verification pass in this
+project where the answer was 'clean', and it took nine rounds of finding defects to get here.
+
+Standing rule, unchanged: a URL that has not been fetched is a hypothesis.
