@@ -2,7 +2,7 @@
  "domain": "D31",
  "generated_at": "2026-10-26",
  "enriched": 21,
- "indexed_not_enriched": 153,
+ "indexed_not_enriched": 151,
  "entries": [
   {
    "name": "mitmproxy",
@@ -217,13 +217,6 @@
   {
    "name": "![AIops-tools/Proxy-AIops MCP server",
    "url": "https://glama.ai/mcp/servers/AIops-tools/Proxy-AIops/badges/score.svg",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "![agent-easy-use/mobile-easy-use MCP server",
-   "url": "https://glama.ai/mcp/servers/agent-easy-use/mobile-easy-use/badges/score.svg",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "INDEXED_NOT_ENRICHED"
@@ -910,13 +903,6 @@
   {
    "name": "emirmrkaljevic/usb-rea",
    "url": "https://github.com/emirmrkaljevic/usb-rea",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "INDEXED_NOT_ENRICHED"
-  },
-  {
-   "name": "friTap",
-   "url": "https://github.com/fkie-cad/friTap",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "INDEXED_NOT_ENRICHED"

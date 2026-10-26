@@ -1,0 +1,621 @@
+{
+ "id": "D02",
+ "title": "Recon and surface mapping",
+ "version": "0.1",
+ "generated": "2026-10-26",
+ "status": "AUTHORED. Cheap to do correctly because every driver here is already verified in the manifest.",
+ "atoms": [
+  "A08",
+  "A06",
+  "A05",
+  "A15"
+ ],
+ "atom_notes": {
+  "A08": "recon is information exposure from the target's own public surface",
+  "A06": "names, paths and virtual hosts are namespace structure and the disagreement between layers is the finding",
+  "A05": "hidden parameters are shape the UI never advertises",
+  "A15": "version and configuration differences between hosts in the same estate"
+ },
+ "required_cells": [
+  {
+   "cell": "S01/L02/A2",
+   "why": "passive acquisition costs the target nothing and should precede any active step",
+   "filled": true
+  },
+  {
+   "cell": "S02/L03/A3",
+   "why": "turning names into a surface is the pivot every later stage depends on",
+   "filled": true
+  },
+  {
+   "cell": "S02/L04/A3",
+   "why": "discovery at scale is the highest yield automated step",
+   "filled": true
+  },
+  {
+   "cell": "S02/L05/A2",
+   "why": "deciding what is worth testing is where recon either pays off or drowns you",
+   "filled": false
+  },
+  {
+   "cell": "S01/L12/A6",
+   "why": "new hosts and routes appear weekly, which needs monitoring not a one time scan",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d02-subfinder",
+   "name": "subfinder",
+   "url": "https://github.com/projectdiscovery/subfinder",
+   "role": "Passive subdomain enumeration from public sources",
+   "driver": {
+    "install": "aur:subfinder",
+    "verify": "subfinder -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a root domain and passive sources"
+   ],
+   "oracle": [
+    "hostnames not visible in any other source"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "note": "Passive first. It costs the target nothing and often finds the forgotten subdomain."
+  },
+  {
+   "id": "d02-dnsx",
+   "name": "dnsx",
+   "url": "https://github.com/projectdiscovery/dnsx",
+   "role": "DNS resolution, record types, resolver brute force",
+   "driver": {
+    "install": "aur:dnsx",
+    "verify": "dnsx -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a hostname list"
+   ],
+   "oracle": [
+    "resolved hosts, cname chains and dangling records"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "note": "The -cname plus -a pair is how you find subdomain takeover candidates mechanically."
+  },
+  {
+   "id": "d02-httpx",
+   "name": "httpx",
+   "url": "https://github.com/projectdiscovery/httpx",
+   "role": "HTTP probing, status, tech detect and titles at scale",
+   "driver": {
+    "install": "aur:httpx-bin",
+    "verify": "httpx -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a host list"
+   ],
+   "oracle": [
+    "live hosts with status, title and detected technology"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "This is the pivot from names to a surface. Everything downstream consumes its json."
+  },
+  {
+   "id": "d02-naabu",
+   "name": "naabu",
+   "url": "https://github.com/projectdiscovery/naabu",
+   "role": "Port scan, top ports, fast",
+   "driver": {
+    "install": "aur:naabu",
+    "verify": "naabu -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a host list"
+   ],
+   "oracle": [
+    "open ports per host"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "Only after httpx. Most web work needs 80/443 and the few adjacent ports, not a full sweep."
+  },
+  {
+   "id": "d02-whatweb",
+   "name": "whatweb",
+   "url": "https://github.com/urbanadventurer/WhatWeb",
+   "role": "Technology fingerprinting with plugin detail",
+   "driver": {
+    "install": "aur:whatweb",
+    "verify": "whatweb --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a live host"
+   ],
+   "oracle": [
+    "frameworks, servers, versions and plugins"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "Aggression 1 only. Higher aggression is loud and rarely worth it."
+  },
+  {
+   "id": "d02-nmap",
+   "name": "nmap",
+   "url": "https://nmap.org/book/",
+   "role": "Service and version truth when HTTP headers lie",
+   "driver": {
+    "install": "pacman:nmap",
+    "verify": "nmap --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "a host and port"
+   ],
+   "oracle": [
+    "service banner and version"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "The fallback arbiter. If httpx and the HTML disagree about the stack, nmap settles it."
+  },
+  {
+   "id": "d02-katana",
+   "name": "katana",
+   "url": "https://github.com/projectdiscovery/katana",
+   "role": "Crawler that executes and parses JS to find endpoints",
+   "driver": {
+    "install": "aur:katana",
+    "verify": "katana -version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a live host"
+   ],
+   "oracle": [
+    "endpoint list including routes only JS reveals"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "The -jc flag is the point. A crawler that does not parse JS misses the whole modern surface."
+  },
+  {
+   "id": "d02-gau",
+   "name": "gau",
+   "url": "https://github.com/lc/gau",
+   "role": "Known URLs from wayback, commoncrawl and alienvault",
+   "driver": {
+    "install": "aur:gau",
+    "verify": "gau --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a domain"
+   ],
+   "oracle": [
+    "historical endpoint list"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "note": "Free history. Run it before touching the host: it often lists endpoints that were removed from the app but not from the server."
+  },
+  {
+   "id": "d02-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Content discovery and parameter fuzzing",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a wordlist and a live host"
+   ],
+   "oracle": [
+    "status and size clusters revealing hidden paths"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "Set -rate. An agent that ignores rate is a denial of service."
+  },
+  {
+   "id": "d02-feroxbuster",
+   "name": "feroxbuster",
+   "url": "https://github.com/epi052/feroxbuster",
+   "role": "Recursive content discovery",
+   "driver": {
+    "install": "aur:feroxbuster",
+    "verify": "feroxbuster --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a live host"
+   ],
+   "oracle": [
+    "nested directories and files"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "Recursion finds the nested app that the flat wordlist misses."
+  },
+  {
+   "id": "d02-gobuster",
+   "name": "gobuster",
+   "url": "https://github.com/OJ/gobuster",
+   "role": "Directory, DNS and vhost brute force",
+   "driver": {
+    "install": "pacman:gobuster",
+    "verify": "gobuster version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a wordlist"
+   ],
+   "oracle": [
+    "vhosts or paths that respond differently"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "vhost mode is the underused one: shared IP, different app per Host header."
+  },
+  {
+   "id": "d02-arjun",
+   "name": "arjun",
+   "url": "https://github.com/s0md3v/Arjun",
+   "role": "HTTP parameter discovery",
+   "driver": {
+    "install": "pipx:arjun",
+    "verify": "arjun --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "an endpoint"
+   ],
+   "oracle": [
+    "hidden parameters"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "Hidden parameters are where mass assignment and logic bugs start."
+  },
+  {
+   "id": "d02-rea-bundle",
+   "name": "rea analyze_web_bundle",
+   "url": "https://rea.tools",
+   "role": "Routes and endpoints from the bundle, which no crawler will find because they are not linked",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "preconditions": [
+    "a reachable origin"
+   ],
+   "oracle": [
+    "route candidates absent from the crawl"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "Crawl finds links. The bundle finds routes. Both are needed and they disagree, which is the interesting part."
+  },
+  {
+   "id": "d02-rea-capture",
+   "name": "rea inspect_web_network_capture",
+   "url": "https://rea.tools",
+   "role": "Endpoint inventory from real traffic, with auth requirement and UI reachability",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a HAR or mitmproxy dump"
+   ],
+   "oracle": [
+    "endpoints the UI never calls"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d02-rea-scenario",
+   "name": "rea capture_browser_scenario",
+   "url": "https://rea.tools",
+   "role": "Deterministic capture of a scripted flow instead of hand clicking",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A05"
+   ],
+   "preconditions": [
+    "a browser executable or CDP endpoint"
+   ],
+   "oracle": [
+    "reproducible artefact set"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d02-shodan-censys",
+   "name": "Shodan and Censys (indexed scan data)",
+   "url": "https://www.shodan.io/",
+   "role": "What the internet already knows about the estate, with zero requests to the target",
+   "driver": {
+    "install": "api:key",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "an API key",
+    "an authorisation that covers third party data about the target"
+   ],
+   "oracle": [
+    "hosts and services attributed to the organisation"
+   ],
+   "evades": [
+    "F1"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "ESTABLISHED",
+   "note": "Check the authorisation scope covers querying third party indexes about the target. It usually does not."
+  }
+ ],
+ "tree": {
+  "id": "d02-root",
+  "q": "Is your goal coverage of an estate, or depth on one app?",
+  "why": "The two goals produce opposite recon strategies and most people run the depth strategy while claiming coverage.",
+  "branches": [
+   {
+    "a": "Coverage of an estate",
+    "action": "passive first, then probe, then fingerprint. never crawl every host, fingerprint and rank instead",
+    "tools": [
+     "d02-subfinder",
+     "d02-dnsx",
+     "d02-httpx",
+     "d02-whatweb"
+    ],
+    "oracle": "host inventory with technology per host"
+   },
+   {
+    "a": "Depth on one app",
+    "next": {
+     "id": "d02-depth",
+     "q": "Do you have a capture of a real session yet?",
+     "branches": [
+      {
+       "a": "No",
+       "action": "browse once through the proxy. a capture beats a crawl because it includes authenticated routes",
+       "tools": [
+        "d02-rea-capture"
+       ],
+       "oracle": "endpoint inventory with auth requirement"
+      },
+      {
+       "a": "Yes",
+       "action": "diff three sources: crawl, bundle routes, capture. the set difference is the finding surface",
+       "tools": [
+        "d02-katana",
+        "d02-rea-bundle",
+        "d02-rea-capture"
+       ],
+       "oracle": "route present in one source and absent in the others"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Find forgotten assets",
+    "action": "historical urls plus certificate transparency plus dns history, then confirm liveness",
+    "tools": [
+     "d02-gau",
+     "d02-dnsx",
+     "d02-httpx"
+    ],
+    "oracle": "live endpoint absent from current navigation"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "subdomain takeover",
+   "detect": "dangling cname to an unclaimed service",
+   "control": "inventory cnames, claim or remove",
+   "rule": "cname to unowned service"
+  },
+  {
+   "attack": "shadow API discovery",
+   "detect": "route present in bundle but never called",
+   "control": "inventory from code, not only from traffic",
+   "rule": "route in bundle absent in logs"
+  },
+  {
+   "attack": "vhost confusion",
+   "detect": "different app served per Host header on one IP",
+   "control": "default vhost denies unknown hosts",
+   "rule": "host header variance"
+  },
+  {
+   "attack": "exposed non production host",
+   "detect": "staging or dev host with weaker auth",
+   "control": "same auth posture everywhere, or no public DNS",
+   "rule": "non prod host reachable"
+  },
+  {
+   "attack": "parameter hiding",
+   "detect": "parameters accepted but undocumented",
+   "control": "explicit allowlist per endpoint",
+   "rule": "unexpected parameter accepted"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool diffs crawl, bundle and capture as three sets and reports the differences",
+   "class": "no-tool",
+   "build_candidate": "join katana output, rea bundle routes and rea capture urls, emit the three way set difference with source attribution"
+  },
+  {
+   "gap": "No credible ranking of discovered hosts by expected value",
+   "class": "no-tool",
+   "build_candidate": "score by tech rarity, auth presence, response novelty and historical change, then sort"
+  },
+  {
+   "gap": "Continuous estate monitoring is a product feature everywhere and a script nowhere",
+   "class": "coverage",
+   "build_candidate": "scheduled httpx diff plus a change feed keyed on title, tech and status"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D02.index.json"
+ }
+}

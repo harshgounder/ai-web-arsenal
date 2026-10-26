@@ -226,7 +226,9 @@
     "A03"
    ],
    "preconditions": [],
-   "oracle": [],
+   "oracle": [
+    "template match with extracted evidence"
+   ],
    "evades": [
     "F2"
    ],
@@ -251,7 +253,10 @@
     "A03"
    ],
    "preconditions": [],
-   "oracle": [],
+   "oracle": [
+    "modified token accepted by the server",
+    "claim change reflected in the session"
+   ],
    "evades": [
     "F2"
    ],
@@ -307,7 +312,10 @@
     "A05"
    ],
    "preconditions": [],
-   "oracle": [],
+   "oracle": [
+    "behaviour differs from the specification",
+    "redirect accepted to an unregistered URI"
+   ],
    "evades": [
     "F2"
    ],
@@ -333,7 +341,9 @@
     "A07"
    ],
    "preconditions": [],
-   "oracle": [],
+   "oracle": [
+    "module completed as intended"
+   ],
    "evades": [
     "F2"
    ],
@@ -357,7 +367,9 @@
     "A03"
    ],
    "preconditions": [],
-   "oracle": [],
+   "oracle": [
+    "lesson completed as intended"
+   ],
    "evades": [
     "F2"
    ],

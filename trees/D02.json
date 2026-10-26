@@ -1,0 +1,55 @@
+{
+ "id": "d02-root",
+ "q": "Is your goal coverage of an estate, or depth on one app?",
+ "why": "The two goals produce opposite recon strategies and most people run the depth strategy while claiming coverage.",
+ "branches": [
+  {
+   "a": "Coverage of an estate",
+   "action": "passive first, then probe, then fingerprint. never crawl every host, fingerprint and rank instead",
+   "tools": [
+    "d02-subfinder",
+    "d02-dnsx",
+    "d02-httpx",
+    "d02-whatweb"
+   ],
+   "oracle": "host inventory with technology per host"
+  },
+  {
+   "a": "Depth on one app",
+   "next": {
+    "id": "d02-depth",
+    "q": "Do you have a capture of a real session yet?",
+    "branches": [
+     {
+      "a": "No",
+      "action": "browse once through the proxy. a capture beats a crawl because it includes authenticated routes",
+      "tools": [
+       "d02-rea-capture"
+      ],
+      "oracle": "endpoint inventory with auth requirement"
+     },
+     {
+      "a": "Yes",
+      "action": "diff three sources: crawl, bundle routes, capture. the set difference is the finding surface",
+      "tools": [
+       "d02-katana",
+       "d02-rea-bundle",
+       "d02-rea-capture"
+      ],
+      "oracle": "route present in one source and absent in the others"
+     }
+    ]
+   }
+  },
+  {
+   "a": "Find forgotten assets",
+   "action": "historical urls plus certificate transparency plus dns history, then confirm liveness",
+   "tools": [
+    "d02-gau",
+    "d02-dnsx",
+    "d02-httpx"
+   ],
+   "oracle": "live endpoint absent from current navigation"
+  }
+ ]
+}

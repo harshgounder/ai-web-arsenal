@@ -92,6 +92,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - note: BApp store URL changes; resolve the current listing from the store rather than trusting a fixed path.
 
 **Keycloak (as a test IdP)**  
+- oracle: `behaviour differs from the specification`, `redirect accepted to an unregistered URI`
 - defense levels it addresses: F2
 - note: Most OAuth findings are configuration findings. A local IdP lets you confirm the class before touching a target.
 
