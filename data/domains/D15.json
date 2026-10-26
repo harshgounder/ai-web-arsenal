@@ -1,0 +1,374 @@
+{
+ "id": "D15",
+ "title": "Deserialization and template engines",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The class where the gadget is not the finding.",
+ "atoms": [
+  "A01",
+  "A11",
+  "A05"
+ ],
+ "atom_notes": {
+  "A01": "a deserializer or template engine is an interpreter that accepts structured input",
+  "A11": "the gadget comes from a dependency, so the classpath or composer lock is part of the attack surface",
+  "A05": "the serializer format is shape, and shape confusion is how a payload survives validation"
+ },
+ "required_cells": [
+  {
+   "cell": "S07/L05/A2",
+   "why": "identify the sink and the dependency set before choosing a chain",
+   "filled": true
+  },
+  {
+   "cell": "S07/L06/A2",
+   "why": "confirm the sink with a benign probe before a gadget",
+   "filled": true
+  },
+  {
+   "cell": "S07/L07/A2",
+   "why": "the chain is the exploitation step",
+   "filled": true
+  },
+  {
+   "cell": "S07/L08/A5",
+   "why": "a callback from the target process is the only acceptable proof",
+   "filled": true
+  },
+  {
+   "cell": "S07/L11/A3",
+   "why": "retest after a library upgrade, which is the actual fix",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d15-ysoserial",
+   "name": "ysoserial",
+   "url": "https://github.com/frohoff/ysoserial",
+   "role": "Java gadget chains, matched to the classpath in front of you",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A11"
+   ],
+   "preconditions": [
+    "a Java deserialization sink",
+    "a gadget present in the target dependencies"
+   ],
+   "oracle": [
+    "execution or a callback from the target"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "The finding is the sink, not the gadget. Identify the sink first, then match a gadget to the classpath. Doing it the other way round wastes days."
+  },
+  {
+   "id": "d15-ysoserial-net",
+   "name": "ysoserial.net",
+   "url": "https://github.com/pwntester/ysoserial.net",
+   "role": "The .NET counterpart, ViewState and BinaryFormatter sinks",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A11"
+   ],
+   "preconditions": [
+    ".NET deserialization sink",
+    "machineKey or equivalent known or recoverable"
+   ],
+   "oracle": [
+    "execution confirmed by callback"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d15-phpggc",
+   "name": "PHPGGC",
+   "url": "https://github.com/ambionics/phpggc",
+   "role": "PHP gadget chains against composer libraries",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A11"
+   ],
+   "preconditions": [
+    "a PHP unserialize sink",
+    "a framework present in the target"
+   ],
+   "oracle": [
+    "execution or a callback"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Not in the AUR. Clone and run. Most PHP RCE chains come from a framework gadget, not custom code."
+  },
+  {
+   "id": "d15-ps-deser",
+   "name": "PortSwigger: deserialization",
+   "url": "https://portswigger.net/web-security/deserialization",
+   "role": "Explanation plus labs, the fastest calibration for a chain",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d15-payloads",
+   "name": "PayloadsAllTheThings",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+   "role": "Serialization payload corpus per language",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a language and a sink"
+   ],
+   "oracle": [
+    "a payload for that sink"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d15-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per language gadget and sink reference",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d15-fq",
+   "name": "fq",
+   "url": "https://github.com/wader/fq",
+   "role": "Inspect an unknown serialized blob before assuming its format",
+   "driver": {
+    "install": "pacman:fq",
+    "verify": "fq --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a binary or encoded blob"
+   ],
+   "oracle": [
+    "structural read of the container"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d15-rea",
+   "name": "rea export_web_scripts",
+   "url": "https://rea.tools",
+   "role": "Recover the client side serializer, which is often the only documentation of the format",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A08"
+   ],
+   "preconditions": [
+    "a capture with script sources"
+   ],
+   "oracle": [
+    "the serialization routine in recovered source"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d15-wstg",
+   "name": "WSTG Input Validation (33 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/",
+   "role": "Includes the deserialization test",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  }
+ ],
+ "tree": {
+  "id": "d15-root",
+  "q": "Do you know where the serialized data is deserialized?",
+  "why": "This is the sink question again, and it matters more here because a gadget without a sink is a curiosity and a sink without a gadget is a dead end. Both are needed and neither alone is a finding.",
+  "branches": [
+   {
+    "a": "No sink known",
+    "action": "find code that deserializes: cookies, viewstate, cache values, queue messages, session blobs. read the client serializer if present",
+    "tools": [
+     "d15-rea",
+     "d15-fq"
+    ],
+    "oracle": "a location where attacker controlled bytes are deserialized"
+   },
+   {
+    "a": "Sink known, language unknown",
+    "action": "inspect the bytes. magic, length prefixes and type tags identify the format without guessing",
+    "tools": [
+     "d15-fq"
+    ],
+    "oracle": "format identified"
+   },
+   {
+    "a": "Java sink",
+    "action": "enumerate the classpath, match a gadget, prove with a callback",
+    "tools": [
+     "d15-ysoserial"
+    ],
+    "oracle": "callback from the target JVM"
+   },
+   {
+    "a": "PHP or .NET sink",
+    "action": "composer lock or machineKey first, then the matching chain tool",
+    "tools": [
+     "d15-phpggc",
+     "d15-ysoserial-net"
+    ],
+    "oracle": "callback from the target process"
+   },
+   {
+    "a": "Template engine",
+    "action": "arithmetic first, never a shell payload. 7*7 is the only safe first test",
+    "tools": [
+     "d15-payloads"
+    ],
+    "oracle": "arithmetic evaluated in output"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "Java deserialization",
+   "detect": "unexpected class in a stream",
+   "control": "allowlist types, never deserialize untrusted bytes",
+   "rule": "deserialisation type anomaly"
+  },
+  {
+   "attack": "ViewState tampering",
+   "detect": "invalid MAC or unsigned viewstate",
+   "control": "enforce MAC, rotate machineKey",
+   "rule": "viewstate validation failure"
+  },
+  {
+   "attack": "PHP object injection",
+   "detect": "unserialize on user input",
+   "control": "no unserialize of user data, or allowed_classes",
+   "rule": "unserialize call with request data"
+  },
+  {
+   "attack": "SSTI",
+   "detect": "expression evaluation in output",
+   "control": "logic-less templates, no user template source",
+   "rule": "expression evaluation attempt"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that maps a sink to the reachable gadget set automatically from a lockfile",
+   "class": "no-tool",
+   "build_candidate": "parse composer.lock or a jar list, intersect with a gadget database, emit reachable chains per sink"
+  },
+  {
+   "gap": "No safe SSTI prober that never sends an execution payload",
+   "class": "partial",
+   "build_candidate": "arithmetic only with a control that must not evaluate"
+  },
+  {
+   "gap": "S07/L11 retest cell empty",
+   "class": "coverage",
+   "build_candidate": "replay the proving chain after the dependency upgrade"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D15.index.json"
+ }
+}

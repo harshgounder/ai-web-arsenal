@@ -1,0 +1,260 @@
+{
+ "domain": "D15",
+ "generated_at": "2026-10-27",
+ "enriched": 9,
+ "indexed_not_enriched": 36,
+ "entries": [
+  {
+   "name": "API Key Leaks: Tools and exploits",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks",
+   "tier": "core_web",
+   "n_sources": 5,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tplmap",
+   "url": "https://github.com/epinna/tplmap",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SSTImap>",
+   "url": "https://github.com/vladko312/SSTImap",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXEinjector>",
+   "url": "https://github.com/enjoiz/XXEinjector",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "docem>",
+   "url": "https://github.com/whitel1st/docem",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dtd-finder",
+   "url": "https://github.com/GoSecure/dtd-finder",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![srbsa/diffgate MCP server",
+   "url": "https://glama.ai/mcp/servers/srbsa/diffgate/badges/score.svg",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Antti Rantasaari",
+   "url": "https://blog.netspi.com/author/antti-rantasaari/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Arseniy Sharoglazov",
+   "url": "https://mohemiv.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Automating local DTD discovery for XXE exploitation",
+   "url": "https://gosecure.ai/blog/2019/07/16/automating-local-dtd-discovery-for-xxe-exploitation",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "B-XSSRF",
+   "url": "https://github.com/SpiderMate/B-XSSRF",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DRUPAL 7.X SERVICES MODULE UNSERIALIZE() TO RCE",
+   "url": "https://www.ambionics.io/blog/drupal-services-module-rce",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Evil XML with two encodings",
+   "url": "https://mohemiv.com/all/evil-xml/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploiting XXE with local DTD files",
+   "url": "https://mohemiv.com/all/exploiting-xxe-with-local-dtd-files/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Forcing XXE Reflection through Server Error Messages",
+   "url": "https://blog.netspi.com/forcing-xxe-reflection-server-error-messages/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HTTP Detection Agent",
+   "url": "https://github.com/ai-blueteam/http-detection-agent",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ModelScan",
+   "url": "https://github.com/protectai/modelscan",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pentest Tools - Website Vulnerability Scanner",
+   "url": "https://pentest-tools.com/website-vulnerability-scanning/website-scanner",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PortSwigger",
+   "url": "https://portswigger.net/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pre-authentication XXE vulnerability in the Services Drupal module",
+   "url": "https://www.synacktiv.com/ressources/synacktiv_drupal_xxe_services.pdf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SMTP over XXE \u2212 how to send emails using Java's XML parser",
+   "url": "https://shiftordie.de/blog/2017/02/18/smtp-over-xxe/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XML Out-Of-Band Data Retrieval",
+   "url": "https://media.blackhat.com/eu-13/briefings/Osipov/bh-eu-13-XML-data-osipov-slides.pdf",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XML external entity (XXE) injection",
+   "url": "https://portswigger.net/web-security/xxe",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XML\u5b9e\u4f53\u653b\u51fb - \u4ece\u5185\u7f51\u63a2\u6d4b\u5230\u547d\u4ee4\u6267\u884c\u6b65\u6b65\u60ca\u5fc3",
+   "url": "https://www.freebuf.com/video/49961.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE",
+   "url": "https://phonexicum.github.io/infosec/xxe.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE OOB extracting via HTTP+FTP using single opened port",
+   "url": "https://skavans.ru/en/2017/12/02/xxe-oob-extracting-via-httpftp-using-single-opened-port/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE in WeChat Pay Sdk ( WeChat leave a backdoor on merchant websites)",
+   "url": "https://seclists.org/fulldisclosure/2018/Jul/3",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "XXE that can Bypass WAF",
+   "url": "https://lab.wallarm.com/xxe-that-can-bypass-waf-protection-98f679452ce0",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ground-control",
+   "url": "https://github.com/jobertabma/ground-control",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "htb-writeups",
+   "url": "https://github.com/momenbasel/htb-writeups",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "inspektor-gadget/ig-mcp-server",
+   "url": "https://github.com/inspektor-gadget/ig-mcp-server",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "metahttp",
+   "url": "https://github.com/vp777/metahttp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "oxmlxxe",
+   "url": "https://github.com/BuffaloWill/oxml_xxe",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "skavans",
+   "url": "https://skavans.ru/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xxeserv",
+   "url": "https://github.com/staaldraad/xxeserv",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xxexploiter",
+   "url": "https://github.com/luisfontes19/xxexploiter",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  }
+ ]
+}

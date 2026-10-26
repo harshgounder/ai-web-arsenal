@@ -1,0 +1,385 @@
+{
+ "id": "D06",
+ "title": "Session, token, cookie, key material",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The state that survives between requests, and the one most often carried in the wrong place.",
+ "atoms": [
+  "A03",
+  "A04",
+  "A09",
+  "A08"
+ ],
+ "atom_notes": {
+  "A03": "a session is an identity claim, so session bugs are identity bugs",
+  "A04": "rotation, fixation and revocation are all questions about state agreement",
+  "A09": "token crypto and cookie integrity are the same class as any other signature",
+  "A08": "storage and cookie attributes leak what the app thought was private"
+ },
+ "required_cells": [
+  {
+   "cell": "S04/L03/A3",
+   "why": "find where the session actually lives before testing it",
+   "filled": true
+  },
+  {
+   "cell": "S04/L06/A2",
+   "why": "attribute and rotation testing needs replay control",
+   "filled": true
+  },
+  {
+   "cell": "S04/L07/A2",
+   "why": "fixation or forgery is the exploitation step",
+   "filled": true
+  },
+  {
+   "cell": "S04/L08/A5",
+   "why": "a token that decrypts is not a token that is accepted",
+   "filled": true
+  },
+  {
+   "cell": "S04/L12/A6",
+   "why": "rotation and revocation drift over time",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d06-jwt-tool",
+   "name": "jwt_tool",
+   "url": "https://github.com/ticarpi/jwt_tool",
+   "role": "The full token attack set, plus claim tampering",
+   "driver": {
+    "install": "aur:jwt_tool",
+    "verify": "jwt_tool --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A09"
+   ],
+   "preconditions": [
+    "a token you can decode"
+   ],
+   "oracle": [
+    "token accepted after tampering"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d06-rea-page",
+   "name": "rea inspect_web_page",
+   "url": "https://rea.tools",
+   "role": "Storage key inventory and cookie attribute surface, passively",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A03"
+   ],
+   "preconditions": [
+    "a CDP target"
+   ],
+   "oracle": [
+    "storage keys and shapes"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED",
+   "note": "Read the storage inventory before assuming where the session lives. It is often not the cookie."
+  },
+  {
+   "id": "d06-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/stable/",
+   "role": "Observe and replay the whole session lifecycle, including logout and rotation",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A04",
+    "A03"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "session id behaviour across login and logout"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-curl",
+   "name": "curl",
+   "url": "https://curl.se/docs/",
+   "role": "Attribute level control over cookies and headers",
+   "driver": {
+    "install": "pacman:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [
+    "a shell"
+   ],
+   "oracle": [
+    "a response that changes with one attribute altered"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-wstg-sess",
+   "name": "WSTG Session Management (11 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/",
+   "role": "The test list for this domain",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A04"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-asvs-v7",
+   "name": "ASVS V7 Session Management",
+   "url": "https://github.com/OWASP/ASVS",
+   "role": "Requirements for the fix side",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-cheatsheet",
+   "name": "OWASP Session Management Cheat Sheet",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+   "role": "The implementation guidance, useful as the control column",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L11",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-ps-auth",
+   "name": "PortSwigger: authentication",
+   "url": "https://portswigger.net/web-security/authentication",
+   "role": "Labs that calibrate the auth and session tools",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [
+    "lab solved as intended"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per platform session and token technique reference",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d06-atlas-w07",
+   "name": "Atlas W07: identity state",
+   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "role": "Technique pointer. W07 is queued and this says so.",
+   "driver": {
+    "install": "n/a data",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A04"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "PROBABLE"
+  }
+ ],
+ "tree": {
+  "id": "d06-root",
+  "q": "Where does the session state actually live?",
+  "why": "Cookie, localStorage, bearer token, or a server side store. Each has a different failure mode and most people assume the cookie without checking.",
+  "branches": [
+   {
+    "a": "Cookie",
+    "action": "read the attributes, then test rotation on login, logout, and privilege change",
+    "tools": [
+     "d06-mitmproxy",
+     "d06-curl"
+    ],
+    "oracle": "the same id used after rotation"
+   },
+   {
+    "a": "localStorage or sessionStorage",
+    "action": "check what the client can read and what an XSS would get. then check server side validation of that value",
+    "tools": [
+     "d06-rea-page"
+    ],
+    "oracle": "server accepts a client modified value"
+   },
+   {
+    "a": "Bearer token",
+    "action": "decode, then test validation: algorithm, audience, expiry, revocation",
+    "tools": [
+     "d06-jwt-tool"
+    ],
+    "oracle": "server accepts a token it should reject"
+   },
+   {
+    "a": "Server side store",
+    "action": "test idle and absolute timeout, concurrent sessions, and revocation on password change",
+    "tools": [
+     "d06-mitmproxy"
+    ],
+    "oracle": "session still valid after the event that should end it"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "session fixation",
+   "detect": "id unchanged after authentication",
+   "control": "rotate on privilege change",
+   "rule": "session id continuity across login"
+  },
+  {
+   "attack": "cookie theft via XSS",
+   "detect": "theft pattern, then use from a new IP",
+   "control": "HttpOnly, SameSite, short life",
+   "rule": "cookie use from a new source"
+  },
+  {
+   "attack": "token replay after logout",
+   "detect": "token still valid after logout",
+   "control": "server side revocation list",
+   "rule": "token used after revocation"
+  },
+  {
+   "attack": "missing attributes",
+   "detect": "cookie without Secure, HttpOnly or SameSite",
+   "control": "set them at issue",
+   "rule": "cookie attribute audit"
+  },
+  {
+   "attack": "concurrent session abuse",
+   "detect": "same session from many sources",
+   "control": "bind to source, limit concurrency",
+   "rule": "session source spread"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that reports where session state lives across the whole app",
+   "class": "no-tool",
+   "build_candidate": "join REA storage inventory with capture cookies and token usage into one map"
+  },
+  {
+   "gap": "No revocation tester that measures the window between logout and token expiry",
+   "class": "partial",
+   "build_candidate": "loop replay after revocation, record the window in seconds"
+  },
+  {
+   "gap": "S04/L12 drift cell empty",
+   "class": "coverage",
+   "build_candidate": "scheduled attribute and timeout audit"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D06.index.json"
+ }
+}

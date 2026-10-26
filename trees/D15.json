@@ -1,0 +1,49 @@
+{
+ "id": "d15-root",
+ "q": "Do you know where the serialized data is deserialized?",
+ "why": "This is the sink question again, and it matters more here because a gadget without a sink is a curiosity and a sink without a gadget is a dead end. Both are needed and neither alone is a finding.",
+ "branches": [
+  {
+   "a": "No sink known",
+   "action": "find code that deserializes: cookies, viewstate, cache values, queue messages, session blobs. read the client serializer if present",
+   "tools": [
+    "d15-rea",
+    "d15-fq"
+   ],
+   "oracle": "a location where attacker controlled bytes are deserialized"
+  },
+  {
+   "a": "Sink known, language unknown",
+   "action": "inspect the bytes. magic, length prefixes and type tags identify the format without guessing",
+   "tools": [
+    "d15-fq"
+   ],
+   "oracle": "format identified"
+  },
+  {
+   "a": "Java sink",
+   "action": "enumerate the classpath, match a gadget, prove with a callback",
+   "tools": [
+    "d15-ysoserial"
+   ],
+   "oracle": "callback from the target JVM"
+  },
+  {
+   "a": "PHP or .NET sink",
+   "action": "composer lock or machineKey first, then the matching chain tool",
+   "tools": [
+    "d15-phpggc",
+    "d15-ysoserial-net"
+   ],
+   "oracle": "callback from the target process"
+  },
+  {
+   "a": "Template engine",
+   "action": "arithmetic first, never a shell payload. 7*7 is the only safe first test",
+   "tools": [
+    "d15-payloads"
+   ],
+   "oracle": "arithmetic evaluated in output"
+  }
+ ]
+}

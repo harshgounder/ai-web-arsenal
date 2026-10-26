@@ -1,0 +1,40 @@
+{
+ "id": "d06-root",
+ "q": "Where does the session state actually live?",
+ "why": "Cookie, localStorage, bearer token, or a server side store. Each has a different failure mode and most people assume the cookie without checking.",
+ "branches": [
+  {
+   "a": "Cookie",
+   "action": "read the attributes, then test rotation on login, logout, and privilege change",
+   "tools": [
+    "d06-mitmproxy",
+    "d06-curl"
+   ],
+   "oracle": "the same id used after rotation"
+  },
+  {
+   "a": "localStorage or sessionStorage",
+   "action": "check what the client can read and what an XSS would get. then check server side validation of that value",
+   "tools": [
+    "d06-rea-page"
+   ],
+   "oracle": "server accepts a client modified value"
+  },
+  {
+   "a": "Bearer token",
+   "action": "decode, then test validation: algorithm, audience, expiry, revocation",
+   "tools": [
+    "d06-jwt-tool"
+   ],
+   "oracle": "server accepts a token it should reject"
+  },
+  {
+   "a": "Server side store",
+   "action": "test idle and absolute timeout, concurrent sessions, and revocation on password change",
+   "tools": [
+    "d06-mitmproxy"
+   ],
+   "oracle": "session still valid after the event that should end it"
+  }
+ ]
+}
