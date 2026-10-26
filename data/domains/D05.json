@@ -441,7 +441,7 @@
    "id": "d05-mitmproxy",
    "name": "mitmproxy",
    "bin": "mitmproxy",
-   "url": "https://docs.mitmproxy.org/",
+   "url": "https://docs.mitmproxy.org/stable/",
    "role": "Capture two identities side by side, the input to every comparison",
    "driver": {
     "install": "pacman:mitmproxy",
@@ -497,7 +497,7 @@
   {
    "id": "d05-owasp-api1",
    "name": "OWASP API1:2023 Broken Object Level Authorization",
-   "url": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization.md",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/",
    "role": "The canonical definition and mitigation set for BOLA",
    "driver": {
     "install": "n/a reference",
@@ -519,7 +519,7 @@
   {
    "id": "d05-owasp-api5",
    "name": "OWASP API5:2023 Broken Function Level Authorization",
-   "url": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization.md",
+   "url": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/",
    "role": "The role and function counterpart to BOLA",
    "driver": {
     "install": "n/a reference",

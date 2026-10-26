@@ -37,7 +37,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
-| [mitmproxy (capture source)](https://docs.mitmproxy.org/) | L02 passive recon | A3 | A08 | `mcp:rea` | yes | The proxy that produces the captures REA reads natively |
+| [mitmproxy (capture source)](https://docs.mitmproxy.org/stable/) | L02 passive recon | A3 | A08 | `mcp:rea` | yes | The proxy that produces the captures REA reads natively |
 | [analyze_web_bundle](https://rea.tools) | L03 surface mapping | A3 | A08,A06 | `mcp:rea` | yes | Chunk graph, route and endpoint candidates, vendor fingerprints, WebMCP metadata, optional source map fetch |
 | [inspect_android_package](https://rea.tools) | L03 surface mapping | A3 | A08,A06 | `mcp:rea` | yes | Package, SDK, permissions, decoded manifest, class and resource counts, no source written |
 | [analyze_javascript_application](https://rea.tools) | L03 surface mapping | A3 | A06 | `mcp:rea` | yes | ASAR or extracted JS app as an execution free graph: modules, exports, requires, routes |

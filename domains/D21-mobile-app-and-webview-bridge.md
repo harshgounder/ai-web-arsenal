@@ -42,8 +42,8 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Atlas W05: file materialisation](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A06 | `n/a data` | yes | Technique pointer, W05 queued. Declared so the dependency is visible. |
 | [blutter (Flutter AOT)](https://github.com/worawit/blutter) | L05 hypothesis | A2 | A05,A06 | `git:https://github.com/worawit/blutter` | no | Recover Dart symbols from libapp.so, the only way into an app whose logic is not in DEX |
 | [rea inspect_android_class / inspect_android_method](https://rea.tools) | L05 hypothesis | A3 | A06 | `mcp:rea` | yes | Class members and a single decompiled method, plus reference tracing |
-| [WeChat mini program unpacking](https://github.com/Noisyfox/wxapkg-unpacker) | L05 hypothesis | A2 | A05 | `git:https://github.com/Noisyfox/wxapkg-unpacker` | no | The only route into a mini program's code, a China specific surface |
-| [frida](https://frida.re/) | L06 probing | A2 | A03,A05 | `pipx:frida-tools` | yes | Runtime instrumentation, the only way to beat pinning and read logic at runtime |
+| [WeChat mini program unpacking](https://github.com/search?q=wxapkg+unpacker&type=repositories) | L05 hypothesis | A2 | A05 | `git:https://github.com/Noisyfox/wxapkg-unpacker` | no | The only route into a mini program's code, a China specific surface |
+| [frida](https://github.com/frida/frida) | L06 probing | A2 | A03,A05 | `pipx:frida-tools` | yes | Runtime instrumentation, the only way to beat pinning and read logic at runtime |
 | [Mobile Security Framework](https://github.com/MobSF/Mobile-Security-Framework-MobSF) | L06 probing | A3 | A08,A15 | `docker` | no | Automated static and dynamic analysis with a report |
 | [objection](https://github.com/sensepost/objection) | L06 probing | A2 | A03 | `pipx:objection` | yes | Frida wrapper with ready made pinning and jailbreak bypasses |
 | [OWASP MASTG](https://mas.owasp.org/MASTG/) | L10 reporting | A0 | A08 | `n/a reference` | no | The mobile testing guide, 240 section files, the closest thing to complete |
@@ -65,6 +65,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a device or emulator you control`, `the app installed`
 - oracle: `hook output showing the decrypted value or bypassed check`
 - defense levels it addresses: F2
+- note: frida.re did not resolve from the checking host. GitHub is the stable reference.
 
 **objection**  
 - preconditions: `a rooted device or emulator`
@@ -101,7 +102,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a .wxapkg package from a device you control`
 - oracle: `decompiled app service and page code`
 - defense levels it addresses: F2
-- note: Niche and jurisdiction specific. Included because no Western list carries it and the surface is enormous in CN.
+- note: No single canonical unpacker repo verified. Link goes to a GitHub search. Marked PROBABLE deliberately.
 
 **Atlas W05: file materialisation**  
 - defense levels it addresses: F2

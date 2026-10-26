@@ -37,7 +37,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
-| [mitmproxy](https://docs.mitmproxy.org/) | L03 surface mapping | A2 | A02 | `pacman:mitmproxy` | yes | Capture two identities side by side, the input to every comparison |
+| [mitmproxy](https://docs.mitmproxy.org/stable/) | L03 surface mapping | A2 | A02 | `pacman:mitmproxy` | yes | Capture two identities side by side, the input to every comparison |
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A2 | A02,A06 | `aur:ffuf` | yes | Enumerate object ids and tenant prefixes at scale |
 | [kiterunner](https://github.com/assetnote/kiterunner) | L04 discovery | A2 | A06,A02 | `aur:kiterunner-bin` | yes | Find the undocumented routes where authz is usually weakest |
 | [Atlas W02: 50 authorisation-on-write patterns](../../web-attack-atlas/waves/W02/patterns.jsonl) | L05 hypothesis | A0 | A02,A03,A05,A06 | `n/a data` | yes | The technique layer. Object substitution, tenant escape, mass assignment, function level gaps, ownership transfer, soft delete resurrection, bulk skips, alternate parsers, stale authorisation and 41 more, each with preconditions, oracle and counter. |
@@ -53,8 +53,8 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [OWASP ZAP](https://www.zaproxy.org/) | L06 probing | A3 | A02 | `pacman:zaproxy` | yes | Access control scan mode plus authenticated context |
 | [OWASP crAPI](https://github.com/OWASP/crAPI) | L07 exploitation | A3 | A02,A05 | `docker` | no | Microservice target with real object ownership, built for BOLA practice |
 | [OWASP Juice Shop](https://github.com/juice-shop/juice-shop) | L07 exploitation | A3 | A02,A05,A10 | `docker` | no | Broad lab covering access control, mass assignment and logic in one app |
-| [OWASP API1:2023 Broken Object Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization.md) | L10 reporting | A0 | A02 | `n/a reference` | no | The canonical definition and mitigation set for BOLA |
-| [OWASP API5:2023 Broken Function Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization.md) | L10 reporting | A0 | A02 | `n/a reference` | no | The role and function counterpart to BOLA |
+| [OWASP API1:2023 Broken Object Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/) | L10 reporting | A0 | A02 | `n/a reference` | no | The canonical definition and mitigation set for BOLA |
+| [OWASP API5:2023 Broken Function Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/) | L10 reporting | A0 | A02 | `n/a reference` | no | The role and function counterpart to BOLA |
 | [WSTG Authorization (7 tests)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/) | L10 reporting | A0 | A02 | `n/a reference` | no | The classic test list, for coverage checking |
 | [ASVS V8 Authorization](https://github.com/OWASP/ASVS) | L11 fix verification | A0 | A02 | `n/a reference` | no | Requirement set, useful as the fix side of a finding |
 

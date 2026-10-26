@@ -56,3 +56,29 @@ after a few years in service.
 Nothing is deleted. A `LINK_DEAD` entry is marked, because deleting it loses the information that the
 tool existed and died, which is itself useful. `LINK_BLOCKED` is not a defect: it means the site is
 alive and refuses bots, which is a fact worth recording rather than a failure.
+
+---
+
+# Domain entry link check (2026-10-27)
+
+Every URL in the 10 authored domain files, checked with `GET`, a browser user agent and redirects followed.
+
+`111` unique URLs: OK 110, BLOCKED 1.
+
+| status | url | entries |
+|---|---|---|
+| BLOCKED | https://www.w3.org/TR/webauthn-3/ | d04-webauthn |
+
+## Seven were broken on first check, and two of them were my fault
+
+1. **OWASP API Security pages returned 404 without a trailing slash.** `.../0xa1-...md` and `.../0xa1-.../` differ; only the slashed form resolves. Two entries fixed.
+2. **`docs.mitmproxy.org/` returns 404, `/stable/` returns 200.** Fixed in three entries across D04, D05 and D31.
+3. **Two URLs I wrote were wrong and had to be replaced rather than repaired:**
+   - `portswigger.net/bappstore/jwt-editor` is not a real BApp path. Guessed slugs do not resolve. Now links the store with a note to search.
+   - `github.com/Noisyfox/wxapkg-unpacker` **does not exist**. I invented it. Replaced with a GitHub search URL and marked PROBABLE, because no single canonical unpacker repo was verified.
+4. **`frida.re` does not resolve from this host at all.** Not dead, but unverifiable here, so the link now points at `github.com/frida/frida` which is stable.
+5. **`w3.org/TR/webauthn-3/` returns 403 to automated clients.** That is the site refusing bots, not a dead link, and is recorded as BLOCKED rather than DEAD.
+
+## The lesson, again
+
+A guessed URL is indistinguishable from a real one until it is fetched. Three of the seven failures looked perfectly plausible: a BApp deep link, a GitHub repo under a plausible name, and a documentation root. The repo now has a check that catches all three classes, and the two invented ones are recorded as inventions rather than quietly fixed.

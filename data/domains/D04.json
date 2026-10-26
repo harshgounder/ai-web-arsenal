@@ -159,7 +159,7 @@
   {
    "id": "d04-mitmproxy",
    "name": "mitmproxy",
-   "url": "https://docs.mitmproxy.org/",
+   "url": "https://docs.mitmproxy.org/stable/",
    "role": "Capture the whole auth flow, including redirects, tokens and cookie transitions",
    "driver": {
     "install": "pacman:mitmproxy",
@@ -240,7 +240,7 @@
   {
    "id": "d04-burp-jwt",
    "name": "JWT Editor (Burp extension)",
-   "url": "https://portswigger.net/bappstore/jwt-editor",
+   "url": "https://portswigger.net/bappstore",
    "role": "Interactive JWT manipulation inside the proxy, pairs with jwt_tool for the exploit path",
    "driver": {
     "install": "burp-extension",
@@ -263,7 +263,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L07",
-   "status": "VERIFIED"
+   "status": "VERIFIED",
+   "note": "BApp store deep links change. Link goes to the store; search for JWT Editor."
   },
   {
    "id": "d04-saml-raider",

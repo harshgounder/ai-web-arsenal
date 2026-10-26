@@ -109,7 +109,7 @@
   {
    "id": "d21-frida",
    "name": "frida",
-   "url": "https://frida.re/",
+   "url": "https://github.com/frida/frida",
    "role": "Runtime instrumentation, the only way to beat pinning and read logic at runtime",
    "driver": {
     "install": "pipx:frida-tools",
@@ -134,7 +134,8 @@
    "detected_by": [],
    "agency": "A2",
    "stage": "L06",
-   "status": "ESTABLISHED"
+   "status": "ESTABLISHED",
+   "note": "frida.re did not resolve from the checking host. GitHub is the stable reference."
   },
   {
    "id": "d21-objection",
@@ -310,7 +311,7 @@
   {
    "id": "d21-wxapkg",
    "name": "WeChat mini program unpacking",
-   "url": "https://github.com/Noisyfox/wxapkg-unpacker",
+   "url": "https://github.com/search?q=wxapkg+unpacker&type=repositories",
    "role": "The only route into a mini program's code, a China specific surface",
    "driver": {
     "install": "git:https://github.com/Noisyfox/wxapkg-unpacker",
@@ -334,7 +335,7 @@
    "agency": "A2",
    "stage": "L05",
    "status": "PROBABLE",
-   "note": "Niche and jurisdiction specific. Included because no Western list carries it and the surface is enormous in CN."
+   "note": "No single canonical unpacker repo verified. Link goes to a GitHub search. Marked PROBABLE deliberately."
   },
   {
    "id": "d21-mastg",

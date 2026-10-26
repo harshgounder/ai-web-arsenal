@@ -597,7 +597,7 @@
   {
    "id": "d31-mitmproxy",
    "name": "mitmproxy (capture source)",
-   "url": "https://docs.mitmproxy.org/",
+   "url": "https://docs.mitmproxy.org/stable/",
    "role": "The proxy that produces the captures REA reads natively",
    "driver": {
     "install": "mcp:rea",

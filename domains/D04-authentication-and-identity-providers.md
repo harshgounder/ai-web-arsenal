@@ -38,14 +38,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
-| [mitmproxy](https://docs.mitmproxy.org/) | L03 surface mapping | A2 | A03,A08 | `pacman:mitmproxy` | yes | Capture the whole auth flow, including redirects, tokens and cookie transitions |
+| [mitmproxy](https://docs.mitmproxy.org/stable/) | L03 surface mapping | A2 | A03,A08 | `pacman:mitmproxy` | yes | Capture the whole auth flow, including redirects, tokens and cookie transitions |
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A2 | A08,A03 | `aur:ffuf` | yes | Username and account enumeration via response and timing differentials |
 | [Atlas W07: identity state patterns](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04,A06 | `n/a data` | yes | Technique pointer. W07 is queued; when built it covers session, token, MFA enrolment, recovery and device trust writes. |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A03,A07 | `docker` | no | Classic lab with weak auth, brute force and session modules |
 | [Keycloak (as a test IdP)](https://www.keycloak.org/) | L06 probing | A2 | A03,A05 | `docker` | yes | A real IdP you control, so OAuth redirect, scope and token handling can be tested against something you configured |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15,A03 | `aur:nuclei-bin` | yes | Known auth misconfiguration and default credential templates before manual work |
 | [OWASP WebGoat](https://github.com/WebGoat/WebGoat) | L06 probing | A2 | A03 | `docker` | no | Lab with explicit authentication and session lessons |
-| [JWT Editor (Burp extension)](https://portswigger.net/bappstore/jwt-editor) | L07 exploitation | A2 | A09,A03 | `burp-extension` | no | Interactive JWT manipulation inside the proxy, pairs with jwt_tool for the exploit path |
+| [JWT Editor (Burp extension)](https://portswigger.net/bappstore) | L07 exploitation | A2 | A09,A03 | `burp-extension` | no | Interactive JWT manipulation inside the proxy, pairs with jwt_tool for the exploit path |
 | [hydra](https://github.com/vanhauser-thc/thc-hydra) | L07 exploitation | A2 | A03,A07,A10 | `pacman:hydra` | no | Online credential testing against a login form or basic auth, with lockout awareness |
 | [jwt_tool](https://github.com/ticarpi/jwt_tool) | L07 exploitation | A2 | A09,A03 | `aur:jwt_tool` | no | The full JWT attack set: none, algorithm confusion, kid traversal, jku injection, claim tampering |
 | [medusa](https://github.com/jmk-foofus/medusa) | L07 exploitation | A2 | A03,A07 | `pacman:medusa` | no | Parallel credential testing, useful when per-IP rate limits are absent |
@@ -84,6 +84,11 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an auth endpoint that behaves differently for known and unknown accounts`
 - oracle: `status, length or timing cluster separating existent from non existent`
 - defense levels it addresses: F2
+
+**JWT Editor (Burp extension)**  
+- oracle: `modified token accepted by the server`, `claim change reflected in the session`
+- defense levels it addresses: F2
+- note: BApp store deep links change. Link goes to the store; search for JWT Editor.
 
 **SAML Raider (Burp extension)**  
 - preconditions: `SAML SSO in front of the app`, `a captured assertion`
