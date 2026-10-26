@@ -1,0 +1,735 @@
+{
+ "id": "D04",
+ "title": "Authentication and identity providers",
+ "version": "0.1",
+ "generated": "2026-10-26",
+ "status": "AUTHORED. Technique layer partially in web-attack-atlas W07 (queued, pointer declared).",
+ "atoms": [
+  "A03",
+  "A09",
+  "A14",
+  "A04",
+  "A05"
+ ],
+ "atom_notes": {
+  "A03": "the core primitive: the system misidentifies who is acting",
+  "A09": "token and signature properties that are assumed and are not",
+  "A14": "the human in the flow: MFA fatigue, device code consent, helpdesk reset",
+  "A04": "session and token state that diverges from the real authorisation state",
+  "A05": "assertion and claim shape confusion, audience and scope handling"
+ },
+ "required_cells": [
+  {
+   "cell": "S04/L03/A3",
+   "why": "capture the whole auth flow including redirects before testing any of it",
+   "filled": true
+  },
+  {
+   "cell": "S04/L05/A2",
+   "why": "know whether the protocol is local, federated or both before choosing attacks",
+   "filled": true
+  },
+  {
+   "cell": "S04/L06/A3",
+   "why": "enumeration, lockout and policy probing need automation and care",
+   "filled": true
+  },
+  {
+   "cell": "S04/L07/A2",
+   "why": "token and assertion tampering is the exploitation step",
+   "filled": true
+  },
+  {
+   "cell": "S04/L08/A5",
+   "why": "a token accepted is not a finding until you show what it grants",
+   "filled": true
+  },
+  {
+   "cell": "S04/L10/A2",
+   "why": "auth findings need account takeover framing or they get downgraded",
+   "filled": false
+  },
+  {
+   "cell": "S04/L11/A3",
+   "why": "retest after credential policy or validation changes",
+   "filled": false
+  },
+  {
+   "cell": "S04/L12/A6",
+   "why": "drift detection on IdP and client configuration",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d04-jwt_tool",
+   "name": "jwt_tool",
+   "url": "https://github.com/ticarpi/jwt_tool",
+   "role": "The full JWT attack set: none, algorithm confusion, kid traversal, jku injection, claim tampering",
+   "driver": {
+    "install": "aur:jwt_tool",
+    "verify": "jwt_tool --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09",
+    "A03"
+   ],
+   "preconditions": [
+    "a JWT you can decode",
+    "the verifier accepts a header you can influence"
+   ],
+   "oracle": [
+    "token accepted after tampering",
+    "claim change reflected server side"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "Runs all tests with -M at, then a specific tamper with -T. Start there, not with a hand written payload."
+  },
+  {
+   "id": "d04-hydra",
+   "name": "hydra",
+   "url": "https://github.com/vanhauser-thc/thc-hydra",
+   "role": "Online credential testing against a login form or basic auth, with lockout awareness",
+   "driver": {
+    "install": "pacman:hydra",
+    "verify": "hydra -h",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A07",
+    "A10"
+   ],
+   "preconditions": [
+    "a login endpoint",
+    "no lockout, or a lockout policy you have tested"
+   ],
+   "oracle": [
+    "valid credential in the output"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "The lockout test matters more than the cracking. Run one account first and watch for lockout before any list."
+  },
+  {
+   "id": "d04-medusa",
+   "name": "medusa",
+   "url": "https://github.com/jmk-foofus/medusa",
+   "role": "Parallel credential testing, useful when per-IP rate limits are absent",
+   "driver": {
+    "install": "pacman:medusa",
+    "verify": "medusa -h",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A07"
+   ],
+   "preconditions": [
+    "login endpoint",
+    "no per IP throttle"
+   ],
+   "oracle": [
+    "valid credential found"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "Parallelism is both the feature and the reason to be careful: it is the fastest way to lock out every account at once."
+  },
+  {
+   "id": "d04-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/",
+   "role": "Capture the whole auth flow, including redirects, tokens and cookie transitions",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Username and account enumeration via response and timing differentials",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A03"
+   ],
+   "preconditions": [
+    "an auth endpoint that behaves differently for known and unknown accounts"
+   ],
+   "oracle": [
+    "status, length or timing cluster separating existent from non existent"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Known auth misconfiguration and default credential templates before manual work",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-burp-jwt",
+   "name": "JWT Editor (Burp extension)",
+   "url": "https://portswigger.net/bappstore/jwt-editor",
+   "role": "Interactive JWT manipulation inside the proxy, pairs with jwt_tool for the exploit path",
+   "driver": {
+    "install": "burp-extension",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09",
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-saml-raider",
+   "name": "SAML Raider (Burp extension)",
+   "url": "https://portswigger.net/bappstore",
+   "role": "SAML assertion manipulation, signature stripping and XSW attacks",
+   "driver": {
+    "install": "burp-extension",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09",
+    "A03"
+   ],
+   "preconditions": [
+    "SAML SSO in front of the app",
+    "a captured assertion"
+   ],
+   "oracle": [
+    "assertion accepted after modification"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "PROBABLE",
+   "note": "BApp store URL changes; resolve the current listing from the store rather than trusting a fixed path."
+  },
+  {
+   "id": "d04-keycloak",
+   "name": "Keycloak (as a test IdP)",
+   "url": "https://www.keycloak.org/",
+   "role": "A real IdP you control, so OAuth redirect, scope and token handling can be tested against something you configured",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A05"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "note": "Most OAuth findings are configuration findings. A local IdP lets you confirm the class before touching a target."
+  },
+  {
+   "id": "d04-dvwa",
+   "name": "DVWA",
+   "url": "https://github.com/digininja/DVWA",
+   "role": "Classic lab with weak auth, brute force and session modules",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A07"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-webgoat",
+   "name": "OWASP WebGoat",
+   "url": "https://github.com/WebGoat/WebGoat",
+   "role": "Lab with explicit authentication and session lessons",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-atlas-w07",
+   "name": "Atlas W07: identity state patterns",
+   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "role": "Technique pointer. W07 is queued; when built it covers session, token, MFA enrolment, recovery and device trust writes.",
+   "driver": {
+    "install": "n/a data",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A04",
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "PROBABLE",
+   "note": "Declared before it exists, so the dependency is visible. A pointer to a queued wave is honest; a pointer to nothing is not."
+  },
+  {
+   "id": "d04-wstg-athn",
+   "name": "WSTG Authentication (11 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/",
+   "role": "The classic auth test list",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-wstg-sess",
+   "name": "WSTG Session Management (11 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/",
+   "role": "Session side of the same stack",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A04"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-asvs-v6",
+   "name": "ASVS V6 Authentication",
+   "url": "https://github.com/OWASP/ASVS",
+   "role": "Requirements for the fix side",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-asvs-v7",
+   "name": "ASVS V7 Session Management",
+   "url": "https://github.com/OWASP/ASVS",
+   "role": "Session requirements",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-asvs-v10",
+   "name": "ASVS V10 OAuth and OIDC",
+   "url": "https://github.com/OWASP/ASVS",
+   "role": "Federation requirements",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-rfc9700",
+   "name": "RFC 9700: OAuth 2.0 Security Best Current Practice",
+   "url": "https://www.rfc-editor.org/rfc/rfc9700",
+   "role": "The authoritative document for OAuth attack classes",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-oidc-core",
+   "name": "OpenID Connect Core 1.0",
+   "url": "https://openid.net/specs/openid-connect-core-1_0.html",
+   "role": "What a conforming implementation must check",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-webauthn",
+   "name": "WebAuthn Level 3",
+   "url": "https://www.w3.org/TR/webauthn-3/",
+   "role": "Passkey and attestation semantics",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09",
+    "A03"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d04-device-code",
+   "name": "Microsoft: device code flow and sign-in monitoring",
+   "url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins",
+   "role": "The device code attack class and the audit trail it leaves",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A14"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d04-root",
+  "q": "Is authentication local, federated, or both?",
+  "why": "The attack set is almost disjoint. Local auth is about policy and enumeration. Federation is about assertion and redirect handling.",
+  "branches": [
+   {
+    "a": "Local",
+    "next": {
+     "id": "d04-local",
+     "q": "Is there any lockout or rate limit on the login endpoint?",
+     "branches": [
+      {
+       "a": "No",
+       "action": "test one account first to confirm, then enumerate and test credentials at a controlled rate",
+       "tools": [
+        "d04-hydra",
+        "d04-ffuf"
+       ],
+       "oracle": "valid credential or a distinguishable account-exists response"
+      },
+      {
+       "a": "Yes",
+       "action": "treat lockout as the target: is it per account, per IP or global, and can it deny service to a victim",
+       "tools": [
+        "d04-medusa"
+       ],
+       "oracle": "lockout triggered for a victim without an attempt from you"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Federated (OAuth, OIDC, SAML)",
+    "next": {
+     "id": "d04-fed",
+     "q": "Can you see the assertion or token?",
+     "branches": [
+      {
+       "a": "Yes",
+       "action": "test signature handling, algorithm, audience and replay before anything else",
+       "tools": [
+        "d04-burp-jwt",
+        "d04-jwt_tool",
+        "d04-saml-raider"
+       ],
+       "oracle": "modified assertion accepted"
+      },
+      {
+       "a": "No",
+       "action": "test redirect URI handling, scope, state and nonce first. those are configuration classes and need no token",
+       "tools": [
+        "d04-keycloak",
+        "d04-rfc9700"
+       ],
+       "oracle": "code or token delivered to a URI you control"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Passkeys or WebAuthn present",
+    "action": "test registration and assertion separately. attestation, origin and user verification are three different checks",
+    "tools": [
+     "d04-webauthn"
+    ],
+    "oracle": "assertion accepted for the wrong origin or user"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "credential stuffing",
+   "detect": "failed login distribution per IP and per account",
+   "control": "rate limit per account, not per IP",
+   "rule": "failed auth burst"
+  },
+  {
+   "attack": "account enumeration",
+   "detect": "response or timing difference for unknown accounts",
+   "control": "uniform responses and timing",
+   "rule": "registration or reset probe rate"
+  },
+  {
+   "attack": "JWT tampering",
+   "detect": "alg or kid mismatch at the verifier",
+   "control": "fixed algorithm, no negotiation from the token",
+   "rule": "jwt validation failure"
+  },
+  {
+   "attack": "SAML signature bypass",
+   "detect": "signature not verified over the signed element",
+   "control": "validate signature over the canonical element, reject unsigned",
+   "rule": "assertion parse anomaly"
+  },
+  {
+   "attack": "OAuth redirect abuse",
+   "detect": "redirect URI not exact matched",
+   "control": "exact registered URI, PKCE",
+   "rule": "redirect mismatch"
+  },
+  {
+   "attack": "MFA fatigue",
+   "detect": "repeated push approves for one account",
+   "control": "number matching, rate limit, phishing resistant factors",
+   "rule": "push volume per account"
+  },
+  {
+   "attack": "session fixation",
+   "detect": "session id unchanged after authentication",
+   "control": "rotate the session on privilege change",
+   "rule": "session id continuity across login"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool simulates device code phishing end to end against a tenant you own",
+   "class": "no-tool",
+   "build_candidate": "a harness that requests a device code, presents it, and measures whether consent produces a usable token plus the audit trail it leaves"
+  },
+  {
+   "gap": "No passkey attestation analyser that reports what was actually verified",
+   "class": "no-tool",
+   "build_candidate": "parse the attestation object, report origin, RP id hash, UV and sign counter behaviour"
+  },
+  {
+   "gap": "No tool measures MFA fatigue resistance as a property rather than a demo",
+   "class": "no-tool",
+   "build_candidate": "bounded push loop with number matching analysis and a detection expectation"
+  },
+  {
+   "gap": "L10 impact, L11 retest, L12 drift cells are empty",
+   "class": "coverage",
+   "build_candidate": "account takeover framing template plus a replay based retest and an IdP config drift monitor"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D04.index.json"
+ }
+}
