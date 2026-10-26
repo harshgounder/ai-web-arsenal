@@ -1,0 +1,61 @@
+{
+ "id": "d21-root",
+ "q": "Do you have the package, or only a running app?",
+ "why": "Static gives you structure and a stable target. Runtime gives you values. Most people skip static and then fight pinning for an hour.",
+ "branches": [
+  {
+   "a": "Have the package",
+   "action": "decode, list exported components, extract strings, then find the API host and auth scheme",
+   "tools": [
+    "d21-rea-android",
+    "d21-rea-android-res",
+    "d21-apktool",
+    "d21-jadx"
+   ],
+   "oracle": "endpoints and keys recovered from the package"
+  },
+  {
+   "a": "Only a running app",
+   "action": "proxy it first. if pinned, hook the pinning check and retry",
+   "tools": [
+    "d21-frida",
+    "d21-objection"
+   ],
+   "oracle": "requests visible through the proxy after the bypass"
+  },
+  {
+   "a": "A webview in the app",
+   "next": {
+    "id": "d21-wv",
+    "q": "What can the loaded page call?",
+    "branches": [
+     {
+      "a": "A bridge object",
+      "action": "enumerate the exposed methods, then test what they do with attacker controlled arguments and from an attacker controlled origin",
+      "tools": [
+       "d21-rea-android-class"
+      ],
+      "oracle": "bridge method executed from an origin it should not accept"
+     },
+     {
+      "a": "Deep links only",
+      "action": "test intent or URL handling for parameter injection and for reaching privileged screens",
+      "tools": [
+       "d21-rea-android"
+      ],
+      "oracle": "privileged screen reached without auth"
+     }
+    ]
+   }
+  },
+  {
+   "a": "Flutter or mini program",
+   "action": "the logic is not in DEX. use the AOT or package specific tool first, or you will read nothing",
+   "tools": [
+    "d21-blutter",
+    "d21-wxapkg"
+   ],
+   "oracle": "recovered symbols or source"
+  }
+ ]
+}

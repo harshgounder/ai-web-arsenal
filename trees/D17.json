@@ -1,0 +1,44 @@
+{
+ "id": "d17-root",
+ "q": "Are you outside the estate or holding a credential?",
+ "why": "The two positions have almost nothing in common. Outside means exposure. Inside means permission paths.",
+ "branches": [
+  {
+   "a": "Outside",
+   "action": "look for the services that do not require a credential and are meant to be internal: buckets, metadata proxies, admin panels, storage listing",
+   "tools": [
+    "d17-cloudfox-ref",
+    "d17-hacktricks-cloud"
+   ],
+   "oracle": "data returned without authentication"
+  },
+  {
+   "a": "Holding a credential",
+   "action": "enumerate what it can do before using it. auth can-i list, or the provider equivalent, then map to paths",
+   "tools": [
+    "d17-kubectl",
+    "d17-cloudfox",
+    "d17-pathrunner"
+   ],
+   "oracle": "an action the credential should not permit"
+  },
+  {
+   "a": "A server side fetch primitive",
+   "action": "probe the metadata service with a token request first. IMDSv2 means no header equals no finding",
+   "tools": [
+    "d17-imds"
+   ],
+   "oracle": "credentials returned, or a token then credentials"
+  },
+  {
+   "a": "Posture review, no exploitation",
+   "action": "run a posture scanner with read only credentials, then rank by blast radius not by count",
+   "tools": [
+    "d17-prowler",
+    "d17-scoutsuite",
+    "d17-trivy"
+   ],
+   "oracle": "finding list with resource identifiers"
+  }
+ ]
+}

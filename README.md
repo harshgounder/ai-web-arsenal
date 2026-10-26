@@ -27,7 +27,7 @@ rot with the disposable half.
 | tools in manifest | **57** | every install candidate verified against a real channel |
 | unresolved installs | **0** | nothing invented, nothing guessed |
 | prompt packs | **5** | phase-shaped, with failure modes and verification |
-| domains | **37** | 6 authored deep (D04, D05, D11, D19, D20, D31), 31 stubs with declared required cells |
+| domains | **37** | 10 authored deep (D02, D04, D05, D07, D11, D17, D19, D20, D21, D31), 27 stubs with declared required cells |
 | patterns in the atlas | **150** | W01 lifecycle, W02 authorisation, W03 second-order, gate passing |
 | taxonomy items mapped | **624 of 706** | WSTG, ASVS, VRT, API Top 10, ATLAS, LLM Top 10 to atoms, 88.4% |
 

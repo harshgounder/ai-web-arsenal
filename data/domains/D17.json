@@ -1,0 +1,548 @@
+{
+ "id": "D17",
+ "title": "Cloud and control plane",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain where a web finding becomes an estate finding.",
+ "atoms": [
+  "A02",
+  "A15",
+  "A11",
+  "A08",
+  "A07"
+ ],
+ "atom_notes": {
+  "A02": "the jump from an app principal to an infrastructure principal is the whole class",
+  "A15": "configuration divergence is where cloud exposure lives, not in code",
+  "A11": "container and IaC supply chain is part of the estate",
+  "A08": "enumeration of what exists is the first step and is itself exposure",
+  "A07": "metadata and token endpoints are reachable resources that can be exhausted or abused"
+ },
+ "required_cells": [
+  {
+   "cell": "S11/L03/A3",
+   "why": "inventory what exists before testing permissions, or you test nothing",
+   "filled": true
+  },
+  {
+   "cell": "S11/L06/A3",
+   "why": "permission probing needs automation and a read only discipline",
+   "filled": true
+  },
+  {
+   "cell": "S11/L07/A2",
+   "why": "escalation is proven with a path, not with a finding name",
+   "filled": true
+  },
+  {
+   "cell": "S11/L08/A5",
+   "why": "a permission list is not a proof, an action is",
+   "filled": true
+  },
+  {
+   "cell": "S11/L10/A2",
+   "why": "cloud findings need blast radius framing",
+   "filled": false
+  },
+  {
+   "cell": "S11/L11/A3",
+   "why": "policy retest after a fix, the least practised step here",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d17-prowler",
+   "name": "Prowler",
+   "url": "https://github.com/prowler-cloud/prowler",
+   "role": "Cloud posture and attack path checks across AWS, Azure and GCP",
+   "driver": {
+    "install": "pipx:prowler",
+    "verify": "prowler --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A02"
+   ],
+   "preconditions": [
+    "scoped read credentials"
+   ],
+   "oracle": [
+    "finding list in json-ocsf"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Needs read credentials. Never a production root key, and never a key that can mutate."
+  },
+  {
+   "id": "d17-scoutsuite",
+   "name": "ScoutSuite",
+   "url": "https://github.com/nccgroup/ScoutSuite",
+   "role": "Multi cloud configuration audit with a readable report",
+   "driver": {
+    "install": "pipx:scoutsuite",
+    "verify": "scoutsuite --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "read credentials"
+   ],
+   "oracle": [
+    "report per service with flagged misconfigurations"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d17-cloudfox",
+   "name": "cloudfox",
+   "url": "https://github.com/BishopFox/cloudfox",
+   "role": "Enumerates exploitable attack paths from inside a cloud account, the post-compromise view",
+   "driver": {
+    "install": "git:https://github.com/BishopFox/cloudfox",
+    "verify": "cloudfox --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A08"
+   ],
+   "preconditions": [
+    "an assumed role or access key you are authorised to use"
+   ],
+   "oracle": [
+    "reachable resources and permission paths"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Not packaged on PyPI or AUR. Build from source. This is the tool that answers 'what can this credential do'."
+  },
+  {
+   "id": "d17-pacu",
+   "name": "Pacu",
+   "url": "https://github.com/RhinoSecurityLabs/pacu",
+   "role": "AWS exploitation framework, the attack side counterpart to a posture scanner",
+   "driver": {
+    "install": "git:https://github.com/RhinoSecurityLabs/pacu",
+    "verify": "python3 pacu.py --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A11"
+   ],
+   "preconditions": [
+    "authorised credentials in a test account"
+   ],
+   "oracle": [
+    "module output showing escalation or access"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Requires an isolated account. Running this against anything shared is how incidents start."
+  },
+  {
+   "id": "d17-pathrunner",
+   "name": "pathrunner",
+   "url": "https://github.com/DataDog/pathrunner",
+   "role": "AWS IAM privilege escalation framework, released 2026-10-20",
+   "driver": {
+    "install": "git:https://github.com/DataDog/pathrunner",
+    "verify": "pathrunner --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A10"
+   ],
+   "preconditions": [
+    "an IAM principal in a sandbox account"
+   ],
+   "oracle": [
+    "an escalation path proven end to end"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "New this month. Pairs with pathfinding.cloud, the IAM privesc technique catalogue. Not packaged, build from source."
+  },
+  {
+   "id": "d17-trivy",
+   "name": "trivy",
+   "url": "https://github.com/aquasecurity/trivy",
+   "role": "Container, IaC and dependency scanning, the shift-left half of cloud",
+   "driver": {
+    "install": "pacman:trivy",
+    "verify": "trivy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A11",
+    "A15"
+   ],
+   "preconditions": [
+    "an image, a manifest or a filesystem"
+   ],
+   "oracle": [
+    "vulnerability and misconfiguration list"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d17-kube-hunter",
+   "name": "kube-hunter",
+   "url": "https://github.com/aquasecurity/kube-hunter",
+   "role": "Kubernetes attack surface discovery from outside or inside the cluster",
+   "driver": {
+    "install": "pipx:kube-hunter",
+    "verify": "kube-hunter --help",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A02"
+   ],
+   "preconditions": [
+    "a cluster endpoint in scope"
+   ],
+   "oracle": [
+    "discovered exposures with severity"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d17-kubectl",
+   "name": "kubectl",
+   "url": "https://kubernetes.io/docs/",
+   "role": "The control plane itself, and the fastest way to test what a token can do",
+   "driver": {
+    "install": "pacman:kubectl",
+    "verify": "kubectl version --client",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [
+    "a token or kubeconfig in scope"
+   ],
+   "oracle": [
+    "allowed and denied verbs per resource"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "auth can-i --list is the single most useful command in this domain."
+  },
+  {
+   "id": "d17-awscli",
+   "name": "aws-cli",
+   "url": "https://aws.amazon.com/cli/",
+   "role": "Direct control plane access, needed for everything the scanners cannot express",
+   "driver": {
+    "install": "pacman:aws-cli",
+    "verify": "aws --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A08"
+   ],
+   "preconditions": [
+    "credentials in scope"
+   ],
+   "oracle": [
+    "API responses proving or disproving a permission"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d17-azurecli",
+   "name": "azure-cli",
+   "url": "https://learn.microsoft.com/cli/azure/",
+   "role": "The Azure equivalent, including Entra and ARM enumeration",
+   "driver": {
+    "install": "pacman:azure-cli",
+    "verify": "az version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A08"
+   ],
+   "preconditions": [
+    "credentials in scope"
+   ],
+   "oracle": [
+    "role assignment and resource visibility"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d17-imds",
+   "name": "Instance metadata probing (curl)",
+   "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html",
+   "role": "The classic SSRF to credential path, tested with nothing but a request",
+   "driver": {
+    "install": "core:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A07"
+   ],
+   "preconditions": [
+    "a server side fetch primitive in scope"
+   ],
+   "oracle": [
+    "role credentials returned by the metadata endpoint"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "IMDSv2 changes the test: a token request first. If the fetch cannot set a header, the class is gone. Say so rather than reporting a false positive."
+  },
+  {
+   "id": "d17-cloudfox-ref",
+   "name": "pathfinding.cloud",
+   "url": "https://pathfinding.cloud/",
+   "role": "Catalogue of AWS IAM privilege escalation techniques, the map behind pathrunner",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d17-hacktricks-cloud",
+   "name": "HackTricks Cloud",
+   "url": "https://cloud.hacktricks.wiki/",
+   "role": "Per provider technique reference including metadata and IAM paths",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d17-cis",
+   "name": "CIS Benchmarks",
+   "url": "https://www.cisecurity.org/cis-benchmarks",
+   "role": "The hardening baseline, which is what a control is measured against",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d17-root",
+  "q": "Are you outside the estate or holding a credential?",
+  "why": "The two positions have almost nothing in common. Outside means exposure. Inside means permission paths.",
+  "branches": [
+   {
+    "a": "Outside",
+    "action": "look for the services that do not require a credential and are meant to be internal: buckets, metadata proxies, admin panels, storage listing",
+    "tools": [
+     "d17-cloudfox-ref",
+     "d17-hacktricks-cloud"
+    ],
+    "oracle": "data returned without authentication"
+   },
+   {
+    "a": "Holding a credential",
+    "action": "enumerate what it can do before using it. auth can-i list, or the provider equivalent, then map to paths",
+    "tools": [
+     "d17-kubectl",
+     "d17-cloudfox",
+     "d17-pathrunner"
+    ],
+    "oracle": "an action the credential should not permit"
+   },
+   {
+    "a": "A server side fetch primitive",
+    "action": "probe the metadata service with a token request first. IMDSv2 means no header equals no finding",
+    "tools": [
+     "d17-imds"
+    ],
+    "oracle": "credentials returned, or a token then credentials"
+   },
+   {
+    "a": "Posture review, no exploitation",
+    "action": "run a posture scanner with read only credentials, then rank by blast radius not by count",
+    "tools": [
+     "d17-prowler",
+     "d17-scoutsuite",
+     "d17-trivy"
+    ],
+    "oracle": "finding list with resource identifiers"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "metadata credential theft",
+   "detect": "request to the metadata address from an application process",
+   "control": "IMDSv2, hop limit 1, egress deny",
+   "rule": "169.254.169.254 access"
+  },
+  {
+   "attack": "IAM privilege escalation",
+   "detect": "action permitted by a policy that should not",
+   "control": "least privilege, permission boundaries, SCPs",
+   "rule": "privilege escalation path monitor"
+  },
+  {
+   "attack": "exposed storage bucket",
+   "detect": "anonymous list or get success",
+   "control": "block public access at the account level",
+   "rule": "anonymous access to object storage"
+  },
+  {
+   "attack": "over permissive role trust",
+   "detect": "role assumable by a broad principal",
+   "control": "explicit principal, conditions, external id",
+   "rule": "role trust policy change"
+  },
+  {
+   "attack": "container escape prerequisites",
+   "detect": "privileged pod, host mount, or broad service account",
+   "control": "pod security standards, no host namespaces",
+   "rule": "privileged workload admitted"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool answers 'what can this credential do' in one command across providers",
+   "class": "partial",
+   "build_candidate": "wrap each provider's policy simulator behind one interface and emit a capability list"
+  },
+  {
+   "gap": "No path oriented report that turns posture findings into an exploit chain",
+   "class": "no-tool",
+   "build_candidate": "join posture findings with known escalation edges and rank by reachable impact"
+  },
+  {
+   "gap": "L10 blast radius and L11 policy retest cells empty",
+   "class": "coverage",
+   "build_candidate": "impact template per cloud class plus a policy diff and replay harness"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D17.index.json"
+ }
+}

@@ -1,0 +1,532 @@
+{
+ "id": "D21",
+ "title": "Mobile app and webview bridge",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The client behind the web app, and the trust boundary that is usually weaker than the web one.",
+ "atoms": [
+  "A03",
+  "A05",
+  "A06",
+  "A08"
+ ],
+ "atom_notes": {
+  "A03": "the app authenticates differently and often trusts the device",
+  "A05": "the webview bridge passes typed data across a trust boundary",
+  "A06": "deep links and intent filters are namespace surface",
+  "A08": "the APK is a source of endpoints and keys no response reveals"
+ },
+ "required_cells": [
+  {
+   "cell": "S15/L03/A3",
+   "why": "the package inventory is faster and richer than any black box probe",
+   "filled": true
+  },
+  {
+   "cell": "S15/L05/A2",
+   "why": "recovered client logic to hypothesis about hidden endpoints",
+   "filled": true
+  },
+  {
+   "cell": "S15/L06/A2",
+   "why": "runtime hooks are needed for pinning and for logic that is not in static code",
+   "filled": true
+  },
+  {
+   "cell": "S15/L07/A2",
+   "why": "the webview bridge is the exploitation surface",
+   "filled": true
+  },
+  {
+   "cell": "S15/L08/A5",
+   "why": "prove bridge reach with a control origin",
+   "filled": true
+  },
+  {
+   "cell": "S15/L11/A3",
+   "why": "retest after pinning or bridge changes",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d21-jadx",
+   "name": "jadx",
+   "url": "https://github.com/skylot/jadx",
+   "role": "DEX to Java, the readable half of APK analysis",
+   "driver": {
+    "install": "pacman:jadx",
+    "verify": "jadx --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "an APK"
+   ],
+   "oracle": [
+    "decompiled sources or class list"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d21-apktool",
+   "name": "apktool",
+   "url": "https://apktool.org/",
+   "role": "Manifest and resource decode, smali, and a rebuild path",
+   "driver": {
+    "install": "aur:android-apktool",
+    "verify": "apktool --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A06"
+   ],
+   "preconditions": [
+    "an APK"
+   ],
+   "oracle": [
+    "decoded manifest with exported components"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d21-frida",
+   "name": "frida",
+   "url": "https://frida.re/",
+   "role": "Runtime instrumentation, the only way to beat pinning and read logic at runtime",
+   "driver": {
+    "install": "pipx:frida-tools",
+    "verify": "frida --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A03",
+    "A05"
+   ],
+   "preconditions": [
+    "a device or emulator you control",
+    "the app installed"
+   ],
+   "oracle": [
+    "hook output showing the decrypted value or bypassed check"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d21-objection",
+   "name": "objection",
+   "url": "https://github.com/sensepost/objection",
+   "role": "Frida wrapper with ready made pinning and jailbreak bypasses",
+   "driver": {
+    "install": "pipx:objection",
+    "verify": "objection --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A03"
+   ],
+   "preconditions": [
+    "a rooted device or emulator"
+   ],
+   "oracle": [
+    "bypass applied and the app proceeding"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d21-mobsf",
+   "name": "Mobile Security Framework",
+   "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+   "role": "Automated static and dynamic analysis with a report",
+   "driver": {
+    "install": "docker",
+    "verify": "docker ps",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A15"
+   ],
+   "preconditions": [
+    "an APK or IPA"
+   ],
+   "oracle": [
+    "report with findings per category"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d21-rea-android",
+   "name": "rea inspect_android_package",
+   "url": "https://rea.tools",
+   "role": "Manifest, permissions, classes and resources without writing source to disk",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "an APK"
+   ],
+   "oracle": [
+    "declaration inventory"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d21-rea-android-class",
+   "name": "rea inspect_android_class / inspect_android_method",
+   "url": "https://rea.tools",
+   "role": "Class members and a single decompiled method, plus reference tracing",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "an APK and a class name"
+   ],
+   "oracle": [
+    "methods, fields, decompiled body"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d21-rea-android-res",
+   "name": "rea decode_android_resources",
+   "url": "https://rea.tools",
+   "role": "Readable AndroidManifest and string resources, the fastest way to find endpoints and keys",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "an APK"
+   ],
+   "oracle": [
+    "manifest and strings"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d21-blutter",
+   "name": "blutter (Flutter AOT)",
+   "url": "https://github.com/worawit/blutter",
+   "role": "Recover Dart symbols from libapp.so, the only way into an app whose logic is not in DEX",
+   "driver": {
+    "install": "git:https://github.com/worawit/blutter",
+    "verify": "python3 blutter.py",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A06"
+   ],
+   "preconditions": [
+    "a Flutter APK with libapp.so"
+   ],
+   "oracle": [
+    "recovered symbols and object pool"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Named as a gap in D31 and listed here as the tool that closes it. Not packaged, build from source."
+  },
+  {
+   "id": "d21-wxapkg",
+   "name": "WeChat mini program unpacking",
+   "url": "https://github.com/Noisyfox/wxapkg-unpacker",
+   "role": "The only route into a mini program's code, a China specific surface",
+   "driver": {
+    "install": "git:https://github.com/Noisyfox/wxapkg-unpacker",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a .wxapkg package from a device you control"
+   ],
+   "oracle": [
+    "decompiled app service and page code"
+   ],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "PROBABLE",
+   "note": "Niche and jurisdiction specific. Included because no Western list carries it and the surface is enormous in CN."
+  },
+  {
+   "id": "d21-mastg",
+   "name": "OWASP MASTG",
+   "url": "https://mas.owasp.org/MASTG/",
+   "role": "The mobile testing guide, 240 section files, the closest thing to complete",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d21-masvs",
+   "name": "OWASP MASVS",
+   "url": "https://mas.owasp.org/MASVS/",
+   "role": "The requirement set, i.e. the fix side",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d21-atlas-w05",
+   "name": "Atlas W05: file materialisation",
+   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "role": "Technique pointer, W05 queued. Declared so the dependency is visible.",
+   "driver": {
+    "install": "n/a data",
+    "verify": "n/a",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [
+    "F2"
+   ],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L05",
+   "status": "PROBABLE",
+   "note": "Mobile technique depth belongs in the atlas. The pointer is honest about being queued."
+  }
+ ],
+ "tree": {
+  "id": "d21-root",
+  "q": "Do you have the package, or only a running app?",
+  "why": "Static gives you structure and a stable target. Runtime gives you values. Most people skip static and then fight pinning for an hour.",
+  "branches": [
+   {
+    "a": "Have the package",
+    "action": "decode, list exported components, extract strings, then find the API host and auth scheme",
+    "tools": [
+     "d21-rea-android",
+     "d21-rea-android-res",
+     "d21-apktool",
+     "d21-jadx"
+    ],
+    "oracle": "endpoints and keys recovered from the package"
+   },
+   {
+    "a": "Only a running app",
+    "action": "proxy it first. if pinned, hook the pinning check and retry",
+    "tools": [
+     "d21-frida",
+     "d21-objection"
+    ],
+    "oracle": "requests visible through the proxy after the bypass"
+   },
+   {
+    "a": "A webview in the app",
+    "next": {
+     "id": "d21-wv",
+     "q": "What can the loaded page call?",
+     "branches": [
+      {
+       "a": "A bridge object",
+       "action": "enumerate the exposed methods, then test what they do with attacker controlled arguments and from an attacker controlled origin",
+       "tools": [
+        "d21-rea-android-class"
+       ],
+       "oracle": "bridge method executed from an origin it should not accept"
+      },
+      {
+       "a": "Deep links only",
+       "action": "test intent or URL handling for parameter injection and for reaching privileged screens",
+       "tools": [
+        "d21-rea-android"
+       ],
+       "oracle": "privileged screen reached without auth"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Flutter or mini program",
+    "action": "the logic is not in DEX. use the AOT or package specific tool first, or you will read nothing",
+    "tools": [
+     "d21-blutter",
+     "d21-wxapkg"
+    ],
+    "oracle": "recovered symbols or source"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "webview bridge abuse",
+   "detect": "bridge call from an unexpected origin",
+   "control": "allowlist origins and methods, validate arguments",
+   "rule": "bridge call origin mismatch"
+  },
+  {
+   "attack": "certificate pinning bypass",
+   "detect": "instrumentation present, hooking framework loaded",
+   "control": "pinning plus integrity checks, but assume bypass",
+   "rule": "frida or hook framework detected on device"
+  },
+  {
+   "attack": "exported component abuse",
+   "detect": "external intent reaching a privileged activity",
+   "control": "exported false, permission on the component",
+   "rule": "intent to a non exported component"
+  },
+  {
+   "attack": "insecure deep link",
+   "detect": "deeplink with parameters reaching a privileged screen",
+   "control": "validate and authorise on the parameter, not the route",
+   "rule": "deeplink with unexpected parameters"
+  },
+  {
+   "attack": "secret in the package",
+   "detect": "key material in resources or strings",
+   "control": "no secrets client side, rotate what leaked",
+   "rule": "secret pattern in an APK"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No Flutter AOT recovery that is packaged or reliable",
+   "class": "partial",
+   "build_candidate": "wrap blutter with symbol mapping and a confidence report"
+  },
+  {
+   "gap": "No mini program unpacker that handles current package versions",
+   "class": "partial",
+   "build_candidate": "wxapkg parser with version detection, CN lane"
+  },
+  {
+   "gap": "No bridge fuzzer that enumerates methods and mutates argument types",
+   "class": "no-tool",
+   "build_candidate": "enumerate the JS interface from the page, then call each method with type mutations"
+  },
+  {
+   "gap": "L11 retest cell empty",
+   "class": "coverage",
+   "build_candidate": "replay based retest for pinning and bridge findings"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D21.index.json"
+ }
+}
