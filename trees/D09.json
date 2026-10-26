@@ -1,0 +1,56 @@
+{
+ "id": "d09-root",
+ "q": "Are you in a lab or on shared infrastructure?",
+ "why": "This question comes first, before any technique. A desync can corrupt other users' in flight requests. On shared infrastructure that is not a test, it is an incident.",
+ "branches": [
+  {
+   "a": "On shared infrastructure",
+   "action": "stop. document the suspicion and the reason, then move to a lab. nothing else in this tree applies",
+   "tools": [],
+   "oracle": "n/a"
+  },
+  {
+   "a": "In a lab",
+   "next": {
+    "id": "d09-lab",
+    "q": "What sits in front of the back end?",
+    "branches": [
+     {
+      "a": "Unknown",
+      "action": "fingerprint the chain first. version, keep alive behaviour, connection reuse",
+      "tools": [
+       "d09-nuclei",
+       "d09-curl"
+      ],
+      "oracle": "proxy behaviour identified"
+     },
+     {
+      "a": "HTTP/1.1 proxy",
+      "action": "test CL.TE and TE.CL with paired requests and a timing oracle, then obfuscation variants",
+      "tools": [
+       "d09-smuggler"
+      ],
+      "oracle": "a response that belongs to another request"
+     },
+     {
+      "a": "HTTP/2 front end",
+      "action": "test downgrade and h2c upgrade paths. this is the half most tools miss",
+      "tools": [
+       "d09-h2c"
+      ],
+      "oracle": "an internal request reaching a blocked path"
+     }
+    ]
+   }
+  },
+  {
+   "a": "Want to learn the class",
+   "action": "read the framing rules, then do the labs. do not start with a tool",
+   "tools": [
+    "d09-rfc9112",
+    "d09-portswigger"
+   ],
+   "oracle": "lab solved with a hand crafted request"
+  }
+ ]
+}

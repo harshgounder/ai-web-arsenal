@@ -179,7 +179,7 @@
     "S03/L07/A2",
     "S01/L08/A5"
    ],
-   "status": "STUB",
+   "status": "DEEP",
    "note": "highest lab dependency, must not be tested on shared infrastructure"
   },
   {
@@ -320,7 +320,7 @@
     "S04/L07/A2",
     "S04/L11/A2"
    ],
-   "status": "STUB"
+   "status": "DEEP"
   },
   {
    "id": "D17",

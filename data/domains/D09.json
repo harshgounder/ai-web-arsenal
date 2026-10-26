@@ -1,0 +1,399 @@
+{
+ "id": "D09",
+ "title": "HTTP semantics, smuggling, desync",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The most dangerous domain in this repo and the one with the strictest rules.",
+ "atoms": [
+  "A06",
+  "A04",
+  "A05",
+  "A15"
+ ],
+ "atom_notes": {
+  "A06": "two layers resolve the same bytes to different messages, which is the definition of desync",
+  "A04": "the front end and back end state diverge and stay diverged",
+  "A05": "the framing itself is something the bytes can disagree about",
+  "A15": "proxy and server configuration decides whether the class exists at all"
+ },
+ "required_cells": [
+  {
+   "cell": "S03/L05/A2",
+   "why": "know the proxy chain and HTTP versions before sending anything malformed",
+   "filled": true
+  },
+  {
+   "cell": "S03/L06/A3",
+   "why": "desync detection needs controlled variation, not a spray",
+   "filled": true
+  },
+  {
+   "cell": "S03/L07/A2",
+   "why": "exploitation means a captured request from another user, which needs a safe proof",
+   "filled": true
+  },
+  {
+   "cell": "S03/L08/A5",
+   "why": "a control request that does not desync is mandatory, and so is a lab",
+   "filled": true
+  },
+  {
+   "cell": "S03/L10/A2",
+   "why": "impact framing that explains blast radius on shared infrastructure",
+   "filled": false
+  },
+  {
+   "cell": "S03/L11/A3",
+   "why": "retest after a proxy config change",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d09-smuggler",
+   "name": "smuggler",
+   "url": "https://github.com/defparam/smuggler",
+   "role": "Desync detection across CL.TE, TE.CL, TE.TE and TE.TE obfuscation variants",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A04"
+   ],
+   "preconditions": [
+    "two layers that disagree about message framing"
+   ],
+   "oracle": [
+    "a request that desyncs the backend",
+    "a second response arriving on the wrong connection"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Only against infrastructure you own or a lab. A desync can corrupt other users' requests, which makes it the most dangerous class here."
+  },
+  {
+   "id": "d09-h2c",
+   "name": "h2cSmuggler",
+   "url": "https://github.com/BishopFox/h2cSmuggler",
+   "role": "HTTP/2 cleartext upgrade smuggling, the class most scanners completely miss",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a front end that forwards an upgrade header",
+    "a backend that speaks h2c"
+   ],
+   "oracle": [
+    "an internal request reaching a path the front end would block"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d09-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/stable/",
+   "role": "Byte level control over the request, which is the only way to send a malformed frame",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "the exact bytes on the wire"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d09-curl",
+   "name": "curl",
+   "url": "https://curl.se/docs/",
+   "role": "Manual probes: no reason to use a tool before you can hand craft the request",
+   "driver": {
+    "install": "pacman:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a shell"
+   ],
+   "oracle": [
+    "differential response when framing is changed"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d09-portswigger",
+   "name": "PortSwigger: request smuggling",
+   "url": "https://portswigger.net/web-security/request-smuggling",
+   "role": "The best structured explanation and the labs that calibrate a tool",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d09-http2-research",
+   "name": "PortSwigger HTTP/2 research",
+   "url": "https://portswigger.net/research/http2",
+   "role": "The HTTP/2 downgrade and async desync classes, which changed the field",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A04"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "HTTP/2 smuggling separated this domain into two eras. Anything that only tests HTTP/1.1 is testing half the surface."
+  },
+  {
+   "id": "d09-rfc9112",
+   "name": "RFC 9112 (HTTP/1.1)",
+   "url": "https://www.rfc-editor.org/rfc/rfc9112",
+   "role": "The framing rules, which are the source of every desync",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Read the message body length section. Every smuggling variant is a disagreement about that section."
+  },
+  {
+   "id": "d09-rfc9113",
+   "name": "RFC 9113 (HTTP/2)",
+   "url": "https://www.rfc-editor.org/rfc/rfc9113",
+   "role": "Connection and request specific header rules, the basis of downgrade smuggling",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d09-nuclei",
+   "name": "nuclei",
+   "url": "https://github.com/projectdiscovery/nuclei",
+   "role": "Template checks for known desync misconfigurations and proxy behaviour",
+   "driver": {
+    "install": "aur:nuclei-bin",
+    "verify": "nuclei -version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15",
+    "A06"
+   ],
+   "preconditions": [
+    "a host and templates"
+   ],
+   "oracle": [
+    "template match with evidence"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d09-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per variant technique reference",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  }
+ ],
+ "tree": {
+  "id": "d09-root",
+  "q": "Are you in a lab or on shared infrastructure?",
+  "why": "This question comes first, before any technique. A desync can corrupt other users' in flight requests. On shared infrastructure that is not a test, it is an incident.",
+  "branches": [
+   {
+    "a": "On shared infrastructure",
+    "action": "stop. document the suspicion and the reason, then move to a lab. nothing else in this tree applies",
+    "tools": [],
+    "oracle": "n/a"
+   },
+   {
+    "a": "In a lab",
+    "next": {
+     "id": "d09-lab",
+     "q": "What sits in front of the back end?",
+     "branches": [
+      {
+       "a": "Unknown",
+       "action": "fingerprint the chain first. version, keep alive behaviour, connection reuse",
+       "tools": [
+        "d09-nuclei",
+        "d09-curl"
+       ],
+       "oracle": "proxy behaviour identified"
+      },
+      {
+       "a": "HTTP/1.1 proxy",
+       "action": "test CL.TE and TE.CL with paired requests and a timing oracle, then obfuscation variants",
+       "tools": [
+        "d09-smuggler"
+       ],
+       "oracle": "a response that belongs to another request"
+      },
+      {
+       "a": "HTTP/2 front end",
+       "action": "test downgrade and h2c upgrade paths. this is the half most tools miss",
+       "tools": [
+        "d09-h2c"
+       ],
+       "oracle": "an internal request reaching a blocked path"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Want to learn the class",
+    "action": "read the framing rules, then do the labs. do not start with a tool",
+    "tools": [
+     "d09-rfc9112",
+     "d09-portswigger"
+    ],
+    "oracle": "lab solved with a hand crafted request"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "CL.TE smuggling",
+   "detect": "front end and back end disagree on framing",
+   "control": "same parser, reject ambiguous requests",
+   "rule": "conflicting content-length and transfer-encoding"
+  },
+  {
+   "attack": "TE.CL",
+   "detect": "chunked handling mismatch",
+   "control": "normalise at the edge, one parser",
+   "rule": "malformed chunk size"
+  },
+  {
+   "attack": "h2c upgrade smuggling",
+   "detect": "upgrade header forwarded to a backend that speaks h2c",
+   "control": "strip upgrade, disable h2c internally",
+   "rule": "upgrade header to an internal hop"
+  },
+  {
+   "attack": "HTTP/2 downgrade",
+   "detect": "header injection through pseudo header conversion",
+   "control": "strict RFC 9113 conversion",
+   "rule": "pseudo header in a downgraded request"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that safely proves a desync on production with zero blast radius",
+   "class": "no-tool",
+   "build_candidate": "a paired request where the second is a health check on a dedicated endpoint, never a third party request"
+  },
+  {
+   "gap": "S03/L10 blast radius and L11 retest cells empty",
+   "class": "coverage",
+   "build_candidate": "impact template per desync class plus a proxy config diff"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D09.index.json"
+ }
+}

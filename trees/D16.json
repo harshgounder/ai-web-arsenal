@@ -1,0 +1,50 @@
+{
+ "id": "d16-root",
+ "q": "Is the weakness in a token, a secret, or a cipher?",
+ "why": "Three different disciplines that share a domain name. Token attacks are about validation. Secret attacks are about exposure. Cipher attacks are about mathematics and oracles.",
+ "branches": [
+  {
+   "a": "A token",
+   "action": "decode, then test validation: none, algorithm confusion, key confusion, claims. acceptance is the only oracle",
+   "tools": [
+    "d16-jwt-tool",
+    "d16-jwtio"
+   ],
+   "oracle": "server accepts a token it should reject"
+  },
+  {
+   "a": "A secret",
+   "action": "scan with verification on. an unverified candidate list is noise",
+   "tools": [
+    "d16-trufflehog",
+    "d16-gitleaks"
+   ],
+   "oracle": "secret verified live against its service"
+  },
+  {
+   "a": "A cipher",
+   "action": "find the oracle first. without a distinguishable error there is no attack",
+   "tools": [
+    "d16-padbuster"
+   ],
+   "oracle": "padding oracle distinguishes the two error classes"
+  },
+  {
+   "a": "A signed request",
+   "action": "the algorithm is in the client. recover it, then decide whether the key is client side",
+   "tools": [
+    "d16-rea-signing"
+   ],
+   "oracle": "a replayed signature accepted with a modified body"
+  },
+  {
+   "a": "A hash",
+   "action": "identify the type, then choose a wordlist and rule set. never guess the type",
+   "tools": [
+    "d16-hashcat",
+    "d16-john"
+   ],
+   "oracle": "plaintext or a measurable rate"
+  }
+ ]
+}

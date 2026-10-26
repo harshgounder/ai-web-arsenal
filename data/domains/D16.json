@@ -1,0 +1,417 @@
+{
+ "id": "D16",
+ "title": "Cryptography, secrets, signing",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain where a wrong assumption is silent, so every entry pairs with a control.",
+ "atoms": [
+  "A09",
+  "A08",
+  "A05",
+  "A03"
+ ],
+ "atom_notes": {
+  "A09": "a property the design assumes is true is not, and nothing visibly fails when that happens",
+  "A08": "secrets are exposure, and secret discovery is an information problem before it is a crypto problem",
+  "A05": "an encoding or padding difference that one layer checks and another does not",
+  "A03": "tokens are identity, so token crypto is identity crypto"
+ },
+ "required_cells": [
+  {
+   "cell": "S04/L05/A2",
+   "why": "identify what the crypto is supposed to guarantee before testing it",
+   "filled": true
+  },
+  {
+   "cell": "S04/L06/A3",
+   "why": "token and secret testing needs automation with rate awareness",
+   "filled": true
+  },
+  {
+   "cell": "S04/L07/A2",
+   "why": "forgery or cracking is the exploitation step",
+   "filled": true
+  },
+  {
+   "cell": "S04/L08/A5",
+   "why": "a token that parses is not a token that is accepted",
+   "filled": true
+  },
+  {
+   "cell": "S04/L11/A2",
+   "why": "retest after key rotation or algorithm pinning",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d16-jwt-tool",
+   "name": "jwt_tool",
+   "url": "https://github.com/ticarpi/jwt_tool",
+   "role": "The full JWT attack set, plus claim tampering",
+   "driver": {
+    "install": "aur:jwt_tool",
+    "verify": "jwt_tool --help",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09",
+    "A03"
+   ],
+   "preconditions": [
+    "a token you can decode"
+   ],
+   "oracle": [
+    "token accepted after tampering"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED",
+   "note": "Start with -M at to run everything, then narrow. Hand crafting a claim before that wastes time."
+  },
+  {
+   "id": "d16-hashcat",
+   "name": "hashcat",
+   "url": "https://github.com/hashcat/hashcat",
+   "role": "Offline cracking for hashes recovered from artefacts",
+   "driver": {
+    "install": "pacman:hashcat",
+    "verify": "hashcat --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "a hash and its type"
+   ],
+   "oracle": [
+    "plaintext or a verifiable progress rate"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d16-john",
+   "name": "John the Ripper (jumbo)",
+   "url": "https://github.com/openwall/john",
+   "role": "The counterpart, better on some formats and on rule based attacks",
+   "driver": {
+    "install": "pacman:john",
+    "verify": "john --list=build-info",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "a hash"
+   ],
+   "oracle": [
+    "plaintext or a rate"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d16-cyberchef",
+   "name": "CyberChef",
+   "url": "https://github.com/gchq/CyberChef",
+   "role": "Decode and transform chains, the fastest way to identify an unknown encoding",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A09"
+   ],
+   "preconditions": [
+    "a blob of unknown encoded data"
+   ],
+   "oracle": [
+    "a readable result and the recipe that produced it"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Recipe export is the useful part: it makes the decode reproducible instead of a screenshot."
+  },
+  {
+   "id": "d16-padbuster",
+   "name": "PadBuster",
+   "url": "https://github.com/AonCyberLabs/PadBuster",
+   "role": "Padding oracle exploitation for CBC ciphers",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "a CBC mode ciphertext",
+    "an oracle that distinguishes padding errors"
+   ],
+   "oracle": [
+    "decrypted plaintext or a forged ciphertext"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d16-gitleaks",
+   "name": "gitleaks",
+   "url": "https://github.com/gitleaks/gitleaks",
+   "role": "Fast regex secret scan across repos and bundles",
+   "driver": {
+    "install": "pacman:gitleaks",
+    "verify": "gitleaks version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08",
+    "A09"
+   ],
+   "preconditions": [
+    "a repo or a bundle"
+   ],
+   "oracle": [
+    "secret candidates with location"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d16-trufflehog",
+   "name": "trufflehog",
+   "url": "https://github.com/trufflesecurity/trufflehog",
+   "role": "Verified secret detection, which cuts noise to near zero",
+   "driver": {
+    "install": "aur:trufflehog",
+    "verify": "trufflehog --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "preconditions": [
+    "a repo, filesystem or bundle"
+   ],
+   "oracle": [
+    "only verified live secrets"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED",
+   "note": "--only-verified is the flag that makes this usable. Everything else is a candidate list."
+  },
+  {
+   "id": "d16-rea-signing",
+   "name": "rea analyze_web_bundle",
+   "url": "https://rea.tools",
+   "role": "Find the signing function in the bundle, which is the only way to replay a signed request",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A09",
+    "A05"
+   ],
+   "preconditions": [
+    "a reachable origin"
+   ],
+   "oracle": [
+    "the signing function and its inputs located in recovered source"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "VERIFIED",
+   "note": "Request signing lives in client code by definition. If the app signs, the algorithm is in the bundle."
+  },
+  {
+   "id": "d16-payloads",
+   "name": "PayloadsAllTheThings",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+   "role": "JWT, hash and crypto payload corpus",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [
+    "a class"
+   ],
+   "oracle": [
+    "a payload for that class"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d16-jwtio",
+   "name": "jwt.io",
+   "url": "https://jwt.io/",
+   "role": "Decode and inspect a token quickly. Never paste a production token",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A09"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L03",
+   "status": "ESTABLISHED",
+   "note": "Client side tool. Pasting a live token into a website is a disclosure, and it happens constantly."
+  }
+ ],
+ "tree": {
+  "id": "d16-root",
+  "q": "Is the weakness in a token, a secret, or a cipher?",
+  "why": "Three different disciplines that share a domain name. Token attacks are about validation. Secret attacks are about exposure. Cipher attacks are about mathematics and oracles.",
+  "branches": [
+   {
+    "a": "A token",
+    "action": "decode, then test validation: none, algorithm confusion, key confusion, claims. acceptance is the only oracle",
+    "tools": [
+     "d16-jwt-tool",
+     "d16-jwtio"
+    ],
+    "oracle": "server accepts a token it should reject"
+   },
+   {
+    "a": "A secret",
+    "action": "scan with verification on. an unverified candidate list is noise",
+    "tools": [
+     "d16-trufflehog",
+     "d16-gitleaks"
+    ],
+    "oracle": "secret verified live against its service"
+   },
+   {
+    "a": "A cipher",
+    "action": "find the oracle first. without a distinguishable error there is no attack",
+    "tools": [
+     "d16-padbuster"
+    ],
+    "oracle": "padding oracle distinguishes the two error classes"
+   },
+   {
+    "a": "A signed request",
+    "action": "the algorithm is in the client. recover it, then decide whether the key is client side",
+    "tools": [
+     "d16-rea-signing"
+    ],
+    "oracle": "a replayed signature accepted with a modified body"
+   },
+   {
+    "a": "A hash",
+    "action": "identify the type, then choose a wordlist and rule set. never guess the type",
+    "tools": [
+     "d16-hashcat",
+     "d16-john"
+    ],
+    "oracle": "plaintext or a measurable rate"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "algorithm confusion",
+   "detect": "alg in the token does not match the configured algorithm",
+   "control": "pin the algorithm server side",
+   "rule": "alg mismatch"
+  },
+  {
+   "attack": "weak hashing",
+   "detect": "fast hash used for passwords",
+   "control": "memory hard KDF",
+   "rule": "hash type at rest"
+  },
+  {
+   "attack": "secret in client artefact",
+   "detect": "key material in a bundle or APK",
+   "control": "no secrets client side, rotate on discovery",
+   "rule": "secret pattern in a served asset"
+  },
+  {
+   "attack": "padding oracle",
+   "detect": "distinguishable decrypt error classes",
+   "control": "uniform errors, authenticated encryption",
+   "rule": "decrypt error differential"
+  },
+  {
+   "attack": "nonce reuse",
+   "detect": "repeated IV or nonce per key",
+   "control": "random or counter nonce with uniqueness proof",
+   "rule": "nonce collision"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that lifts a signing function from a bundle and proves the replay",
+   "class": "no-tool",
+   "build_candidate": "locate the function, wrap it, sign a modified body, and diff against a control request"
+  },
+  {
+   "gap": "No secret scanner that reports where the secret is USED, only that it exists",
+   "class": "partial",
+   "build_candidate": "join the finding with the call site so the impact is stated not guessed"
+  },
+  {
+   "gap": "S04/L11 retest cell empty",
+   "class": "coverage",
+   "build_candidate": "replay the proving token request after key rotation"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D16.index.json"
+ }
+}
