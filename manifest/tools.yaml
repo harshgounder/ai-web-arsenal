@@ -621,3 +621,98 @@ tools:
     agent_use: "pipx install <pkg> for single file python tools"
     docs: https://pipx.pypa.io/
     profiles: [minimal, all]
+
+  # ---------------- D11 API protocol tools (slice) ----------------
+  - id: schemathesis
+    bin: schemathesis
+    domain: D11
+    role: property based testing straight from an openapi or graphql schema
+    kind: cli
+    install: [{channel: pipx, pkg: schemathesis}]
+    verify: "schemathesis --version"
+    json_out: true
+    stdin: false
+    agent_use: "schemathesis run spec.yml --checks all --hypothesis-seed 0, reproducible failures"
+    docs: https://schemathesis.readthedocs.io/
+    profiles: [api, all]
+
+  - id: newman
+    bin: newman
+    domain: D11
+    role: run a postman collection as a test suite, includes auth flows
+    kind: cli
+    install: [{channel: npm, pkg: newman}]
+    verify: "newman --version"
+    json_out: true
+    stdin: false
+    agent_use: "newman run collection.json -r json --reporter-json-export r.json"
+    docs: https://github.com/postmanlabs/newman
+    profiles: [api, all]
+
+  - id: jwt_tool
+    bin: jwt_tool
+    domain: D06
+    role: jwt inspection and the full attack set, none, alg confusion, kid, jku
+    kind: cli
+    install: [{channel: aur, pkg: jwt_tool}]
+    verify: "jwt_tool --help"
+    json_out: false
+    stdin: false
+    agent_use: "jwt_tool <token> -M at to run all tests, then -T for a specific tamper"
+    docs: https://github.com/ticarpi/jwt_tool
+    profiles: [web, api, all]
+
+  - id: graphw00f
+    bin: graphw00f
+    domain: D11
+    role: graphql engine fingerprint, decides which bypass class applies
+    kind: cli
+    install: [{channel: git, pkg: https://github.com/dolevf/graphw00f}]
+    verify: "graphw00f -h"
+    json_out: true
+    stdin: false
+    note: "not on PyPI at a real version and not in the AUR. clone and run main.py, or pip install -e ."
+    agent_use: "graphw00f -d -t https://target/graphql, engine determines introspection bypass route"
+    docs: https://github.com/dolevf/graphw00f
+    profiles: [api, all]
+
+  - id: graphql-cop
+    bin: graphql-cop
+    domain: D11
+    role: graphql misconfiguration audit, the cheap wins first
+    kind: cli
+    install: [{channel: git, pkg: https://github.com/dolevf/graphql-cop}]
+    verify: "graphql-cop -h"
+    json_out: true
+    stdin: false
+    note: "not on PyPI. clone and run graphql-cop.py"
+    agent_use: "graphql-cop -t https://target/graphql, json output maps to the defense mirror directly"
+    docs: https://github.com/dolevf/graphql-cop
+    profiles: [api, all]
+
+  - id: inql
+    bin: inql
+    domain: D11
+    role: graphql introspection to queries, burp extension plus cli
+    kind: cli
+    install: [{channel: pipx, pkg: inql}]
+    verify: "inql --help"
+    json_out: true
+    stdin: false
+    agent_use: "inql -t https://target/graphql -o out, generates ready queries per field"
+    docs: https://github.com/doyensec/inql
+    profiles: [api, all]
+
+  - id: restler
+    bin: restler
+    domain: D11
+    role: stateful rest api fuzzing from an openapi spec, finds sequences not single calls
+    kind: cli
+    install: [{channel: git, pkg: https://github.com/microsoft/restler-fuzzer}]
+    verify: "Restler.dll --help"
+    json_out: true
+    stdin: false
+    note: "dotnet build required. heavy but it is the only credible stateful api fuzzer."
+    agent_use: "restler fuzz --grammar_file g.json --dictionary_file d.json --settings s.json"
+    docs: https://github.com/microsoft/restler-fuzzer
+    profiles: [api, all]

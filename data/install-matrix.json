@@ -1259,6 +1259,200 @@
     }
    ],
    "ambiguity": null
+  },
+  {
+   "id": "schemathesis",
+   "bin": "schemathesis",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "property based testing straight from an openapi or graphql schema",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "schemathesis",
+    "version": "4.32.5"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "schemathesis",
+     "ok": true,
+     "version": "4.32.5"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "newman",
+   "bin": "newman",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "run a postman collection as a test suite, includes auth flows",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "npm",
+    "pkg": "newman",
+    "version": "6.2.3"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "npm",
+     "pkg": "newman",
+     "ok": true,
+     "version": "6.2.3"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "jwt_tool",
+   "bin": "jwt_tool",
+   "domain": "D06",
+   "kind": "cli",
+   "role": "jwt inspection and the full attack set, none, alg confusion, kid, jku",
+   "profiles": [
+    "web",
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "aur",
+    "pkg": "jwt_tool",
+    "version": "2.3.0-1",
+    "votes": 0,
+    "outdated": false
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "aur",
+     "pkg": "jwt_tool",
+     "ok": true,
+     "version": "2.3.0-1",
+     "votes": 0,
+     "outdated": false
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "graphw00f",
+   "bin": "graphw00f",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "graphql engine fingerprint, decides which bypass class applies",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "git",
+    "pkg": "https://github.com/dolevf/graphw00f",
+    "version": null
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "git",
+     "pkg": "https://github.com/dolevf/graphw00f",
+     "ok": true,
+     "note": "clone url, unverified"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "graphql-cop",
+   "bin": "graphql-cop",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "graphql misconfiguration audit, the cheap wins first",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "git",
+    "pkg": "https://github.com/dolevf/graphql-cop",
+    "version": null
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "git",
+     "pkg": "https://github.com/dolevf/graphql-cop",
+     "ok": true,
+     "note": "clone url, unverified"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "inql",
+   "bin": "inql",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "graphql introspection to queries, burp extension plus cli",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "pipx",
+    "pkg": "inql",
+    "version": "4.0.5"
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "pipx",
+     "pkg": "inql",
+     "ok": true,
+     "version": "4.0.5"
+    }
+   ],
+   "ambiguity": null
+  },
+  {
+   "id": "restler",
+   "bin": "restler",
+   "domain": "D11",
+   "kind": "cli",
+   "role": "stateful rest api fuzzing from an openapi spec, finds sequences not single calls",
+   "profiles": [
+    "api",
+    "all"
+   ],
+   "installed": false,
+   "resolved": {
+    "channel": "git",
+    "pkg": "https://github.com/microsoft/restler-fuzzer",
+    "version": null
+   },
+   "status": "resolvable",
+   "tried": [
+    {
+     "channel": "git",
+     "pkg": "https://github.com/microsoft/restler-fuzzer",
+     "ok": true,
+     "note": "clone url, unverified"
+    }
+   ],
+   "ambiguity": null
   }
  ]
 }

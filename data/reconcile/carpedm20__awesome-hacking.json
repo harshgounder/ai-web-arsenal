@@ -1,68 +1,28 @@
 {
  "source": "carpedm20__awesome-hacking",
  "rows": 201,
- "admitted": 49,
+ "admitted": 131,
  "excluded": 25,
- "held": 127,
+ "held": 45,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "UNCLASSIFIED_LOW_SIGNAL": 127,
   "SOCIAL_OR_VIDEO": 3,
   "OUT_OF_SCOPE_NONWEB": 21,
+  "UNCLASSIFIED_LOW_SIGNAL": 45,
   "KNOWLEDGE_NOT_TOOL": 1
  },
  "unique_entries": {
-  "admit": 47,
+  "admit": 128,
   "exclude": 25,
-  "hold": 125
+  "hold": 44
  },
  "identity_holds": true,
  "held_examples": [
   {
-   "name": "awesome-machine-learning",
-   "url": "https://github.com/josephmisiti/awesome-machine-learning/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "here",
-   "url": "https://github.com/Hack-with-Github/Free-Security-eBooks",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Roppers Computing Fundamentals",
-   "url": "https://www.roppers.org/courses/fundamentals",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "gitbook",
-   "url": "https://www.hoppersroppers.org/fundamentals/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Understanding the basics of Linux Binary Exploitation",
-   "url": "https://github.com/r0hi7/BinExp",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Missing Semester",
-   "url": "https://missing.csail.mit.edu/2020/course-shell/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
    "name": "Begin RE: A Reverse Engineering Tutorial Workshop",
    "url": "https://www.begin.re/the-workshop",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Malware Unicorn Reverse Engineering Tutorial",
-   "url": "https://malwareunicorn.org/workshops/re101.html#0",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Lena151: Reversing With Lena",
-   "url": "https://archive.org/details/lena151",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -76,23 +36,8 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "x64dbg",
-   "url": "https://github.com/x64dbg/x64dbg",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
    "name": "plasma",
    "url": "https://github.com/joelpx/plasma",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "ScratchABit",
-   "url": "https://github.com/pfalcon/ScratchABit",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Capstone",
-   "url": "https://github.com/aquynh/capstone",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -101,48 +46,103 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Krakatau",
-   "url": "https://github.com/Storyyeller/Krakatau",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "JD-GUI",
-   "url": "https://github.com/java-decompiler/jd-gui",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "procyon",
-   "url": "https://bitbucket.org/mstrobel/procyon/wiki/Java%20Decompiler",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Luyten",
-   "url": "https://github.com/deathmarine/Luyten",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "JAD",
-   "url": "http://varaneckas.com/jad/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "JADX",
-   "url": "https://github.com/skylot/jadx",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "dotPeek",
-   "url": "https://www.jetbrains.com/decompiler/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "ILSpy",
-   "url": "https://github.com/icsharpcode/ILSpy/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
    "name": "dnSpy",
    "url": "https://github.com/0xd4d/dnSpy",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Wireshark",
+   "url": "https://www.wireshark.org/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "HxD",
+   "url": "http://mh-nexus.de/en/hxd/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Hexinator",
+   "url": "https://hexinator.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "BinText",
+   "url": "https://web.archive.org/web/http://www.mcafee.com/kr/downloads/free-tools/bintext.aspx",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Decompiler.com",
+   "url": "https://www.decompiler.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "pig",
+   "url": "https://github.com/rafael-santiago/pig",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "ASlookup",
+   "url": "https://aslookup.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Nipe",
+   "url": "https://github.com/GouveaHeitor/nipe",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Habu",
+   "url": "https://github.com/portantier/habu",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Firesheep",
+   "url": "https://codebutler.github.io/firesheep/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Autopsy",
+   "url": "http://www.sleuthkit.org/autopsy/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "EnCase",
+   "url": "https://www.guidancesoftware.com/products/Pages/encase-forensic/overview.aspx",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "IPED - Indexador e Processador de Evid\u00eancias Digitais",
+   "url": "https://servicos.dpf.gov.br/ferramentas/IPED/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "CAINE",
+   "url": "https://www.caine-live.net/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Ciphey",
+   "url": "https://github.com/ciphey/ciphey",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "HackingLab",
+   "url": "https://www.hacking-lab.com/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "CodeEngn",
+   "url": "http://codeengn.com/challenges/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Crackmes.de",
+   "url": "http://crackmes.de/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Hack This Site!",
+   "url": "https://www.hackthissite.org/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   }
  ]

@@ -1,123 +1,21 @@
 {
  "source": "marchev__awesome-ai-web3-security",
  "rows": 62,
- "admitted": 33,
+ "admitted": 53,
  "excluded": 9,
- "held": 20,
+ "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "UNCLASSIFIED_LOW_SIGNAL": 20,
   "OUT_OF_SCOPE_NONWEB": 8,
   "KNOWLEDGE_NOT_TOOL": 1
  },
  "unique_entries": {
-  "admit": 31,
+  "admit": 51,
   "exclude": 9,
-  "hold": 20
+  "hold": 0
  },
  "identity_holds": true,
- "held_examples": [
-  {
-   "name": "Hound",
-   "url": "https://github.com/scabench-org/hound",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Octane Security",
-   "url": "https://www.octane.security/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Cantina Apex",
-   "url": "https://cantina.xyz/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Zellic V12",
-   "url": "https://v12.zellic.io/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Almanax",
-   "url": "https://www.almanax.ai/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "ChainGPT Smart Contract Auditor",
-   "url": "https://www.chaingpt.org/smart-contract-auditor",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "webrainsec",
-   "url": "https://webrainsec.io/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Forta Network",
-   "url": "https://forta.org/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "AnChain.AI",
-   "url": "https://www.anchain.ai/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Report",
-   "url": "https://red.anthropic.com/2025/smart-contracts/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "ScaBench",
-   "url": "https://github.com/scabench-org/scabench",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Majeur Benchmark",
-   "url": "https://github.com/z0r0z/majeur",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "SmartBugs",
-   "url": "https://github.com/smartbugs/smartbugs",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "SmartBugs Curated",
-   "url": "https://github.com/smartbugs/smartbugs-curated",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Awesome Smart Contract Datasets",
-   "url": "https://github.com/acorn421/awesome-smart-contract-datasets",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "pashov/ai-web3-security",
-   "url": "https://github.com/pashov/ai-web3-security",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "HackenProof AI Agents Directory",
-   "url": "https://hackenproof.com/security-ai-agents",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Forefy Auditor Skills Registry",
-   "url": "https://forefy.com/skills",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "awesome-ethereum-security",
-   "url": "https://github.com/crytic/awesome-ethereum-security",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Web3-Security-Tools",
-   "url": "https://github.com/Quillhash/Web3-Security-Tools",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  }
- ]
+ "held_examples": []
 }

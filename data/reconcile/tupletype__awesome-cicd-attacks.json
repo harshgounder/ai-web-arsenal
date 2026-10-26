@@ -1,147 +1,32 @@
 {
  "source": "tupletype__awesome-cicd-attacks",
  "rows": 89,
- "admitted": 21,
+ "admitted": 66,
  "excluded": 21,
- "held": 47,
+ "held": 2,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "UNCLASSIFIED_LOW_SIGNAL": 47,
   "OUT_OF_SCOPE_NONWEB": 14,
-  "SOCIAL_OR_VIDEO": 7
+  "SOCIAL_OR_VIDEO": 7,
+  "UNCLASSIFIED_LOW_SIGNAL": 2
  },
  "unique_entries": {
-  "admit": 21,
+  "admit": 66,
   "exclude": 21,
-  "hold": 47
+  "hold": 2
  },
  "identity_holds": true,
  "held_examples": [
   {
-   "name": "All the Small Things: Azure CLI Leakage and Problematic Usage Patterns",
-   "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/secrets-leakage-user-error-azure-cli/",
+   "name": "Gato",
+   "url": "https://github.com/praetorian-inc/gato",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Anyone can Access Deleted and Private Repository Data on GitHub",
-   "url": "https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Beyond S3: Exposed Resources on AWS",
-   "url": "https://duo.com/blog/beyond-s3-exposed-resources-on-aws",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "CloudQuarry: Digging for secrets in public AMIs",
-   "url": "https://securitycafe.ro/2024/05/08/aws-cloudquarry-digging-for-secrets-in-public-amis/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Employee Personal GitHub Repos Expose Internal Azure and Red Hat Secrets",
-   "url": "https://www.aquasec.com/blog/github-repos-expose-azure-and-red-hat-secrets/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Fortune 500 at Risk: 250M Artifacts Exposed via Misconfigured Registries",
-   "url": "https://www.aquasec.com/blog/250m-artifacts-exposed-via-misconfigured-registries/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "GitLab Secrets",
-   "url": "https://github.com/RichardoC/gitlab-secrets",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Hidden GitHub Commits and How to Reveal Them",
-   "url": "https://neodyme.io/en/blog/github_secrets/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Publicly Exposed AWS Document DB Snapshots",
-   "url": "https://ramimac.me/exposed-docdb",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "ActionsTOCTOU (Time Of Check to Time Of Use)",
-   "url": "https://github.com/AdnaneKhan/ActionsTOCTOU/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "AWS Targeted by a Package Backfill Attack",
-   "url": "https://www.mend.io/blog/aws-targeted-by-a-package-backfill-attack/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Can You Trust Your VSCode Extensions?",
-   "url": "https://www.aquasec.com/blog/can-you-trust-your-vscode-extensions/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Deep dive into Visual Studio Code extension security vulnerabilities",
-   "url": "https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Dependency Confusions in Docker and remote pwning of your infra",
-   "url": "https://www.errno.fr/DockerDependencyConfusion.html",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Erosion of Trust: Unmasking Supply Chain Vulnerabilities in the Terraform Registry",
-   "url": "https://boostsecurity.io/blog/erosion-of-trust-unmasking-supply-chain-vulnerabilities-in-the-terraform-registry",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "How I hacked into Google's internal corporate assets",
-   "url": "https://observationsinsecurity.com/2024/04/25/how-i-hacked-into-googles-internal-corporate-assets/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "How We Hacked a Software Supply Chain for $50K",
-   "url": "https://www.landh.tech/blog/20250211-hack-supply-chain-for-50k/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Introducing MavenGate: a supply chain attack method for Java and Android applications",
-   "url": "https://blog.oversecured.com/Introducing-MavenGate-a-supply-chain-attack-method-for-Java-and-Android-applications/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Keeping your GitHub Actions and workflows secure Part 1: Preventing pwn requests",
-   "url": "https://securitylab.github.com/research/github-actions-preventing-pwn-requests/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Keeping your GitHub Actions and workflows secure Part 2: Untrusted input",
-   "url": "https://securitylab.github.com/research/github-actions-untrusted-input/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Security alert: social engineering campaign targets technology industry employees",
-   "url": "https://github.blog/2023-07-18-security-alert-social-engineering-campaign-targets-technology-industry-employees/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "The (In)security Landscape of AI-Powered GitHub Actions (Part 2/2)",
-   "url": "https://www.wiz.io/blog/github-actions-security-ai-powered-actions-vulnerabilities",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Thousands of npm accounts use email addresses with expired domains",
-   "url": "https://therecord.media/thousands-of-npm-accounts-use-email-addresses-with-expired-domains",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Hijacking GitHub runners to compromise the organization",
-   "url": "https://www.synacktiv.com/publications/hijacking-github-runners-to-compromise-the-organization",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "How We Discovered Vulnerabilities in CI/CD Pipelines of Popular Open-Source Projects",
-   "url": "https://cycode.com/blog/github-actions-vulnerabilities",
+   "name": "zizmor",
+   "url": "https://github.com/zizmorcore/zizmor",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   }
  ]

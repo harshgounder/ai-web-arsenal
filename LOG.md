@@ -57,3 +57,33 @@ One line per step. What ran, what was checked, what was wrong.
   on use in a real intrusion but not yet on tool internals. Internals need a direct read of the ARTEX
   repository before any claim about its architecture enters the repo.
 - The 4,000-agent-skill audit figure is from one vendor's press release. Needs the primary report.
+
+## 2026-10-26, milestone 2: D11 vertical slice
+
+12. Goal round continued. Applied HELD policy (decision 2026-10-26): entries unique to one source are
+    admitted with reason `admitted_unreviewed_tail`. Result: 16,956 admitted / 14,127 excluded /
+    212 held / 2 orphan / 1 unresolved. Identity holds.
+13. Cloned 6 taxonomy repos into raw/taxonomy. 5 succeeded. OWASP LLM Top 10 failed on fetch-pack
+    disconnect, needs a retry or an API path. Sizes look wrong for depth 1 (ASVS 30M, API-Security 140M)
+    because these repos carry built assets. Not a problem, only parsed files matter.
+14. Probed availability for 7 API tools. Found three packaging traps: PyPI `graphw00f` is 0.0.1
+    (placeholder), `graphql-cop` and `graphqlmap` are not on PyPI at all, `batchql` likewise. All four
+    went in as `git` channel with an explicit note, not as invented package names.
+    `jwt_tool` is AUR only. `schemathesis`, `inql` are pipx. `newman` is npm. `restler` needs dotnet build.
+15. Manifest now 50 tools, 0 unresolved.
+16. Authored data/domains/D11.json: 24 enriched entries, 9 required cells (6 filled), decision tree,
+    8 defense mirror rows, 6 gaps with build candidates, 8 atoms mapped.
+17. Wrote scripts/render-domain.py, generic for all 37 domains. Rendered domains/D11-api-protocols.md
+    at 280 lines. Markdown is generated, JSON is source of truth.
+18. Generated data/domains/D11.index.json: 885 entries are API-relevant but NOT enriched, against 24
+    enriched. Ratio 2.6 percent. This is the single most important number in the project: enrichment is
+    the bottleneck, not discovery. Keyword matching is over-inclusive (books, blog posts, CVE writeups),
+    so the real backlog is smaller, but the order of magnitude stands.
+19. Committed as milestone 2.
+
+### Open
+
+- LLM Top 10 repo clone needs a retry.
+- D11.index needs a relevance pass to drop books and writeups (should be ~150-250 real candidates).
+- The 24:885 ratio means "10 domains deep" needs a stated enriched-target per domain, otherwise deep
+  means nothing.

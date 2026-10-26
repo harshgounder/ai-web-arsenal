@@ -45,6 +45,10 @@ def disposition(e):
     if t == "tail":
         if e.get("domain") == "D28" or "mcp" in (e.get("name") or "").lower():
             return "EXCLUDE", "MCP_NON_SECURITY"
+        # POLICY 2026-10-26: unique-to-one-list entries are admitted UNREVIEWED.
+        # Rationale: the long tail is where the niche finds live. Visible flag beats deletion.
+        if e.get("n_sources", 0) == 1:
+            return "ADMIT", "admitted_unreviewed_tail"
         return "HOLD", "UNCLASSIFIED_LOW_SIGNAL"
     if t == "core_web":
         return "ADMIT", "core_web"

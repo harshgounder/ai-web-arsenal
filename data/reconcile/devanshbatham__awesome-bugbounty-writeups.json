@@ -1,22 +1,22 @@
 {
  "source": "devanshbatham__awesome-bugbounty-writeups",
  "rows": 620,
- "admitted": 248,
+ "admitted": 260,
  "excluded": 335,
- "held": 37,
+ "held": 25,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "SOCIAL_OR_VIDEO": 306,
   "KNOWLEDGE_NOT_TOOL": 24,
-  "UNCLASSIFIED_LOW_SIGNAL": 37,
+  "UNCLASSIFIED_LOW_SIGNAL": 25,
   "OUT_OF_SCOPE_NONWEB": 5
  },
  "unique_entries": {
-  "admit": 221,
+  "admit": 233,
   "exclude": 321,
-  "hold": 37
+  "hold": 25
  },
  "identity_holds": true,
  "held_examples": [
@@ -28,21 +28,6 @@
   {
    "name": "Github actions DOS",
    "url": "https://blog.teddykatz.com/2019/11/12/github-actions-dos.html",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Instagram account is reactivated without entering 2FA",
-   "url": "https://bugbountypoc.com/instagram-account-is-reactivated-without-entering-2fa/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "A Race condition bug in Facebook chat groups",
-   "url": "https://www.seekurity.com/blog/general/the-fuzz-the-bug-the-action-a-race-condition-bug-in-facebook-chat-groups-leads-to-spy-on-conversations/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Race condition on web",
-   "url": "https://www.josipfranjkovic.com/blog/race-conditions-on-web",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -81,11 +66,6 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "RCE by uploading a web config",
-   "url": "https://poc-server.com/blog/2018/05/22/rce-by-uploading-a-web-config/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
    "name": "RCE in duolingos tinycards app from android",
    "url": "https://wwws.nightwatchcybersecurity.com/2018/01/04/rce-in-duolingos-tinycards-app-for-android-cve-2017-16905/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
@@ -98,11 +78,6 @@
   {
    "name": "RCE starwars",
    "url": "https://blog.zsec.uk/rce-starwars/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "RCE in Addthis",
-   "url": "https://whitehatnepal.tumblr.com/post/149933960267/rce-in-addthis",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -121,18 +96,8 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "RCE in Ruby using mustache templates",
-   "url": "https://rhys.io/post/rce-in-ruby-using-mustache-templates",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
    "name": "About a Sucuri RCE\u2026and How Not to Handle Bug Bounty Reports",
    "url": "https://www.rcesecurity.com/2019/06/about-a-sucuri-rce-and-how-not-to-handle-bug-bounty-reports/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Facebook\u2019s Burglary Shopping List",
-   "url": "https://www.7elements.co.uk/resources/blog/facebooks-burglary-shopping-list/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -143,6 +108,41 @@
   {
    "name": "Dell KACE K1000 Remote Code Execution",
    "url": "https://www.rcesecurity.com/2019/04/dell-kace-k1000-remote-code-execution-the-story-of-bug-k1-18652/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Zero Day RCE on Mozilla's AWS Network",
+   "url": "https://blog.assetnote.io/bug-bounty/2019/03/19/rce-on-mozilla-zero-day-webpagetest/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Magento \u2013 RCE & Local File Read with low privilege admin rights",
+   "url": "https://blog.scrt.ch/2019/01/24/magento-rce-local-file-read-with-low-privilege-admin-rights/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "RCE in Hubspot with EL injection in HubL",
+   "url": "https://www.betterhacker.com/2018/12/rce-in-hubspot-with-el-injection-in-hubl.html",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Github Desktop RCE",
+   "url": "https://pwning.re/2018/12/04/github-desktop-rce/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "eBay Source Code leak",
+   "url": "https://slashcrypto.org/2018/11/28/eBay-source-code-leak/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Facebook source code disclosure in ads API",
+   "url": "https://www.amolbaikar.com/facebook-source-code-disclosure-in-ads-api/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Buffer Overflow Attack Book pdf",
+   "url": "http://www.cis.syr.edu/~wedu/seed/Book/book_sample_buffer.pdf",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   }
  ]

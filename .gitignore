@@ -6,3 +6,5 @@ bootstrap/logs/
 __pycache__/
 *.pyc
 .venv/
+# taxonomy clone cache, reproducible with scripts/harvest-taxonomy.sh
+raw/taxonomy/

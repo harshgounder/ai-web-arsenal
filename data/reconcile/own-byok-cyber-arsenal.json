@@ -1,150 +1,150 @@
 {
  "source": "own-byok-cyber-arsenal",
  "rows": 1580,
- "admitted": 652,
+ "admitted": 1010,
  "excluded": 505,
- "held": 423,
+ "held": 65,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 304,
   "OUT_OF_SCOPE_NONWEB": 36,
-  "UNCLASSIFIED_LOW_SIGNAL": 423,
   "KNOWLEDGE_NOT_TOOL": 114,
   "SOCIAL_OR_VIDEO": 48,
-  "MCP_NON_SECURITY": 3
+  "MCP_NON_SECURITY": 3,
+  "UNCLASSIFIED_LOW_SIGNAL": 65
  },
  "unique_entries": {
-  "admit": 451,
+  "admit": 784,
   "exclude": 424,
-  "hold": 397
+  "hold": 64
  },
  "identity_holds": true,
  "held_examples": [
   {
-   "name": "Open-Source Dataset",
-   "url": "https://huggingface.co/datasets/ScaleAI/MCP-Atlas",
+   "name": "velociraptor",
+   "url": "https://github.com/Velocidex/velociraptor",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Lobster Trap",
-   "url": "https://github.com/veeainc/lobstertrap",
+   "name": "patator>",
+   "url": "https://github.com/lanjelot/patator",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "LiveKit Agents",
-   "url": "https://github.com/livekit/agents",
+   "name": "strix>",
+   "url": "https://github.com/usestrix/strix",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Watch Context Agents Live",
-   "url": "https://atlan.com/context-layer-demo/",
+   "name": "0xf.at",
+   "url": "https://0xf.at/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Claude Code",
-   "url": "https://github%E2%80%8B.com/anthropics/claude-code",
+   "name": "AIRDOS",
+   "url": "https://kishanbagaria.com/airdos/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "OpenAI Codex",
-   "url": "https://github%E2%80%8B.com/openai/codex",
+   "name": "ASlookup",
+   "url": "https://aslookup.com/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "SmythOS",
-   "url": "https://github.com/SmythOS/sre",
+   "name": "Autopsy",
+   "url": "http://www.sleuthkit.org/autopsy/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Middleware OpsAI",
-   "url": "https://middleware.io/product/ops-ai/",
+   "name": "Begin RE: A Reverse Engineering Tutorial Workshop",
+   "url": "https://www.begin.re/the-workshop",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Beeps",
-   "url": "https://www.beeps.co/",
+   "name": "BinText",
+   "url": "https://web.archive.org/web/http://www.mcafee.com/kr/downloads/free-tools/bintext.aspx",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Ontheia",
-   "url": "https://github.com/Ontheia/ontheia",
+   "name": "Boston Key Party CTF",
+   "url": "http://bostonkeyparty.net/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "The Robotics Institute",
-   "url": "http://www.ri.cmu.edu",
+   "name": "Buffer Overflow Attack Book pdf",
+   "url": "http://www.cis.syr.edu/~wedu/seed/Book/book_sample_buffer.pdf",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Taking AI-Based Side-Channel Attacks to a New Dimension",
-   "url": "https://eprint.iacr.org/2025/655.pdf",
+   "name": "CAINE",
+   "url": "https://www.caine-live.net/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Asqav",
-   "url": "https://github.com/jagmarques/asqav-sdk",
+   "name": "CSAW CTF",
+   "url": "https://ctf.isis.poly.edu/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Cem Dilmegani",
-   "url": "https://aimultiple.com/author/cem-dilmegani",
+   "name": "CTF archives (shell-storm)",
+   "url": "http://shell-storm.org/repo/CTF/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Cem Dilmegani",
-   "url": "https://aimultiple.com/author/cem-dilmegani",
+   "name": "CTFtime.org",
+   "url": "https://ctftime.org/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Alyona Vert.",
-   "url": "https://www.turingpost.com/authors/alyona-vert",
+   "name": "CodeEngn",
+   "url": "http://codeengn.com/challenges/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "Smart Founder Lab",
-   "url": "https://smartfounderlab.com/",
+   "name": "Codegate CTF",
+   "url": "http://ctf.codegate.org/html/Main.html?lang=eng",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "activitywatch",
-   "url": "https://github.com/ActivityWatch/activitywatch",
+   "name": "Crackmes.de",
+   "url": "http://crackmes.de/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "anomaly-detection",
-   "url": "https://github.com/opensearch-project/anomaly-detection",
+   "name": "DEF CON",
+   "url": "https://legitbs.net/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "canarytokens",
-   "url": "https://github.com/thinkst/canarytokens",
+   "name": "Decompiler.com",
+   "url": "https://www.decompiler.com/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "cedar",
-   "url": "https://github.com/cedar-policy/cedar",
+   "name": "EnCase",
+   "url": "https://www.guidancesoftware.com/products/Pages/encase-forensic/overview.aspx",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "cloudsplaining",
-   "url": "https://github.com/salesforce/cloudsplaining",
+   "name": "Firesheep",
+   "url": "https://codebutler.github.io/firesheep/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "endpointdlp",
-   "url": "https://github.com/SomansaOpenSource/endpointdlp",
+   "name": "Ghidra",
+   "url": "https://ghidra-sre.org/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "firecracker",
-   "url": "https://github.com/firecracker-microvm/firecracker",
+   "name": "Ghost in the Shellcode",
+   "url": "http://ghostintheshellcode.com/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "fleet",
-   "url": "https://github.com/fleetdm/fleet",
+   "name": "Github actions DOS",
+   "url": "https://blog.teddykatz.com/2019/11/12/github-actions-dos.html",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   }
  ]
