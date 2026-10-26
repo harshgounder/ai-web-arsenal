@@ -1,0 +1,41 @@
+{
+ "id": "d12-root",
+ "q": "Is the bug about order and timing, or about a rule?",
+ "why": "Two different failures. Races break an assumption about concurrency. Logic breaks an assumption about sequence or value. The control differs.",
+ "branches": [
+  {
+   "a": "Timing",
+   "action": "model the state transition, then send the pair together. sequential run first as the control",
+   "tools": [
+    "d12-turbo-intruder",
+    "d12-race-the-web"
+   ],
+   "oracle": "final state impossible sequentially, with the sequential control not reproducing"
+  },
+  {
+   "a": "A rule",
+   "action": "write the rule as the app states it, then find the sequence that satisfies every field check and violates the rule",
+   "tools": [
+    "d12-newman",
+    "d12-mitmproxy"
+   ],
+   "oracle": "an outcome the business rule forbids"
+  },
+  {
+   "a": "Retry and idempotency",
+   "action": "drop the response and resend. if the effect doubles, the operation is not idempotent",
+   "tools": [
+    "d12-mitmproxy"
+   ],
+   "oracle": "two effects from one intent"
+  },
+  {
+   "a": "Multi step approval",
+   "action": "change the object between steps. the approver sees one thing and applies another",
+   "tools": [
+    "d12-newman"
+   ],
+   "oracle": "applied object differs from the approved summary"
+  }
+ ]
+}

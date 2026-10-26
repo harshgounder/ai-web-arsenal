@@ -1,0 +1,397 @@
+{
+ "id": "D13",
+ "title": "File handling, upload, path, archive",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain where the finding is execution, not upload.",
+ "atoms": [
+  "A06",
+  "A01",
+  "A05"
+ ],
+ "atom_notes": {
+  "A06": "two layers resolve the same filename or path to different targets",
+  "A01": "an uploaded file is data a later process may execute or interpret",
+  "A05": "declared type and actual bytes disagree, and only one layer checks"
+ },
+ "required_cells": [
+  {
+   "cell": "S06/L05/A2",
+   "why": "know where the file lands and what reads it before testing the upload",
+   "filled": true
+  },
+  {
+   "cell": "S06/L06/A3",
+   "why": "bypass matrices need automation across extension, type and content",
+   "filled": true
+  },
+  {
+   "cell": "S06/L07/A2",
+   "why": "execution or read outside the intended root is the impact",
+   "filled": true
+  },
+  {
+   "cell": "S06/L08/A5",
+   "why": "a stored file that never executes is not a finding",
+   "filled": true
+  },
+  {
+   "cell": "S07/L06/A2",
+   "why": "archive contents need inspection before extraction",
+   "filled": true
+  },
+  {
+   "cell": "S06/L11/A3",
+   "why": "retest after a validator change",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d13-fuxploider",
+   "name": "fuxploider",
+   "url": "https://github.com/almandin/fuxploider",
+   "role": "Upload bypass matrix: extension, content type, magic bytes, polyglot",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05",
+    "A06"
+   ],
+   "preconditions": [
+    "an upload endpoint"
+   ],
+   "oracle": [
+    "a file accepted that the app said it would reject"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Not on PyPI. Build from source. The finding is acceptance AND execution: a stored file that is never rendered is not impact."
+  },
+  {
+   "id": "d13-curl",
+   "name": "curl",
+   "url": "https://curl.se/docs/",
+   "role": "Craft the exact multipart body, the only way to test parser edge cases",
+   "driver": {
+    "install": "pacman:curl",
+    "verify": "curl --version",
+    "json": false,
+    "stdin": true
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a shell"
+   ],
+   "oracle": [
+    "differential handling of a malformed part"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d13-ffuf",
+   "name": "ffuf",
+   "url": "https://github.com/ffuf/ffuf",
+   "role": "Discover upload and read endpoints, and fuzz the filename position",
+   "driver": {
+    "install": "aur:ffuf",
+    "verify": "ffuf -V",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [
+    "a wordlist and a host"
+   ],
+   "oracle": [
+    "paths that answer differently"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L04",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d13-rea-artifact",
+   "name": "rea inspect_artifact / extract_artifact",
+   "url": "https://rea.tools",
+   "role": "Inventory and safely extract an archive before trusting it",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A06",
+    "A05"
+   ],
+   "preconditions": [
+    "an archive"
+   ],
+   "oracle": [
+    "typed inventory with integrity observations"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d13-fq",
+   "name": "fq",
+   "url": "https://github.com/wader/fq",
+   "role": "jq over any binary container, the fastest way to read an unknown format",
+   "driver": {
+    "install": "pacman:fq",
+    "verify": "fq --version",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [
+    "a binary file"
+   ],
+   "oracle": [
+    "structural query result"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "VERIFIED"
+  },
+  {
+   "id": "d13-wstg-upload",
+   "name": "WSTG File Upload test",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/15-Testing_for_HTTP_File_Upload/",
+   "role": "The canonical upload test",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A05"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d13-wstg-traversal",
+   "name": "WSTG Path Traversal and File Include",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include/",
+   "role": "The traversal and LFI test",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d13-ps-traversal",
+   "name": "PortSwigger: path traversal",
+   "url": "https://portswigger.net/web-security/file-path-traversal",
+   "role": "Explanation plus labs that calibrate the tool",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d13-payloads",
+   "name": "PayloadsAllTheThings",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+   "role": "File inclusion and upload payload corpus",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [
+    "a class and a context"
+   ],
+   "oracle": [
+    "a payload that works"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d13-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per platform file handling reference",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A06"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  }
+ ],
+ "tree": {
+  "id": "d13-root",
+  "q": "What happens to a stored file after upload?",
+  "why": "Upload success is not impact. The question is what reads it next: a renderer, an includer, an extractor, or nothing. If nothing reads it, there is no finding.",
+  "branches": [
+   {
+    "a": "Rendered to users",
+    "action": "test content type and disposition, then whether the origin executes it. same origin HTML is the finding",
+    "tools": [
+     "d13-fuxploider"
+    ],
+    "oracle": "script executes from the app origin"
+   },
+   {
+    "a": "Included by the server",
+    "action": "path traversal into the upload directory, then content the interpreter accepts",
+    "tools": [
+     "d13-curl"
+    ],
+    "oracle": "server executes the uploaded content"
+   },
+   {
+    "a": "Extracted by a job",
+    "action": "traversal and symlink entries, then check what lands outside the root",
+    "tools": [
+     "d13-rea-artifact"
+    ],
+    "oracle": "file exists outside the extraction root"
+   },
+   {
+    "a": "Nothing reads it",
+    "action": "no finding here. say so, and only mention it if it affects impact elsewhere",
+    "tools": [],
+    "oracle": "n/a"
+   },
+   {
+    "a": "Unknown format",
+    "action": "inspect the container structurally before writing a parser",
+    "tools": [
+     "d13-fq"
+    ],
+    "oracle": "structural query result"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "path traversal",
+   "detect": "dot segments after normalisation",
+   "control": "canonicalise and verify containment",
+   "rule": "traversal sequence in a path"
+  },
+  {
+   "attack": "unrestricted upload",
+   "detect": "extension or type outside the allowlist",
+   "control": "allowlist plus re-encode",
+   "rule": "disallowed content type"
+  },
+  {
+   "attack": "polyglot file",
+   "detect": "valid as two formats",
+   "control": "re-encode, never trust the declared type",
+   "rule": "magic bytes disagree with type"
+  },
+  {
+   "attack": "zip slip",
+   "detect": "archive entry with traversal",
+   "control": "containment check per entry",
+   "rule": "entry path escapes root"
+  },
+  {
+   "attack": "same origin upload execution",
+   "detect": "user content served from the app origin",
+   "control": "separate origin plus attachment disposition",
+   "rule": "asset request from the app origin"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that reports what reads an uploaded file, which decides if it is a finding",
+   "class": "no-tool",
+   "build_candidate": "join the upload endpoint with the renderer and includer inventory from bundle and capture"
+  },
+  {
+   "gap": "No archive fuzzer that mutates entry names and types systematically with containment checks",
+   "class": "partial",
+   "build_candidate": "generate archives by mutation axis, verify containment per axis"
+  },
+  {
+   "gap": "S06/L11 retest cell empty",
+   "class": "coverage",
+   "build_candidate": "replay the proving upload and read after a validator change"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D13.index.json"
+ }
+}

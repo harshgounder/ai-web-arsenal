@@ -1,0 +1,342 @@
+{
+ "id": "D12",
+ "title": "Business logic, races, money paths",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The domain no scanner can reach, because the bug is that the code does exactly what it says.",
+ "atoms": [
+  "A10",
+  "A12",
+  "A04"
+ ],
+ "atom_notes": {
+  "A10": "the workflow assumes an invariant the attacker can break, and every field is valid alone",
+  "A12": "the window between a check and its use is the whole attack in the concurrency case",
+  "A04": "the system view of state diverges from real state, and stays diverged"
+ },
+ "required_cells": [
+  {
+   "cell": "S10/L05/A2",
+   "why": "model the intended workflow before breaking it, or you are poking at random",
+   "filled": true
+  },
+  {
+   "cell": "S10/L06/A3",
+   "why": "replay needs automation and exact ordering",
+   "filled": true
+  },
+  {
+   "cell": "S10/L07/A2",
+   "why": "the exploit is a sequence or a timing, not a payload",
+   "filled": true
+  },
+  {
+   "cell": "S10/L08/A5",
+   "why": "the control is a sequential run that must NOT reproduce",
+   "filled": true
+  },
+  {
+   "cell": "S10/L10/A2",
+   "why": "money impact framing, or it gets triaged as intended behaviour",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d12-race-the-web",
+   "name": "race-the-web",
+   "url": "https://github.com/TheHackerDev/race-the-web",
+   "role": "Parallel request harness to find state races",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A12",
+    "A04"
+   ],
+   "preconditions": [
+    "an endpoint whose state matters",
+    "a way to observe final state"
+   ],
+   "oracle": [
+    "final state impossible sequentially"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Not on PyPI. Build from source. The control matters more than the tool: run the same requests sequentially first and show it does not reproduce."
+  },
+  {
+   "id": "d12-turbo-intruder",
+   "name": "Turbo Intruder (Burp extension)",
+   "url": "https://github.com/portswigger/turbo-intruder",
+   "role": "Last byte sync and single packet attack, the serious tool for single endpoint races",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A12"
+   ],
+   "preconditions": [
+    "Burp and the extension",
+    "an HTTP/2 capable target"
+   ],
+   "oracle": [
+    "state that only breaks when requests land together"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Single packet attack over HTTP/2 is the only reliable way to test a race on a modern stack. Anything else is hoping."
+  },
+  {
+   "id": "d12-newman",
+   "name": "newman",
+   "url": "https://github.com/postmanlabs/newman",
+   "role": "Replay a multi step sequence deterministically, which is how logic bugs get proven",
+   "driver": {
+    "install": "npm:newman",
+    "verify": "newman --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A10"
+   ],
+   "preconditions": [
+    "a collection built from captured traffic"
+   ],
+   "oracle": [
+    "a sequence producing an impossible outcome"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d12-mitmproxy",
+   "name": "mitmproxy",
+   "url": "https://docs.mitmproxy.org/stable/",
+   "role": "Replay and reorder requests, including dropping responses to test retry logic",
+   "driver": {
+    "install": "pacman:mitmproxy",
+    "verify": "mitmproxy --version",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A04",
+    "A12"
+   ],
+   "preconditions": [
+    "a client you can proxy"
+   ],
+   "oracle": [
+    "the same request replayed with a different outcome"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d12-wstg-busl",
+   "name": "WSTG Business Logic (11 tests)",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/",
+   "role": "The test list for this domain",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A10"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d12-ps-race",
+   "name": "PortSwigger: race conditions",
+   "url": "https://portswigger.net/web-security/race-conditions",
+   "role": "The best current explanation, including the single packet attack",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A12"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d12-hacktricks",
+   "name": "HackTricks",
+   "url": "https://book.hacktricks.wiki/",
+   "role": "Per platform logic and race technique reference",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A10"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d12-rea-capture",
+   "name": "rea capture_browser_scenario",
+   "url": "https://rea.tools",
+   "role": "Deterministic capture of a multi step flow so a sequence can be replayed exactly",
+   "driver": {
+    "install": "mcp:rea",
+    "verify": "npx -y rea-agents@6.4.0 mcp",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A04"
+   ],
+   "preconditions": [
+    "a browser or CDP endpoint"
+   ],
+   "oracle": [
+    "the exact request sequence with ordering"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L03",
+   "status": "VERIFIED"
+  }
+ ],
+ "tree": {
+  "id": "d12-root",
+  "q": "Is the bug about order and timing, or about a rule?",
+  "why": "Two different failures. Races break an assumption about concurrency. Logic breaks an assumption about sequence or value. The control differs.",
+  "branches": [
+   {
+    "a": "Timing",
+    "action": "model the state transition, then send the pair together. sequential run first as the control",
+    "tools": [
+     "d12-turbo-intruder",
+     "d12-race-the-web"
+    ],
+    "oracle": "final state impossible sequentially, with the sequential control not reproducing"
+   },
+   {
+    "a": "A rule",
+    "action": "write the rule as the app states it, then find the sequence that satisfies every field check and violates the rule",
+    "tools": [
+     "d12-newman",
+     "d12-mitmproxy"
+    ],
+    "oracle": "an outcome the business rule forbids"
+   },
+   {
+    "a": "Retry and idempotency",
+    "action": "drop the response and resend. if the effect doubles, the operation is not idempotent",
+    "tools": [
+     "d12-mitmproxy"
+    ],
+    "oracle": "two effects from one intent"
+   },
+   {
+    "a": "Multi step approval",
+    "action": "change the object between steps. the approver sees one thing and applies another",
+    "tools": [
+     "d12-newman"
+    ],
+    "oracle": "applied object differs from the approved summary"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "race on a balance",
+   "detect": "two debits from one intent",
+   "control": "atomic conditional update",
+   "rule": "concurrent write to one row"
+  },
+  {
+   "attack": "coupon or quota abuse",
+   "detect": "redemptions above the rule",
+   "control": "server side counters, idempotency keys",
+   "rule": "quota exceeded per principal"
+  },
+  {
+   "attack": "negative quantity",
+   "detect": "sign not validated",
+   "control": "range and sign checks per field",
+   "rule": "negative amount in a debit"
+  },
+  {
+   "attack": "sequence skip",
+   "detect": "workflow state jumped",
+   "control": "transitions validated server side",
+   "rule": "state change without a transition event"
+  },
+  {
+   "attack": "retry duplication",
+   "detect": "same intent applied twice",
+   "control": "idempotency key",
+   "rule": "duplicate operation within the window"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No tool that models a business workflow and generates violating sequences",
+   "class": "no-tool",
+   "build_candidate": "derive the state machine from captured traffic, then search for sequences reaching a privileged state without the required steps"
+  },
+  {
+   "gap": "No race harness that automatically builds the sequential control",
+   "class": "partial",
+   "build_candidate": "every parallel run emits a paired sequential run and compares outcomes"
+  },
+  {
+   "gap": "S10/L10 money framing cell empty",
+   "class": "coverage",
+   "build_candidate": "impact template per logic class with the monetary or entitlement delta stated"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D12.index.json"
+ }
+}

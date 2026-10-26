@@ -1,0 +1,869 @@
+{
+ "domain": "D13",
+ "generated_at": "2026-10-27",
+ "enriched": 10,
+ "indexed_not_enriched": 123,
+ "entries": [
+  {
+   "name": "Seclists/Fuzzing",
+   "url": "https://github.com/danielmiessler/SecLists/tree/master/Fuzzing",
+   "tier": "core_web",
+   "n_sources": 6,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "API Key Leaks: Tools and exploits",
+   "url": "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks",
+   "tier": "core_web",
+   "n_sources": 5,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploit DB",
+   "url": "https://exploit-db.com",
+   "tier": "core_web",
+   "n_sources": 4,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CTFtime.org",
+   "url": "https://ctftime.org/",
+   "tier": "tail",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFISuite",
+   "url": "https://github.com/D35m0nd142/LFISuite",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "wfuzz",
+   "url": "https://github.com/xmendez/wfuzz",
+   "tier": "core_web",
+   "n_sources": 3,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "File Upload blind SQLI",
+   "url": "https://jspin.re/fileupload-blind-sqli/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "From LFI to RCE via PHP sessions",
+   "url": "https://www.rcesecurity.com/2017/08/from-lfi-to-rce-via-php-sessions/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Kadimus",
+   "url": "https://github.com/P0cL4bs/Kadimus",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFI in apigee portals",
+   "url": "https://offensi.com/2019/01/31/lfi-in-apigee-portals/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFI in nokia maps",
+   "url": "http://blog.shashank.co/2013/10/lfi-in-nokia-maps.html",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFI to 10 server pwn",
+   "url": "https://nirmaldahal.com.np/lfi-to-10-server-pwn/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Magix bugbounty XSS writeup",
+   "url": "https://www.rcesecurity.com/2014/04/magix-bug-bounty-magix-com-rce-sqli-and-xara-com-lfi-xss/",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "My first LFI",
+   "url": "https://cyberzombie.in/my-first-lfi/",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Path traversal while uploading results in RCE",
+   "url": "https://blog.harshjaiswal.com/path-traversal-while-uploading-results-in-rce",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Unrestricted file upload to RCE",
+   "url": "https://blog.securitybreached.org/2017/12/19/unrestricted-file-upload-to-rce-bug-bounty-poc/",
+   "tier": "tail",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dotdotpwn",
+   "url": "https://github.com/wireghoul/dotdotpwn",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "nuclei-templates>",
+   "url": "https://github.com/projectdiscovery/nuclei-templates",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![A1-x-Tech/mcp-google-drive MCP server",
+   "url": "https://glama.ai/mcp/servers/A1-x-Tech/mcp-google-drive/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Agaveis/hiberden-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/Agaveis/hiberden-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![AgiMaulana/HuaweiAppGalleryMcp MCP server",
+   "url": "https://glama.ai/mcp/servers/AgiMaulana/HuaweiAppGalleryMcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![ArturLys/ao3-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/ArturLys/ao3-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![EveryPageApp/everypage-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/EveryPageApp/everypage-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![GeiserX/telegram-archive-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/GeiserX/telegram-archive-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Kadenzo/kadenzo-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/Kadenzo/kadenzo-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![KalpeshMahida0212/runsheet-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/KalpeshMahida0212/runsheet-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![OtaKit/otakit MCP server",
+   "url": "https://glama.ai/mcp/servers/OtaKit/otakit/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![PantelisGeorgiadis/dicomweb-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/PantelisGeorgiadis/dicomweb-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![SokolskyNikita/annas-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/SokolskyNikita/annas-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![Upload-Post/upload-post-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/@Upload-Post/upload-post-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![WaveSpeedAI/mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/WaveSpeedAI/mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![YGao2005/scholar-feed-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/YGao2005/scholar-feed-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![aadilr/changethisfile-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/aadilr/changethisfile-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![abhineet34/linkedin-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/abhineet34/linkedin-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![alex-gon/thegamecrafter-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/alex-gon/thegamecrafter-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![bitatlas MCP server",
+   "url": "https://glama.ai/mcp/servers/bitatlas-group/bitatlas/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![csitte/mailwarden MCP server",
+   "url": "https://glama.ai/mcp/servers/csitte/mailwarden/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![devemberx/mcp-server-polarion MCP server",
+   "url": "https://glama.ai/mcp/servers/devemberx/mcp-server-polarion/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![drumst0ck/uploadkit MCP server",
+   "url": "https://glama.ai/mcp/servers/drumst0ck/uploadkit/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![justinscott12/modrinth-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/justinscott12/modrinth-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mcp-server-s3 MCP server",
+   "url": "https://glama.ai/mcp/servers/ofershap/mcp-server-s3/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![mikusnuz/cws-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/mikusnuz/cws-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![obsidian-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/maxkuminov/obsidian-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![publora/mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/publora/mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![quokkapix/quokkapix-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/quokkapix/quokkapix-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rabdulsal/appstore-release-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/rabdulsal/appstore-release-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rendobar/mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/rendobar/mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![rps321321/obsidian-mcp-pro MCP server",
+   "url": "https://glama.ai/mcp/servers/rps321321/obsidian-mcp-pro/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![sachinbkale27/label-image-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/sachinbkale27/label-image-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![shipstatic MCP server",
+   "url": "https://glama.ai/mcp/servers/shipstatic/shipstatic/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![signdocsbrasil/signdocs-mcp-server MCP server",
+   "url": "https://glama.ai/mcp/servers/signdocsbrasil/signdocs-mcp-server/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![smaniches/semantic-scholar-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/smaniches/semantic-scholar-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![smeet666/mcp-archiveorg MCP server",
+   "url": "https://glama.ai/mcp/servers/smeet666/mcp-archiveorg/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![smeet666/mcp-books MCP server",
+   "url": "https://glama.ai/mcp/servers/smeet666/mcp-books/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![solnk-dev/solnk-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/solnk-dev/solnk-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![staminna/mcp-server-claude MCP server",
+   "url": "https://glama.ai/mcp/servers/staminna/mcp-server-claude/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![substack-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/conorbronsdon/substack-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tenequm/pond MCP server",
+   "url": "https://glama.ai/mcp/servers/tenequm/pond/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tobee89/mcp-paperless-ngx MCP server",
+   "url": "https://glama.ai/mcp/servers/tobee89/mcp-paperless-ngx/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![tokportal/tokportal-mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/tokportal/tokportal-mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![transfa MCP server",
+   "url": "https://glama.ai/mcp/servers/colapsis/transfa/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![vitrine3d/mcp MCP server",
+   "url": "https://glama.ai/mcp/servers/vitrine3d/mcp/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "![whatsapp-mcp-stream MCP server",
+   "url": "https://glama.ai/mcp/servers/@loglux/whatsapp-mcp-stream/badges/score.svg",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5logoandwordmark.svg\" align=\"right\" width=\"70\">",
+   "url": "https://www.w3.org/TR/html5/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "@swisskyrepo",
+   "url": "https://github.com/swisskyrepo",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "ArturLys/ao3-mcp",
+   "url": "https://github.com/ArturLys/ao3-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Burp ActiveScan++ extension",
+   "url": "https://github.com/PortSwigger/active-scan-plus-plus",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Burp Scanner active + path-traversal audit",
+   "url": "https://portswigger.net/burp/documentation/scanner/auditing",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Burp-LFI-tests",
+   "url": "https://github.com/Team-Firebugs/Burp-LFI-tests",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "CXSecurity",
+   "url": "https://cxsecurity.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Deep dive into Visual Studio Code extension security vulnerabilities",
+   "url": "https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "DotDotPwn",
+   "url": "https://dotdotpwn.blogspot.com/",
+   "tier": "knowledge",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Exploit-Notes: File Upload Attack references",
+   "url": "https://exploit-notes.hdks.org/exploit/web/security-risk/file-upload-attack/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "FDsploit",
+   "url": "https://github.com/chrispetrou/FDsploit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "File Upload Restrictions Bypass",
+   "url": "https://www.exploit-db.com/docs/english/45074-file-upload-restrictions-bypass.pdf",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GH Archive",
+   "url": "https://www.gharchive.org/",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GeiserX/telegram-archive-mcp",
+   "url": "https://github.com/GeiserX/telegram-archive-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Google LFI on production servers in redacted.google.com",
+   "url": "https://omespino.com/write-up-google-bug-bounty-lfi-on-production-servers-in-redacted-google-com-13337-usd/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "GraphQL API - The Complete Vulnerability Checklist",
+   "url": "https://web.archive.org/web/20220701140017/https://leapgraph.com/graphql-api-security/",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HTTP Detection Agent",
+   "url": "https://github.com/ai-blueteam/http-detection-agent",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Haboob Team",
+   "url": "https://www.exploit-db.com/author/?a=9381",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HackTricks Bypass 403 Forbidden paths",
+   "url": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HackTricks LFI cheat sheet",
+   "url": "https://book.hacktricks.wiki/en/pentesting-web/file-inclusion/index.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Hacker101",
+   "url": "https://www.hacker101.com/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "HatmanStack/ragstack-mcp",
+   "url": "https://github.com/HatmanStack/RAGStack-Lambda/tree/main/src/ragstack-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFI-Enum",
+   "url": "https://github.com/mthbernardes/LFI-Enum",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFI-files",
+   "url": "https://github.com/hussein98d/LFI-files",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "LFImap",
+   "url": "https://github.com/averag13/LFImap",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "MatiousCorp/google-ad-manager-mcp",
+   "url": "https://github.com/MatiousCorp/google-ad-manager-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Microsoft Security Advisories and Bulletins",
+   "url": "https://docs.microsoft.com/en-us/security-updates/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Mozilla Foundation Security Advisories",
+   "url": "https://www.mozilla.org/security/advisories/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OAuth2: Security checklist",
+   "url": "https://web.archive.org/web/20210607123429/https://www.binarybrotherhood.io/oauth2_threat_model.html",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP Community - Path Traversal",
+   "url": "https://owasp.org/www-community/attacks/Path_Traversal",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "OWASP ZAP active scan",
+   "url": "https://www.zaproxy.org/docs/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Pompelmi",
+   "url": "https://github.com/pompelmi/pompelmi",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "PortSwigger \"Example path check\"",
+   "url": "https://portswigger.net/burp/documentation/scanner/bchecks/worked-examples/path",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "RFI LFI Writeup",
+   "url": "http://hassankhanyusufzai.com/RFI_LFI_writeup/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "SpiderSuite",
+   "url": "https://github.com/spidersuite/SpiderSuite",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Telerik upload/crypto chain: CVE-2014-2217, CVE-2017-11317,",
+   "url": "https://community.progress.com/s/article/resolving-security-vulnerability-cve-2017-9248",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "The Magic of Learning",
+   "url": "https://bitvijays.github.io/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Upload-Post/upload-post-mcp",
+   "url": "https://github.com/Upload-Post/upload-post-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Vulnsy LFI cheat sheet 2026",
+   "url": "https://www.vulnsy.com/cheat-sheets/lfi",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "Zero Day Initiative",
+   "url": "http://zerodayinitiative.com/advisories/published/",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "alexbakers/mcp-ipfs",
+   "url": "https://github.com/alexbakers/mcp-ipfs",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "bluebox-ng",
+   "url": "https://github.com/jesusprubio/bluebox-ng",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "checkra1neth/xbird",
+   "url": "https://github.com/checkra1neth/xbird-skill",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "dotdotpwn",
+   "url": "https://github.com/irancode/dotdotpwn",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "drumst0ck/uploadkit",
+   "url": "https://github.com/drumst0ck/uploadkit",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "fimap",
+   "url": "https://github.com/kurobeats/fimap",
+   "tier": "core_web",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "g1itchbot8888-del/agent-memory",
+   "url": "https://github.com/g1itchbot8888-del/agent-memory",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "inventer-dev/mcp-internet-speed-test",
+   "url": "https://github.com/inventer-dev/mcp-internet-speed-test",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "liffier",
+   "url": "https://github.com/momenbasel/liffier",
+   "tier": "offscope",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "liffy",
+   "url": "https://github.com/hvqzao/liffy",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "liffy",
+   "url": "https://github.com/mzfr/liffy",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "linxule/mineru-mcp",
+   "url": "https://github.com/linxule/mineru-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mcasdfgf/mcp-roo-memory",
+   "url": "https://github.com/mcasdfgf/mcp-roo-memory",
+   "tier": "tail",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "mikusnuz/cws-mcp",
+   "url": "https://github.com/mikusnuz/cws-mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "off-by-slash",
+   "url": "https://github.com/bayotop/off-by-slash",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "shipstatic/mcp",
+   "url": "https://github.com/shipstatic/mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "smeet666/mcp-books",
+   "url": "https://github.com/smeet666/mcp-books",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "tenequm/pond",
+   "url": "https://github.com/tenequm/pond",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "vitrine3d/mcp",
+   "url": "https://github.com/vitrine3d/mcp",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  },
+  {
+   "name": "xvwa>",
+   "url": "https://github.com/s4n7h0/xvwa",
+   "tier": "adjacent",
+   "n_sources": 1,
+   "status": "INDEXED_NOT_ENRICHED"
+  }
+ ]
+}

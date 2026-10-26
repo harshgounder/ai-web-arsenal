@@ -1,0 +1,45 @@
+{
+ "id": "d13-root",
+ "q": "What happens to a stored file after upload?",
+ "why": "Upload success is not impact. The question is what reads it next: a renderer, an includer, an extractor, or nothing. If nothing reads it, there is no finding.",
+ "branches": [
+  {
+   "a": "Rendered to users",
+   "action": "test content type and disposition, then whether the origin executes it. same origin HTML is the finding",
+   "tools": [
+    "d13-fuxploider"
+   ],
+   "oracle": "script executes from the app origin"
+  },
+  {
+   "a": "Included by the server",
+   "action": "path traversal into the upload directory, then content the interpreter accepts",
+   "tools": [
+    "d13-curl"
+   ],
+   "oracle": "server executes the uploaded content"
+  },
+  {
+   "a": "Extracted by a job",
+   "action": "traversal and symlink entries, then check what lands outside the root",
+   "tools": [
+    "d13-rea-artifact"
+   ],
+   "oracle": "file exists outside the extraction root"
+  },
+  {
+   "a": "Nothing reads it",
+   "action": "no finding here. say so, and only mention it if it affects impact elsewhere",
+   "tools": [],
+   "oracle": "n/a"
+  },
+  {
+   "a": "Unknown format",
+   "action": "inspect the container structurally before writing a parser",
+   "tools": [
+    "d13-fq"
+   ],
+   "oracle": "structural query result"
+  }
+ ]
+}
