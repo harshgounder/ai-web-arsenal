@@ -1,0 +1,42 @@
+{
+ "id": "d28-root",
+ "q": "Are you wiring a server, or reviewing one?",
+ "why": "Wiring is an install problem. Reviewing is a supply chain problem, and the second is the one nobody does.",
+ "branches": [
+  {
+   "a": "Wiring",
+   "action": "use a config that is known to start. never add a server by name and link alone",
+   "tools": [
+    "d28-rea",
+    "d28-mcps"
+   ],
+   "oracle": "server starts and lists tools"
+  },
+  {
+   "a": "Reviewing",
+   "action": "read every tool description as if it were a prompt, because it is. then scan for injection and pin the hashes",
+   "tools": [
+    "d28-mcp-scan",
+    "d28-spec"
+   ],
+   "oracle": "description hash manifest"
+  },
+  {
+   "a": "Choosing from a registry",
+   "action": "registry size is a supply chain risk, not a feature. pick the smallest server that does the job",
+   "tools": [
+    "d28-awesome-mcp"
+   ],
+   "oracle": "server passes the scan and the pin check"
+  },
+  {
+   "a": "Testing an agent that uses servers",
+   "action": "inject through tool output and measure both attack success and utility loss",
+   "tools": [
+    "d28-agentdojo",
+    "d28-promptfoo"
+   ],
+   "oracle": "attack success plus utility delta"
+  }
+ ]
+}

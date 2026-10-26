@@ -1,0 +1,44 @@
+{
+ "id": "d25-root",
+ "q": "Are you writing the finding, or the detection?",
+ "why": "Both are in scope and they use the same corpus from opposite directions. A finding says what is broken. A detection says how you would know. This repo insists on both because a finding with no detection is unactionable at scale.",
+ "branches": [
+  {
+   "a": "The finding",
+   "action": "attach the CRS rule family that would catch it, or state that none would, which is itself a finding about the defence",
+   "tools": [
+    "d25-crs",
+    "d25-sigma"
+   ],
+   "oracle": "a rule identifier that fires on the proving request"
+  },
+  {
+   "a": "The detection",
+   "action": "write the Sigma rule against the behaviour, not the payload string, then test it against the proving request and a benign control",
+   "tools": [
+    "d25-sigma",
+    "d25-wazuh"
+   ],
+   "oracle": "rule fires on the attack and not on the control"
+  },
+  {
+   "a": "Coverage review",
+   "action": "map existing rules to ATT&CK techniques, then look for techniques with no rule and no log source",
+   "tools": [
+    "d25-attack",
+    "d25-elastic"
+   ],
+   "oracle": "coverage matrix with named gaps"
+  },
+  {
+   "a": "Runtime or cloud",
+   "action": "Falco for containers, Zeek for wire, Wazuh for host and log",
+   "tools": [
+    "d25-falco",
+    "d25-zeek",
+    "d25-wazuh"
+   ],
+   "oracle": "alert on the technique with the entity recorded"
+  }
+ ]
+}

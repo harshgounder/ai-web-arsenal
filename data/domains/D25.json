@@ -1,0 +1,370 @@
+{
+ "id": "D25",
+ "title": "Detection and defense mirror",
+ "version": "0.1",
+ "generated": "2026-10-27",
+ "status": "AUTHORED. The other half. Every offensive entry elsewhere in this repo is supposed to have a row here.",
+ "atoms": [
+  "A01",
+  "A02",
+  "A16"
+ ],
+ "atom_notes": {
+  "A01": "interpreter confusion is the most detectable class, because the payload shape is unusual",
+  "A02": "trust boundary crossing is detectable at the decision point, if the decision is logged with both identities",
+  "A16": "model and agent manipulation is the least mature detection area and the one with the most vendor claims"
+ },
+ "required_cells": [
+  {
+   "cell": "all/L10/A2",
+   "why": "report the detection that would catch the technique, not just the technique",
+   "filled": true
+  },
+  {
+   "cell": "all/L11/A2",
+   "why": "verify the control after the fix, which is a detection question",
+   "filled": true
+  },
+  {
+   "cell": "all/L12/A6",
+   "why": "continuous detection coverage drift",
+   "filled": false
+  }
+ ],
+ "entries": [
+  {
+   "id": "d25-sigma",
+   "name": "Sigma",
+   "url": "https://github.com/SigmaHQ/sigma",
+   "role": "The vendor neutral detection rule format. If your finding has no Sigma rule, detection coverage is a guess",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-suricata",
+   "name": "Suricata",
+   "url": "https://github.com/OISF/suricata",
+   "role": "Network IDS with rules per attack class, the wire level mirror",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-yara",
+   "name": "YARA",
+   "url": "https://github.com/VirusTotal/yara",
+   "role": "Pattern matching for artefacts, used here for payload and malware signatures",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-crs",
+   "name": "OWASP Core Rule Set",
+   "url": "https://github.com/coreruleset/coreruleset",
+   "role": "The CRS rule family most WAFs run, so 'which CRS rule catches this' is the real question",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A05"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED",
+   "note": "The highest value defensive artefact in this domain. A bypass that still trips a CRS rule is not a bypass."
+  },
+  {
+   "id": "d25-wazuh",
+   "name": "Wazuh",
+   "url": "https://github.com/wazuh/wazuh",
+   "role": "Host and log based detection with a free SIEM, the SMB default",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-zeek",
+   "name": "Zeek",
+   "url": "https://github.com/zeek/zeek",
+   "role": "Network analysis framework, the source of the session logs that rules run on",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-falco",
+   "name": "Falco",
+   "url": "https://github.com/falcosecurity/falco",
+   "role": "Runtime detection for containers and cloud native workloads",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02",
+    "A15"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-elastic",
+   "name": "Elastic detection rules",
+   "url": "https://github.com/elastic/detection-rules",
+   "role": "A large maintained rule set, useful as a coverage cross check",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-yara-rules",
+   "name": "YARA Rules",
+   "url": "https://github.com/Yara-Rules/rules",
+   "role": "Community rule repository",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-attack",
+   "name": "ATT&CK STIX data",
+   "url": "https://github.com/mitre-attack/attack-stix-data",
+   "role": "The technique taxonomy to map detection coverage against",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L10",
+   "status": "ESTABLISHED"
+  },
+  {
+   "id": "d25-counters",
+   "name": "This repo: counters/COUNTERS.md",
+   "url": "https://github.com/",
+   "role": "74 control mechanisms across 150 patterns, grouped into 13 classes, each with a precondition and cost",
+   "driver": {
+    "install": "local",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A01",
+    "A02"
+   ],
+   "preconditions": [],
+   "oracle": [],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "note": "Local document in web-attack-atlas. It is the defensive view of the pattern corpus."
+  }
+ ],
+ "tree": {
+  "id": "d25-root",
+  "q": "Are you writing the finding, or the detection?",
+  "why": "Both are in scope and they use the same corpus from opposite directions. A finding says what is broken. A detection says how you would know. This repo insists on both because a finding with no detection is unactionable at scale.",
+  "branches": [
+   {
+    "a": "The finding",
+    "action": "attach the CRS rule family that would catch it, or state that none would, which is itself a finding about the defence",
+    "tools": [
+     "d25-crs",
+     "d25-sigma"
+    ],
+    "oracle": "a rule identifier that fires on the proving request"
+   },
+   {
+    "a": "The detection",
+    "action": "write the Sigma rule against the behaviour, not the payload string, then test it against the proving request and a benign control",
+    "tools": [
+     "d25-sigma",
+     "d25-wazuh"
+    ],
+    "oracle": "rule fires on the attack and not on the control"
+   },
+   {
+    "a": "Coverage review",
+    "action": "map existing rules to ATT&CK techniques, then look for techniques with no rule and no log source",
+    "tools": [
+     "d25-attack",
+     "d25-elastic"
+    ],
+    "oracle": "coverage matrix with named gaps"
+   },
+   {
+    "a": "Runtime or cloud",
+    "action": "Falco for containers, Zeek for wire, Wazuh for host and log",
+    "tools": [
+     "d25-falco",
+     "d25-zeek",
+     "d25-wazuh"
+    ],
+    "oracle": "alert on the technique with the entity recorded"
+   }
+  ]
+ },
+ "mirror": [
+  {
+   "attack": "any technique in this repo",
+   "detect": "the rule named in its detected_by field",
+   "control": "the counter named in its counter field",
+   "rule": "see counters/COUNTERS.md"
+  },
+  {
+   "attack": "detection gap",
+   "detect": "a technique with no rule and no log source",
+   "control": "log source first, rule second",
+   "rule": "coverage matrix"
+  },
+  {
+   "attack": "rule tuned to payloads",
+   "detect": "rule matches a string that an encoding change defeats",
+   "control": "write against behaviour and parser state",
+   "rule": "rule regression test"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No automatic link between the pattern corpus and a rule set",
+   "class": "no-tool",
+   "build_candidate": "emit a Sigma stub per pattern from its detected_by field, then hand tune"
+  },
+  {
+   "gap": "No coverage test that proves a rule fires on the attack and not on the control",
+   "class": "partial",
+   "build_candidate": "replay harness with a benign control per rule"
+  },
+  {
+   "gap": "all/L12 detection drift is empty",
+   "class": "coverage",
+   "build_candidate": "scheduled rule set version diff per source"
+  }
+ ],
+ "unreviewed_index": {
+  "count": 0,
+  "note": "see data/domains/D25.index.json"
+ }
+}
