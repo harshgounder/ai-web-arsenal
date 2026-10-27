@@ -680,6 +680,31 @@ one thing, neither measured.** The difference is that nobody had thought to meas
 
 ---
 
+## 6t. Six structural claims tested, one of them false
+
+After the join key turned out to be fiction, the same suspicion applied to every other structural sentence
+in the docs. Six were checkable and are now claims.
+
+| claim | result |
+|---|---|
+| every domain carries a tree, a mirror and a gap | holds, 30 of 30 |
+| every entry carries a driver, an atom and a status | holds, 562 of 562 |
+| no bootstrap script pipes a download into a shell | holds, 0 of 11 |
+| no entry restates an atlas pattern title | holds, 0 of 562 over a 0.5 token overlap |
+| the MCP server imports only the standard library | **false** |
+| the bootstrap library refuses to run as root | holds |
+
+The false one is worth the whole exercise. `mcps/arsenal-mcp.py` imports `yaml` for exactly two of its nine
+tools, and the docstring said "standard library only, no dependencies". The fix is not to reword the claim:
+PyYAML is now optional, those two tools return a message when it is absent, and the other seven run on a
+bare python. The claim now says that, and `C125` checks the degradation path exists rather than checking
+for an absent import.
+
+Idempotence was also checked by hand, since a claim cannot cheaply run the installer: two dry runs of
+`20-install-recon.sh` produced identical output modulo the log timestamp.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

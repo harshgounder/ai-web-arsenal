@@ -8,8 +8,9 @@ tools an agent can call, so it can ask "what covers this factor" and get an answ
 rather than inferring it from prose.
 
 Transport is newline delimited JSON-RPC 2.0 on stdin and stdout, which is what the MCP stdio transport
-is. Standard library only, no dependencies, because a tool that needs an install to answer a question is
-a worse tool than grep.
+is. Standard library only except for one optional import: `tools_for` and `claims` parse YAML and need
+PyYAML, and without it those two return a message saying so. The other seven tools run on a bare python,
+because a tool that needs an install to answer a question is a worse tool than grep.
 
 Tools exposed:
 
@@ -80,10 +81,23 @@ def gaps():
     return load_jsonl(ROOT / "data" / "gap" / "classification.jsonl")
 
 
+def _yaml_or_none():
+    """PyYAML is the one thing this server needs that the standard library does not provide, and it is
+    needed for two of the nine tools. Making it optional means the other seven work on a bare python,
+    which is the property the README claims."""
+    try:
+        import yaml
+        return yaml
+    except ImportError:
+        return None
+
+
 def manifest():
     if "manifest" not in _cache:
-        import yaml
-        _cache["manifest"] = yaml.safe_load((ROOT / "manifest" / "tools.yaml").read_text(encoding="utf-8"))
+        y = _yaml_or_none()
+        if y is None:
+            return None
+        _cache["manifest"] = y.safe_load((ROOT / "manifest" / "tools.yaml").read_text(encoding="utf-8"))
     return _cache["manifest"]
 
 
@@ -93,8 +107,10 @@ def registry():
 
 def claims():
     if "claims" not in _cache:
-        import yaml
-        _cache["claims"] = yaml.safe_load((ROOT / "data" / "claims.yaml").read_text(encoding="utf-8"))
+        y = _yaml_or_none()
+        if y is None:
+            return []
+        _cache["claims"] = y.safe_load((ROOT / "data" / "claims.yaml").read_text(encoding="utf-8"))
     return _cache["claims"].get("claims", [])
 
 
@@ -197,6 +213,10 @@ def t_gaps(a):
 
 
 def t_tools_for(a):
+    if manifest() is None:
+        return json.dumps({"error": "PyYAML not installed",
+                           "detail": "this tool parses manifest/tools.yaml; the other eight tools do not "
+                                     "need it. pipx install pyyaml or use a python with yaml present"})
     q = (a.get("query") or "").lower()
     rows = []
     for t in manifest()["tools"]:
@@ -222,6 +242,8 @@ def t_domains(a):
 
 
 def t_claims(a):
+    if _yaml_or_none() is None:
+        return json.dumps({"error": "PyYAML not installed", "detail": "this tool parses data/claims.yaml"})
     cid = a.get("id")
     if cid:
         for c in claims():

@@ -268,6 +268,30 @@ claims:
     statement: "the atlas join is at wave granularity, and pattern level linkage is measured at its real value"
     check: "(lambda ps: ps['atlas_pointers'] >= 1 and ps['atlas_pattern_refs'] >= 0)(stats)"
 
+  - id: C121
+    statement: "every domain carries a decision tree, a defence mirror and at least one named gap"
+    check: "all(d.get('tree') and d.get('mirror') and d.get('gaps') for d in domains())"
+
+  - id: C122
+    statement: "every entry carries a driver, an atom and a status"
+    check: "all(e.get('driver') and e.get('atom') and e.get('status') for e in entries())"
+
+  - id: C123
+    statement: "no bootstrap script pipes a download into a shell"
+    check: "not any(re.search(r'curl[^|]*\\|\\s*(?:ba)?sh', p.read_text(encoding='utf-8')) for p in files('bootstrap/*.sh'))"
+
+  - id: C124
+    statement: "no arsenal entry restates an atlas pattern title"
+    check: "not restatement_hits()"
+
+  - id: C125
+    statement: "the MCP server needs no third party import except an optional one, and degrades without it"
+    check: "(lambda src: 'import requests' not in src and 'import httpx' not in src and '_yaml_or_none' in src)((ROOT / 'mcps' / 'arsenal-mcp.py').read_text(encoding='utf-8'))"
+
+  - id: C126
+    statement: "the bootstrap library refuses to run as root"
+    check: "'id -u' in libsh() and 'root' in libsh()"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

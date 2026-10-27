@@ -651,8 +651,9 @@ client receives it.*
 ## The MCP server
 
 An agent should not read 500 entries to find one. `mcps/arsenal-mcp.py` serves the same data as tools over
-stdio, using only the standard library, because a tool that needs an install to answer a question is
-worse than grep.
+stdio, standard library only except for one optional import: `tools_for` and `claims` parse YAML and need
+PyYAML, and without it those two say so while the other seven keep working. A tool that needs an install
+to answer a question is worse than grep.
 
 ```json
 {

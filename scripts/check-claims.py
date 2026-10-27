@@ -166,6 +166,39 @@ def unjustified_superlatives():
     return hits
 
 
+def restatement_hits(threshold=0.5):
+    """Entries that restate an atlas pattern title rather than pointing at it.
+
+    The documented rule is "never restate a pattern", and like the join key it was asserted without being
+    measured. Token overlap over the title and the entry's role is crude but it catches copying, which is
+    the failure the rule exists to prevent.
+    """
+    import json as _j
+    import re as _re
+
+    def toks(x):
+        return {w for w in _re.findall(r"[a-z]{4,}", (x or "").lower())}
+
+    pats = []
+    for f in sorted(ATLAS.glob("waves/*/patterns.jsonl")):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                p = _j.loads(line)
+                pats.append((p["id"], toks(p.get("title"))))
+    out = []
+    for e in entries():
+        et = toks((e.get("role") or "") + " " + (e.get("name") or ""))
+        if not et:
+            continue
+        for pid, ptk in pats:
+            if not ptk:
+                continue
+            j = len(ptk & et) / len(ptk | et)
+            if j > threshold:
+                out.append((pid, e.get("id"), round(j, 2)))
+    return out
+
+
 def read_transcript():
     """Every claim statement found in the documents header block, if present."""
     return None
@@ -217,6 +250,8 @@ def main():
         "docs_text": lambda: "\n".join(p.read_text(encoding="utf-8") for p in docs()),
         "BANNED": BANNED,
         "unjustified_superlatives": unjustified_superlatives,
+        "restatement_hits": restatement_hits,
+        "libsh": lambda: (ROOT / "bootstrap" / "lib.sh").read_text(encoding="utf-8"),
     }
 
     if args.list:
