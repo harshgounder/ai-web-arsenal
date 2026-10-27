@@ -124,11 +124,11 @@ The shape of the table is the finding:
 A coverage fraction is only half a claim. The other half is how much of the remainder is even
 reachable, because a number that can never be improved is a different fact from one that is expensive.
 
-The 893 uncovered factors are classified, generated into [`docs/CEILING.md`](docs/CEILING.md):
+The 892 uncovered factors are classified, generated into [`docs/CEILING.md`](docs/CEILING.md):
 
 | class | meaning | cost | factors |
 |---|---|---|---|
-| I | derivable with noise, the mechanism is published | authoring only | **239** |
+| I | derivable with noise, the mechanism is published | authoring only | **238** |
 | II | inferable from structure, needs a probe | a lab and a target | **603** |
 | III | genuinely unavailable, an internal fact | impossible from outside | **51** |
 
@@ -142,7 +142,7 @@ organisation runs itself, which no external party can know.
 
 Three consequences worth stating:
 
-- **239 factors are reachable with no target and no permission.** L13 promises 50 of them, because
+- **238 factors are reachable with no target and no permission.** L13 promises 50 of them, because
   statute and standards are published and this repo simply never wrote them down. That is the cheapest
   coverage in the project.
 - **603 factors need a lab.** This is where the observed zero lives, and it is why the next phase exists.
@@ -152,7 +152,7 @@ Three consequences worth stating:
 So the honest ladder is three numbers, not one:
 
 ```
-10.7%   covered today, 107 factors with a procedure and an oracle
+10.8%   covered today, 108 factors with a procedure and an oracle
 34.6%   if every Class I factor were authored, which one person can do
 94.9%   the ceiling, which needs about 60 labs and does not exist yet
  0.4%   observed, 4 factors, because exactly four labs exist
@@ -638,7 +638,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | denominator | 1,000 factors, 16 lenses, each at 50 or more |
 | coverage at L2 or better | 108 of 1,000 (10.8%) |
 | observed coverage | 4 of 1,000 (0.4%) |
-| gap, derivable by authoring | 239 factors |
+| gap, derivable by authoring | 238 factors |
 | gap, needs a lab | 603 factors |
 | gap, unavailable from outside | 51 factors |
 | ceiling | 94.9% of the denominator |

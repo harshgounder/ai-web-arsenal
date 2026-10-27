@@ -209,8 +209,12 @@ claims:
     check: "all((r['level'] not in ('L2', 'L3')) or r.get('covered_by') for r in rows('data/coverage/coverage.jsonl'))"
 
   - id: C105
-    statement: "the gap is 239 derivable, 603 lab, 51 impossible, and it sums to 893"
-    check: "(lambda g: g['reachable_by_authoring'] == 239 and g['reachable_by_lab'] == 603 and g['unavailable'] == 51 and g['gap_total'] == 893)(load('data/gap/SUMMARY.json'))"
+    statement: "the gap is 238 derivable, 603 lab, 51 impossible, and it sums to 892"
+    check: "(lambda g: g['reachable_by_authoring'] == 238 and g['reachable_by_lab'] == 603 and g['unavailable'] == 51 and g['gap_total'] == 892)(load('data/gap/SUMMARY.json'))"
+
+  - id: C109
+    statement: "gap plus covered equals the denominator, so nothing is lost between the two ledgers"
+    check: "(lambda g: g['gap_total'] + g['covered_l2_plus'] == g['factors_total'])(load('data/gap/SUMMARY.json'))"
 
   - id: C106
     statement: "the ceiling is 94.9 percent of the denominator"
@@ -218,7 +222,7 @@ claims:
 
   - id: C107
     statement: "every uncovered factor is classified exactly once, and no covered one is"
-    check: "(lambda gap: len(gap) == 893 and len({g['factor'] for g in gap}) == 893)(rows('data/gap/classification.jsonl'))"
+    check: "(lambda gap: len(gap) == 892 and len({g['factor'] for g in gap}) == 892)(rows('data/gap/classification.jsonl'))"
 
   # --- honesty -----------------------------------------------------------------
   - id: C090
