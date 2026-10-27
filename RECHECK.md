@@ -250,6 +250,30 @@ Three things follow, and the first is surprising:
 
 ---
 
+## 6f. Phase 7 started (the thin range)
+
+One lab exists and it produced the first observation. The zero is broken, and it broke honestly.
+
+| lab | factor | pattern | result |
+|---|---|---|---|
+| `range/lab-01-race` | L07-030 | W01-0001 | **OBSERVED**, obs-001 |
+
+The lab is a signup endpoint whose uniqueness check is not atomic. 24 parallel creates produced 24
+records and 23 duplicates. The sequential control produced exactly one record and 23 rejections, which
+is what makes the duplicate count attributable to the race rather than to a harness that retried.
+
+Machine checks that now enforce this:
+
+- `scripts/observe.py --verify` replays every recorded lab and reports a mismatch if a verdict changed.
+- The coverage validator rejects an L3 record that names no lab with an OBSERVED verdict.
+- The atlas gate rejects an OBSERVED pattern whose run record is missing, belongs to another pattern, or
+  has no negative control.
+
+Observed coverage is 1 of 1,000, so 0.1 percent. Three more labs would move it to 0.4. It stays near
+zero until the Class II work happens, and the README says so rather than rounding up.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

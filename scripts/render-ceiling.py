@@ -33,6 +33,7 @@ def main():
     cov = [json.loads(l) for l in (ROOT / "data" / "coverage" / "coverage.jsonl")
            .read_text(encoding="utf-8").splitlines() if l.strip()]
 
+    observed = sum(1 for r in cov if r["level"] == "L3")
     total = s["factors_total"]
     covered = s["covered_l2_plus"]
     gap = s["gap_total"]
@@ -129,10 +130,16 @@ def main():
     A("")
     A("## The one number still at zero")
     A("")
-    A("Observed coverage is 0 of 1,000. Every other figure in this repo is an argument; that one is an "
-      "absence. It closes only with Phase 7, a thin range of three or four labs, and until it does, "
-      "`ESTABLISHED` here means read and cited and never means executed. That distinction is stated in "
-      "the README badge and it stays until a lab changes it.")
+    A(f"Observed coverage is {observed} of {total}. Every other figure in this repo is an argument; "
+      "that one is an absence, and it closes only with a lab.")
+    A("")
+    A("`lab-01-race` closed one factor on 2026-10-27: a check-then-insert target, 24 parallel creates "
+      "producing 23 duplicates, and a sequential control producing exactly one record with 23 "
+      "rejections. The record is in `data/observations/observations.jsonl` and it replays with "
+      "`python3 scripts/observe.py --verify`.")
+    A("")
+    A(f"The remaining {total - observed} factors are still read and cited. `ESTABLISHED` means cited, "
+      "never executed, and that distinction stays in the README badge until a lab changes it.")
     A("")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

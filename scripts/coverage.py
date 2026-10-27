@@ -75,6 +75,20 @@ def patterns():
     return out
 
 
+def observations():
+    """Labs that have actually run. An L3 record must name one of these, not a lab that might exist."""
+    p = ROOT / "data" / "observations" / "observations.jsonl"
+    if not p.exists():
+        return set()
+    out = set()
+    for line in p.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            o = json.loads(line)
+            if o.get("verdict") == "OBSERVED":
+                out.add(o.get("lab"))
+    return out
+
+
 def records():
     if not COV.exists():
         return {}
@@ -191,7 +205,7 @@ def cmd_search(args):
 def cmd_validate(args):
     fs = factors()
     rs = records()
-    arts = {a["id"] for a in entries() + patterns()}
+    arts = {a["id"] for a in entries() + patterns()} | observations()
     problems = []
     for f in fs:
         r = rs.get(f["id"])
@@ -206,6 +220,10 @@ def cmd_validate(args):
             problems.append(f"{f['id']}: basis {r.get('basis')!r} not in {BASES}")
         if r.get("level") in ("L2", "L3") and not r.get("covered_by"):
             problems.append(f"{f['id']}: claims {r['level']} with no artefact")
+        if r.get("level") == "L3":
+            obs = observations()
+            if not any(a in obs for a in (r.get("covered_by") or [])):
+                problems.append(f"{f['id']}: claims L3 but names no lab with an OBSERVED record")
         if r.get("level") == "L0" and r.get("covered_by"):
             problems.append(f"{f['id']}: level L0 but names {len(r['covered_by'])} artefacts")
         for a in r.get("covered_by") or []:

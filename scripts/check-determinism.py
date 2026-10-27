@@ -38,6 +38,8 @@ OFFLINE = [
 # Files whose content legitimately depends on the network or on when it was run.
 VOLATILE = {
     "data/install-matrix.json",
+    # observations are evidence, append only, and never rebuilt by a generator
+    "data/observations/observations.jsonl",
 }
 
 WATCH = ["data", "domains", "bootstrap", "docs"]

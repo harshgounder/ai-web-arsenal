@@ -67,4 +67,8 @@ What is not defensible, and will not be written in the README: that this is comp
 
 ## The one number still at zero
 
-Observed coverage is 0 of 1,000. Every other figure in this repo is an argument; that one is an absence. It closes only with Phase 7, a thin range of three or four labs, and until it does, `ESTABLISHED` here means read and cited and never means executed. That distinction is stated in the README badge and it stays until a lab changes it.
+Observed coverage is 1 of 1000. Every other figure in this repo is an argument; that one is an absence, and it closes only with a lab.
+
+`lab-01-race` closed one factor on 2026-10-27: a check-then-insert target, 24 parallel creates producing 23 duplicates, and a sequential control producing exactly one record with 23 rejections. The record is in `data/observations/observations.jsonl` and it replays with `python3 scripts/observe.py --verify`.
+
+The remaining 999 factors are still read and cited. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.

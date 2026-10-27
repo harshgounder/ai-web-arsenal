@@ -197,8 +197,12 @@ claims:
     check: "(lambda rs: len(rs) == 1000 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 107)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C104
-    statement: "nothing is graded L3, because nothing in either repo has been observed running"
-    check: "not any(r['level'] == 'L3' for r in rows('data/coverage/coverage.jsonl'))"
+    statement: "exactly one factor is graded L3, backed by a recorded observation"
+    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L3') == 1)(rows('data/coverage/coverage.jsonl'))"
+
+  - id: C108
+    statement: "every L3 factor names a lab whose observation verdict is OBSERVED"
+    check: "(lambda rs, obs: all(any(a in obs for a in r['covered_by']) for r in rs if r['level'] == 'L3'))(rows('data/coverage/coverage.jsonl'), {o['lab'] for o in rows('data/observations/observations.jsonl') if o['verdict'] == 'OBSERVED'})"
 
   - id: C103
     statement: "no coverage record claims a level without naming an artefact that exists"
@@ -218,8 +222,8 @@ claims:
 
   # --- honesty -----------------------------------------------------------------
   - id: C090
-    statement: "nothing in the atlas is marked OBSERVED, because nothing has been run here"
-    check: "all(p.get('status') != 'OBSERVED' for p in atlas_patterns())"
+    statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"
+    check: "(lambda obs: len(obs) == 1 and obs[0].get('observed_in') and (ROOT.parent / 'web-attack-atlas' / obs[0]['observed_in']).exists())([p for p in atlas_patterns() if p.get('status') == 'OBSERVED'])"
 
   - id: C091
     statement: "every document is free of em dashes"
