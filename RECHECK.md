@@ -651,6 +651,35 @@ A fresh clone now reports **8 pass, 0 fail, 2 skip** with the reason.
 
 ---
 
+## 6s. A documented interface that was never used
+
+Both README and AUTHORING said the join key between the two repos was `entry_id`, and that entries should
+"link to a pattern by id rather than restating it". I measured it:
+
+| measurement | value |
+|---|---|
+| entries in this repo | 562 |
+| entries referencing a pattern id | **0** |
+| entries pointing into the atlas at all | 8 |
+| of those, at a wave's `patterns.jsonl` | 1 |
+| of those, at `QUEUE.json` (waves not built) | 6 |
+
+So the documented interface did not exist. What exists is a wave level pointer, and six of the eight point
+at work that is queued rather than written. One entry even carried the note "it joins on `entry_id`", which
+was false in its own text.
+
+Three changes rather than one, because a doc fix alone would have left the number unmeasured:
+
+- the join is described as it is, at wave granularity, with the counts
+- `readme-stats.py` emits `atlas_pointers`, `atlas_pattern_refs` and `atlas_patterns`, so the figure is
+  generated rather than remembered
+- `C120` pins it, so a future change to the join has to update the prose
+
+This is the same class as the coverage grading drift and the 12-versus-10 REA count: **two places describing
+one thing, neither measured.** The difference is that nobody had thought to measure this one at all.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

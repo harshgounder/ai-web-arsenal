@@ -92,6 +92,29 @@ try:
     print(f"domains_pointer {sum(1 for d in _reg if d.get('status') == 'POINTER')}")
 except Exception:
     print("domains_total 0")
+try:
+    import glob as _g, re as _re
+    _pat_ids = set()
+    for _f in _g.glob(str(R.parent / "web-attack-atlas" / "waves" / "*" / "patterns.jsonl")):
+        for _l in open(_f, encoding="utf-8"):
+            if _l.strip():
+                _pat_ids.add(json.loads(_l)["id"])
+    _ptr = 0
+    _pref = 0
+    for _f in _g.glob(str(R/"data"/"domains"/"D*.json")):
+        if _f.endswith(".index.json"):
+            continue
+        for _e in json.load(open(_f)).get("entries", []):
+            _blob = json.dumps(_e)
+            if "web-attack-atlas" in _blob:
+                _ptr += 1
+            if any(p in _blob for p in _pat_ids):
+                _pref += 1
+    print(f"atlas_pointers {_ptr}")
+    print(f"atlas_pattern_refs {_pref}")
+    print(f"atlas_patterns {len(_pat_ids)}")
+except Exception:
+    print("atlas_pointers 0")
 print(f"domains_with_data {doms}")
 print(f"domains_rendered {rendered}")
 print(f"prompt_packs {prompts}")

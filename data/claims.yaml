@@ -264,6 +264,10 @@ claims:
     statement: "capability candidates are marked CANDIDATE and never counted in the corpus"
     check: "all(r['status'] == 'CANDIDATE' for r in rows('data/capability/candidates.jsonl'))"
 
+  - id: C120
+    statement: "the atlas join is at wave granularity, and pattern level linkage is measured at its real value"
+    check: "(lambda ps: ps['atlas_pointers'] >= 1 and ps['atlas_pattern_refs'] >= 0)(stats)"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

@@ -15,7 +15,9 @@ Everything here was learned by breaking it first. The traps section is a list of
 2. Every entry needs `atom`, `preconditions`, `oracle`, `evades`, `detected_by`, and a `driver` with
    install channel, verify command, and whether it emits JSON. An entry missing `preconditions`,
    `oracle` or a counter is a note, not an entry.
-3. If the technique already exists in the atlas, link to it by `entry_id`. Never restate a pattern here.
+3. If the technique already exists in the atlas, never restate a pattern here. Point at the wave file.
+   Pattern level linking by id is not in use: measured at 0 of 562 entries, and claiming otherwise was a
+   defect that sat in two documents until the join was measured.
    The atlas owns atoms, patterns, preconditions, oracles, chains and control classes. This repo owns
    tools, install, drivers and the corpus.
 4. Render the markdown with `python3 scripts/render-domain.py DXX`. Never hand-write the generated file.
@@ -80,7 +82,7 @@ document could be produced by importing a keyword set, it would be worthless.
 **Measured 2026-10-27, the rule is not met across the corpus.** Of 444 entries: 335 declare
 preconditions (75 percent), 346 declare an oracle (78), 175 declare evades (39), and 135 declare what
 detects them (30). Seven entries are deliberate pointers into the atlas and carry none of these by
-design, because they join on `entry_id` rather than restating a pattern. The remaining shortfall is
+design, because they point at the wave rather than restating a pattern. The remaining shortfall is
 real work, tracked in `RECHECK.md` and checked by `C053` to `C053d`. A new entry should satisfy the rule
 even though the existing corpus does not, and the ratio should move up, not stay flat.
 

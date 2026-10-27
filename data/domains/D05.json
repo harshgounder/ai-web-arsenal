@@ -513,7 +513,7 @@
    "agency": "A0",
    "stage": "L05",
    "status": "VERIFIED",
-   "note": "This document does not restate those patterns. It joins on entry_id.",
+   "note": "This document does not restate those patterns. It points at the wave's patterns file; there is no per pattern link, which is a measured fact rather than an omission.",
    "mirror_note": "no mirror row covers this entry"
   },
   {

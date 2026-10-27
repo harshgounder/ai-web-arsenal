@@ -142,7 +142,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - detected by: n/a offline
 
 **Atlas W02: 50 authorisation-on-write patterns**  
-- note: This document does not restate those patterns. It joins on entry_id.
+- note: This document does not restate those patterns. It points at the wave's patterns file; there is no per pattern link, which is a measured fact rather than an omission.
 
 **MindAPI**  
 - note: Closest prior art. It is a mind map, not machine readable, which is the gap this repo fills.
