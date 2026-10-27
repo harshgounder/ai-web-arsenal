@@ -7,6 +7,7 @@ generates, so the test does not depend on any download and cannot drift with a r
 
 Run: python3 rea-ops/test-ops.py
 """
+import base64
 import json
 import struct
 import subprocess
@@ -155,6 +156,45 @@ def make_attestation(fmt="none", flags=0x45, sign_count=7, aaguid=b"\x11" * 16,
         auth += aaguid + len(cred_id).to_bytes(2, "big") + cred_id + cbor(cose_key)
     obj = {"fmt": fmt, "attStmt": {"alg": -7, "sig": b"\x00" * 8}, "authData": auth}
     return base64.b64encode(cbor(obj)).decode()
+
+
+def vlq(n):
+    """Encode one signed value as base64 VLQ, the inverse of what sourcemap.py decodes."""
+    B = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    v = (-n << 1 | 1) if n < 0 else (n << 1)
+    out = ""
+    while True:
+        digit = v & 31
+        v >>= 5
+        if v:
+            digit |= 32
+        out += B[digit]
+        if not v:
+            return out
+
+
+def make_sourcemap(bundle_path, with_content=True, inline=False):
+    """A two line bundle whose map points line 1 column 4 at src/app.js line 9 column 2."""
+    js = "function a(x){return x}\nconsole.log(\"BOOM\")\n//# sourceMappingURL=%s\n"
+    src = "// original source for the fixture\nexport function a(x) { return x; }\n"
+    m = {
+        "version": 3,
+        "sources": ["webpack:///src/app.js"],
+        "names": [],
+        # one segment is a concatenation of VLQ values, not a comma separated list. Getting this
+        # backwards produces a map that parses and maps nothing, which is the quiet failure mode.
+        "mappings": ";".join(["", "".join([vlq(4), vlq(0), vlq(9), vlq(2)])]),
+    }
+    if with_content:
+        m["sourcesContent"] = [src]
+    if inline:
+        raw = base64.b64encode(json.dumps(m).encode()).decode()
+        js = js % ("data:application/json;base64," + raw)
+        bundle_path.write_text(js)
+        return m
+    bundle_path.write_text(js % "app.js.map")
+    (bundle_path.parent / "app.js.map").write_text(json.dumps(m))
+    return m
 
 
 def run(args):
@@ -337,6 +377,54 @@ def test_webauthn(tmp):
     check("webauthn: reads a JSON wrapper", rc == 0 and parse_json(out).get("fmt") == "none")
 
 
+def test_sourcemap(tmp):
+    external = tmp / "app.external.js"
+    make_sourcemap(external, with_content=True)
+    rc, out, err = run([str(HERE / "sourcemap.py"), str(external), "--sources"])
+    d = parse_json(out)
+    check("sourcemap: finds an external map", rc == 0 and d.get("map_kind") == "external", err[:80])
+    check("sourcemap: lists the original source",
+          d.get("source_list") == ["webpack:///src/app.js"], str(d.get("source_list")))
+    check("sourcemap: reports embedded content", d.get("with_embedded_content") == 1)
+
+    rc, out, _ = run([str(HERE / "sourcemap.py"), str(external), "--lookup", "1", "10"])
+    d = parse_json(out)
+    got = d.get("lookup") or {}
+    check("sourcemap: decodes a position to an original one",
+          got.get("source") == "webpack:///src/app.js" and got.get("original_line") == 9,
+          str(got)[:70])
+
+    outdir = tmp / "sm-out"
+    rc, out, _ = run([str(HERE / "sourcemap.py"), str(external), "--extract", str(outdir)])
+    d = parse_json(out)
+    check("sourcemap: extracts embedded sources", d.get("extracted") == 1)
+    saved = outdir / "src/app.js"
+    check("sourcemap: extracted content matches",
+          saved.exists() and "original source for the fixture" in saved.read_text())
+
+    inline = tmp / "app.inline.js"
+    make_sourcemap(inline, with_content=True, inline=True)
+    rc, out, _ = run([str(HERE / "sourcemap.py"), str(inline), "--sources"])
+    d = parse_json(out)
+    check("sourcemap: finds an inline data URI map",
+          rc == 0 and d.get("map_kind") == "inline", str(d.get("map_kind")))
+
+    # the honest case: no map, carve and say confidence is low
+    bare = tmp / "app.bare.js"
+    bare.write_text('/*! (c) fixture */\nvar webpackChunkapp=[];require("./src/thing.js");\n')
+    rc, out, _ = run([str(HERE / "sourcemap.py"), str(bare), "--carve"])
+    d = parse_json(out)
+    check("sourcemap: no map reports low confidence and says so",
+          d.get("confidence") == "low" and "not original sources" in str(d.get("recovered")))
+    check("sourcemap: carve names the chunk", "app" in (d.get("chunk_names") or []))
+    check("sourcemap: carve surfaces path like literals",
+          any("src/thing.js" in x for x in (d.get("path_like_strings") or [])))
+
+    rc, out, err = run([str(HERE / "sourcemap.py"), str(bare), "--sources"])
+    check("sourcemap: asking for sources with no map exits 2 with a reason",
+          rc == 2 and "no map" in err, f"rc={rc}")
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -350,6 +438,8 @@ def main():
         test_hap(tmp)
         print("webauthn-attestation.py")
         test_webauthn(tmp)
+        print("sourcemap.py")
+        test_sourcemap(tmp)
     print(f"\nfixtures: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
     if FAIL:
         for f in FAIL:

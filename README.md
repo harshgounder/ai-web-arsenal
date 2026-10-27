@@ -724,7 +724,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | atlas patterns | 150, gate passing, 135 ESTABLISHED and 15 PROBABLE |
 | claims checked | 45 |
 | regression tests | 30 across 21 known defect classes |
-| REA operations built | 5 of 10 named gaps, each with fixtures and a test |
+| REA operations built | 6 of 10 named gaps, each with fixtures and a test |
 | MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 

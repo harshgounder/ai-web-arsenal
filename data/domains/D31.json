@@ -951,7 +951,10 @@
   {
    "gap": "Source map recovery when the map is absent",
    "class": "partial",
-   "build_candidate": "bundle structure heuristics plus name demangling, honest about confidence"
+   "build_candidate": "bundle structure heuristics plus name demangling, honest about confidence",
+   "status": "built",
+   "built_at": "rea-ops/sourcemap.py",
+   "built_note": "tries an inline data URI map, then an external one, then embedded sourcesContent, decodes VLQ mappings for position lookup; with no map it carves structure and labels confidence low"
   }
  ],
  "unreviewed_index": {
