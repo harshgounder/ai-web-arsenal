@@ -1,0 +1,212 @@
+{
+ "generated_at": "2026-10-27",
+ "structural_sentences": 383,
+ "with_a_plausible_claim": 109,
+ "without": 274,
+ "sentences_containing_a_digit_or_universal": 165,
+ "coverage_pct": 28.5,
+ "method": "a sentence is covered if it names a claim id, or if its tokens overlap a claim's statement and check at 0.3 of the shorter side. A burn-down ordering, not a verdict: overlap shows the two are about the same thing, not that the claim tests the sentence, and much unmarked prose is narrative that needs no check at all.",
+ "review_order": [
+  {
+   "doc": "RECHECK.md",
+   "sentence": "The four lenses no other collection treats as attack surface are the reason this is not a list of payloads: L13 regulation decides what is permitted and what must be disclosed, L14 evidence science decides what can be proven at all, L15 the detection industry decides what will be seen, and L16 the public record is the only source of evidence about the past.",
+   "how": "overlap",
+   "best_jaccard": 0.143,
+   "best_claim": "C093",
+   "covered": false
+  },
+  {
+   "doc": "RECHECK.md",
+   "sentence": "Two defects were found by building these: the WARC reader opened files in universal newline mode, which rewrote every CRLF and broke every offset computed from the header terminator; and the wxapkg reader and its fixture disagreed about header width, which the first test run caught immediately.",
+   "how": "overlap",
+   "best_jaccard": 0.167,
+   "best_claim": "C080",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "Reading a sample of the 268 finds real mechanisms the pattern table does not name yet, including \"Improper Neutralization of Input During Web Page Generation\", which is CWE-79's formal name for XSS and was invisible to the first pass until the word was added.",
+   "how": "overlap",
+   "best_jaccard": 0.154,
+   "best_claim": "C120",
+   "covered": false
+  },
+  {
+   "doc": "PLAN.md",
+   "sentence": "Taken from the F1 pit stop plan on the desktop, because the shape of the problem is the same: an object that looks like a discrete event is actually the convergence point of an entire system, and every adjacent discipline either feeds into it or is shaped by it.",
+   "how": "overlap",
+   "best_jaccard": 0.091,
+   "best_claim": "C072",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "Every web security collection on GitHub has the same shape and the same failure: sorted by vulnerability class, no dates, no evidence standard, no procedure, links that rot while the README implies completeness.",
+   "how": "overlap",
+   "best_jaccard": 0.091,
+   "best_claim": "C072",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "**What do I run, and how?** Every tool carries an install channel resolved against a real package manager, a verify command, a JSON output flag, and a one line agent usage note.",
+   "how": "overlap",
+   "best_jaccard": 0.25,
+   "best_claim": "C031",
+   "covered": false
+  },
+  {
+   "doc": "PLAN.md",
+   "sentence": "First, L13 to L16 are not attack categories at all, yet each one changes what is possible; L13 decides what may be done, L14 decides what can be proven, L15 decides what will be seen, L16 is the only source of evidence about the past.",
+   "how": "overlap",
+   "best_jaccard": 0.143,
+   "best_claim": "C093",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "Three survive, and they are the honest answer rather than a rounding error: QUIC stream reset, analytics pseudonym rejoin, and editor extension authority each need something this corpus does not have.",
+   "how": "overlap",
+   "best_jaccard": 0.091,
+   "best_claim": "C070",
+   "covered": false
+  },
+  {
+   "doc": "RECHECK.md",
+   "sentence": "One defect on the way, and it is the same field name class that has bitten before: the atlas stores `atom` singular and the generator read `atoms`, so every candidate came out with an empty atom list.",
+   "how": "overlap",
+   "best_jaccard": 0.25,
+   "best_claim": "C054",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "A generated variant that was never run is a hypothesis with a plausible shape, and this repo has spent twenty rounds learning what happens when hypotheses get counted as facts.",
+   "how": "overlap",
+   "best_jaccard": 0.182,
+   "best_claim": "C119",
+   "covered": false
+  },
+  {
+   "doc": "RECHECK.md",
+   "sentence": "- **Class I is 239 factors of coverage available with no target and no permission.** L13 promises 50 of them, because statute and standards are published and this repo simply never wrote them down.",
+   "how": "overlap",
+   "best_jaccard": 0.143,
+   "best_claim": "C093",
+   "covered": false
+  },
+  {
+   "doc": "RECHECK.md",
+   "sentence": "A defect was also found inside a probe rather than in a target: lab-03's control stored a status code in a field named `refused` and the control passed because 401 is truthy.",
+   "how": "overlap",
+   "best_jaccard": 0.143,
+   "best_claim": "C122",
+   "covered": false
+  },
+  {
+   "doc": "PLAN.md",
+   "sentence": "**Advisory mass mapping: separate dataset with its own counts.** Generated records never mix with hand-authored ones, and no generated volume can inflate a curated figure.",
+   "how": "overlap",
+   "best_jaccard": 0.294,
+   "best_claim": "C114",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "- **Money has zero Class I factors.** Every one of L08's 58 remaining factors needs a running system, which is exactly why it sits at 6 percent despite being where most real loss happens.",
+   "how": "overlap",
+   "best_jaccard": 0.125,
+   "best_claim": "C040",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "That mechanism caught three of this repo's own overclaims while it was being built, including a sentence claiming all 444 entries carried six fields when only 75 percent carried two of them.",
+   "how": "overlap",
+   "best_jaccard": 0.167,
+   "best_claim": "C052",
+   "covered": false
+  },
+  {
+   "doc": "RECHECK.md",
+   "sentence": "The rest, all now in section 8: the entry completeness claim was false (75 percent, not 100), three bootstrap scripts were orphaned, and the REA backlog was stated as 12 when the file names 10.",
+   "how": "overlap",
+   "best_jaccard": 0.25,
+   "best_claim": "C040",
+   "covered": false
+  },
+  {
+   "doc": "AUTHORING.md",
+   "sentence": "**A classifier fallback is a silent claim.** When `classify()` returned `C02` for unmatched counters, every unrecognised control became \"authorisation\" and produced a fake finding.",
+   "how": "overlap",
+   "best_jaccard": 0.125,
+   "best_claim": "C112",
+   "covered": false
+  },
+  {
+   "doc": "AUTHORING.md",
+   "sentence": "**An identifier is not a link.** Several hundred rows held `owner/repo` in their `url` field, so \"rows with a URL\" counted identifiers and the link checker could never reach them.",
+   "how": "overlap",
+   "best_jaccard": 0.273,
+   "best_claim": "C119",
+   "covered": false
+  },
+  {
+   "doc": "PLAN.md",
+   "sentence": "Each factor gets: id, lens, one-sentence definition, observability class at world level, the kind of evidence that would settle it, and whether a public artifact exists at all.",
+   "how": "overlap",
+   "best_jaccard": 0.154,
+   "best_claim": "C103",
+   "covered": false
+  },
+  {
+   "doc": "SCOPE-v1.md",
+   "sentence": "This is what makes \"every attack method\" tractable: the axes are finite and enumerable, mutations are generated, and coverage becomes a measured cell count instead of a row count.",
+   "how": "overlap",
+   "best_jaccard": 0.133,
+   "best_claim": "C116",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "Nine further domains are **explicit pointers** rather than documents, because each is implemented as an artefact elsewhere in the repo and a second document would be a worse copy that drifts.",
+   "how": "overlap",
+   "best_jaccard": 0.286,
+   "best_claim": "C093",
+   "covered": false
+  },
+  {
+   "doc": "RECHECK.md",
+   "sentence": "A control that passes for the wrong reason is worse than no control, so it is a boolean comparison now and the observation file was regenerated by re-running every lab rather than edited.",
+   "how": "overlap",
+   "best_jaccard": 0.143,
+   "best_claim": "C083",
+   "covered": false
+  },
+  {
+   "doc": "PLAN.md",
+   "sentence": "ESTIMATE, not measured, to be replaced in Phase 2: of roughly 1,000 to 1,500 factors in D, on the order of a quarter have any artifact in A, fewer than a tenth have an oracle, and almost none have an observation.",
+   "how": "overlap",
+   "best_jaccard": 0.133,
+   "best_claim": "C101",
+   "covered": false
+  },
+  {
+   "doc": "PLAN.md",
+   "sentence": "Gate: every generated record carries provenance, every candidate passes or is rejected with a reason, a 2% sample is audited by hand and the error rate is stated.",
+   "how": "overlap",
+   "best_jaccard": 0.286,
+   "best_claim": "C083",
+   "covered": false
+  },
+  {
+   "doc": "README.md",
+   "sentence": "Measured 2026-10-27, the mandatory-field rule is not met across the corpus: of 562 entries, 453 declare preconditions (81 percent), 464 declare an oracle (83), 175 declare `evades` (39), and 135 declare what detects them (30).",
+   "how": "overlap",
+   "best_jaccard": 0.2,
+   "best_claim": "C053",
+   "covered": false
+  }
+ ],
+ "narrative_uncovered": 109
+}

@@ -878,6 +878,36 @@ What each one is:
 
 ---
 
+## Measuring the prose, and why the metric failed
+
+Four rounds of hunting fiction in the documentation found four real defects, and the rate was not dropping.
+So I tried to turn hunting into measurement: extract structural sentences, then ask whether any claim
+covers each one.
+
+```bash
+python3 scripts/claim-coverage.py
+```
+
+The tool works. **Its number does not.** It reports 383 structural sentences, 109 with a plausible claim,
+and 165 that contain a digit or a universal word but name no claim. Looking at those 165 finds mostly
+narrative:
+
+> Taken from the F1 pit stop plan on the desktop, because the shape of the problem is the same.
+
+That is an explanation, not a claim, and it can never be checked. Automated sentence classification cannot
+tell a claim from an explanation, and tuning the threshold until the number looked defensible would have
+been the same failure this repo is built to catch, one level up.
+
+So the number is reported as **an upper bound and not a defect count**, the file is written to
+`data/claims-coverage.json` as a review order, and it is deliberately **not a gate**. A gate on a
+miscalibrated metric is noise with authority.
+
+What it did produce: three real claims that were in prose and in no ledger. The capability funnel's new
+count, the topic pass rate, and the one external dependency. That is a fair return for a tool whose
+headline number I do not trust.
+
+---
+
 ## The claims ledger
 
 45 claims, each a sentence in a document with a Python expression that decides whether it is still true.

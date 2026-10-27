@@ -308,6 +308,18 @@ claims:
     statement: "every MCP config parses, and any script path it names exists"
     check: "all((lambda d: all((ROOT / a.replace('${HOME}', str(ROOT.parent))).exists() for c in d.get('mcpServers', {}).values() for a in (c.get('args') or []) if re.search(r'[.](?:py|js|mjs|ts)$', a)))(json.loads(f.read_text(encoding='utf-8'))) for f in files('mcps/*.json'))"
 
+  - id: C131
+    statement: "the number of tools absent from all nineteen lists matches the mining summary"
+    check: "load('data/capability/SUMMARY.json')['new_to_the_lists'] == 53"
+
+  - id: C132
+    statement: "the one dependency outside both repos is still only the taxonomy source"
+    check: "'web-universe-work' in (ROOT / 'scripts' / 'taxonomy-reconcile.py').read_text(encoding='utf-8') and (ROOT / 'scripts' / 'preflight.py').exists()"
+
+  - id: C133
+    statement: "the topic pass rate quoted in the prose is the one the funnel measured"
+    check: "load('data/capability/SUMMARY.json')['topic_pass_rate_pct'] == 62.6"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

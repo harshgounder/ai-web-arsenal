@@ -739,6 +739,37 @@ loosened to pass.
 
 ---
 
+## 6v. An attempt to turn hunting into measurement, and why the measurement failed
+
+Four rounds of finding fictional mechanics produced four defects and no decline in the rate, which meant the
+hunting was sampling rather than covering. The obvious fix is to enumerate every sentence that makes a
+structural assertion and check whether a claim covers it.
+
+`scripts/claim-coverage.py` does that. It extracts 383 structural sentences from seven documents, matches
+each against every claim by token overlap, and reports what no claim covers.
+
+It works and it found three real gaps: the capability funnel's new count, the topic pass rate, and the one
+dependency outside both repos. All three are now claims (`C131` to `C133`).
+
+**Its headline number is not trustworthy.** 165 sentences contain a digit or a universal word and name no
+claim, and reading them finds mostly narrative:
+
+> Taken from the F1 pit stop plan on the desktop, because the shape of the problem is the same.
+
+That cannot be checked and does not need to be. Automated sentence classification cannot separate a claim
+from an explanation, and the impulse to tune the threshold until the figure looked defensible is the same
+failure this repo is built around, one level up.
+
+So the tool reports an **upper bound and not a defect count**, writes `data/claims-coverage.json` as a
+review order, and is deliberately not wired into the gate. A gate on a miscalibrated metric is noise with
+authority.
+
+What this leaves: the ledger holds 74 claims covering the mechanics that matter, and the residual risk is
+prose that neither a claim nor the ruthlessness of a reviewer has touched. That risk is stated rather than
+closed, because the alternative was a number that lied.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.
