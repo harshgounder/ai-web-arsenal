@@ -42,7 +42,7 @@ EXPECTED = {
     "tools": 64,
     "tools_unresolved": 0,
     "prompt_packs": 5,
-    "domains_rendered": 37,
+    "domains_rendered": 39,
     "atlas_patterns": 150,
     "authored_domains": 28,
     "pointer_domains": 9,
