@@ -20,7 +20,11 @@ for l in open(R/"data"/"corpus.jsonl"):
     t = json.loads(l)["tier"]; tiers[t] = tiers.get(t,0)+1
 print(f"corpus_entries {corpus}")
 try:
-    print(f"corpus_identities {json.load(open(R/'data'/'corpus-merge-stats.json'))['entries_by_identity']}")
+    _ms = json.load(open(R/'data'/'corpus-merge-stats.json'))
+    print(f"corpus_identities {_ms['entries_by_identity']}")
+    print(f"corpus_tool_rows {_ms.get('tool_rows', 0)}")
+    print(f"corpus_tool_identities {_ms.get('tool_identities', 0)}")
+    print(f"corpus_rows_with_url {_ms.get('rows_with_url', 0)}")
 except Exception:
     print("corpus_identities ?")
 enr=sum(len(json.load(open(f))["entries"]) for f in glob.glob(str(R/"data"/"domains"/"D*.json")) if not f.endswith(".index.json"))

@@ -22,15 +22,20 @@ O = HOME / "operator-opsec"
 # Values as stated in RECHECK.md, written 2026-10-27. If disk differs, either the doc is stale or work
 # advanced since. Both matter, and neither is silently acceptable.
 EXPECTED = {
-    "corpus_entries": 21397,
-    "corpus_identities": 21194,
+    "corpus_entries": 21384,
+    "corpus_identities": 21187,
+    "corpus_tool_rows": 8848,
+    "corpus_tool_identities": 8692,
+    "corpus_rows_with_url": 9671,
     "enriched_entries": 444,
     "promotable_candidates": 1419,
     "sources": 19,
     "rows_total": 31298,
-    "admitted": 13575,
-    "excluded": 17516,
+    "admitted": 13516,
+    "excluded": 17506,
     "held": 204,
+    "orphan": 71,
+    "unresolved_rows": 1,
     "tools": 64,
     "tools_unresolved": 0,
     "prompt_packs": 5,
@@ -105,7 +110,8 @@ def main():
                 k, v = parts
                 if v.strip().isdigit():
                     got[k] = int(v.strip())
-        for key in ("corpus_entries", "corpus_identities", "enriched_entries",
+        for key in ("corpus_entries", "corpus_identities", "corpus_tool_rows",
+                    "corpus_tool_identities", "corpus_rows_with_url", "enriched_entries",
                     "promotable_candidates", "sources", "rows_total", "admitted",
                     "excluded", "held", "tools", "tools_unresolved", "prompt_packs",
                     "domains_rendered"):
@@ -119,8 +125,20 @@ def main():
     # --- reconcile identity ---
     try:
         s = json.load(open(A / "data" / "reconcile" / "SUMMARY.json"))
-        record("reconciliation identity holds", bool(s.get("identity_holds")),
-               f"{s['admitted']} + {s['excluded']} + {s['held']} + residue = {s['rows_total']}")
+        # Every term is named and summed. An earlier version printed "+ residue" and let 75 rows of
+        # orphans hide inside a word, which is exactly the kind of quiet fudge this script exists to stop.
+        comp = {k: int(s.get(k) or 0) for k in
+                ("admitted", "excluded", "held", "orphan", "unresolved", "unparsed")}
+        total = int(s.get("rows_total") or 0)
+        summed = sum(comp.values())
+        detail = " + ".join(f"{k} {v}" for k, v in comp.items()) + f" = {summed}, total {total}"
+        record("reconciliation identity holds",
+               summed == total and bool(s.get("identity_holds")), detail)
+        for k, exp_key in (("admitted", "admitted"), ("excluded", "excluded"),
+                           ("held", "held"), ("orphan", "orphan")):
+            exp = EXPECTED[exp_key]
+            record(f"reconcile {k}", comp[k] == exp, f"doc {exp}, disk {comp[k]}",
+                   changed=comp[k] != exp)
     except Exception as e:
         record("reconciliation identity holds", False, str(e)[:120])
 

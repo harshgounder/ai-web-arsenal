@@ -108,8 +108,8 @@ Full pipeline, all 13 stages, then every URL in every authored domain.
 
 ```
 parse        31,298 rows
-corpus       21,397 by url, 21,194 by tool identity
-reconcile    13,575 admitted + 17,516 excluded + 204 held + 3 residue, identity holds
+corpus       21,384 rows, 8,848 of them tools (8,692 identities), 9,671 with a real url
+reconcile    13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved, identity holds
 taxonomy     624 of 706 mapped (88.4%)
 tools        64, 0 unresolved
 bootstrap    11 scripts generated

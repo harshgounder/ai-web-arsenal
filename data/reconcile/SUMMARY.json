@@ -2,21 +2,21 @@
  "generated_at": "2026-10-26",
  "sources": 22,
  "rows_total": 31298,
- "admitted": 13575,
- "excluded": 17516,
+ "admitted": 13516,
+ "excluded": 17506,
  "held": 204,
- "orphan": 2,
+ "orphan": 71,
  "unresolved": 1,
  "identity_holds": true,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 12009,
   "IMAGE_NOT_ENTRY": 3439,
   "SOCIAL_OR_VIDEO": 930,
-  "OUT_OF_SCOPE_NONWEB": 481,
+  "OUT_OF_SCOPE_NONWEB": 479,
   "KNOWLEDGE_NOT_TOOL": 329,
-  "MCP_NON_SECURITY": 328,
+  "MCP_NON_SECURITY": 320,
   "UNCLASSIFIED_LOW_SIGNAL": 204,
-  "not_in_corpus": 2
+  "not_in_corpus": 71
  },
  "per_source": {
   "0xinfection__awesome-waf": {
@@ -133,10 +133,10 @@
   },
   "punkpeye__awesome-mcp-servers": {
    "rows": 11777,
-   "admitted": 7980,
-   "excluded": 3797,
+   "admitted": 7921,
+   "excluded": 3789,
    "held": 0,
-   "orphan": 0,
+   "orphan": 67,
    "identity_holds": true
   },
   "qazbnm456__awesome-web-security": {
@@ -166,9 +166,9 @@
   "spinov001-art__awesome-security-tools-2026": {
    "rows": 125,
    "admitted": 83,
-   "excluded": 38,
+   "excluded": 36,
    "held": 4,
-   "orphan": 0,
+   "orphan": 2,
    "identity_holds": true
   },
   "tupletype__awesome-cicd-attacks": {

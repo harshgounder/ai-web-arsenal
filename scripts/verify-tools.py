@@ -39,17 +39,51 @@ def http_json(url, timeout=25):
         return None
 
 
+_RESOLVED_VIA = {}
+_archweb_cache = {}
+
+
+def archweb(pkg):
+    """Query the official Arch package API. Independent of /etc/pacman.conf, so it keeps working when
+    a configured third-party repo has a bad signature, and inside containers with no sync db."""
+    if pkg in _archweb_cache:
+        return _archweb_cache[pkg]
+    v = None
+    try:
+        d = http_json("https://archlinux.org/packages/search/json/?name=" + urllib.parse.quote(pkg or ""))
+        for r in (d or {}).get("results", []):
+            if r.get("pkgname") == pkg and r.get("repo") in ("core", "extra", "multilib"):
+                v = r.get("pkgver") or "present"
+                if r.get("pkgrel"):
+                    v = f"{v}-{r['pkgrel']}"
+                break
+    except Exception:
+        v = None
+    _archweb_cache[pkg] = v
+    return v
+
+
 def pacman_has(pkg):
+    """Resolve an official-repo package.
+
+    `pacman -Si` reads the local sync databases, so ONE broken third-party repo makes every lookup
+    fail globally with 'database is not valid'. That is a machine fault, not a package fault, and it
+    had silently turned 16 real tools into 'unresolved'. Fall back to the Arch API when it happens.
+    """
     try:
         r = subprocess.run(["pacman", "-Si", pkg], capture_output=True, text=True, timeout=25)
-        if r.returncode != 0:
-            return None
-        for line in r.stdout.splitlines():
-            if line.startswith("Version"):
-                return line.split(":", 1)[1].strip()
-        return "present"
+        if r.returncode == 0:
+            _RESOLVED_VIA[pkg] = "pacman"
+            for line in r.stdout.splitlines():
+                if line.startswith("Version"):
+                    return line.split(":", 1)[1].strip()
+            return "present"
     except Exception:
-        return None
+        pass
+    v = archweb(pkg)
+    if v:
+        _RESOLVED_VIA[pkg] = "archweb"
+    return v
 
 
 def on_path(binname):
@@ -103,7 +137,8 @@ def main():
             ch, pkg = c["channel"], c.get("pkg")
             if ch == "pacman":
                 v = pacman_has(pkg)
-                tried.append({"channel": ch, "pkg": pkg, "ok": bool(v), "version": v})
+                tried.append({"channel": ch, "pkg": pkg, "ok": bool(v), "version": v,
+                              **({"via": _RESOLVED_VIA[pkg]} if pkg in _RESOLVED_VIA else {})})
                 if v:
                     resolved = {"channel": ch, "pkg": pkg, "version": v}
                     break
@@ -159,7 +194,7 @@ def main():
             "ambiguity": t.get("ambiguity"),
         })
 
-    json.dump({"generated_at": "2026-10-26", "os": "arch", "tools": out},
+    json.dump({"generated_at": "2026-10-27", "os": "arch", "tools": out},
               open(ROOT / "data" / "install-matrix.json", "w"), indent=1)
 
     st = {}
@@ -175,6 +210,12 @@ def main():
     unres = [r["id"] for r in out if r["status"] == "unresolved"]
     if unres:
         print("\nUNRESOLVED (fix the manifest, do not invent):", unres)
+
+    via_archweb = sorted(k for k, v in _RESOLVED_VIA.items() if v == "archweb")
+    if via_archweb:
+        print(f"\nNOTE: {len(via_archweb)} packages resolved through the Arch API because `pacman -Si`")
+        print("      failed. That is a local repo fault, not a package fault. Check with: pacman -Sy")
+        print("      and look for 'database is not valid (invalid or corrupted database (PGP signature))'.")
 
 
 if __name__ == "__main__":

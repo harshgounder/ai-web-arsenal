@@ -1,23 +1,23 @@
 {
  "generated_at": "2026-10-26",
- "rows_parsed": 27856,
- "entries_canonical": 21397,
+ "rows_parsed": 27787,
+ "entries_canonical": 21384,
  "unresolved_rows": 3,
  "tiers": {
   "core_web": 475,
   "adjacent": 15788,
-  "offscope": 345,
+  "offscope": 343,
   "knowledge": 824,
-  "tail": 3965
+  "tail": 3954
  },
  "kinds": {
-  "tool": 8861,
+  "tool": 8848,
   "taxonomy_node": 11712,
   "social": 577,
   "knowledge": 247
  },
  "domains": {
-  "unclassified": 11930,
+  "unclassified": 11917,
   "D28": 4383,
   "D08": 683,
   "D10": 676,
@@ -48,7 +48,7 @@
   "D09": 17,
   "D01": 10
  },
- "unique_to_one_source": 20854,
+ "unique_to_one_source": 20841,
  "multi_source_ge2": 543,
  "per_source": {
   "0xinfection__awesome-waf": {
@@ -95,7 +95,7 @@
    "rows": 35
   },
   "punkpeye__awesome-mcp-servers": {
-   "rows": 8363
+   "rows": 8296
   },
   "qazbnm456__awesome-web-security": {
    "rows": 2253
@@ -107,7 +107,7 @@
    "rows": 197
   },
   "spinov001-art__awesome-security-tools-2026": {
-   "rows": 124
+   "rows": 122
   },
   "tupletype__awesome-cicd-attacks": {
    "rows": 89

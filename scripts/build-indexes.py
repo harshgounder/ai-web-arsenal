@@ -87,4 +87,4 @@ for did, pat in P.items():
               open(ROOT / "data" / "domains" / f"{did}.index.json", "w"), indent=1)
     tot += len(hits)
     print(f"{did:5s} {len(hits):8d}")
-print(f"\nTOTAL promotable {tot}")
+print(f"\nTOTAL candidates {tot} (before cross-domain dedupe; scripts/dedupe-names.py is the final word)")

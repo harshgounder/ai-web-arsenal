@@ -2,26 +2,37 @@
  "source": "spinov001-art__awesome-security-tools-2026",
  "rows": 125,
  "admitted": 83,
- "excluded": 38,
+ "excluded": 36,
  "held": 4,
- "orphan": 0,
+ "orphan": 2,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 19,
+  "not_in_corpus": 2,
   "IMAGE_NOT_ENTRY": 1,
   "TAXONOMY_NODE": 16,
   "UNCLASSIFIED_LOW_SIGNAL": 4,
+  "OUT_OF_SCOPE_NONWEB": 17,
   "SOCIAL_OR_VIDEO": 1,
   "KNOWLEDGE_NOT_TOOL": 1
  },
  "unique_entries": {
   "admit": 83,
-  "exclude": 21,
+  "exclude": 19,
   "hold": 4
  },
  "identity_holds": true,
  "held_examples": [
+  {
+   "name": "![GitHub stars",
+   "url": "https://img.shields.io/github/stars/spinov001-art/awesome-security-tools-2026?style=social",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Last Updated",
+   "url": "https://img.shields.io/badge/last%20updated-March%202026-brightgreen",
+   "reason": "not_in_corpus"
+  },
   {
    "name": "Wireshark",
    "url": "https://www.wireshark.org/",

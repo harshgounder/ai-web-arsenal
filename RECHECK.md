@@ -98,9 +98,10 @@ Goal marked complete on round 40/40. **"Definitive" was not achieved and the REA
 ## 5. What is actually done
 
 ```
-corpus          21,397 by URL, 21,194 by tool identity, 19 sources
-reconcile       31,298 rows = 13,575 admitted + 17,516 excluded + 204 held + 3
-                identity holds per source and in aggregate
+corpus          21,384 rows, of which 8,848 are tools (8,692 identities); 9,671 carry a real URL (1 row holds an unparseable slug)
+                the other rows: 11,712 taxonomy nodes, 577 social, 247 knowledge. 19 sources
+reconcile       31,298 rows = 13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved
+                identity holds per source and in aggregate, every term named
 taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
@@ -181,7 +182,7 @@ the parse stage.
 
 ---
 
-## 8. The eight defects found in this project's own work
+## 8. The twelve defects found in this project's own work
 
 Every one was silent and plausible. None caught by reading. Do not reintroduce these.
 
@@ -193,8 +194,12 @@ Every one was silent and plausible. None caught by reading. Do not reintroduce t
 | 4 | two repository URLs invented and indistinguishable from the 110 real ones | a URL not fetched is a hypothesis |
 | 5 | mirror coverage metric measured its own scoring (14%, then 26%, then 52%) | when a metric needs three attempts to look good, the metric is the problem |
 | 6 | backlog quoted as 10,476; real promotable count 1,419 | counted the parser's output, not the claim |
-| 7 | corpus quoted as 24,759; real 21,397 after removing 3,362 image URLs | images are not entries |
+| 7 | corpus quoted as 24,759; real 21,397 after removing 3,362 image URLs, then 21,381 after badge URLs | images are not entries |
 | 8 | name repair ran after its generator and was discarded; retry regex was double escaped and never matched | repairs belong inside the generator |
+| 9 | corpus total quoted as "21,194 tool identities" when only 8,848 of its 21,384 rows are tools; the rest are taxonomy nodes | a row is not a tool; count the kind you name |
+| 10 | 13 shields.io language-toggle badges survived the image filter because the filter only matched file extensions | a filter that matches one shape of a thing is a sample, not a filter |
+| 11 | `pacman -Si` fails machine-wide when any configured repo has a bad signature, which silently reported 16 real tools as unresolved | distinguish "not packaged" from "lookup broken" |
+| 12 | the recheck identity line printed "+ residue" and let 75 orphan rows hide inside a word | name every term, sum them out loud |
 
 **The standing rule that came out of these: if a number cannot be regenerated from disk, it is not a
 number, it is a memory.**

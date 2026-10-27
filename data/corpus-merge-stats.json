@@ -1,9 +1,9 @@
 {
  "generated_at": "2026-10-27",
- "entries_by_url": 21397,
- "entries_by_identity": 21194,
- "collapsed": 203,
- "duplicate_groups": 147,
+ "entries_by_url": 21384,
+ "entries_by_identity": 21187,
+ "collapsed": 197,
+ "duplicate_groups": 146,
  "largest_groups": [
   {
    "name": "XSS Bypass",
@@ -36,16 +36,6 @@
    ]
   },
   {
-   "name": "Orange",
-   "count": 5,
-   "urls": [
-    "https://blog.orange.tw/",
-    "https://img.shields.io/badge/\u4e2d\u6587\u6587\u4ef6-\u9ede\u64ca\u67e5\u770b-orange",
-    "https://img.shields.io/badge/\u4e2d\u6587\u6587\u6863-\u70b9\u51fb\u67e5\u770b-orange",
-    "https://img.shields.io/badge/\u7b80\u4f53\u4e2d\u6587-\u70b9\u51fb\u67e5\u770b-orange"
-   ]
-  },
-  {
    "name": "XSS Bypass",
    "count": 4,
    "urls": [
@@ -63,16 +53,6 @@
     "https://www.google.co.in/books/edition/Hacking_APIs/gHpPEAAAQBAJ?hl=en&gbpv=0",
     "https://forallsecure.com/blog/the-hacker-mind-podcast-hacking-apis",
     "https://sway.office.com/HVrL2AXUlWGNDHqy"
-   ]
-  },
-  {
-   "name": "mcp",
-   "count": 4,
-   "urls": [
-    "https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit",
-    "https://github.com/QuantGeekDev/mcp-framework",
-    "https://glama.ai/blog/2024-11-25-model-context-protocol-quickstart",
-    "http://localhost:4444/servers/UUID_OF_SERVER_1/mcp"
    ]
   },
   {
@@ -102,6 +82,33 @@
     "https://github.com/mitmproxy",
     "https://mitmproxy.org/"
    ]
+  },
+  {
+   "name": "Metasploit",
+   "count": 3,
+   "urls": [
+    "https://github.com/rapid7/metasploit-framework",
+    "https://hub.docker.com/r/metasploitframework/metasploit-framework/",
+    "https://www.metasploit.com/"
+   ]
+  },
+  {
+   "name": "wpscan",
+   "count": 3,
+   "urls": [
+    "https://github.com/wpscanteam/wpscan",
+    "https://hub.docker.com/r/wpscanteam/wpscan/",
+    "https://wpscan.org/"
+   ]
   }
- ]
+ ],
+ "rows_by_kind": {
+  "taxonomy_node": 11712,
+  "tool": 8848,
+  "social": 577,
+  "knowledge": 247
+ },
+ "tool_rows": 8848,
+ "tool_identities": 8692,
+ "rows_with_url": 9671
 }

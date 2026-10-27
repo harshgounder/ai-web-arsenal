@@ -67,8 +67,29 @@ def main():
              for items in groups.values() if len(items) > 1),
             key=lambda x: -x["count"])[:10],
     }
+    # The corpus holds more than tools: taxonomy nodes harvested from list headings, plus social and
+    # knowledge rows. Quoting entries_by_identity as "tool identities" overcounts tools 2.4x, so the
+    # tool-only view is computed here and reported separately.
+    by_kind = {}
+    for r in rows:
+        by_kind[r.get("kind", "?")] = by_kind.get(r.get("kind", "?"), 0) + 1
+    tool_rows = [r for r in rows if r.get("kind") == "tool"]
+    tool_keys = set()
+    for r in tool_rows:
+        nm = norm(r.get("name"))
+        tool_keys.add(("k", r["key"]) if len(nm) < 3 else ("n", nm))
+    stats["rows_by_kind"] = dict(sorted(by_kind.items(), key=lambda kv: -kv[1]))
+    stats["tool_rows"] = len(tool_rows)
+    stats["tool_identities"] = len(tool_keys)
+    # Counts only real http(s) locators. One row carries "skt elecom/bomlens", an unparseable slug,
+    # and counting it as a URL would make the link checkpoint under-report by one.
+    stats["rows_with_url"] = sum(1 for r in rows
+                                 if (r.get("url") or "").lower().startswith(("http://", "https://")))
     json.dump(stats, open(DATA / "corpus-merge-stats.json", "w"), indent=1)
     print(f"by url {len(rows)} -> by identity {len(merged)} (collapsed {stats['collapsed']} across {dup_groups} groups)")
+    print(f"of {len(rows)} rows: {len(tool_rows)} are tools ({len(tool_keys)} tool identities); "
+          f"rows with a url: {stats['rows_with_url']}")
+    print(f"rows by kind: {stats['rows_by_kind']}")
     for g in stats["largest_groups"]:
         print(f"  {g['count']}x {str(g['name'])[:40]:40s} {str(g['urls'][:2])[:70]}")
     return 0

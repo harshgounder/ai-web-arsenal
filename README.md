@@ -35,7 +35,7 @@
 
 | bound | number | measured by |
 |---|---|---|
-| the corpus is what 19 lists knew | **21,194** tool identities | `scripts/merge-identities.py` |
+| the corpus is what 19 lists knew | **8,692** tool identities out of 21,384 rows | `scripts/merge-identities.py` |
 | the authored content is what this build produced | **444** enriched entries | `data/domains/*.json` |
 | the backlog is real and mapped | **1,419** promotable candidates | `data/domains/*.index.json` |
 
@@ -47,7 +47,9 @@ A repo that claims completeness is making a claim it cannot check. This one publ
 
 Every web security list on GitHub fails the same way. Sorted by vulnerability class. No dates. No evidence standard. No driver information, so an agent cannot act on a row. And links that rot silently while the README implies completeness.
 
-The collections this repo reconciled are near disjoint. Of 21,194 tool identities, only a few hundred appear in more than one collection. No single list is a superset of any other, which is why a union plus an exclusion ledger is the only honest way to claim coverage.
+The collections this repo reconciled are near disjoint. Of 8,692 tools, 543 rows appear in more than one collection and the rest in exactly one. No single list is a superset of any other, which is why a union plus an exclusion ledger is the only honest way to claim coverage.
+
+The corpus is not only tools. Of its 21,384 rows, 8,848 are tools, 11,712 are taxonomy nodes harvested from list headings and used for framework mapping, and 824 are social or knowledge rows that were kept for provenance and then excluded from the tool count. Quoting the row total as a tool count would overstate tools by 2.4x, so those two figures are never mixed in this README.
 
 This repo answers three questions that a list cannot:
 
@@ -124,7 +126,7 @@ ai-web-arsenal/
 ├── BOOTSTRAP.md               bring-your-own-AI setup, Arch first
 ├── RECHECK.md                 post-compaction state: goals, decisions, what is done and not
 ├── RESUME.md                  state, rebuild commands, traps already paid for
-├── LOG.md                     every step, including the eight defects
+├── LOG.md                     every step, including the twelve defects
 ├── manifest/tools.yaml        single source of truth for 64 tools
 ├── bootstrap/                 11 generated installer scripts
 ├── data/
@@ -216,11 +218,13 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 |---|---|
 | sources reconciled | 19 |
 | rows reconciled | 31,298 |
-| reconciliation identity | holds, per source and in aggregate |
-| corpus, by tool identity | 21,194 |
-| corpus, by URL | 21,397 |
-| excluded with a reason | 17,516 |
+| reconciliation identity | holds: 13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved = 31,298 |
+| corpus rows | 21,384 |
+| corpus, tools only | 8,848 rows, 8,692 identities |
+| corpus, rows carrying a real URL | 9,671 |
+| excluded with a reason | 17,506 |
 | held, awaiting a rule | 204 |
+| orphan rows (source row with no corpus match) | 74 |
 | taxonomy items mapped to atoms | 624 of 706 (88.4%) |
 | tools verified | 64, 0 unresolved |
 | domain URLs checked | 265, 264 live |

@@ -146,7 +146,7 @@ def domain_of(text):
 
 JUNK_NAME = re.compile(r"^(github|gitlab|gitee|codeberg|repository|repo|link|here|this|site|website|web|page|"
                        r"read more|more|source|docs|documentation|tool|article|blog|post|glama|mcp|server|"
-                       r"homepage|home|download|click here|unknown|n a|na|"
+                       r"badge|badges|shield|shields|homepage|home|download|click here|unknown|n a|na|"
                        r"HARNESS-IFACE|BENCH-\d+|(OFF|DEF|ENG|GOV|HUM|PHY|ENB|DATA)-\d{2})$", re.I)
 
 
@@ -173,6 +173,51 @@ def slug(s):
     return s[:80]
 
 
+# Badge and status images are not entries. The extension check alone missed the shields.io family,
+# which carries no file extension: `img.shields.io/badge/English-Click-yellow` is a language toggle
+# on an awesome list, not a tool. Thirteen of them had been admitted as kind=tool rows.
+BADGE_HOSTS = re.compile(
+    r"(img\.shields\.io|badgen\.net|shields\.io|badge\.fury\.io|"
+    r"codecov\.io|travis-ci\.(?:org|com)|coveralls\.io)",
+    re.I,
+)
+BADGE_PATH = re.compile(r"(?:^|/)(?:badge|badges)(?:/|$)", re.I)
+
+
+def is_badge_url(u):
+    """True when a URL addresses an image or status badge rather than a page."""
+    if not u:
+        return False
+    if re.search(r"\.(svg|png|jpe?g|gif|ico|webp)(\?|$)", u, re.I):
+        return True
+    return bool(BADGE_HOSTS.search(u) or BADGE_PATH.search(u))
+
+
+def repair_badge_url(u):
+    """Recover the page a badge belongs to. Two shapes exist in the harvested lists:
+    glama.ai/mcp/servers/badge/<id> and glama.ai/mcp/servers/<owner>/<repo>/badge.
+    Three real MCP servers (Cortex, DollhouseMCP, guardvibe) were lost to the second shape."""
+    m = re.match(r"(https?://glama\.ai/mcp/servers)/badge/(.+)$", u or "", re.I)
+    if m:
+        return f"{m.group(1)}/{m.group(2)}"
+    m = re.match(r"(https?://glama\.ai/mcp/servers/(?!badge(?:/|$)).+?)/badge/?$", u or "", re.I)
+    if m:
+        return m.group(1)
+    return None
+
+
+SLUG_ONLY = re.compile(r"^[\w.-]+/[\w.-]+$")
+
+
+def normalize_url(u):
+    """One harvested source stores a bare `owner/repo` in its url field instead of a link.
+    That made 687 rows count as 'carrying a URL' when they carried an identifier, and left them
+    unchecked by the link checker. Expand the unambiguous shape; leave anything odd untouched."""
+    if u and "://" not in u and SLUG_ONLY.match(u):
+        return "https://github.com/" + u
+    return u
+
+
 def main():
     corpus = {}
     per_source = defaultdict(Counter)
@@ -185,10 +230,18 @@ def main():
                 r = json.loads(line)
             except Exception:
                 continue
+            _u = normalize_url((r.get("url") or ""))
+            if _u != (r.get("url") or ""):
+                r["url"] = _u
             # badge and image URLs are not entries. glama.ai alone contributed 3,348 of them.
-            _u = (r.get("url") or "")
-            if re.search(r"\.(svg|png|jpe?g|gif|ico|webp)(\?|$)", _u, re.I):
-                continue
+            # A badge that encodes a real tool URL is repaired instead of dropped.
+            if is_badge_url(_u):
+                fixed = repair_badge_url(_u)
+                if not fixed:
+                    continue
+                r["url"] = fixed
+                r["parse_notes"] = list(r.get("parse_notes") or []) + ["badge-url-repaired"]
+                _u = fixed
             key = r.get("canonical") or ("name:" + slug(r.get("name")))
             if not key or key == "name:":
                 per_source[r["source"]]["unresolved"] += 1

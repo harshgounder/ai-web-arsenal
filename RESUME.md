@@ -12,8 +12,8 @@ Everything below was verified by running it on 2026-10-26. No step here depends 
 | layer | state |
 |---|---|
 | scope derivation | `SCOPE-v1.md`, 11 axes, cell model, 37 domains declared |
-| rival reconciliation | 19 collections, 31,298 rows, identity holds, 17,516 exclusions itemised by reason |
-| corpus | 21,194 tool identities (21,397 by URL, 203 collapsed as duplicates) |
+| rival reconciliation | 19 collections, 31,298 rows, identity holds, 17,506 exclusions itemised by reason |
+| corpus | 21,384 rows, of which 8,848 tools giving 8,692 identities (21,187 across all kinds) |
 | taxonomy mapping | 706 items from 6 taxonomies, 624 mapped to atoms (88.4%) |
 | tool manifest | 64 tools, 0 unresolved, every channel verified |
 | bootstrap | 11 scripts generated, 8 profiles, dry-run safe |
@@ -129,16 +129,20 @@ pattern here.
 ## Closing note, 2026-10-27
 
 This project's recurring failure mode was a **plausible-looking artifact that nothing validated**.
-Eight instances were caught, none by reading:
+Twelve instances were caught, none by reading:
 
 1. two recalled facts wrong (a repo called stale that was active, one called live that was archived)
 2. link checker used HEAD, which real sites answer 404, producing 7 false dead links
 3. classifier fallback turned every unmatched counter into "authorisation", inflating a finding to 31%
 4. two repository URLs were invented and looked exactly like the 110 real ones
 5. a mirror coverage metric was measuring its own scoring, giving 14% then 26% then 52%
-6. the backlog was 10,476 until measured properly at 1,491
-7. the corpus was 24,759 until image URLs were removed, giving 21,397
+6. the backlog was 10,476 until measured properly at 1,419
+7. the corpus was 24,759 until image URLs were removed (21,397), then badge URLs, recovering 3 tools hidden behind them (21,384)
 8. a name repair ran after its generator and was silently discarded, then the retry never matched
+9. the corpus total was quoted as "21,194 tool identities" when only 8,848 of its 21,384 rows are tools
+10. 13 shields.io language badges survived an image filter that only matched file extensions
+11. a machine-wide `pacman -Si` failure turned 16 real packages into "unresolved", inventing a packaging gap
+12. the recheck identity line printed "+ residue", letting 75 orphan rows hide inside one word
 
 Every one was found by a measurement disagreeing with a claim. That is the method this repo is trying
 to encode: if a number cannot be regenerated from disk, it is not a number, it is a memory.

@@ -1,23 +1,150 @@
 {
  "source": "punkpeye__awesome-mcp-servers",
  "rows": 11777,
- "admitted": 7980,
- "excluded": 3797,
+ "admitted": 7921,
+ "excluded": 3789,
  "held": 0,
- "orphan": 0,
+ "orphan": 67,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "MCP_NON_SECURITY": 320,
+  "not_in_corpus": 67,
   "OUT_OF_SCOPE_NONWEB": 46,
+  "MCP_NON_SECURITY": 312,
   "SOCIAL_OR_VIDEO": 17,
   "IMAGE_NOT_ENTRY": 3414
  },
  "unique_entries": {
-  "admit": 4612,
-  "exclude": 222,
+  "admit": 4602,
+  "exclude": 221,
   "hold": 0
  },
  "identity_holds": true,
- "held_examples": []
+ "held_examples": [
+  {
+   "name": "![\u0e44\u0e17\u0e22",
+   "url": "https://img.shields.io/badge/Thai-Click-blue",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![English",
+   "url": "https://img.shields.io/badge/English-Click-yellow",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u7e41\u9ad4\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7e41\u9ad4\u4e2d\u6587-\u9ede\u64ca\u67e5\u770b-orange",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u7b80\u4f53\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7b80\u4f53\u4e2d\u6587-\u70b9\u51fb\u67e5\u770b-orange",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u65e5\u672c\u8a9e",
+   "url": "https://img.shields.io/badge/\u65e5\u672c\u8a9e-\u30af\u30ea\u30c3\u30af-\u9752",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\ud55c\uad6d\uc5b4",
+   "url": "https://img.shields.io/badge/\ud55c\uad6d\uc5b4-\ud074\ub9ad-yellow",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Portugu\u00eas Brasileiro",
+   "url": "https://img.shields.io/badge/Portugu\u00eas_Brasileiro-Clique-green",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Discord",
+   "url": "https://img.shields.io/discord/1312302100125843476?logo=discord&label=discord",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Subreddit subscribers",
+   "url": "https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![English",
+   "url": "https://img.shields.io/badge/English-Click-yellow",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u7e41\u9ad4\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7e41\u9ad4\u4e2d\u6587-\u9ede\u64ca\u67e5\u770b-orange",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u7b80\u4f53\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7b80\u4f53\u4e2d\u6587-\u70b9\u51fb\u67e5\u770b-orange",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u65e5\u672c\u8a9e",
+   "url": "https://img.shields.io/badge/\u65e5\u672c\u8a9e-\u30af\u30ea\u30c3\u30af-\u9752",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\ud55c\uad6d\uc5b4",
+   "url": "https://img.shields.io/badge/\ud55c\uad6d\uc5b4-\ud074\ub9ad-yellow",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Portugu\u00eas Brasileiro",
+   "url": "https://img.shields.io/badge/Portugu\u00eas_Brasileiro-Clique-green",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Discord",
+   "url": "https://img.shields.io/discord/1312302100125843476?logo=discord&label=discord",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Subreddit subscribers",
+   "url": "https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![English",
+   "url": "https://img.shields.io/badge/English-Click-yellow",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u7e41\u9ad4\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7e41\u9ad4\u4e2d\u6587-\u9ede\u64ca\u67e5\u770b-orange",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u7b80\u4f53\u4e2d\u6587",
+   "url": "https://img.shields.io/badge/\u7b80\u4f53\u4e2d\u6587-\u70b9\u51fb\u67e5\u770b-orange",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\u65e5\u672c\u8a9e",
+   "url": "https://img.shields.io/badge/\u65e5\u672c\u8a9e-\u30af\u30ea\u30c3\u30af-\u9752",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![\ud55c\uad6d\uc5b4",
+   "url": "https://img.shields.io/badge/\ud55c\uad6d\uc5b4-\ud074\ub9ad-yellow",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Portugu\u00eas Brasileiro",
+   "url": "https://img.shields.io/badge/Portugu\u00eas_Brasileiro-Clique-green",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Discord",
+   "url": "https://img.shields.io/discord/1312302100125843476?logo=discord&label=discord",
+   "reason": "not_in_corpus"
+  },
+  {
+   "name": "![Subreddit subscribers",
+   "url": "https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit",
+   "reason": "not_in_corpus"
+  }
+ ]
 }
