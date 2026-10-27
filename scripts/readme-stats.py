@@ -45,6 +45,19 @@ print(f"identity {summ['identity_holds']}")
 print(f"tools {tools}")
 print(f"tools_unresolved {unres}")
 print(f"tools_installed_already {inst}")
+try:
+    _den = sorted(glob.glob(str(R/"data"/"denominator"/"L*.json")))
+    _fac = 0; _lens = 0
+    for _f in _den:
+        _d = json.load(open(_f))
+        _n = len(_d.get("factors") or [])
+        if _n:
+            _lens += 1
+            _fac += _n
+    print(f"denominator_factors {_fac}")
+    print(f"denominator_lenses {_lens}")
+except Exception:
+    print("denominator_factors ?")
 print(f"domains_with_data {doms}")
 print(f"domains_rendered {rendered}")
 print(f"prompt_packs {prompts}")

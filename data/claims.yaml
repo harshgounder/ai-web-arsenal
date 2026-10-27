@@ -183,6 +183,15 @@ claims:
     statement: "the atlas gate passes against its own schema"
     check: "atlas_gate_ok()"
 
+  # --- denominator (Phase 1, in progress) ---------------------------------------
+  - id: C100
+    statement: "the denominator has at least two lenses written, each with 50 or more factors"
+    check: "(lambda ns: len(ns) >= 2 and all(n >= 50 for n in ns))([len(d.get('factors') or []) for d in (json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json'))) if (d.get('factors') or [])])"
+
+  - id: C101
+    statement: "every denominator factor has a definition and an observable, so none is a label"
+    check: "all(f.get('def') and f.get('observable') for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json')) for f in json.loads(p.read_text(encoding='utf-8')).get('factors', []))"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "nothing in the atlas is marked OBSERVED, because nothing has been run here"
