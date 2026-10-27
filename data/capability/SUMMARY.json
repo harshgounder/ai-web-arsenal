@@ -1,0 +1,25 @@
+{
+ "generated_at": "2026-10-27",
+ "queries": 14,
+ "recency_months": 24,
+ "candidates": 222,
+ "relevant": 139,
+ "filtered_out_as_irrelevant": 83,
+ "already_in_corpus": 86,
+ "new_to_the_lists": 53,
+ "new_pct": 38.1,
+ "topic_pass_rate_pct": 62.6,
+ "new_by_capability": {
+  "graphql security": 10,
+  "web scanner": 9,
+  "mobile web analysis": 9,
+  "client side": 7,
+  "secret scanning": 6,
+  "waf evasion": 5,
+  "api security": 3,
+  "artifact extraction": 2,
+  "bug bounty": 1,
+  "javascript analysis": 1
+ },
+ "note": "candidates only. Nothing here is admitted to the corpus, and the headline number is the new_to_the_lists count, which measures what nineteen curated lists did not contain rather than how many tools exist."
+}

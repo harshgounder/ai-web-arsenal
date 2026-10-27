@@ -256,6 +256,14 @@ claims:
     statement: "mutation candidates are kept out of the atlas and the coverage ledger"
     check: "not any(p.get('status') == 'UNVERIFIED' for p in atlas_patterns())"
 
+  - id: C118
+    statement: "the capability funnel adds up: topic hits split into relevant and filtered, relevant into known and new"
+    check: "(lambda c: c['candidates'] == c['relevant'] + c['filtered_out_as_irrelevant'] and c['relevant'] == c['already_in_corpus'] + c['new_to_the_lists'])(load('data/capability/SUMMARY.json'))"
+
+  - id: C119
+    statement: "capability candidates are marked CANDIDATE and never counted in the corpus"
+    check: "all(r['status'] == 'CANDIDATE' for r in rows('data/capability/candidates.jsonl'))"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

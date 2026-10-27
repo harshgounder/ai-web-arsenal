@@ -583,6 +583,31 @@ shape and not meaning.
 
 ---
 
+## 6q. Breadth engine three, and the three corrections it took
+
+The lesson of this engine is that the first two answers were wrong and only reading the output caught it.
+
+**Wrong answer one.** Searching `in:readme` returned `public-apis`, `developer-roadmap`, `yt-dlp` and
+`ollama` as top web security candidates, and claimed 82% of tools were new to the lists. The output was
+plausible in shape and meaningless in content.
+
+**Wrong answer two.** Switching to GitHub topics removed the mega-repos but `topic:reverse-engineering`
+still returns `gpt4free`, an AirPods client and a visual novel translator, so 62.6% of topic hits survive a
+security vocabulary filter at all.
+
+**Wrong answer three, and the one that mattered.** Matching candidates to the corpus by repository URL
+alone reported `apktool`, MobSF and ModSecurity as new to the lists. They are not. An overlap check that
+only looks one way measures its own index rather than the corpus. Name matching and containment for longer
+names added 34 matches that the slug check had missed.
+
+The final funnel: 222 topic hits, 139 relevant, 86 already known, **53 genuinely new**.
+
+Those 53 are real: SafeLine, OWASP MASTG, osv-scanner, FLARE-VM, lamda, reconFTW, nettacker, afrog. That
+is the useful finding, and it is also the first evidence this repo has that its own corpus has a
+measurable blind spot rather than a suspected one.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

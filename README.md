@@ -653,6 +653,43 @@ error. A server that starts is not a server that answers.
 
 ---
 
+## Capability mining, and why the first answer was wrong
+
+The third breadth engine asks the registries what exists for a job instead of trusting a list. It produced
+the most instructive failure of the whole session.
+
+**The first version was meaningless.** It searched `in:readme`, so the top web security candidates were
+`public-apis`, `developer-roadmap`, `yt-dlp` and `ollama`, and it reported 82% of tools as new to the
+lists. Reading the rows rather than trusting the output is the only reason that did not get published.
+
+The funnel after two corrections:
+
+| stage | count | what removed it |
+|---|---|---|
+| topic search hits | 222 | - |
+| relevant to security | 139 | a vocabulary filter, because `topic:reverse-engineering` returns `gpt4free` and a visual novel translator |
+| already known | 86 | 52 by repository slug, 9 by name, 25 by name containment |
+| **genuinely new** | **53** | |
+
+**53 tools across fourteen capability queries are absent from all nineteen curated lists.** The ones I
+recognise as plainly real: SafeLine, OWASP MASTG, osv-scanner, FLARE-VM, lamda, reconFTW, nettacker,
+afrog.
+
+The third correction matters most. Matching only on repository URL reported `apktool`, MobSF and
+ModSecurity as new, which they are not: they are present under another URL or another name. **An overlap
+check that only looks one way measures its own index.** Name containment is what fixed it, and 25 of the
+86 matches came from that alone.
+
+```bash
+python3 scripts/mine-capability.py     # 14 topic queries, then the funnel
+python3 scripts/mine-capability.py --check
+```
+
+Nothing here is admitted to the corpus. `C119` enforces that every row stays `CANDIDATE`, and the
+headline number is the new count, which measures what nineteen curated lists did not contain.
+
+---
+
 ## The mutation engine
 
 The second breadth engine, and the one with the most room to be dishonest, so it is built to be the least
@@ -864,6 +901,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | control classes with a stated blind spot | 14 of 14 |
 | advisories mapped | 993 of 1,261 (78.7%), 268 unmapped and stated |
 | mutation candidates | 2,399 from 150 patterns, all UNVERIFIED, none counted |
+| capability mining | 222 topic hits, 139 relevant, **53 new to all 19 lists** |
 | MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 
@@ -937,6 +975,7 @@ ai-web-arsenal/
 ├── counters/                  the defensive half, generated from data/counters/
 ├── data/advisories/           breadth engine one: OSV advisories, mapped, own counts
 ├── data/mutations/            breadth engine two: candidate variants, all unverified
+├── data/capability/           breadth engine three: tools found by capability, 53 new to the lists
 ├── mcps/                      working MCP configs, including arsenal-mcp.py
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── rea-ops/                   built extraction operations, each with a fixture and a test

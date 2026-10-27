@@ -111,6 +111,13 @@ try:
     _mu = json.load(open(R/"data"/"mutations"/"SUMMARY.json"))
     print(f"mutation_candidates {_mu['candidates']}")
 except Exception:
+    print("mutation_candidates 0")
+try:
+    _cap = json.load(open(R/"data"/"capability"/"SUMMARY.json"))
+    print(f"capability_candidates {_cap['candidates']}")
+    print(f"capability_relevant {_cap['relevant']}")
+    print(f"capability_new {_cap['new_to_the_lists']}")
+except Exception:
     print("advisories_total 0")
 try:
     _d31 = json.load(open(R/"data"/"domains"/"D31.json"))
