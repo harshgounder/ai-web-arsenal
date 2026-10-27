@@ -891,7 +891,10 @@
   {
    "gap": "No Chromium LevelDB reader for LocalStorage and IndexedDB",
    "class": "no-tool",
-   "build_candidate": "unzip plus a LevelDB library, expose profile and origin scoping"
+   "build_candidate": "unzip plus a LevelDB library, expose profile and origin scoping",
+   "status": "built",
+   "built_at": "rea-ops/leveldb-log.py",
+   "built_note": "reads the write-ahead log with masked CRC32C, joins fragmented records across blocks and parses WriteBatch puts and deletes; sorted tables are out of scope and the tool says so"
   },
   {
    "gap": "No WeChat or Alipay mini program unpacking",
@@ -914,7 +917,10 @@
   {
    "gap": "No HarmonyOS HAP or ABC bytecode support",
    "class": "no-tool",
-   "build_candidate": "HAP unpack plus ABC inspection"
+   "build_candidate": "HAP unpack plus ABC inspection",
+   "status": "built",
+   "built_at": "rea-ops/hap.py",
+   "built_note": "unpacks the container, identifies Ark bytecode and native libraries, parses module.json, refuses traversal; no decompilation and no signature verification"
   },
   {
    "gap": "No WARC archive reader",

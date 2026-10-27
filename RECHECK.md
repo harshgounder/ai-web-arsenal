@@ -300,8 +300,10 @@ D31 named ten gaps and none were built. Two now are, each with a fixture and a t
 |---|---|---|---|
 | `rea-ops/warc.py` | reads WARC 1.0 response records, plain or gzip, emits HAR shaped JSON | 7 fixture checks | no revisit resolution beyond a pointer, no digest verification |
 | `rea-ops/wxapkg.py` | parses a documented wxapkg layout, extracts with traversal refusal | 8 fixture checks | **not validated against a real WeChat package** |
+| `rea-ops/leveldb-log.py` | reads a LevelDB write-ahead log: masked CRC32C, records spanning blocks, WriteBatch puts and deletes | 8 fixture checks | reads the log, not the sorted tables, and exits 2 saying so |
+| `rea-ops/hap.py` | unpacks a HarmonyOS HAP, identifies Ark bytecode and native libraries, parses module.json | 8 fixture checks | no decompilation, no signature verification |
 
-Eight of ten remain. The two built ones are marked `status: built` in D31 with the path, and a claim
+Six of ten remain, and the tests went from 18 to 34 checks. The two built ones are marked `status: built` in D31 with the path, and a claim
 checks that every `built_at` path exists, so a gap cannot be marked done against a file that is not
 there.
 

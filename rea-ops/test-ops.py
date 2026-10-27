@@ -63,6 +63,61 @@ def parse_json(out):
         return {}
 
 
+def make_leveldb_log(path, batches):
+    """Write a LevelDB write-ahead log with the same layout leveldb-log.py implements.
+    batches is a list of (sequence, [(key_bytes, value_bytes_or_None), ...])."""
+    import struct
+
+    POLY = 0x82F63B78
+    table = []
+    for i in range(256):
+        c = i
+        for _ in range(8):
+            c = (c >> 1) ^ POLY if c & 1 else c >> 1
+        table.append(c)
+
+    def crc32c(data, crc=0):
+        crc ^= 0xFFFFFFFF
+        for b in data:
+            crc = table[(crc ^ b) & 0xFF] ^ (crc >> 8)
+        return crc ^ 0xFFFFFFFF
+
+    def mask(c):
+        return ((((c >> 15) | (c << 17)) & 0xFFFFFFFF) + 0xA282EAD8) & 0xFFFFFFFF
+
+    def varint(n):
+        out = b""
+        while True:
+            b = n & 0x7F
+            n >>= 7
+            out += bytes([b | (0x80 if n else 0)])
+            if not n:
+                return out
+
+    import io
+    buf = io.BytesIO()
+    for seq, ops in batches:
+        payload = struct.pack("<QI", seq, len(ops))
+        for k, v in ops:
+            payload += b"\x01" if v is not None else b"\x00"
+            payload += varint(len(k)) + k
+            if v is not None:
+                payload += varint(len(v)) + v
+        buf.write(struct.pack("<IHB", mask(crc32c(payload)), len(payload), 1))
+        buf.write(payload)
+    path.write_bytes(buf.getvalue())
+
+
+def make_hap(path, module_json=None, extra=None):
+    import zipfile
+    with zipfile.ZipFile(path, "w") as zf:
+        if module_json is not None:
+            import json as _j
+            zf.writestr("module.json", _j.dumps(module_json))
+        for name, data in (extra or {}).items():
+            zf.writestr(name, data)
+
+
 def run(args):
     r = subprocess.run([sys.executable] + args, capture_output=True, text=True, timeout=120)
     return r.returncode, r.stdout, r.stderr
@@ -142,6 +197,70 @@ def test_wxapkg(tmp):
     check("wxapkg: rejects a truncated file with a reason", rc == 1 and "cannot parse" in err)
 
 
+def test_leveldb(tmp):
+    log = tmp / "000003.log"
+    # Chrome shaped: an origin prefixed key with a UTF-16LE value, then a delete
+    key1 = b"_https://example.test\x00\x01theme"
+    val1 = "dark".encode("utf-16-le")
+    make_leveldb_log(log, [(100, [(key1, val1)]), (101, [(b"plain-key", b"plain-value")]),
+                           (102, [(b"gone-key", None)])])
+    rc, out, err = run([str(HERE / "leveldb-log.py"), str(log), "--json"])
+    rows = [json.loads(l) for l in out.splitlines() if l.strip().startswith("{")]
+    check("leveldb: exits 0 on a valid log", rc == 0, err[:90])
+    check("leveldb: reads three operations", len(rows) == 3, f"got {len(rows)}")
+    check("leveldb: put and delete distinguished",
+          [r["op"] for r in rows] == ["put", "put", "delete"], str([r["op"] for r in rows]))
+    check("leveldb: sequence numbers ascend", [r["seq"] for r in rows] == [100, 101, 102])
+    check("leveldb: utf16 value decoded", rows[0]["value_view"]["utf16"] == "dark",
+          rows[0]["value_view"]["utf16"])
+    check("leveldb: origin prefix visible in the key ascii view",
+          "example.test" in rows[0]["key_view"]["ascii"])
+
+    rc, out, _ = run([str(HERE / "leveldb-log.py"), str(log), "--keys"])
+    check("leveldb: keys mode prints one line per op", len(out.strip().splitlines()) == 3)
+
+    # a file that is not a log must not report success with zero records
+    junk = tmp / "notalog.bin"
+    junk.write_bytes(b"\x00" * 64)
+    rc, out, err = run([str(HERE / "leveldb-log.py"), str(junk)])
+    check("leveldb: refuses a non-log instead of reporting emptiness", rc == 2 and "sorted table" in err,
+          f"rc={rc}")
+
+
+def test_hap(tmp):
+    hap = tmp / "app.hap"
+    make_hap(hap, module_json={"module": {"name": "entry", "deviceTypes": ["phone"],
+                                          "requestPermissions": [{"name": "ohos.permission.INTERNET"}]}},
+             extra={"ets/modules.abc": b"PANDA" + b"\x00" * 32,
+                    "libs/arm64-v8a/libentry.so": b"\x7fELF"})
+    rc, out, err = run([str(HERE / "hap.py"), str(hap), "--info"])
+    d = parse_json(out)
+    check("hap: exits 0 on a valid package", rc == 0, err[:90])
+    check("hap: finds the Ark bytecode file", d.get("ark_bytecode") == ["ets/modules.abc"])
+    check("hap: finds native libraries", d.get("native_libraries") == ["libs/arm64-v8a/libentry.so"])
+    check("hap: parses module.json",
+          d.get("manifest", {}).get("module.json", {}).get("module", {}).get("name") == "entry")
+
+    outdir = tmp / "hap-out"
+    rc, out, _ = run([str(HERE / "hap.py"), str(hap), "--out", str(outdir)])
+    check("hap: extracts entries", parse_json(out).get("extracted") == 3)
+    check("hap: extracted bytecode intact",
+          (outdir / "ets/modules.abc").read_bytes().startswith(b"PANDA"))
+
+    # traversal must be refused
+    evil = tmp / "evil.hap"
+    make_hap(evil, module_json={}, extra={"../../escaped.txt": b"nope"})
+    rc, out, _ = run([str(HERE / "hap.py"), str(evil), "--out", str(tmp / "hap-evil")])
+    d = parse_json(out)
+    check("hap: refuses traversal names", d.get("skipped") and not (tmp / "escaped.txt").exists())
+
+    # a non zip must fail with a reason
+    notzip = tmp / "notzip.hap"
+    notzip.write_bytes(b"nope")
+    rc, out, err = run([str(HERE / "hap.py"), str(notzip), "--list"])
+    check("hap: rejects a non container with a reason", rc == 1 and "not a zip" in err)
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -149,6 +268,10 @@ def main():
         test_warc(tmp)
         print("wxapkg.py")
         test_wxapkg(tmp)
+        print("leveldb-log.py")
+        test_leveldb(tmp)
+        print("hap.py")
+        test_hap(tmp)
     print(f"\nfixtures: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
     if FAIL:
         for f in FAIL:

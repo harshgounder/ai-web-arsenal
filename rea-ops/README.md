@@ -5,20 +5,29 @@ when it has a fixture and a test, because an operation with neither is a claim.
 
 | op | what it does | tested against |
 |---|---|---|
-| `warc.py` | reads WARC 1.0 response records, plain or gzip, emits HAR-shaped JSON with an explicit absent field rather than a guess | a WARC this repo generates |
+| `warc.py` | reads WARC 1.0 response records, plain or gzip, emits HAR-shaped JSON | a WARC this repo generates |
 | `wxapkg.py` | parses a documented wxapkg layout and extracts with traversal refusal | a package this repo generates |
+| `leveldb-log.py` | reads a LevelDB write-ahead log: masked CRC32C, records spanning blocks, WriteBatch puts and deletes | a log this repo generates |
+| `hap.py` | unpacks a HarmonyOS HAP, identifies Ark bytecode and native libraries, parses module.json | a package this repo generates |
 
 Run the tests:
 
 ```bash
-python3 rea-ops/test-ops.py
+python3 rea-ops/test-ops.py      # 34 checks
 ```
 
-Two things stated plainly rather than implied:
+Four of ten gaps closed. What each one states plainly rather than implying:
 
 - **`wxapkg.py` has not been validated against a real WeChat package.** Published descriptions of the
-  format disagree on header width across versions, and no real sample was available here. It is a correct
-  parser for a documented shape, which is not the same as a working tool.
-- Neither operation is wired into the REA MCP server. They are standalone readers today.
+  format disagree on header width across versions, and no real sample was available here.
+- **`leveldb-log.py` reads the log, not the sorted tables.** A value compacted before the log was read is
+  not in the output, and the tool exits 2 with that sentence instead of returning an empty result that
+  reads like absence.
+- **`hap.py` does not decompile Ark bytecode and does not verify the signature.** It identifies the
+  `.abc` files so a reader knows what needs a disassembler.
+- **`warc.py` does not resolve revisits beyond a pointer** and does not verify digests.
 
-The remaining gaps in D31 are still gaps. Eight of ten are unbuilt.
+None of the four is wired into the REA MCP server yet. They are standalone readers.
+
+The remaining six gaps are still gaps: Flutter AOT, Hermes, service worker reconstruction, WebAuthn
+attestation, signing recovery and source map recovery.
