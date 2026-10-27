@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 282,
+ "unique_urls": 290,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -89,6 +89,62 @@
    "http": 200,
    "entries": [
     "d24-cwe"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-extension-scope"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/Performance_API": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-oracle-stats"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-storage-lifecycle"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-messaging-surface"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-render-tree-exfil"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-sandbox-matrix"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-repro-pack"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-header-posture"
    ]
   },
   "https://docs.astral.sh/uv/": {

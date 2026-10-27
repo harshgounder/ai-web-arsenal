@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -44,6 +44,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [PPScan](https://github.com/msrkp/PPScan) | L06 probing | A2 | A05 | `n/a reference` | no | Prototype pollution scanner for client side sinks |
 | [rea inspect_web_event_listeners](https://rea.tools) | L06 probing | A3 | A01 | `mcp:rea` | yes | Every listener on a selector with source ownership and exact script text |
 | [rea capture_browser_scenario](https://rea.tools) | L06 probing | A3 | A08,A05 | `mcp:rea` | yes | Scripted browser flow with network, storage and DOM captured deterministically |
+| [Extension privilege and injection scope](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) | L10 reporting | A0 | A08 | `n/a reference` | no | Which pages an extension injects into, which of its files any page can load, and how wide its permissions are. |
+| [Security header posture across response variants](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) | L10 reporting | A0 | A08 | `n/a reference` | no | Headers are set per response, and error pages, API routes and static assets often miss what the login page has. The test is the whole surface, not one page. |
+| [Post message surface and target origin](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) | L10 reporting | A0 | A08 | `n/a reference` | no | Who can send, who validates, and whether the sender used a wildcard target that leaks to any embedder. |
+| [Render tree side channels](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether injected style or resource loading can be used as an oracle for content the script cannot read. |
+| [Frame sandbox and opener matrix](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) | L10 reporting | A0 | A08 | `n/a reference` | no | Which capabilities a frame keeps, and whether a new context can still reach its opener. allow-scripts with allow-same-origin is the combination that defeats the sandbox. |
+| [Storage and worker lifecycle](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) | L10 reporting | A0 | A08 | `n/a reference` | no | What survives logout and reload. A service worker that outlives the session can serve authenticated responses to the next person on the device. |
 | [WSTG Client-side (16 tests)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/) | L10 reporting | A2 | A01 | `n/a reference` | no | The test list this domain implements |
 | [DOMPurify](https://github.com/cure53/DOMPurify) | L11 fix verification | A2 | A05 | `n/a reference` | no | The sanitiser most apps use, so it is also the bypass target |
 | [Trusted Types (WICG)](https://github.com/WICG/trusted-types) | L11 fix verification | A2 | A15 | `n/a reference` | no | The browser level defence that makes DOM XSS structurally hard |
@@ -99,6 +105,30 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an endpoint that reflects Origin`
 - oracle: `a response with a permissive ACAO for an attacker origin`
 - note: Test with an origin you control. Reflected does not mean exploitable without credentials.
+
+**Security header posture across response variants**  
+- preconditions: `a capture of every distinct response shape the app returns`
+- oracle: `nosniff, frame ancestors and referrer policy present on every variant including errors`, `at least one variant missing a header the others carry`
+
+**Frame sandbox and opener matrix**  
+- preconditions: `an iframe or popup surface exists`
+- oracle: `a framed page executing script with origin access it should not have`, `a child context navigating its opener`
+
+**Storage and worker lifecycle**  
+- preconditions: `the app registers a service worker or stores state client side`
+- oracle: `a cached authenticated response served after logout`, `a worker still controlling the origin after it was supposedly removed`
+
+**Post message surface and target origin**  
+- preconditions: `the app uses postMessage or receives messages from an embedder`
+- oracle: `a message accepted from an origin the receiver should reject`, `a message delivered to a frame that should not receive it`
+
+**Extension privilege and injection scope**  
+- preconditions: `a browser extension is in scope`
+- oracle: `a content script running on a page it did not intend, with source ownership`, `an extension resource fetched by a web page`, `a permission set covering every site when the extension needs one`
+
+**Render tree side channels**  
+- preconditions: `attacker controlled CSS or markup reaches the page`
+- oracle: `a request triggered by a selector matching a secret value`, `a load event correlated with a guessed character`
 
 ## Decision tree
 

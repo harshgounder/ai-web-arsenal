@@ -417,6 +417,175 @@
    "stage": "L06",
    "status": "ESTABLISHED",
    "note": "Test with an origin you control. Reflected does not mean exploitable without credentials."
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d08-header-posture",
+   "name": "Security header posture across response variants",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options",
+   "role": "Headers are set per response, and error pages, API routes and static assets often miss what the login page has. The test is the whole surface, not one page.",
+   "preconditions": [
+    "a capture of every distinct response shape the app returns"
+   ],
+   "oracle": [
+    "nosniff, frame ancestors and referrer policy present on every variant including errors",
+    "at least one variant missing a header the others carry"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d08-sandbox-matrix",
+   "name": "Frame sandbox and opener matrix",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe",
+   "role": "Which capabilities a frame keeps, and whether a new context can still reach its opener. allow-scripts with allow-same-origin is the combination that defeats the sandbox.",
+   "preconditions": [
+    "an iframe or popup surface exists"
+   ],
+   "oracle": [
+    "a framed page executing script with origin access it should not have",
+    "a child context navigating its opener"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d08-storage-lifecycle",
+   "name": "Storage and worker lifecycle",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API",
+   "role": "What survives logout and reload. A service worker that outlives the session can serve authenticated responses to the next person on the device.",
+   "preconditions": [
+    "the app registers a service worker or stores state client side"
+   ],
+   "oracle": [
+    "a cached authenticated response served after logout",
+    "a worker still controlling the origin after it was supposedly removed"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d08-messaging-surface",
+   "name": "Post message surface and target origin",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage",
+   "role": "Who can send, who validates, and whether the sender used a wildcard target that leaks to any embedder.",
+   "preconditions": [
+    "the app uses postMessage or receives messages from an embedder"
+   ],
+   "oracle": [
+    "a message accepted from an origin the receiver should reject",
+    "a message delivered to a frame that should not receive it"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d08-extension-scope",
+   "name": "Extension privilege and injection scope",
+   "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions",
+   "role": "Which pages an extension injects into, which of its files any page can load, and how wide its permissions are.",
+   "preconditions": [
+    "a browser extension is in scope"
+   ],
+   "oracle": [
+    "a content script running on a page it did not intend, with source ownership",
+    "an extension resource fetched by a web page",
+    "a permission set covering every site when the extension needs one"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d08-render-tree-exfil",
+   "name": "Render tree side channels",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors",
+   "role": "Whether injected style or resource loading can be used as an oracle for content the script cannot read.",
+   "preconditions": [
+    "attacker controlled CSS or markup reaches the page"
+   ],
+   "oracle": [
+    "a request triggered by a selector matching a secret value",
+    "a load event correlated with a guessed character"
+   ]
   }
  ],
  "tree": {

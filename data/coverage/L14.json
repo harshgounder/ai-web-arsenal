@@ -38,12 +38,12 @@
    "note": "Adversarial review is where a false positive rate would be argued."
   },
   "L14-005": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-prove"
+    "d24-repro-pack"
    ],
    "basis": "entry",
-   "note": "Reproducibility is required by the pack. A clean state procedure is not spelled out."
+   "note": "A second party reproducing from the package is the test."
   },
   "L14-010": {
    "level": "L1",
@@ -120,28 +120,36 @@
    "note": "A stated disproof criterion is the falsify first rule in practice."
   },
   "L14-006": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Timing resolution against measured jitter is unaddressed, which is why no side channel claim would be safe here."
+   "level": "L2",
+   "covered_by": [
+    "d24-oracle-stats"
+   ],
+   "basis": "entry",
+   "note": "Measured noise floor against the claimed effect is the resolution question."
   },
   "L14-007": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Statistical power for a timing claim is unaddressed."
+   "level": "L2",
+   "covered_by": [
+    "d24-oracle-stats"
+   ],
+   "basis": "entry",
+   "note": "Sample count and test stated, which is the power question."
   },
   "L14-045": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Side channel signal to noise is unaddressed."
+   "level": "L2",
+   "covered_by": [
+    "d24-oracle-stats"
+   ],
+   "basis": "entry",
+   "note": "Separation exceeding the floor is signal to noise."
   },
   "L14-053": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Oracle cost per bit is never measured."
+   "level": "L2",
+   "covered_by": [
+    "d24-oracle-stats"
+   ],
+   "basis": "entry",
+   "note": "Cost per bit falls out of the same measurement."
   },
   "L14-063": {
    "level": "L1",
@@ -150,6 +158,22 @@
    ],
    "basis": "entry",
    "note": "Validating the observer is what a critic would ask for, and it is not a procedure."
+  },
+  "L14-013": {
+   "level": "L2",
+   "covered_by": [
+    "d24-repro-pack"
+   ],
+   "basis": "entry",
+   "note": "Environment and versions inside the package is the factor."
+  },
+  "L14-048": {
+   "level": "L2",
+   "covered_by": [
+    "d24-repro-pack"
+   ],
+   "basis": "entry",
+   "note": "Independent replication is the whole point of the package."
   }
  }
 }

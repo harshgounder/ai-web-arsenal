@@ -564,6 +564,62 @@
     "a hold flag exists that suspends deletion, and it is honoured by the deletion job",
     "a deletion performed during a hold is detectable in the audit trail"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-oracle-stats",
+   "name": "Statistical discipline for an oracle",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance_API",
+   "role": "A timing claim needs a resolution, a sample size and an effect size larger than the measured noise. Without all three it is a coincidence with a graph.",
+   "preconditions": [
+    "the finding depends on a measured difference rather than a state change"
+   ],
+   "oracle": [
+    "the noise floor measured on known negatives, reported alongside the effect",
+    "sample count and the test stated, with the separation exceeding the floor"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-repro-pack",
+   "name": "Reproduction package",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers",
+   "role": "What a second party needs to reproduce a result without asking the finder anything. A finding that only its author can reproduce is a story.",
+   "preconditions": [
+    "a finding will be handed to someone else"
+   ],
+   "oracle": [
+    "a second party reaches the same observation from the package alone",
+    "the environment, versions, timestamp and capture are all inside it"
+   ]
   }
  ],
  "tree": {

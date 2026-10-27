@@ -25,7 +25,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-20 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+22 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -47,7 +47,9 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Legal hold overriding a deletion obligation](https://www.justice.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | When a preservation duty and an erasure duty conflict, and who decides. Systems usually implement only one of them. |
 | [NIST Privacy Framework profiles](https://www.nist.gov/privacy-framework) | L10 reporting | A0 | A08 | `n/a reference` | no | A vocabulary for mapping processing purposes to controls, useful when a client needs the gap expressed in a standard both sides accept. |
 | [Sanctions screening against a published list](https://sanctionssearch.ofac.treas.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether a customer or counterparty can be checked against a list before service is provided. |
+| [Statistical discipline for an oracle](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API) | L10 reporting | A0 | A08 | `n/a reference` | no | A timing claim needs a resolution, a sample size and an effect size larger than the measured noise. Without all three it is a coincidence with a graph. |
 | [PCI DSS scope reduction and CDE boundary](https://www.pcisecuritystandards.org/standards/pci-dss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether card data enters the environment at all. Scope is the whole compliance burden, so shrinking it is the control. |
+| [Reproduction package](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) | L10 reporting | A0 | A08 | `n/a reference` | no | What a second party needs to reproduce a result without asking the finder anything. A finding that only its author can reproduce is a story. |
 | [SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html) | L10 reporting | A0 | A08 | `n/a reference` | no | The interchange format, so findings land in the customer's tooling |
 | [WSTG Reporting](https://github.com/OWASP/wstg) | L10 reporting | A0 | A08 | `n/a reference` | no | The reporting section of the testing guide |
 
@@ -108,6 +110,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Legal hold overriding a deletion obligation**  
 - preconditions: `the organisation is subject to both a retention obligation and a deletion obligation`
 - oracle: `a hold flag exists that suspends deletion, and it is honoured by the deletion job`, `a deletion performed during a hold is detectable in the audit trail`
+
+**Statistical discipline for an oracle**  
+- preconditions: `the finding depends on a measured difference rather than a state change`
+- oracle: `the noise floor measured on known negatives, reported alongside the effect`, `sample count and the test stated, with the separation exceeding the floor`
+
+**Reproduction package**  
+- preconditions: `a finding will be handed to someone else`
+- oracle: `a second party reaches the same observation from the package alone`, `the environment, versions, timestamp and capture are all inside it`
 
 ## Decision tree
 
