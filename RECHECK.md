@@ -184,6 +184,38 @@ public record is the only source of evidence about the past.
 
 ---
 
+## 6d. Phase 2 status (the A to D join)
+
+Started 2026-10-27. Two lenses mapped of sixteen, which is enough to know what the answer looks like.
+
+| lens | factors | mapped | covered at L2+ |
+|---|---|---|---|
+| L01 substrate | 62 | 62 | **0** |
+| L02 transport | 62 | 62 | 13 |
+
+**The headline number: 13 of 1,000 factors, so 1.3 percent.** That is the first honest coverage figure
+this project has ever had, and it covers only two lenses. Even in the lens the repo covers best,
+transport, coverage is 21 percent, and it comes almost entirely from smuggler, h2c and the cache
+scanner. Substrate is zero: no entry in either repo states a procedure and an oracle for a single one of
+its 62 factors.
+
+How coverage is graded, because a mention is not coverage:
+
+```
+L0 absent     nothing addresses it
+L1 named      a tool or entry mentions the concept, no procedure and no oracle
+L2 procedure  a procedure and an oracle, so a competent reader could test it
+L3 observed   a lab here demonstrates it
+```
+
+Only L2 and L3 count. L1 is recorded because knowing a concept is named but not operationalised is
+useful, and it is not counted.
+
+Every record names the artefact it relies on, and the validator rejects any id that does not exist. It
+rejected three of mine while this was being built, which is the mechanism working.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.
@@ -224,7 +256,7 @@ the parse stage.
 
 ---
 
-## 8. The nineteen defects found in this project's own work
+## 8. The twenty-one defects found in this project's own work
 
 Every one was silent and plausible. None caught by reading. Do not reintroduce these.
 
@@ -249,6 +281,8 @@ Every one was silent and plausible. None caught by reading. Do not reintroduce t
 | 17 | the REA backlog was stated as 12 operations; D31 names 10 | count the file, not the memory |
 | 18 | `data/domain-link-check.json` was written by hand and had no generator, so the link health claim could not be rebuilt | an artefact with no producer is a memory |
 | 19 | seven entries stored a relative path in their `url` field, which the link checker cannot reach | a pointer is not a link |
+| 20 | D11 was titled "REST, GraphQL, gRPC, WebSocket, SSE" while holding no WebSocket or SSE entry | a domain title is a claim about coverage |
+| 21 | three artefact ids were invented while authoring the coverage ledger, and the validator caught them | cite an id, then check it exists |
 
 **The standing rule that came out of these: if a number cannot be regenerated from disk, it is not a
 number, it is a memory.**

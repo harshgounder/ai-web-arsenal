@@ -192,6 +192,14 @@ claims:
     statement: "every denominator factor has a definition and an observable, so none is a label"
     check: "all(f.get('def') and f.get('observable') for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json')) for f in json.loads(p.read_text(encoding='utf-8')).get('factors', []))"
 
+  - id: C102
+    statement: "the coverage ledger has 124 records and 13 of them reach L2"
+    check: "(lambda rs: len(rs) == 124 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 13)(rows('data/coverage/coverage.jsonl'))"
+
+  - id: C103
+    statement: "no coverage record claims a level without naming an artefact that exists"
+    check: "all((r['level'] not in ('L2', 'L3')) or r.get('covered_by') for r in rows('data/coverage/coverage.jsonl'))"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "nothing in the atlas is marked OBSERVED, because nothing has been run here"

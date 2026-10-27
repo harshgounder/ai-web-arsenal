@@ -1,0 +1,26 @@
+{
+ "lens": "L01",
+ "name": "substrate",
+ "default": "L0",
+ "reason": "Nothing in either repo operationalises a substrate factor. The corpus lists tools that touch memory and timing indirectly, but no entry states a procedure plus an oracle for any of these 62. This is the largest single gap in the project and it is stated rather than hidden.",
+ "exceptions": {
+  "L01-010": {
+   "level": "L1",
+   "covered_by": ["d31-wasm"],
+   "basis": "entry",
+   "note": "inspect_wasm_artifact validates a module and reports sections, imports and exports. That examines module structure, not how the engine compiles it, so it is a name in the area and not a procedure for the factor."
+  },
+  "L01-044": {
+   "level": "L1",
+   "covered_by": ["d16-jwt-tool"],
+   "basis": "entry",
+   "note": "jwt_tool tests signature and claim handling, which includes whether a token can be forged without the key. That touches entropy failure as a symptom, not the source of entropy itself."
+  },
+  "L01-062": {
+   "level": "L1",
+   "covered_by": ["d25-crs"],
+   "basis": "entry",
+   "note": "The core rule set is the artefact that a mitigation completeness question would be tested against. It names the area and gives no procedure for finding a bypass of a mitigated path."
+  }
+ }
+}

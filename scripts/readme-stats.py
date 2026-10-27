@@ -56,6 +56,10 @@ try:
             _fac += _n
     print(f"denominator_factors {_fac}")
     print(f"denominator_lenses {_lens}")
+    _cov = [json.loads(l) for l in open(R/"data"/"coverage"/"coverage.jsonl") if l.strip()] if (R/"data"/"coverage"/"coverage.jsonl").exists() else []
+    print(f"coverage_mapped {len(_cov)}")
+    print(f"coverage_l2 {sum(1 for r in _cov if r['level'] in ('L2','L3'))}")
+    print(f"coverage_l3 {sum(1 for r in _cov if r['level'] == 'L3')}")
 except Exception:
     print("denominator_factors ?")
 print(f"domains_with_data {doms}")

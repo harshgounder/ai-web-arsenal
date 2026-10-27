@@ -1,6 +1,6 @@
 {
  "id": "D11",
- "title": "API protocols: REST, GraphQL, gRPC, WebSocket, SSE",
+ "title": "API protocols: REST, GraphQL, gRPC",
  "version": "0.1",
  "generated": "2026-10-26",
  "status": "TEMPLATE SLICE. This domain is the reference format for the other 36.",
@@ -1519,6 +1519,11 @@
    "gap": "L10 impact framing and L11 retest cells are empty in this domain",
    "class": "coverage",
    "build_candidate": "impact template per API class plus a retest harness"
+  },
+  {
+   "gap": "No WebSocket or server-sent event testing in this domain",
+   "class": "no-tool",
+   "build_candidate": "hand crafted frames with a raw socket client, plus an SSE client that forges Last-Event-ID and compares resumption across hops"
   }
  ],
  "unreviewed_index": {
