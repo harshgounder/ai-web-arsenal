@@ -896,7 +896,10 @@
   {
    "gap": "No WeChat or Alipay mini program unpacking",
    "class": "no-tool",
-   "build_candidate": "wxapkg parser with entry mapping, China only lane and currently the only way into that surface"
+   "build_candidate": "wxapkg parser with entry mapping, China only lane and currently the only way into that surface",
+   "status": "built",
+   "built_at": "rea-ops/wxapkg.py",
+   "built_note": "parses a documented wxapkg shape with traversal refusal, 8 fixture checks; not yet validated against a real package"
   },
   {
    "gap": "No Flutter AOT recovery (blutter class)",
@@ -916,7 +919,10 @@
   {
    "gap": "No WARC archive reader",
    "class": "no-tool",
-   "build_candidate": "WARC record walker emitting the same shape as a HAR"
+   "build_candidate": "WARC record walker emitting the same shape as a HAR",
+   "status": "built",
+   "built_at": "rea-ops/warc.py",
+   "built_note": "reads WARC 1.0 response records, plain or gzip, emits HAR-shaped JSON, 7 fixture checks"
   },
   {
    "gap": "No service worker and CacheStorage reconstruction",

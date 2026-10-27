@@ -42,6 +42,7 @@ fi
 run_gate "doc numbers match disk"   python3 scripts/recheck.py
 run_gate "prose claims hold"        python3 scripts/check-claims.py
 run_gate "regression tests"         python3 scripts/test-regressions.py
+run_gate "rea operations"           python3 rea-ops/test-ops.py
 run_gate "domain invariants"        python3 scripts/validate-domains.py
 
 if [ -d ../web-attack-atlas ]; then

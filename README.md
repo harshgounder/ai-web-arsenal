@@ -559,6 +559,33 @@ is broken.
 
 ---
 
+## The range
+
+Four labs, each a target this repo generates and attacks, each producing one observation. They exist
+because `ESTABLISHED` means cited and nothing here could claim `OBSERVED` until something ran.
+
+```bash
+python3 scripts/observe.py            # runs every lab, records the verdicts
+python3 scripts/observe.py --verify   # replays them, fails if a verdict changed
+```
+
+A lab is a `target.py` and a `probe.py`. The target is deliberately vulnerable in one specific way. The
+probe runs the attack and at least one negative control, and it returns `INCONCLUSIVE` rather than
+`OBSERVED` if any control is dirty. That last part matters: a lab whose control also shows the bug is
+measuring its own harness.
+
+| lab | the bug | why the control makes it evidence |
+|---|---|---|
+| `lab-01-race` | uniqueness checked in code, then inserted | sequential creates produce exactly one record |
+| `lab-02-jwt-alg` | the verifier dispatches on the token's declared algorithm | wrong signature rejected 401, user token refused 403 |
+| `lab-03-route-order` | the guard reads the raw path, the router decodes it | plain path 401, encoded public path behaves like its plain form |
+| `lab-04-cache-poison` | a cache keyed on path alone, in front of a header reflection | reflection is header dependent, `no-store` is honoured |
+
+`rea-ops/` is the other half of the same idea for extraction: code that reads an artefact the repo could
+not previously read, with a fixture and a test, or it does not go in.
+
+---
+
 ## The gate
 
 A phase is done when the gate exits 0, not when the prose says so.
@@ -655,6 +682,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | atlas patterns | 150, gate passing, 135 ESTABLISHED and 15 PROBABLE |
 | claims checked | 45 |
 | regression tests | 30 across 21 known defect classes |
+| REA operations built | 2 of 10 named gaps, each with fixtures |
 | generated files, rebuild | 190, byte identical |
 
 ---
@@ -725,6 +753,8 @@ ai-web-arsenal/
 ├── prompts/                   5 phase packs with failure modes
 ├── mcps/                      working MCP configs
 ├── skills/web-arsenal/        the order of operations as a loadable skill
+├── rea-ops/                   built extraction operations, each with a fixture and a test
+├── range/                     4 labs that produced the only observed records here
 ├── docs/                      coverage, link health, orchestration, the ceiling report
 └── scripts/                   23 pipeline, gate and check scripts
 ```
