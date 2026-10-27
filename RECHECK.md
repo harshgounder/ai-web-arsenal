@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 64 | 303 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 66 | 315 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 303 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 315 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -106,7 +106,7 @@ taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
 domains         29 authored + 9 explicit pointers + 0 empty
-enriched        491 entries, all with atom and driver; 382 with preconditions, 393 with oracle,
+enriched        503 entries, all with atom and driver; 394 with preconditions, 405 with oracle,
                 175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
@@ -319,8 +319,10 @@ not are ISO 27001 and the W3C WebAuthn page refusing automated clients.
 | L14 evidence science | 6 of 64 | **13 of 64 (20%)** |
 | L01 substrate | 0 of 62 | **19 of 62 (31%)** |
 | L12 AI and agentic | 5 of 62 | **15 of 62 (24%)** |
+| L07 data and storage | 8 of 62 | **22 of 62 (35%)** |
+| L13 regulation | 26 of 64 | **40 of 64 (63%)** |
 | L04 frameworks | 15 of 62 | **21 of 62 (34%)** |
-| whole denominator | 108 of 1,000 (10.8%) | **219 of 1,000 (21.9%)** |
+| whole denominator | 108 of 1,000 (10.8%) | **247 of 1,000 (24.7%)** |
 
 What the entries do that a policy document does not: each states what to look at and what result settles
 it. `d24-gdpr-breach` asks for the awareness timestamp and the article 33(5) register entry, not a promise

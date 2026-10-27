@@ -620,6 +620,174 @@
     "a second party reaches the same observation from the package alone",
     "the environment, versions, timestamp and capture are all inside it"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-ico-breach",
+   "name": "ICO breach reporting path",
+   "url": "https://ico.org.uk/for-organisations/report-a-breach/",
+   "role": "The regulator's own reporting route, which is what makes the deadline concrete. Reading the form is how you learn what a report has to contain before an incident.",
+   "preconditions": [
+    "the organisation is subject to UK GDPR"
+   ],
+   "oracle": [
+    "the required fields listed and mapped to what the incident runbook collects",
+    "a dry run report completed without needing information nobody would have at hour one"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-nist-csf",
+   "name": "NIST Cybersecurity Framework profile",
+   "url": "https://www.nist.gov/cyberframework",
+   "role": "A shared vocabulary for expressing a gap when the client needs a framework both sides accept, and a way to show that a control exists but is not measured.",
+   "preconditions": [
+    "the client requires a recognised framework"
+   ],
+   "oracle": [
+    "a current profile naming the functions in scope",
+    "every control in the profile marked as present, measured or absent, with no blank cells"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-ccips",
+   "name": "DOJ computer crime and IP section guidance",
+   "url": "https://www.justice.gov/criminal/criminal-ccips",
+   "role": "The prosecution side's own material on unauthorised access, which is the practical boundary a test has to stay inside.",
+   "preconditions": [
+    "a test will touch a system the tester does not own"
+   ],
+   "oracle": [
+    "the scope document mapped against the guidance's own categories",
+    "any action that would read as exceeding authorisation, identified before the test"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-epdp-guidance",
+   "name": "EDPB guidelines on automated decision making",
+   "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en",
+   "role": "What counts as a solely automated decision with legal effect, which decides whether an explanation duty exists at all.",
+   "preconditions": [
+    "the system makes or informs decisions about people"
+   ],
+   "oracle": [
+    "each decision point classified as automated or human, with the evidence for the human step",
+    "a rationale recorded for every decision that affects a person's access or price"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-spdx-licence",
+   "name": "Licence identification for distributed artefacts",
+   "url": "https://spdx.org/licenses/",
+   "role": "Whether shipping a binary triggers a source disclosure or attribution duty. A distributed artefact carries obligations the development tree does not.",
+   "preconditions": [
+    "the organisation distributes software containing third party code"
+   ],
+   "oracle": [
+    "every dependency's licence identified against an SPDX identifier",
+    "the obligations of each licence mapped to what the distribution actually does"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-wipo-domains",
+   "name": "Domain name dispute remedy",
+   "url": "https://www.wipo.int/amc/en/domains/",
+   "role": "What can actually be done about a lookalike domain, and how fast. A brand control that assumes takedown speed is a control with no timeline.",
+   "preconditions": [
+    "a lookalike domain or impersonating site exists"
+   ],
+   "oracle": [
+    "the remedy route identified, with its typical timeline from published decisions",
+    "the evidence a complaint needs, collected before the domain is used against customers"
+   ]
   }
  ],
  "tree": {

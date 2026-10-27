@@ -25,7 +25,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-22 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+28 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -33,24 +33,30 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [NIST SP 800-115](https://csrc.nist.gov/pubs/sp/800/115/final) | L01 scope | A0 | A08 | `n/a reference` | no | The methodology standard, useful when a client asks what process you follow |
 | [This repo: prompts/05-critic.md](https://github.com/) | L08 proof | A5 | A08 | `local` | no | The adversarial review pack, the reason findings survive human review |
 | [This repo: prompts/04-prove-it.md](https://github.com/) | L08 proof | A5 | A08 | `local` | no | The proving procedure: falsify first, control second, verdict last |
+| [DOJ computer crime and IP section guidance](https://www.justice.gov/criminal/criminal-ccips) | L10 reporting | A0 | A08 | `n/a reference` | no | The prosecution side's own material on unauthorised access, which is the practical boundary a test has to stay inside. |
 | [Coordinated vulnerability disclosure process](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) | L10 reporting | A0 | A08 | `n/a reference` | no | The reporting side of the relationship, which is also the side that decides whether a researcher is a threat or a channel. |
 | [CVE Program](https://www.cve.org/) | L10 reporting | A0 | A08 | `n/a reference` | no | Identifier of record when the finding is a known product issue |
 | [CVSS](https://www.first.org/cvss/) | L10 reporting | A0 | A08 | `n/a reference` | no | The severity score everyone argues about. Use the vector, not just the number |
 | [CWE](https://cwe.mitre.org/) | L10 reporting | A0 | A08 | `n/a reference` | no | The weakness taxonomy to map a finding onto |
 | [DOJ computer fraud charging guidance](https://www.justice.gov/jm/jm-9-48000-computer-fraud) | L10 reporting | A0 | A08 | `n/a reference` | no | How the prosecution side reads unauthorised access, which is the practical boundary for what a test may do. |
+| [EDPB guidelines on automated decision making](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en) | L10 reporting | A0 | A08 | `n/a reference` | no | What counts as a solely automated decision with legal effect, which decides whether an explanation duty exists at all. |
 | [EPSS](https://www.first.org/epss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Exploit prediction, the number that actually orders a queue |
 | [Export control on cryptographic capability](https://www.bis.doc.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether distributing a tool with strong cryptography carries an obligation in the jurisdiction it ships to. |
 | [GDPR Article 33 breach notification clock](https://eur-lex.europa.eu/eli/reg/2016/679/oj) | L10 reporting | A0 | A08 | `n/a reference` | no | The 72 hour clock and what starts it, which decides whether an incident is a reportable breach or a note in a ticket. |
 | [GDPR Article 15 and 17 request handling](https://gdpr-info.eu/art-17-gdpr/) | L10 reporting | A0 | A08 | `n/a reference` | no | Access and erasure, tested against what the system can actually produce and delete rather than what the policy says. |
+| [ICO breach reporting path](https://ico.org.uk/for-organisations/report-a-breach/) | L10 reporting | A0 | A08 | `n/a reference` | no | The regulator's own reporting route, which is what makes the deadline concrete. Reading the form is how you learn what a report has to contain before an incident. |
 | [ISO 27001 certification scope statement](https://www.iso.org/standard/27001) | L10 reporting | A0 | A08 | `n/a reference` | no | A certificate is only meaningful against its scope. Reading the scope is the first step of relying on one. |
 | [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | L10 reporting | A0 | A08 | `n/a reference` | no | Exploited in the wild. The only list that means immediate |
 | [Legal hold overriding a deletion obligation](https://www.justice.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | When a preservation duty and an erasure duty conflict, and who decides. Systems usually implement only one of them. |
+| [NIST Cybersecurity Framework profile](https://www.nist.gov/cyberframework) | L10 reporting | A0 | A08 | `n/a reference` | no | A shared vocabulary for expressing a gap when the client needs a framework both sides accept, and a way to show that a control exists but is not measured. |
 | [NIST Privacy Framework profiles](https://www.nist.gov/privacy-framework) | L10 reporting | A0 | A08 | `n/a reference` | no | A vocabulary for mapping processing purposes to controls, useful when a client needs the gap expressed in a standard both sides accept. |
 | [Sanctions screening against a published list](https://sanctionssearch.ofac.treas.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether a customer or counterparty can be checked against a list before service is provided. |
 | [Statistical discipline for an oracle](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API) | L10 reporting | A0 | A08 | `n/a reference` | no | A timing claim needs a resolution, a sample size and an effect size larger than the measured noise. Without all three it is a coincidence with a graph. |
 | [PCI DSS scope reduction and CDE boundary](https://www.pcisecuritystandards.org/standards/pci-dss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether card data enters the environment at all. Scope is the whole compliance burden, so shrinking it is the control. |
 | [Reproduction package](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) | L10 reporting | A0 | A08 | `n/a reference` | no | What a second party needs to reproduce a result without asking the finder anything. A finding that only its author can reproduce is a story. |
 | [SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html) | L10 reporting | A0 | A08 | `n/a reference` | no | The interchange format, so findings land in the customer's tooling |
+| [Licence identification for distributed artefacts](https://spdx.org/licenses/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether shipping a binary triggers a source disclosure or attribution duty. A distributed artefact carries obligations the development tree does not. |
+| [Domain name dispute remedy](https://www.wipo.int/amc/en/domains/) | L10 reporting | A0 | A08 | `n/a reference` | no | What can actually be done about a lookalike domain, and how fast. A brand control that assumes takedown speed is a control with no timeline. |
 | [WSTG Reporting](https://github.com/OWASP/wstg) | L10 reporting | A0 | A08 | `n/a reference` | no | The reporting section of the testing guide |
 
 ### Details that matter
@@ -118,6 +124,30 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Reproduction package**  
 - preconditions: `a finding will be handed to someone else`
 - oracle: `a second party reaches the same observation from the package alone`, `the environment, versions, timestamp and capture are all inside it`
+
+**ICO breach reporting path**  
+- preconditions: `the organisation is subject to UK GDPR`
+- oracle: `the required fields listed and mapped to what the incident runbook collects`, `a dry run report completed without needing information nobody would have at hour one`
+
+**NIST Cybersecurity Framework profile**  
+- preconditions: `the client requires a recognised framework`
+- oracle: `a current profile naming the functions in scope`, `every control in the profile marked as present, measured or absent, with no blank cells`
+
+**DOJ computer crime and IP section guidance**  
+- preconditions: `a test will touch a system the tester does not own`
+- oracle: `the scope document mapped against the guidance's own categories`, `any action that would read as exceeding authorisation, identified before the test`
+
+**EDPB guidelines on automated decision making**  
+- preconditions: `the system makes or informs decisions about people`
+- oracle: `each decision point classified as automated or human, with the evidence for the human step`, `a rationale recorded for every decision that affects a person's access or price`
+
+**Licence identification for distributed artefacts**  
+- preconditions: `the organisation distributes software containing third party code`
+- oracle: `every dependency's licence identified against an SPDX identifier`, `the obligations of each licence mapped to what the distribution actually does`
+
+**Domain name dispute remedy**  
+- preconditions: `a lookalike domain or impersonating site exists`
+- oracle: `the remedy route identified, with its typical timeline from published decisions`, `the evidence a complaint needs, collected before the domain is used against customers`
 
 ## Decision tree
 

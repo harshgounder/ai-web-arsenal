@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-25 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+31 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -40,18 +40,24 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A0 | A01,A05 | `n/a reference` | no | Per class technique reference with payload context |
 | [Binding and middleware order audit](https://owasp.org/www-project-web-security-testing-guide/) | L06 probing | A2 | A08 | `n/a reference` | no | Which fields the framework writes from a request, and in what order the stack runs. Mass assignment and a guard that runs after the handler are both framework behaviour, not application code. |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
+| [Database principal privilege audit](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | What the application's database user can do beyond reading its own tables. File read, schema creation and cross database access turn an injection into a host problem. |
 | [dtd-finder](https://github.com/GoSecure/dtd-finder) | L06 probing | A2 | A01,A06 | `git` | no | Finds DTD files reachable on the target, which turns blind XXE into file read |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A01 | `docker` | no | Classic injection modules |
 | [ffuf](https://github.com/ffuf/ffuf) | L06 probing | A2 | A01 | `aur:ffuf` | yes | Fuzz the injection position to find a working context |
+| [Transaction isolation and referential integrity](https://www.postgresql.org/docs/current/transaction-iso.html) | L06 probing | A2 | A08 | `n/a reference` | no | Which anomalies the store permits, and whether integrity is enforced or assumed. A read committed store allows lost updates unless the code versions rows. |
+| [Migration and schema evolution safety](https://www.postgresql.org/docs/current/sql-altertable.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a rollback discards data written since the migration, and whether an old client can write a shape the new schema mishandles. |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A01,A15 | `aur:nuclei-bin` | yes | Known CVE and misconfiguration injection templates |
 | [Redirect and link helper target handling](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether URL helpers accept absolute targets. A helper that takes a user supplied next value is an open redirect with a friendly name. |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `git:https://github.com/swisskyrepo/PayloadsAllTheThings` | no | The payload corpus, organised by class and context |
 | [PortSwigger Web Security Academy labs](https://portswigger.net/web-security/all-labs) | L06 probing | A2 | A01 | `n/a web` | no | The best free lab set per class, each with an intended answer |
+| [Queue producer trust and replay](https://kafka.apache.org/documentation/#security) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a consumer validates what it consumes, and whether a replayed message produces a second effect. A consumer that trusts its producer trusts anyone who can publish. |
 | [Raw query escape hatch reachability](https://owasp.org/www-project-web-security-testing-guide/) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a raw fragment can be reached from user input, and how much of it is interpolated. The parameterised path being safe says nothing about the escape hatch beside it. |
 | [rea inspect_web_event_listeners](https://rea.tools) | L06 probing | A3 | A01,A08 | `mcp:rea` | yes | Read the actual DOM handlers before guessing which sink a payload reaches |
+| [Search index contents and authorisation](https://opensearch.org/docs/latest/security/) | L06 probing | A2 | A08 | `n/a reference` | no | What the index stores, who can read it, and whether per document permissions are applied by the search layer. An index holding full documents duplicates the data outside its protections. |
 | [OWASP WebGoat](https://github.com/WebGoat/WebGoat) | L06 probing | A2 | A01,A04 | `docker` | no | Structured lessons including blind and second order |
 | [xsser](https://github.com/epsylon/xsser) | L06 probing | A2 | A01,A05 | `git` | no | XSS scanner with a large context and encoding matrix |
 | [XSStrike](https://github.com/s0md3v/XSStrike) | L06 probing | A2 | A01,A05 | `aur:xsstrike` | no | XSS scanner with context aware payload generation and a fuzzer |
+| [Encryption at rest and key separability](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final) | L06 probing | A2 | A08 | `n/a reference` | no | Where the key lives, who can use it, and whether it is separable from the data. Encryption at rest with the key beside the ciphertext is encoding. |
 | [commix](https://github.com/commixproject/commix) | L07 exploitation | A2 | A01 | `aur:commix` | no | OS command injection, the counterpart for the shell sink |
 | [Ghauri](https://github.com/r0oth3x49/ghauri) | L07 exploitation | A2 | A01 | `pipx:ghauri` | no | SQL injection with a modern engine and fewer false positives than the classic tools |
 | [NoSQLMap](https://github.com/codingo/NoSQLMap) | L07 exploitation | A2 | A01,A05 | `git:https://github.com/codingo/NoSQLMap` | no | NoSQL injection including operator injection through JSON bodies |
@@ -194,6 +200,30 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Redirect and link helper target handling**  
 - preconditions: `the application generates redirects or absolute links`
 - oracle: `a redirect to a host the application does not own, from a helper call`, `an absolute target accepted where only a path was expected`
+
+**Database principal privilege audit**  
+- preconditions: `a connection as the application user`, `the ability to query the grant tables or attempt a refused action`
+- oracle: `a capability beyond data manipulation succeeding, such as reading a file or creating a schema`, `the granted privilege list, compared against what the application actually calls`
+
+**Transaction isolation and referential integrity**  
+- preconditions: `two concurrent sessions on the same data`
+- oracle: `an anomaly consistent with a weaker isolation level than documented`, `an orphan row created, which proves the foreign key is not enforced`
+
+**Queue producer trust and replay**  
+- preconditions: `the application consumes from a queue`
+- oracle: `a consumer acting on a message no producer would send`, `two effects from one message replayed`, `a dead letter payload readable and containing a credential`
+
+**Migration and schema evolution safety**  
+- preconditions: `the application has versioned migrations`, `an older client can still write`
+- oracle: `data loss after a rollback, measured by row count before and after`, `a write accepted by the old client that breaks the new reader`
+
+**Search index contents and authorisation**  
+- preconditions: `a search backend is in the read path`
+- oracle: `a full record recoverable from the index rather than the primary store`, `a document in results the caller cannot open directly`
+
+**Encryption at rest and key separability**  
+- preconditions: `data is stored with an at-rest encryption claim`
+- oracle: `plaintext recoverable through a data path rather than a key management path`, `an encrypted field recoverable from a search index or a log`, `a record present in a region it was not intended for`
 
 ## Decision tree
 

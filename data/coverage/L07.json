@@ -118,12 +118,12 @@
    "note": "Cache keying is tested at the edge. Tenant separation in an application cache is not."
   },
   "L07-041": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d17-scoutsuite"
+    "d37-data-at-rest"
    ],
    "basis": "entry",
-   "note": "Audit reports storage encryption state. Whether the key is separable from the data is not tested."
+   "note": "Plaintext through a data path rather than a key management path."
   },
   "L07-045": {
    "level": "L1",
@@ -158,12 +158,12 @@
    "note": "Inventory before extract bounds the size. Expansion ratio limits are not tested."
   },
   "L07-056": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d15-fq"
+    "d07-queue-trust"
    ],
    "basis": "entry",
-   "note": "Inspecting a serialised blob before deserialising is the only safe procedure here, and it is named."
+   "note": "A cached object graph instantiated from a value is the permissive parser case in the same trust family."
   },
   "L07-060": {
    "level": "L1",
@@ -172,6 +172,102 @@
    ],
    "basis": "entry",
    "note": "Service detection reports the database version exposed on a port. Behaviour per version is untested."
+  },
+  "L07-028": {
+   "level": "L2",
+   "covered_by": [
+    "d07-isolation-audit"
+   ],
+   "basis": "entry",
+   "note": "An anomaly consistent with a weaker isolation level than documented is the factor."
+  },
+  "L07-031": {
+   "level": "L2",
+   "covered_by": [
+    "d07-isolation-audit"
+   ],
+   "basis": "entry",
+   "note": "An orphan row proves the foreign key is not enforced."
+  },
+  "L07-035": {
+   "level": "L2",
+   "covered_by": [
+    "d07-queue-trust"
+   ],
+   "basis": "entry",
+   "note": "A consumer acting on a message no producer would send is the trust question."
+  },
+  "L07-037": {
+   "level": "L2",
+   "covered_by": [
+    "d07-queue-trust"
+   ],
+   "basis": "entry",
+   "note": "A readable dead letter payload is the exposure test."
+  },
+  "L07-039": {
+   "level": "L2",
+   "covered_by": [
+    "d07-migration-safety"
+   ],
+   "basis": "entry",
+   "note": "Data loss after a rollback, measured by row count before and after."
+  },
+  "L07-040": {
+   "level": "L2",
+   "covered_by": [
+    "d07-migration-safety"
+   ],
+   "basis": "entry",
+   "note": "A write the old client is allowed that breaks the new reader."
+  },
+  "L07-042": {
+   "level": "L2",
+   "covered_by": [
+    "d37-data-at-rest"
+   ],
+   "basis": "entry",
+   "note": "An encrypted field recoverable from an index is the coverage failure."
+  },
+  "L07-048": {
+   "level": "L2",
+   "covered_by": [
+    "d07-db-privilege"
+   ],
+   "basis": "entry",
+   "note": "A capability beyond data manipulation succeeding is the privilege test."
+  },
+  "L07-049": {
+   "level": "L2",
+   "covered_by": [
+    "d07-db-privilege"
+   ],
+   "basis": "entry",
+   "note": "A privileged routine callable from the application connection is the same surface."
+  },
+  "L07-057": {
+   "level": "L2",
+   "covered_by": [
+    "d37-data-at-rest"
+   ],
+   "basis": "entry",
+   "note": "A record present in a region it was not intended for is the replication test."
+  },
+  "L07-061": {
+   "level": "L2",
+   "covered_by": [
+    "d07-search-index"
+   ],
+   "basis": "entry",
+   "note": "A full record recoverable from the index is the contents question."
+  },
+  "L07-062": {
+   "level": "L2",
+   "covered_by": [
+    "d07-queue-trust"
+   ],
+   "basis": "entry",
+   "note": "A record with no traceable source is the lineage failure a poisoned import leaves."
   }
  }
 }

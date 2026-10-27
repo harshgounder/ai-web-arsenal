@@ -5,12 +5,12 @@
  "reason": "Regulation factors with no artefact beyond the published instruments. Ten entries in D24 now operationalise the parts a system owner can actually check; the rest of the lens is still text with no procedure, and the Class III organisational facts stay unavailable.",
  "exceptions": {
   "L13-025": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d17-cis"
+    "d24-nist-csf"
    ],
    "basis": "entry",
-   "note": "A hardening baseline is one reading of a standard. Divergence between auditors is not tested."
+   "note": "Two frameworks read against one control set is the interpretation divergence question."
   },
   "L13-001": {
    "level": "L2",
@@ -219,6 +219,110 @@
    ],
    "basis": "entry",
    "note": "Bounty terms, read for a testing licence and a promise not to sue."
+  },
+  "L13-006": {
+   "level": "L2",
+   "covered_by": [
+    "d24-ccips"
+   ],
+   "basis": "entry",
+   "note": "The guidance's own categories mapped against the scope is the practical good faith test."
+  },
+  "L13-010": {
+   "level": "L2",
+   "covered_by": [
+    "d24-epdp-guidance"
+   ],
+   "basis": "entry",
+   "note": "Transfer restriction as a data governance question, checked against the processing map."
+  },
+  "L13-022": {
+   "level": "L2",
+   "covered_by": [
+    "d24-epdp-guidance"
+   ],
+   "basis": "entry",
+   "note": "Age basis and children's data constraints under the same decision framework."
+  },
+  "L13-023": {
+   "level": "L2",
+   "covered_by": [
+    "d24-ico-breach"
+   ],
+   "basis": "entry",
+   "note": "Record keeping obligations are what a regulator's own form asks for."
+  },
+  "L13-041": {
+   "level": "L2",
+   "covered_by": [
+    "d24-epdp-guidance"
+   ],
+   "basis": "entry",
+   "note": "Each decision point classified as automated or human is the restriction test."
+  },
+  "L13-042": {
+   "level": "L2",
+   "covered_by": [
+    "d24-epdp-guidance"
+   ],
+   "basis": "entry",
+   "note": "Profiling disclosure follows from the same classification."
+  },
+  "L13-048": {
+   "level": "L2",
+   "covered_by": [
+    "d24-wipo-domains"
+   ],
+   "basis": "entry",
+   "note": "The remedy route and timeline is what makes a terms prohibition actionable."
+  },
+  "L13-052": {
+   "level": "L2",
+   "covered_by": [
+    "d24-epdp-guidance"
+   ],
+   "basis": "entry",
+   "note": "Which regime applies by data subject location is the guidance's own scope question."
+  },
+  "L13-054": {
+   "level": "L2",
+   "covered_by": [
+    "d24-ico-breach"
+   ],
+   "basis": "entry",
+   "note": "A sector regulator's route and deadline, read from its own reporting page."
+  },
+  "L13-058": {
+   "level": "L2",
+   "covered_by": [
+    "d24-spdx-licence"
+   ],
+   "basis": "entry",
+   "note": "Licence obligations mapped to what distribution does is the disclosure duty."
+  },
+  "L13-059": {
+   "level": "L2",
+   "covered_by": [
+    "d24-wipo-domains"
+   ],
+   "basis": "entry",
+   "note": "The complaint evidence and timeline is the trademark remedy."
+  },
+  "L13-063": {
+   "level": "L2",
+   "covered_by": [
+    "d24-nist-csf"
+   ],
+   "basis": "entry",
+   "note": "A public profile is itself documentation that reveals which controls exist."
+  },
+  "L13-064": {
+   "level": "L2",
+   "covered_by": [
+    "d24-ccips"
+   ],
+   "basis": "entry",
+   "note": "Reading current enforcement material is how direction change is detected."
   }
  }
 }

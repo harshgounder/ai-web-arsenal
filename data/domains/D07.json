@@ -829,6 +829,178 @@
     "a redirect to a host the application does not own, from a helper call",
     "an absolute target accepted where only a path was expected"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-db-privilege",
+   "name": "Database principal privilege audit",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+   "role": "What the application's database user can do beyond reading its own tables. File read, schema creation and cross database access turn an injection into a host problem.",
+   "preconditions": [
+    "a connection as the application user",
+    "the ability to query the grant tables or attempt a refused action"
+   ],
+   "oracle": [
+    "a capability beyond data manipulation succeeding, such as reading a file or creating a schema",
+    "the granted privilege list, compared against what the application actually calls"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-isolation-audit",
+   "name": "Transaction isolation and referential integrity",
+   "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+   "role": "Which anomalies the store permits, and whether integrity is enforced or assumed. A read committed store allows lost updates unless the code versions rows.",
+   "preconditions": [
+    "two concurrent sessions on the same data"
+   ],
+   "oracle": [
+    "an anomaly consistent with a weaker isolation level than documented",
+    "an orphan row created, which proves the foreign key is not enforced"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-queue-trust",
+   "name": "Queue producer trust and replay",
+   "url": "https://kafka.apache.org/documentation/#security",
+   "role": "Whether a consumer validates what it consumes, and whether a replayed message produces a second effect. A consumer that trusts its producer trusts anyone who can publish.",
+   "preconditions": [
+    "the application consumes from a queue"
+   ],
+   "oracle": [
+    "a consumer acting on a message no producer would send",
+    "two effects from one message replayed",
+    "a dead letter payload readable and containing a credential"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-migration-safety",
+   "name": "Migration and schema evolution safety",
+   "url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+   "role": "Whether a rollback discards data written since the migration, and whether an old client can write a shape the new schema mishandles.",
+   "preconditions": [
+    "the application has versioned migrations",
+    "an older client can still write"
+   ],
+   "oracle": [
+    "data loss after a rollback, measured by row count before and after",
+    "a write accepted by the old client that breaks the new reader"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-search-index",
+   "name": "Search index contents and authorisation",
+   "url": "https://opensearch.org/docs/latest/security/",
+   "role": "What the index stores, who can read it, and whether per document permissions are applied by the search layer. An index holding full documents duplicates the data outside its protections.",
+   "preconditions": [
+    "a search backend is in the read path"
+   ],
+   "oracle": [
+    "a full record recoverable from the index rather than the primary store",
+    "a document in results the caller cannot open directly"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-data-at-rest",
+   "name": "Encryption at rest and key separability",
+   "url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final",
+   "role": "Where the key lives, who can use it, and whether it is separable from the data. Encryption at rest with the key beside the ciphertext is encoding.",
+   "preconditions": [
+    "data is stored with an at-rest encryption claim"
+   ],
+   "oracle": [
+    "plaintext recoverable through a data path rather than a key management path",
+    "an encrypted field recoverable from a search index or a log",
+    "a record present in a region it was not intended for"
+   ]
   }
  ],
  "tree": {
