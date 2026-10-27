@@ -179,3 +179,64 @@ number a second way and getting a different answer.
 - The `[DEB_Arch_Extra]` repo on this machine still has a bad signature. It only affects `pacman -Si` and
   whatever else validates sync databases. Fix by syncing it, or remove the repo if MEGA is not wanted.
 - The 687 repaired rows have never been link-checked, because the link checker ran before they were URLs.
+
+---
+
+## The audit era: hunting mechanics that were described but never measured
+
+Rounds 22 to 31 were not building. They were going back over what had been built and asking whether the
+sentences describing it were true. Five defects came out, and every one of them had been passing a gate.
+
+### What started it
+
+A fresh clone failed three gates, one with a traceback. None of the three was a repository defect: they
+were the absence of the companion repo, reported as though the repo were broken. That taught two things.
+An environment problem reported as a repository problem trains people to ignore the gate, and nobody had
+ever cloned the thing to a clean directory before, which is the cheapest test available.
+
+### The five
+
+1. **The join key.** README and AUTHORING said entries join to atlas patterns by `entry_id`. Measurement:
+   zero of 562 entries reference a pattern id. Eight point into the atlas at all, one at a patterns file,
+   six at `QUEUE.json` which lists waves that are not built. The interface did not exist. It was in five
+   documents, and I fixed two of them before grepping and finding the other three.
+
+2. **Standard library only.** The MCP server's docstring said no dependencies. It imports yaml for two of
+   its nine tools. The fix was not the wording: PyYAML is optional now, those tools explain themselves when
+   it is absent, and the claim checks the degradation path exists.
+
+3. **A check passing for the wrong reason.** Three README checks read `"444" in readme`. They passed because
+   444 appears in the defects table describing a past mistake. Replaced with four that parse the sentence or
+   table row and compare against the stats generator, and that fail when the sentence is absent.
+
+4. **Two empty decision trees.** D37 and D38 carried trees in a shape I invented when creating them, so both
+   rendered a heading with nothing under it. `C121` passed because it only asked whether the key was truthy.
+
+5. **The same one twice.** `C130` assumed every MCP argument is a path, and `npx` configs begin with a flag.
+   `C128` to `C130` used `__import__`, which the claim sandbox correctly blocks. Two of my own checks were
+   wrong while being written.
+
+### What did not work
+
+An attempt to automate the hunt: extract structural sentences, ask whether a claim covers each. The tool
+found three real gaps and its headline number was not trustworthy. 165 sentences supposedly lacked a claim,
+and reading them found explanation, not assertion. Tuning the threshold until the figure looked defensible
+would have been the same failure one level up, so the tool reports an upper bound, writes a review order,
+and is deliberately not a gate.
+
+### The pattern worth keeping
+
+Four times now the same shape: two places describing one thing, neither measured. The coverage grading,
+the REA count, the join key, the README numbers. The remedy that works is always the same three steps:
+measure it, put the measurement in the stats generator, pin it with a claim so a future change has to
+update the prose.
+
+The remedy that does not work is fixing it where I remember writing it. That is how the join key survived
+in three documents for a round.
+
+### Open after this pass
+
+- Two REA gaps remain and both need a decision, not effort: service worker reconstruction needs a live CDP
+  target and breaks the offline invariant of the range; signing recovery is heuristic by nature.
+- The residual prose that neither a claim nor a reviewer has touched. Stated in RECHECK 6v rather than
+  closed, because the alternative was a number that lied.

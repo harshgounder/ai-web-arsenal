@@ -820,7 +820,7 @@ the parse stage.
 
 ---
 
-## 8. The twenty-one defects found in this project's own work
+## 8. The defects found in this project's own work
 
 Every one was silent and plausible. None caught by reading. Do not reintroduce these.
 
