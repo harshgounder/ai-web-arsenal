@@ -1088,6 +1088,35 @@
     "an identifier whose high bits track time, shown by sampling across a delay",
     "the generator located in code or inferred from the distribution"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-job-serialisation",
+   "name": "Queued payload trust and retry semantics",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+   "role": "Whether a worker trusts the payload that was queued earlier, and whether a retry re-runs side effects. A job is a second input path that reviewers usually never see.",
+   "preconditions": [
+    "the application enqueues work for a worker"
+   ],
+   "oracle": [
+    "a worker acting on a payload no producer would enqueue, injected directly",
+    "two effects from one message retried after a transient failure",
+    "a job argument bypassing a check the synchronous path applies"
+   ]
   }
  ],
  "tree": {

@@ -2,11 +2,13 @@
 {"url": "https://atlas.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-atlas", "d20-atlas"]}
 {"url": "https://aws.amazon.com/cli/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-awscli"]}
 {"url": "https://book.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-hacktricks", "d07-hacktricks", "d08-hacktricks-csti", "d09-hacktricks", "d12-hacktricks", "d13-hacktricks", "d14-hacktricks", "d15-hacktricks", "d18-hacktricks", "d22-hacktricks", "d23-hacktricks"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-auth-posture"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-authorisation-locus"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-body-limit-map"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-orm-loading", "d07-autoload-path"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-inspection-matrix"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-identifier-source"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-job-serialisation", "d25-audit-integrity", "d25-forensic-capture"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-mfa-secret-storage"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-db-privilege"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-cheatsheet", "d06-session-generation", "d06-directory-sync"]}
@@ -35,6 +37,7 @@
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-sandbox-matrix"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-parser-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-repro-pack"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-locale-resolution", "d15-localisation-path"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-header-posture"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-method-override"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-collector-behaviour"]}

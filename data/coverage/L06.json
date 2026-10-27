@@ -188,12 +188,12 @@
    "note": "The specification names scope narrowing as a requirement and provides no test."
   },
   "L06-044": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d06-session-generation"
+    "d04-auth-posture"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: the session identifier entry tests entropy and rotation points, while this factor asks whether a machine credential is shared across environments and valid in both. Different question."
+   "note": "A machine credential valid in two environments is the scope and lifetime test."
   },
   "L06-045": {
    "level": "L1",

@@ -518,6 +518,64 @@
     "one real action was blocked after a decision, with both timestamps recorded",
     "the measured interval is stated, not estimated"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-audit-integrity",
+   "name": "Audit trail completeness and tamper evidence",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+   "role": "Whether every act is recorded, whether the record can be edited by the identity being audited, and how long it survives. Regulation asks this and most systems answer with application logs.",
+   "preconditions": [
+    "the application records who did what"
+   ],
+   "oracle": [
+    "an action with no corresponding record, from a deliberately performed action",
+    "a record editable or deletable by the same credential that performs the action",
+    "the retention period stated, and a record still present at its end"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-forensic-capture",
+   "name": "Forensic readiness: capture before state changes",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+   "role": "Whether memory and disk can be captured before the incident alters them, and how long that takes to start. A process that is restarted to reproduce a bug has destroyed the evidence of it.",
+   "preconditions": [
+    "the organisation may need to investigate a host"
+   ],
+   "oracle": [
+    "a capture started within the stated window, measured on a real drill",
+    "the artefact hashed at capture and the hash still matching",
+    "the order of volatility respected: memory before disk before logs"
+   ]
   }
  ],
  "tree": {

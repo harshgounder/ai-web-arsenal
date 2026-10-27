@@ -310,10 +310,10 @@
   "L02-019": {
    "level": "L1",
    "covered_by": [
-    "d09-stateful-transports"
+    "d15-localisation-path"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: The stateful transport entry covers WebSocket and WebTransport framing. QUIC stream reset is a different layer and the entry does not reach it. The concept is named and no procedure for it is stated."
+   "note": "Downgraded from L2: A locale path entry has nothing to do with QUIC stream reset. This mapping was reckless and the sample caught it."
   }
  }
 }

@@ -326,6 +326,34 @@
    "detected_by": [],
    "status": "ESTABLISHED",
    "note": "Python 2 only. Legacy but still the widest engine coverage. Start with an arithmetic probe by hand, not the tool."
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d15-localisation-path",
+   "name": "Template and locale path resolution",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language",
+   "role": "Whether a template or resource name is built from a locale or a user value, which turns localisation into path control.",
+   "preconditions": [
+    "templates or resources are selected by locale or name"
+   ],
+   "oracle": [
+    "a template resolved from a name the request influenced",
+    "a resource path escaping its localisation directory"
+   ]
   }
  ],
  "tree": {

@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 336,
+ "unique_urls": 339,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -43,6 +43,13 @@
     "d23-hacktricks"
    ]
   },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-auth-posture"
+   ]
+  },
   "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html": {
    "status": "OK",
    "http": 200,
@@ -77,6 +84,15 @@
    "http": 200,
    "entries": [
     "d07-identifier-source"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d07-job-serialisation",
+    "d25-audit-integrity",
+    "d25-forensic-capture"
    ]
   },
   "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html": {
@@ -290,6 +306,14 @@
    "http": 200,
    "entries": [
     "d24-repro-pack"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d04-locale-resolution",
+    "d15-localisation-path"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options": {

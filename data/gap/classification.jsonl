@@ -148,11 +148,9 @@
 {"factor": "L04-029", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-030", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-031", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L04-032", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L04-037", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-039", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-040", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L04-041", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L04-042", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-043", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-045", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
@@ -162,7 +160,6 @@
 {"factor": "L04-050", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-051", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-052", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L04-053", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L04-054", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-055", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L04-059", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
@@ -221,7 +218,6 @@
 {"factor": "L06-041", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L06-042", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L06-043", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L06-044", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L06-045", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L06-046", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L06-047", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
@@ -484,7 +480,6 @@
 {"factor": "L12-058", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L12-061", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L13-021", "lens": "L13", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
-{"factor": "L13-024", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L13-037", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "insurance, contract promises and SLA pressure are private agreements"}
 {"factor": "L13-039", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "insurance, contract promises and SLA pressure are private agreements"}
 {"factor": "L13-040", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "whether an explanation duty applies depends on the regime and the agreement"}
@@ -537,7 +532,6 @@
 {"factor": "L15-038", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L15-039", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L15-041", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "playbook depth, containment cost and control economics are internal decisions"}
-{"factor": "L15-042", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L15-043", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "playbook depth, containment cost and control economics are internal decisions"}
 {"factor": "L15-045", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L15-050", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "vendor session logging and auditor acceptance are agreements"}

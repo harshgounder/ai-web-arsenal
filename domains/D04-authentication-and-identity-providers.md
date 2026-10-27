@@ -33,7 +33,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-21 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+23 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -41,8 +41,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L03 surface mapping | A2 | A03,A08 | `pacman:mitmproxy` | yes | Capture the whole auth flow, including redirects, tokens and cookie transitions |
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A2 | A08,A03 | `aur:ffuf` | yes | Username and account enumeration via response and timing differentials |
 | [Atlas W07: identity state patterns](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04,A06 | `n/a data` | yes | Technique pointer. W07 is queued; when built it covers session, token, MFA enrolment, recovery and device trust writes. |
+| [Route guard default posture and credential classes](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether new routes are protected by default, and how machine credentials are handled. A framework that opens by default makes every forgotten mount a finding, and a service account that is long lived and shared is a password with extra steps. |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A03,A07 | `docker` | no | Classic lab with weak auth, brute force and session modules |
 | [Keycloak (as a test IdP)](https://www.keycloak.org/) | L06 probing | A2 | A03,A05 | `docker` | yes | A real IdP you control, so OAuth redirect, scope and token handling can be tested against something you configured |
+| [Locale resolution and path construction from headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a header chooses a locale, and whether that locale reaches a filesystem path. Locale is user input with a friendly name. |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15,A03 | `aur:nuclei-bin` | yes | Known auth misconfiguration and default credential templates before manual work |
 | [OWASP WebGoat](https://github.com/WebGoat/WebGoat) | L06 probing | A2 | A03 | `docker` | no | Lab with explicit authentication and session lessons |
 | [JWT Editor (Burp extension)](https://portswigger.net/bappstore) | L07 exploitation | A2 | A09,A03 | `burp-extension` | no | Interactive JWT manipulation inside the proxy, pairs with jwt_tool for the exploit path |
@@ -110,6 +112,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 **Atlas W07: identity state patterns**  
 - note: Declared before it exists, so the dependency is visible. A pointer to a queued wave is honest; a pointer to nothing is not.
+
+**Route guard default posture and credential classes**  
+- preconditions: `the application has a router and more than one principal type`
+- oracle: `a newly added route reachable unauthenticated, demonstrated by adding one and calling it`, `the guard listed per route, with the routes that lack it named`, `a machine credential valid in two environments, shown by using it in the second`
+
+**Locale resolution and path construction from headers**  
+- preconditions: `the application localises content`
+- oracle: `a file path or template name influenced by Accept-Language or a locale parameter`, `a locale value accepted that is not in the configured set, and what it resolved to`
 
 ## Decision tree
 

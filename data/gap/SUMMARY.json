@@ -1,11 +1,11 @@
 {
  "generated_at": "2026-10-27",
  "factors_total": 1000,
- "covered_l2_plus": 391,
- "gap_total": 609,
+ "covered_l2_plus": 397,
+ "gap_total": 603,
  "gap_by_class": {
   "II": 550,
-  "I": 9,
+  "I": 3,
   "III": 50
  },
  "cost_by_class": {
@@ -13,7 +13,7 @@
   "I": "authoring",
   "III": "impossible"
  },
- "reachable_by_authoring": 9,
+ "reachable_by_authoring": 3,
  "reachable_by_lab": 550,
  "unavailable": 50,
  "ceiling_pct": 95.0,

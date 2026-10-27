@@ -351,10 +351,10 @@
   "L10-038": {
    "level": "L1",
    "covered_by": [
-    "d18-generated-and-model"
+    "d38-secret-storage"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: an editor extension is not generated code, a model or a remote tool definition, so the cited entry does not state a procedure for it. The concept is named and no procedure is given."
+   "note": "Downgraded from L2: Secrets outside a manager is a credential storage question. The factor asks whether an editor extension can read repository content, which is an authority question about the extension host."
   },
   "L10-040": {
    "level": "L2",

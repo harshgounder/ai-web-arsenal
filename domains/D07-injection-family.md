@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-34 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+35 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -47,6 +47,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [ffuf](https://github.com/ffuf/ffuf) | L06 probing | A2 | A01 | `aur:ffuf` | yes | Fuzz the injection position to find a working context |
 | [Identifier generation source and predictability](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether identifiers come from a CSPRNG, a counter or a clock. Sequential ids make enumeration trivial; time based ones make the next value a guess. |
 | [Transaction isolation and referential integrity](https://www.postgresql.org/docs/current/transaction-iso.html) | L06 probing | A2 | A08 | `n/a reference` | no | Which anomalies the store permits, and whether integrity is enforced or assumed. A read committed store allows lost updates unless the code versions rows. |
+| [Queued payload trust and retry semantics](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a worker trusts the payload that was queued earlier, and whether a retry re-runs side effects. A job is a second input path that reviewers usually never see. |
 | [Migration and schema evolution safety](https://www.postgresql.org/docs/current/sql-altertable.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a rollback discards data written since the migration, and whether an old client can write a shape the new schema mishandles. |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A01,A15 | `aur:nuclei-bin` | yes | Known CVE and misconfiguration injection templates |
 | [Redirect and link helper target handling](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether URL helpers accept absolute targets. A helper that takes a user supplied next value is an open redirect with a friendly name. |
@@ -239,6 +240,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Identifier generation source and predictability**  
 - preconditions: `the application issues identifiers to clients`
 - oracle: `adjacent identifiers resolving to real records, which is a counter`, `an identifier whose high bits track time, shown by sampling across a delay`, `the generator located in code or inferred from the distribution`
+
+**Queued payload trust and retry semantics**  
+- preconditions: `the application enqueues work for a worker`
+- oracle: `a worker acting on a payload no producer would enqueue, injected directly`, `two effects from one message retried after a transient failure`, `a job argument bypassing a check the synchronous path applies`
 
 ## Decision tree
 

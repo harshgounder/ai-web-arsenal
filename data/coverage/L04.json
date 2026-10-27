@@ -155,10 +155,12 @@
    "note": "Header handling at an edge is touched by payload padding. Trusted proxy configuration is not."
   },
   "L04-032": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Open by default versus closed by default route posture is unaddressed, though it decides most accidental exposure."
+   "level": "L2",
+   "covered_by": [
+    "d04-auth-posture"
+   ],
+   "basis": "entry",
+   "note": "A newly added route reachable unauthenticated is the open-by-default test."
   },
   "L04-033": {
    "level": "L2",
@@ -359,12 +361,12 @@
    "note": "Safe string marking is the escaping layer; the raw fragment audit is where the marking is bypassed."
   },
   "L04-041": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d07-binder-audit"
+    "d07-job-serialisation"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Request binding and middleware order is not job argument serialisation. The entry does not reach a queued payload. The concept is named and no procedure for it is stated."
+   "note": "A worker acting on a payload no producer would enqueue."
   },
   "L04-044": {
    "level": "L2",
@@ -375,12 +377,12 @@
    "note": "Privilege level of the migration process is part of the migration safety test."
   },
   "L04-053": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d13-ffuf"
+    "d04-locale-resolution"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Path fuzzing does not isolate a locale influenced path. The entry exercises the path shape, not the locale resolution. The concept is named and no procedure for it is stated."
+   "note": "A file path or template influenced by the locale header."
   }
  }
 }

@@ -373,12 +373,12 @@
    "note": "Whether a planted token fires is a detection test, and the never-fired record is the oracle."
   },
   "L15-042": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d23-purple-loop"
+    "d25-forensic-capture"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: The purple loop entry asks whether a detection was tested against a real technique. Forensic readiness asks whether state can be captured before it changes. Different capability. The concept is named and no procedure for it is stated."
+   "note": "A capture started within the stated window, hashed, with volatility order respected."
   },
   "L15-044": {
    "level": "L2",
@@ -451,6 +451,14 @@
    ],
    "basis": "entry",
    "note": "A hop with no owner is a column with no data."
+  },
+  "L15-043": {
+   "level": "L1",
+   "covered_by": [
+    "d25-forensic-capture"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Containment cost is a business decision. The capture entry tests whether a capture can happen inside a window, not what isolation costs."
   }
  }
 }

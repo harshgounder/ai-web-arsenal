@@ -28,7 +28,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -37,6 +37,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A2 | A01 | `n/a reference` | no | Per language gadget and sink reference |
 | [PortSwigger: deserialization](https://portswigger.net/web-security/deserialization) | L05 hypothesis | A2 | A01 | `n/a reference` | no | Explanation plus labs, the fastest calibration for a chain |
 | [rea export_web_scripts](https://rea.tools) | L05 hypothesis | A3 | A05,A08 | `mcp:rea` | yes | Recover the client side serializer, which is often the only documentation of the format |
+| [Template and locale path resolution](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a template or resource name is built from a locale or a user value, which turns localisation into path control. |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `n/a reference` | no | Serialization payload corpus per language |
 | [PHPGGC](https://github.com/ambionics/phpggc) | L07 exploitation | A2 | A01,A11 | `n/a reference` | no | PHP gadget chains against composer libraries |
 | [tplmap](https://github.com/epinna/tplmap) | L07 exploitation | A2 | A01 | `git:https://github.com/epinna/tplmap` | no | Template injection detection and exploitation, engine specific |
@@ -80,6 +81,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `arithmetic evaluated, then code execution confirmed by callback`
 - defense levels it addresses: F2
 - note: Python 2 only. Legacy but still the widest engine coverage. Start with an arithmetic probe by hand, not the tool.
+
+**Template and locale path resolution**  
+- preconditions: `templates or resources are selected by locale or name`
+- oracle: `a template resolved from a name the request influenced`, `a resource path escaping its localisation directory`
 
 ## Decision tree
 

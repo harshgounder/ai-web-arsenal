@@ -333,12 +333,12 @@
    "note": "What may be retained, where and for how long, applied and checked at close."
   },
   "L13-024": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d23-purple-loop"
+    "d25-audit-integrity"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: The purple loop entry tests whether a detection fires, not whether the application's own audit trail is tamper evident. Those are different artefacts and I had already downgraded this once for the same reason. The concept is named and no procedure for it is stated."
+   "note": "An action with no record, and a record editable by the credential that performs the action."
   },
   "L13-050": {
    "level": "L2",

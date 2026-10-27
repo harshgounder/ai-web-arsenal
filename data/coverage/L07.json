@@ -272,10 +272,10 @@
   "L07-046": {
    "level": "L1",
    "covered_by": [
-    "d17-cross-account"
+    "d25-audit-integrity"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Cross account trust is about roles and assumptions, not about rejoining a pseudonym to an identity. The concept is named and no procedure for it is stated."
+   "note": "Downgraded from L2: Audit completeness is not whether a pseudonym can be rejoined to an identity. Non-repudiation and linkage are different properties."
   }
  }
 }

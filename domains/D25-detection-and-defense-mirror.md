@@ -26,11 +26,13 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+21 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
+| [Audit trail completeness and tamper evidence](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether every act is recorded, whether the record can be edited by the identity being audited, and how long it survives. Regulation asks this and most systems answer with application logs. |
+| [Forensic readiness: capture before state changes](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether memory and disk can be captured before the incident alters them, and how long that takes to start. A process that is restarted to reproduce a bug has destroyed the evidence of it. |
 | [ATT&CK STIX data](https://github.com/mitre-attack/attack-stix-data) | L10 reporting | A2 | A02 | `n/a reference` | no | The technique taxonomy to map detection coverage against |
 | [awesome-yara](https://github.com/InQuest/awesome-yara) | L10 reporting | A0 | A01 | `n/a reference` | no | Curated YARA rules and tooling, the detection corpus entry point |
 | [Cloud control plane audit trail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether API calls and identity events leave the provider at all, which decides whether a permission change is investigable. |
@@ -86,6 +88,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Response authority and time to block**  
 - preconditions: `the organisation has a detection capability and a blocking capability`
 - oracle: `one real action was blocked after a decision, with both timestamps recorded`, `the measured interval is stated, not estimated`
+
+**Audit trail completeness and tamper evidence**  
+- preconditions: `the application records who did what`
+- oracle: `an action with no corresponding record, from a deliberately performed action`, `a record editable or deletable by the same credential that performs the action`, `the retention period stated, and a record still present at its end`
+
+**Forensic readiness: capture before state changes**  
+- preconditions: `the organisation may need to investigate a host`
+- oracle: `a capture started within the stated window, measured on a real drill`, `the artefact hashed at capture and the hash still matching`, `the order of volatility respected: memory before disk before logs`
 
 ## Decision tree
 

@@ -659,6 +659,63 @@
    "stage": "L10",
    "status": "VERIFIED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d04-auth-posture",
+   "name": "Route guard default posture and credential classes",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+   "role": "Whether new routes are protected by default, and how machine credentials are handled. A framework that opens by default makes every forgotten mount a finding, and a service account that is long lived and shared is a password with extra steps.",
+   "preconditions": [
+    "the application has a router and more than one principal type"
+   ],
+   "oracle": [
+    "a newly added route reachable unauthenticated, demonstrated by adding one and calling it",
+    "the guard listed per route, with the routes that lack it named",
+    "a machine credential valid in two environments, shown by using it in the second"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d04-locale-resolution",
+   "name": "Locale resolution and path construction from headers",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language",
+   "role": "Whether a header chooses a locale, and whether that locale reaches a filesystem path. Locale is user input with a friendly name.",
+   "preconditions": [
+    "the application localises content"
+   ],
+   "oracle": [
+    "a file path or template name influenced by Accept-Language or a locale parameter",
+    "a locale value accepted that is not in the configured set, and what it resolved to"
+   ]
   }
  ],
  "tree": {
