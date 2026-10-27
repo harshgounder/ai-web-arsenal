@@ -77,6 +77,26 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 Machine readable at `trees/D37.json`. This is the rendered view.
 
+- **Can the factor be observed from script alone, or does it need a host view?**
+  - _why:_ The two need different instruments, and most substrate claims are made with one while needing the other.
+- `Script alone`
+  - action: measure clock granularity, JIT tier thresholds and allocator reuse from inside the page
+  - tools: `d37-timer-resolution`, `d37-jit-tiers`, `d37-wasm-pipeline`, `d37-allocator-behaviour`
+  - oracle: `a step or a discontinuity that repeats across runs`
+- `Needs a host view`
+  - **Is the target a renderer, a kernel boundary, or a native parser?**
+  - `Renderer or sandbox`
+    - action: enumerate the policy and the descriptor table, then probe reach
+    - tools: `d37-sandbox-reach`
+    - oracle: `a syscall refused at the policy and a neighbour permitted`
+  - `Native parser`
+    - action: feed crafted inputs and identify which library parses
+    - tools: `d37-parser-surface`
+    - oracle: `a crash or sandbox denial naming the library`
+  - `GPU`
+    - action: read a fresh buffer before any write
+    - tools: `d37-gpu-surface`
+    - oracle: `non zero content, which is a cross context read`
 
 ## Defense mirror
 

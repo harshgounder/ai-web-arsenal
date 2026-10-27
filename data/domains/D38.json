@@ -287,9 +287,62 @@
   }
  ],
  "tree": {
-  "q1": "is the question about who someone is, what they hold, or what they can do",
-  "q2": "is the evidence a directory record, a login, or a real device",
-  "q3": "does the answer require being inside the organisation, in which case it is Class III and stated as unavailable"
+  "id": "d38-root",
+  "q": "Is the question about who someone is, what they hold, or whether a process happened?",
+  "why": "Identity questions are answerable by probing. Process questions usually require being inside, which changes what is available.",
+  "branches": [
+   {
+    "a": "Who someone is",
+    "action": "review the directory against the leaver list and look for shared credentials",
+    "tools": [
+     "d38-offboarding-access",
+     "d38-shared-account"
+    ],
+    "oracle": "a login after the last day, or one credential from several clients"
+   },
+   {
+    "a": "What they hold",
+    "next": {
+     "id": "d38-hold",
+     "q": "Is it a credential, a device, or an elevated session?",
+     "branches": [
+      {
+       "a": "Credential",
+       "action": "search the places people actually keep them",
+       "tools": [
+        "d38-secret-storage"
+       ],
+       "oracle": "a live secret outside the manager, with its location"
+      },
+      {
+       "a": "Device",
+       "action": "compare the endpoint inventory against enrollment records",
+       "tools": [
+        "d38-device-trust"
+       ],
+       "oracle": "a device without an enrollment record holding data"
+      },
+      {
+       "a": "Elevated session",
+       "action": "read the approval trail for a real session",
+       "tools": [
+        "d38-privileged-approval"
+       ],
+       "oracle": "an elevated session with no approval record"
+      }
+     ]
+    }
+   },
+   {
+    "a": "Whether a process happened",
+    "action": "read the review and disclosure records",
+    "tools": [
+     "d38-disclosure-program",
+     "d38-developer-loop"
+    ],
+    "oracle": "a step with no record, or a report that reached nobody"
+   }
+  ]
  },
  "mirror": [
   {

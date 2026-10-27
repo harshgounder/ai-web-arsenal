@@ -81,6 +81,30 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 Machine readable at `trees/D38.json`. This is the rendered view.
 
+- **Is the question about who someone is, what they hold, or whether a process happened?**
+  - _why:_ Identity questions are answerable by probing. Process questions usually require being inside, which changes what is available.
+- `Who someone is`
+  - action: review the directory against the leaver list and look for shared credentials
+  - tools: `d38-offboarding-access`, `d38-shared-account`
+  - oracle: `a login after the last day, or one credential from several clients`
+- `What they hold`
+  - **Is it a credential, a device, or an elevated session?**
+  - `Credential`
+    - action: search the places people actually keep them
+    - tools: `d38-secret-storage`
+    - oracle: `a live secret outside the manager, with its location`
+  - `Device`
+    - action: compare the endpoint inventory against enrollment records
+    - tools: `d38-device-trust`
+    - oracle: `a device without an enrollment record holding data`
+  - `Elevated session`
+    - action: read the approval trail for a real session
+    - tools: `d38-privileged-approval`
+    - oracle: `an elevated session with no approval record`
+- `Whether a process happened`
+  - action: read the review and disclosure records
+  - tools: `d38-disclosure-program`, `d38-developer-loop`
+  - oracle: `a step with no record, or a report that reached nobody`
 
 ## Defense mirror
 

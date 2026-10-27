@@ -269,8 +269,8 @@ claims:
     check: "(lambda ps: ps['atlas_pointers'] >= 1 and ps['atlas_pattern_refs'] >= 0)(stats)"
 
   - id: C121
-    statement: "every domain carries a decision tree, a defence mirror and at least one named gap"
-    check: "all(d.get('tree') and d.get('mirror') and d.get('gaps') for d in domains())"
+    statement: "every domain carries a renderable decision tree, a defence mirror and at least one gap"
+    check: "all((t := d.get('tree')) and t.get('q') and t.get('branches') and d.get('mirror') and d.get('gaps') for d in domains())"
 
   - id: C122
     statement: "every entry carries a driver, an atom and a status"
@@ -291,6 +291,22 @@ claims:
   - id: C126
     statement: "the bootstrap library refuses to run as root"
     check: "'id -u' in libsh() and 'root' in libsh()"
+
+  - id: C127
+    statement: "every prompt pack names its failure modes, and none uses an em dash"
+    check: "all('failure' in (ROOT / 'prompts' / f.name).read_text(encoding='utf-8').lower() and '\\u2014' not in (ROOT / 'prompts' / f.name).read_text(encoding='utf-8') for f in files('prompts/*.md'))"
+
+  - id: C128
+    statement: "every tree file is valid JSON with the shape the renderer reads"
+    check: "all((lambda d: d.get('q') and d.get('branches'))(json.loads(f.read_text(encoding='utf-8'))) for f in files('trees/*.json'))"
+
+  - id: C129
+    statement: "every path the skill references exists"
+    check: "all((ROOT / r).exists() or (ROOT.parent / r).exists() for r in re.findall(r'`([A-Za-z0-9_./-]+\\.(?:md|json|py|sh|yaml))`', (ROOT / 'skills' / 'web-arsenal' / 'SKILL.md').read_text(encoding='utf-8')))"
+
+  - id: C130
+    statement: "every MCP config parses, and any script path it names exists"
+    check: "all((lambda d: all((ROOT / a.replace('${HOME}', str(ROOT.parent))).exists() for c in d.get('mcpServers', {}).values() for a in (c.get('args') or []) if re.search(r'[.](?:py|js|mjs|ts)$', a)))(json.loads(f.read_text(encoding='utf-8'))) for f in files('mcps/*.json'))"
 
   # --- honesty -----------------------------------------------------------------
   - id: C090

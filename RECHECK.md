@@ -712,6 +712,33 @@ wrong reason is worse than no check.
 
 ---
 
+## 6u. Four more mechanics tested, one of them empty
+
+Continuing from the join key, five more structural sentences were checked.
+
+| claim | result |
+|---|---|
+| every prompt pack names its failure modes | holds, 5 of 5 |
+| every tree file is valid JSON with the renderable shape | **two were not** |
+| every path the skill references exists | holds, 8 of 8 |
+| every MCP config parses and names an existing script | holds, 2 of 2 |
+| domain link health is current | holds, checked 2026-10-27 |
+
+The finding: `D37` and `D38` carried trees in a shape I invented when creating those domains, with `q1` and
+`q2` keys instead of the `q` and `branches` structure the renderer reads. Both domains rendered a
+**Decision tree heading with nothing under it**, and `C121` passed because it only asked whether the key
+was truthy.
+
+So the claim passed and the document was empty. `C121` now requires the key the renderer actually reads,
+and both trees are rewritten in the documented shape.
+
+Two of my own checks were also wrong while being written: `C128` to `C130` used `__import__`, which the
+sandbox correctly blocks, and `C130` first assumed every MCP argument is a path when `npx` configs start
+with a flag. A check that fails on a correct repo is a bug in the check, and both were fixed rather than
+loosened to pass.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.
