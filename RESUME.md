@@ -129,7 +129,7 @@ pattern here.
 ## Closing note, 2026-10-27
 
 This project's recurring failure mode was a **plausible-looking artifact that nothing validated**.
-Twelve instances were caught, none by reading:
+Fourteen instances were caught, none by reading:
 
 1. two recalled facts wrong (a repo called stale that was active, one called live that was archived)
 2. link checker used HEAD, which real sites answer 404, producing 7 false dead links
@@ -143,6 +143,8 @@ Twelve instances were caught, none by reading:
 10. 13 shields.io language badges survived an image filter that only matched file extensions
 11. a machine-wide `pacman -Si` failure turned 16 real packages into "unresolved", inventing a packaging gap
 12. the recheck identity line printed "+ residue", letting 75 orphan rows hide inside one word
+13. 687 rows held an owner/repo identifier in the url field, so "rows carrying a URL" counted identifiers
+14. build-indexes printed 1,439 promotable before dedupe, and the real figure is 1,419
 
 Every one was found by a measurement disagreeing with a claim. That is the method this repo is trying
 to encode: if a number cannot be regenerated from disk, it is not a number, it is a memory.

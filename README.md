@@ -126,7 +126,7 @@ ai-web-arsenal/
 ├── BOOTSTRAP.md               bring-your-own-AI setup, Arch first
 ├── RECHECK.md                 post-compaction state: goals, decisions, what is done and not
 ├── RESUME.md                  state, rebuild commands, traps already paid for
-├── LOG.md                     every step, including the twelve defects
+├── LOG.md                     step log, including a verification pass that found six more defects
 ├── manifest/tools.yaml        single source of truth for 64 tools
 ├── bootstrap/                 11 generated installer scripts
 ├── data/

@@ -182,7 +182,7 @@ the parse stage.
 
 ---
 
-## 8. The twelve defects found in this project's own work
+## 8. The fourteen defects found in this project's own work
 
 Every one was silent and plausible. None caught by reading. Do not reintroduce these.
 
@@ -200,6 +200,8 @@ Every one was silent and plausible. None caught by reading. Do not reintroduce t
 | 10 | 13 shields.io language-toggle badges survived the image filter because the filter only matched file extensions | a filter that matches one shape of a thing is a sample, not a filter |
 | 11 | `pacman -Si` fails machine-wide when any configured repo has a bad signature, which silently reported 16 real tools as unresolved | distinguish "not packaged" from "lookup broken" |
 | 12 | the recheck identity line printed "+ residue" and let 75 orphan rows hide inside a word | name every term, sum them out loud |
+| 13 | 687 rows stored a bare owner/repo in the `url` field, so "rows carrying a URL" was counting identifiers | a locator is not a link |
+| 14 | build-indexes printed "TOTAL promotable 1439" pre-dedupe when the real figure is 1,419 | label the stage, not just the number |
 
 **The standing rule that came out of these: if a number cannot be regenerated from disk, it is not a
 number, it is a memory.**

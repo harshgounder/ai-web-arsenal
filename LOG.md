@@ -87,3 +87,95 @@ One line per step. What ran, what was checked, what was wrong.
 - D11.index needs a relevance pass to drop books and writeups (should be ~150-250 real candidates).
 - The 24:885 ratio means "10 domains deep" needs a stated enriched-target per domain, otherwise deep
   means nothing.
+
+---
+
+## 2026-10-27, the verification pass (after a context compaction)
+
+This entry was written after the fact, from the artifacts, not during the work. Steps 20 onward were
+never logged live, so the numbering restarts at V01 to avoid pretending otherwise.
+
+**Why this pass happened.** The user asked for the work to be checked three times independently, because
+a context compaction had just happened and a remembered number is not a measured one.
+
+**V01. Ran the verifier.** `scripts/recheck.py`: 33 of 33 passing against `RECHECK.md`. That only proves
+the doc and the disk agree. If both were built from the same wrong belief, they would keep agreeing, so
+it is not evidence on its own.
+
+**V02. Recounted every headline number with different tools.** `wc -l`, `grep -c`, and shell arithmetic
+instead of the Python scripts that produced them. This is what broke the agreement.
+
+**V03. Defect found: the corpus total was quoted as a tool count.** `scripts/merge-identities.py` merged
+rows of every kind, so `entries_by_identity` was 21,194 while only 8,845 rows were `kind: tool`. The rest
+were 11,712 taxonomy nodes harvested from list headings, 577 social and 247 knowledge rows. The README
+called all of it "tool identities". That overstates tools by 2.4x in the one table meant to bound the
+claim. Fixed by computing `tool_rows`, `tool_identities` and `rows_by_kind` separately, and by never
+quoting the row total as a tool count again.
+
+**V04. Defect found: the image filter matched one shape of image.** It checked file extensions, so 13
+shields.io language-toggle badges survived as `kind: tool` rows: "English-Click-yellow", "日本語-クリック-青"
+and friends. A filter that matches one shape of a thing is a sample, not a filter. Fixed by matching
+badge hosts and `/badge` paths too.
+
+**V05. Near miss: three real tools were hiding behind badge URLs.** Cortex, DollhouseMCP and guardvibe
+were stored as `glama.ai/mcp/servers/<owner>/<repo>/badge`. Dropping them with the badges would have lost
+real MCP servers while looking like cleanup. They are repaired to their server pages now. 13 dropped,
+3 recovered.
+
+**V06. Defect found in the tooling, on this machine.** `verify-tools.py` reported 16 unresolvable tools
+including `nmap`, `hashcat` and `pipx`, which is obviously false. Cause: `pacman -Si` fails machine-wide
+when any configured repo has a bad signature, and this host has one, `[DEB_Arch_Extra]` from MEGA, whose
+database does not validate. That is a local fault dressed up as a packaging gap. The script now falls
+back to the Arch package API, records which channel answered, and prints a note when the local lookup is
+broken. 0 unresolved again.
+
+**V07. Defect found: 687 rows carried an identifier in their `url` field.** All from one harvested source
+that stored a bare `owner/repo`. "Rows carrying a URL" was counting them, and the link checker could never
+reach them. Expanded to real GitHub URLs where the shape is unambiguous. One (`skt elecom/bomlens`) is
+malformed and is left alone rather than guessed at.
+
+**V08. Defect found in the verifier itself.** The reconciliation identity line printed
+`admitted + excluded + held + residue = total` and let 75 orphan rows hide inside the word "residue". It
+passed because `identity_holds` was true, not because the arithmetic was shown. It now names all six terms
+and sums them out loud: 13,516 + 17,506 + 204 + 71 + 1 = 31,298.
+
+**V09. Defect found in a label.** `build-indexes.py` printed `TOTAL promotable 1439`, which is the figure
+before cross-domain dedupe. The real promotable count is 1,419. The printed line now says which stage it
+is.
+
+**V10. Determinism check.** Snapshotted SHA-256 for all 189 generated files, re-ran the whole 12-stage
+pipeline, diffed. Zero drift. The generator chain is idempotent, which is the property that lets a number
+here be trusted at all.
+
+**V11. Read the result back from GitHub.** Not from local git, from `raw.githubusercontent.com`, to confirm
+the pushed bytes carry the corrected numbers rather than the local working tree only.
+
+**V12. Fixed a claim about this file.** The README map described LOG.md as "every step, including the
+twelve defects". LOG.md stopped at milestone 2 and contained none of them. Rather than quietly soften the
+description, this entry exists, and `RECHECK.md` section 8 carries the full table of fourteen.
+
+### Numbers after this pass
+
+```
+corpus        21,384 rows = 8,848 tools (8,692 identities) + 11,712 taxonomy + 577 social + 247 knowledge
+urls          9,671 rows carry a real http url; 1 holds an unparseable slug
+reconcile     31,298 = 13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved
+tools         64 in manifest, 0 unresolved, 19 of them resolved through the Arch API fallback
+promotable    1,419 after cross-domain dedupe (1,439 before)
+verifier      40 checks, 40 pass
+determinism   189 generated files, byte identical on rebuild
+```
+
+### What this pass teaches
+
+Every defect here made the project look better, not worse, and every one was invisible to reading. The
+row total looked like a tool count. The badges looked like tools. The pacman failure looked like missing
+packages. The residue looked like zero. The only thing that caught any of it was recomputing the same
+number a second way and getting a different answer.
+
+### Open after this pass
+
+- `ln -s` of the contest repo, REA operations and the 50+ bar are still unmet. Unchanged by this pass.
+- The `[DEB_Arch_Extra]` repo on this machine still has a bad signature. It only affects `pacman -Si` and
+  whatever else validates sync databases. Fix by syncing it, or remove the repo if MEGA is not wanted.
+- The 687 repaired rows have never been link-checked, because the link checker ran before they were URLs.
