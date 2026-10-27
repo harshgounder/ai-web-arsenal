@@ -193,12 +193,12 @@ claims:
     check: "all(f.get('def') and f.get('observable') for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json')) for f in json.loads(p.read_text(encoding='utf-8')).get('factors', []))"
 
   - id: C102
-    statement: "all 1,000 factors have a coverage record, and 107 of them reach L2"
-    check: "(lambda rs: len(rs) == 1000 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 107)(rows('data/coverage/coverage.jsonl'))"
+    statement: "all 1,000 factors have a coverage record, and 108 of them reach L2 or better"
+    check: "(lambda rs: len(rs) == 1000 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 108)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C104
-    statement: "two factors are graded L3, each backed by a recorded observation"
-    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L2') == 105 and sum(1 for r in rs if r['level'] == 'L3') == 2)(rows('data/coverage/coverage.jsonl'))"
+    statement: "four factors are graded L3, each backed by a recorded observation"
+    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L2') == 104 and sum(1 for r in rs if r['level'] == 'L3') == 4)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C108
     statement: "every L3 factor names a lab whose observation verdict is OBSERVED"

@@ -4,41 +4,301 @@
  "default": "L0",
  "reason": "Framework factors with no artefact. The injection and deserialisation half is covered well, because tools exist for it. The half that decides most real outcomes, which is defaults and conventions such as cookie attributes, CORS policy, guard posture and debug modes, is covered only by reference lists.",
  "exceptions": {
-  "L04-001": {"level": "L1", "covered_by": ["d13-dotdotpwn"], "basis": "entry", "note": "Normalisation order is exercised by an encoded traversal fuzzer. The framework's own matching order is not isolated."},
-  "L04-002": {"level": "L1", "covered_by": ["d13-ffuf"], "basis": "entry", "note": "Fuzzing the path shape will surface variant handling. The trailing slash case is not stated as a test."},
-  "L04-009": {"level": "L2", "covered_by": ["d07-sqlmap", "d07-ghauri"], "basis": "entry", "note": "Parameterisation gaps are exactly what both engines detect and confirm, including in identifier positions."},
-  "L04-010": {"level": "L1", "covered_by": ["d07-ghauri"], "basis": "entry", "note": "Raw fragment reachability is a source question. The tools find the symptom, not the escape hatch."},
-  "L04-014": {"level": "L2", "covered_by": ["d07-dalfox", "d07-xsser", "d08-dalfox"], "basis": "entry", "note": "Context aware XSS scanning tests the auto escaping default by context, with execution as the oracle."},
-  "L04-015": {"level": "L2", "covered_by": ["d07-xsser"], "basis": "entry", "note": "A large context and encoding matrix is precisely the test of whether each context is handled separately."},
-  "L04-017": {"level": "L2", "covered_by": ["d07-sstimap", "d15-tplmap"], "basis": "entry", "note": "Both detect template expression evaluation across engine families, with evaluation as the confirmation."},
-  "L04-018": {"level": "L2", "covered_by": ["d07-ysoserial", "d15-ysoserial", "d15-phpggc"], "basis": "entry", "note": "Gadget chain generation is the test of whether the deserialiser restricts accepted classes."},
-  "L04-019": {"level": "L1", "covered_by": ["d15-ysoserial-net"], "basis": "entry", "note": "ViewState deserialisation can fire before validation. The ordering question is implied by the gadget, not tested as a factor."},
-  "L04-020": {"level": "L2", "covered_by": ["d15-payloads", "d15-ysoserial"], "basis": "entry", "note": "Polymorphic type nomination is the precondition of every gadget, and the payload corpus is organised around it."},
-  "L04-021": {"level": "L1", "covered_by": ["d24-cwe"], "basis": "entry", "note": "Error verbosity is a weakness class in the taxonomy. No artefact measures what a given stack returns."},
-  "L04-023": {"level": "L2", "covered_by": ["d13-lfisuite", "d13-dotdotpwn"], "basis": "entry", "note": "Root confinement after decoding is the direct subject, with a file outside the root as the oracle."},
-  "L04-025": {"level": "L1", "covered_by": ["d03-rea-bundle"], "basis": "entry", "note": "Bundle analysis can reveal hardcoded secrets and defaults. It does not test what the framework generates when one is absent."},
-  "L04-027": {"level": "L2", "covered_by": ["d06-rea-page"], "basis": "entry", "note": "Reporting cookie attributes answers the default question directly, on a live instance."},
-  "L04-028": {"level": "L2", "covered_by": ["d08-corsy"], "basis": "entry", "note": "Origin reflection testing is the CORS default question, with a credentialed cross origin read as the oracle."},
-  "L04-029": {"level": "L1", "covered_by": ["d04-wstg-athn"], "basis": "entry", "note": "CSRF coverage is named in the list. Which verbs and content types are exempt is not."},
-  "L04-030": {"level": "L0", "covered_by": [], "basis": "none", "note": "Host header trust in link generation is unaddressed, and it is one of the most reliable paths to password reset takeover."},
-  "L04-031": {"level": "L1", "covered_by": ["d22-nowafpls"], "basis": "entry", "note": "Header handling at an edge is touched by payload padding. Trusted proxy configuration is not."},
-  "L04-032": {"level": "L0", "covered_by": [], "basis": "none", "note": "Open by default versus closed by default route posture is unaddressed, though it decides most accidental exposure."},
-  "L04-033": {"level": "L2", "covered_by": ["d05-autorize", "d05-authmatrix"], "basis": "entry", "note": "Per action and per record permission is what both tools compare, with the role matrix as the oracle."},
-  "L04-034": {"level": "L2", "covered_by": ["d05-crapi", "d05-vampi"], "basis": "entry", "note": "Both targets have real tenancy, so a cross tenant read confirms which layer enforces scoping."},
-  "L04-035": {"level": "L2", "covered_by": ["d13-fuxploider"], "basis": "entry", "note": "The extension, content type and magic byte matrix is the upload pipeline test, with execution or retrieval as the oracle."},
-  "L04-036": {"level": "L2", "covered_by": ["d13-ffuf", "d13-curl"], "basis": "entry", "note": "Fuzzing the stored name and crafting the exact multipart body covers path computation from user input."},
-  "L04-037": {"level": "L0", "covered_by": [], "basis": "none", "note": "Which native library parses an uploaded image is unaddressed. No entry discusses image processing."},
-  "L04-038": {"level": "L0", "covered_by": [], "basis": "none", "note": "Redirect helper behaviour with absolute targets is unaddressed."},
-  "L04-039": {"level": "L1", "covered_by": ["d08-rea-page"], "basis": "entry", "note": "Response body shapes are captured, which is where an over serialised column would show. No entry tests serialisation policy."},
-  "L04-040": {"level": "L1", "covered_by": ["d11-ffuf", "d11-arjun"], "basis": "entry", "note": "Parameter discovery finds undocumented filters. Whether they are allow listed is not tested."},
-  "L04-042": {"level": "L1", "covered_by": ["d12-newman"], "basis": "entry", "note": "Deterministic replay can produce a duplicate effect. Queue retry semantics are not modelled."},
-  "L04-045": {"level": "L1", "covered_by": ["d18-syft"], "basis": "entry", "note": "An SBOM shows the resolved tree. Whether the lock was honoured is a different question."},
-  "L04-047": {"level": "L1", "covered_by": ["d11-kiterunner"], "basis": "entry", "note": "Route discovery finds dynamic dispatch surfaces. Reflection exposure is not tested directly."},
-  "L04-048": {"level": "L1", "covered_by": ["d16-gitleaks", "d18-gitleaks"], "basis": "entry", "note": "Secret scanning in logs and bundles covers one path of the logging exposure."},
-  "L04-050": {"level": "L1", "covered_by": ["d02-httpx"], "basis": "entry", "note": "Enumerating paths will find health and metrics routes. What they leak is not the stated test."},
-  "L04-051": {"level": "L1", "covered_by": ["d02-ffuf", "d02-feroxbuster"], "basis": "entry", "note": "Route brute force finds admin mounts at guessable paths, which is the factor and without the posture question."},
-  "L04-056": {"level": "L2", "covered_by": ["d05-ffuf"], "basis": "entry", "note": "Enumerating sequential identifiers is the test, with another user's object as the confirmation."},
-  "L04-058": {"level": "L2", "covered_by": ["d16-hashcat", "d16-john"], "basis": "entry", "note": "Cracking a stored hash measures the algorithm and cost directly."},
-  "L04-061": {"level": "L1", "covered_by": ["d03-whatweb", "d03-wappalyzer"], "basis": "entry", "note": "Fingerprinting answers whether the version is disclosed, which is the factor's first half."}
+  "L04-001": {
+   "level": "L3",
+   "covered_by": [
+    "lab-03-route-order"
+   ],
+   "basis": "lab",
+   "note": "Run here on 2026-10-27 as obs-003. A guard that matched the raw path was bypassed by a percent-encoded spelling and by an uppercase one, both reaching the admin handler. Controls: the plain path is refused 401, an encoded unprotected path behaves like its plain form, and the valid key is still accepted."
+  },
+  "L04-002": {
+   "level": "L1",
+   "covered_by": [
+    "d13-ffuf"
+   ],
+   "basis": "entry",
+   "note": "Fuzzing the path shape will surface variant handling. The trailing slash case is not stated as a test."
+  },
+  "L04-009": {
+   "level": "L2",
+   "covered_by": [
+    "d07-sqlmap",
+    "d07-ghauri"
+   ],
+   "basis": "entry",
+   "note": "Parameterisation gaps are exactly what both engines detect and confirm, including in identifier positions."
+  },
+  "L04-010": {
+   "level": "L1",
+   "covered_by": [
+    "d07-ghauri"
+   ],
+   "basis": "entry",
+   "note": "Raw fragment reachability is a source question. The tools find the symptom, not the escape hatch."
+  },
+  "L04-014": {
+   "level": "L2",
+   "covered_by": [
+    "d07-dalfox",
+    "d07-xsser",
+    "d08-dalfox"
+   ],
+   "basis": "entry",
+   "note": "Context aware XSS scanning tests the auto escaping default by context, with execution as the oracle."
+  },
+  "L04-015": {
+   "level": "L2",
+   "covered_by": [
+    "d07-xsser"
+   ],
+   "basis": "entry",
+   "note": "A large context and encoding matrix is precisely the test of whether each context is handled separately."
+  },
+  "L04-017": {
+   "level": "L2",
+   "covered_by": [
+    "d07-sstimap",
+    "d15-tplmap"
+   ],
+   "basis": "entry",
+   "note": "Both detect template expression evaluation across engine families, with evaluation as the confirmation."
+  },
+  "L04-018": {
+   "level": "L2",
+   "covered_by": [
+    "d07-ysoserial",
+    "d15-ysoserial",
+    "d15-phpggc"
+   ],
+   "basis": "entry",
+   "note": "Gadget chain generation is the test of whether the deserialiser restricts accepted classes."
+  },
+  "L04-019": {
+   "level": "L1",
+   "covered_by": [
+    "d15-ysoserial-net"
+   ],
+   "basis": "entry",
+   "note": "ViewState deserialisation can fire before validation. The ordering question is implied by the gadget, not tested as a factor."
+  },
+  "L04-020": {
+   "level": "L2",
+   "covered_by": [
+    "d15-payloads",
+    "d15-ysoserial"
+   ],
+   "basis": "entry",
+   "note": "Polymorphic type nomination is the precondition of every gadget, and the payload corpus is organised around it."
+  },
+  "L04-021": {
+   "level": "L1",
+   "covered_by": [
+    "d24-cwe"
+   ],
+   "basis": "entry",
+   "note": "Error verbosity is a weakness class in the taxonomy. No artefact measures what a given stack returns."
+  },
+  "L04-023": {
+   "level": "L2",
+   "covered_by": [
+    "d13-lfisuite",
+    "d13-dotdotpwn"
+   ],
+   "basis": "entry",
+   "note": "Root confinement after decoding is the direct subject, with a file outside the root as the oracle."
+  },
+  "L04-025": {
+   "level": "L1",
+   "covered_by": [
+    "d03-rea-bundle"
+   ],
+   "basis": "entry",
+   "note": "Bundle analysis can reveal hardcoded secrets and defaults. It does not test what the framework generates when one is absent."
+  },
+  "L04-027": {
+   "level": "L2",
+   "covered_by": [
+    "d06-rea-page"
+   ],
+   "basis": "entry",
+   "note": "Reporting cookie attributes answers the default question directly, on a live instance."
+  },
+  "L04-028": {
+   "level": "L2",
+   "covered_by": [
+    "d08-corsy"
+   ],
+   "basis": "entry",
+   "note": "Origin reflection testing is the CORS default question, with a credentialed cross origin read as the oracle."
+  },
+  "L04-029": {
+   "level": "L1",
+   "covered_by": [
+    "d04-wstg-athn"
+   ],
+   "basis": "entry",
+   "note": "CSRF coverage is named in the list. Which verbs and content types are exempt is not."
+  },
+  "L04-030": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Host header trust in link generation is unaddressed, and it is one of the most reliable paths to password reset takeover."
+  },
+  "L04-031": {
+   "level": "L1",
+   "covered_by": [
+    "d22-nowafpls"
+   ],
+   "basis": "entry",
+   "note": "Header handling at an edge is touched by payload padding. Trusted proxy configuration is not."
+  },
+  "L04-032": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Open by default versus closed by default route posture is unaddressed, though it decides most accidental exposure."
+  },
+  "L04-033": {
+   "level": "L2",
+   "covered_by": [
+    "d05-autorize",
+    "d05-authmatrix"
+   ],
+   "basis": "entry",
+   "note": "Per action and per record permission is what both tools compare, with the role matrix as the oracle."
+  },
+  "L04-034": {
+   "level": "L2",
+   "covered_by": [
+    "d05-crapi",
+    "d05-vampi"
+   ],
+   "basis": "entry",
+   "note": "Both targets have real tenancy, so a cross tenant read confirms which layer enforces scoping."
+  },
+  "L04-035": {
+   "level": "L2",
+   "covered_by": [
+    "d13-fuxploider"
+   ],
+   "basis": "entry",
+   "note": "The extension, content type and magic byte matrix is the upload pipeline test, with execution or retrieval as the oracle."
+  },
+  "L04-036": {
+   "level": "L2",
+   "covered_by": [
+    "d13-ffuf",
+    "d13-curl"
+   ],
+   "basis": "entry",
+   "note": "Fuzzing the stored name and crafting the exact multipart body covers path computation from user input."
+  },
+  "L04-037": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Which native library parses an uploaded image is unaddressed. No entry discusses image processing."
+  },
+  "L04-038": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Redirect helper behaviour with absolute targets is unaddressed."
+  },
+  "L04-039": {
+   "level": "L1",
+   "covered_by": [
+    "d08-rea-page"
+   ],
+   "basis": "entry",
+   "note": "Response body shapes are captured, which is where an over serialised column would show. No entry tests serialisation policy."
+  },
+  "L04-040": {
+   "level": "L1",
+   "covered_by": [
+    "d11-ffuf",
+    "d11-arjun"
+   ],
+   "basis": "entry",
+   "note": "Parameter discovery finds undocumented filters. Whether they are allow listed is not tested."
+  },
+  "L04-042": {
+   "level": "L1",
+   "covered_by": [
+    "d12-newman"
+   ],
+   "basis": "entry",
+   "note": "Deterministic replay can produce a duplicate effect. Queue retry semantics are not modelled."
+  },
+  "L04-045": {
+   "level": "L1",
+   "covered_by": [
+    "d18-syft"
+   ],
+   "basis": "entry",
+   "note": "An SBOM shows the resolved tree. Whether the lock was honoured is a different question."
+  },
+  "L04-047": {
+   "level": "L1",
+   "covered_by": [
+    "d11-kiterunner"
+   ],
+   "basis": "entry",
+   "note": "Route discovery finds dynamic dispatch surfaces. Reflection exposure is not tested directly."
+  },
+  "L04-048": {
+   "level": "L1",
+   "covered_by": [
+    "d16-gitleaks",
+    "d18-gitleaks"
+   ],
+   "basis": "entry",
+   "note": "Secret scanning in logs and bundles covers one path of the logging exposure."
+  },
+  "L04-050": {
+   "level": "L1",
+   "covered_by": [
+    "d02-httpx"
+   ],
+   "basis": "entry",
+   "note": "Enumerating paths will find health and metrics routes. What they leak is not the stated test."
+  },
+  "L04-051": {
+   "level": "L1",
+   "covered_by": [
+    "d02-ffuf",
+    "d02-feroxbuster"
+   ],
+   "basis": "entry",
+   "note": "Route brute force finds admin mounts at guessable paths, which is the factor and without the posture question."
+  },
+  "L04-056": {
+   "level": "L2",
+   "covered_by": [
+    "d05-ffuf"
+   ],
+   "basis": "entry",
+   "note": "Enumerating sequential identifiers is the test, with another user's object as the confirmation."
+  },
+  "L04-058": {
+   "level": "L2",
+   "covered_by": [
+    "d16-hashcat",
+    "d16-john"
+   ],
+   "basis": "entry",
+   "note": "Cracking a stored hash measures the algorithm and cost directly."
+  },
+  "L04-061": {
+   "level": "L1",
+   "covered_by": [
+    "d03-whatweb",
+    "d03-wappalyzer"
+   ],
+   "basis": "entry",
+   "note": "Fingerprinting answers whether the version is disclosed, which is the factor's first half."
+  }
  }
 }

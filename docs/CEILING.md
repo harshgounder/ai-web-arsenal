@@ -23,7 +23,7 @@ The ceiling is high, and that is the most important finding in this document. Al
 | L01 substrate | 0 | 17 | 45 | 0 |
 | L02 network and transport | 13 | 3 | 46 | 0 |
 | L03 protocol semantics | 13 | 3 | 46 | 0 |
-| L04 frameworks and runtimes | 15 | 15 | 32 | 0 |
+| L04 frameworks and runtimes | 16 | 15 | 32 | 0 |
 | L05 client and browser | 5 | 18 | 39 | 0 |
 | L06 identity and session | 12 | 7 | 43 | 0 |
 | L07 data and storage | 8 | 15 | 39 | 0 |
@@ -67,8 +67,17 @@ What is not defensible, and will not be written in the README: that this is comp
 
 ## The one number still at zero
 
-Observed coverage is 2 of 1000. Every other figure in this repo is an argument; that one is an absence, and it closes only with a lab.
+Observed coverage is 4 of 1000. Every other figure in this repo is an argument; that one is an absence, and it closes only with a lab.
 
-Two labs closed 2 factors on 2026-10-27. `lab-01-race` shows 24 parallel creates producing 23 duplicates against a sequential control that produced one. `lab-02-jwt-alg` shows an unsigned token declaring alg none reaching an admin panel, while a wrong signature under HS256 was rejected and the genuine user token was refused. Both records are in `data/observations/observations.jsonl` and replay with `python3 scripts/observe.py --verify`.
+4 factors are observed, from four labs that all ran on 2026-10-27:
 
-The remaining 998 factors are still read and cited. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.
+| lab | what it shows | control |
+|---|---|---|
+| lab-01-race | 24 parallel creates produced 23 duplicates | sequential creates produced one |
+| lab-02-jwt-alg | an unsigned token with alg none reached admin | wrong signature 401, user token 403 |
+| lab-03-route-order | /%61dmin and /ADMIN reached admin | plain path 401, valid key accepted |
+| lab-04-cache-poison | a hostile header was served to another client | reflection is header dependent, no-store honoured |
+
+Every record is in `data/observations/observations.jsonl` and replays with `python3 scripts/observe.py --verify`.
+
+The remaining 996 factors are still read and cited. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.
