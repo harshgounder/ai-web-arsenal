@@ -11,7 +11,7 @@ Outputs:
   bootstrap/10-install-<profile>.sh   (one per profile that has tools)
   bootstrap/90-verify.sh
 """
-import json, os, stat
+import json, os, re, stat
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -265,12 +265,23 @@ def main():
 
     order = ["minimal", "recon", "web", "api", "ai-agent", "mobile", "re", "all"]
     made = []
+    written = {"lib.sh", "00-prereqs.sh", "90-verify.sh"}
     for i, p in enumerate([x for x in order if x in profiles], start=1):
         # 'all' is the union, so it is rendered last as the sum of everything
         tools = profiles[p]
         path = BOOT / f"{10 + i * 5:02d}-install-{p}.sh"
         path.write_text(render_profile(p, tools))
         made.append((p, path.name, len(tools)))
+        written.add(path.name)
+
+    # This directory is generated. A leftover from an earlier numbering is a trap: `bash
+    # bootstrap/*.sh` would run it, and the count of scripts stops matching the count claimed.
+    # Three such orphans existed (35-install-mobile, 40-install-re, 45-install-all).
+    removed = []
+    for f in sorted(BOOT.glob("*.sh")):
+        if f.name not in written and re.match(r"^\d{2}-.*\.sh$", f.name):
+            f.unlink()
+            removed.append(f.name)
 
     for f in list(BOOT.glob("*.sh")):
         f.chmod(f.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
@@ -278,7 +289,9 @@ def main():
     print(f"{'profile':12s} {'script':32s} tools")
     for p, name, n in made:
         print(f"{p:12s} {name:32s} {n}")
-    print(f"\nwrote {len(made) + 3} scripts into bootstrap/")
+    if removed:
+        print(f"\nremoved {len(removed)} orphaned script(s): {', '.join(removed)}")
+    print(f"\nwrote {len(written)} scripts into bootstrap/")
 
 
 if __name__ == "__main__":

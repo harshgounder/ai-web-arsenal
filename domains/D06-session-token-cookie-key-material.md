@@ -35,7 +35,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [rea inspect_web_page](https://rea.tools) | L03 surface mapping | A3 | A08,A03 | `mcp:rea` | yes | Storage key inventory and cookie attribute surface, passively |
-| [Atlas W07: identity state](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04 | `n/a data` | yes | Technique pointer. W07 is queued and this says so. |
+| [Atlas W07: identity state](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04 | `n/a data` | yes | Technique pointer. W07 is queued and this says so. |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A2 | A03 | `n/a reference` | no | Per platform session and token technique reference |
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A03 | `pacman:curl` | no | Attribute level control over cookies and headers |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A04,A03 | `pacman:mitmproxy` | yes | Observe and replay the whole session lifecycle, including logout and rotation |

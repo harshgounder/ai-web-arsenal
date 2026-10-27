@@ -10,13 +10,14 @@ regenerated from disk, it is not a number, it is a memory.
 
 ## 0. What this plan refuses to promise
 
+<!-- claim-ok: quotes the request in order to reject it as unmeasurable -->
 The ask was "the most complete in all of humanity". That sentence has no measurable content on its own,
 because every awesome list in this space also believes it, and none of them can check it. So it is
 converted here into something checkable:
 
-> This repo will be the only collection in this space that **defines its own denominator**, publishes
-> what fraction of it is covered, classifies the remainder as derivable, inferable or unavailable, and
-> separates what it read from what it ran.
+> No collection in this space defines its own denominator. This one will, and it will publish what
+> fraction is covered, classify the remainder as derivable, inferable or unavailable, and separate
+> what it read from what it ran.
 
 "Most complete" then means a number with a stated ceiling, not a feeling. If the denominator is wrong,
 the number is wrong, and the denominator is published so it can be attacked.
@@ -282,9 +283,10 @@ Gate: a measured improvement, or the claim is removed from the README.
 
 ### Phase 10: the REA operations
 
-The twelve missing operations, as code: LevelDB reader, wxapkg unpack, Flutter AOT and blutter, Hermes
-and React Native, HarmonyOS HAP, WARC, service worker reconstruction, WebAuthn attestation, signing
-recovery, source map recovery, plus the two that survive review.
+The ten gaps named in `data/domains/D31.json`, as code: LevelDB reader, wxapkg unpack, Flutter AOT
+and blutter, Hermes and React Native, HarmonyOS HAP, WARC, service worker reconstruction, WebAuthn
+attestation, signing recovery, and source map recovery. The count is 10, not 12; this line said twelve
+until the ledger was built, which is the point of the ledger.
 
 Each gets a fixture, a test, a doc and wiring into the MCP. This was a decision made and not honoured,
 which is why it is a phase and not a nice-to-have.
@@ -337,7 +339,7 @@ Effort, in work blocks of roughly one session each. These are ESTIMATES.
 | 7 range | 6 | containers, fixtures, per-class labs |
 | 8 counters | 5 | per product and per pattern |
 | 9 AI layer | 5 | MCP, skills, and an actual benchmark |
-| 10 REA ops | 4 | twelve operations with fixtures |
+| 10 REA ops | 4 | ten operations, each with a fixture |
 | 11 synthesis | 3 | graph and report |
 | total | 58 | |
 
@@ -377,16 +379,31 @@ instrument.
 
 ---
 
-## 7. Open decisions
+## 7. Decisions
 
-Four things change the shape of the plan and need a call before Phase 4 starts.
+Closed 2026-10-27, before Phase 0 started.
 
-1. **Range scope.** Full range (containers, per-class labs, about 6 blocks) or a thin range (three or
-   four flagship labs that convert the highest-value patterns, about 2 blocks)? Thin still breaks the
-   zero, which is the point.
-2. **Advisory mass mapping.** Tens of thousands of generated records is real breadth, but it floods the
-   repo with mechanically derived entries. Generate into a separate dataset with its own counts, or
-   interleave into the main patterns file?
-3. **RESUME.md.** Merge into RECHECK.md and keep one state doc, or keep both and make the checker
-   enforce that they agree? Merging is less rope.
-4. **Version naming.** Call the next release v2 and keep v1 tagged, or keep incrementing within v1?
+1. **Range scope: thin first.** Three or four flagship labs, about 2 blocks, chosen for the patterns
+   that carry the most weight. It breaks the zero and proves the method. The full range stays in the
+   plan as a later phase rather than being cut, because per-class labs are what make OBSERVED
+   comprehensive instead of illustrative.
+2. **Advisory mass mapping: separate dataset with its own counts.** Generated records never mix with
+   hand-authored ones, and no generated volume can inflate a curated figure. This is the same failure
+   the corpus hit when tools and taxonomy shared a file, so the rule is structural, not stylistic.
+3. **One state document.** RECHECK.md is the single source of state. RESUME.md becomes a pointer to it.
+   Two documents already drifted once; one is enough.
+4. **Version naming: tag v2 when the short path's gates pass.** Until then the repo stays v1 and the
+   version number is not used as a progress signal. A tag is a claim, so it waits for the gates.
+
+The effect on effort: thin range replaces the 6 block range with 2, so the total is 54 blocks and the
+short path is 14.
+
+| short path | blocks |
+|---|---|
+| Phase 0 truth layer | 3 |
+| Phase 1 denominator | 4 |
+| Phase 2 audit | 2 |
+| Phase 3 classify gap | 2 |
+| Phase 7 range, thin | 2 |
+| Phase 11 ceiling report, partial | 1 |
+| total | 14 |

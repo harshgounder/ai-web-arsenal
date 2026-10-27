@@ -40,7 +40,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [jadx](https://github.com/skylot/jadx) | L03 surface mapping | A2 | A08 | `pacman:jadx` | no | DEX to Java, the readable half of APK analysis |
 | [rea inspect_android_package](https://rea.tools) | L03 surface mapping | A3 | A08 | `mcp:rea` | yes | Manifest, permissions, classes and resources without writing source to disk |
 | [rea decode_android_resources](https://rea.tools) | L03 surface mapping | A3 | A08 | `mcp:rea` | yes | Readable AndroidManifest and string resources, the fastest way to find endpoints and keys |
-| [Atlas W05: file materialisation](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A06 | `n/a data` | yes | Technique pointer, W05 queued. Declared so the dependency is visible. |
+| [Atlas W05: file materialisation](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A06 | `n/a data` | yes | Technique pointer, W05 queued. Declared so the dependency is visible. |
 | [blutter (Flutter AOT)](https://github.com/worawit/blutter) | L05 hypothesis | A2 | A05,A06 | `git:https://github.com/worawit/blutter` | no | Recover Dart symbols from libapp.so, the only way into an app whose logic is not in DEX |
 | [rea inspect_android_class / inspect_android_method](https://rea.tools) | L05 hypothesis | A3 | A06 | `mcp:rea` | yes | Class members and a single decompiled method, plus reference tracing |
 | [WeChat mini program unpacking](https://github.com/search?q=wxapkg+unpacker&type=repositories) | L05 hypothesis | A2 | A05 | `git:https://github.com/Noisyfox/wxapkg-unpacker` | no | The only route into a mini program's code, a China specific surface |

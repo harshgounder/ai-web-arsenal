@@ -492,7 +492,7 @@
   {
    "id": "d05-atlas-w02",
    "name": "Atlas W02: 50 authorisation-on-write patterns",
-   "url": "../../web-attack-atlas/waves/W02/patterns.jsonl",
+   "url": "https://github.com/harshgounder/web-attack-atlas/blob/main/waves/W02/patterns.jsonl",
    "role": "The technique layer. Object substitution, tenant escape, mass assignment, function level gaps, ownership transfer, soft delete resurrection, bulk skips, alternate parsers, stale authorisation and 41 more, each with preconditions, oracle and counter.",
    "driver": {
     "install": "n/a data",

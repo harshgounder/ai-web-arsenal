@@ -549,7 +549,7 @@
   {
    "id": "d07-atlas-w04",
    "name": "Atlas W04: datastore writes",
-   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "url": "https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json",
    "role": "Technique pointer. W04 is queued and this says so.",
    "driver": {
     "install": "n/a data",

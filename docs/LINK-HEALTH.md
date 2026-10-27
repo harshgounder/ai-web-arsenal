@@ -114,7 +114,7 @@ taxonomy     624 of 706 mapped (88.4%)
 tools        64, 0 unresolved
 bootstrap    11 scripts generated
 domains      28 authored + 9 pointers, validator passes
-links        264 of 265 live
+links        266 of 267 answered
 ```
 
 The only non-live URL is `https://www.w3.org/TR/webauthn-3/` returning 403 to automated clients.

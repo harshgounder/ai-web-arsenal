@@ -27,6 +27,9 @@ EXPECTED = {
     "corpus_tool_rows": 8848,
     "corpus_tool_identities": 8692,
     "corpus_rows_with_url": 9671,
+    "corpus_tools_rows": 8848,
+    "corpus_taxonomy_rows": 11712,
+    "corpus_other_rows": 824,
     "enriched_entries": 444,
     "promotable_candidates": 1419,
     "sources": 19,
@@ -76,6 +79,12 @@ def git_state(repo):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser(description="Does RECHECK.md still describe this machine?")
+    ap.add_argument("--release", action="store_true",
+                    help="also fail on CHANGED, for tagging a release rather than working")
+    release = ap.parse_args().release
+
     print("=" * 78)
     print("RECHECK: does RECHECK.md still describe this machine?")
     print("=" * 78)
@@ -92,7 +101,10 @@ def main():
         record(f"{label} exists", True, f"{g['commits']} commits, {g['tracked']} tracked")
         record(f"{label} has remote", bool(g["remote"]) and want_remote in (g["remote"] or ""),
                g["remote"] or "none")
-        record(f"{label} working tree clean", g["dirty"] == 0, f"{g['dirty']} modified")
+        # A dirty tree is work in progress, not a false claim about the repository. It reports as
+        # CHANGED so the gate can run mid-session, and --release treats it as a failure.
+        record(f"{label} working tree clean", g["dirty"] == 0, f"{g['dirty']} modified",
+               changed=g["dirty"] != 0)
 
     record("contest-opsec exists (paused)", C.exists(),
            "paused, SCOPE.md only" if C.exists() else "missing")
@@ -111,7 +123,8 @@ def main():
                 if v.strip().isdigit():
                     got[k] = int(v.strip())
         for key in ("corpus_entries", "corpus_identities", "corpus_tool_rows",
-                    "corpus_tool_identities", "corpus_rows_with_url", "enriched_entries",
+                    "corpus_tool_identities", "corpus_rows_with_url", "corpus_tools_rows",
+                    "corpus_taxonomy_rows", "corpus_other_rows", "enriched_entries",
                     "promotable_candidates", "sources", "rows_total", "admitted",
                     "excluded", "held", "tools", "tools_unresolved", "prompt_packs",
                     "domains_rendered"):
@@ -121,6 +134,14 @@ def main():
             exp = EXPECTED[key]
             act = got[key]
             record(f"{key}", act == exp, f"doc {exp}, disk {act}", changed=act != exp)
+
+        # The split must partition the corpus exactly. This is the invariant that stops tools and
+        # taxonomy nodes sharing a total again.
+        parts = got.get("corpus_tools_rows", 0) + got.get("corpus_taxonomy_rows", 0) \
+            + got.get("corpus_other_rows", 0)
+        record("corpus split partitions the total", parts == got.get("corpus_entries", -1),
+               f"{got.get('corpus_tools_rows')} + {got.get('corpus_taxonomy_rows')} + "
+               f"{got.get('corpus_other_rows')} = {parts}, total {got.get('corpus_entries')}")
 
     # --- reconcile identity ---
     try:
@@ -210,7 +231,9 @@ def main():
         print("Update RECHECK.md before trusting it again.")
     if fails:
         print("\nFAIL means something RECHECK.md claims is not true. Investigate before continuing.")
-    return 0 if (fails == 0 and changed == 0) else 1
+    if release:
+        return 0 if (fails == 0 and changed == 0) else 1
+    return 0 if fails == 0 else 1
 
 
 if __name__ == "__main__":

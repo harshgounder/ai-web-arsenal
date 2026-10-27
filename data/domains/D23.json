@@ -204,7 +204,7 @@
   {
    "id": "d23-atlas",
    "name": "Atlas: chains and escalation (X01)",
-   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "url": "https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json",
    "role": "Technique pointer. X01 is queued; the atlas already names nine canonical chain shapes.",
    "driver": {
     "install": "n/a data",

@@ -288,7 +288,7 @@
   {
    "id": "d06-atlas-w07",
    "name": "Atlas W07: identity state",
-   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "url": "https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json",
    "role": "Technique pointer. W07 is queued and this says so.",
    "driver": {
     "install": "n/a data",

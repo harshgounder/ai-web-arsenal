@@ -315,7 +315,7 @@
   {
    "id": "d20-atlas-w12",
    "name": "Atlas W12: AI memory and retrieval state",
-   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "url": "https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json",
    "role": "Technique pointer, W12 queued. Declared so the dependency is visible.",
    "driver": {
     "install": "n/a reference",

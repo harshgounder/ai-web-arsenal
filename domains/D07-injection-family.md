@@ -36,7 +36,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
-| [Atlas W04: datastore writes](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A01,A04 | `n/a data` | yes | Technique pointer. W04 is queued and this says so. |
+| [Atlas W04: datastore writes](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A01,A04 | `n/a data` | yes | Technique pointer. W04 is queued and this says so. |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A0 | A01,A05 | `n/a reference` | no | Per class technique reference with payload context |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
 | [dtd-finder](https://github.com/GoSecure/dtd-finder) | L06 probing | A2 | A01,A06 | `git` | no | Finds DTD files reachable on the target, which turns blind XXE into file read |

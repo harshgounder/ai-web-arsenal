@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 44 | 265 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 47 | 267 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 265 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 267 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -91,7 +91,7 @@ Goal marked complete on round 40/40. **"Definitive" was not achieved and the REA
 | sequencing | vertical slice first |
 | held entries | admit unique-to-one-list as UNREVIEWED |
 
-**Unmet user decisions, stated plainly: REA operations (12) were not written. The 50+ bar (19) was not met by any domain; highest is D11 at 37. 28 domains were built where the user said 10.**
+**Unmet user decisions, stated plainly: the 10 named REA gaps were not built into operations. The 50+ bar (19) was not met by any domain; highest is D11 at 37. 28 domains were built where the user said 10.**
 
 ---
 
@@ -106,10 +106,11 @@ taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
 domains         28 authored + 9 explicit pointers + 0 empty
-enriched        444 entries with atom, preconditions, oracle, evades, detected_by, driver
+enriched        444 entries, all with atom and driver; 335 with preconditions, 346 with oracle,
+                175 with evades, 135 with detected_by. The mandatory-field rule is 75% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
-links           265 domain URLs checked, 264 live (1 is w3.org refusing bots)
+links           267 domain URLs checked, 266 answered (1 is w3.org refusing bots)
 ```
 
 ### Domain status
@@ -146,6 +147,27 @@ Queued (20): W04-W12, R01-R05, X01-X06.
 
 ---
 
+## 6b. Phase 0 status (the truth layer)
+
+Started 2026-10-27, after PLAN.md was approved.
+
+| item | state |
+|---|---|
+| claims ledger | built. 40 claims in `data/claims.yaml`, all pass, superlatives blocked |
+| one state document | done. RESUME.md is now a pointer, RECHECK.md is the only state |
+| corpus split | done. tools, taxonomy and other are separate files and must sum to the total |
+| regression tests | done. 30 tests, one per known defect class |
+| determinism | done as a command. 190 files, byte identical across 11 stages |
+| unified gate | done. `./scripts/gate.sh` exits 0 only when every claim holds |
+| URL provenance | built. `data/url-provenance.jsonl` holds one dated record per asserted URL, and `check-domain-links.py` regenerates it |
+
+Four things were wrong in the toolchain and are fixed here: `domain-link-check.json` had no
+generator at all, so it was a memory. The rest, all now in section 8: the entry completeness claim was
+false (75 percent, not 100), three bootstrap scripts were orphaned, and the REA backlog was stated as 12
+when the file names 10.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.
@@ -166,6 +188,10 @@ python3 scripts/build-indexes.py        # -> data/domains/*.index.json
 python3 scripts/dedupe-names.py
 python3 scripts/validate-domains.py     # must print "all invariants hold"
 python3 scripts/readme-stats.py         # every number quoted in README
+python3 scripts/check-claims.py         # every prose claim in data/claims.yaml
+python3 scripts/test-regressions.py     # the known defects, as tests that fail if they return
+python3 scripts/check-determinism.py    # rebuild and prove byte identity
+./scripts/gate.sh                       # all of the above in one command
 ```
 
 Atlas:
@@ -182,7 +208,7 @@ the parse stage.
 
 ---
 
-## 8. The fourteen defects found in this project's own work
+## 8. The nineteen defects found in this project's own work
 
 Every one was silent and plausible. None caught by reading. Do not reintroduce these.
 
@@ -202,6 +228,11 @@ Every one was silent and plausible. None caught by reading. Do not reintroduce t
 | 12 | the recheck identity line printed "+ residue" and let 75 orphan rows hide inside a word | name every term, sum them out loud |
 | 13 | 687 rows stored a bare owner/repo in the `url` field, so "rows carrying a URL" was counting identifiers | a locator is not a link |
 | 14 | build-indexes printed "TOTAL promotable 1439" pre-dedupe when the real figure is 1,419 | label the stage, not just the number |
+| 15 | RECHECK said 444 entries carried atom, preconditions, oracle, evades, detected_by and driver. Only 75% carry preconditions | a field list is not a coverage claim |
+| 16 | bootstrap held 3 orphaned scripts from an earlier numbering, so "11 generated" sat beside 14 files | a generated directory must own its contents |
+| 17 | the REA backlog was stated as 12 operations; D31 names 10 | count the file, not the memory |
+| 18 | `data/domain-link-check.json` was written by hand and had no generator, so the link health claim could not be rebuilt | an artefact with no producer is a memory |
+| 19 | seven entries stored a relative path in their `url` field, which the link checker cannot reach | a pointer is not a link |
 
 **The standing rule that came out of these: if a number cannot be regenerated from disk, it is not a
 number, it is a memory.**

@@ -424,7 +424,7 @@
   {
    "id": "d04-atlas-w07",
    "name": "Atlas W07: identity state patterns",
-   "url": "../../web-attack-atlas/waves/QUEUE.json",
+   "url": "https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json",
    "role": "Technique pointer. W07 is queued; when built it covers session, token, MFA enrolment, recovery and device trust writes.",
    "driver": {
     "install": "n/a data",

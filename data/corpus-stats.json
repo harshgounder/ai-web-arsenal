@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26",
+ "generated_at": "2026-10-27",
  "rows_parsed": 27787,
  "entries_canonical": 21384,
  "unresolved_rows": 3,
@@ -50,6 +50,11 @@
  },
  "unique_to_one_source": 20841,
  "multi_source_ge2": 543,
+ "split": {
+  "tools": 8848,
+  "taxonomy": 11712,
+  "other": 824
+ },
  "per_source": {
   "0xinfection__awesome-waf": {
    "rows": 301

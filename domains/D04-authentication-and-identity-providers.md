@@ -40,7 +40,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 |---|---|---|---|---|---|---|
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L03 surface mapping | A2 | A03,A08 | `pacman:mitmproxy` | yes | Capture the whole auth flow, including redirects, tokens and cookie transitions |
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A2 | A08,A03 | `aur:ffuf` | yes | Username and account enumeration via response and timing differentials |
-| [Atlas W07: identity state patterns](../../web-attack-atlas/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04,A06 | `n/a data` | yes | Technique pointer. W07 is queued; when built it covers session, token, MFA enrolment, recovery and device trust writes. |
+| [Atlas W07: identity state patterns](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04,A06 | `n/a data` | yes | Technique pointer. W07 is queued; when built it covers session, token, MFA enrolment, recovery and device trust writes. |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A03,A07 | `docker` | no | Classic lab with weak auth, brute force and session modules |
 | [Keycloak (as a test IdP)](https://www.keycloak.org/) | L06 probing | A2 | A03,A05 | `docker` | yes | A real IdP you control, so OAuth redirect, scope and token handling can be tested against something you configured |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15,A03 | `aur:nuclei-bin` | yes | Known auth misconfiguration and default credential templates before manual work |

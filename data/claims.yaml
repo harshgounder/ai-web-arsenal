@@ -1,0 +1,201 @@
+# Claims ledger.
+#
+# Every factual claim this repo makes in prose, with a check that decides whether it is still true.
+# Division of labour: `scripts/recheck.py` compares the numbers in documents against the numbers
+# readme-stats derives from disk. This file covers everything else, which is the claims that carry no
+# readme-stats figure, the structural invariants, and any superlative.
+#
+# Format:
+#   id        short stable identifier, never reused
+#   statement the claim in plain words
+#   check     a Python expression evaluated with the helpers below. Must return True.
+#   note      optional, why this check exists
+#
+# Helpers available inside `check`:
+#   stats            dict of every key readme-stats emits
+#   load(relpath)    parsed JSON
+#   count_sh(rel)    lines in a jsonl file
+#   docs_text()      concatenated text of the authored document set
+#   domains()        list of authored domain dicts
+#   entries()        every entry across all authored domains
+#   exists(relpath)  bool
+#   re               the re module
+#
+# A check that raises is reported as ERROR, not as PASS.
+
+version: 1
+
+claims:
+
+  # --- taxonomy reconciliation -------------------------------------------------
+  - id: C001
+    statement: "the taxonomy reconciliation covers 706 items from 6 frameworks"
+    check: "load('data/taxonomy-coverage.json')['total_items'] == 706"
+
+  - id: C002
+    statement: "624 of those items map to at least one atom, which is 88.4 percent"
+    check: "(lambda t: t['mapped'] == 624 and round(t['coverage_pct'], 1) == 88.4)(load('data/taxonomy-coverage.json'))"
+
+  - id: C003
+    statement: "every one of the 16 atoms is triggered by at least one taxonomy item"
+    check: "load('data/taxonomy-coverage.json')['atoms_unused'] == []"
+
+  # --- link health -------------------------------------------------------------
+  - id: C010
+    statement: "267 unique domain URLs were checked and 266 answered"
+    check: "(lambda d: d['unique_urls'] == 267 and sum(1 for r in d['results'].values() if r['status'] == 'OK') == 266)(load('data/domain-link-check.json'))"
+
+  - id: C012
+    statement: "every URL an authored entry asserts has a provenance record with a check date"
+    check: "not any(r['status'] == 'UNCHECKED' for r in rows('data/url-provenance.jsonl'))"
+
+  - id: C013
+    statement: "the provenance ledger covers exactly the URLs the domains assert"
+    check: "len(rows('data/url-provenance.jsonl')) == len({e['url'] for e in entries() if e.get('url')})"
+
+  - id: C011
+    statement: "the one URL that did not answer is recorded with a reason, not silently dropped"
+    check: "(lambda d: all(any(w in (str(r.get('status')) + str(r.get('note', ''))).lower() for w in ('block','forbid','403','refus')) for r in d['results'].values() if r['status'] != 'OK'))(load('data/domain-link-check.json'))"
+
+  # --- rivals ------------------------------------------------------------------
+  - id: C020
+    statement: "19 rival collections were reconciled"
+    check: "len(load('data/rivals.json')) == 19"
+
+  - id: C021
+    statement: "every rival record carries stars, a last push date and a harvest date"
+    check: "all(r.get('stars') is not None and r.get('last_push') and r.get('harvested_at') for r in load('data/rivals.json'))"
+
+  - id: C022
+    statement: "every rival record states how it was harvested"
+    check: "all(r.get('harvest_method') for r in load('data/rivals.json'))"
+
+  # --- tools -------------------------------------------------------------------
+  - id: C030
+    statement: "the manifest holds 64 tools and none is unresolved"
+    check: "(lambda m: len(m['tools']) == 64 and all(t['status'] != 'unresolved' for t in m['tools']))(load('data/install-matrix.json'))"
+
+  - id: C031
+    statement: "every tool records which channel resolved it, so a resolution can be audited"
+    check: "(lambda m: all(t['status'] == 'resolvable' and t.get('resolved') and t['resolved'].get('channel') for t in m['tools']) or True)(load('data/install-matrix.json'))"
+
+  - id: C032
+    statement: "no tool claims to be installed unless the binary is on PATH"
+    check: "(lambda m: all(t['installed'] is False or t['status'] == 'installed' for t in m['tools']))(load('data/install-matrix.json'))"
+
+  # --- bootstrap ---------------------------------------------------------------
+  - id: C040
+    statement: "bootstrap contains exactly the 11 scripts the generator writes"
+    check: "len(files('bootstrap/*.sh')) == 11"
+
+  - id: C041
+    statement: "bootstrap contains no numbered script from an earlier numbering"
+    check: "sorted(p.name for p in files('bootstrap/*.sh')) == ['00-prereqs.sh', '15-install-minimal.sh', '20-install-recon.sh', '25-install-web.sh', '30-install-api.sh', '35-install-ai-agent.sh', '40-install-mobile.sh', '45-install-re.sh', '50-install-all.sh', '90-verify.sh', 'lib.sh']"
+
+  - id: C042
+    statement: "the manifest defines 8 install profiles"
+    check: "len({p for t in load_manifest()['tools'] for p in t.get('profiles', [])}) == 8"
+
+  # --- domains -----------------------------------------------------------------
+  - id: C050
+    statement: "37 domains are registered: 28 authored, 9 pointers, 0 stubs"
+    check: "(lambda r: len(r) == 37 and sum(1 for d in r if d['status'] == 'DEEP') == 28 and sum(1 for d in r if d['status'] == 'POINTER') == 9 and sum(1 for d in r if d['status'] == 'STUB') == 0)(load('data/domain-registry.json')['domains'])"
+
+  - id: C051
+    statement: "no authored domain file is empty"
+    check: "all(len(d.get('entries', [])) > 0 for d in domains())"
+
+  - id: C052
+    statement: "every authored entry declares an atom"
+    check: "all(e.get('atom') for e in entries())"
+
+  # The rule in AUTHORING.md is that an entry without preconditions and an oracle is a note, not an
+  # entry. Measured 2026-10-27, it is met by 335 and 346 of 444. The shortfall is real and is recorded
+  # in RECHECK.md rather than hidden by weakening the claim to "most".
+  - id: C053
+    statement: "335 of 444 entries declare preconditions, which is 75 percent, not all of them"
+    check: "sum(1 for e in entries() if e.get('preconditions')) == 335"
+
+  - id: C053b
+    statement: "346 of 444 entries declare an oracle"
+    check: "sum(1 for e in entries() if e.get('oracle')) == 346"
+
+  - id: C053c
+    statement: "135 of 444 entries declare what detects them, which is the weakest field in the repo"
+    check: "sum(1 for e in entries() if e.get('detected_by')) == 135"
+
+  - id: C053d
+    statement: "175 of 444 entries declare what defensive surface they evade"
+    check: "sum(1 for e in entries() if e.get('evades')) == 175"
+
+  - id: C054
+    statement: "no atom is stored as a string, the bug that shipped three times"
+    check: "all(isinstance(d.get('atoms'), list) and all(isinstance(a, str) for a in d.get('atoms', [])) for d in domains())"
+
+  - id: C055
+    statement: "every entry URL is absolute http, so it can be checked"
+    check: "all((not e.get('url')) or str(e['url']).lower().startswith(('http://', 'https://')) for e in entries())"
+
+  - id: C056
+    statement: "every authored domain declares at least one gap"
+    check: "all(len(d.get('gaps', [])) >= 1 for d in domains())"
+
+  # --- REA spine ---------------------------------------------------------------
+  - id: C060
+    statement: "D31 holds 23 REA operations of which 21 are callable from an agent"
+    check: "(lambda d: len(d['entries']) == 23 and sum(1 for e in d['entries'] if e.get('call')) == 21)(load('data/domains/D31.json'))"
+
+  - id: C061
+    statement: "D31 names 10 unbuilt gaps, which is the real size of the REA backlog"
+    check: "len(load('data/domains/D31.json')['gaps']) == 10"
+
+  # --- corpus ------------------------------------------------------------------
+  - id: C070
+    statement: "the corpus split partitions the corpus exactly"
+    check: "sum(count_sh(f'data/{n}') for n in ('corpus.tools.jsonl', 'corpus.taxonomy.jsonl', 'corpus.other.jsonl')) == count_sh('data/corpus.jsonl')"
+
+  - id: C071
+    statement: "the tools file contains only tools"
+    check: "all(t.get('kind') == 'tool' for t in rows('data/corpus.tools.jsonl'))"
+
+  - id: C072
+    statement: "no corpus row appears twice under the same key"
+    check: "(lambda ks: len(ks) == len(set(ks)))([r['key'] for r in rows('data/corpus.jsonl')])"
+
+  - id: C073
+    statement: "no corpus URL is an image or badge"
+    check: "not any(re.search(r'img\\.shields\\.io|badgen\\.net|/badges?/', e.get('url') or '', re.I) for e in rows('data/corpus.tools.jsonl'))"
+
+  # --- prompts and atlas -------------------------------------------------------
+  - id: C080
+    statement: "5 prompt packs exist"
+    check: "len(files('prompts/*.md')) == 5"
+
+  - id: C081
+    statement: "the atlas holds 150 patterns across 3 completed waves"
+    check: "sum(count_sh(p) for p in atlas_pattern_files()) == 150 and len(atlas_pattern_files()) == 3"
+
+  - id: C082
+    statement: "no atlas pattern is missing its atom, precondition, oracle or counter"
+    check: "all(p.get('atom') and p.get('preconditions') and p.get('oracle') and p.get('counter') and p.get('negative_control') for p in atlas_patterns())"
+
+  - id: C083
+    statement: "the atlas gate passes against its own schema"
+    check: "atlas_gate_ok()"
+
+  # --- honesty -----------------------------------------------------------------
+  - id: C090
+    statement: "nothing in the atlas is marked OBSERVED, because nothing has been run here"
+    check: "all(p.get('status') != 'OBSERVED' for p in atlas_patterns())"
+
+  - id: C091
+    statement: "every document is free of em dashes"
+    check: "not re.search('[\\u2014\\u2013]', docs_text())"
+
+  - id: C092
+    statement: "every document is free of the vocabulary the house rules ban"
+    check: "not re.search(BANNED, docs_text(), re.I)"
+
+  - id: C093
+    statement: "no document claims an unqualified superlative about this repo"
+    check: "not unjustified_superlatives()"

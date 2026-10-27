@@ -161,7 +161,7 @@ mitmdump -w flows.mitm
 #    -> D24 evidence schema, negative control required
 ```
 
-Step 2 and 3 are the ones nobody else does first, and they are why the findings are better than a
+Step 2 and 3 are the ones most writeups skip, and they are why the findings hold up better than a
 scanner's.
 
 ---

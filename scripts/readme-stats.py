@@ -19,6 +19,11 @@ tiers = {}
 for l in open(R/"data"/"corpus.jsonl"):
     t = json.loads(l)["tier"]; tiers[t] = tiers.get(t,0)+1
 print(f"corpus_entries {corpus}")
+_splits = {"corpus_tools_rows": "corpus.tools.jsonl",
+           "corpus_taxonomy_rows": "corpus.taxonomy.jsonl",
+           "corpus_other_rows": "corpus.other.jsonl"}
+for _k, _f in _splits.items():
+    print(f"{_k} {n(R/'data'/_f)}")
 try:
     _ms = json.load(open(R/'data'/'corpus-merge-stats.json'))
     print(f"corpus_identities {_ms['entries_by_identity']}")

@@ -305,13 +305,32 @@ def main():
         for e in out:
             fh.write(json.dumps(e, ensure_ascii=False) + "\n")
 
+    # One file used to hold tools, taxonomy nodes and social rows, and the row total was quoted as a
+    # tool count, overstating tools by 2.4x. The union stays for backward compatibility; these three
+    # files are what any count must name from now on.
+    split = {"tools": DATA / "corpus.tools.jsonl",
+             "taxonomy": DATA / "corpus.taxonomy.jsonl",
+             "other": DATA / "corpus.other.jsonl"}
+    buckets = {"tools": [], "taxonomy": [], "other": []}
+    for e in out:
+        if e["kind"] == "tool":
+            buckets["tools"].append(e)
+        elif e["kind"] == "taxonomy_node":
+            buckets["taxonomy"].append(e)
+        else:
+            buckets["other"].append(e)
+    for name, path in split.items():
+        with open(path, "w", encoding="utf-8") as fh:
+            for e in buckets[name]:
+                fh.write(json.dumps(e, ensure_ascii=False) + "\n")
+
     tiers = Counter(e["tier"] for e in out)
     kinds = Counter(e["kind"] for e in out)
     doms = Counter(e["domain"] or "unclassified" for e in out)
     tail = sum(1 for e in out if e["n_sources"] == 1)
 
     stats = {
-        "generated_at": "2026-10-26",
+        "generated_at": "2026-10-27",
         "rows_parsed": sum(c["rows"] for c in per_source.values()),
         "entries_canonical": len(out),
         "unresolved_rows": sum(c["unresolved"] for c in per_source.values()),
@@ -320,11 +339,13 @@ def main():
         "domains": dict(doms.most_common()),
         "unique_to_one_source": tail,
         "multi_source_ge2": sum(1 for e in out if e["n_sources"] >= 2),
+        "split": {name: len(rows) for name, rows in buckets.items()},
         "per_source": {k: dict(v) for k, v in per_source.items()},
     }
     json.dump(stats, open(DATA / "corpus-stats.json", "w"), indent=1)
 
     print("entries_canonical", len(out))
+    print("split            ", stats["split"])
     print("unresolved_rows  ", stats["unresolved_rows"])
     print("tiers")
     for k, v in tiers.most_common():

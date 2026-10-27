@@ -122,15 +122,21 @@ Step seven is the one that fixes AI pentesting. A single agent that both finds a
 ```
 ai-web-arsenal/
 ├── README.md                  you are here
+├── PLAN.md                    the denominator, 16 lenses, 11 phases, gates
 ├── SCOPE-v1.md                the superset derivation: 11 axes, cell model
 ├── BOOTSTRAP.md               bring-your-own-AI setup, Arch first
-├── RECHECK.md                 post-compaction state: goals, decisions, what is done and not
-├── RESUME.md                  state, rebuild commands, traps already paid for
-├── LOG.md                     step log, including a verification pass that found six more defects
+├── RECHECK.md                 the single source of state: what is done, not done, open
+├── AUTHORING.md               how to add a domain, run order, every trap already hit
+├── RESUME.md                  a pointer to RECHECK and AUTHORING, nothing else
+├── LOG.md                     step log, including the verification passes that found nine more defects
 ├── manifest/tools.yaml        single source of truth for 64 tools
 ├── bootstrap/                 11 generated installer scripts
 ├── data/
 │   ├── corpus.jsonl           the union, every entry accounted for
+│   ├── corpus.tools.jsonl     8,848 tools, counted separately on purpose
+│   ├── corpus.taxonomy.jsonl  11,712 taxonomy nodes, never counted as tools
+│   ├── corpus.other.jsonl     824 social and knowledge rows
+│   ├── claims.yaml            every prose claim with a check that decides if it is still true
 │   ├── reconcile/             per-source disposition ledger and summary
 │   ├── taxonomy/              6 taxonomies parsed to test IDs
 │   ├── install-matrix.json    verified availability per tool
@@ -141,8 +147,11 @@ ai-web-arsenal/
 ├── mcps/                      working MCP configs
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── docs/                      taxonomy coverage, link health, orchestration
-└── scripts/                   13 reproducible pipeline stages
+└── scripts/                   20 pipeline and gate scripts, one command to check them all
 ```
+
+Run `./scripts/gate.sh` to check the whole repository. Exit 0 means every claim in it is currently true.
+`--full` adds the network stage and a rebuild that proves the generators are deterministic.
 
 ---
 
@@ -227,7 +236,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | orphan rows (source row with no corpus match) | 74 |
 | taxonomy items mapped to atoms | 624 of 706 (88.4%) |
 | tools verified | 64, 0 unresolved |
-| domain URLs checked | 265, 264 live |
+| domain URLs checked | 267, 266 answered |
 | atlas patterns | 150, gate passing |
 
 Nothing was silently dropped. Every excluded row carries one of: `TAXONOMY_NODE`, `SOCIAL_OR_VIDEO`, `OUT_OF_SCOPE_NONWEB`, `KNOWLEDGE_NOT_TOOL`, `MCP_NON_SECURITY`, `IMAGE_NOT_ENTRY`, `UNCLASSIFIED_LOW_SIGNAL`.
