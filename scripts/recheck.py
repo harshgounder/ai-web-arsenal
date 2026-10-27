@@ -226,16 +226,41 @@ def main():
         record("atlas patterns", False, "could not parse")
     record("atlas gate passes", "gate: all pass" in out, "")
 
-    # --- README badge numbers must not contradict stats ---
+    # --- README prose numbers must match the same figures the docs do ---
+    # The previous version of this block checked `"444" in readme`, which passed because 444 appears in
+    # the defects table rather than because the metric was right. A check that passes for the wrong reason
+    # is worse than no check, so these parse the specific sentence or row.
     try:
+        import re as _re
         readme = (A / "README.md").read_text()
-        checks = [
-            ("enriched entries 444", "444" in readme),
-            ("tools 64 verified", "64" in readme),
-            ("domains 28 authored", "28" in readme),
-        ]
-        for name, ok in checks:
-            record(f"README states {name}", ok, "")
+        st = got  # the stats dict built from readme-stats earlier in this function
+        readme_got = {}
+        m = _re.search(r"\| \*\*total\*\* \| \*\*1,000\*\* \| \*\*(\d[\d,]*)\*\* \|", readme)
+        if m:
+            readme_got["coverage total in the scoreboard"] = int(m.group(1).replace(",", ""))
+        m = _re.search(r"The ([\d,]+) uncovered factors are classified", readme)
+        if m:
+            readme_got["gap total in the prose"] = int(m.group(1).replace(",", ""))
+        m = _re.search(r"of ([\d,]+) entries,", readme)
+        if m:
+            readme_got["entry total in the prose"] = int(m.group(1).replace(",", ""))
+        m = _re.search(r"Observed: (\d+) of 1,000", readme)
+        if m:
+            readme_got["observed count on the badge"] = int(m.group(1))
+
+        expect = {
+            "coverage total in the scoreboard": st.get("coverage_l2plus"),
+            "gap total in the prose": st.get("gap_total"),
+            "entry total in the prose": st.get("entries_total"),
+            "observed count on the badge": st.get("coverage_l3"),
+        }
+        for name, val in readme_got.items():
+            exp = expect.get(name)
+            ok = exp is not None and val == exp
+            record(f"README {name}", ok, f"readme {val}, stats {exp}", changed=not ok)
+        for name in expect:
+            if name not in readme_got:
+                record(f"README {name}", False, "sentence not found, so it is unchecked")
     except Exception as e:
         record("README readable", False, str(e)[:120])
 

@@ -703,6 +703,13 @@ for an absent import.
 Idempotence was also checked by hand, since a claim cannot cheaply run the installer: two dry runs of
 `20-install-recon.sh` produced identical output modulo the log timestamp.
 
+While adding those, three existing checks turned out to be passing for the wrong reason. They read
+`"444" in readme`, `"64" in readme`, `"28" in readme`, and 444 still appears in the defects table where it
+is describing a past mistake. The check passed on a mention rather than on the metric. They are replaced by
+four checks that parse the actual sentence or table row and compare against the stats generator: the
+scoreboard total, the gap sentence, the entry total and the observed count. A check that passes for the
+wrong reason is worse than no check.
+
 ---
 
 ## 7. How to re-derive everything
