@@ -1,0 +1,29 @@
+{
+ "lens": "L08",
+ "name": "business logic and money",
+ "default": "L0",
+ "reason": "This is the lens with the most impact and the least operational coverage. D12 holds four race and replay instruments and a test list, which is enough to find the mechanisms but not the rules. Every pricing, refund, coupon, inventory, auction and payout factor is unaddressed: nothing in either repo states how to test a discount stack or a proration cycle.",
+ "exceptions": {
+  "L08-001": {"level": "L1", "covered_by": ["d12-wstg-busl"], "basis": "entry", "note": "Price source authority is a named business logic case in the test list. No artefact performs the check."},
+  "L08-004": {"level": "L1", "covered_by": ["d12-wstg-busl"], "basis": "entry", "note": "Rounding repetition is a named case with no procedure."},
+  "L08-006": {"level": "L1", "covered_by": ["d12-wstg-busl"], "basis": "entry", "note": "Quantity overflow is named as an edge case, without a payload or an oracle."},
+  "L08-007": {"level": "L1", "covered_by": ["d12-wstg-busl"], "basis": "entry", "note": "Discount stacking appears in the list. Ordering rules are not modelled anywhere here."},
+  "L08-008": {"level": "L1", "covered_by": ["d12-race-the-web"], "basis": "entry", "note": "Coupon reuse is exactly a race, and the harness enables the test without stating the coupon case."},
+  "L08-020": {"level": "L0", "covered_by": [], "basis": "none", "note": "Plan downgrade data retention is unaddressed."},
+  "L08-023": {"level": "L2", "covered_by": ["d12-race-the-web", "d12-turbo-intruder"], "basis": "entry", "note": "Inventory oversell through a checkout race is the canonical case for both harnesses, and both state the parallel send and the confirmation."},
+  "L08-024": {"level": "L2", "covered_by": ["d12-turbo-intruder"], "basis": "entry", "note": "Single packet attack is the specific technique for racing the final decrement, with a stated oracle."},
+  "L08-026": {"level": "L0", "covered_by": [], "basis": "none", "note": "Shipping cost recomputation is unaddressed."},
+  "L08-027": {"level": "L0", "covered_by": [], "basis": "none", "note": "Tax jurisdiction and exemption validation are unaddressed."},
+  "L08-032": {"level": "L0", "covered_by": [], "basis": "none", "note": "Draw fairness is unaddressed."},
+  "L08-033": {"level": "L0", "covered_by": [], "basis": "none", "note": "Self referral is unaddressed."},
+  "L08-039": {"level": "L0", "covered_by": [], "basis": "none", "note": "Point minting is unaddressed."},
+  "L08-041": {"level": "L1", "covered_by": ["d12-rea-capture"], "basis": "entry", "note": "A deterministic capture of a multi step flow is the input a transfer abuse test needs. The transfer rules themselves are not modelled."},
+  "L08-042": {"level": "L0", "covered_by": [], "basis": "none", "note": "Withdrawal versus deposit timing is unaddressed, and it is a race the harness could express."},
+  "L08-043": {"level": "L2", "covered_by": ["d12-race-the-web", "d12-mitmproxy"], "basis": "entry", "note": "Double spend across two channels is a parallel request case, and mitmproxy provides the second channel with byte control."},
+  "L08-046": {"level": "L2", "covered_by": ["d12-newman", "d12-mitmproxy"], "basis": "entry", "note": "Replaying a multi step sequence deterministically and reordering it is the procedure for skipping or reversing an order state, with the resulting state as the oracle."},
+  "L08-047": {"level": "L1", "covered_by": ["d12-race-the-web"], "basis": "entry", "note": "Cancel after fulfilment is a race the harness can express and no entry states it as a case."},
+  "L08-049": {"level": "L1", "covered_by": ["d12-wstg-busl"], "basis": "entry", "note": "Workflow bypass is named in the list. Four eyes enforcement is not."},
+  "L08-050": {"level": "L1", "covered_by": ["d12-wstg-busl"], "basis": "entry", "note": "Limit circumvention by splitting is a named case with no procedure."},
+  "L08-061": {"level": "L0", "covered_by": [], "basis": "none", "note": "Experiment bucket manipulation is unaddressed."}
+ }
+}

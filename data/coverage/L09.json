@@ -1,0 +1,160 @@
+{
+ "lens": "L09",
+ "name": "infrastructure and edge",
+ "default": "L0",
+ "reason": "The edge is covered where a product exists to test it: cache behaviour, metadata reachability, IAM paths and WAF detection. Everything about orchestrator defaults, serverless state, egress, timeouts and retry amplification is unaddressed, which is most of what makes cloud incidents expensive.",
+ "exceptions": {
+  "L09-001": {
+   "level": "L2",
+   "covered_by": [
+    "d09-smuggler"
+   ],
+   "basis": "entry",
+   "note": "A parser disagreement at the edge is the smuggling test, stated with its confirmation."
+  },
+  "L09-002": {
+   "level": "L2",
+   "covered_by": [
+    "d22-gotestwaf"
+   ],
+   "basis": "entry",
+   "note": "Measuring detection coverage with a score is the rule completeness question answered empirically."
+  },
+  "L09-004": {
+   "level": "L2",
+   "covered_by": [
+    "d22-nowafpls"
+   ],
+   "basis": "entry",
+   "note": "Padding to defeat a body size limit is exactly the uninspected body case, with a passed payload as the oracle."
+  },
+  "L09-007": {
+   "level": "L1",
+   "covered_by": [
+    "d22-ffuf"
+   ],
+   "basis": "entry",
+   "note": "Pacing to survive limits implies keying, and which property is counted is not tested."
+  },
+  "L09-010": {
+   "level": "L1",
+   "covered_by": [
+    "d02-shodan-censys"
+   ],
+   "basis": "entry",
+   "note": "Internet wide scanning finds origin addresses that answer directly. The bypass is found, not confirmed."
+  },
+  "L09-012": {
+   "level": "L2",
+   "covered_by": [
+    "d10-wcvs"
+   ],
+   "basis": "entry",
+   "note": "Unkeyed input poisoning is the scanner's stated subject with a served poisoned response as the oracle."
+  },
+  "L09-013": {
+   "level": "L2",
+   "covered_by": [
+    "d10-wcvs"
+   ],
+   "basis": "entry",
+   "note": "Cache deception is named as one of the classes the tool reports."
+  },
+  "L09-017": {
+   "level": "L1",
+   "covered_by": [
+    "d17-cloudfox"
+   ],
+   "basis": "entry",
+   "note": "Attack path enumeration finds routes and roles with gaps. Gateway default posture is not separately tested."
+  },
+  "L09-023": {
+   "level": "L1",
+   "covered_by": [
+    "d17-trivy"
+   ],
+   "basis": "entry",
+   "note": "Image and IaC scanning reports privileged containers. Runtime privilege is not exercised."
+  },
+  "L09-025": {
+   "level": "L1",
+   "covered_by": [
+    "d17-kube-hunter"
+   ],
+   "basis": "entry",
+   "note": "External discovery of the control plane is the entry's subject, and it reports exposure without exploiting it."
+  },
+  "L09-028": {
+   "level": "L1",
+   "covered_by": [
+    "d17-cloudfox"
+   ],
+   "basis": "entry",
+   "note": "Path enumeration reaches secrets a role can read. Whether that matches purpose is a judgement call."
+  },
+  "L09-031": {
+   "level": "L2",
+   "covered_by": [
+    "d17-imds"
+   ],
+   "basis": "entry",
+   "note": "The metadata credential path is the entry's subject, with credentials returned as the oracle."
+  },
+  "L09-033": {
+   "level": "L2",
+   "covered_by": [
+    "d17-pathrunner"
+   ],
+   "basis": "entry",
+   "note": "IAM privilege escalation paths through assumable conditions are exactly this factor, with a reached role as the confirmation."
+  },
+  "L09-034": {
+   "level": "L2",
+   "covered_by": [
+    "d17-prowler"
+   ],
+   "basis": "entry",
+   "note": "Wildcard action and resource detection is a posture check the tool reports directly."
+  },
+  "L09-036": {
+   "level": "L2",
+   "covered_by": [
+    "d17-scoutsuite"
+   ],
+   "basis": "entry",
+   "note": "Bucket policy audit is the factor, with an anonymously readable object as the oracle."
+  },
+  "L09-047": {
+   "level": "L2",
+   "covered_by": [
+    "d02-dnsx"
+   ],
+   "basis": "entry",
+   "note": "Zone transfer and record enumeration is the tool's function, with a record listing as the oracle."
+  },
+  "L09-049": {
+   "level": "L2",
+   "covered_by": [
+    "d02-subjack"
+   ],
+   "basis": "entry",
+   "note": "Dangling records pointing at a claimable resource is the whole subject, with a served takeover page as the oracle."
+  },
+  "L09-051": {
+   "level": "L1",
+   "covered_by": [
+    "d02-masscan"
+   ],
+   "basis": "entry",
+   "note": "Port scanning finds exposed management interfaces. Whether they are authenticated is a second step."
+  },
+  "L09-061": {
+   "level": "L1",
+   "covered_by": [
+    "d25-zeek"
+   ],
+   "basis": "entry",
+   "note": "The analysis framework is what would answer visibility. Coverage measurement is not stated."
+  }
+ }
+}

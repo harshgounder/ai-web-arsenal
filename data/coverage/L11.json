@@ -1,0 +1,30 @@
+{
+ "lens": "L11",
+ "name": "human and organisational",
+ "default": "L0",
+ "reason": "Almost nothing. Two entries touch reporting practice and one touches credential handling. Every factor that decides whether a person can be talked into an action, which is most successful intrusion, has no artefact in either repo. This is stated as the largest people gap.",
+ "exceptions": {
+  "L11-026": {
+   "level": "L1",
+   "covered_by": [
+    "d24-wstg-report"
+   ],
+   "basis": "entry",
+   "note": "Reporting practice covers how to communicate a finding. Disclosure handling as a process is named only by adjacency."
+  },
+  "L11-030": {
+   "level": "L1",
+   "covered_by": [
+    "d18-scorecard"
+   ],
+   "basis": "entry",
+   "note": "The scorecard reflects project hygiene, which is a weak proxy for whether a developer learns from a finding."
+  },
+  "L11-040": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Handover completeness is unaddressed."
+  }
+ }
+}

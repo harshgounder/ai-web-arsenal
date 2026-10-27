@@ -1,0 +1,30 @@
+{
+ "lens": "L13",
+ "name": "regulation and standards",
+ "default": "L0",
+ "reason": "Effectively zero, and this is a deliberate statement rather than an omission. The repo defines no scope of authorisation, no disclosure procedure and no evidence handling standard. Every pattern carries an authorisation precondition, which is a rule in prose, not an artefact that a reader can run.",
+ "exceptions": {
+  "L13-025": {
+   "level": "L1",
+   "covered_by": [
+    "d17-cis"
+   ],
+   "basis": "entry",
+   "note": "A hardening baseline is one reading of a standard. Divergence between auditors is not tested."
+  },
+  "L13-001": {
+   "level": "L1",
+   "covered_by": [
+    "d24-wstg-report"
+   ],
+   "basis": "entry",
+   "note": "Scope is stated as a requirement in reporting practice. No artefact encodes what is in and out."
+  },
+  "L13-005": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "No artefact addresses the legal limits of a test, which is a gap in a repo that claims authorisation is a precondition."
+  }
+ }
+}

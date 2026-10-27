@@ -1,0 +1,176 @@
+{
+ "lens": "L07",
+ "name": "data and storage",
+ "default": "L0",
+ "reason": "Storage factors with no artefact. Injection and archive handling are covered because tools exist for them. Everything that decides whether a store leaks across tenants, which is aggregation, counts, replicas, replicas of permissions and export paths, is unaddressed.",
+ "exceptions": {
+  "L07-001": {
+   "level": "L2",
+   "covered_by": [
+    "d07-sqlmap"
+   ],
+   "basis": "entry",
+   "note": "Injection surface enumeration across positions is the tool's function, with extraction as the oracle."
+  },
+  "L07-002": {
+   "level": "L2",
+   "covered_by": [
+    "d07-sqlmap"
+   ],
+   "basis": "entry",
+   "note": "The engine tests identifier, order and limit positions, which is exactly where binding usually fails."
+  },
+  "L07-003": {
+   "level": "L1",
+   "covered_by": [
+    "d07-sqlmap"
+   ],
+   "basis": "entry",
+   "note": "Stacked query support is detected by some techniques. It is not the stated subject."
+  },
+  "L07-005": {
+   "level": "L2",
+   "covered_by": [
+    "d07-sqlmap"
+   ],
+   "basis": "entry",
+   "note": "Boolean and time based inference are two of the tool's named techniques, with a conditional delay as the oracle."
+  },
+  "L07-006": {
+   "level": "L1",
+   "covered_by": [
+    "d07-xxeinjector"
+   ],
+   "basis": "entry",
+   "note": "Out of band behaviour is implemented for XML. Database egress is a different channel."
+  },
+  "L07-007": {
+   "level": "L1",
+   "covered_by": [
+    "d07-webgoat"
+   ],
+   "basis": "entry",
+   "note": "The target has second order lessons. The tooling to exploit one is not stated."
+  },
+  "L07-008": {
+   "level": "L2",
+   "covered_by": [
+    "d07-nosqlmap"
+   ],
+   "basis": "entry",
+   "note": "Operator injection through JSON is the entry's subject, with a widened filter as the oracle."
+  },
+  "L07-009": {
+   "level": "L1",
+   "covered_by": [
+    "d07-nosqlmap"
+   ],
+   "basis": "entry",
+   "note": "Type coercion is adjacent to operator injection and not tested as its own property."
+  },
+  "L07-017": {
+   "level": "L1",
+   "covered_by": [
+    "d11-arjun"
+   ],
+   "basis": "entry",
+   "note": "Parameter discovery finds undocumented filters. Whether they are allow listed is untested."
+  },
+  "L07-019": {
+   "level": "L1",
+   "covered_by": [
+    "d02-gau"
+   ],
+   "basis": "entry",
+   "note": "Historical URL collection reveals object key patterns. Storage permission is not tested."
+  },
+  "L07-023": {
+   "level": "L1",
+   "covered_by": [
+    "d17-prowler"
+   ],
+   "basis": "entry",
+   "note": "Posture checks include backup configuration. Network reachability of a backup is not tested here."
+  },
+  "L07-029": {
+   "level": "L2",
+   "covered_by": [
+    "d12-race-the-web"
+   ],
+   "basis": "entry",
+   "note": "Lost update is a parallel write race, which the harness states a procedure and an oracle for."
+  },
+  "L07-030": {
+   "level": "L2",
+   "covered_by": [
+    "d12-race-the-web"
+   ],
+   "basis": "entry",
+   "note": "A duplicate created under concurrency is the canonical demonstration, and the harness is built for it."
+  },
+  "L07-033": {
+   "level": "L1",
+   "covered_by": [
+    "d10-wcvs"
+   ],
+   "basis": "entry",
+   "note": "Cache keying is tested at the edge. Tenant separation in an application cache is not."
+  },
+  "L07-041": {
+   "level": "L1",
+   "covered_by": [
+    "d17-scoutsuite"
+   ],
+   "basis": "entry",
+   "note": "Audit reports storage encryption state. Whether the key is separable from the data is not tested."
+  },
+  "L07-045": {
+   "level": "L1",
+   "covered_by": [
+    "d16-gitleaks"
+   ],
+   "basis": "entry",
+   "note": "Secret scanning in logs covers one path by which request data reaches a wider store."
+  },
+  "L07-047": {
+   "level": "L2",
+   "covered_by": [
+    "d16-trufflehog"
+   ],
+   "basis": "entry",
+   "note": "Scanning history for live credentials is the factor as written, with a valid credential as the oracle."
+  },
+  "L07-054": {
+   "level": "L2",
+   "covered_by": [
+    "d13-rea-artifact"
+   ],
+   "basis": "entry",
+   "note": "Safe extraction that inventories before trusting is exactly the path policy test, with a file outside the target as the oracle."
+  },
+  "L07-055": {
+   "level": "L1",
+   "covered_by": [
+    "d13-rea-artifact"
+   ],
+   "basis": "entry",
+   "note": "Inventory before extract bounds the size. Expansion ratio limits are not tested."
+  },
+  "L07-056": {
+   "level": "L1",
+   "covered_by": [
+    "d15-fq"
+   ],
+   "basis": "entry",
+   "note": "Inspecting a serialised blob before deserialising is the only safe procedure here, and it is named."
+  },
+  "L07-060": {
+   "level": "L1",
+   "covered_by": [
+    "d02-nmap"
+   ],
+   "basis": "entry",
+   "note": "Service detection reports the database version exposed on a port. Behaviour per version is untested."
+  }
+ }
+}

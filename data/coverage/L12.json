@@ -1,0 +1,169 @@
+{
+ "lens": "L12",
+ "name": "AI and agentic systems",
+ "default": "L0",
+ "reason": "AI is the second best served lens after identity, because red team frameworks exist and state their probes. What is missing is everything about authority: which agent can act, on whose behalf, with what scope, and whether a memory written in one session reaches another. No entry tests retrieval boundary or delegation chain.",
+ "exceptions": {
+  "L12-001": {
+   "level": "L2",
+   "covered_by": [
+    "d19-garak",
+    "d19-agentdojo"
+   ],
+   "basis": "entry",
+   "note": "Both run structured probes for instruction overriding data and report pass or fail, which is the factor stated as a test."
+  },
+  "L12-003": {
+   "level": "L1",
+   "covered_by": [
+    "d19-llm-top10"
+   ],
+   "basis": "entry",
+   "note": "Retrieval poisoning is a named taxonomy entry. The procedure lives in the technique atlas and not as a test."
+  },
+  "L12-004": {
+   "level": "L2",
+   "covered_by": [
+    "d20-agentdojo"
+   ],
+   "basis": "entry",
+   "note": "Injection delivered through a tool result is the benchmark's subject, with goal drift as the oracle."
+  },
+  "L12-005": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "No entry tests whether retrieval respects tenant boundaries per chunk."
+  },
+  "L12-008": {
+   "level": "L1",
+   "covered_by": [
+    "d19-garak"
+   ],
+   "basis": "entry",
+   "note": "Long input probes exist. Eviction of guard rails as a specific mechanism is not isolated."
+  },
+  "L12-009": {
+   "level": "L1",
+   "covered_by": [
+    "d19-garak"
+   ],
+   "basis": "entry",
+   "note": "Many shot behaviour is a known probe class. Whether the entry names it is not established here."
+  },
+  "L12-010": {
+   "level": "L2",
+   "covered_by": [
+    "d19-garak"
+   ],
+   "basis": "entry",
+   "note": "Encoding based bypass is one of the probe families the scanner implements, with disallowed output as the oracle."
+  },
+  "L12-012": {
+   "level": "L2",
+   "covered_by": [
+    "d20-mcp-scan"
+   ],
+   "basis": "entry",
+   "note": "Scanning tool descriptions for hostile instruction is the factor as written."
+  },
+  "L12-014": {
+   "level": "L1",
+   "covered_by": [
+    "d20-bandit"
+   ],
+   "basis": "entry",
+   "note": "Tool poisoning is described, including authority escalation. It is a reference rather than a test."
+  },
+  "L12-016": {
+   "level": "L1",
+   "covered_by": [
+    "d28-mcp-scan"
+   ],
+   "basis": "entry",
+   "note": "Config scanning flags unauthenticated servers. Mutual verification is not tested."
+  },
+  "L12-018": {
+   "level": "L1",
+   "covered_by": [
+    "d28-spec"
+   ],
+   "basis": "entry",
+   "note": "The specification says what a resource may carry. Whether a client treats it as instruction is untested."
+  },
+  "L12-019": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "No entry measures how much an agent can do without confirmation."
+  },
+  "L12-020": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "No entry tests the scope of the credential an agent holds."
+  },
+  "L12-023": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Shared memory poisoning across sessions is entirely unaddressed."
+  },
+  "L12-024": {
+   "level": "L1",
+   "covered_by": [
+    "d08-rea-scenario"
+   ],
+   "basis": "entry",
+   "note": "A scripted browser flow can perform actions. Whether a destructive one is confirmed is not tested."
+  },
+  "L12-025": {
+   "level": "L1",
+   "covered_by": [
+    "d08-rea-scenario"
+   ],
+   "basis": "entry",
+   "note": "Visual injection needs a rendered page and an agent. The capture tool is half of it."
+  },
+  "L12-031": {
+   "level": "L1",
+   "covered_by": [
+    "d19-atlas"
+   ],
+   "basis": "entry",
+   "note": "Exfiltration through rendered output is a catalogued technique. No test is stated."
+  },
+  "L12-034": {
+   "level": "L2",
+   "covered_by": [
+    "d19-garak"
+   ],
+   "basis": "entry",
+   "note": "Prompt leakage is a named probe with reproduced prompt text as the oracle."
+  },
+  "L12-040": {
+   "level": "L1",
+   "covered_by": [
+    "d19-llm-guard"
+   ],
+   "basis": "entry",
+   "note": "The defensive scanner set models guard placement. Whether it fails open is untested."
+  },
+  "L12-047": {
+   "level": "L1",
+   "covered_by": [
+    "d19-promptfoo"
+   ],
+   "basis": "entry",
+   "note": "An eval harness makes divergence measurable. Deployment divergence is not the stated check."
+  },
+  "L12-052": {
+   "level": "L1",
+   "covered_by": [
+    "d19-atlas"
+   ],
+   "basis": "entry",
+   "note": "Multimodal injection is catalogued. No harness is present here."
+  }
+ }
+}

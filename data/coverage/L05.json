@@ -1,0 +1,29 @@
+{
+ "lens": "L05",
+ "name": "client and browser",
+ "default": "L0",
+ "reason": "Client factors with no artefact stating a procedure and an oracle. D08 has the right instruments, a real engine, a capture tool and a sanitiser bypass target, but instruments are not tests. Nothing here covers iframe sandboxing, service workers, extension privilege, webview bridges or Electron in any operational form.",
+ "exceptions": {
+  "L05-001": {"level": "L1", "covered_by": ["d08-corsy"], "basis": "entry", "note": "Origin handling is the subject of the CORS scanner, which is one consumer of the origin definition rather than a test of it."},
+  "L05-002": {"level": "L1", "covered_by": ["d08-corsy"], "basis": "entry", "note": "Site versus origin appears only implicitly in how the scanner classifies reflection."},
+  "L05-004": {"level": "L2", "covered_by": ["d08-dompurify"], "basis": "entry", "note": "The sanitiser entry is explicitly the bypass target. Parser state switching is the mechanism a DOMPurify bypass uses, and the entry states what a successful bypass looks like."},
+  "L05-005": {"level": "L2", "covered_by": ["d08-csp-eval"], "basis": "entry", "note": "Scoring a policy and naming the bypass for each weakness is a procedure with an oracle for whether inline execution survives."},
+  "L05-006": {"level": "L1", "covered_by": ["d08-trusted-types"], "basis": "entry", "note": "The reference describes enforcement. Sink coverage is not enumerated anywhere as a test."},
+  "L05-007": {"level": "L1", "covered_by": ["d07-xsser", "d08-dalfox"], "basis": "entry", "note": "Context aware scanners imply a sink inventory. Neither states the sink list or tests one engine against another."},
+  "L05-008": {"level": "L2", "covered_by": ["d08-ppscan"], "basis": "entry", "note": "A prototype pollution scanner states the payload and the sink confirmation, which is the factor as written."},
+  "L05-009": {"level": "L1", "covered_by": ["d08-ppscan"], "basis": "entry", "note": "Gadget conversion is the impact step. The scanner reports the pollution, not the privileged behaviour it reaches."},
+  "L05-011": {"level": "L1", "covered_by": ["d08-rea-page"], "basis": "entry", "note": "The capture reports postMessage shapes. Whether the receiver validates origin is not tested."},
+  "L05-013": {"level": "L1", "covered_by": ["d08-wstg-clnt"], "basis": "entry", "note": "Framing and sandbox cases appear in the client test list with no procedure."},
+  "L05-014": {"level": "L1", "covered_by": ["d08-wstg-clnt"], "basis": "entry", "note": "Frame ancestor policy is a named item, not an executed test."},
+  "L05-018": {"level": "L1", "covered_by": ["d08-corsy"], "basis": "entry", "note": "Credential handling is central to CORS testing, and the scanner focuses on reflection rather than ambient credential defaults."},
+  "L05-021": {"level": "L2", "covered_by": ["d08-corsy"], "basis": "entry", "note": "Classifying reflection with credentials is exactly the factor, and the scanner names the classes it reports."},
+  "L05-029": {"level": "L2", "covered_by": ["d08-rea-page"], "basis": "entry", "note": "Storage key inventory and JSON body shapes answer whether a stored record contains a field the server considers secret."},
+  "L05-030": {"level": "L1", "covered_by": ["d08-rea-page"], "basis": "entry", "note": "Captured URLs would show the state, and the entry does not test whether a secret persists in history or referrer."},
+  "L05-037": {"level": "L0", "covered_by": [], "basis": "none", "note": "Extension content script scope is entirely unaddressed. No entry discusses extensions."},
+  "L05-041": {"level": "L0", "covered_by": [], "basis": "none", "note": "Webview bridges are unaddressed. D21 covers mobile app surfaces and no entry states a bridge test."},
+  "L05-045": {"level": "L0", "covered_by": [], "basis": "none", "note": "Desktop shell node integration is unaddressed in operational form."},
+  "L05-049": {"level": "L0", "covered_by": [], "basis": "none", "note": "Electron fuse inspection is a REA operation that exists as a tool and has no entry stating procedure and oracle here."},
+  "L05-053": {"level": "L1", "covered_by": ["d31-wasm"], "basis": "entry", "note": "The wasm inspector reports the import list, which is the factor's data. It does not test what a module may reach at runtime."},
+  "L05-061": {"level": "L1", "covered_by": ["d22-playwright", "d22-undetected-chromedriver"], "basis": "entry", "note": "Both are instruments against automation detection. Neither states which signal it defeats or how that is confirmed."}
+ }
+}

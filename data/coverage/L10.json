@@ -1,0 +1,160 @@
+{
+ "lens": "L10",
+ "name": "supply chain",
+ "default": "L0",
+ "reason": "Supply chain is the best served lens outside identity, because signing, SBOM and scanning tools exist and state their oracles. What is missing is the build side: install time execution, CI workflows triggered by outsiders, expression injection into commands, and every question about who can publish.",
+ "exceptions": {
+  "L10-005": {
+   "level": "L2",
+   "covered_by": [
+    "d18-syft"
+   ],
+   "basis": "entry",
+   "note": "Generating the full tree is the transitive visibility question answered directly."
+  },
+  "L10-008": {
+   "level": "L2",
+   "covered_by": [
+    "d18-cosign"
+   ],
+   "basis": "entry",
+   "note": "Signature verification is the factor, with an unsigned artefact rejected as the oracle."
+  },
+  "L10-011": {
+   "level": "L2",
+   "covered_by": [
+    "d03-rea-bundle"
+   ],
+   "basis": "entry",
+   "note": "Inspecting what a shipped bundle actually contains is the only honest answer to vendor composition."
+  },
+  "L10-023": {
+   "level": "L2",
+   "covered_by": [
+    "d18-cosign"
+   ],
+   "basis": "entry",
+   "note": "Artefact signing and verification across the pipeline is the entry's stated function."
+  },
+  "L10-025": {
+   "level": "L2",
+   "covered_by": [
+    "d16-gitleaks"
+   ],
+   "basis": "entry",
+   "note": "History scanning for secrets is exactly the factor, with a hit as the oracle."
+  },
+  "L10-030": {
+   "level": "L2",
+   "covered_by": [
+    "d18-trivy"
+   ],
+   "basis": "entry",
+   "note": "Scanning a base image for known vulnerable packages answers freshness empirically."
+  },
+  "L10-035": {
+   "level": "L2",
+   "covered_by": [
+    "d18-grype"
+   ],
+   "basis": "entry",
+   "note": "Matching an SBOM against advisories is advisory ingestion answered per artefact."
+  },
+  "L10-051": {
+   "level": "L2",
+   "covered_by": [
+    "d03-rea-bundle"
+   ],
+   "basis": "entry",
+   "note": "Recovering original sources from a production bundle is source map publication confirmed."
+  },
+  "L10-053": {
+   "level": "L2",
+   "covered_by": [
+    "d18-syft"
+   ],
+   "basis": "entry",
+   "note": "The count of the resolved tree is the output, which is the factor."
+  },
+  "L10-003": {
+   "level": "L1",
+   "covered_by": [
+    "d18-scorecard"
+   ],
+   "basis": "entry",
+   "note": "Hygiene scoring includes namespace and registry practice. Squatting is not tested."
+  },
+  "L10-007": {
+   "level": "L1",
+   "covered_by": [
+    "d18-scorecard"
+   ],
+   "basis": "entry",
+   "note": "Maintainer risk is scored. Account takeover resistance is not tested."
+  },
+  "L10-022": {
+   "level": "L1",
+   "covered_by": [
+    "d18-gitleaks"
+   ],
+   "basis": "entry",
+   "note": "Log scanning catches a leaked value. Masking coverage is a pipeline property, not this."
+  },
+  "L10-032": {
+   "level": "L1",
+   "covered_by": [
+    "d18-scorecard"
+   ],
+   "basis": "entry",
+   "note": "Abandonment is part of the score, weighted rather than answered."
+  },
+  "L10-034": {
+   "level": "L1",
+   "covered_by": [
+    "d18-scorecard"
+   ],
+   "basis": "entry",
+   "note": "Disclosure practice is scored. A working path is not exercised."
+  },
+  "L10-036": {
+   "level": "L1",
+   "covered_by": [
+    "d18-grype"
+   ],
+   "basis": "entry",
+   "note": "A pinned vulnerable version is matched by the advisory database, which is the symptom."
+  },
+  "L10-045": {
+   "level": "L1",
+   "covered_by": [
+    "d20-mcp-scan"
+   ],
+   "basis": "entry",
+   "note": "Tool description provenance is adjacent. Runtime fetching of prompts is not tested."
+  },
+  "L10-046": {
+   "level": "L1",
+   "covered_by": [
+    "d28-mcp-scan"
+   ],
+   "basis": "entry",
+   "note": "Config scanning finds unverified servers. Whether an agent can be pointed at one is not tested."
+  },
+  "L10-049": {
+   "level": "L1",
+   "covered_by": [
+    "d02-dnsx"
+   ],
+   "basis": "entry",
+   "note": "DNS record enumeration shows delegation. Sender authentication is not tested."
+  },
+  "L10-057": {
+   "level": "L1",
+   "covered_by": [
+    "d18-scorecard"
+   ],
+   "basis": "entry",
+   "note": "Branch protection is one of the scored checks."
+  }
+ }
+}

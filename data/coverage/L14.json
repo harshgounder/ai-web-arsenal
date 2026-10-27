@@ -1,0 +1,155 @@
+{
+ "lens": "L14",
+ "name": "evidence and oracle science",
+ "default": "L0",
+ "reason": "This lens is covered better than most because a proving pack exists, which is unusual in this space. What it does not cover is measurement discipline: timing resolution, statistical power, multiple comparisons, oracle cost and the effect of defence noise on an oracle.",
+ "exceptions": {
+  "L14-001": {
+   "level": "L2",
+   "covered_by": [
+    "d24-prove"
+   ],
+   "basis": "entry",
+   "note": "Defining the observable per class before testing is the pack's stated procedure."
+  },
+  "L14-002": {
+   "level": "L2",
+   "covered_by": [
+    "d24-prove",
+    "d24-critic"
+   ],
+   "basis": "entry",
+   "note": "Falsify first and run a control is the pack's core rule, and the critic exists to enforce it."
+  },
+  "L14-003": {
+   "level": "L1",
+   "covered_by": [
+    "d24-prove"
+   ],
+   "basis": "entry",
+   "note": "Differential comparison is implied by the control rule rather than stated as its own step."
+  },
+  "L14-004": {
+   "level": "L1",
+   "covered_by": [
+    "d24-critic"
+   ],
+   "basis": "entry",
+   "note": "Adversarial review is where a false positive rate would be argued."
+  },
+  "L14-005": {
+   "level": "L1",
+   "covered_by": [
+    "d24-prove"
+   ],
+   "basis": "entry",
+   "note": "Reproducibility is required by the pack. A clean state procedure is not spelled out."
+  },
+  "L14-010": {
+   "level": "L1",
+   "covered_by": [
+    "d08-rea-scenario",
+    "d12-rea-capture"
+   ],
+   "basis": "entry",
+   "note": "Both capture a full flow. Whether the capture is complete enough to replay is the open part."
+  },
+  "L14-015": {
+   "level": "L1",
+   "covered_by": [
+    "d24-prove"
+   ],
+   "basis": "entry",
+   "note": "Minimum proof is a principle the pack states. Reversibility is not enforced."
+  },
+  "L14-017": {
+   "level": "L1",
+   "covered_by": [
+    "d24-cvss",
+    "d24-cwe"
+   ],
+   "basis": "entry",
+   "note": "Separating measured fact from scored severity is what the taxonomy entries are for."
+  },
+  "L14-018": {
+   "level": "L1",
+   "covered_by": [
+    "d24-critic"
+   ],
+   "basis": "entry",
+   "note": "Assumption inventory is exactly what adversarial review produces."
+  },
+  "L14-026": {
+   "level": "L1",
+   "covered_by": [
+    "d22-nowafpls"
+   ],
+   "basis": "entry",
+   "note": "A defence altering the probe is the known failure mode this entry exploits."
+  },
+  "L14-029": {
+   "level": "L2",
+   "covered_by": [
+    "d05-mitmproxy"
+   ],
+   "basis": "entry",
+   "note": "Two identities captured side by side is the procedure for showing cross principal impact, with the second principal's object as the oracle."
+  },
+  "L14-041": {
+   "level": "L2",
+   "covered_by": [
+    "d05-crapi"
+   ],
+   "basis": "entry",
+   "note": "A target with real tenancy makes the two tenant differential the designed test."
+  },
+  "L14-042": {
+   "level": "L2",
+   "covered_by": [
+    "d05-autorize"
+   ],
+   "basis": "entry",
+   "note": "Replaying as a lower privileged account is the role differential, stated with its confirmation."
+  },
+  "L14-049": {
+   "level": "L2",
+   "covered_by": [
+    "d24-prove"
+   ],
+   "basis": "entry",
+   "note": "A stated disproof criterion is the falsify first rule in practice."
+  },
+  "L14-006": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Timing resolution against measured jitter is unaddressed, which is why no side channel claim would be safe here."
+  },
+  "L14-007": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Statistical power for a timing claim is unaddressed."
+  },
+  "L14-045": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Side channel signal to noise is unaddressed."
+  },
+  "L14-053": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "Oracle cost per bit is never measured."
+  },
+  "L14-063": {
+   "level": "L1",
+   "covered_by": [
+    "d24-critic"
+   ],
+   "basis": "entry",
+   "note": "Validating the observer is what a critic would ask for, and it is not a procedure."
+  }
+ }
+}

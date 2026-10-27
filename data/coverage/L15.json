@@ -1,0 +1,112 @@
+{
+ "lens": "L15",
+ "name": "detection and defence industry",
+ "default": "L0",
+ "reason": "Detection is covered where a product or a rule set exists to name. The decisive questions, which are what each control can see, how long it retains it and whether anyone responds, are named by artefacts and never tested. This is the lens where the repo knows the vocabulary and not the behaviour.",
+ "exceptions": {
+  "L15-003": {
+   "level": "L2",
+   "covered_by": [
+    "d22-nowafpls"
+   ],
+   "basis": "entry",
+   "note": "Decoding layers before matching is exactly what payload padding defeats, with a passed payload as the oracle."
+  },
+  "L15-009": {
+   "level": "L2",
+   "covered_by": [
+    "d22-nowafpls"
+   ],
+   "basis": "entry",
+   "note": "Body size handling at the edge is the factor and the technique."
+  },
+  "L15-013": {
+   "level": "L2",
+   "covered_by": [
+    "d22-undetected-chromedriver"
+   ],
+   "basis": "entry",
+   "note": "Defeating automation signals is the tool's stated purpose, with a treated-as-human request as the oracle."
+  },
+  "L15-014": {
+   "level": "L2",
+   "covered_by": [
+    "d22-cloudscraper"
+   ],
+   "basis": "entry",
+   "note": "Solving a JavaScript challenge without an engine is the factor answered directly."
+  },
+  "L15-053": {
+   "level": "L2",
+   "covered_by": [
+    "d22-gotestwaf"
+   ],
+   "basis": "entry",
+   "note": "Measuring detection coverage against a scoring test set is the independent check on a vendor claim."
+  },
+  "L15-001": {
+   "level": "L1",
+   "covered_by": [
+    "d25-crs"
+   ],
+   "basis": "entry",
+   "note": "The rule set defines what is inspected. Depth per product is not tested."
+  },
+  "L15-004": {
+   "level": "L1",
+   "covered_by": [
+    "d25-crs"
+   ],
+   "basis": "entry",
+   "note": "Rule language expressiveness is visible in the corpus, not measured."
+  },
+  "L15-005": {
+   "level": "L1",
+   "covered_by": [
+    "d25-attack"
+   ],
+   "basis": "entry",
+   "note": "Mapping coverage to techniques shows the signature bias without quantifying it."
+  },
+  "L15-021": {
+   "level": "L1",
+   "covered_by": [
+    "d25-wazuh"
+   ],
+   "basis": "entry",
+   "note": "Host detection is the artefact. Whether the web tier is instrumented is a deployment fact."
+  },
+  "L15-024": {
+   "level": "L1",
+   "covered_by": [
+    "d25-zeek"
+   ],
+   "basis": "entry",
+   "note": "East west visibility is what a network analyser would provide."
+  },
+  "L15-027": {
+   "level": "L1",
+   "covered_by": [
+    "d25-elastic"
+   ],
+   "basis": "entry",
+   "note": "A maintained rule set is the denominator for coverage, not a measurement of it."
+  },
+  "L15-046": {
+   "level": "L1",
+   "covered_by": [
+    "d25-counters"
+   ],
+   "basis": "entry",
+   "note": "The counter map is the closest thing to purple team validation and it is authored, not exercised."
+  },
+  "L15-062": {
+   "level": "L1",
+   "covered_by": [
+    "d25-attack"
+   ],
+   "basis": "entry",
+   "note": "Living off the platform is a named technique class with no local test."
+  }
+ }
+}

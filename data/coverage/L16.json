@@ -1,0 +1,64 @@
+{
+ "lens": "L16",
+ "name": "history and corpus",
+ "default": "L0",
+ "reason": "The corpus is the repo's biggest asset and it is used as a list rather than as evidence. Advisory identifiers, severity scores and exploited-in-the-wild status are named. Nothing measures silent patches, incomplete fixes, link rot or how much of the record nobody has read, which are the questions that decide whether a completeness claim means anything.",
+ "exceptions": {
+  "L16-009": {
+   "level": "L2",
+   "covered_by": [
+    "d24-kev"
+   ],
+   "basis": "entry",
+   "note": "Membership in the exploited in the wild list is a binary oracle, which is the factor stated as a check."
+  },
+  "L16-001": {
+   "level": "L1",
+   "covered_by": [
+    "d24-cve"
+   ],
+   "basis": "entry",
+   "note": "One identifier source is named. Overlap and coverage across databases is not measured."
+  },
+  "L16-006": {
+   "level": "L1",
+   "covered_by": [
+    "d24-cwe"
+   ],
+   "basis": "entry",
+   "note": "The weakness taxonomy is the artefact a label reliability study would use."
+  },
+  "L16-007": {
+   "level": "L1",
+   "covered_by": [
+    "d24-cvss"
+   ],
+   "basis": "entry",
+   "note": "The scoring system is the artefact a bias study would use."
+  },
+  "L16-008": {
+   "level": "L1",
+   "covered_by": [
+    "d24-epss"
+   ],
+   "basis": "entry",
+   "note": "Exploit prediction is the closest thing to availability timing and it is a score, not a measurement."
+  },
+  "L16-039": {
+   "level": "L1",
+   "covered_by": [
+    "d03-rea-bundle"
+   ],
+   "basis": "entry",
+   "note": "Reading the shipped code is how a patch diff would be interpreted. No entry does diff analysis."
+  },
+  "L16-041": {
+   "level": "L1",
+   "covered_by": [
+    "d25-attack"
+   ],
+   "basis": "entry",
+   "note": "A technique taxonomy gives a denominator. It is not the deduplicated count."
+  }
+ }
+}

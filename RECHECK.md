@@ -184,35 +184,43 @@ public record is the only source of evidence about the past.
 
 ---
 
-## 6d. Phase 2 status (the A to D join)
+## 6d. Phase 2 done (the A to D join)
 
-Started 2026-10-27. Two lenses mapped of sixteen, which is enough to know what the answer looks like.
+All sixteen lenses mapped. 1,000 factors, 1,000 coverage records.
 
-| lens | factors | mapped | covered at L2+ |
+| lens | factors | covered at L2+ | share |
 |---|---|---|---|
-| L01 substrate | 62 | 62 | **0** |
-| L02 transport | 62 | 62 | 13 |
+| L01 substrate | 62 | 0 | 0% |
+| L02 transport | 62 | 13 | 21% |
+| L03 protocol | 62 | 13 | 21% |
+| L04 frameworks | 62 | 15 | 24% |
+| L05 client | 62 | 5 | 8% |
+| L06 identity | 62 | 12 | 19% |
+| L07 data | 62 | 8 | 13% |
+| L08 money | 62 | 4 | 6% |
+| L09 edge | 62 | 11 | 18% |
+| L10 supply chain | 62 | 9 | 15% |
+| L11 human | 62 | 0 | 0% |
+| L12 AI | 62 | 5 | 8% |
+| L13 regulation | 64 | 0 | 0% |
+| L14 evidence | 64 | 6 | 9% |
+| L15 detection | 64 | 5 | 8% |
+| L16 history | 64 | 1 | 2% |
+| **total** | **1,000** | **107** | **10.7%** |
 
-**The headline number: 13 of 1,000 factors, so 1.3 percent.** That is the first honest coverage figure
-this project has ever had, and it covers only two lenses. Even in the lens the repo covers best,
-transport, coverage is 21 percent, and it comes almost entirely from smuggler, h2c and the cache
-scanner. Substrate is zero: no entry in either repo states a procedure and an oracle for a single one of
-its 62 factors.
+**The number is 10.7 percent, and zero observed.** That is the first honest coverage figure this project
+has had, and it is the reason the README no longer needs a superlative to make its point.
 
-How coverage is graded, because a mention is not coverage:
+What the distribution says, which is more useful than the total:
 
-```
-L0 absent     nothing addresses it
-L1 named      a tool or entry mentions the concept, no procedure and no oracle
-L2 procedure  a procedure and an oracle, so a competent reader could test it
-L3 observed   a lab here demonstrates it
-```
-
-Only L2 and L3 count. L1 is recorded because knowing a concept is named but not operationalised is
-useful, and it is not counted.
-
-Every record names the artefact it relies on, and the validator rejects any id that does not exist. It
-rejected three of mine while this was being built, which is the mechanism working.
+- The covered lenses are the ones where a tool exists that states its own oracle. Smuggling, cache,
+  GraphQL, deserialisation, hash cracking, cache poisoning, takeover. Tools carry procedures because
+  they were built to be run.
+- The three zeros are the three lenses where no tool can exist: substrate, human, regulation. You cannot
+  ship a scanner for a speculative execution window or for a support desk. Those need authored procedure
+  and a lab, which is Phase 7's job.
+- Money at 6 percent is the worst return per unit of impact in the whole table. Business logic is where
+  real loss lands and it is nearly unaddressed.
 
 ---
 
