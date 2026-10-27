@@ -108,6 +108,11 @@ try:
 except Exception:
     print("advisories_total 0")
 try:
+    _mu = json.load(open(R/"data"/"mutations"/"SUMMARY.json"))
+    print(f"mutation_candidates {_mu['candidates']}")
+except Exception:
+    print("advisories_total 0")
+try:
     _d31 = json.load(open(R/"data"/"domains"/"D31.json"))
     print(f"rea_gaps_built {sum(1 for g in _d31['gaps'] if g.get('status') == 'built')}")
 except Exception:

@@ -46,6 +46,7 @@ run_gate "rea operations"           python3 rea-ops/test-ops.py
 run_gate "mcp server answers"       python3 mcps/test-mcp.py
 run_gate "playbooks reference real entries" python3 scripts/render-playbooks.py --check
 run_gate "counters cover every class"   python3 scripts/render-counters.py --check
+run_gate "mutation candidates are sound" python3 scripts/generate-mutations.py --check
 run_gate "domain invariants"        python3 scripts/validate-domains.py
 
 if [ -d ../web-attack-atlas ]; then

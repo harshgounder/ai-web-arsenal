@@ -1,0 +1,16 @@
+{
+ "generated_at": "2026-10-27",
+ "source_patterns": 150,
+ "patterns_with_variants": 150,
+ "candidates": 2399,
+ "by_axis": {
+  "principal": 450,
+  "encoding": 450,
+  "context": 450,
+  "timing": 449,
+  "protocol": 300,
+  "state": 300
+ },
+ "status": "UNVERIFIED",
+ "note": "a queue, not a corpus. Nothing here counts as coverage, nothing enters the atlas, and each row states what would promote it. The generator skips any axis the source pattern already carries, so these are additions rather than duplicates of hand written work."
+}

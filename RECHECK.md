@@ -558,6 +558,31 @@ implied.
 
 ---
 
+## 6p. The mutation engine
+
+2,399 candidate variants from 150 patterns across six axes: principal, encoding, context, timing, protocol
+and state. Generated from `scripts/generate-mutations.py` into `data/mutations/`.
+
+The design decision is what makes it safe. **Every candidate is UNVERIFIED, none counts as coverage, and
+`C117` asserts that no generated row enters the atlas.** A generated variant that was never run is a
+hypothesis with a plausible shape, and the failure mode this repo has hit repeatedly is counting
+hypotheses as facts.
+
+Each row carries the premise, what changes, the check that would confirm it, and the promotion condition:
+
+> a run reproduces it with a negative control that shows the same procedure without the mutation has no
+> effect
+
+The generator skips any axis the source pattern already carries, so 2,399 is the count of additions rather
+than of duplicates.
+
+One defect on the way, and it is the same field name class that has bitten before: the atlas stores `atom`
+singular and the generator read `atoms`, so every candidate came out with an empty atom list. Caught by
+looking at a single record rather than by any gate, which is a reminder that structural checks validate
+shape and not meaning.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

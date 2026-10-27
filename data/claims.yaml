@@ -248,6 +248,14 @@ claims:
     statement: "every mapped advisory names the terms that matched, so the classification can be disputed"
     check: "all(r.get('matched') for r in rows('data/advisories/advisories.jsonl') if r.get('atoms'))"
 
+  - id: C116
+    statement: "every generated mutation candidate is UNVERIFIED and names what would promote it"
+    check: "(lambda rs: len(rs) > 1000 and all(r['status'] == 'UNVERIFIED' and r.get('promote_when') for r in rs))(rows('data/mutations/mutations.jsonl'))"
+
+  - id: C117
+    statement: "mutation candidates are kept out of the atlas and the coverage ledger"
+    check: "not any(p.get('status') == 'UNVERIFIED' for p in atlas_patterns())"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

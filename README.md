@@ -653,6 +653,48 @@ error. A server that starts is not a server that answers.
 
 ---
 
+## The mutation engine
+
+The second breadth engine, and the one with the most room to be dishonest, so it is built to be the least
+interesting thing in the repo to inflate.
+
+**2,399 candidate variants** derived from 150 patterns across six axes:
+
+| axis | candidates | the question it asks |
+|---|---|---|
+| principal | 450 | the same action from a lower role, another tenant, or unauthenticated |
+| encoding | 450 | the same value through a different encoding or case |
+| context | 450 | the same value in a header, the path or a multipart part |
+| timing | 449 | the same sequence parallel, staggered or replayed |
+| protocol | 300 | the same action over HTTP/2 or grpc-web |
+| state | 300 | the same action before commit or after a soft delete |
+
+**Every one is `UNVERIFIED` and none of them counts as coverage.** `C116` enforces that each names what
+would promote it, and `C117` enforces that no generated candidate enters the atlas. A generated variant
+that was never run is a hypothesis with a plausible shape, and this repo has spent twenty rounds learning
+what happens when hypotheses get counted as facts.
+
+The generator skips any axis the source pattern already carries, so these are additions rather than
+duplicates of hand written work. Each row states the premise, what changes, and the check that would
+confirm it:
+
+```json
+{
+  "id": "W01-0001.principal.lower_role",
+  "from_pattern": "W01-0001",
+  "axis": "principal",
+  "premise": "as an authenticated principal with fewer rights",
+  "check": "the action succeeds for a role that should not reach it",
+  "status": "UNVERIFIED",
+  "promote_when": "a run reproduces it with a negative control that shows the same procedure without the mutation has no effect"
+}
+```
+
+It is a queue, not a corpus. The value is that a reviewer has 2,399 specific things to try instead of 150
+to re-read.
+
+---
+
 ## The advisory dataset
 
 The first breadth engine. A curator cannot read thousands of advisories, but a machine can map them, and
@@ -821,6 +863,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | stack playbooks | 4, every cited entry verified to exist |
 | control classes with a stated blind spot | 14 of 14 |
 | advisories mapped | 993 of 1,261 (78.7%), 268 unmapped and stated |
+| mutation candidates | 2,399 from 150 patterns, all UNVERIFIED, none counted |
 | MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 
@@ -892,7 +935,8 @@ ai-web-arsenal/
 ├── prompts/                   5 phase packs with failure modes
 ├── playbooks/                 per stack ordered runs, generated from data/playbooks/
 ├── counters/                  the defensive half, generated from data/counters/
-├── data/advisories/           the first breadth engine: OSV advisories, mapped, own counts
+├── data/advisories/           breadth engine one: OSV advisories, mapped, own counts
+├── data/mutations/            breadth engine two: candidate variants, all unverified
 ├── mcps/                      working MCP configs, including arsenal-mcp.py
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── rea-ops/                   built extraction operations, each with a fixture and a test
