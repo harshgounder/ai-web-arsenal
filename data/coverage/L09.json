@@ -93,12 +93,13 @@
    "note": "Path enumeration reaches secrets a role can read. Whether that matches purpose is a judgement call."
   },
   "L09-031": {
-   "level": "L2",
+   "level": "L3",
    "covered_by": [
-    "d17-imds"
+    "d17-imds",
+    "lab-05-ssrf"
    ],
-   "basis": "entry",
-   "note": "The metadata credential path is the entry's subject, with credentials returned as the oracle."
+   "basis": "lab",
+   "note": "Run here on 2026-10-27 as obs-005. A fetch endpoint blocked the metadata host and non http schemes and still allowed loopback, returning a credential held by an internal service on the next port. Controls: the blocked scheme refused, the metadata host refused, and a missing internal path proving the request truly reached it."
   },
   "L09-033": {
    "level": "L2",

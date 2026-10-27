@@ -67,9 +67,9 @@ What is not defensible, and will not be written in the README: that this is comp
 
 ## The one number still at zero
 
-Observed coverage is 4 of 1000. Every other figure in this repo is an argument; that one is an absence, and it closes only with a lab.
+Observed coverage is 6 of 1000. Every other figure in this repo is an argument; that one is an absence, and it closes only with a lab.
 
-4 factors are observed, from four labs that all ran on 2026-10-27:
+6 factors are observed, from four labs that all ran on 2026-10-27:
 
 | lab | what it shows | control |
 |---|---|---|
@@ -80,4 +80,4 @@ Observed coverage is 4 of 1000. Every other figure in this repo is an argument; 
 
 Every record is in `data/observations/observations.jsonl` and replays with `python3 scripts/observe.py --verify`.
 
-The remaining 996 factors are still read and cited. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.
+The remaining 994 factors are still read and cited. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.
