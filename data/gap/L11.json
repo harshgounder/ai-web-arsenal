@@ -1,0 +1,115 @@
+{
+ "lens": "L11",
+ "name": "human and organisational",
+ "why_some_are_class_iii": "Facts about how one organisation runs itself. Not published, and not revealed by any external probe, because the answer is a process rather than an observable behaviour.",
+ "exceptions": {
+  "L11-018": {
+   "class": "III",
+   "reason": "requires internal telemetry that no outsider can see"
+  },
+  "L11-058": {
+   "class": "III",
+   "reason": "requires internal telemetry that no outsider can see"
+  },
+  "L11-020": {
+   "class": "III",
+   "reason": "credential custody and access breadth are internal records"
+  },
+  "L11-021": {
+   "class": "III",
+   "reason": "credential custody and access breadth are internal records"
+  },
+  "L11-045": {
+   "class": "III",
+   "reason": "credential custody and access breadth are internal records"
+  },
+  "L11-022": {
+   "class": "III",
+   "reason": "whether real customer data reaches a lower environment is an internal practice"
+  },
+  "L11-023": {
+   "class": "III",
+   "reason": "decision authority and exception registers are governance, not behaviour"
+  },
+  "L11-041": {
+   "class": "III",
+   "reason": "decision authority and exception registers are governance, not behaviour"
+  },
+  "L11-043": {
+   "class": "III",
+   "reason": "decision authority and exception registers are governance, not behaviour"
+  },
+  "L11-024": {
+   "class": "III",
+   "reason": "documents can be read only from inside; accuracy is not observable from outside"
+  },
+  "L11-040": {
+   "class": "III",
+   "reason": "documents can be read only from inside; accuracy is not observable from outside"
+  },
+  "L11-061": {
+   "class": "III",
+   "reason": "documents can be read only from inside; accuracy is not observable from outside"
+  },
+  "L11-033": {
+   "class": "III",
+   "reason": "employment and acquisition history is internal"
+  },
+  "L11-034": {
+   "class": "III",
+   "reason": "employment and acquisition history is internal"
+  },
+  "L11-035": {
+   "class": "III",
+   "reason": "the organisation's own legal process is not public"
+  },
+  "L11-036": {
+   "class": "III",
+   "reason": "the organisation's own legal process is not public"
+  },
+  "L11-057": {
+   "class": "III",
+   "reason": "the organisation's own legal process is not public"
+  },
+  "L11-042": {
+   "class": "III",
+   "reason": "incentives, assessments and team integration are internal facts"
+  },
+  "L11-044": {
+   "class": "III",
+   "reason": "incentives, assessments and team integration are internal facts"
+  },
+  "L11-056": {
+   "class": "III",
+   "reason": "incentives, assessments and team integration are internal facts"
+  },
+  "L11-046": {
+   "class": "III",
+   "reason": "physical controls require presence and records a repo cannot hold"
+  },
+  "L11-047": {
+   "class": "III",
+   "reason": "physical controls require presence and records a repo cannot hold"
+  },
+  "L11-048": {
+   "class": "III",
+   "reason": "physical controls require presence and records a repo cannot hold"
+  },
+  "L11-049": {
+   "class": "III",
+   "reason": "physical controls require presence and records a repo cannot hold"
+  },
+  "L11-059": {
+   "class": "III",
+   "reason": "culture and after-incident behaviour are not disclosed"
+  },
+  "L11-060": {
+   "class": "III",
+   "reason": "culture and after-incident behaviour are not disclosed"
+  },
+  "L11-062": {
+   "class": "III",
+   "reason": "culture and after-incident behaviour are not disclosed"
+  }
+ }
+}

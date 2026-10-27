@@ -1,0 +1,39 @@
+{
+ "lens": "L15",
+ "name": "detection and defence industry",
+ "why_some_are_class_iii": "The defender's internal capacity. What a product can see is in its documentation; whether anyone reads the alert is not.",
+ "exceptions": {
+  "L15-029": {
+   "class": "III",
+   "reason": "triage capacity and alert fatigue are staffing facts"
+  },
+  "L15-051": {
+   "class": "III",
+   "reason": "triage capacity and alert fatigue are staffing facts"
+  },
+  "L15-052": {
+   "class": "III",
+   "reason": "triage capacity and alert fatigue are staffing facts"
+  },
+  "L15-041": {
+   "class": "III",
+   "reason": "playbook depth, containment cost and control economics are internal decisions"
+  },
+  "L15-043": {
+   "class": "III",
+   "reason": "playbook depth, containment cost and control economics are internal decisions"
+  },
+  "L15-060": {
+   "class": "III",
+   "reason": "playbook depth, containment cost and control economics are internal decisions"
+  },
+  "L15-050": {
+   "class": "III",
+   "reason": "vendor session logging and auditor acceptance are agreements"
+  },
+  "L15-061": {
+   "class": "III",
+   "reason": "vendor session logging and auditor acceptance are agreements"
+  }
+ }
+}

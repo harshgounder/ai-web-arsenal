@@ -32,6 +32,7 @@ OFFLINE = [
     "scripts/build-indexes.py",
     "scripts/dedupe-names.py",
     "scripts/validate-domains.py",
+    "scripts/render-ceiling.py",
 ]
 
 # Files whose content legitimately depends on the network or on when it was run.
@@ -39,7 +40,7 @@ VOLATILE = {
     "data/install-matrix.json",
 }
 
-WATCH = ["data", "domains", "bootstrap"]
+WATCH = ["data", "domains", "bootstrap", "docs"]
 
 
 def snapshot():

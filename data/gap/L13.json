@@ -1,0 +1,47 @@
+{
+ "lens": "L13",
+ "name": "regulation and standards",
+ "why_some_are_class_iii": "Contract terms and specific jurisdiction practice. The law is public and therefore Class I; what a particular organisation agreed to is not.",
+ "exceptions": {
+  "L13-037": {
+   "class": "III",
+   "reason": "insurance, contract promises and SLA pressure are private agreements"
+  },
+  "L13-038": {
+   "class": "III",
+   "reason": "insurance, contract promises and SLA pressure are private agreements"
+  },
+  "L13-039": {
+   "class": "III",
+   "reason": "insurance, contract promises and SLA pressure are private agreements"
+  },
+  "L13-040": {
+   "class": "III",
+   "reason": "whether an explanation duty applies depends on the regime and the agreement"
+  },
+  "L13-043": {
+   "class": "III",
+   "reason": "which processors are under which agreement is not public"
+  },
+  "L13-044": {
+   "class": "III",
+   "reason": "which processors are under which agreement is not public"
+  },
+  "L13-045": {
+   "class": "III",
+   "reason": "which processors are under which agreement is not public"
+  },
+  "L13-061": {
+   "class": "III",
+   "reason": "which processors are under which agreement is not public"
+  },
+  "L13-060": {
+   "class": "III",
+   "reason": "how a specific regulator or auditor behaves is practice, not statute"
+  },
+  "L13-062": {
+   "class": "III",
+   "reason": "how a specific regulator or auditor behaves is practice, not statute"
+  }
+ }
+}

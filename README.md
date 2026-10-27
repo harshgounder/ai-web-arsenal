@@ -6,6 +6,7 @@
 [![domains](https://img.shields.io/badge/domains-28%20authored%20%2B%209%20pointers-1f6feb)](#the-domains)
 [![factors](https://img.shields.io/badge/denominator-1%2C000%20factors-8957e5)](#the-denominator)
 [![coverage](https://img.shields.io/badge/coverage-10.7%25-d29922)](#the-scoreboard)
+[![ceiling](https://img.shields.io/badge/ceiling-94.9%25-58a6ff)](#the-ceiling)
 [![observed](https://img.shields.io/badge/observed-0%25-c93030)](#the-scoreboard)
 [![licence](https://img.shields.io/badge/licence-MIT-8b949e)](LICENSE)
 
@@ -18,6 +19,7 @@ this repo assumes you have written permission for anything you point it at. See 
 
 - [What this is, precisely](#what-this-is-precisely)
 - [The scoreboard](#the-scoreboard)
+- [The ceiling](#the-ceiling)
 - [Why it exists](#why-it-exists)
 - [The denominator: sixteen lenses](#the-denominator-sixteen-lenses)
 - [What a factor looks like](#what-a-factor-looks-like)
@@ -103,6 +105,46 @@ The shape of the table is the finding:
   support desk, and a disclosure deadline. Those need authored procedure and a lab.
 - Money at 6 percent is the worst return per unit of real world impact in the table. Business logic is
   where loss actually lands.
+
+---
+
+## The ceiling
+
+A coverage fraction is only half a claim. The other half is how much of the remainder is even
+reachable, because a number that can never be improved is a different fact from one that is expensive.
+
+The 893 uncovered factors are classified, generated into [`docs/CEILING.md`](docs/CEILING.md):
+
+| class | meaning | cost | factors |
+|---|---|---|---|
+| I | derivable with noise, the mechanism is published | authoring only | **239** |
+| II | inferable from structure, needs a probe | a lab and a target | **603** |
+| III | genuinely unavailable, an internal fact | impossible from outside | **51** |
+
+**The ceiling is 94.9 percent.** That is the share of Set D any collection could reach from outside,
+given unlimited time. It is not a forecast of what this repo will reach.
+
+The high ceiling is the finding, and it cuts against the usual story about this field. Almost nothing in
+the denominator is secret. The constraint on completeness is effort and access to a lab, not hidden
+knowledge. Fifty one factors are permanently out of reach, and twenty seven of those are about how one
+organisation runs itself, which no external party can know.
+
+Three consequences worth stating:
+
+- **239 factors are reachable with no target and no permission.** L13 promises 50 of them, because
+  statute and standards are published and this repo simply never wrote them down. That is the cheapest
+  coverage in the project.
+- **603 factors need a lab.** This is where the observed zero lives, and it is why the next phase exists.
+- **Money has zero Class I factors.** Every one of L08's 58 remaining factors needs a running system,
+  which is exactly why it sits at 6 percent despite being where most real loss happens.
+
+So the honest ladder is three numbers, not one:
+
+```
+10.7%   covered today
+34.6%   if every Class I factor were authored, which one person can do
+94.9%   the ceiling, which needs 60 labs and does not exist yet
+```
 
 ---
 
@@ -584,6 +626,10 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | denominator | 1,000 factors, 16 lenses, each at 50 or more |
 | coverage at L2 or better | 107 of 1,000 (10.7%) |
 | observed coverage | 0 of 1,000 (0%) |
+| gap, derivable by authoring | 239 factors |
+| gap, needs a lab | 603 factors |
+| gap, unavailable from outside | 51 factors |
+| ceiling | 94.9% of the denominator |
 | sources reconciled | 19 |
 | rows reconciled | 31,298, identity holds with every term named |
 | corpus rows | 21,384 |
@@ -652,6 +698,7 @@ ai-web-arsenal/
 ├── data/
 │   ├── denominator/L01-L16    Set D: 1,000 factors across 16 lenses
 │   ├── coverage/              the join: per factor verdicts and the ledger
+│   ├── gap/                   the classification of every uncovered factor
 │   ├── claims.yaml            45 prose claims, each with a check
 │   ├── corpus.jsonl           the union, every entry accounted for
 │   ├── corpus.tools.jsonl     8,848 tools, counted separately on purpose
@@ -666,7 +713,7 @@ ai-web-arsenal/
 ├── prompts/                   5 phase packs with failure modes
 ├── mcps/                      working MCP configs
 ├── skills/web-arsenal/        the order of operations as a loadable skill
-├── docs/                      taxonomy coverage, link health, orchestration
+├── docs/                      coverage, link health, orchestration, the ceiling report
 └── scripts/                   23 pipeline, gate and check scripts
 ```
 

@@ -224,6 +224,32 @@ What the distribution says, which is more useful than the total:
 
 ---
 
+## 6e. Phase 3 done (the gap, classified)
+
+893 uncovered factors, each in exactly one class. Generated into `docs/CEILING.md`.
+
+| class | meaning | cost | factors |
+|---|---|---|---|
+| I | derivable with noise, the mechanism is published | authoring | 239 |
+| II | inferable from structure, needs a probe | a lab and a target | 603 |
+| III | genuinely unavailable, an internal fact | impossible from outside | 51 |
+
+**The ceiling is 94.9 percent.** That is the share of Set D any collection could reach from outside,
+given unlimited authoring and lab time. It is not a forecast.
+
+Three things follow, and the first is surprising:
+
+- **Almost nothing in the denominator is hidden.** The constraint on completeness is effort and lab
+  access, not secrecy. 51 factors are permanently out of reach and 27 of those are organisational.
+- **Class I is 239 factors of coverage available with no target and no permission.** L13 promises 50 of
+  them, because statute and standards are published and this repo simply never wrote them down. That is
+  the cheapest work in the entire project.
+- **Class II is the real project at 603 factors**, and it is where the observed zero lives. L08 money has
+  zero Class I factors at all, which is why it sits at 6 percent: every one of its 58 remaining factors
+  needs a running system to test.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

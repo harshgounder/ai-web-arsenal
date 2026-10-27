@@ -1,0 +1,11 @@
+{
+ "lens": "L09",
+ "name": "infrastructure and edge",
+ "why_some_are_class_iii": "Break glass and incident tooling are internal by design.",
+ "exceptions": {
+  "L09-062": {
+   "class": "III",
+   "reason": "emergency access paths are deliberately undocumented publicly"
+  }
+ }
+}

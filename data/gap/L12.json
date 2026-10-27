@@ -1,0 +1,19 @@
+{
+ "lens": "L12",
+ "name": "AI and agentic systems",
+ "why_some_are_class_iii": "Facts the provider does not publish and the deployed system does not reveal.",
+ "exceptions": {
+  "L12-036": {
+   "class": "III",
+   "reason": "whether one customer's data reached a shared fine tune is not disclosed"
+  },
+  "L12-039": {
+   "class": "III",
+   "reason": "a backdoor trigger is unknown by definition until it is found"
+  },
+  "L12-054": {
+   "class": "III",
+   "reason": "how an agent's action is attributed in an internal audit log is internal"
+  }
+ }
+}

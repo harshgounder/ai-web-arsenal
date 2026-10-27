@@ -57,6 +57,7 @@ if [ $FULL -eq 1 ]; then
   run_gate "generators are deterministic" python3 scripts/check-determinism.py
   run_gate "denominator is complete"      python3 scripts/validate-denominator.py
   run_gate "coverage ledger is sound"     python3 scripts/coverage.py --validate
+  run_gate "gap is fully classified"      python3 scripts/classify-gap.py --validate
 fi
 
 echo

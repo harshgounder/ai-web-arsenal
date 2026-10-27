@@ -60,6 +60,11 @@ try:
     print(f"coverage_mapped {len(_cov)}")
     print(f"coverage_l2 {sum(1 for r in _cov if r['level'] in ('L2','L3'))}")
     print(f"coverage_l3 {sum(1 for r in _cov if r['level'] == 'L3')}")
+    _gap = json.load(open(R/"data"/"gap"/"SUMMARY.json")) if (R/"data"/"gap"/"SUMMARY.json").exists() else {}
+    for _k in ("reachable_by_authoring", "reachable_by_lab", "unavailable"):
+        print(f"gap_{_k} {_gap.get(_k, 0)}")
+    # the stats parser only accepts integers, so the ceiling is emitted in tenths
+    print(f"ceiling_pct_tenths {round(float(_gap.get('ceiling_pct', 0)) * 10)}")
 except Exception:
     print("denominator_factors ?")
 print(f"domains_with_data {doms}")

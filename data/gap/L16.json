@@ -1,0 +1,15 @@
+{
+ "lens": "L16",
+ "name": "history and corpus",
+ "why_some_are_class_iii": "Things the public record cannot contain by construction.",
+ "exceptions": {
+  "L16-027": {
+   "class": "III",
+   "reason": "the true lifetime of a zero day is known only after it is exposed"
+  },
+  "L16-064": {
+   "class": "III",
+   "reason": "what never appears publicly cannot be counted from public data"
+  }
+ }
+}

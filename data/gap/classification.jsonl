@@ -1,0 +1,893 @@
+{"factor": "L01-001", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-002", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-003", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-004", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-005", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-006", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-007", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-008", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-009", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-010", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-011", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-012", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-013", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-014", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-015", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-016", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-017", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-018", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-019", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-020", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-021", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-022", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-023", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-024", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-025", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-026", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-027", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-028", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-029", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-030", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-031", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-032", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-033", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-034", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-035", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-036", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-037", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-038", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-039", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-040", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-041", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-042", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-043", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-044", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-045", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-046", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-047", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-048", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-049", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-050", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-051", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-052", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L01-053", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-054", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-055", "lens": "L01", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L01-056", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-057", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-058", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-059", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-060", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-061", "lens": "L01", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L01-062", "lens": "L01", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-002", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-006", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-007", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-009", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-010", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-013", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-014", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-015", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-016", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-017", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-018", "lens": "L02", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-019", "lens": "L02", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L02-020", "lens": "L02", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-021", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-022", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-023", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-024", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-025", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-026", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-027", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-028", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-029", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-030", "lens": "L02", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-031", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-032", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-037", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-040", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-041", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-042", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-043", "lens": "L02", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L02-044", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-045", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-046", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-047", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-048", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-049", "lens": "L02", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L02-050", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-051", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-052", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-053", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-054", "lens": "L02", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-055", "lens": "L02", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-056", "lens": "L02", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L02-057", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-058", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-059", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-060", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-061", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L02-062", "lens": "L02", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-001", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-004", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-005", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-008", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-009", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-010", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-011", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-012", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-013", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-014", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-017", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-018", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-019", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-020", "lens": "L03", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L03-022", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-023", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-024", "lens": "L03", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L03-025", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-026", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-027", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-028", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-029", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-030", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-033", "lens": "L03", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L03-034", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-035", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-036", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-037", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-038", "lens": "L03", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L03-039", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-040", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-041", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-042", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-043", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-044", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-045", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-046", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-048", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-050", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-051", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-052", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-054", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-055", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-057", "lens": "L03", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L03-058", "lens": "L03", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L03-059", "lens": "L03", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L03-060", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-061", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L03-062", "lens": "L03", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-001", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-002", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-003", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-004", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-005", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-006", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-007", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-008", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-010", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-011", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-012", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-013", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-016", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-019", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-021", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-022", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-024", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-025", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-026", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-029", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-030", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-031", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-032", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-037", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-038", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-039", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-040", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-041", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-042", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-043", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-044", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-045", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-046", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-047", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-048", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-049", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-050", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-051", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-052", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-053", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-054", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-055", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-057", "lens": "L04", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L04-059", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-060", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-061", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L04-062", "lens": "L04", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-001", "lens": "L05", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L05-002", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-003", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-006", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-007", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-009", "lens": "L05", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L05-010", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-011", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-012", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-013", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-014", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-015", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-016", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-017", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-018", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-019", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-020", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-022", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-023", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-024", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-025", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-026", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-027", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-028", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-030", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-031", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-032", "lens": "L05", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L05-033", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-034", "lens": "L05", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L05-035", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-036", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-037", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-038", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-039", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-040", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-041", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-042", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-043", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-044", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-045", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-046", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-047", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-048", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-049", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-050", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-051", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-052", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-053", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-054", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-055", "lens": "L05", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L05-056", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-057", "lens": "L05", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L05-058", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-059", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-060", "lens": "L05", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L05-061", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L05-062", "lens": "L05", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-001", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-002", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-003", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-004", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-005", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-010", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-011", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-012", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-013", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-014", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-015", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-016", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-017", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-018", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-019", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-020", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-021", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-023", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-027", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-028", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-029", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-031", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-032", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-033", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-034", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-035", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-038", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-040", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-041", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-042", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-043", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-044", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-045", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-046", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-047", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-048", "lens": "L06", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L06-049", "lens": "L06", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L06-050", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-051", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-052", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-053", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-054", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-055", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-056", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-057", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-058", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-059", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-060", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L06-061", "lens": "L06", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L06-062", "lens": "L06", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-003", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-004", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-006", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-007", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-009", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-010", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-011", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-012", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-013", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-014", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-015", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-016", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-017", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-018", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-019", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-020", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-021", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-022", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-023", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-024", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-025", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-026", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-027", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-028", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-031", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-032", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-033", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-034", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-035", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-036", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-037", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-038", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-039", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-040", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-041", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-042", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-043", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-044", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-045", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-046", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-048", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-049", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-050", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-051", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-052", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-053", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-055", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-056", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-057", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-058", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-059", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-060", "lens": "L07", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L07-061", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L07-062", "lens": "L07", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L08-001", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-002", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-003", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-004", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-005", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-006", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-007", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-008", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-009", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-010", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-011", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-012", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-013", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-014", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-015", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-016", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-017", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-018", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-019", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-020", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-021", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-022", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-025", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-026", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-027", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-028", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-029", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-030", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-031", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-032", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-033", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-034", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-035", "lens": "L08", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L08-036", "lens": "L08", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L08-037", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-038", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-039", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-040", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-041", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-042", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-044", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-045", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-047", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-048", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-049", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-050", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-051", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-052", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-053", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-054", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-055", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-056", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-057", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-058", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-059", "lens": "L08", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L08-060", "lens": "L08", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L08-061", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L08-062", "lens": "L08", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-003", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-005", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-006", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-007", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-008", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-009", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-010", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-011", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-014", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-015", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-016", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-017", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-018", "lens": "L09", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L09-019", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-020", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-021", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-022", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-023", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-024", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-025", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-026", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-027", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-028", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-029", "lens": "L09", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L09-030", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-032", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-035", "lens": "L09", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L09-037", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-038", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-039", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-040", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-041", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-042", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-043", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-044", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-045", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-046", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-048", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-050", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-051", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-052", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-053", "lens": "L09", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L09-054", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-055", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-056", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-057", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-058", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-059", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-060", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-061", "lens": "L09", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L09-062", "lens": "L09", "class": "III", "cost": "impossible", "evidence": "source", "reason": "emergency access paths are deliberately undocumented publicly"}
+{"factor": "L10-001", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-002", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-003", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-004", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-006", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-007", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-009", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-010", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-012", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-013", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-014", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-015", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-016", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-017", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-018", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-019", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-020", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-021", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-022", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-024", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-026", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-027", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-028", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-029", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-031", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-032", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-033", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-034", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-036", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-037", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-038", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-039", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-040", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-041", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-042", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-043", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-044", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-045", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-046", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-047", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-048", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-049", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-050", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-052", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-054", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-055", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-056", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-057", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-058", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-059", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-060", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L10-061", "lens": "L10", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L10-062", "lens": "L10", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-001", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-002", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-003", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-004", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-005", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-006", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-007", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-008", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-009", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-010", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-011", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-012", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-013", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-014", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-015", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-016", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-017", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-018", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "requires internal telemetry that no outsider can see"}
+{"factor": "L11-019", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-020", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "credential custody and access breadth are internal records"}
+{"factor": "L11-021", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "credential custody and access breadth are internal records"}
+{"factor": "L11-022", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "whether real customer data reaches a lower environment is an internal practice"}
+{"factor": "L11-023", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "decision authority and exception registers are governance, not behaviour"}
+{"factor": "L11-024", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "documents can be read only from inside; accuracy is not observable from outside"}
+{"factor": "L11-025", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-026", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L11-027", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-028", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-029", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-030", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-031", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-032", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-033", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "employment and acquisition history is internal"}
+{"factor": "L11-034", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "employment and acquisition history is internal"}
+{"factor": "L11-035", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "the organisation's own legal process is not public"}
+{"factor": "L11-036", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "the organisation's own legal process is not public"}
+{"factor": "L11-037", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-038", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L11-039", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-040", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "documents can be read only from inside; accuracy is not observable from outside"}
+{"factor": "L11-041", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "decision authority and exception registers are governance, not behaviour"}
+{"factor": "L11-042", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "incentives, assessments and team integration are internal facts"}
+{"factor": "L11-043", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "decision authority and exception registers are governance, not behaviour"}
+{"factor": "L11-044", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "incentives, assessments and team integration are internal facts"}
+{"factor": "L11-045", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "credential custody and access breadth are internal records"}
+{"factor": "L11-046", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "physical controls require presence and records a repo cannot hold"}
+{"factor": "L11-047", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "physical controls require presence and records a repo cannot hold"}
+{"factor": "L11-048", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "physical controls require presence and records a repo cannot hold"}
+{"factor": "L11-049", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "physical controls require presence and records a repo cannot hold"}
+{"factor": "L11-050", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-051", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-052", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L11-053", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L11-054", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L11-055", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L11-056", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "incentives, assessments and team integration are internal facts"}
+{"factor": "L11-057", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "the organisation's own legal process is not public"}
+{"factor": "L11-058", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "requires internal telemetry that no outsider can see"}
+{"factor": "L11-059", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "culture and after-incident behaviour are not disclosed"}
+{"factor": "L11-060", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "culture and after-incident behaviour are not disclosed"}
+{"factor": "L11-061", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "documents can be read only from inside; accuracy is not observable from outside"}
+{"factor": "L11-062", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "culture and after-incident behaviour are not disclosed"}
+{"factor": "L12-002", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-003", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-005", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-006", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-007", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-008", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-009", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-011", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-013", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-014", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-015", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-016", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-017", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-018", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-019", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-020", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-021", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-022", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-023", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-024", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-025", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-026", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-027", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-028", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-029", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-030", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-031", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-032", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-033", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-035", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-036", "lens": "L12", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "whether one customer's data reached a shared fine tune is not disclosed"}
+{"factor": "L12-037", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-038", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-039", "lens": "L12", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "a backdoor trigger is unknown by definition until it is found"}
+{"factor": "L12-040", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-041", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-042", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-043", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-044", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-045", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-046", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-047", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-048", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-049", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-050", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-051", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-052", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-053", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-054", "lens": "L12", "class": "III", "cost": "impossible", "evidence": "source", "reason": "how an agent's action is attributed in an internal audit log is internal"}
+{"factor": "L12-055", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-056", "lens": "L12", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L12-057", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-058", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-059", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-060", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L12-061", "lens": "L12", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L12-062", "lens": "L12", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-001", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-002", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-003", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-004", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-005", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-006", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-007", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-008", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-009", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-010", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-011", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-012", "lens": "L13", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L13-013", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-014", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-015", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-016", "lens": "L13", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L13-017", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-018", "lens": "L13", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L13-019", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-020", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-021", "lens": "L13", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L13-022", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-023", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-024", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-025", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-026", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-027", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-028", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-029", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-030", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-031", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-032", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-033", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-034", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-035", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-036", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-037", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "insurance, contract promises and SLA pressure are private agreements"}
+{"factor": "L13-038", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "insurance, contract promises and SLA pressure are private agreements"}
+{"factor": "L13-039", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "insurance, contract promises and SLA pressure are private agreements"}
+{"factor": "L13-040", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "whether an explanation duty applies depends on the regime and the agreement"}
+{"factor": "L13-041", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-042", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-043", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "which processors are under which agreement is not public"}
+{"factor": "L13-044", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "which processors are under which agreement is not public"}
+{"factor": "L13-045", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "which processors are under which agreement is not public"}
+{"factor": "L13-046", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-047", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-048", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-049", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-050", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-051", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-052", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-053", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-054", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-055", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-056", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-057", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-058", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-059", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-060", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "how a specific regulator or auditor behaves is practice, not statute"}
+{"factor": "L13-061", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "which processors are under which agreement is not public"}
+{"factor": "L13-062", "lens": "L13", "class": "III", "cost": "impossible", "evidence": "source", "reason": "how a specific regulator or auditor behaves is practice, not statute"}
+{"factor": "L13-063", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L13-064", "lens": "L13", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-003", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-004", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-005", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-006", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-007", "lens": "L14", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L14-008", "lens": "L14", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L14-009", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-010", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-011", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-012", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-013", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-014", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-015", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-016", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-017", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-018", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-019", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-020", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-021", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-022", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-023", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-024", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-025", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-026", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-027", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-028", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-030", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-031", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-032", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-033", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-034", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-035", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-036", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-037", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-038", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-039", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-040", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-043", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-044", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-045", "lens": "L14", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L14-046", "lens": "L14", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L14-047", "lens": "L14", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L14-048", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-050", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-051", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-052", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-053", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-054", "lens": "L14", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L14-055", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-056", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-057", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-058", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-059", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-060", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-061", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-062", "lens": "L14", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L14-063", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L14-064", "lens": "L14", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-001", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-002", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-004", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-005", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-006", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-007", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-008", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-010", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-011", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-012", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-015", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-016", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-017", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-018", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-019", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-020", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-021", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-022", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-023", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-024", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-025", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-026", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-027", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-028", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-029", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "triage capacity and alert fatigue are staffing facts"}
+{"factor": "L15-030", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-031", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-032", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-033", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-034", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-035", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-036", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-037", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-038", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-039", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-040", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-041", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "playbook depth, containment cost and control economics are internal decisions"}
+{"factor": "L15-042", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-043", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "playbook depth, containment cost and control economics are internal decisions"}
+{"factor": "L15-044", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-045", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-046", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-047", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-048", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-049", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-050", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "vendor session logging and auditor acceptance are agreements"}
+{"factor": "L15-051", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "triage capacity and alert fatigue are staffing facts"}
+{"factor": "L15-052", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "triage capacity and alert fatigue are staffing facts"}
+{"factor": "L15-054", "lens": "L15", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L15-055", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-056", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-057", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-058", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-059", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-060", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "playbook depth, containment cost and control economics are internal decisions"}
+{"factor": "L15-061", "lens": "L15", "class": "III", "cost": "impossible", "evidence": "source", "reason": "vendor session logging and auditor acceptance are agreements"}
+{"factor": "L15-062", "lens": "L15", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L15-063", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L15-064", "lens": "L15", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L16-001", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-002", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-003", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-004", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-005", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-006", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-007", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-008", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-010", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-011", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-012", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-013", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-014", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-015", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-016", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-017", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-018", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-019", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-020", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-021", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-022", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-023", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-024", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-025", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-026", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-027", "lens": "L16", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "the true lifetime of a zero day is known only after it is exposed"}
+{"factor": "L16-028", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-029", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-030", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-031", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-032", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-033", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-034", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-035", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-036", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-037", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-038", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-039", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-040", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-041", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-042", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-043", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-044", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-045", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-046", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-047", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-048", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-049", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-050", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-051", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-052", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-053", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-054", "lens": "L16", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
+{"factor": "L16-055", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-056", "lens": "L16", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L16-057", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-058", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-059", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-060", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-061", "lens": "L16", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
+{"factor": "L16-062", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-063", "lens": "L16", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
+{"factor": "L16-064", "lens": "L16", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "what never appears publicly cannot be counted from public data"}
