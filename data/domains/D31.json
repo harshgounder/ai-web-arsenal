@@ -907,7 +907,10 @@
   {
    "gap": "No Flutter AOT recovery (blutter class)",
    "class": "no-tool",
-   "build_candidate": "libapp.so parsing plus symbol mapping, needed for apps whose logic is not in DEX"
+   "build_candidate": "libapp.so parsing plus symbol mapping, needed for apps whose logic is not in DEX",
+   "status": "partial",
+   "built_at": "rea-ops/flutter-aot.py",
+   "built_note": "parses ELF symbol and dynamic tables with no dependencies, locates the four Dart snapshots with offsets and sizes, reports the embedded Dart version and refuses to deserialise. The blutter class recovery is not done."
   },
   {
    "gap": "No Hermes or React Native bundle recovery",

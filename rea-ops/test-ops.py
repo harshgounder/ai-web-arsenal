@@ -209,6 +209,29 @@ def make_hermes(path, version=96, funcs=120, strings=900, storage=4096):
     return total
 
 
+def make_flutter_so(path):
+    """Compile a real shared object with the four Flutter snapshot symbols.
+
+    Unlike the wxapkg and Hermes fixtures, this one is genuinely external: gcc produces the ELF and its
+    symbol table, so the parser is validated against a real toolchain rather than against bytes this repo
+    wrote itself. That is a stronger fixture and it is worth saying why.
+    """
+    import subprocess, tempfile
+    c = tmp_c = path.parent / "fixture.c"
+    c.write_text(
+        '#include <stdint.h>\n'
+        'const unsigned char _kDartVmSnapshotData[4096] = {1,2,3,4};\n'
+        'const unsigned char _kDartVmSnapshotInstructions[8192] = {5,6,7,8};\n'
+        'const unsigned char _kDartIsolateSnapshotData[16384] = {9,10};\n'
+        'const unsigned char _kDartIsolateSnapshotInstructions[32768] = {11,12};\n'
+        'const char *dart_version = "3.4.0 (stable) (Tue Aug 6 2026)";\n'
+        'int unused(int x) { return x + 1; }\n')
+    r = subprocess.run(["gcc", "-shared", "-fPIC", "-o", str(path), str(c)],
+                       capture_output=True, text=True, timeout=120)
+    c.unlink(missing_ok=True)
+    return r.returncode == 0, r.stderr
+
+
 def run(args):
     r = subprocess.run([sys.executable] + args, capture_output=True, text=True, timeout=120)
     return r.returncode, r.stdout, r.stderr
@@ -464,6 +487,45 @@ def test_hermes(tmp):
     check("hermes: rejects a non Hermes file with a reason", rc == 1 and "not Hermes" in err)
 
 
+def test_flutter(tmp):
+    so = tmp / "libapp.so"
+    ok, err = make_flutter_so(so)
+    if not ok:
+        check("flutter: fixture compiles", False, err[:80])
+        return
+    check("flutter: fixture compiles with gcc", True)
+
+    rc, out, err = run([str(HERE / "flutter-aot.py"), str(so), "--json"])
+    d = parse_json(out)
+    check("flutter: identifies the library", rc == 0 and d.get("is_flutter") is True, err[:80])
+    snaps = d.get("snapshots") or {}
+    check("flutter: finds all four snapshots", len(snaps) == 4, str(sorted(snaps)))
+    check("flutter: reports a real size for the isolate data",
+          (snaps.get("_kDartIsolateSnapshotData") or {}).get("size") == 16384,
+          str(snaps.get("_kDartIsolateSnapshotData")))
+    check("flutter: reports the embedded dart version",
+          d.get("dart_version_string") == "3.4.0", str(d.get("dart_version_string")))
+    check("flutter: records the version context", "stable" in str(d.get("dart_version_context")))
+
+    # Stripping removes .symtab but not .dynsym, and these symbols are exported, so a stripped Flutter
+    # library still identifies. Asserting the opposite was wrong: the real question is whether the reader
+    # survives stripping, and it does.
+    stripped = tmp / "stripped.so"
+    import subprocess
+    subprocess.run(["cp", str(so), str(stripped)], check=True)
+    subprocess.run(["strip", str(stripped)], capture_output=True)
+    rc, out, _ = run([str(HERE / "flutter-aot.py"), str(stripped), "--json"])
+    d = parse_json(out)
+    check("flutter: still identifies after strip, because these are dynamic exports",
+          rc == 0 and d.get("is_flutter") is True, str(sorted((d.get("snapshots") or {}).keys()))[:60])
+
+    # not an ELF at all
+    junk = tmp / "junk.so"
+    junk.write_bytes(b"\x7fELx" + b"\x00" * 40)
+    rc, out, err = run([str(HERE / "flutter-aot.py"), str(junk)])
+    check("flutter: rejects a non ELF file with a reason", rc == 1 and "not an ELF" in err)
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -481,6 +543,8 @@ def main():
         test_sourcemap(tmp)
         print("hermes.py")
         test_hermes(tmp)
+        print("flutter-aot.py")
+        test_flutter(tmp)
     print(f"\nfixtures: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
     if FAIL:
         for f in FAIL:
