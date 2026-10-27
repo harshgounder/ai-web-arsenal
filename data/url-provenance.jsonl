@@ -9,13 +9,18 @@
 {"url": "https://curl.se/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-curl", "d09-curl", "d10-curl", "d13-curl", "d14-curl", "d29-curl"]}
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-extension-scope"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-timer-resolution"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-oracle-stats"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-storage-lifecycle"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-gpu-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-messaging-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-render-tree-exfil"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-sandbox-matrix"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-parser-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-repro-pack"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-header-posture"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-collector-behaviour"]}
+{"url": "https://developer.mozilla.org/en-US/docs/WebAssembly", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-wasm-pipeline"]}
 {"url": "https://docs.astral.sh/uv/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-uv"]}
 {"url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d14-imds", "d17-imds"]}
 {"url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-cloud-audit"]}
@@ -264,7 +269,9 @@
 {"url": "https://sanctionssearch.ofac.treas.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-ofac"]}
 {"url": "https://schemathesis.readthedocs.io/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-schemathesis"]}
 {"url": "https://slsa.dev/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-slsa"]}
+{"url": "https://source.chromium.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-allocator-behaviour"]}
 {"url": "https://supabase.com/docs/guides/database/postgres/row-level-security", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-supabase-rls"]}
+{"url": "https://v8.dev/blog", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-jit-tiers"]}
 {"url": "https://www.bis.doc.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-export-control"]}
 {"url": "https://www.chromium.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-chromium", "d31-chromium"]}
 {"url": "https://www.cisa.gov/coordinated-vulnerability-disclosure-process", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvd"]}
@@ -276,6 +283,7 @@
 {"url": "https://www.iso.org/standard/27001", "checked_at": "2026-10-27", "status": "BLOCKED", "http": 403, "entries": ["d24-iso27001-scope"]}
 {"url": "https://www.justice.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-legal-hold"]}
 {"url": "https://www.justice.gov/jm/jm-9-48000-computer-fraud", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-doj-cfaa"]}
+{"url": "https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-sandbox-reach"]}
 {"url": "https://www.keycloak.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-keycloak"]}
 {"url": "https://www.nist.gov/privacy-framework", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist-privacy"]}
 {"url": "https://www.pcisecuritystandards.org/standards/pci-dss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-pci-scope"]}

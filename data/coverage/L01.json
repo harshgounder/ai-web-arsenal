@@ -2,25 +2,175 @@
  "lens": "L01",
  "name": "substrate",
  "default": "L0",
- "reason": "Nothing in either repo operationalises a substrate factor. The corpus lists tools that touch memory and timing indirectly, but no entry states a procedure plus an oracle for any of these 62. This is the largest single gap in the project and it is stated rather than hidden.",
+ "reason": "The substrate now has a domain. Nineteen of its factors are covered by methodology entries that state how to measure clock granularity, JIT thresholds, allocator reuse, collector movement, sandbox reach, parser surfaces and GPU memory. The rest still needs a lab, and none of it is observed: there is no substrate harness yet.",
  "exceptions": {
   "L01-010": {
-   "level": "L1",
-   "covered_by": ["d31-wasm"],
+   "level": "L2",
+   "covered_by": [
+    "d37-wasm-pipeline"
+   ],
    "basis": "entry",
-   "note": "inspect_wasm_artifact validates a module and reports sections, imports and exports. That examines module structure, not how the engine compiles it, so it is a name in the area and not a procedure for the factor."
+   "note": "Tier up timing of a wasm function against its JavaScript twin is the pipeline question."
   },
   "L01-044": {
    "level": "L1",
-   "covered_by": ["d16-jwt-tool"],
+   "covered_by": [
+    "d16-jwt-tool"
+   ],
    "basis": "entry",
    "note": "jwt_tool tests signature and claim handling, which includes whether a token can be forged without the key. That touches entropy failure as a symptom, not the source of entropy itself."
   },
   "L01-062": {
    "level": "L1",
-   "covered_by": ["d25-crs"],
+   "covered_by": [
+    "d25-crs"
+   ],
    "basis": "entry",
    "note": "The core rule set is the artefact that a mitigation completeness question would be tested against. It names the area and gives no procedure for finding a bypass of a mitigated path."
+  },
+  "L01-006": {
+   "level": "L2",
+   "covered_by": [
+    "d37-timer-resolution"
+   ],
+   "basis": "entry",
+   "note": "Coarsening is observed by measuring the granularity step rather than reading a setting."
+  },
+  "L01-007": {
+   "level": "L2",
+   "covered_by": [
+    "d37-jit-tiers"
+   ],
+   "basis": "entry",
+   "note": "A latency discontinuity at an iteration count is the threshold made visible."
+  },
+  "L01-008": {
+   "level": "L2",
+   "covered_by": [
+    "d37-jit-tiers"
+   ],
+   "basis": "entry",
+   "note": "A deopt storm from a mid loop type change is the guard invalidation test."
+  },
+  "L01-012": {
+   "level": "L2",
+   "covered_by": [
+    "d37-wasm-pipeline"
+   ],
+   "basis": "entry",
+   "note": "A detached view after memory growth is the observable the factor names."
+  },
+  "L01-013": {
+   "level": "L2",
+   "covered_by": [
+    "d37-allocator-behaviour"
+   ],
+   "basis": "entry",
+   "note": "Sizes landing in adjacent regions is inferred from access timing."
+  },
+  "L01-014": {
+   "level": "L2",
+   "covered_by": [
+    "d37-allocator-behaviour"
+   ],
+   "basis": "entry",
+   "note": "LIFO or FIFO reuse shown by address ordering after a controlled free sequence."
+  },
+  "L01-015": {
+   "level": "L2",
+   "covered_by": [
+    "d37-allocator-behaviour"
+   ],
+   "basis": "entry",
+   "note": "A quarantine delay is the gap between free and reuse."
+  },
+  "L01-019": {
+   "level": "L2",
+   "covered_by": [
+    "d37-collector-behaviour"
+   ],
+   "basis": "entry",
+   "note": "Pause distribution against a fixed workload identifies the collector family."
+  },
+  "L01-021": {
+   "level": "L2",
+   "covered_by": [
+    "d37-collector-behaviour"
+   ],
+   "basis": "entry",
+   "note": "Finalizer output ordered against a sentinel is the resurrection question."
+  },
+  "L01-023": {
+   "level": "L2",
+   "covered_by": [
+    "d37-collector-behaviour"
+   ],
+   "basis": "entry",
+   "note": "Allocation pressure observable across contexts is the same pause measurement."
+  },
+  "L01-026": {
+   "level": "L2",
+   "covered_by": [
+    "d37-sandbox-reach"
+   ],
+   "basis": "entry",
+   "note": "Distinct renderer processes per origin is the isolation granularity, enumerated from the host."
+  },
+  "L01-032": {
+   "level": "L2",
+   "covered_by": [
+    "d37-sandbox-reach"
+   ],
+   "basis": "entry",
+   "note": "The broker interface is part of what the policy and descriptor table show."
+  },
+  "L01-041": {
+   "level": "L2",
+   "covered_by": [
+    "d37-collector-behaviour"
+   ],
+   "basis": "entry",
+   "note": "Exception delivery is observed through which handler runs for a chosen fault."
+  },
+  "L01-043": {
+   "level": "L2",
+   "covered_by": [
+    "d37-sandbox-reach"
+   ],
+   "basis": "entry",
+   "note": "Control flow integrity coverage in the runtime is read from the policy and the build."
+  },
+  "L01-050": {
+   "level": "L2",
+   "covered_by": [
+    "d37-gpu-surface"
+   ],
+   "basis": "entry",
+   "note": "The command set accepted and the validation applied is the GPU surface."
+  },
+  "L01-053": {
+   "level": "L2",
+   "covered_by": [
+    "d37-parser-surface"
+   ],
+   "basis": "entry",
+   "note": "Which native decoder parses a crafted file is identified from a crash or sandbox log."
+  },
+  "L01-054": {
+   "level": "L2",
+   "covered_by": [
+    "d37-parser-surface"
+   ],
+   "basis": "entry",
+   "note": "Font parsing is one of the parser entries, reached by loading a crafted font."
+  },
+  "L01-055": {
+   "level": "L2",
+   "covered_by": [
+    "d37-parser-surface"
+   ],
+   "basis": "entry",
+   "note": "Nested scripting in PDF and SVG is the capability set question for a second language in the page."
   }
  }
 }

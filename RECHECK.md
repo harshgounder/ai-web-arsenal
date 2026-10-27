@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 62 | 290 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 63 | 298 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 290 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 298 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -105,9 +105,9 @@ reconcile       31,298 rows = 13,516 admitted + 17,506 excluded + 204 held + 71 
 taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
-domains         28 authored + 9 explicit pointers + 0 empty
-enriched        444 entries, all with atom and driver; 335 with preconditions, 346 with oracle,
-                175 with evades, 135 with detected_by. The mandatory-field rule is 75% met
+domains         29 authored + 9 explicit pointers + 0 empty
+enriched        483 entries, all with atom and driver; 366 with preconditions, 377 with oracle,
+                175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
 links           267 domain URLs checked, 266 answered (1 is w3.org refusing bots)
@@ -317,7 +317,8 @@ not are ISO 27001 and the W3C WebAuthn page refusing automated clients.
 | L15 detection industry | 5 of 64 | **19 of 64 (30%)** |
 | L05 client and browser | 5 of 62 | **23 of 62 (37%)** |
 | L14 evidence science | 6 of 64 | **13 of 64 (20%)** |
-| whole denominator | 108 of 1,000 (10.8%) | **185 of 1,000 (18.5%)** |
+| L01 substrate | 0 of 62 | **19 of 62 (31%)** |
+| whole denominator | 108 of 1,000 (10.8%) | **204 of 1,000 (20.4%)** |
 
 What the entries do that a policy document does not: each states what to look at and what result settles
 it. `d24-gdpr-breach` asks for the awareness timestamp and the article 33(5) register entry, not a promise
@@ -336,6 +337,37 @@ which is the difference between a ritual and a mechanism.
 The link checker also caught a wrong URL: Suricata is `OISF/suricata`, and the entry had
 `suricata/suricata`, which resolves to nothing. That is defect 4's class, caught before commit by a
 machine rather than after by a reader.
+
+---
+
+## 6i. A substrate domain, so the last zero has somewhere to live
+
+L01 was the only lens at zero on both axes and it had nowhere to put anything: substrate measurement is
+not client side, not server side, and not any of the 28 existing domains. Forcing it into D08 would have
+been the kind of filing that makes a repo feel organised and teaches nothing.
+
+So D37 exists now, "Substrate: the machine under the interpreter", 8 entries, all methodology rather than
+tooling, because the instrument here is a measurement and not a binary:
+
+```
+d37-timer-resolution     the granularity step, measured, and how it moves under isolation settings
+d37-jit-tiers            a latency discontinuity at an iteration count, and a deopt storm
+d37-wasm-pipeline        tier up timing, and a view detached by memory growth
+d37-allocator-behaviour  size class adjacency, reuse order, quarantine delay
+d37-collector-behaviour  address stability, finalizer ordering, pause distribution
+d37-sandbox-reach        the policy and the descriptor table, enumerated
+d37-parser-surface       which native decoder parses a crafted file
+d37-gpu-surface          a fresh buffer's content before any write
+```
+
+L01 goes 0 to 19 of 62. Coverage 18.5 to 20.4 percent.
+
+Each entry names the observable that ends the question rather than the concept. "Content of a fresh
+buffer before any write, which should be zero" answers the GPU memory clearing question in one request.
+"The granularity step, measured across many reads" answers clock coarsening without reading a setting.
+
+The domain also carries its own gaps, including the honest one: nothing in it is observed, because there
+is no substrate harness, and building one is named as the candidate.
 
 ---
 

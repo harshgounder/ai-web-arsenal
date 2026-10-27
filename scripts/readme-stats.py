@@ -85,6 +85,13 @@ try:
     print(f"link_ok {sum(1 for r in _lc['results'].values() if r['status'] == 'OK')}")
 except Exception:
     print("link_urls 0")
+try:
+    _reg = json.load(open(R/"data"/"domain-registry.json"))["domains"]
+    print(f"domains_total {len(_reg)}")
+    print(f"domains_authored {sum(1 for d in _reg if d.get('status') == 'DEEP')}")
+    print(f"domains_pointer {sum(1 for d in _reg if d.get('status') == 'POINTER')}")
+except Exception:
+    print("domains_total 0")
 print(f"domains_with_data {doms}")
 print(f"domains_rendered {rendered}")
 print(f"prompt_packs {prompts}")

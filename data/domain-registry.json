@@ -665,6 +665,22 @@
    "status": "POINTER",
    "delegates": "../web-attack-atlas/docs/ONTOLOGY.md and data/atoms.json",
    "delegates_note": "the ontology lives in the atlas, by design"
+  },
+  {
+   "id": "D37",
+   "title": "Substrate: the machine under the interpreter",
+   "surfaces": [
+    "S13"
+   ],
+   "atoms": [
+    "A13",
+    "A05",
+    "A07"
+   ],
+   "cells": [
+    "S13/L02/A2"
+   ],
+   "status": "DEEP"
   }
  ]
 }

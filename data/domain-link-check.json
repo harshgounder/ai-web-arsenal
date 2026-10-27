@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 290,
+ "unique_urls": 298,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -98,6 +98,13 @@
     "d08-extension-scope"
    ]
   },
+  "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-timer-resolution"
+   ]
+  },
   "https://developer.mozilla.org/en-US/docs/Web/API/Performance_API": {
    "status": "OK",
    "http": 200,
@@ -110,6 +117,13 @@
    "http": 200,
    "entries": [
     "d08-storage-lifecycle"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-gpu-surface"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage": {
@@ -133,6 +147,13 @@
     "d08-sandbox-matrix"
    ]
   },
+  "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-parser-surface"
+   ]
+  },
   "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers": {
    "status": "OK",
    "http": 200,
@@ -145,6 +166,20 @@
    "http": 200,
    "entries": [
     "d08-header-posture"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-collector-behaviour"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/WebAssembly": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-wasm-pipeline"
    ]
   },
   "https://docs.astral.sh/uv/": {
@@ -2041,11 +2076,25 @@
     "d18-slsa"
    ]
   },
+  "https://source.chromium.org/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-allocator-behaviour"
+   ]
+  },
   "https://supabase.com/docs/guides/database/postgres/row-level-security": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d05-supabase-rls"
+   ]
+  },
+  "https://v8.dev/blog": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-jit-tiers"
    ]
   },
   "https://www.bis.doc.gov/": {
@@ -2125,6 +2174,13 @@
    "http": 200,
    "entries": [
     "d24-doj-cfaa"
+   ]
+  },
+  "https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d37-sandbox-reach"
    ]
   },
   "https://www.keycloak.org/": {

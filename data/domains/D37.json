@@ -1,0 +1,316 @@
+{
+ "id": "D37",
+ "title": "Substrate: the machine under the interpreter",
+ "version": 1,
+ "generated": "2026-10-27",
+ "status": "DEEP",
+ "atoms": [
+  "A13",
+  "A07",
+  "A05"
+ ],
+ "atom_notes": {
+  "A13": "most substrate findings are side channels or timing oracles",
+  "A07": "memory pressure and pause behaviour are resource boundaries",
+  "A05": "type confusion between the engine's view and the hardware's"
+ },
+ "required_cells": [
+  {
+   "cell": "S13/L02/A2",
+   "why": "you cannot measure a machine you have not characterised",
+   "filled": true
+  },
+  {
+   "cell": "S13/L08/A4",
+   "why": "proving a side channel needs statistics, not a single reading",
+   "filled": true
+  }
+ ],
+ "entries": [
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-timer-resolution",
+   "name": "Clock resolution and coarsening",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now",
+   "role": "What a page can actually measure. If the clock is quantised to 100 microseconds or jittered, a side channel needs a different technique, and the difference is measurable rather than assumed.",
+   "preconditions": [
+    "a page context able to read a high resolution timer",
+    "a host where isolation settings can be varied"
+   ],
+   "oracle": [
+    "the observed granularity step, measured across many reads",
+    "the same step changing when isolation or site isolation settings change",
+    "a jitter distribution wider than the value being inferred, which ends the technique"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-jit-tiers",
+   "name": "JIT tier thresholds and deopt behaviour",
+   "url": "https://v8.dev/blog",
+   "role": "Where the interpreter stops and the optimiser starts, and what assumption invalidates it. Tier thresholds are the reason a payload behaves differently on iteration 9000 than on iteration 10.",
+   "preconditions": [
+    "a script context that can time its own function calls"
+   ],
+   "oracle": [
+    "a discontinuity in per call latency at a specific iteration count, repeatable",
+    "a deopt storm visible as a latency step when the argument type changes mid loop"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-wasm-pipeline",
+   "name": "WebAssembly compilation and memory growth",
+   "url": "https://developer.mozilla.org/en-US/docs/WebAssembly",
+   "role": "How a module is compiled relative to JavaScript, and what happens to views held across a memory growth. A detached buffer is the observable that most callers forget.",
+   "preconditions": [
+    "the page can instantiate a WebAssembly module"
+   ],
+   "oracle": [
+    "tier up timing of a wasm function against its JavaScript twin",
+    "an ArrayBuffer view detached after memory.grow, observed rather than documented"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-allocator-behaviour",
+   "name": "Allocator size classes and reuse order",
+   "url": "https://source.chromium.org/",
+   "role": "Which allocations land in the same region and what a freed chunk becomes. Heap grooming is impossible without this, and most of it is observable from script through allocation timing.",
+   "preconditions": [
+    "a script context with allocation primitives",
+    "a build with the target allocator"
+   ],
+   "oracle": [
+    "objects of chosen sizes landing in adjacent regions, inferred from access timing",
+    "LIFO or FIFO reuse shown by address ordering after a controlled free sequence",
+    "a quarantine delay detected as a gap between free and reuse"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-collector-behaviour",
+   "name": "Collector movement, finalizers and pause shape",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management",
+   "role": "Whether live objects move, when finalizers run relative to death, and whether a pause is long enough to be an oracle. Moving collectors decide whether a stale reference corrupts or merely fails.",
+   "preconditions": [
+    "allocation pressure can be induced from script"
+   ],
+   "oracle": [
+    "address stability across a forced collection",
+    "finalizer output ordered against a sentinel",
+    "pause distribution measured against a fixed workload"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-sandbox-reach",
+   "name": "Sandbox reach and descriptor inheritance",
+   "url": "https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html",
+   "role": "What a compromised renderer can reach. The policy, the reachable descriptors and the broker interface decide whether a renderer bug is a browser bug or a host bug.",
+   "preconditions": [
+    "a renderer process to inspect on a host where it can be observed"
+   ],
+   "oracle": [
+    "the seccomp policy and the open descriptor table, enumerated",
+    "a syscall refused at the policy and a neighbouring one permitted",
+    "a descriptor inherited into a helper that should not hold it"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-parser-surface",
+   "name": "Native parser reachability from a page",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types",
+   "role": "Which native decoders a page can feed on purpose. Fonts, media and the nested scripting in PDF and SVG are historically the richest memory unsafe surface reachable without a plugin.",
+   "preconditions": [
+    "a page can load the media or document type in question"
+   ],
+   "oracle": [
+    "the library that parses a crafted file, identified from a crash or a sandbox log",
+    "the accepted format list for a given engine version"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L02",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d37-gpu-surface",
+   "name": "GPU command and memory surface",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API",
+   "role": "What a page can submit to a privileged parser, and whether GPU memory is cleared between contexts. Both are reachable without any browser exploit.",
+   "preconditions": [
+    "WebGL or WebGPU available in the target context"
+   ],
+   "oracle": [
+    "the command set accepted and the validation applied to each",
+    "content of a fresh buffer before any write, which should be zero"
+   ]
+  }
+ ],
+ "tree": {
+  "q1": "which layer is suspected: clock, compiler, allocator, collector, sandbox, parser or GPU",
+  "q2": "is the effect observable from script alone, or does it need a host view",
+  "q3": "does the effect survive isolation settings, which decides whether it is a technique or an artefact"
+ },
+ "mirror": [
+  {
+   "attack": "cache timing against a quantised clock",
+   "detect": "timer granularity floor and jitter distribution monitored in the engine build",
+   "control": "clock coarsening and jitter in the engine, per site isolation",
+   "rule": "a page deriving a value from a timing difference smaller than the quantisation step"
+  },
+  {
+   "attack": "renderer leak crossing an origin boundary",
+   "detect": "process boundary violations and renderer crash telemetry",
+   "control": "site isolation, one renderer per site",
+   "rule": "a renderer reading memory belonging to another site's process"
+  },
+  {
+   "attack": "heap grooming after a free",
+   "detect": "allocator quarantine occupancy and reuse latency anomalies",
+   "control": "quarantine before reuse, randomised freelist",
+   "rule": "an allocation landing at a freed address inside the quarantine window"
+  },
+  {
+   "attack": "reach past the sandbox after a renderer bug",
+   "detect": "seccomp denials and broker message validation failures",
+   "control": "sandbox policy narrowing and broker argument validation",
+   "rule": "a syscall or broker call the policy should refuse"
+  },
+  {
+   "attack": "reading a GPU buffer left by another context",
+   "detect": "buffer initialisation audit on context creation",
+   "control": "GPU memory clearing between contexts",
+   "rule": "non zero content in a buffer read before any write"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No local substrate lab, so nothing in this domain is observed",
+   "class": "no-tool",
+   "build_candidate": "a harness that measures clock granularity, JIT tier thresholds and allocator reuse on the host it runs on, with the numbers recorded"
+  },
+  {
+   "gap": "No side channel statistical tooling in the manifest",
+   "class": "no-tool",
+   "build_candidate": "a measurement harness with a noise floor, sample count and effect size report, feeding d24-oracle-stats"
+  },
+  {
+   "gap": "GPU surface has no testable instrument here",
+   "class": "no-tool",
+   "build_candidate": "a WebGL buffer initialisation probe, which is small and answers the memory clearing question directly"
+  }
+ ],
+ "unreviewed_index": 0
+}

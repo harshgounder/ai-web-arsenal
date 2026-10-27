@@ -1,0 +1,5 @@
+{
+ "q1": "which layer is suspected: clock, compiler, allocator, collector, sandbox, parser or GPU",
+ "q2": "is the effect observable from script alone, or does it need a host view",
+ "q3": "does the effect survive isolation settings, which decides whether it is a technique or an artefact"
+}

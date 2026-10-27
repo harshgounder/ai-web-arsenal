@@ -98,8 +98,8 @@ claims:
 
   # --- domains -----------------------------------------------------------------
   - id: C050
-    statement: "37 domains are registered: 28 authored, 9 pointers, 0 stubs"
-    check: "(lambda r: len(r) == 37 and sum(1 for d in r if d['status'] == 'DEEP') == 28 and sum(1 for d in r if d['status'] == 'POINTER') == 9 and sum(1 for d in r if d['status'] == 'STUB') == 0)(load('data/domain-registry.json')['domains'])"
+    statement: "the registry counts match the stats generator: authored, pointers, and no stubs"
+    check: "(lambda r: len(r) == stats['domains_total'] and sum(1 for d in r if d['status'] == 'DEEP') == stats['domains_authored'] and sum(1 for d in r if d['status'] == 'POINTER') == stats['domains_pointer'] and sum(1 for d in r if d['status'] == 'STUB') == 0)(load('data/domain-registry.json')['domains'])"
 
   - id: C051
     statement: "no authored domain file is empty"

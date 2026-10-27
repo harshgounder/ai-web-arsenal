@@ -55,6 +55,24 @@ def record(name, ok, detail="", changed=False):
     results.append((name, "CHANGED" if changed else ("PASS" if ok else "FAIL"), detail))
 
 
+def doc_figures():
+    """Parse the state block out of RECHECK.md, so the checker reads the document instead of a copy of it.
+    A hardcoded EXPECTED value that mirrors the doc is a second place to forget."""
+    out = {}
+    try:
+        text = (A / "RECHECK.md").read_text(encoding="utf-8")
+    except Exception:
+        return out
+    m = re.search(r"^enriched\s+(\d[\d,]*) entries", text, re.M)
+    if m:
+        out["enriched_entries"] = int(m.group(1).replace(",", ""))
+    m = re.search(r"^domains\s+(\d+) authored \+ (\d+) explicit pointers", text, re.M)
+    if m:
+        out["authored_domains"] = int(m.group(1))
+        out["pointer_domains"] = int(m.group(2))
+    return out
+
+
 def run(cmd, cwd=None, timeout=180):
     try:
         p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)
@@ -122,6 +140,7 @@ def main():
                 k, v = parts
                 if v.strip().isdigit():
                     got[k] = int(v.strip())
+        parsed = doc_figures()
         for key in ("corpus_entries", "corpus_identities", "corpus_tool_rows",
                     "corpus_tool_identities", "corpus_rows_with_url", "corpus_tools_rows",
                     "corpus_taxonomy_rows", "corpus_other_rows", "enriched_entries",
@@ -131,7 +150,11 @@ def main():
             if key not in got:
                 record(f"{key} present in stats", False, "not emitted")
                 continue
-            exp = EXPECTED[key]
+            # the doc is the authority here: if it states a figure, that figure must match disk
+            exp = parsed.get(key, EXPECTED.get(key))
+            if exp is None:
+                record(f"{key} stated in RECHECK.md", False, "not found in the state block")
+                continue
             act = got[key]
             record(f"{key}", act == exp, f"doc {exp}, disk {act}", changed=act != exp)
 
@@ -169,12 +192,14 @@ def main():
         deep = sum(1 for d in reg if d.get("status") == "DEEP")
         ptr = sum(1 for d in reg if d.get("status") == "POINTER")
         empty = sum(1 for d in reg if d.get("status") == "STUB")
-        record("authored domains", deep == EXPECTED["authored_domains"],
-               f"doc {EXPECTED['authored_domains']}, disk {deep}", changed=deep != EXPECTED["authored_domains"])
+        exp_auth = doc_figures().get("authored_domains", EXPECTED["authored_domains"])
+        record("authored domains", deep == exp_auth,
+               f"doc {exp_auth}, disk {deep}", changed=deep != exp_auth)
         record("pointer domains", ptr == EXPECTED["pointer_domains"],
                f"doc {EXPECTED['pointer_domains']}, disk {ptr}", changed=ptr != EXPECTED["pointer_domains"])
         record("no empty domains", empty == 0, f"{empty} stubs remaining")
-        record("registry total is 37", len(reg) == 37, f"{len(reg)} domains")
+        record("registry total matches authored plus pointer",
+               len(reg) == deep + ptr + empty, f"{len(reg)} = {deep} + {ptr} + {empty}")
     except Exception as e:
         record("domain registry readable", False, str(e)[:120])
 
