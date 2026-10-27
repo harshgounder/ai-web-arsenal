@@ -79,8 +79,23 @@ def find_map(bundle_path, text):
         except Exception as e:
             return None, None, f"inline map could not be decoded: {e}"
 
-    candidate = (bundle_path.parent / url).resolve()
-    if candidate.exists():
+    # A bundle is untrusted input, and sourceMappingURL is a string inside it. Resolving that string and
+    # reading whatever it points at turns a bundle into a local file read: ../../../etc/passwd, an absolute
+    # path, or a file:// URL all work if containment is not enforced. The rule here is that the map must
+    # live under the bundle's own directory, after symlinks are resolved.
+    if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", url):
+        return None, None, (f"sourceMappingURL is an absolute {url.split(':',1)[0]} URL and will not be "
+                            f"fetched or followed. Only a relative path inside the bundle directory is read")
+    base = bundle_path.parent.resolve()
+    try:
+        candidate = (base / url).resolve()
+    except (OSError, RuntimeError) as e:
+        return None, None, f"sourceMappingURL could not be resolved: {e}"
+    if not candidate.is_relative_to(base):
+        return None, None, (f"sourceMappingURL resolves outside the bundle directory "
+                            f"({candidate} is not under {base}). Refusing to read it, because that would "
+                            f"let a bundle choose a file on this machine")
+    if candidate.exists() and candidate.is_file():
         return "external", candidate.read_text(encoding="utf-8", errors="replace"), str(candidate)
     return None, None, f"sourceMappingURL points at {url}, which is not present next to the bundle"
 

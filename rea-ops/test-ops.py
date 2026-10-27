@@ -668,6 +668,57 @@ def test_leveldb_corrupt(tmp):
           "without a preceding first" in (out + err), (out + err)[:90])
 
 
+def test_sourcemap_escape(tmp):
+    """A bundle must not be able to name a file outside its own directory."""
+    sub = tmp / "sub"
+    sub.mkdir(exist_ok=True)
+    (tmp / "secret.txt").write_text("TOP SECRET")
+    b = sub / "b.js"
+    b.write_text("var a=1;//# sourceMappingURL=../../secret.txt\n")
+    rc, out, err = run([str(HERE / "sourcemap.py"), str(b)])
+    blob = out + err
+    check("sourcemap: refuses a traversal outside the bundle directory",
+          "outside the bundle directory" in blob, blob[:90])
+    check("sourcemap: does not read the target file", "TOP SECRET" not in blob)
+
+    # an absolute URL must not be followed
+    b2 = sub / "c.js"
+    b2.write_text("var a=1;//# sourceMappingURL=file:///etc/passwd\n")
+    rc, out, err = run([str(HERE / "sourcemap.py"), str(b2)])
+    blob = out + err
+    check("sourcemap: refuses an absolute URL", "absolute" in blob, blob[:90])
+
+    # a legitimate sibling map still works
+    b3 = sub / "d.js"
+    b3.write_text("var a=1;//# sourceMappingURL=d.js.map\n")
+    (sub / "d.js.map").write_text('{"version":3,"sources":["d.ts"],"mappings":"AAAA"}')
+    rc, out, err = run([str(HERE / "sourcemap.py"), str(b3)])
+    check("sourcemap: a sibling map still resolves", '"map_kind": "external"' in out, out[:80])
+
+
+def test_warc_utf8(tmp):
+    """A body with multi-byte characters must not desynchronise the next record."""
+    inner1 = "héllo wörld ☃ 日本語".encode("utf-8")
+    body1 = b"HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n" + inner1
+    body2 = b"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\nsecond record body"
+    def rec(uri, body):
+        head = (f"WARC/1.0\r\nWARC-Type: response\r\nWARC-Target-URI: {uri}\r\n"
+                f"Content-Type: application/http\r\nContent-Length: {len(body)}\r\n\r\n").encode()
+        return head + body + b"\r\n\r\n"
+    p = tmp / "utf8.warc"
+    p.write_bytes(rec("http://a.test/one", body1) + rec("http://a.test/two", body2))
+
+    rc, out, err = run([str(HERE / "warc.py"), str(p), "--json"])
+    d = parse_json(out) if out.strip().startswith("{") else None
+    blob = out + err
+    check("warc: two records with a multi-byte body", "three response records" not in blob)
+    rc, out, err = run([str(HERE / "warc.py"), str(p), "--summary"])
+    check("warc: both hosts counted after a multi-byte body",
+          "2" in (out + err) or "a.test" in (out + err), (out + err)[:120])
+    rc, out2, err2 = run([str(HERE / "warc.py"), str(p), "--with-body"])
+    check("warc: the multi-byte body decodes intact", "日本語" in (out2 + err2), (out2 + err2)[:100])
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -683,8 +734,12 @@ def main():
         test_webauthn(tmp)
         print("sourcemap.py")
         test_sourcemap(tmp)
+        print("sourcemap containment")
+        test_sourcemap_escape(tmp)
         print("hermes.py")
         test_hermes(tmp)
+        print("warc utf8")
+        test_warc_utf8(tmp)
         print("leveldb corruption")
         test_leveldb_corrupt(tmp)
         print("flutter-aot.py")

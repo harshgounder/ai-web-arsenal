@@ -35,22 +35,28 @@ def open_maybe_gzip(path):
     return io.TextIOWrapper(io.BytesIO(raw), encoding="utf-8", errors="replace", newline="")
 
 
-def parse_records(text):
-    """Split a WARC into (headers, payload). A record is a header block, a blank line, then content
-    of exactly Content-Length bytes. Anything else is a parse failure and is reported, not skipped."""
+def parse_records(raw):
+    """Split a WARC into (headers, payload), framing on bytes.
+
+    Content-Length counts bytes, so every offset here is a byte offset. An earlier version decoded the
+    archive to text first and then sliced with a byte count, which truncates any body containing a
+    multi-byte character and misaligns every record after it. The ASCII fixtures never showed this, which
+    is exactly the failure mode of a fixture that shares the reader's assumptions.
+    """
+    if isinstance(raw, str):
+        raw = raw.encode("utf-8")
     records = []
     i = 0
-    n = len(text)
+    n = len(raw)
     while i < n:
-        # find the start of a record
-        start = text.find("WARC/", i)
+        start = raw.find(b"WARC/", i)
         if start < 0:
             break
-        head_end = text.find("\r\n\r\n", start)
+        head_end = raw.find(b"\r\n\r\n", start)
         if head_end < 0:
             records.append(({"_error": "header block not terminated"}, ""))
             break
-        block = text[start:head_end]
+        block = raw[start:head_end].decode("utf-8", "replace")
         lines = block.split("\r\n")
         version = lines[0].strip()
         headers = {"_version": version}
@@ -63,10 +69,12 @@ def parse_records(text):
         except ValueError:
             length = 0
         body_start = head_end + 4
-        body = text[body_start:body_start + length]
-        # advance past the record separator, allowing for \r\n\r\n\r\n
-        i = body_start + length
-        while i < n and text[i] in "\r\n":
+        chunk = raw[body_start:body_start + length]
+        if len(chunk) != length:
+            headers["_error"] = (f"declared Content-Length {length} but only {len(chunk)} bytes remain")
+        body = chunk.decode("utf-8", "replace")
+        i = body_start + len(chunk)
+        while i < n and raw[i:i + 1] in (b"\r", b"\n"):
             i += 1
         records.append((headers, body))
     return records
@@ -136,7 +144,10 @@ def main():
         print(f"no such file: {args.path}", file=sys.stderr)
         return 1
 
-    text = open_maybe_gzip(args.path).read()
+    text = Path(args.path).read_bytes()
+    if text[:2] == b"\x1f\x8b":
+        import gzip as _gz
+        text = _gz.decompress(text)
     records = parse_records(text)
     if not records:
         print("no WARC records found: the file may not be a WARC, or it may be compressed twice",
