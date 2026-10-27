@@ -323,6 +323,78 @@
    ],
    "basis": "entry",
    "note": "Reading current enforcement material is how direction change is detected."
+  },
+  "L13-004": {
+   "level": "L2",
+   "covered_by": [
+    "d24-data-handling"
+   ],
+   "basis": "entry",
+   "note": "What may be retained, where and for how long, applied and checked at close."
+  },
+  "L13-024": {
+   "level": "L1",
+   "covered_by": [
+    "d24-evidence-record"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: The evidence record entry is about engagement artefacts, not the application's own audit log being tamper evident. The concept is named and no procedure for it is stated."
+  },
+  "L13-050": {
+   "level": "L2",
+   "covered_by": [
+    "d24-evidence-record"
+   ],
+   "basis": "entry",
+   "note": "Retention stated and still retrievable at its end is the evidentiary standard."
+  },
+  "L13-051": {
+   "level": "L2",
+   "covered_by": [
+    "d24-evidence-record"
+   ],
+   "basis": "entry",
+   "note": "Handler and time of each transfer recorded is chain of custody."
+  },
+  "L13-056": {
+   "level": "L2",
+   "covered_by": [
+    "d24-scope-statement"
+   ],
+   "basis": "entry",
+   "note": "Supplier due diligence is a scope question: what was assessed and what was not."
+  },
+  "L13-057": {
+   "level": "L2",
+   "covered_by": [
+    "d24-vendor-confirmation"
+   ],
+   "basis": "entry",
+   "note": "Reporting an exploited flaw is the same disclosure path as a vendor report."
+  },
+  "L13-036": {
+   "level": "L2",
+   "covered_by": [
+    "d24-ccips"
+   ],
+   "basis": "entry",
+   "note": "Platform terms as a control is read from the terms themselves, which is what the entry points at."
+  },
+  "L13-055": {
+   "level": "L1",
+   "covered_by": [
+    "d24-nist-csf"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Critical infrastructure designation is a status question, not a framework profile. The concept is named and no procedure for it is stated."
+  },
+  "L13-035": {
+   "level": "L1",
+   "covered_by": [
+    "d24-report-anatomy"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Accessibility and availability constraints are not what the finding anatomy entry tests. The concept is named and no procedure for it is stated."
   }
  }
 }

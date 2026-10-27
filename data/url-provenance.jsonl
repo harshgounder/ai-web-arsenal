@@ -14,6 +14,7 @@
 {"url": "https://csrc.nist.gov/pubs/sp/800/115/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist115"]}
 {"url": "https://csrc.nist.gov/pubs/sp/800/53/r5/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d38-shared-account", "d38-privileged-approval"]}
 {"url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-data-at-rest"]}
+{"url": "https://csrc.nist.gov/pubs/sp/800/92/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-report-anatomy", "d24-scope-statement", "d24-proof-minimum", "d24-evidence-redaction", "d24-evidence-record"]}
 {"url": "https://curl.se/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-curl", "d09-curl", "d10-curl", "d13-curl", "d14-curl", "d29-curl"]}
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-extension-scope", "d08-extension-page-interaction"]}
@@ -301,7 +302,7 @@
 {"url": "https://www.electronjs.org/docs/latest/tutorial/security", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-electron-surface"]}
 {"url": "https://www.first.org/cvss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvss"]}
 {"url": "https://www.first.org/epss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-epss"]}
-{"url": "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d38-disclosure-program"]}
+{"url": "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-vendor-confirmation", "d38-disclosure-program"]}
 {"url": "https://www.iso.org/standard/27001", "checked_at": "2026-10-27", "status": "BLOCKED", "http": 403, "entries": ["d24-iso27001-scope"]}
 {"url": "https://www.justice.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-legal-hold"]}
 {"url": "https://www.justice.gov/criminal/criminal-ccips", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-ccips"]}
@@ -312,6 +313,7 @@
 {"url": "https://www.ncsc.gov.uk/collection/device-security-guidance", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d38-secret-storage", "d38-device-trust"]}
 {"url": "https://www.nist.gov/cyberframework", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist-csf"]}
 {"url": "https://www.nist.gov/privacy-framework", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist-privacy"]}
+{"url": "https://www.nist.gov/privacy-framework/privacy-framework", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-finding-classification", "d24-data-handling"]}
 {"url": "https://www.pcisecuritystandards.org/standards/pci-dss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-pci-scope"]}
 {"url": "https://www.postgresql.org/docs/current/sql-altertable.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-migration-safety"]}
 {"url": "https://www.postgresql.org/docs/current/transaction-iso.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-isolation-audit"]}

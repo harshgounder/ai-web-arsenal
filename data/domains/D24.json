@@ -788,6 +788,237 @@
     "the remedy route identified, with its typical timeline from published decisions",
     "the evidence a complaint needs, collected before the domain is used against customers"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-report-anatomy",
+   "name": "Finding anatomy: criterion, confidence, severity",
+   "url": "https://csrc.nist.gov/pubs/sp/800/92/final",
+   "role": "A finding has three separable parts: what was demonstrated, how sure you are, and what it would mean if true. Mixing them is how a report becomes persuasive and wrong.",
+   "preconditions": [
+    "a finding is being written for someone who will act on it"
+   ],
+   "oracle": [
+    "the success criterion written down before the test, in the report",
+    "a confidence statement naming what could make the finding false",
+    "severity argued separately from the demonstrated fact, and labelled as inference where it is"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-scope-statement",
+   "name": "Scope statement and false negative disclosure",
+   "url": "https://csrc.nist.gov/pubs/sp/800/92/final",
+   "role": "What was not tested matters as much as what was. A reader who assumes coverage the test did not have will under-defend the rest.",
+   "preconditions": [
+    "a test has finished or is being scoped"
+   ],
+   "oracle": [
+    "an explicit out of scope list, including paths, roles and environments",
+    "every unverified premise listed as an assumption rather than implied",
+    "the report stating what absence of a finding does and does not mean"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-proof-minimum",
+   "name": "Minimum proof and side effect containment",
+   "url": "https://csrc.nist.gov/pubs/sp/800/92/final",
+   "role": "The least invasive action that still proves the claim, and what to do when the proof itself is destructive. A finding that damages the client to demonstrate itself is a second incident.",
+   "preconditions": [
+    "proving the finding requires changing state"
+   ],
+   "oracle": [
+    "the smallest action recorded, with why a smaller one would not have sufficed",
+    "a reversal step for anything changed, or an agreed exception in writing",
+    "the stated cost of being wrong, and who accepted it"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-finding-classification",
+   "name": "Finding classification: sensitivity, fragility, demonstrated reach",
+   "url": "https://www.nist.gov/privacy-framework/privacy-framework",
+   "role": "Three properties decide how a finding is handled: what data it touches, how unusual its preconditions are, and how far it was actually shown to reach.",
+   "preconditions": [
+    "a finding is being triaged by a vendor or an internal team"
+   ],
+   "oracle": [
+    "the field names disclosed, classified, rather than a general claim of exposure",
+    "the configuration prerequisites listed, so the reader can tell rare from default",
+    "the demonstrated reach stated separately from the theoretical maximum"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-evidence-redaction",
+   "name": "Evidence redaction that keeps the proof",
+   "url": "https://csrc.nist.gov/pubs/sp/800/92/final",
+   "role": "Redaction usually removes the evidence along with the secret. The test is whether the artefact still demonstrates the mechanism after the sensitive values are gone.",
+   "preconditions": [
+    "captured evidence contains credentials or personal data"
+   ],
+   "oracle": [
+    "the redacted artefact still reproducing the observation",
+    "each redaction marked, so a reader knows something was removed and what kind of thing"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-vendor-confirmation",
+   "name": "Vendor confirmation alignment",
+   "url": "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/",
+   "role": "Whether the fix addresses the mechanism that was demonstrated or a symptom of it. A patch that closes the exact payload and not the class usually means a second report.",
+   "preconditions": [
+    "a vendor has responded to a finding with a fix"
+   ],
+   "oracle": [
+    "the patch read against the report's mechanism, not against its payload",
+    "the original proof re-run against the fixed version, alongside the control",
+    "a bypass attempted at the class level and reported either way"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-evidence-record",
+   "name": "Evidence retention and chain of custody",
+   "url": "https://csrc.nist.gov/pubs/sp/800/92/final",
+   "role": "Whether the record of what happened would survive a challenge six months later, which needs a hash at capture, a stated handler and a retention period.",
+   "preconditions": [
+    "findings may need to be defended or used in a legal process"
+   ],
+   "oracle": [
+    "a digest recorded at capture and re-verified later",
+    "the handler and time of each transfer recorded",
+    "the retention period stated, and the evidence still retrievable at its end"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-data-handling",
+   "name": "Data handling during an engagement",
+   "url": "https://www.nist.gov/privacy-framework/privacy-framework",
+   "role": "What happens to data encountered during a test. Uncontrolled copies of customer data are the most common way an authorised test becomes an unauthorised breach.",
+   "preconditions": [
+    "the test will encounter production data"
+   ],
+   "oracle": [
+    "a written statement of what may be retained, where, and for how long",
+    "the retention actually applied, checked at close",
+    "any transfer to another system recorded and justified"
+   ]
   }
  ],
  "tree": {

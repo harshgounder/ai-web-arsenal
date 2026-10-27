@@ -25,7 +25,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-28 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+36 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -38,10 +38,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [CVE Program](https://www.cve.org/) | L10 reporting | A0 | A08 | `n/a reference` | no | Identifier of record when the finding is a known product issue |
 | [CVSS](https://www.first.org/cvss/) | L10 reporting | A0 | A08 | `n/a reference` | no | The severity score everyone argues about. Use the vector, not just the number |
 | [CWE](https://cwe.mitre.org/) | L10 reporting | A0 | A08 | `n/a reference` | no | The weakness taxonomy to map a finding onto |
+| [Data handling during an engagement](https://www.nist.gov/privacy-framework/privacy-framework) | L10 reporting | A0 | A08 | `n/a reference` | no | What happens to data encountered during a test. Uncontrolled copies of customer data are the most common way an authorised test becomes an unauthorised breach. |
 | [DOJ computer fraud charging guidance](https://www.justice.gov/jm/jm-9-48000-computer-fraud) | L10 reporting | A0 | A08 | `n/a reference` | no | How the prosecution side reads unauthorised access, which is the practical boundary for what a test may do. |
 | [EDPB guidelines on automated decision making](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en) | L10 reporting | A0 | A08 | `n/a reference` | no | What counts as a solely automated decision with legal effect, which decides whether an explanation duty exists at all. |
 | [EPSS](https://www.first.org/epss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Exploit prediction, the number that actually orders a queue |
+| [Evidence retention and chain of custody](https://csrc.nist.gov/pubs/sp/800/92/final) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether the record of what happened would survive a challenge six months later, which needs a hash at capture, a stated handler and a retention period. |
+| [Evidence redaction that keeps the proof](https://csrc.nist.gov/pubs/sp/800/92/final) | L10 reporting | A0 | A08 | `n/a reference` | no | Redaction usually removes the evidence along with the secret. The test is whether the artefact still demonstrates the mechanism after the sensitive values are gone. |
 | [Export control on cryptographic capability](https://www.bis.doc.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether distributing a tool with strong cryptography carries an obligation in the jurisdiction it ships to. |
+| [Finding classification: sensitivity, fragility, demonstrated reach](https://www.nist.gov/privacy-framework/privacy-framework) | L10 reporting | A0 | A08 | `n/a reference` | no | Three properties decide how a finding is handled: what data it touches, how unusual its preconditions are, and how far it was actually shown to reach. |
 | [GDPR Article 33 breach notification clock](https://eur-lex.europa.eu/eli/reg/2016/679/oj) | L10 reporting | A0 | A08 | `n/a reference` | no | The 72 hour clock and what starts it, which decides whether an incident is a reportable breach or a note in a ticket. |
 | [GDPR Article 15 and 17 request handling](https://gdpr-info.eu/art-17-gdpr/) | L10 reporting | A0 | A08 | `n/a reference` | no | Access and erasure, tested against what the system can actually produce and delete rather than what the policy says. |
 | [ICO breach reporting path](https://ico.org.uk/for-organisations/report-a-breach/) | L10 reporting | A0 | A08 | `n/a reference` | no | The regulator's own reporting route, which is what makes the deadline concrete. Reading the form is how you learn what a report has to contain before an incident. |
@@ -53,9 +57,13 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Sanctions screening against a published list](https://sanctionssearch.ofac.treas.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether a customer or counterparty can be checked against a list before service is provided. |
 | [Statistical discipline for an oracle](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API) | L10 reporting | A0 | A08 | `n/a reference` | no | A timing claim needs a resolution, a sample size and an effect size larger than the measured noise. Without all three it is a coincidence with a graph. |
 | [PCI DSS scope reduction and CDE boundary](https://www.pcisecuritystandards.org/standards/pci-dss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether card data enters the environment at all. Scope is the whole compliance burden, so shrinking it is the control. |
+| [Minimum proof and side effect containment](https://csrc.nist.gov/pubs/sp/800/92/final) | L10 reporting | A0 | A08 | `n/a reference` | no | The least invasive action that still proves the claim, and what to do when the proof itself is destructive. A finding that damages the client to demonstrate itself is a second incident. |
+| [Finding anatomy: criterion, confidence, severity](https://csrc.nist.gov/pubs/sp/800/92/final) | L10 reporting | A0 | A08 | `n/a reference` | no | A finding has three separable parts: what was demonstrated, how sure you are, and what it would mean if true. Mixing them is how a report becomes persuasive and wrong. |
 | [Reproduction package](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) | L10 reporting | A0 | A08 | `n/a reference` | no | What a second party needs to reproduce a result without asking the finder anything. A finding that only its author can reproduce is a story. |
 | [SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html) | L10 reporting | A0 | A08 | `n/a reference` | no | The interchange format, so findings land in the customer's tooling |
+| [Scope statement and false negative disclosure](https://csrc.nist.gov/pubs/sp/800/92/final) | L10 reporting | A0 | A08 | `n/a reference` | no | What was not tested matters as much as what was. A reader who assumes coverage the test did not have will under-defend the rest. |
 | [Licence identification for distributed artefacts](https://spdx.org/licenses/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether shipping a binary triggers a source disclosure or attribution duty. A distributed artefact carries obligations the development tree does not. |
+| [Vendor confirmation alignment](https://www.first.org/global/sigs/vulnerability-coordination/multiparty/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether the fix addresses the mechanism that was demonstrated or a symptom of it. A patch that closes the exact payload and not the class usually means a second report. |
 | [Domain name dispute remedy](https://www.wipo.int/amc/en/domains/) | L10 reporting | A0 | A08 | `n/a reference` | no | What can actually be done about a lookalike domain, and how fast. A brand control that assumes takedown speed is a control with no timeline. |
 | [WSTG Reporting](https://github.com/OWASP/wstg) | L10 reporting | A0 | A08 | `n/a reference` | no | The reporting section of the testing guide |
 
@@ -148,6 +156,38 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Domain name dispute remedy**  
 - preconditions: `a lookalike domain or impersonating site exists`
 - oracle: `the remedy route identified, with its typical timeline from published decisions`, `the evidence a complaint needs, collected before the domain is used against customers`
+
+**Finding anatomy: criterion, confidence, severity**  
+- preconditions: `a finding is being written for someone who will act on it`
+- oracle: `the success criterion written down before the test, in the report`, `a confidence statement naming what could make the finding false`, `severity argued separately from the demonstrated fact, and labelled as inference where it is`
+
+**Scope statement and false negative disclosure**  
+- preconditions: `a test has finished or is being scoped`
+- oracle: `an explicit out of scope list, including paths, roles and environments`, `every unverified premise listed as an assumption rather than implied`, `the report stating what absence of a finding does and does not mean`
+
+**Minimum proof and side effect containment**  
+- preconditions: `proving the finding requires changing state`
+- oracle: `the smallest action recorded, with why a smaller one would not have sufficed`, `a reversal step for anything changed, or an agreed exception in writing`, `the stated cost of being wrong, and who accepted it`
+
+**Finding classification: sensitivity, fragility, demonstrated reach**  
+- preconditions: `a finding is being triaged by a vendor or an internal team`
+- oracle: `the field names disclosed, classified, rather than a general claim of exposure`, `the configuration prerequisites listed, so the reader can tell rare from default`, `the demonstrated reach stated separately from the theoretical maximum`
+
+**Evidence redaction that keeps the proof**  
+- preconditions: `captured evidence contains credentials or personal data`
+- oracle: `the redacted artefact still reproducing the observation`, `each redaction marked, so a reader knows something was removed and what kind of thing`
+
+**Vendor confirmation alignment**  
+- preconditions: `a vendor has responded to a finding with a fix`
+- oracle: `the patch read against the report's mechanism, not against its payload`, `the original proof re-run against the fixed version, alongside the control`, `a bypass attempted at the class level and reported either way`
+
+**Evidence retention and chain of custody**  
+- preconditions: `findings may need to be defended or used in a legal process`
+- oracle: `a digest recorded at capture and re-verified later`, `the handler and time of each transfer recorded`, `the retention period stated, and the evidence still retrievable at its end`
+
+**Data handling during an engagement**  
+- preconditions: `the test will encounter production data`
+- oracle: `a written statement of what may be retained, where, and for how long`, `the retention actually applied, checked at close`, `any transfer to another system recorded and justified`
 
 ## Decision tree
 

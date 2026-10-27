@@ -55,29 +55,28 @@
    "note": "Both capture a full flow. Whether the capture is complete enough to replay is the open part."
   },
   "L14-015": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-prove"
+    "d24-proof-minimum"
    ],
    "basis": "entry",
-   "note": "Minimum proof is a principle the pack states. Reversibility is not enforced."
+   "note": "The smallest action recorded, with why a smaller one would not do, is side effect avoidance."
   },
   "L14-017": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-cvss",
-    "d24-cwe"
+    "d24-report-anatomy"
    ],
    "basis": "entry",
-   "note": "Separating measured fact from scored severity is what the taxonomy entries are for."
+   "note": "Severity argued separately from the demonstrated fact is the separation."
   },
   "L14-018": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-critic"
+    "d24-scope-statement"
    ],
    "basis": "entry",
-   "note": "Assumption inventory is exactly what adversarial review produces."
+   "note": "Every unverified premise listed as an assumption is the inventory."
   },
   "L14-026": {
    "level": "L1",
@@ -174,6 +173,94 @@
    ],
    "basis": "entry",
    "note": "Independent replication is the whole point of the package."
+  },
+  "L14-009": {
+   "level": "L2",
+   "covered_by": [
+    "d24-report-anatomy"
+   ],
+   "basis": "entry",
+   "note": "The success criterion written before the test is pre registration made visible."
+  },
+  "L14-016": {
+   "level": "L2",
+   "covered_by": [
+    "d24-proof-minimum"
+   ],
+   "basis": "entry",
+   "note": "The same record answers the minimum proof principle."
+  },
+  "L14-062": {
+   "level": "L2",
+   "covered_by": [
+    "d24-proof-minimum"
+   ],
+   "basis": "entry",
+   "note": "The stated cost of being wrong, and who accepted it, is the last part of that record."
+  },
+  "L14-061": {
+   "level": "L2",
+   "covered_by": [
+    "d24-report-anatomy"
+   ],
+   "basis": "entry",
+   "note": "A confidence statement naming what could make it false is the confidence question."
+  },
+  "L14-020": {
+   "level": "L2",
+   "covered_by": [
+    "d24-scope-statement"
+   ],
+   "basis": "entry",
+   "note": "Stating what absence of a finding means is the false negative disclosure."
+  },
+  "L14-057": {
+   "level": "L2",
+   "covered_by": [
+    "d24-scope-statement"
+   ],
+   "basis": "entry",
+   "note": "An explicit out of scope list is the reported versus actual scope test."
+  },
+  "L14-019": {
+   "level": "L2",
+   "covered_by": [
+    "d24-finding-classification"
+   ],
+   "basis": "entry",
+   "note": "Demonstrated reach stated separately from the theoretical maximum."
+  },
+  "L14-030": {
+   "level": "L2",
+   "covered_by": [
+    "d24-finding-classification"
+   ],
+   "basis": "entry",
+   "note": "The field names disclosed, classified, rather than a general claim of exposure."
+  },
+  "L14-032": {
+   "level": "L2",
+   "covered_by": [
+    "d24-finding-classification"
+   ],
+   "basis": "entry",
+   "note": "The prerequisites listed, so a reader can tell rare from default."
+  },
+  "L14-035": {
+   "level": "L2",
+   "covered_by": [
+    "d24-evidence-redaction"
+   ],
+   "basis": "entry",
+   "note": "The redacted artefact still reproducing the observation is the whole test."
+  },
+  "L14-050": {
+   "level": "L2",
+   "covered_by": [
+    "d24-vendor-confirmation"
+   ],
+   "basis": "entry",
+   "note": "The patch read against the mechanism, and the proof re-run against the fix."
   }
  }
 }
