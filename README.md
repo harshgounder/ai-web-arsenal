@@ -1,61 +1,263 @@
 # ai-web-arsenal
 
-<p align="center">
-  <b>An AI-native arsenal for testing web platforms.</b><br/>
-  Capture first. Reverse the artifacts. Derive hypotheses from the actual stack.<br/>
-  Then prove it with an oracle and a negative control.
-</p>
+**Attack surface inventory, tool manifest and coverage instrument for web platforms. Built to be driven by an AI agent, and to be checked.**
 
-<p align="center">
-  <a href="#quickstart"><img alt="quickstart" src="https://img.shields.io/badge/quickstart-2%20commands-2ea44f?style=flat-square"/></a>
-  <img alt="platform" src="https://img.shields.io/badge/platform-Arch%20%7C%20CachyOS-1793d1?style=flat-square"/>
-  <img alt="tools" src="https://img.shields.io/badge/tools-64%20verified%2C%200%20unresolved-blue?style=flat-square"/>
-  <img alt="domains" src="https://img.shields.io/badge/domains-28%20authored%20%2B%209%20pointers-8a2be2?style=flat-square"/>
-  <img alt="entries" src="https://img.shields.io/badge/enriched%20entries-444-orange?style=flat-square"/>
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square"/>
-</p>
+[![tools](https://img.shields.io/badge/tools-64%20verified-2ea043)](#the-tool-manifest)
+[![domains](https://img.shields.io/badge/domains-28%20authored%20%2B%209%20pointers-1f6feb)](#the-domains)
+[![factors](https://img.shields.io/badge/denominator-1%2C000%20factors-8957e5)](#the-denominator)
+[![coverage](https://img.shields.io/badge/coverage-10.7%25-d29922)](#the-scoreboard)
+[![observed](https://img.shields.io/badge/observed-0%25-c93030)](#the-scoreboard)
+[![licence](https://img.shields.io/badge/licence-MIT-8b949e)](LICENSE)
 
-<p align="center">
-  <a href="#what-this-is-precisely">What this is</a> ·
-  <a href="#quickstart">Quickstart</a> ·
-  <a href="#the-method">The method</a> ·
-  <a href="#domain-coverage">Domains</a> ·
-  <a href="#measured-bounds">Bounds</a> ·
-  <a href="#companion-repo">Companion repo</a> ·
-  <a href="#contributing">Contributing</a>
-</p>
+Authorised testing only. Every pattern in the companion repo carries an authorisation precondition, and
+this repo assumes you have written permission for anything you point it at. See [`SECURITY.md`](SECURITY.md).
+
+---
+
+## Contents
+
+- [What this is, precisely](#what-this-is-precisely)
+- [The scoreboard](#the-scoreboard)
+- [Why it exists](#why-it-exists)
+- [The denominator: sixteen lenses](#the-denominator-sixteen-lenses)
+- [What a factor looks like](#what-a-factor-looks-like)
+- [What a coverage record looks like](#what-a-coverage-record-looks-like)
+- [A worked example, end to end](#a-worked-example-end-to-end)
+- [Quickstart](#quickstart)
+- [Profiles](#profiles)
+- [The method](#the-method)
+- [What a row actually looks like](#what-a-row-actually-looks-like)
+- [What a technique pattern looks like](#what-a-technique-pattern-looks-like)
+- [The domains](#the-domains)
+- [The corpus](#the-corpus)
+- [The tool manifest](#the-tool-manifest)
+- [The gate](#the-gate)
+- [The claims ledger](#the-claims-ledger)
+- [Measured bounds](#measured-bounds)
+- [Defects found in this project](#defects-found-in-this-project)
+- [Repository map](#repository-map)
+- [How to add to this](#how-to-add-to-this)
+- [What this is not](#what-this-is-not)
+- [Companion repo](#companion-repo)
 
 ---
 
 ## What this is, precisely
 
-**It is the deduplicated superset of what 19 public collections knew as of October 2026, plus 28 authored domains of method, mapped onto 16 primitives.**
+A list of tools is a directory. It tells you what exists and nothing about what to do, in what order,
+what proves success, or what will stop you. Every web security collection on GitHub has the same shape
+and the same failure: sorted by vulnerability class, no dates, no evidence standard, no procedure, links
+that rot while the README implies completeness.
 
-**It is not the set of everything that exists.** Three things bound it, and all three are measured rather than estimated:
+This repo is built on a different premise. **A completeness claim is worthless unless you define the
+denominator.** So it defines one.
 
-| bound | number | measured by |
-|---|---|---|
-| the corpus is what 19 lists knew | **8,692** tool identities out of 21,384 rows | `scripts/merge-identities.py` |
-| the authored content is what this build produced | **444** enriched entries | `data/domains/*.json` |
-| the backlog is real and mapped | **1,419** promotable candidates | `data/domains/*.index.json` |
+```
+Set D   every factor that decides whether a web system can be made to do
+        something its owners did not intend. 1,000 factors, 16 lenses.
+Set A   what these repos actually contain, regenerated from disk on every run.
+Set M   D minus A. The gap. Every element classified, every one graded.
+```
 
-A repo that claims completeness is making a claim it cannot check. This one publishes its own shortfall as a table, and every number in this file is regenerated from disk before it is quoted.
+Coverage is then a fraction with a stated denominator, not an adjective. That number is **10.7 percent**,
+and it is published because publishing it is the point. A repo that claims completeness is making a
+claim it cannot check. This one publishes its shortfall in the README and blocks its own release when
+the shortfall and the prose disagree.
+
+---
+
+## The scoreboard
+
+Regenerated by `python3 scripts/coverage.py --stats` on 2026-10-27.
+
+| lens | factors | covered | share |
+|---|---|---|---|
+| L04 frameworks and runtimes | 62 | 15 | 24% |
+| L02 network and transport | 62 | 13 | 21% |
+| L03 protocol semantics | 62 | 13 | 21% |
+| L06 identity and session | 62 | 12 | 19% |
+| L09 infrastructure and edge | 62 | 11 | 18% |
+| L10 supply chain | 62 | 9 | 15% |
+| L07 data and storage | 62 | 8 | 13% |
+| L14 evidence and oracle science | 64 | 6 | 9% |
+| L12 AI and agentic systems | 62 | 5 | 8% |
+| L05 client and browser | 62 | 5 | 8% |
+| L15 detection and defence industry | 64 | 5 | 8% |
+| L08 business logic and money | 62 | 4 | 6% |
+| L16 history and corpus | 64 | 1 | 2% |
+| L01 substrate | 62 | 0 | 0% |
+| L11 human and organisational | 62 | 0 | 0% |
+| L13 regulation and standards | 64 | 0 | 0% |
+| **total** | **1,000** | **107** | **10.7%** |
+
+**Observed: 0 percent.** Nothing in this repo has been run against a controlled target yet, because
+there is no controlled target yet. `ESTABLISHED` means read and cited. It does not mean executed. That
+distinction is the reason to trust anything else here.
+
+The shape of the table is the finding:
+
+- The covered lenses are the ones where a tool exists that states its own oracle. Smuggling, cache,
+  GraphQL, deserialisation, hash cracking, subdomain takeover. Tools carry procedures because they were
+  built to be run.
+- The three zeros are the three lenses no scanner can exist for: a speculative execution window, a
+  support desk, and a disclosure deadline. Those need authored procedure and a lab.
+- Money at 6 percent is the worst return per unit of real world impact in the table. Business logic is
+  where loss actually lands.
 
 ---
 
 ## Why it exists
 
-Every web security list on GitHub fails the same way. Sorted by vulnerability class. No dates. No evidence standard. No driver information, so an agent cannot act on a row. And links that rot silently while the README implies completeness.
+Three questions a list cannot answer:
 
-The collections this repo reconciled are near disjoint. Of 8,692 tools, 543 rows appear in more than one collection and the rest in exactly one. No single list is a superset of any other, which is why a union plus an exclusion ledger is the only honest way to claim coverage.
-
-The corpus is not only tools. Of its 21,384 rows, 8,848 are tools, 11,712 are taxonomy nodes harvested from list headings and used for framework mapping, and 824 are social or knowledge rows that were kept for provenance and then excluded from the tool count. Quoting the row total as a tool count would overstate tools by 2.4x, so those two figures are never mixed in this README.
-
-This repo answers three questions that a list cannot:
-
-1. **What do I run, and how?** Every tool carries an install channel resolved against a real package manager, a verify command, a JSON output flag, and a one line agent usage note.
+1. **What do I run, and how?** Every tool carries an install channel resolved against a real package
+   manager, a verify command, a JSON output flag, and a one line agent usage note.
 2. **What do I think, and in what order?** Every domain carries a machine readable decision tree.
-3. **What will stop me, and what proves it?** Every domain carries a defence mirror, and every atlas pattern carries a counter.
+3. **What will stop me, and what proves it?** Every domain carries a defence mirror, and every atlas
+   pattern carries a counter and a negative control.
+
+And one the whole field cannot answer: **how much of it is covered**. That is what the denominator is for.
+
+---
+
+## The denominator: sixteen lenses
+
+Set D is not a list of vulnerabilities. It is the set of properties, mechanisms, constraints and actors
+that decide whether one is possible. A pit stop is not 2.3 seconds; it is regulations, tyre chemistry,
+aerodynamics, human motor learning, meteorology and game theory compressed into one moment. A web
+compromise is the same shape: it is the convergence point of sixteen disciplines, and sorting attacks by
+vulnerability class sorts one axis of a sixteen axis system.
+
+| id | lens | what it owns | example factor |
+|---|---|---|---|
+| L01 | substrate | CPU, memory, allocator, collector, JIT, kernel boundary | `L01-008` JIT optimisation assumptions |
+| L02 | network and transport | IP, TLS, HTTP/1.1, H2, H3, DNS, WebSocket, WebTransport | `L02-036` unkeyed header acceptance |
+| L03 | protocol semantics | REST, GraphQL, gRPC, SOAP, JSON-RPC, MCP, SAML, OAuth | `L03-032` XML signature wrapping |
+| L04 | frameworks and runtimes | routing, binding, serialisation, templating, defaults | `L04-030` host header trust |
+| L05 | client and browser | DOM, engines, WASM, service workers, extensions, webviews | `L05-009` prototype pollution to gadget |
+| L06 | identity and session | authn, authz, MFA, WebAuthn, SSO, tokens, impersonation | `L06-022` session termination completeness |
+| L07 | data and storage | SQL, NoSQL, object, queue, cache, search, migrations | `L07-027` replica lag as an authz window |
+| L08 | business logic and money | pricing, coupons, refunds, inventory, auctions, payouts | `L08-009` coupon scope enforcement |
+| L09 | infrastructure and edge | CDN, proxy, WAF, gateway, serverless, container, IaC | `L09-031` metadata service reachability |
+| L10 | supply chain | registries, dependencies, builds, CI/CD, signing | `L10-020` PR triggered workflows |
+| L11 | human and organisational | support, helpdesk, employees, onboarding, process | `L11-001` support identity verification |
+| L12 | AI and agentic systems | LLM apps, RAG, tool use, MCP, agent browsers | `L12-023` shared memory poisoning |
+| L13 | regulation and standards | CFAA and equivalents, GDPR, PCI, disclosure norms | `L13-007` disclosure deadline |
+| L14 | evidence and oracle science | how a claim is proven, and how a false positive is excluded | `L14-002` negative control presence |
+| L15 | detection and defence industry | products, rule languages, telemetry, response | `L15-062` living off the platform |
+| L16 | history and corpus | advisories, disclosures, talks, writeups, patches | `L16-004` silent patch rate |
+
+The last four are why this is not a list of payloads. Regulation decides what is permitted and what must
+be disclosed. Evidence science decides what can be proven at all. The detection industry decides what
+will be seen. The public record is the only source of evidence about the past.
+
+Every lens file is structured data. `data/denominator/L01.json` opens like this:
+
+```json
+{
+  "lens": "L01",
+  "name": "substrate",
+  "owns": "the machine underneath the interpreter: silicon behaviour, memory, the collector, the compiler, the kernel boundary",
+  "why_in_D": "A web page runs on a CPU through a JIT with a heap and a kernel underneath it. Spectre was not a bug in a website. It changed what a website could leak.",
+  "factors": [ "..." ]
+}
+```
+
+---
+
+## What a factor looks like
+
+Every factor carries four things, because a factor you cannot test is a label rather than a factor.
+
+```json
+{
+  "id": "L02-036",
+  "name": "unkeyed header acceptance",
+  "def": "whether a response varies on a header that is not in the cache key, which is the poisoning mechanism",
+  "observable": "a response cached with a value derived from an unkeyed input",
+  "evidence": "run"
+}
+```
+
+- `def` says what the property is.
+- `observable` says what you would look at to decide it.
+- `evidence` is one of `source`, `paper`, `run`, `vendor`, so a reader knows what kind of claim stands
+  behind it.
+
+`scripts/validate-denominator.py` enforces all four on all 1,000, plus unique ids, lens prefixes, and
+that no lens is empty. An unwritten lens reports as missing rather than as zero, because those are
+different facts.
+
+---
+
+## What a coverage record looks like
+
+The join is graded, and the grading is strict enough to be uncomfortable:
+
+```
+L0  absent      nothing in either repo addresses the factor
+L1  named       a tool or entry mentions it, with no procedure and no oracle
+L2  procedure   a procedure and an oracle, so a competent reader could test it
+L3  observed    a lab here demonstrates it
+```
+
+**Only L2 and L3 count as coverage.** L1 is recorded because knowing a concept is named but not
+operationalised is useful, and it is not counted.
+
+```json
+{
+  "factor": "L02-036",
+  "lens": "L02",
+  "level": "L2",
+  "covered_by": ["d10-wcvs", "d10-curl"],
+  "basis": "entry",
+  "note": "Unkeyed input is the poisoning mechanism, and curl is named as the way to read the cache headers that confirm a hit."
+}
+```
+
+Every record names the artefact it relies on. `scripts/coverage.py --validate` resolves each cited id
+against both repos and rejects any that does not exist. It rejected five ids that were invented during
+authoring, which is the mechanism working rather than an embarrassment.
+
+A record that says L0 with no artefact is also a claim, and it is the honest one for most of the table:
+
+```json
+{
+  "factor": "L01-027",
+  "lens": "L01",
+  "level": "L0",
+  "covered_by": [],
+  "basis": "none",
+  "note": "Nothing in either repo operationalises a substrate factor. This is the largest single gap in the project and it is stated rather than hidden."
+}
+```
+
+---
+
+## A worked example, end to end
+
+Take cache poisoning, because it exercises the whole loop.
+
+**Step one, define the factor.** `L02-036` is unkeyed header acceptance. The observable is a response
+cached with a value derived from an input the cache does not key on.
+
+**Step two, find the procedure.** `d10-wcvs` is in the corpus with preconditions and an oracle, so the
+factor grades L2. The entry says what to send and what a hit looks like.
+
+**Step three, prove it without fooling yourself.** A cache result is easy to fake: an intermediary may
+have served you a stale copy, or the payload may have been normalised by the edge. So the proof needs a
+negative control, which is a request with the same shape and the hostile value removed. If the response
+still carries the injected value, the cache did not do what you thought.
+
+**Step four, name what stops you.** The defence mirror for this class is in `data/domains/D10.json` under
+`mirror`, with the control class and the defensive level. If a full page cache has a key including the
+header, the technique is dead and the mirror says so.
+
+**Step five, record what happened.** A coverage record at `L2` naming `d10-wcvs`, and none at `L3`
+because no lab has run it here.
+
+The whole loop is four data structures, all checkable:
+`data/denominator/L02.json`, `data/domains/D10.json`, `data/coverage/coverage.jsonl`, `data/claims.yaml`.
 
 ---
 
@@ -77,11 +279,21 @@ Dry run first, if you prefer to see what it does:
 DRY=1 bash bootstrap/15-install-minimal.sh
 ```
 
-The installer refuses to run as root, never pipes curl to sh, and is idempotent. Every run logs to `bootstrap/logs/`.
+The installer refuses to run as root, never pipes curl to sh, and is idempotent. Every run logs to
+`bootstrap/logs/`.
 
-Then wire the extraction spine and follow [`BOOTSTRAP.md`](BOOTSTRAP.md) for the full bring-your-own-AI setup.
+Then wire the extraction spine and follow [`BOOTSTRAP.md`](BOOTSTRAP.md) for the full bring-your-own-AI
+setup: which model, which MCP servers, which skills, and the first fifteen minutes of prompts.
 
-### Profiles
+Verify the whole repository, not just the installs:
+
+```bash
+./scripts/gate.sh
+```
+
+---
+
+## Profiles
 
 | profile | script | tools | for |
 |---|---|---|---|
@@ -94,7 +306,10 @@ Then wire the extraction spine and follow [`BOOTSTRAP.md`](BOOTSTRAP.md) for the
 | re | `45-install-re.sh` | 4 | REA spine and binaries |
 | all | `50-install-all.sh` | 64 | everything |
 
-Counts are written by the generator. If a count and a script disagree, the count is wrong.
+Counts are written by the generator. If a count and a script disagree, the count is wrong. An earlier
+version of this repo shipped three orphaned scripts from an earlier numbering, so the directory held 14
+files while the docs said 11. The generator now removes numbered scripts it did not write, and a claim
+pins the exact file set.
 
 ---
 
@@ -106,91 +321,16 @@ capture -> inventory -> reverse artifacts -> hypotheses -> test -> prove -> crit
 
 | step | what you do | pack |
 |---|---|---|
-| capture | one browsing pass through a proxy. no probing | |
-| inventory | endpoints, auth requirement, UI reachable or not | [`prompts/01-recon-capture.md`](prompts/01-recon-capture.md) |
-| reverse | bundle graph, routes, auth logic, secret candidates | [`prompts/02-bundle-teardown.md`](prompts/02-bundle-teardown.md) |
-| hypothesise | derive from the stack, rank by cost to test | [`prompts/03-hypothesis.md`](prompts/03-hypothesis.md) |
-| prove | oracle plus negative control, or it is not a finding | [`prompts/04-prove-it.md`](prompts/04-prove-it.md) |
-| critic | a second agent whose job is to break the first one | [`prompts/05-critic.md`](prompts/05-critic.md) |
+| capture | record the traffic, the storage and the DOM before touching anything | `prompts/01-recon-capture.md` |
+| inventory | enumerate what the application actually ships, not what it says | `prompts/02-bundle-teardown.md` |
+| reverse | recover the serializer, the signing function, the route table | `prompts/02-bundle-teardown.md` |
+| hypothesise | state what you think is broken and why, before testing | `prompts/03-hypothesis.md` |
+| test | run the smallest action that distinguishes your hypothesis from it being false | `prompts/04-prove-it.md` |
+| prove | confirm through a channel other than the one you attacked | `prompts/04-prove-it.md` |
+| critic | have a second pass whose only job is to break your finding | `prompts/05-critic.md` |
 
-Step seven is the one that fixes AI pentesting. A single agent that both finds and confirms will confirm its own hallucinations. [`docs/ORCHESTRATION.md`](docs/ORCHESTRATION.md) states the rule and the handoff contract.
-
----
-
-## Repository map
-
-```
-ai-web-arsenal/
-├── README.md                  you are here
-├── PLAN.md                    the denominator, 16 lenses, 11 phases, gates
-├── SCOPE-v1.md                the superset derivation: 11 axes, cell model
-├── BOOTSTRAP.md               bring-your-own-AI setup, Arch first
-├── RECHECK.md                 the single source of state: what is done, not done, open
-├── AUTHORING.md               how to add a domain, run order, every trap already hit
-├── RESUME.md                  a pointer to RECHECK and AUTHORING, nothing else
-├── LOG.md                     step log, including the verification passes that found nine more defects
-├── manifest/tools.yaml        single source of truth for 64 tools
-├── bootstrap/                 11 generated installer scripts
-├── data/
-│   ├── corpus.jsonl           the union, every entry accounted for
-│   ├── corpus.tools.jsonl     8,848 tools, counted separately on purpose
-│   ├── corpus.taxonomy.jsonl  11,712 taxonomy nodes, never counted as tools
-│   ├── corpus.other.jsonl     824 social and knowledge rows
-│   ├── claims.yaml            every prose claim with a check that decides if it is still true
-│   ├── reconcile/             per-source disposition ledger and summary
-│   ├── taxonomy/              6 taxonomies parsed to test IDs
-│   ├── install-matrix.json    verified availability per tool
-│   └── domains/D*.json        the machine readable source of every domain
-├── domains/                   37 domain documents, 28 authored, 9 pointers
-├── trees/                     decision trees as JSON
-├── prompts/                   5 phase packs with failure modes
-├── mcps/                      working MCP configs
-├── skills/web-arsenal/        the order of operations as a loadable skill
-├── docs/                      taxonomy coverage, link health, orchestration
-└── scripts/                   20 pipeline and gate scripts, one command to check them all
-```
-
-Run `./scripts/gate.sh` to check the whole repository. Exit 0 means every claim in it is currently true.
-`--full` adds the network stage and a rebuild that proves the generators are deterministic.
-
----
-
-## Domain coverage
-
-28 domains are authored. Each carries entries with atom, preconditions, oracle, driver and defence mapping, plus a decision tree and a mirror.
-
-| id | domain | entries | tree | mirror |
-|---|---|---|---|---|
-| D02 | Recon and surface mapping | 29 | 3 | 5 |
-| D03 | Fingerprinting and stack identification | 11 | 4 | 3 |
-| D04 | Authentication and identity providers | 21 | 3 | 7 |
-| D05 | Authorization, tenancy, field-level access | 20 | 3 | 7 |
-| D06 | Session, token, cookie, key material | 13 | 4 | 5 |
-| D07 | Injection family | 22 | 6 | 7 |
-| D08 | Client-side and browser trust boundaries | 13 | 5 | 5 |
-| D09 | HTTP semantics, smuggling, desync | 11 | 3 | 4 |
-| D10 | Cache, CDN, edge behaviour | 6 | 4 | 3 |
-| D11 | API protocols: REST, GraphQL, gRPC, WebSocket | 37 | 2 | 8 |
-| D12 | Business logic, races, money paths | 8 | 4 | 5 |
-| D13 | File handling, upload, path, archive | 12 | 5 | 5 |
-| D14 | Server-side request and fetch (SSRF) | 10 | 4 | 5 |
-| D15 | Deserialization and template engines | 10 | 5 | 4 |
-| D16 | Cryptography, secrets, signing | 10 | 5 | 5 |
-| D17 | Cloud and control plane | 15 | 4 | 5 |
-| D18 | Supply chain and CI/CD | 10 | 4 | 5 |
-| D19 | AI application attacks | 12 | 3 | 7 |
-| D20 | Agent, MCP and skill attacks | 11 | 3 | 5 |
-| D21 | Mobile app and webview bridge | 14 | 4 | 5 |
-| D22 | WAF, bot and anti-automation evasion | 15 | 5 | 5 |
-| D23 | Exploitation and chaining | 8 | 4 | 4 |
-| D24 | Evidence, proof and reporting | 10 | 3 | 4 |
-| D25 | Detection and defense mirror | 12 | 4 | 3 |
-| D28 | MCP servers for web work | 8 | 4 | 4 |
-| D29 | CLI tools an agent can drive | 60 | 3 | 3 |
-| D30 | Agent frameworks and orchestrators | 13 | 4 | 4 |
-| D31 | REA spine: target artifact extraction | 23 | 4 | 5 |
-
-Nine further domains are **explicit pointers** rather than documents, because each is implemented as an artefact elsewhere in the repo and a second document would be a worse copy that drifts. For example D33 is `data/reconcile/`, D35 is `BOOTSTRAP.md`, D36 is the companion atlas ontology.
+The critic step is the one most work skips and the one that decides whether a finding survives a vendor's
+response. A finding without a negative control is a hypothesis with a screenshot.
 
 ---
 
@@ -217,6 +357,222 @@ Every entry carries fields a list omits. This is D11's `clairvoyance` entry:
 
 The `procedure` field is what makes a row executable instead of descriptive. All 37 D11 entries have one.
 
+Measured 2026-10-27, the mandatory-field rule is not met across the corpus: of 444 entries, 335 declare
+preconditions (75 percent), 346 declare an oracle (78), 175 declare `evades` (39), and 135 declare what
+detects them (30). Seven entries are deliberate pointers into the atlas and carry none by design. The
+rest is real work, tracked in [`RECHECK.md`](RECHECK.md) and checked by claims `C053` to `C053d`.
+
+---
+
+## What a technique pattern looks like
+
+The technique layer lives in the companion repo. One pattern, trimmed:
+
+```json
+{
+  "id": "W01-0001",
+  "title": "Parallel creates bypass a uniqueness check that is not atomic",
+  "atom": ["A04", "A12"],
+  "target_state": "the uniqueness invariant of a collection",
+  "principal": "you",
+  "persistence": "permanent duplicate records",
+  "preconditions": [
+    "uniqueness is checked in application code before insert",
+    "no unique constraint in the store",
+    "requests can be parallelised"
+  ],
+  "procedure": [
+    "send N identical creates in parallel",
+    "count the created records",
+    "attempt to use both records where one is expected"
+  ],
+  "oracle": [
+    "more than one record with the same logical key",
+    "two accounts or entries resolve from one identity"
+  ],
+  "negative_control": "sequential creates produce exactly one record, isolating the race",
+  "mutations": [{ "axis": "timing", "variant": "staggered_ms", "why": "window size varies by framework" }],
+  "counter": "unique constraint in the store, not a check in code",
+  "status": "ESTABLISHED"
+}
+```
+
+`negative_control` is the field that makes it evidence rather than folklore. 150 patterns exist, in
+three waves of 50, all passing a schema gate and all carrying it.
+
+---
+
+## The domains
+
+28 domains are authored. Each carries entries with atom, preconditions, oracle, driver and defence
+mapping, plus a decision tree and a mirror.
+
+| id | domain | entries | mirror rows |
+|---|---|---|---|
+| D02 | Recon and surface mapping | 29 | 5 |
+| D03 | Fingerprinting and stack identification | 11 | 3 |
+| D04 | Authentication and identity providers | 21 | 7 |
+| D05 | Authorization, tenancy, field-level access | 20 | 7 |
+| D06 | Session, token, cookie, key material | 13 | 5 |
+| D07 | Injection family | 22 | 7 |
+| D08 | Client-side and browser trust boundaries | 13 | 5 |
+| D09 | HTTP semantics, smuggling, desync | 11 | 4 |
+| D10 | Cache, CDN, edge behaviour | 6 | 3 |
+| D11 | API protocols: REST, GraphQL, gRPC | 37 | 8 |
+| D12 | Business logic, races, money paths | 8 | 5 |
+| D13 | File handling, upload, path, archive | 12 | 5 |
+| D14 | Server-side request and fetch (SSRF) | 10 | 5 |
+| D15 | Deserialization and template engines | 10 | 4 |
+| D16 | Cryptography, secrets, signing | 10 | 5 |
+| D17 | Cloud and control plane | 15 | 5 |
+| D18 | Supply chain and CI/CD | 10 | 5 |
+| D19 | AI application attacks | 12 | 7 |
+| D20 | Agent, MCP and skill attacks | 11 | 5 |
+| D21 | Mobile app and webview bridge | 14 | 5 |
+| D22 | WAF, bot and anti-automation evasion | 15 | 5 |
+| D23 | Exploitation and chaining | 8 | 4 |
+| D24 | Evidence, proof and reporting | 10 | 4 |
+| D25 | Detection and defense mirror | 12 | 3 |
+| D28 | MCP servers for web work | 8 | 4 |
+| D29 | CLI tools an agent can drive | 60 | 3 |
+| D30 | Agent frameworks and orchestrators | 13 | 4 |
+| D31 | REA spine: target artifact extraction | 23 | 5 |
+
+Nine further domains are **explicit pointers** rather than documents, because each is implemented as an
+artefact elsewhere in the repo and a second document would be a worse copy that drifts. D33 is
+`data/reconcile/`, D35 is `BOOTSTRAP.md`, D36 is the companion atlas ontology.
+
+A domain title is a claim about coverage, and it has been wrong here. D11 was titled
+"REST, GraphQL, gRPC, WebSocket, SSE" while holding no WebSocket or SSE entry at all. It is retitled now
+and the gap is named in its own gaps list. That is defect 20 of 21.
+
+---
+
+## The corpus
+
+19 rival collections were harvested and reconciled. The counts, regenerated from disk:
+
+```
+corpus rows      21,384
+  tools           8,848  (8,692 identities)
+  taxonomy nodes 11,712  from list headings, used for framework mapping
+  social            577
+  knowledge         247
+with a real URL   9,671
+```
+
+The four kinds are kept in separate files, because one file holding three kinds of thing is how the row
+total got quoted as a tool count and overstated tools by 2.4 times.
+
+Reconciliation, with every term named rather than absorbed into a residue:
+
+```
+31,298 rows = 13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved
+```
+
+Every exclusion carries one of `TAXONOMY_NODE`, `IMAGE_NOT_ENTRY`, `SOCIAL_OR_VIDEO`,
+`OUT_OF_SCOPE_NONWEB`, `KNOWLEDGE_NOT_TOOL`, `MCP_NON_SECURITY`, `UNCLASSIFIED_LOW_SIGNAL`. Nothing is
+silently dropped.
+
+The collections are near disjoint. Of 8,692 tools, 543 appear in more than one collection and the rest in
+exactly one. No single list is a superset of any other, which is why a union plus an exclusion ledger is
+the only honest way to claim coverage.
+
+**The unread majority.** 1,419 entries are indexed as promotable and not enriched. That number is real
+and it is also the most misleading figure here, because the single-source tier is mostly single-author
+tools, dead projects and blog posts. The realistic yield is far lower.
+
+---
+
+## The tool manifest
+
+64 tools, 0 unresolved, every channel verified against a live registry on 2026-10-27. Each carries the
+install channel that actually works, not the one the documentation claims.
+
+Traps that cost real time and are now encoded:
+
+| you ask for | you get | use instead |
+|---|---|---|
+| `pacman -S httpx` | the Python httpx library | `httpx-bin` |
+| `pacman -S apktool` | nothing | `android-apktool` |
+| `pacman -S kiterunner` | nothing | `kiterunner-bin` |
+| `pip install promptfoo` | a 0.2.0 placeholder | npm `promptfoo` |
+
+And one that is not a packaging trap at all: `pacman -Si` fails machine-wide when any configured
+repository has a bad signature, which once reported sixteen packaged tools as unresolvable. The verifier
+now falls back to the Arch package API, records which channel answered, and warns when the local lookup
+is broken.
+
+---
+
+## The gate
+
+A phase is done when the gate exits 0, not when the prose says so.
+
+```bash
+./scripts/gate.sh          # offline, about a minute
+./scripts/gate.sh --full   # adds the network stage, the rebuild, and the denominator check
+```
+
+Real output:
+
+```
+ai-web-arsenal gate
+===================
+
+  PASS  install matrix is live
+  PASS  doc numbers match disk
+  PASS  prose claims hold
+  PASS  regression tests
+  PASS  domain invariants
+  PASS  atlas pattern gate
+  PASS  generators are deterministic
+  PASS  denominator is complete
+  PASS  coverage ledger is sound
+
+gates: 9  pass 9  fail 0
+```
+
+What each one is:
+
+| gate | what it refuses |
+|---|---|
+| install matrix is live | a package name that does not resolve |
+| doc numbers match disk | a figure in prose that readme-stats no longer produces |
+| prose claims hold | a claim in `data/claims.yaml` that stopped being true |
+| regression tests | any of 21 known defects returning |
+| domain invariants | an entry missing atom, oracle or driver, or an atom stored as a string |
+| atlas pattern gate | a pattern missing its counter or negative control |
+| generators are deterministic | a number that a fresh clone would not reproduce |
+| denominator is complete | a lens that is unwritten, or a factor with no observable |
+| coverage ledger is sound | a citation to an artefact that does not exist |
+
+---
+
+## The claims ledger
+
+45 claims, each a sentence in a document with a Python expression that decides whether it is still true.
+It covers the facts with no stats key, the structural invariants, and **any superlative the documents make
+about themselves**.
+
+```yaml
+- id: C053c
+  statement: "135 of 444 entries declare what detects them, which is the weakest field in the repo"
+  check: "sum(1 for e in entries() if e.get('detected_by')) == 135"
+```
+
+<!-- claim-ok: names the exact phrases the gate blocks, as documentation of the gate -->
+A line that says this repo is the best, the most complete, or unlike everything else fails the gate
+unless it carries an inline justification with a reason:
+
+```markdown
+<!-- claim-ok: quotes the request in order to reject it as unmeasurable -->
+The ask was "the most complete in all of humanity".
+```
+
+That mechanism caught three of this repo's own overclaims while it was being built, including a sentence
+claiming all 444 entries carried six fields when only 75 percent carried two of them.
+
 ---
 
 ## Measured bounds
@@ -225,46 +581,130 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 
 | metric | value |
 |---|---|
+| denominator | 1,000 factors, 16 lenses, each at 50 or more |
+| coverage at L2 or better | 107 of 1,000 (10.7%) |
+| observed coverage | 0 of 1,000 (0%) |
 | sources reconciled | 19 |
-| rows reconciled | 31,298 |
-| reconciliation identity | holds: 13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved = 31,298 |
+| rows reconciled | 31,298, identity holds with every term named |
 | corpus rows | 21,384 |
 | corpus, tools only | 8,848 rows, 8,692 identities |
 | corpus, rows carrying a real URL | 9,671 |
-| excluded with a reason | 17,506 |
-| held, awaiting a rule | 204 |
-| orphan rows (source row with no corpus match) | 74 |
+| enriched entries | 444, 335 with preconditions, 346 with an oracle |
+| promotable candidates | 1,419 after cross-domain dedupe |
 | taxonomy items mapped to atoms | 624 of 706 (88.4%) |
 | tools verified | 64, 0 unresolved |
 | domain URLs checked | 267, 266 answered |
-| atlas patterns | 150, gate passing |
+| atlas patterns | 150, gate passing, 135 ESTABLISHED and 15 PROBABLE |
+| claims checked | 45 |
+| regression tests | 30 across 21 known defect classes |
+| generated files, rebuild | 190, byte identical |
 
-Nothing was silently dropped. Every excluded row carries one of: `TAXONOMY_NODE`, `SOCIAL_OR_VIDEO`, `OUT_OF_SCOPE_NONWEB`, `KNOWLEDGE_NOT_TOOL`, `MCP_NON_SECURITY`, `IMAGE_NOT_ENTRY`, `UNCLASSIFIED_LOW_SIGNAL`.
+---
+
+## Defects found in this project
+
+21 so far, all in [`RECHECK.md`](RECHECK.md) section 8, each with the lesson it produced. They share one
+shape: a plausible artefact that nothing validated, wrong in the flattering direction.
+
+| # | defect | what it taught |
+|---|---|---|
+| 1 | two recalled facts wrong, one repo called stale that was active, one called live that was archived | trust the API, never a summary page |
+| 2 | link checker used HEAD, and real sites answer HEAD 404 with GET 200 | check how you check |
+| 3 | classifier fell back to one class, so every unmatched counter became "authorisation" | a silent default is a claim |
+| 4 | repository URLs invented, indistinguishable from the real ones | a URL not fetched is a hypothesis |
+| 5 | a coverage metric measured its own scoring, giving 14 then 26 then 52 percent | when a metric needs three tries to look good, the metric is the problem |
+| 6 | backlog quoted as 10,476, real 1,419 | counted the parser output, not the claim |
+| 7 | corpus quoted as 24,759, real 21,384 after image and badge removal | an image is not an entry |
+| 8 | name repair ran after its generator and was discarded, then the regex never matched | repairs belong inside the generator |
+| 9 | row total quoted as a tool count, overstating tools by 2.4 times | a row is not a tool |
+| 10 | 13 shields.io language badges shipped as tools | a filter matching one shape is a sample |
+| 11 | a broken pacman repo turned 16 packaged tools into "unresolved" | in a lookup failure, ask which lookup |
+| 12 | the identity line printed "+ residue" and hid 75 orphan rows in a word | name every term, sum them out loud |
+| 13 | 687 rows held an owner/repo identifier in their url field | a locator is not a link |
+| 14 | a pre-dedupe figure was printed as the promotable total | label the stage, not just the number |
+| 15 | the README claimed 444 complete entries when 75 percent carried two fields | a field list is not a coverage claim |
+| 16 | bootstrap held 14 scripts while the docs said 11 generated | a generated directory must own its contents |
+| 17 | the REA backlog was stated as 12, the file names 10 | count the file, not the memory |
+| 18 | the link check file had no generator at all | an artefact with no producer is a memory |
+| 19 | seven entries stored a relative path in a url field | a pointer is not a link |
+| 20 | D11 claimed WebSocket and SSE in its title with no such entry | a domain title is a claim |
+| 21 | five artefact ids invented while authoring the coverage ledger | cite an id, then check it exists |
+
+The standing rule that came out of these: **if a number cannot be regenerated from disk, it is not a
+number, it is a memory.**
+
+---
+
+## Repository map
+
+```
+ai-web-arsenal/
+├── README.md                  you are here
+├── PLAN.md                    the denominator, 16 lenses, 11 phases, gates
+├── SCOPE-v1.md                the superset derivation: 11 axes, cell model
+├── BOOTSTRAP.md               bring-your-own-AI setup, Arch first
+├── RECHECK.md                 the single source of state: done, not done, open
+├── AUTHORING.md               how to add a domain, run order, every trap hit
+├── RESUME.md                  a pointer to RECHECK and AUTHORING, nothing else
+├── LOG.md                     step log, including the verification passes
+├── manifest/tools.yaml        single source of truth for 64 tools
+├── bootstrap/                 11 generated installer scripts
+├── data/
+│   ├── denominator/L01-L16    Set D: 1,000 factors across 16 lenses
+│   ├── coverage/              the join: per factor verdicts and the ledger
+│   ├── claims.yaml            45 prose claims, each with a check
+│   ├── corpus.jsonl           the union, every entry accounted for
+│   ├── corpus.tools.jsonl     8,848 tools, counted separately on purpose
+│   ├── corpus.taxonomy.jsonl  11,712 taxonomy nodes, never counted as tools
+│   ├── corpus.other.jsonl     824 social and knowledge rows
+│   ├── reconcile/             per-source disposition ledger and summary
+│   ├── taxonomy/              6 taxonomies parsed to test IDs
+│   ├── install-matrix.json    verified availability per tool
+│   └── domains/D*.json        the machine readable source of every domain
+├── domains/                   37 domain documents, 28 authored, 9 pointers
+├── trees/                     decision trees as JSON
+├── prompts/                   5 phase packs with failure modes
+├── mcps/                      working MCP configs
+├── skills/web-arsenal/        the order of operations as a loadable skill
+├── docs/                      taxonomy coverage, link health, orchestration
+└── scripts/                   23 pipeline, gate and check scripts
+```
+
+---
+
+## How to add to this
+
+Read [`AUTHORING.md`](AUTHORING.md). The short version:
+
+1. Write `data/domains/DXX.json` with atoms, entries, tree, mirror and gaps.
+2. Every entry needs `preconditions`, `oracle`, `evades`, `detected_by` and a `driver`.
+3. If the technique exists in the atlas, link by `entry_id` and do not restate it.
+4. Render with `scripts/render-domain.py`. Never hand write the generated file.
+5. Map the new content into `data/coverage/` if it covers a factor that was absent.
+6. Run `./scripts/gate.sh`. A claim that fails is a false statement, not a formatting problem.
+
+---
+
+## What this is not
+
+- **Not complete.** 10.7 percent, stated above, with the table to prove it.
+- **Not a lab.** Nothing here has been observed running. `OBSERVED` is 0 for a reason.
+- **Not a scanner wrapper.** 1,419 candidates are indexed and not enriched. The enriched 444 are the
+  ones with a procedure and an oracle.
+- **Not authorisation.** Every pattern assumes written permission. The regulation lens exists partly
+  because this repo has no answer for scope, and that gap is named rather than glossed.
+- **Not neutral about evidence.** A finding without a negative control is not a finding, and a claim
+  without a check does not ship.
 
 ---
 
 ## Companion repo
 
-| | this repo | [web-attack-atlas](https://github.com/harshgounder/web-attack-atlas) |
-|---|---|---|
-| owns | tools, install, drivers, MCP wiring, REA, corpus, reconciliation | atoms, patterns, preconditions, oracles, chains, counters |
-| answers | what do I run, and how | what do I think, what do I try, what will stop me |
-| join key | `entry_id` | `entry_id` |
+**[web-attack-atlas](https://github.com/harshgounder/web-attack-atlas)** holds the technique layer: 16
+atoms, 150 patterns, preconditions, oracles, negative controls, mutations, counters and 13 control
+classes. Join key is `entry_id`. This repo holds tools, domains, corpus, install and the denominator.
+Neither restates the other.
 
-Tools die every 18 months. Techniques survive decades. Separating them means the durable half does not rot with the disposable half.
+## Licence
 
----
-
-## Contributing
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md). The short version: an entry without a driver, a precondition and an oracle is a note, not an entry. Numbers are regenerated, never typed.
-
-## Security
-
-Read [SECURITY.md](SECURITY.md) before running anything from this repo. It is methodology and tooling for testing systems you own or are authorised to test.
-
-## License
-
-[MIT](LICENSE). Use it on systems you own or have written permission to test. Unauthorised testing is illegal and this repo does not help with it.
-
-<p align="center"><sub>Every count in this file is regenerated from disk. If a number here disagrees with <code>scripts/readme-stats.py</code>, the script is right.</sub></p>
+MIT, see [`LICENSE`](LICENSE). Cite with [`CITATION.cff`](CITATION.cff).
