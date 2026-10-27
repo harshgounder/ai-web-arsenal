@@ -168,6 +168,22 @@ when the file names 10.
 
 ---
 
+## 6c. Phase 1 status (the denominator)
+
+| item | state |
+|---|---|
+| Set D defined | 1,000 factors across 16 lenses, every factor with a definition, an observable and an evidence class |
+| lens coverage | 16 of 16, minimum 62 per lens (L01-L12 at 62, L13-L16 at 64) |
+| validator | passes, and it is now in the --full gate |
+| what Set D is not | a list of vulnerabilities. It is the set of properties, mechanisms, constraints and actors that decide whether one is possible |
+
+The four lenses no other collection treats as attack surface are the reason this is not a list of
+payloads: L13 regulation decides what is permitted and what must be disclosed, L14 evidence science
+decides what can be proven at all, L15 the detection industry decides what will be seen, and L16 the
+public record is the only source of evidence about the past.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

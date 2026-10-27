@@ -185,8 +185,8 @@ claims:
 
   # --- denominator (Phase 1, in progress) ---------------------------------------
   - id: C100
-    statement: "the denominator has at least two lenses written, each with 50 or more factors"
-    check: "(lambda ns: len(ns) >= 2 and all(n >= 50 for n in ns))([len(d.get('factors') or []) for d in (json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json'))) if (d.get('factors') or [])])"
+    statement: "the denominator is 1,000 factors across 16 lenses, each lens at 50 or more"
+    check: "(lambda ns: len(ns) == 16 and sum(ns) == 1000 and all(n >= 50 for n in ns))([len(d.get('factors') or []) for d in (json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json')))])"
 
   - id: C101
     statement: "every denominator factor has a definition and an observable, so none is a label"
