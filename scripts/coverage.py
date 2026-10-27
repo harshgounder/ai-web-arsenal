@@ -202,6 +202,35 @@ def cmd_search(args):
     return 0
 
 
+def cmd_sample(args):
+    """Print a random sample of L2 and L3 records next to the role of the entry they cite,
+    so a reviewer can judge the grade without opening anything. Coverage that is never spot checked
+    drifts upward, and this project has already pulled a number back for exactly that reason."""
+    import random
+    rs = [r for r in records().values() if r["level"] in ("L2", "L3")]
+    if not rs:
+        print("no graded records yet", file=sys.stderr)
+        return 1
+    random.seed(args.seed)
+    pick = random.sample(rs, min(args.sample, len(rs)))
+    arts = {a["id"]: a for a in entries() + patterns()}
+    fs = {f["id"]: f for f in factors()}
+    for r in pick:
+        f = fs.get(r["factor"], {})
+        print(f"\n{r['factor']}  {r['level']}  {f.get('name', '')}")
+        print(f"  factor says: {str(f.get('observable', ''))[:110]}")
+        print(f"  graded note: {r.get('note', '')[:140]}")
+        for a in (r.get("covered_by") or []):
+            art = arts.get(a)
+            if art:
+                print(f"  cites {a}: {str(art.get('role') or '')[:130]}")
+            else:
+                print(f"  cites {a}: (a lab, no entry role)")
+    print(f"\n{len(pick)} of {len(rs)} graded records. Judge whether each note is a procedure for the factor")
+    print("as written, or merely an adjacent entry. Anything adjacent is L1, not L2.")
+    return 0
+
+
 def cmd_validate(args):
     fs = factors()
     rs = records()
@@ -253,6 +282,8 @@ def main():
     ap.add_argument("--search")
     ap.add_argument("--any", action="store_true", help="match any term rather than all")
     ap.add_argument("--validate", action="store_true")
+    ap.add_argument("--sample", type=int, metavar="N", help="print N random graded records for review")
+    ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--build", action="store_true")
     args = ap.parse_args()
 
@@ -266,6 +297,8 @@ def main():
         return cmd_search(args)
     if args.validate:
         return cmd_validate(args)
+    if args.sample:
+        return cmd_sample(args)
     ap.print_help()
     return 0
 

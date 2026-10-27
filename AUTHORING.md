@@ -84,6 +84,31 @@ design, because they join on `entry_id` rather than restating a pattern. The rem
 real work, tracked in `RECHECK.md` and checked by `C053` to `C053d`. A new entry should satisfy the rule
 even though the existing corpus does not, and the ratio should move up, not stay flat.
 
+## Grading coverage
+
+A coverage record says how far an artefact goes for one factor. The levels are strict on purpose:
+
+```
+L0 absent      nothing addresses the factor
+L1 named       a tool or entry mentions the concept, with no procedure and no oracle
+L2 procedure   a procedure and an oracle, so a competent reader could test it
+L3 observed    a lab here demonstrates it
+```
+
+L2 means the cited entry states a procedure for **that factor**, not that it touches the same area. The
+difference is the whole value of the number, and it erodes quietly: this project mapped 63 factors in one
+pass, then pulled 22 of them back to L1 because the cited entries were adjacent rather than operative.
+
+So check it, with a command rather than a resolution:
+
+```bash
+python3 scripts/coverage.py --sample 10 --seed 3
+```
+
+That prints ten random graded records next to the role of the entry each cites. Judge whether the note is
+a procedure for the factor as written. Anything adjacent is L1. Do this every few batches, and always
+after one that moves the number by more than two points.
+
 ## Counting
 
 A number that cannot be regenerated from disk is a memory. `scripts/readme-stats.py` emits every figure
