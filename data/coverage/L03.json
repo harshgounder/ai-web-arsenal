@@ -4,35 +4,250 @@
  "default": "L0",
  "reason": "Protocol factors with no artefact. The strong area is GraphQL and schema-driven testing, where several entries do state a procedure. The weak areas are JSON-RPC, SOAP routing, protobuf field semantics, OData and agent to agent delegation, which have nothing at all.",
  "exceptions": {
-  "L03-001": {"level": "L1", "covered_by": ["d11-inql", "d11-clairvoyance"], "basis": "entry", "note": "Both recover a GraphQL schema. That is one protocol's discovery path, not the general question of how much surface is exposed."},
-  "L03-002": {"level": "L2", "covered_by": ["d11-schemathesis"], "basis": "entry", "note": "Property based testing against the declared schema finds exactly where the implementation accepts what the schema does not declare."},
-  "L03-003": {"level": "L2", "covered_by": ["d11-schemathesis"], "basis": "entry", "note": "Undeclared field acceptance is one of the properties a schema driven generator tests, with the schema as the oracle."},
-  "L03-004": {"level": "L1", "covered_by": ["d11-apifuzzer"], "basis": "entry", "note": "Type mutation is generated. Whether coercion changed behaviour is not stated as the oracle."},
-  "L03-006": {"level": "L2", "covered_by": ["d05-juiceshop"], "basis": "entry", "note": "The target is explicitly built around mass assignment, so the procedure and the confirmation both exist."},
-  "L03-007": {"level": "L2", "covered_by": ["d05-autorize"], "basis": "entry", "note": "Replaying every request as a lower principal compares verbs on the same object, which is the parity question."},
-  "L03-011": {"level": "L1", "covered_by": ["d11-ffuf"], "basis": "entry", "note": "Parameter fuzzing can surface pollution. Which duplicate wins is not the stated oracle."},
-  "L03-013": {"level": "L1", "covered_by": ["d11-schemathesis"], "basis": "entry", "note": "Type substitution is generated and the array in scalar position case is not named."},
-  "L03-014": {"level": "L1", "covered_by": ["d11-graphql-cop"], "basis": "entry", "note": "A GraphQL security checker names field and edge authorisation as a class. The per field test is not stated."},
-  "L03-015": {"level": "L2", "covered_by": ["d11-batchql"], "basis": "entry", "note": "Alias and batching abuse is the whole subject of the entry, with a stated confirmation."},
-  "L03-016": {"level": "L2", "covered_by": ["d11-batchql"], "basis": "entry", "note": "Batch execution semantics are what the tool tests, including the multiply the checks."},
-  "L03-018": {"level": "L1", "covered_by": ["d11-inql", "d11-clairvoyance"], "basis": "entry", "note": "Both work around introspection being disabled. Whether it is truly off is not tested."},
-  "L03-021": {"level": "L2", "covered_by": ["d11-grpcurl"], "basis": "entry", "note": "Listing services from a running server is the reflection check, and the method list is the oracle."},
-  "L03-026": {"level": "L0", "covered_by": [], "basis": "none", "note": "JSON number precision and identifier collision is unaddressed anywhere."},
-  "L03-027": {"level": "L1", "covered_by": ["d07-payloads", "d08-payloads"], "basis": "entry", "note": "Escape payloads exist per context. Whether validation happens before or after decoding is not tested."},
-  "L03-031": {"level": "L2", "covered_by": ["d07-xxeinjector", "d07-dtd-finder"], "basis": "entry", "note": "Entity expansion and external reference are the subject, with file or network read as the oracle."},
-  "L03-032": {"level": "L2", "covered_by": ["d04-saml-raider"], "basis": "entry", "note": "Signature wrapping is named explicitly, with the modified assertion accepted as the confirmation."},
-  "L03-033": {"level": "L1", "covered_by": ["d04-saml-raider"], "basis": "entry", "note": "Canonicalisation is the mechanism wrapping relies on. The entry attacks it rather than testing the two canonical forms directly."},
-  "L03-034": {"level": "L1", "covered_by": ["d04-rfc9700", "d04-oidc-core"], "basis": "entry", "note": "Audience checking is a stated requirement. No artefact tests a cross service assertion."},
-  "L03-039": {"level": "L1", "covered_by": ["d04-keycloak"], "basis": "entry", "note": "A controllable identity provider makes the redirect test possible. No entry states the procedure."},
-  "L03-041": {"level": "L1", "covered_by": ["d04-oidc-core"], "basis": "entry", "note": "PKCE is a requirement in the specification entry, not a test."},
-  "L03-047": {"level": "L2", "covered_by": ["d04-jwt_tool", "d06-jwt-tool"], "basis": "entry", "note": "Algorithm confusion is the canonical case both tools implement, with accepted signature as the oracle."},
-  "L03-048": {"level": "L1", "covered_by": ["d06-jwt-tool"], "basis": "entry", "note": "Claim tampering shows the token can be changed. Whether the application revalidates the claim is the untested half."},
-  "L03-049": {"level": "L2", "covered_by": ["d04-jwt_tool"], "basis": "entry", "note": "Key identifier traversal is named as part of the tool's attack set."},
-  "L03-053": {"level": "L2", "covered_by": ["d11-restler", "d11-schemathesis"], "basis": "entry", "note": "Both drive tests from the published specification, so an undocumented live route is the finding."},
-  "L03-056": {"level": "L2", "covered_by": ["d20-mcp-scan"], "basis": "entry", "note": "Scanning tool descriptions for hostile instruction is the factor as written, with a flagged description as the oracle."},
-  "L03-057": {"level": "L1", "covered_by": ["d20-bandit"], "basis": "entry", "note": "Tool poisoning is the named class. Authority escalation through a result is described rather than tested."},
-  "L03-058": {"level": "L1", "covered_by": ["d28-spec"], "basis": "entry", "note": "The protocol specification states what identity guarantees exist. No artefact tests them."},
-  "L03-061": {"level": "L1", "covered_by": ["d12-newman"], "basis": "entry", "note": "Deterministic replay can show a duplicate effect. Idempotency key handling is not the stated subject."},
-  "L03-062": {"level": "L1", "covered_by": ["d11-ffuf"], "basis": "entry", "note": "Parameter fuzzing can edit a cursor. Whether the cursor is signed is not tested."}
+  "L03-001": {
+   "level": "L1",
+   "covered_by": [
+    "d11-inql",
+    "d11-clairvoyance"
+   ],
+   "basis": "entry",
+   "note": "Both recover a GraphQL schema. That is one protocol's discovery path, not the general question of how much surface is exposed."
+  },
+  "L03-002": {
+   "level": "L2",
+   "covered_by": [
+    "d11-schemathesis"
+   ],
+   "basis": "entry",
+   "note": "Property based testing against the declared schema finds exactly where the implementation accepts what the schema does not declare."
+  },
+  "L03-003": {
+   "level": "L2",
+   "covered_by": [
+    "d11-schemathesis"
+   ],
+   "basis": "entry",
+   "note": "Undeclared field acceptance is one of the properties a schema driven generator tests, with the schema as the oracle."
+  },
+  "L03-004": {
+   "level": "L1",
+   "covered_by": [
+    "d11-apifuzzer"
+   ],
+   "basis": "entry",
+   "note": "Type mutation is generated. Whether coercion changed behaviour is not stated as the oracle."
+  },
+  "L03-006": {
+   "level": "L2",
+   "covered_by": [
+    "d05-juiceshop"
+   ],
+   "basis": "entry",
+   "note": "The target is explicitly built around mass assignment, so the procedure and the confirmation both exist."
+  },
+  "L03-007": {
+   "level": "L2",
+   "covered_by": [
+    "d05-autorize"
+   ],
+   "basis": "entry",
+   "note": "Replaying every request as a lower principal compares verbs on the same object, which is the parity question."
+  },
+  "L03-011": {
+   "level": "L1",
+   "covered_by": [
+    "d11-ffuf"
+   ],
+   "basis": "entry",
+   "note": "Parameter fuzzing can surface pollution. Which duplicate wins is not the stated oracle."
+  },
+  "L03-013": {
+   "level": "L1",
+   "covered_by": [
+    "d11-schemathesis"
+   ],
+   "basis": "entry",
+   "note": "Type substitution is generated and the array in scalar position case is not named."
+  },
+  "L03-014": {
+   "level": "L1",
+   "covered_by": [
+    "d11-graphql-cop"
+   ],
+   "basis": "entry",
+   "note": "A GraphQL security checker names field and edge authorisation as a class. The per field test is not stated."
+  },
+  "L03-015": {
+   "level": "L2",
+   "covered_by": [
+    "d11-batchql"
+   ],
+   "basis": "entry",
+   "note": "Alias and batching abuse is the whole subject of the entry, with a stated confirmation."
+  },
+  "L03-016": {
+   "level": "L2",
+   "covered_by": [
+    "d11-batchql"
+   ],
+   "basis": "entry",
+   "note": "Batch execution semantics are what the tool tests, including the multiply the checks."
+  },
+  "L03-018": {
+   "level": "L1",
+   "covered_by": [
+    "d11-inql",
+    "d11-clairvoyance"
+   ],
+   "basis": "entry",
+   "note": "Both work around introspection being disabled. Whether it is truly off is not tested."
+  },
+  "L03-021": {
+   "level": "L2",
+   "covered_by": [
+    "d11-grpcurl"
+   ],
+   "basis": "entry",
+   "note": "Listing services from a running server is the reflection check, and the method list is the oracle."
+  },
+  "L03-026": {
+   "level": "L0",
+   "covered_by": [],
+   "basis": "none",
+   "note": "JSON number precision and identifier collision is unaddressed anywhere."
+  },
+  "L03-027": {
+   "level": "L1",
+   "covered_by": [
+    "d07-payloads",
+    "d08-payloads"
+   ],
+   "basis": "entry",
+   "note": "Escape payloads exist per context. Whether validation happens before or after decoding is not tested."
+  },
+  "L03-031": {
+   "level": "L2",
+   "covered_by": [
+    "d07-xxeinjector",
+    "d07-dtd-finder"
+   ],
+   "basis": "entry",
+   "note": "Entity expansion and external reference are the subject, with file or network read as the oracle."
+  },
+  "L03-032": {
+   "level": "L2",
+   "covered_by": [
+    "d04-saml-raider"
+   ],
+   "basis": "entry",
+   "note": "Signature wrapping is named explicitly, with the modified assertion accepted as the confirmation."
+  },
+  "L03-033": {
+   "level": "L1",
+   "covered_by": [
+    "d04-saml-raider"
+   ],
+   "basis": "entry",
+   "note": "Canonicalisation is the mechanism wrapping relies on. The entry attacks it rather than testing the two canonical forms directly."
+  },
+  "L03-034": {
+   "level": "L1",
+   "covered_by": [
+    "d04-rfc9700",
+    "d04-oidc-core"
+   ],
+   "basis": "entry",
+   "note": "Audience checking is a stated requirement. No artefact tests a cross service assertion."
+  },
+  "L03-039": {
+   "level": "L1",
+   "covered_by": [
+    "d04-keycloak"
+   ],
+   "basis": "entry",
+   "note": "A controllable identity provider makes the redirect test possible. No entry states the procedure."
+  },
+  "L03-041": {
+   "level": "L1",
+   "covered_by": [
+    "d04-oidc-core"
+   ],
+   "basis": "entry",
+   "note": "PKCE is a requirement in the specification entry, not a test."
+  },
+  "L03-047": {
+   "level": "L3",
+   "covered_by": [
+    "d04-jwt_tool",
+    "lab-02-jwt-alg"
+   ],
+   "basis": "lab",
+   "note": "Run here on 2026-10-27 as obs-002. A verifier that dispatches on the token's declared alg accepted an unsigned token with role admin, while a wrong signature under HS256 was rejected with 401 and the genuine user token was refused with 403. Two controls, because this class has two ways to be wrong."
+  },
+  "L03-048": {
+   "level": "L1",
+   "covered_by": [
+    "d06-jwt-tool"
+   ],
+   "basis": "entry",
+   "note": "Claim tampering shows the token can be changed. Whether the application revalidates the claim is the untested half."
+  },
+  "L03-049": {
+   "level": "L2",
+   "covered_by": [
+    "d04-jwt_tool"
+   ],
+   "basis": "entry",
+   "note": "Key identifier traversal is named as part of the tool's attack set."
+  },
+  "L03-053": {
+   "level": "L2",
+   "covered_by": [
+    "d11-restler",
+    "d11-schemathesis"
+   ],
+   "basis": "entry",
+   "note": "Both drive tests from the published specification, so an undocumented live route is the finding."
+  },
+  "L03-056": {
+   "level": "L2",
+   "covered_by": [
+    "d20-mcp-scan"
+   ],
+   "basis": "entry",
+   "note": "Scanning tool descriptions for hostile instruction is the factor as written, with a flagged description as the oracle."
+  },
+  "L03-057": {
+   "level": "L1",
+   "covered_by": [
+    "d20-bandit"
+   ],
+   "basis": "entry",
+   "note": "Tool poisoning is the named class. Authority escalation through a result is described rather than tested."
+  },
+  "L03-058": {
+   "level": "L1",
+   "covered_by": [
+    "d28-spec"
+   ],
+   "basis": "entry",
+   "note": "The protocol specification states what identity guarantees exist. No artefact tests them."
+  },
+  "L03-061": {
+   "level": "L1",
+   "covered_by": [
+    "d12-newman"
+   ],
+   "basis": "entry",
+   "note": "Deterministic replay can show a duplicate effect. Idempotency key handling is not the stated subject."
+  },
+  "L03-062": {
+   "level": "L1",
+   "covered_by": [
+    "d11-ffuf"
+   ],
+   "basis": "entry",
+   "note": "Parameter fuzzing can edit a cursor. Whether the cursor is signed is not tested."
+  }
  }
 }

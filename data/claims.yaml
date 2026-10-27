@@ -197,8 +197,8 @@ claims:
     check: "(lambda rs: len(rs) == 1000 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 107)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C104
-    statement: "exactly one factor is graded L3, backed by a recorded observation"
-    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L3') == 1)(rows('data/coverage/coverage.jsonl'))"
+    statement: "two factors are graded L3, each backed by a recorded observation"
+    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L2') == 105 and sum(1 for r in rs if r['level'] == 'L3') == 2)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C108
     statement: "every L3 factor names a lab whose observation verdict is OBSERVED"
