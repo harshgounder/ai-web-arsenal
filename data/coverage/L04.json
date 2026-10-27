@@ -357,6 +357,30 @@
    ],
    "basis": "entry",
    "note": "Safe string marking is the escaping layer; the raw fragment audit is where the marking is bypassed."
+  },
+  "L04-041": {
+   "level": "L1",
+   "covered_by": [
+    "d07-binder-audit"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Request binding and middleware order is not job argument serialisation. The entry does not reach a queued payload. The concept is named and no procedure for it is stated."
+  },
+  "L04-044": {
+   "level": "L2",
+   "covered_by": [
+    "d07-migration-safety"
+   ],
+   "basis": "entry",
+   "note": "Privilege level of the migration process is part of the migration safety test."
+  },
+  "L04-053": {
+   "level": "L1",
+   "covered_by": [
+    "d13-ffuf"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Path fuzzing does not isolate a locale influenced path. The entry exercises the path shape, not the locale resolution. The concept is named and no procedure for it is stated."
   }
  }
 }

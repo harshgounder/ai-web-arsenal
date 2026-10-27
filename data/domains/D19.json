@@ -564,6 +564,64 @@
     "an agent continuing after a stop request, measured in steps taken",
     "time from stop to no further side effect"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d19-model-supply",
+   "name": "Model provenance, installation authority and lifecycle",
+   "url": "https://modelcontextprotocol.io/specification",
+   "role": "Where the model came from, whether the agent can install one at runtime, and what happens when the provider retires it. All three change behaviour without a code deployment.",
+   "preconditions": [
+    "the application uses a hosted or downloaded model"
+   ],
+   "oracle": [
+    "a model artefact whose publisher cannot be verified",
+    "a package or model installed by the agent at runtime rather than at build",
+    "a version bump forced by a provider retirement with no evaluation recorded"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d19-human-oversight",
+   "name": "Human in the loop quality",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "Whether the approval is informed or a rubber stamp. The measurable form is approval latency against the volume of content the approver had to read.",
+   "preconditions": [
+    "a human approves agent actions"
+   ],
+   "oracle": [
+    "approval latency too short to have read the content, measured across actions",
+    "approvals granted in bulk, which is a different failure from a fast one",
+    "the approver able to state what they approved afterwards"
+   ]
   }
  ],
  "tree": {

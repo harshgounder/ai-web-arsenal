@@ -13,12 +13,12 @@
    "note": "Reporting practice covers how to communicate a finding. Disclosure handling as a process is named only by adjacency."
   },
   "L11-030": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-scorecard"
+    "d38-developer-loop"
    ],
    "basis": "entry",
-   "note": "The scorecard reflects project hygiene, which is a weak proxy for whether a developer learns from a finding."
+   "note": "The same class of mistake recurring, measured per team."
   },
   "L11-040": {
    "level": "L0",
@@ -121,6 +121,46 @@
    ],
    "basis": "entry",
    "note": "What the organisation says it will never ask for, checked against its real process."
+  },
+  "L11-002": {
+   "level": "L2",
+   "covered_by": [
+    "d38-credential-lifecycle"
+   ],
+   "basis": "entry",
+   "note": "A reset completed by a single actor without a second approval, from the audit record."
+  },
+  "L11-008": {
+   "level": "L2",
+   "covered_by": [
+    "d38-credential-lifecycle"
+   ],
+   "basis": "entry",
+   "note": "An initial password visible to a third party in transit."
+  },
+  "L11-037": {
+   "level": "L2",
+   "covered_by": [
+    "d38-credential-lifecycle"
+   ],
+   "basis": "entry",
+   "note": "A support view exposing fields unrelated to the request."
+  },
+  "L11-025": {
+   "level": "L2",
+   "covered_by": [
+    "d38-developer-loop"
+   ],
+   "basis": "entry",
+   "note": "Time from report to a human acknowledgement, including out of hours."
+  },
+  "L11-013": {
+   "level": "L2",
+   "covered_by": [
+    "d06-mfa-secret-storage"
+   ],
+   "basis": "entry",
+   "note": "Third party hosting terms are read from the vendor, which is the same review path as the MFA entry."
   }
  }
 }

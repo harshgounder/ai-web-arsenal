@@ -32,7 +32,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-17 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -45,7 +45,9 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Lakera Gandalf](https://gandalf.lakera.ai/) | L06 probing | A2 | A16 | `n/a web` | no | Public prompt injection range, the calibration target before touching a real app |
 | [garak](https://github.com/NVIDIA/garak) | L06 probing | A2 | A16,A08 | `pipx:garak` | yes | LLM vulnerability scanner: prompt injection, jailbreak, leakage, toxicity probes across model families |
 | [Guardrail placement and failure mode](https://genai.owasp.org/) | L06 probing | A2 | A08 | `n/a reference` | no | Whether the guard sits before the model, after it, or both, and what it does when it errors. A guard that fails open is a guard that is absent under load. |
+| [Human in the loop quality](https://csrc.nist.gov/pubs/sp/800/61/r3/final) | L06 probing | A2 | A08 | `n/a reference` | no | Whether the approval is informed or a rubber stamp. The measurable form is approval latency against the volume of content the approver had to read. |
 | [Stop authority for a running agent](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a running agent can be stopped mid task, and how long it takes to take effect. An agent that cannot be stopped is an incident with no containment step. |
+| [Model provenance, installation authority and lifecycle](https://modelcontextprotocol.io/specification) | L06 probing | A2 | A08 | `n/a reference` | no | Where the model came from, whether the agent can install one at runtime, and what happens when the provider retires it. All three change behaviour without a code deployment. |
 | [promptfoo](https://github.com/promptfoo/promptfoo) | L06 probing | A2 | A16,A08 | `npm:promptfoo` | yes | Eval harness with red team plugins, the closest thing to CI for prompt injection regression |
 | [PurpleLlama](https://github.com/meta-llama/PurpleLlama) | L06 probing | A2 | A16,A15 | `git` | no | Meta's LLM safety toolset: risk taxonomy, benchmarks and guard models |
 | [Streaming, partial output and cost accounting](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) | L06 probing | A2 | A08 | `n/a reference` | no | Whether partial output is acted on before completion, and whether the meter counts what the model actually consumed. Both are quiet failures that only show in aggregate. |
@@ -132,6 +134,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Stop authority for a running agent**  
 - preconditions: `an agent runs multi step tasks autonomously`
 - oracle: `an agent continuing after a stop request, measured in steps taken`, `time from stop to no further side effect`
+
+**Model provenance, installation authority and lifecycle**  
+- preconditions: `the application uses a hosted or downloaded model`
+- oracle: `a model artefact whose publisher cannot be verified`, `a package or model installed by the agent at runtime rather than at build`, `a version bump forced by a provider retirement with no evaluation recorded`
+
+**Human in the loop quality**  
+- preconditions: `a human approves agent actions`
+- oracle: `approval latency too short to have read the content, measured across actions`, `approvals granted in bulk, which is a different failure from a fast one`, `the approver able to state what they approved afterwards`
 
 ## Decision tree
 

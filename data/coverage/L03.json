@@ -226,12 +226,12 @@
    "note": "Tool poisoning is the named class. Authority escalation through a result is described rather than tested."
   },
   "L03-058": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d28-spec"
+    "d20-mcp-trust-boundary"
    ],
    "basis": "entry",
-   "note": "The protocol specification states what identity guarantees exist. No artefact tests them."
+   "note": "A request served by a server other than the one intended is the identity and scope question."
   },
   "L03-061": {
    "level": "L1",
@@ -248,6 +248,22 @@
    ],
    "basis": "entry",
    "note": "Parameter fuzzing can edit a cursor. Whether the cursor is signed is not tested."
+  },
+  "L03-020": {
+   "level": "L2",
+   "covered_by": [
+    "d11-resolver-boundary"
+   ],
+   "basis": "entry",
+   "note": "An object loaded without the check its sibling path applies is the boundary failure."
+  },
+  "L03-024": {
+   "level": "L2",
+   "covered_by": [
+    "d11-protobuf-semantics"
+   ],
+   "basis": "entry",
+   "note": "A field cleared that was meant to be left alone is the presence ambiguity."
   }
  }
 }

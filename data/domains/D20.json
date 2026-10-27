@@ -363,6 +363,35 @@
    "stage": "L06",
    "status": "ESTABLISHED",
    "note": "Defensive side of the tool-call boundary. Test it as a bypass target too."
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d20-mcp-trust-boundary",
+   "name": "MCP server identity, scope and authentication",
+   "url": "https://modelcontextprotocol.io/specification",
+   "role": "Whether a client can tell which server answered and what it is allowed to do. The protocol is young and the deployment is usually a local process with no authentication at all.",
+   "preconditions": [
+    "an agent connects to one or more MCP servers"
+   ],
+   "oracle": [
+    "a request served by a server other than the one intended",
+    "a connection established with no verification in either direction",
+    "a server reachable from another host on the network rather than loopback only"
+   ]
   }
  ],
  "tree": {

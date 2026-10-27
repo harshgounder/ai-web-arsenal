@@ -1019,6 +1019,93 @@
     "the retention actually applied, checked at close",
     "any transfer to another system recorded and justified"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-legal-process",
+   "name": "Legal process, transparency and lawful access",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "What a legal request can obtain, whether the instrument is verified before release, and what must be published about it. Most systems implement one of these and not the other two.",
+   "preconditions": [
+    "the organisation holds data about identifiable people"
+   ],
+   "oracle": [
+    "a release without dual control, or without the instrument reviewed by someone qualified",
+    "the request type recorded, so a subpoena and a warrant are distinguishable in the log",
+    "an aggregate count published, or a documented reason it is not"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-signed-documents",
+   "name": "Digital signature legal weight and availability obligations",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "Whether an electronic signature binds in the jurisdiction, and whether an accessibility or availability obligation constrains what a test may do.",
+   "preconditions": [
+    "the organisation relies on electronic signatures or has availability duties"
+   ],
+   "oracle": [
+    "the signature standard cited, and whether the jurisdiction recognises it",
+    "an availability window the test must respect, recorded before testing",
+    "a test action that would have breached the window, identified in advance"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d24-source-rights",
+   "name": "Source rights, licensing and designation status",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "Whether the material can be redistributed, whether the organisation is designated as critical infrastructure, and whether a test list or corpus is traceable to practice. Three questions that decide what a report may contain and who has to be told.",
+   "preconditions": [
+    "the engagement produces artefacts that may be shared"
+   ],
+   "oracle": [
+    "each source's licence recorded against how it will be used",
+    "designation status read from the regulator's list rather than assumed",
+    "a test item traceable to a real finding, or marked as written from theory"
+   ]
   }
  ],
  "tree": {

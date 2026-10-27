@@ -226,6 +226,64 @@
     "a sensitive file with no named owner",
     "the repeat rate of the same class of mistake, which is the only honest measure of whether review teaches"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-credential-lifecycle",
+   "name": "Credential lifecycle: reset authority, handover, support view",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "Who can reset what, how a new starter receives their first credential, and what a support agent can see beyond the ticket. Each is a place where process replaces cryptography.",
+   "preconditions": [
+    "the organisation has a support desk and onboarding"
+   ],
+   "oracle": [
+    "a reset completed by a single actor without a second approval, from the audit record",
+    "an initial password visible to a third party in transit",
+    "a support view exposing fields unrelated to the request"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-developer-loop",
+   "name": "Developer feedback loop and escalation reach",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "Whether a developer learns that their change introduced a weakness, and whether a report reaches someone who can act out of hours. Both are process properties with measurable latencies.",
+   "preconditions": [
+    "the organisation runs a review process and receives reports"
+   ],
+   "oracle": [
+    "the same class of mistake recurring, measured per team across engagements",
+    "time from report to a human acknowledgement, including out of hours",
+    "a finding that reached nobody who could act on it"
+   ]
   }
  ],
  "tree": {

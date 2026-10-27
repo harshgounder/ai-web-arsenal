@@ -2,7 +2,7 @@
  "domain": "D20",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 11,
+ "enriched": 12,
  "indexed_not_enriched": 23,
  "entries": [
   {

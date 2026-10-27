@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 334,
+ "unique_urls": 336,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -144,6 +144,19 @@
     "d37-data-at-rest"
    ]
   },
+  "https://csrc.nist.gov/pubs/sp/800/61/r3/final": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d19-human-oversight",
+    "d23-purple-loop",
+    "d24-legal-process",
+    "d24-signed-documents",
+    "d24-source-rights",
+    "d38-credential-lifecycle",
+    "d38-developer-loop"
+   ]
+  },
   "https://csrc.nist.gov/pubs/sp/800/92/final": {
    "status": "OK",
    "http": 200,
@@ -235,6 +248,13 @@
    "http": 200,
    "entries": [
     "d37-gpu-surface"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d09-stateful-transports"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage": {

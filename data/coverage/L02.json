@@ -290,6 +290,30 @@
    ],
    "basis": "entry",
    "note": "Fingerprinting reads error surfaces. Mapping which hop produces which error is not a stated test."
+  },
+  "L02-043": {
+   "level": "L2",
+   "covered_by": [
+    "d09-stateful-transports"
+   ],
+   "basis": "entry",
+   "note": "A frame the specification forbids being accepted is the framing edge case."
+  },
+  "L02-049": {
+   "level": "L2",
+   "covered_by": [
+    "d09-stateful-transports"
+   ],
+   "basis": "entry",
+   "note": "State in one stream changed by closing another is shared authorisation."
+  },
+  "L02-019": {
+   "level": "L1",
+   "covered_by": [
+    "d09-stateful-transports"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: The stateful transport entry covers WebSocket and WebTransport framing. QUIC stream reset is a different layer and the entry does not reach it. The concept is named and no procedure for it is stated."
   }
  }
 }

@@ -69,36 +69,36 @@
    "note": "Traceability of every firing rule to a substring is the signature versus behaviour question."
   },
   "L15-021": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-wazuh"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "Host detection is the artefact. Whether the web tier is instrumented is a deployment fact."
+   "note": "Host and server coverage per technique, with gaps named, is the telemetry listing."
   },
   "L15-024": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-zeek"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "East west visibility is what a network analyser would provide."
+   "note": "East west coverage is one of the listed telemetry gaps."
   },
   "L15-027": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-elastic"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "A maintained rule set is the denominator for coverage, not a measurement of it."
+   "note": "Rule coverage per technique is the same measured matrix."
   },
   "L15-046": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-counters"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "The counter map is the closest thing to purple team validation and it is authored, not exercised."
+   "note": "Purple team validation is the entry's whole subject."
   },
   "L15-062": {
    "level": "L1",
@@ -221,12 +221,12 @@
    "note": "A rule disabled after an incident shows as a position with no blocking at all."
   },
   "L15-011": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d37-sandbox-reach"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: d37-sandbox-reach covers a renderer sandbox, not an in-process RASP agent. Different mechanism. The concept is named and no procedure for it is stated."
+   "note": "Whether the runtime agent fires is exactly the untested detection question."
   },
   "L15-012": {
    "level": "L1",
@@ -365,20 +365,20 @@
    "note": "Downgraded from L2: Deception consistency is not a column the matrix defines. The concept is named and no procedure for it is stated."
   },
   "L15-040": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-telemetry-matrix"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: A canary is a detection source; the matrix entry does not describe placing or triaging one. The concept is named and no procedure for it is stated."
+   "note": "Whether a planted token fires is a detection test, and the never-fired record is the oracle."
   },
   "L15-042": {
    "level": "L1",
    "covered_by": [
-    "d25-telemetry-matrix"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: The matrix covers retention and clocks, not capture before state changes. The concept is named and no procedure for it is stated."
+   "note": "Downgraded from L2: The purple loop entry asks whether a detection was tested against a real technique. Forensic readiness asks whether state can be captured before it changes. Different capability. The concept is named and no procedure for it is stated."
   },
   "L15-044": {
    "level": "L2",
@@ -421,12 +421,12 @@
    "note": "A default that disables a feature shows as a position with no blocking."
   },
   "L15-056": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-deploy-creds"
+    "d18-maintainer-trust"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: A security product's own update channel is not the deploy credential test. The concept is named and no procedure for it is stated."
+   "note": "A security product's own update channel is a supplier with publish authority, which is the maintainer trust test."
   },
   "L15-058": {
    "level": "L2",
@@ -437,12 +437,12 @@
    "note": "Break glass bypassing its own controls is the approval trail question."
   },
   "L15-059": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d22-inspection-matrix"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: The inspection matrix measures what a control reads once, not whether it catches anything over time. The concept is named and no procedure for it is stated."
+   "note": "The measured rate rather than a pass or fail is the effectiveness question."
   },
   "L15-063": {
    "level": "L2",

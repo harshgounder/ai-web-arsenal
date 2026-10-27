@@ -76,12 +76,12 @@
    "note": "Tool poisoning is described, including authority escalation. It is a reference rather than a test."
   },
   "L12-016": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d28-mcp-scan"
+    "d20-mcp-trust-boundary"
    ],
    "basis": "entry",
-   "note": "Config scanning flags unauthenticated servers. Mutual verification is not tested."
+   "note": "A connection with no verification in either direction is the authentication failure."
   },
   "L12-018": {
    "level": "L1",
@@ -216,6 +216,38 @@
    ],
    "basis": "entry",
    "note": "A tool appearing without a deployment is the same pinning question."
+  },
+  "L12-038": {
+   "level": "L2",
+   "covered_by": [
+    "d19-model-supply"
+   ],
+   "basis": "entry",
+   "note": "A model artefact whose publisher cannot be verified is the provenance test."
+  },
+  "L12-027": {
+   "level": "L2",
+   "covered_by": [
+    "d19-model-supply"
+   ],
+   "basis": "entry",
+   "note": "A package installed by the agent at runtime rather than at build."
+  },
+  "L12-062": {
+   "level": "L2",
+   "covered_by": [
+    "d19-model-supply"
+   ],
+   "basis": "entry",
+   "note": "A version bump forced by provider retirement with no evaluation recorded."
+  },
+  "L12-048": {
+   "level": "L2",
+   "covered_by": [
+    "d19-human-oversight"
+   ],
+   "basis": "entry",
+   "note": "Approval latency too short to have read the content, measured across actions."
   }
  }
 }

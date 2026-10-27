@@ -25,12 +25,15 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-36 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+39 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [NIST SP 800-115](https://csrc.nist.gov/pubs/sp/800/115/final) | L01 scope | A0 | A08 | `n/a reference` | no | The methodology standard, useful when a client asks what process you follow |
+| [Legal process, transparency and lawful access](https://csrc.nist.gov/pubs/sp/800/61/r3/final) | L06 probing | A2 | A08 | `n/a reference` | no | What a legal request can obtain, whether the instrument is verified before release, and what must be published about it. Most systems implement one of these and not the other two. |
+| [Digital signature legal weight and availability obligations](https://csrc.nist.gov/pubs/sp/800/61/r3/final) | L06 probing | A2 | A08 | `n/a reference` | no | Whether an electronic signature binds in the jurisdiction, and whether an accessibility or availability obligation constrains what a test may do. |
+| [Source rights, licensing and designation status](https://csrc.nist.gov/pubs/sp/800/61/r3/final) | L06 probing | A2 | A08 | `n/a reference` | no | Whether the material can be redistributed, whether the organisation is designated as critical infrastructure, and whether a test list or corpus is traceable to practice. Three questions that decide what a report may contain and who has to be told. |
 | [This repo: prompts/05-critic.md](https://github.com/) | L08 proof | A5 | A08 | `local` | no | The adversarial review pack, the reason findings survive human review |
 | [This repo: prompts/04-prove-it.md](https://github.com/) | L08 proof | A5 | A08 | `local` | no | The proving procedure: falsify first, control second, verdict last |
 | [DOJ computer crime and IP section guidance](https://www.justice.gov/criminal/criminal-ccips) | L10 reporting | A0 | A08 | `n/a reference` | no | The prosecution side's own material on unauthorised access, which is the practical boundary a test has to stay inside. |
@@ -188,6 +191,18 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Data handling during an engagement**  
 - preconditions: `the test will encounter production data`
 - oracle: `a written statement of what may be retained, where, and for how long`, `the retention actually applied, checked at close`, `any transfer to another system recorded and justified`
+
+**Legal process, transparency and lawful access**  
+- preconditions: `the organisation holds data about identifiable people`
+- oracle: `a release without dual control, or without the instrument reviewed by someone qualified`, `the request type recorded, so a subpoena and a warrant are distinguishable in the log`, `an aggregate count published, or a documented reason it is not`
+
+**Digital signature legal weight and availability obligations**  
+- preconditions: `the organisation relies on electronic signatures or has availability duties`
+- oracle: `the signature standard cited, and whether the jurisdiction recognises it`, `an availability window the test must respect, recorded before testing`, `a test action that would have breached the window, identified in advance`
+
+**Source rights, licensing and designation status**  
+- preconditions: `the engagement produces artefacts that may be shared`
+- oracle: `each source's licence recorded against how it will be used`, `designation status read from the regulator's list rather than assumed`, `a test item traceable to a real finding, or marked as written from theory`
 
 ## Decision tree
 

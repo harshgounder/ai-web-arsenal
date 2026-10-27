@@ -24,11 +24,13 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-7 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+9 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
+| [Credential lifecycle: reset authority, handover, support view](https://csrc.nist.gov/pubs/sp/800/61/r3/final) | L06 probing | A2 | A08 | `n/a reference` | no | Who can reset what, how a new starter receives their first credential, and what a support agent can see beyond the ticket. Each is a place where process replaces cryptography. |
+| [Developer feedback loop and escalation reach](https://csrc.nist.gov/pubs/sp/800/61/r3/final) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a developer learns that their change introduced a weakness, and whether a report reaches someone who can act out of hours. Both are process properties with measurable latencies. |
 | [Review depth on security relevant changes](https://owasp.org/www-project-top-ten/) | L11 fix verification | A0 | A14 | `n/a reference` | no | Whether authentication, payment and crypto changes get a different review than a typo fix, and whether a named owner exists for each sensitive path. |
 | [Device trust enrollment path](https://www.ncsc.gov.uk/collection/device-security-guidance) | L11 fix verification | A0 | A14 | `n/a reference` | no | Whether a device can be enrolled outside the managed process, and what organisational data reaches a personal device that cannot be removed. |
 | [Disclosure programme scope and safe harbour](https://www.first.org/global/sigs/vulnerability-coordination/multiparty/) | L11 fix verification | A0 | A14 | `n/a reference` | no | The relationship with people who find things. Scope must be precise enough to test the real system, and good faith testing must be protected in writing. |
@@ -66,6 +68,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Review depth on security relevant changes**  
 - preconditions: `the project has a review process and code ownership`
 - oracle: `a sensitive change merged with one approval and no security review`, `a sensitive file with no named owner`, `the repeat rate of the same class of mistake, which is the only honest measure of whether review teaches`
+
+**Credential lifecycle: reset authority, handover, support view**  
+- preconditions: `the organisation has a support desk and onboarding`
+- oracle: `a reset completed by a single actor without a second approval, from the audit record`, `an initial password visible to a third party in transit`, `a support view exposing fields unrelated to the request`
+
+**Developer feedback loop and escalation reach**  
+- preconditions: `the organisation runs a review process and receives reports`
+- oracle: `the same class of mistake recurring, measured per team across engagements`, `time from report to a human acknowledgement, including out of hours`, `a finding that reached nobody who could act on it`
 
 ## Decision tree
 

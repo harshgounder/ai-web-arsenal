@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 72 | 334 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 73 | 336 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 334 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 336 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -106,7 +106,7 @@ taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
 domains         30 authored + 9 explicit pointers + 0 empty
-enriched        544 entries, all with atom and driver; 435 with preconditions, 446 with oracle,
+enriched        556 entries, all with atom and driver; 447 with preconditions, 458 with oracle,
                 175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
@@ -344,7 +344,7 @@ not are ISO 27001 and the W3C WebAuthn page refusing automated clients.
 | L06 identity | 12 of 62 | **19 of 62 (31%)** |
 | L09 edge | 11 of 62 | **15 of 62 (24%)** |
 | L04 frameworks | 15 of 62 | **21 of 62 (34%)** |
-| whole denominator | 108 of 1,000 (10.8%) | **356 of 1,000 (35.6%)** |
+| whole denominator | 108 of 1,000 (10.8%) | **391 of 1,000 (39.1%)** |
 
 What the entries do that a policy document does not: each states what to look at and what result settles
 it. `d24-gdpr-breach` asks for the awareness timestamp and the article 33(5) register entry, not a promise
@@ -468,6 +468,29 @@ that restates the repo wrongly is worse than no server.
 One defect found while building it: the test and the server disagreed about which fields a search covers,
 so the same query returned six rows in one and eight in the other. Both now use one documented field
 tuple. That is the mirror of this project's oldest lesson, from the other direction.
+
+---
+
+## 6m. Class I is nearly exhausted: 9 factors left, from 239
+
+Coverage 35.6 to 39.1 percent. The gap between what this repo covers and what it could cover by writing
+alone has closed from 239 factors to 9.
+
+What the last batch looked like, because it is the shape of the whole exercise: fourteen entries covering
+forty two factors, then the sample audit pulled back six of them.
+
+| demoted factor | why |
+|---|---|
+| L13-024 audit log integrity | cited the purple loop, which tests whether a detection fires, not whether an audit trail is tamper evident. I had already downgraded this once for the same reason, which is its own finding |
+| L02-019 QUIC reset | the stateful transport entry covers WebSocket and WebTransport framing, not QUIC |
+| L04-053 locale paths | path fuzzing does not isolate a locale influenced path |
+| L04-041 job serialisation | request binding is not a queued payload |
+| L07-046 analytics join | cross account trust is about roles, not pseudonym rejoin |
+| L15-042 forensic readiness | the purple loop asks whether a detection was tested, not whether state can be captured |
+
+Six demotions out of forty two is a 14 percent error rate in my own grading, on a batch written while
+explicitly trying to be strict. That is worth stating plainly: the temptation to reach for the nearest
+entry with the right noun is constant, and only the sample check catches it.
 
 ---
 

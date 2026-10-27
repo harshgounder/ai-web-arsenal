@@ -250,6 +250,35 @@
    "agency": "A2",
    "stage": "L09",
    "status": "ESTABLISHED"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d23-purple-loop",
+   "name": "Purple team validation and detection measurement",
+   "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+   "role": "Whether a detection was ever tested against a real technique rather than assumed, and whether anyone measures the rate over time. An untested rule is a document.",
+   "preconditions": [
+    "the organisation has detections and a way to generate activity"
+   ],
+   "oracle": [
+    "a detection that never fired in a test, recorded as never fired rather than assumed working",
+    "the same technique run twice with the measured detection rate reported, not a pass or fail",
+    "east west and host telemetry coverage listed per technique, with the gaps named"
+   ]
   }
  ],
  "tree": {

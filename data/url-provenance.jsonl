@@ -16,6 +16,7 @@
 {"url": "https://csrc.nist.gov/pubs/sp/800/115/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist115"]}
 {"url": "https://csrc.nist.gov/pubs/sp/800/53/r5/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d38-shared-account", "d38-privileged-approval"]}
 {"url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-data-at-rest"]}
+{"url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-human-oversight", "d23-purple-loop", "d24-legal-process", "d24-signed-documents", "d24-source-rights", "d38-credential-lifecycle", "d38-developer-loop"]}
 {"url": "https://csrc.nist.gov/pubs/sp/800/92/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-report-anatomy", "d24-scope-statement", "d24-proof-minimum", "d24-evidence-redaction", "d24-evidence-record"]}
 {"url": "https://curl.se/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-curl", "d09-curl", "d10-curl", "d13-curl", "d14-curl", "d29-curl"]}
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
@@ -28,6 +29,7 @@
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-storage-lifecycle"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-streaming-trust"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-gpu-surface"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-stateful-transports"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-messaging-surface", "d08-webview-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-render-tree-exfil"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-sandbox-matrix"]}
@@ -255,7 +257,7 @@
 {"url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-device-code"]}
 {"url": "https://mas.owasp.org/MASTG/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-mastg"]}
 {"url": "https://mas.owasp.org/MASVS/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-masvs"]}
-{"url": "https://modelcontextprotocol.io/specification", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d20-spec", "d28-spec"]}
+{"url": "https://modelcontextprotocol.io/specification", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-resolver-boundary", "d11-protobuf-semantics", "d19-model-supply", "d20-spec", "d20-mcp-trust-boundary", "d28-spec"]}
 {"url": "https://nmap.org/book/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-nmap", "d03-nmap", "d29-nmap"]}
 {"url": "https://openid.net/specs/openid-connect-core-1_0.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-oidc-core"]}
 {"url": "https://opensearch.org/docs/latest/security/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-search-index"]}

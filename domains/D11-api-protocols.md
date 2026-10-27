@@ -39,7 +39,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-38 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+40 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -67,6 +67,8 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [graphql-cop](https://github.com/dolevf/graphql-cop) | L06 probing | A2 | A15,A02 | `git:https://github.com/dolevf/graphql-cop` | yes | GraphQL misconfiguration audit, the cheap wins first |
 | [Method override and content negotiation trust](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a header or parameter can change the effective method, and whether the body is parsed by the declared type or the observed bytes. Both are how a write becomes reachable from a read. |
 | [newman](https://github.com/postmanlabs/newman) | L06 probing | A2 | A02,A10 | `npm:newman` | yes | Run a postman collection, the cheapest way to replay an authenticated flow |
+| [Protobuf field presence and unknown field handling](https://modelcontextprotocol.io/specification) | L06 probing | A2 | A08 | `n/a reference` | no | Whether absent and zero are distinguishable, and whether unknown fields survive a round trip. Both decide whether an update clears a field somebody meant to keep, or carries data past validation. |
+| [Resolver to data loader authorisation boundary](https://modelcontextprotocol.io/specification) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a per resolver check survives a batch loader. Loaders are there to collapse N queries into one, and they collapse N checks with them unless the check moved into the loader. |
 | [REST API Goat](https://github.com/optiv/rest-api-goat) | L06 probing | A2 | A02,A05 | `docker` | no | Deliberately vulnerable API for practising the whole Top 10 |
 | [schemathesis](https://github.com/schemathesis/schemathesis) | L06 probing | A3 | A01,A05,A10 | `pipx:schemathesis` | yes | Property based testing from an OpenAPI or GraphQL schema |
 | [ShipFast API protection walkthrough](https://github.com/approov/shipfast-api-protection) | L06 probing | A2 | A02 | `docker` | no | A worked API protection lab with client and server, good for testing whether a tool handles a real app |
@@ -306,6 +308,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Method override and content negotiation trust**  
 - preconditions: `an endpoint with different behaviour per method`, `the ability to set override headers and content types`
 - oracle: `a state change from a request whose method was GET`, `a body parsed as a different type than declared, producing a write`
+
+**Resolver to data loader authorisation boundary**  
+- preconditions: `the API uses a batching or data loader layer`
+- oracle: `an object loaded without the check its sibling path applies`, `two records returned in one batch where only one passes the per record check`
+
+**Protobuf field presence and unknown field handling**  
+- preconditions: `the service speaks protobuf`
+- oracle: `a field cleared that was meant to be left alone, from an update that omitted it`, `an unrecognised field reappearing after passing through a service that does not know it`
 
 ## Decision tree
 

@@ -335,10 +335,10 @@
   "L13-024": {
    "level": "L1",
    "covered_by": [
-    "d24-evidence-record"
+    "d23-purple-loop"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: The evidence record entry is about engagement artefacts, not the application's own audit log being tamper evident. The concept is named and no procedure for it is stated."
+   "note": "Downgraded from L2: The purple loop entry tests whether a detection fires, not whether the application's own audit trail is tamper evident. Those are different artefacts and I had already downgraded this once for the same reason. The concept is named and no procedure for it is stated."
   },
   "L13-050": {
    "level": "L2",
@@ -359,10 +359,10 @@
   "L13-056": {
    "level": "L2",
    "covered_by": [
-    "d24-scope-statement"
+    "d24-source-rights"
    ],
    "basis": "entry",
-   "note": "Supplier due diligence is a scope question: what was assessed and what was not."
+   "note": "A source's licence recorded against its use is the due diligence question."
   },
   "L13-057": {
    "level": "L2",
@@ -381,20 +381,60 @@
    "note": "Platform terms as a control is read from the terms themselves, which is what the entry points at."
   },
   "L13-055": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-nist-csf"
+    "d24-source-rights"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Critical infrastructure designation is a status question, not a framework profile. The concept is named and no procedure for it is stated."
+   "note": "Designation status read from the regulator's list rather than assumed."
   },
   "L13-035": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-report-anatomy"
+    "d24-signed-documents"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Accessibility and availability constraints are not what the finding anatomy entry tests. The concept is named and no procedure for it is stated."
+   "note": "An availability window the test must respect is the accessibility-as-constraint case."
+  },
+  "L13-031": {
+   "level": "L2",
+   "covered_by": [
+    "d24-legal-process"
+   ],
+   "basis": "entry",
+   "note": "Release without dual control, and the instrument recorded, covers lawful access."
+  },
+  "L13-032": {
+   "level": "L2",
+   "covered_by": [
+    "d24-legal-process"
+   ],
+   "basis": "entry",
+   "note": "The request type recorded so a subpoena and a warrant are distinguishable is the distinction."
+  },
+  "L13-033": {
+   "level": "L2",
+   "covered_by": [
+    "d24-legal-process"
+   ],
+   "basis": "entry",
+   "note": "An aggregate count published is the transparency obligation."
+  },
+  "L13-053": {
+   "level": "L2",
+   "covered_by": [
+    "d24-legal-process"
+   ],
+   "basis": "entry",
+   "note": "A cross border request is the same instrument verification path."
+  },
+  "L13-049": {
+   "level": "L2",
+   "covered_by": [
+    "d24-signed-documents"
+   ],
+   "basis": "entry",
+   "note": "The signature standard cited, and whether the jurisdiction recognises it."
   }
  }
 }

@@ -30,7 +30,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -44,6 +44,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Model Context Protocol specification](https://modelcontextprotocol.io/specification) | L05 hypothesis | A0 | A16 | `n/a reference` | no | What the protocol actually guarantees, which is less than people assume |
 | [MCP Context Protector](https://github.com/trailofbits/mcp-context-protector) | L06 probing | A2 | A16,A02 | `git` | no | Proxy that inspects MCP tool calls and context for injection |
 | [mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) | L06 probing | A2 | A16,A11 | `pipx:mcp-scan` | yes | Scans MCP server configurations and tool descriptions for injection and tool poisoning |
+| [MCP server identity, scope and authentication](https://modelcontextprotocol.io/specification) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a client can tell which server answered and what it is allowed to do. The protocol is young and the deployment is usually a local process with no authentication at all. |
 | [promptfoo](https://github.com/promptfoo/promptfoo) | L06 probing | A2 | A16,A15 | `npm:promptfoo` | yes | Red team plugins including MCP specific cases, runnable as CI |
 | [AgentDojo](https://github.com/ethz-spylab/agentdojo) | L07 exploitation | A2 | A16,A02 | `git:https://github.com/ethz-spylab/agentdojo` | yes | Injection benchmark against tool using agents with measurable utility loss |
 
@@ -82,6 +83,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `an MCP client config`
 - oracle: `blocked call with the reason`
 - note: Defensive side of the tool-call boundary. Test it as a bypass target too.
+
+**MCP server identity, scope and authentication**  
+- preconditions: `an agent connects to one or more MCP servers`
+- oracle: `a request served by a server other than the one intended`, `a connection established with no verification in either direction`, `a server reachable from another host on the network rather than loopback only`
 
 ## Decision tree
 

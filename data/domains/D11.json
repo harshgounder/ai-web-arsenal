@@ -1375,6 +1375,62 @@
     "a state change from a request whose method was GET",
     "a body parsed as a different type than declared, producing a write"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d11-resolver-boundary",
+   "name": "Resolver to data loader authorisation boundary",
+   "url": "https://modelcontextprotocol.io/specification",
+   "role": "Whether a per resolver check survives a batch loader. Loaders are there to collapse N queries into one, and they collapse N checks with them unless the check moved into the loader.",
+   "preconditions": [
+    "the API uses a batching or data loader layer"
+   ],
+   "oracle": [
+    "an object loaded without the check its sibling path applies",
+    "two records returned in one batch where only one passes the per record check"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d11-protobuf-semantics",
+   "name": "Protobuf field presence and unknown field handling",
+   "url": "https://modelcontextprotocol.io/specification",
+   "role": "Whether absent and zero are distinguishable, and whether unknown fields survive a round trip. Both decide whether an update clears a field somebody meant to keep, or carries data past validation.",
+   "preconditions": [
+    "the service speaks protobuf"
+   ],
+   "oracle": [
+    "a field cleared that was meant to be left alone, from an update that omitted it",
+    "an unrecognised field reappearing after passing through a service that does not know it"
+   ]
   }
  ],
  "tree": {

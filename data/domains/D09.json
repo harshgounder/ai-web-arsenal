@@ -401,6 +401,35 @@
     "the value the origin acts on, matched to one of the two sent",
     "a different value acted on by the edge, shown by a behaviour change before the origin"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d09-stateful-transports",
+   "name": "Stateful transport framing: WebSocket and WebTransport",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+   "role": "Framing rules and per stream authorisation on transports that stay open. A socket is not subject to same origin once established, and a multiplexed stream that shares authorisation is a stream that leaks it.",
+   "preconditions": [
+    "the application exposes a WebSocket or WebTransport endpoint"
+   ],
+   "oracle": [
+    "a frame the specification forbids accepted, such as an oversized control frame or an unmasked client frame",
+    "a cross origin socket established without an origin check",
+    "state in one stream changed by closing another, which is shared authorisation"
+   ]
   }
  ],
  "tree": {

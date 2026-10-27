@@ -355,6 +355,14 @@
    ],
    "basis": "entry",
    "note": "Code executing despite the page policy is the interaction test."
+  },
+  "L05-052": {
+   "level": "L2",
+   "covered_by": [
+    "d08-webview-surface"
+   ],
+   "basis": "entry",
+   "note": "A native app rendered as web is the same bridge and navigation question."
   }
  }
 }

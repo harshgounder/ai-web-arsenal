@@ -30,7 +30,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+14 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -48,6 +48,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Byte level control over the request, which is the only way to send a malformed frame |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15,A06 | `aur:nuclei-bin` | yes | Template checks for known desync misconfigurations and proxy behaviour |
 | [smuggler](https://github.com/defparam/smuggler) | L06 probing | A2 | A06,A04 | `n/a reference` | no | Desync detection across CL.TE, TE.CL, TE.TE and TE.TE obfuscation variants |
+| [Stateful transport framing: WebSocket and WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) | L06 probing | A2 | A08 | `n/a reference` | no | Framing rules and per stream authorisation on transports that stay open. A socket is not subject to same origin once established, and a multiplexed stream that shares authorisation is a stream that leaks it. |
 
 ### Details that matter
 
@@ -92,6 +93,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Header precedence per hop**  
 - preconditions: `a header the origin reflects or acts on`, `the ability to send duplicates`
 - oracle: `the value the origin acts on, matched to one of the two sent`, `a different value acted on by the edge, shown by a behaviour change before the origin`
+
+**Stateful transport framing: WebSocket and WebTransport**  
+- preconditions: `the application exposes a WebSocket or WebTransport endpoint`
+- oracle: `a frame the specification forbids accepted, such as an oversized control frame or an unmasked client frame`, `a cross origin socket established without an origin check`, `state in one stream changed by closing another, which is shared authorisation`
 
 ## Decision tree
 
