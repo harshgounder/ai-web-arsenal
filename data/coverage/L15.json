@@ -237,12 +237,12 @@
    "note": "Downgraded from L2: Tamper resistance of an agent is not the renderer sandbox audit. The concept is named and no procedure for it is stated."
   },
   "L15-015": {
-   "level": "L2",
+   "level": "L1",
    "covered_by": [
     "d22-body-limit-map"
    ],
    "basis": "entry",
-   "note": "Behavioural modelling is defeated by shaping timing, and the matrix shows where it is absent."
+   "note": "Downgraded from L2: The body and content type limit entry is about inspection stops, not behavioural modelling of pointer and keystroke timing. The concept is named and no procedure for it is stated."
   },
   "L15-016": {
    "level": "L2",
@@ -437,12 +437,12 @@
    "note": "Break glass bypassing its own controls is the approval trail question."
   },
   "L15-059": {
-   "level": "L2",
+   "level": "L1",
    "covered_by": [
     "d22-inspection-matrix"
    ],
    "basis": "entry",
-   "note": "Measuring whether a control catches anything is what the matrix is."
+   "note": "Downgraded from L2: The inspection matrix measures what a control reads once, not whether it catches anything over time. The concept is named and no procedure for it is stated."
   },
   "L15-063": {
    "level": "L2",

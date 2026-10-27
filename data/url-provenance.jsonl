@@ -3,7 +3,9 @@
 {"url": "https://aws.amazon.com/cli/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-awscli"]}
 {"url": "https://book.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-hacktricks", "d07-hacktricks", "d08-hacktricks-csti", "d09-hacktricks", "d12-hacktricks", "d13-hacktricks", "d14-hacktricks", "d15-hacktricks", "d18-hacktricks", "d22-hacktricks", "d23-hacktricks"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-body-limit-map"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-orm-loading", "d07-autoload-path"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-inspection-matrix"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-identifier-source"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-db-privilege"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-cheatsheet"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-open-redirect-helper"]}
@@ -14,7 +16,7 @@
 {"url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-data-at-rest"]}
 {"url": "https://curl.se/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-curl", "d09-curl", "d10-curl", "d13-curl", "d14-curl", "d29-curl"]}
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
-{"url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-extension-scope"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-extension-scope", "d08-extension-page-interaction"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-kill-switch"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-agent-authority"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-timer-resolution"]}
@@ -22,7 +24,7 @@
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-storage-lifecycle"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-streaming-trust"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-gpu-surface"]}
-{"url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-messaging-surface"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-messaging-surface", "d08-webview-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-render-tree-exfil"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-sandbox-matrix"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-parser-surface"]}
@@ -30,7 +32,7 @@
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-header-posture"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-method-override"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-collector-behaviour"]}
-{"url": "https://developer.mozilla.org/en-US/docs/WebAssembly", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-wasm-pipeline"]}
+{"url": "https://developer.mozilla.org/en-US/docs/WebAssembly", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-wasm-authority", "d37-wasm-pipeline"]}
 {"url": "https://docs.astral.sh/uv/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-uv"]}
 {"url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d14-imds", "d17-imds"]}
 {"url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-cloud-audit"]}
@@ -295,6 +297,8 @@
 {"url": "https://www.cisecurity.org/cis-benchmarks", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-cis"]}
 {"url": "https://www.cve.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cve"]}
 {"url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-epdp-guidance"]}
+{"url": "https://www.electronjs.org/docs/latest/tutorial/fuses", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-fuse-inspection"]}
+{"url": "https://www.electronjs.org/docs/latest/tutorial/security", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-electron-surface"]}
 {"url": "https://www.first.org/cvss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvss"]}
 {"url": "https://www.first.org/epss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-epss"]}
 {"url": "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d38-disclosure-program"]}

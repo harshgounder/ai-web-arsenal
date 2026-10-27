@@ -1001,6 +1001,93 @@
     "an encrypted field recoverable from a search index or a log",
     "a record present in a region it was not intended for"
    ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-orm-loading",
+   "name": "Lazy and eager loading authorisation parity",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html",
+   "role": "Whether the check applied to a collection is applied when a relation is loaded on demand. Eager paths get reviewed; lazy ones usually do not.",
+   "preconditions": [
+    "the ORM exposes relations lazily and eagerly",
+    "two principals with different rights exist"
+   ],
+   "oracle": [
+    "an unfiltered relation loaded on demand where the eager path filters",
+    "a record reachable through a lazy path that the collection query excludes"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-autoload-path",
+   "name": "Autoload and path resolution influence",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html",
+   "role": "Whether class or file resolution follows a name that input can reach, which turns a name into an include.",
+   "preconditions": [
+    "the framework autoloads by name",
+    "a parameter reaches a resolved name"
+   ],
+   "oracle": [
+    "a file included through a resolved name that input influenced",
+    "an unintended class instantiated from a resolved string"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-identifier-source",
+   "name": "Identifier generation source and predictability",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html",
+   "role": "Whether identifiers come from a CSPRNG, a counter or a clock. Sequential ids make enumeration trivial; time based ones make the next value a guess.",
+   "preconditions": [
+    "the application issues identifiers to clients"
+   ],
+   "oracle": [
+    "adjacent identifiers resolving to real records, which is a counter",
+    "an identifier whose high bits track time, shown by sampling across a delay",
+    "the generator located in code or inferred from the distribution"
+   ]
   }
  ],
  "tree": {

@@ -75,12 +75,12 @@
    "note": "Gadget chain generation is the test of whether the deserialiser restricts accepted classes."
   },
   "L04-019": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d15-ysoserial-net"
+    "d07-binder-audit"
    ],
    "basis": "entry",
-   "note": "ViewState deserialisation can fire before validation. The ordering question is implied by the gadget, not tested as a factor."
+   "note": "Constructor side effects during parse are visible as an effect before any check, which the binding audit observes."
   },
   "L04-020": {
    "level": "L2",
@@ -325,6 +325,38 @@
    ],
    "basis": "entry",
    "note": "A response produced before the guard runs is the short circuit case."
+  },
+  "L04-013": {
+   "level": "L2",
+   "covered_by": [
+    "d07-orm-loading"
+   ],
+   "basis": "entry",
+   "note": "An unfiltered relation loaded on demand where the eager path filters."
+  },
+  "L04-046": {
+   "level": "L2",
+   "covered_by": [
+    "d07-autoload-path"
+   ],
+   "basis": "entry",
+   "note": "A file included through a resolved name that input influenced."
+  },
+  "L04-057": {
+   "level": "L2",
+   "covered_by": [
+    "d07-identifier-source"
+   ],
+   "basis": "entry",
+   "note": "Adjacent identifiers resolving to real records, or time tracking in the high bits."
+  },
+  "L04-016": {
+   "level": "L2",
+   "covered_by": [
+    "d07-raw-fragment"
+   ],
+   "basis": "entry",
+   "note": "Safe string marking is the escaping layer; the raw fragment audit is where the marking is bypassed."
   }
  }
 }

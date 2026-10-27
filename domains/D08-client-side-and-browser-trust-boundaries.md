@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+24 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -40,10 +40,15 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [Corsy](https://github.com/s0md3v/Corsy) | L06 probing | A2 | A15,A05 | `git` | no | CORS misconfiguration scanner by origin reflection class |
 | [CSP Evaluator](https://github.com/google/csp-evaluator) | L06 probing | A3 | A15 | `n/a reference` | no | Scores a CSP and names the bypass for each weakness |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
+| [Desktop shell integration and packaged app integrity](https://www.electronjs.org/docs/latest/tutorial/security) | L06 probing | A2 | A08 | `n/a reference` | no | Whether renderer code has filesystem or process access, what the preload bridge exposes, and whether the packaged application bytes are verified at load. |
+| [Extension and page policy interaction](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) | L06 probing | A2 | A08 | `n/a reference` | no | Whether injected extension code bypasses the page policy, whether the page can detect it, and which messages cross the boundary in each direction. |
+| [Electron fuse and update channel state](https://www.electronjs.org/docs/latest/tutorial/fuses) | L06 probing | A2 | A08 | `n/a reference` | no | Which hardening switches a shipped binary left in the permissive position, read from the binary rather than assumed from the source. |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `n/a reference` | no | Payload corpus per client side context |
 | [PPScan](https://github.com/msrkp/PPScan) | L06 probing | A2 | A05 | `n/a reference` | no | Prototype pollution scanner for client side sinks |
 | [rea inspect_web_event_listeners](https://rea.tools) | L06 probing | A3 | A01 | `mcp:rea` | yes | Every listener on a selector with source ownership and exact script text |
 | [rea capture_browser_scenario](https://rea.tools) | L06 probing | A3 | A08,A05 | `mcp:rea` | yes | Scripted browser flow with network, storage and DOM captured deterministically |
+| [WebAssembly import surface and shared memory](https://developer.mozilla.org/en-US/docs/WebAssembly) | L06 probing | A2 | A08 | `n/a reference` | no | Which host functions a module may call, which is the module's entire authority, and whether shared memory lets one worker observe another's data. |
+| [Webview bridge, file access and navigation](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) | L06 probing | A2 | A08 | `n/a reference` | no | What a native app injects into its webview, and what the view may reach. A bridge method, a file provider and an unguarded navigation are three different ways out of the page. |
 | [Extension privilege and injection scope](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) | L10 reporting | A0 | A08 | `n/a reference` | no | Which pages an extension injects into, which of its files any page can load, and how wide its permissions are. |
 | [Security header posture across response variants](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) | L10 reporting | A0 | A08 | `n/a reference` | no | Headers are set per response, and error pages, API routes and static assets often miss what the login page has. The test is the whole surface, not one page. |
 | [Post message surface and target origin](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) | L10 reporting | A0 | A08 | `n/a reference` | no | Who can send, who validates, and whether the sender used a wildcard target that leaks to any embedder. |
@@ -129,6 +134,26 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Render tree side channels**  
 - preconditions: `attacker controlled CSS or markup reaches the page`
 - oracle: `a request triggered by a selector matching a secret value`, `a load event correlated with a guessed character`
+
+**Webview bridge, file access and navigation**  
+- preconditions: `an Android or iOS app embeds a webview`, `you can observe or influence the loaded content`
+- oracle: `a native method callable from page script, with the injected object named`, `a local file or content provider URI readable from page script`, `navigation to an external origin that the host did not intend`
+
+**Desktop shell integration and packaged app integrity**  
+- preconditions: `a desktop app built on Electron or an equivalent shell`
+- oracle: `a file read from renderer script, which means node integration or a permissive bridge`, `a bridge method reachable with attacker chosen arguments`, `modified application code accepted at load, which means asar integrity is off`
+
+**Electron fuse and update channel state**  
+- preconditions: `a packaged Electron executable is in scope`
+- oracle: `the fuse bytes read directly from the binary, per switch`, `the inspector or run-as-node enablement matching those bytes rather than the build config`
+
+**WebAssembly import surface and shared memory**  
+- preconditions: `a page can load the module or you can read it`
+- oracle: `the import list of the loaded module, enumerated rather than assumed`, `a value written by one worker read by another through shared memory`
+
+**Extension and page policy interaction**  
+- preconditions: `an extension runs alongside the page in scope`
+- oracle: `code executing despite a page policy that would block the same code inline`, `a message accepted across the boundary that the page or extension should reject`
 
 ## Decision tree
 

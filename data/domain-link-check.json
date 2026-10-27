@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 323,
+ "unique_urls": 327,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -50,11 +50,26 @@
     "d22-body-limit-map"
    ]
   },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d07-orm-loading",
+    "d07-autoload-path"
+   ]
+  },
   "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d22-inspection-matrix"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d07-identifier-source"
    ]
   },
   "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html": {
@@ -2259,6 +2274,20 @@
    "http": 200,
    "entries": [
     "d24-epdp-guidance"
+   ]
+  },
+  "https://www.electronjs.org/docs/latest/tutorial/fuses": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-fuse-inspection"
+   ]
+  },
+  "https://www.electronjs.org/docs/latest/tutorial/security": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d08-electron-surface"
    ]
   },
   "https://www.first.org/cvss/": {

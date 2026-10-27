@@ -31,23 +31,26 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-31 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+34 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [Atlas W04: datastore writes](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A01,A04 | `n/a data` | yes | Technique pointer. W04 is queued and this says so. |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A0 | A01,A05 | `n/a reference` | no | Per class technique reference with payload context |
+| [Autoload and path resolution influence](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether class or file resolution follows a name that input can reach, which turns a name into an include. |
 | [Binding and middleware order audit](https://owasp.org/www-project-web-security-testing-guide/) | L06 probing | A2 | A08 | `n/a reference` | no | Which fields the framework writes from a request, and in what order the stack runs. Mass assignment and a guard that runs after the handler are both framework behaviour, not application code. |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
 | [Database principal privilege audit](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | What the application's database user can do beyond reading its own tables. File read, schema creation and cross database access turn an injection into a host problem. |
 | [dtd-finder](https://github.com/GoSecure/dtd-finder) | L06 probing | A2 | A01,A06 | `git` | no | Finds DTD files reachable on the target, which turns blind XXE into file read |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A01 | `docker` | no | Classic injection modules |
 | [ffuf](https://github.com/ffuf/ffuf) | L06 probing | A2 | A01 | `aur:ffuf` | yes | Fuzz the injection position to find a working context |
+| [Identifier generation source and predictability](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether identifiers come from a CSPRNG, a counter or a clock. Sequential ids make enumeration trivial; time based ones make the next value a guess. |
 | [Transaction isolation and referential integrity](https://www.postgresql.org/docs/current/transaction-iso.html) | L06 probing | A2 | A08 | `n/a reference` | no | Which anomalies the store permits, and whether integrity is enforced or assumed. A read committed store allows lost updates unless the code versions rows. |
 | [Migration and schema evolution safety](https://www.postgresql.org/docs/current/sql-altertable.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a rollback discards data written since the migration, and whether an old client can write a shape the new schema mishandles. |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A01,A15 | `aur:nuclei-bin` | yes | Known CVE and misconfiguration injection templates |
 | [Redirect and link helper target handling](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether URL helpers accept absolute targets. A helper that takes a user supplied next value is an open redirect with a friendly name. |
+| [Lazy and eager loading authorisation parity](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether the check applied to a collection is applied when a relation is loaded on demand. Eager paths get reviewed; lazy ones usually do not. |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `git:https://github.com/swisskyrepo/PayloadsAllTheThings` | no | The payload corpus, organised by class and context |
 | [PortSwigger Web Security Academy labs](https://portswigger.net/web-security/all-labs) | L06 probing | A2 | A01 | `n/a web` | no | The best free lab set per class, each with an intended answer |
 | [Queue producer trust and replay](https://kafka.apache.org/documentation/#security) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a consumer validates what it consumes, and whether a replayed message produces a second effect. A consumer that trusts its producer trusts anyone who can publish. |
@@ -224,6 +227,18 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Encryption at rest and key separability**  
 - preconditions: `data is stored with an at-rest encryption claim`
 - oracle: `plaintext recoverable through a data path rather than a key management path`, `an encrypted field recoverable from a search index or a log`, `a record present in a region it was not intended for`
+
+**Lazy and eager loading authorisation parity**  
+- preconditions: `the ORM exposes relations lazily and eagerly`, `two principals with different rights exist`
+- oracle: `an unfiltered relation loaded on demand where the eager path filters`, `a record reachable through a lazy path that the collection query excludes`
+
+**Autoload and path resolution influence**  
+- preconditions: `the framework autoloads by name`, `a parameter reaches a resolved name`
+- oracle: `a file included through a resolved name that input influenced`, `an unintended class instantiated from a resolved string`
+
+**Identifier generation source and predictability**  
+- preconditions: `the application issues identifiers to clients`
+- oracle: `adjacent identifiers resolving to real records, which is a counter`, `an identifier whose high bits track time, shown by sampling across a delay`, `the generator located in code or inferred from the distribution`
 
 ## Decision tree
 

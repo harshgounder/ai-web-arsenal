@@ -13,12 +13,12 @@
    "note": "Origin handling is the subject of the CORS scanner, which is one consumer of the origin definition rather than a test of it."
   },
   "L05-002": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d08-corsy"
+    "d08-header-posture"
    ],
    "basis": "entry",
-   "note": "Site versus origin appears only implicitly in how the scanner classifies reflection."
+   "note": "Site versus origin shows in which responses carry which protections across subdomains, which the header scan reveals per variant."
   },
   "L05-004": {
    "level": "L2",
@@ -37,12 +37,12 @@
    "note": "Scoring a policy and naming the bypass for each weakness is a procedure with an oracle for whether inline execution survives."
   },
   "L05-006": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d08-trusted-types"
+    "d08-extension-page-interaction"
    ],
    "basis": "entry",
-   "note": "The reference describes enforcement. Sink coverage is not enumerated anywhere as a test."
+   "note": "Policy bypass by injected code is the enforcement point question, observed directly."
   },
   "L05-007": {
    "level": "L1",
@@ -134,16 +134,20 @@
    "note": "Content script scope against pages it did not intend."
   },
   "L05-041": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Webview bridges are unaddressed. D21 covers mobile app surfaces and no entry states a bridge test."
+   "level": "L2",
+   "covered_by": [
+    "d08-webview-surface"
+   ],
+   "basis": "entry",
+   "note": "A native method callable from page script, with the injected object named."
   },
   "L05-045": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Desktop shell node integration is unaddressed in operational form."
+   "level": "L2",
+   "covered_by": [
+    "d08-electron-surface"
+   ],
+   "basis": "entry",
+   "note": "A file read from renderer script is node integration present."
   },
   "L05-049": {
    "level": "L0",
@@ -152,12 +156,12 @@
    "note": "Electron fuse inspection is a REA operation that exists as a tool and has no entry stating procedure and oracle here."
   },
   "L05-053": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d31-wasm"
+    "d08-wasm-authority"
    ],
    "basis": "entry",
-   "note": "The wasm inspector reports the import list, which is the factor's data. It does not test what a module may reach at runtime."
+   "note": "The import list of the loaded module is the authority, enumerated."
   },
   "L05-061": {
    "level": "L1",
@@ -287,6 +291,70 @@
    ],
    "basis": "entry",
    "note": "Performance timing is the other oracle channel in the same family."
+  },
+  "L05-019": {
+   "level": "L2",
+   "covered_by": [
+    "d08-messaging-surface"
+   ],
+   "basis": "entry",
+   "note": "A cross origin write without a preflight is one of the messages the surface test sends."
+  },
+  "L05-039": {
+   "level": "L2",
+   "covered_by": [
+    "d08-extension-page-interaction"
+   ],
+   "basis": "entry",
+   "note": "A message accepted across the boundary that should be rejected is the validation test."
+  },
+  "L05-042": {
+   "level": "L2",
+   "covered_by": [
+    "d08-webview-surface"
+   ],
+   "basis": "entry",
+   "note": "A local file or content provider URI readable from page script."
+  },
+  "L05-043": {
+   "level": "L2",
+   "covered_by": [
+    "d08-webview-surface"
+   ],
+   "basis": "entry",
+   "note": "Navigation to an external origin the host did not intend."
+  },
+  "L05-046": {
+   "level": "L2",
+   "covered_by": [
+    "d08-electron-surface"
+   ],
+   "basis": "entry",
+   "note": "A bridge method reachable with attacker chosen arguments is the preload validation question."
+  },
+  "L05-048": {
+   "level": "L2",
+   "covered_by": [
+    "d08-fuse-inspection"
+   ],
+   "basis": "entry",
+   "note": "The update channel state is read from the binary alongside the fuses rather than assumed from build config."
+  },
+  "L05-050": {
+   "level": "L2",
+   "covered_by": [
+    "d08-electron-surface"
+   ],
+   "basis": "entry",
+   "note": "Modified application code accepted at load is asar integrity off."
+  },
+  "L05-055": {
+   "level": "L2",
+   "covered_by": [
+    "d08-extension-page-interaction"
+   ],
+   "basis": "entry",
+   "note": "Code executing despite the page policy is the interaction test."
   }
  }
 }
