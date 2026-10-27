@@ -788,6 +788,32 @@ closed, because the alternative was a number that lied.
 
 ---
 
+## 6w. The last REA gap closed to partial, and the two times I called it blocked
+
+Signing recovery was the only open item left after the audit, and I had told the user twice that it needed
+a decision rather than effort. Both times that was wrong. It is heuristic, which is not the same as
+impossible: a synthetic bundle with a known signer is a real fixture.
+
+`rea-ops/signing-recover.py` ranks signature construction sites by independent signal groups and shows the
+evidence for each. It never claims a recovered algorithm, and the method string, the output and a test all
+say so.
+
+The fixture is a bundle with a real hmac signer between two decoys. **My first version failed it.** Cluster
+merging swallowed the whole bundle into one region, so an etag helper 40 characters upstream sank the real
+signer below it. The fix was two rules about locality: anchor on the crypto call rather than on every hit,
+and let a decoy vote only when it consumes that call. The signer now scores 10 and ranks first; the etag
+scores 4 and is labelled not a signature.
+
+Three outcomes are kept distinct on purpose, because conflating them is how a tool lies: no crypto found is
+not proof the signing is elsewhere, a file too small to be a bundle is refused rather than reported empty,
+and a decoy is named rather than silently dropped.
+
+REA now stands at 6 built, 4 partial, 0 open. The partials are honest about what they do not do: Flutter
+identifies without deserialising, Hermes reads a header without walking tables, service worker parses a
+capture without a transport, signing ranks candidates without recovering an algorithm.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.
