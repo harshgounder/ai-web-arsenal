@@ -166,6 +166,16 @@ def main():
         print(f"{len(rows)} candidate variant(s) checked, all UNVERIFIED and structurally complete")
         return 0
 
+    if args.pattern:
+        # A filtered run must never overwrite the canonical dataset. An earlier version did exactly that:
+        # --pattern generated one pattern's variants and then wrote them over all 2,399, and rewrote the
+        # summary to match. Print instead, and say why.
+        for r in rows:
+            print(json.dumps(r, ensure_ascii=False))
+        print(f"\n{len(rows)} candidate(s) for {args.pattern}, printed rather than written. The canonical "
+              f"dataset at {OUT.relative_to(ROOT)} is unchanged.", file=sys.stderr)
+        return 0
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
 

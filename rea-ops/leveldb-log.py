@@ -78,6 +78,17 @@ def read_records(raw):
             pos = block_end
             continue
         payload = raw[pos + HEADER: pos + HEADER + length]
+        # The checksum covers the type byte plus the payload, and is masked before being stored. This file
+        # defined crc32c() and unmask() and then never called them, which meant a corrupted payload was
+        # reported as an intact record. A forensic reader that cannot tell corruption from data is worse
+        # than no reader, so this rejects rather than warns.
+        want = unmask(checksum) if checksum else 0
+        got = crc32c(bytes([rtype]) + payload)
+        if checksum and want != got:
+            yield (pos, "corrupt", f"checksum mismatch: stored 0x{want:08x}, computed 0x{got:08x}"
+                                   .encode())
+            pos += HEADER + length
+            continue
         if rtype == 0:  # zero fill or padding
             pos = block_end
             continue
@@ -85,11 +96,21 @@ def read_records(raw):
             yield (pos, FULL, payload)
             pending = b""
         elif rtype == FIRST:
+            if pending:
+                yield (pending_at, "corrupt", b"first fragment overwrote an unfinished record")
             pending = payload
             pending_at = pos
         elif rtype == MIDDLE:
+            if not pending:
+                yield (pos, "corrupt", b"middle fragment without a preceding first")
+                pos += HEADER + length
+                continue
             pending += payload
         elif rtype == LAST:
+            if not pending:
+                yield (pos, "corrupt", b"last fragment without a preceding first")
+                pos += HEADER + length
+                continue
             yield (pending_at, FULL, pending + payload)
             pending = b""
         else:
@@ -171,9 +192,11 @@ def main():
 
     rows = []
     bad = 0
+    corrupt_reasons = []
     for offset, rtype, payload in read_records(raw):
         if rtype != FULL:
             bad += 1
+            corrupt_reasons.append((offset, payload.decode("utf-8", "replace") if isinstance(payload, bytes) else payload))
             if args.json:
                 print(json.dumps({"offset": offset, "problem": payload.decode(errors="replace")}))
             continue
@@ -201,6 +224,10 @@ def main():
             print(json.dumps({"seq": r["seq"], "op": r["op"],
                               "key": r["key_view"], "value": r["value_view"]}, ensure_ascii=False))
 
+    # A corrupt record is the finding, so the reason goes to stderr rather than being counted silently.
+    # Counting without saying why is how a forensic tool hides the thing it was built to find.
+    for off, why in corrupt_reasons:
+        print(f"corrupt at 0x{off:x}: {why}", file=sys.stderr)
     print(f"records {len(rows)} from {p.name}, unreadable {bad}", file=sys.stderr)
     if not rows and not bad:
         print("no records found: this may be a sorted table (.ldb/.sst) rather than a log, which this "

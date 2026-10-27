@@ -41,7 +41,7 @@ The ceiling is high, and that is the most important finding in this document. Al
 Read it by column, not by row.
 
 - **Class I is 3 factors.** This is the cheapest coverage in the whole project: no target, no lab, no permission. Write the entry with a procedure and an oracle and it moves. L13 promises the most here, because statute and standards are published and this repo simply has not written them down.
-- **Class II is 550 factors, and it is the real project.** Nearly every lens is dominated by it. It is also where the current zero lives: nothing is observed because no lab exists, and two thirds of the gap can only be closed with one.
+- **Class II is 550 factors, and it is the real project.** Nearly every lens is dominated by it. It is also where the thin range began: the observed count was zero until a lab existed, and two thirds of the gap can only be closed with one.
 - **Class III is 50 factors.** Seventeen of them are organisational. The honest statement is that a public repo cannot answer them, and any collection claiming to has invented an answer.
 
 ## What closing each class takes
@@ -69,7 +69,7 @@ What is not defensible, and will not be written in the README: that this is comp
 
 Observed coverage is 6 of 1000. Every other figure in this repo is an argument; that one is an absence, and it closes only with a lab.
 
-6 factors are observed, from four labs that all ran on 2026-10-27:
+6 factors are observed, from 6 labs whose runs are recorded in data/observations/observations.jsonl:
 
 | lab | what it shows | control |
 |---|---|---|
@@ -80,4 +80,4 @@ Observed coverage is 6 of 1000. Every other figure in this repo is an argument; 
 
 Every record is in `data/observations/observations.jsonl` and replays with `python3 scripts/observe.py --verify`.
 
-The remaining 994 factors are still read and cited. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.
+Of the remaining 994, 391 are covered at L2 or better: a procedure and an oracle exist, and nobody has run them. The other 603 are classified gaps, not coverage, and this document does not claim otherwise. `ESTABLISHED` means cited, never executed, and that distinction stays in the README badge until a lab changes it.

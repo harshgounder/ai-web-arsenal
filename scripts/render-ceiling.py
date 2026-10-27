@@ -26,7 +26,18 @@ LENS_NAMES = {
 }
 
 
+def lab_count():
+    """The number of labs behind the OBSERVED count, read from the ledger rather than typed."""
+    p = ROOT / "data" / "observations" / "observations.jsonl"
+    if not p.exists():
+        return 0
+    labs = {json.loads(l)["lab"] for l in p.read_text(encoding="utf-8").splitlines()
+            if l.strip() and json.loads(l).get("verdict") == "OBSERVED"}
+    return len(labs)
+
+
 def main():
+    lab_count_value = lab_count()
     s = json.loads((GAP / "SUMMARY.json").read_text(encoding="utf-8"))
     rows = [json.loads(l) for l in (GAP / "classification.jsonl").read_text(encoding="utf-8").splitlines()
             if l.strip()]
@@ -93,7 +104,7 @@ def main():
       "the most here, because statute and standards are published and this repo simply has not written "
       "them down.")
     A(f"- **Class II is {c2} factors, and it is the real project.** Nearly every lens is dominated by "
-      "it. It is also where the current zero lives: nothing is observed because no lab exists, and two "
+      "it. It is also where the thin range began: the observed count was zero until a lab existed, and two "
       "thirds of the gap can only be closed with one.")
     A(f"- **Class III is {c3} factors.** Seventeen of them are organisational. The honest statement is "
       "that a public repo cannot answer them, and any collection claiming to has invented an answer.")
@@ -133,7 +144,8 @@ def main():
     A(f"Observed coverage is {observed} of {total}. Every other figure in this repo is an argument; "
       "that one is an absence, and it closes only with a lab.")
     A("")
-    A(f"{observed} factors are observed, from four labs that all ran on 2026-10-27:")
+    A(f"{observed} factors are observed, from {lab_count_value} labs whose runs are recorded in "
+      "data/observations/observations.jsonl:")
     A("")
     A("| lab | what it shows | control |")
     A("|---|---|---|")
@@ -145,7 +157,9 @@ def main():
     A("Every record is in `data/observations/observations.jsonl` and replays with "
       "`python3 scripts/observe.py --verify`.")
     A("")
-    A(f"The remaining {total - observed} factors are still read and cited. `ESTABLISHED` means cited, "
+    A(f"Of the remaining {total - observed}, {covered - observed} are covered at L2 or better: a procedure "
+      f"and an oracle exist, and nobody has run them. The other {total - covered} are classified gaps, not "
+      f"coverage, and this document does not claim otherwise. `ESTABLISHED` means cited, "
       "never executed, and that distinction stays in the README badge until a lab changes it.")
     A("")
 

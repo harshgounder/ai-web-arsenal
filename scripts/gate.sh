@@ -87,5 +87,14 @@ if [ $SKIP -ne 0 ]; then
   echo
   echo "Skipped gates could not run here. That is not the same as passing: it means part of this repo"
   echo "was not checked. The usual cause is a missing companion repo."
+  if [ "$STRICT" = "1" ]; then
+    echo
+    echo "STRICT is set, so a skipped gate is a failure here."
+    exit 2
+  fi
+  echo
+  echo "Exiting 0 because STRICT is not set. A caller that needs completeness must set STRICT=1 or read"
+  echo "the skip count above; the exit status alone does not distinguish a full run from a partial one."
+  exit 0
 fi
 exit 0

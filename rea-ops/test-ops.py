@@ -104,7 +104,11 @@ def make_leveldb_log(path, batches):
             payload += varint(len(k)) + k
             if v is not None:
                 payload += varint(len(v)) + v
-        buf.write(struct.pack("<IHB", mask(crc32c(payload)), len(payload), 1))
+        # LevelDB computes the CRC over the type byte followed by the payload, not over the payload alone.
+        # The fixture used the payload only, which meant the reader could skip checksum verification
+        # entirely and every test still passed. A fixture that encodes the same wrong assumption as the
+        # reader cannot catch the reader being wrong.
+        buf.write(struct.pack("<IHB", mask(crc32c(bytes([1]) + payload)), len(payload), 1))
         buf.write(payload)
     path.write_bytes(buf.getvalue())
 
@@ -621,6 +625,49 @@ def test_signing(tmp):
     check("signing-recover: refuses a file too small to be a bundle", rc == 2 and "too small" in err)
 
 
+def test_leveldb_corrupt(tmp):
+    """A corrupted payload must be rejected, which is the test the wrong fixture made impossible."""
+    import struct
+    POLY = 0x82F63B78
+    table = []
+    for i in range(256):
+        c = i
+        for _ in range(8):
+            c = (c >> 1) ^ POLY if c & 1 else c >> 1
+        table.append(c)
+
+    def crc32c(data, crc=0):
+        crc ^= 0xFFFFFFFF
+        for b in data:
+            crc = table[(crc ^ b) & 0xFF] ^ (crc >> 8)
+        return crc ^ 0xFFFFFFFF
+
+    def mask(c):
+        return ((((c >> 15) | (c << 17)) & 0xFFFFFFFF) + 0xA282EAD8) & 0xFFFFFFFF
+
+    payload = struct.pack("<QI", 1, 1) + b"\x01" + b"\x01k\x01v"
+    good = struct.pack("<IHB", mask(crc32c(bytes([1]) + payload)), len(payload), 1) + payload
+    bad_payload = payload[:-1] + b"X"
+    bad = struct.pack("<IHB", mask(crc32c(bytes([1]) + payload)), len(bad_payload), 1) + bad_payload
+
+    p = tmp / "000004.log"
+    p.write_bytes(bad)
+    rc, out, err = run([str(HERE / "leveldb-log.py"), str(p)])
+    check("leveldb: rejects a corrupted payload", "checksum mismatch" in (out + err), (out + err)[:90])
+
+    p.write_bytes(good)
+    rc, out, err = run([str(HERE / "leveldb-log.py"), str(p)])
+    check("leveldb: accepts the same record when intact",
+          "checksum mismatch" not in (out + err), (out + err)[:90])
+
+    # a LAST with no FIRST
+    lone = struct.pack("<IHB", mask(crc32c(bytes([4]) + payload)), len(payload), 4) + payload
+    p.write_bytes(lone)
+    rc, out, err = run([str(HERE / "leveldb-log.py"), str(p)])
+    check("leveldb: rejects a last fragment with no first",
+          "without a preceding first" in (out + err), (out + err)[:90])
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -638,6 +685,8 @@ def main():
         test_sourcemap(tmp)
         print("hermes.py")
         test_hermes(tmp)
+        print("leveldb corruption")
+        test_leveldb_corrupt(tmp)
         print("flutter-aot.py")
         test_flutter(tmp)
         print("sw-recover.py")
