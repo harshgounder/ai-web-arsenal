@@ -101,6 +101,13 @@ try:
 except Exception:
     print("counter_classes 0")
 try:
+    _adv = json.load(open(R/"data"/"advisories"/"SUMMARY.json"))
+    print(f"advisories_total {_adv['total']}")
+    print(f"advisories_mapped {_adv['mapped']}")
+    print(f"advisories_unmapped {_adv['unmapped']}")
+except Exception:
+    print("advisories_total 0")
+try:
     _d31 = json.load(open(R/"data"/"domains"/"D31.json"))
     print(f"rea_gaps_built {sum(1 for g in _d31['gaps'] if g.get('status') == 'built')}")
 except Exception:

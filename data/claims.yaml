@@ -240,6 +240,14 @@ claims:
     statement: "every control class cites only atoms the atlas defines"
     check: "(lambda cs, names: all(a in names for c in cs for a in (c.get('atoms') or [])))(load('data/counters/classes.json')['classes'], {a['id'] for a in load('../web-attack-atlas/data/atoms.json')['atoms']})"
 
+  - id: C114
+    statement: "the advisory dataset is kept separate from the curated corpus and reports its own unmapped share"
+    check: "(lambda a: a['total'] == a['mapped'] + a['unmapped'] and a['unmapped'] > 0)(load('data/advisories/SUMMARY.json'))"
+
+  - id: C115
+    statement: "every mapped advisory names the terms that matched, so the classification can be disputed"
+    check: "all(r.get('matched') for r in rows('data/advisories/advisories.jsonl') if r.get('atoms'))"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

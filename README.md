@@ -653,6 +653,48 @@ error. A server that starts is not a server that answers.
 
 ---
 
+## The advisory dataset
+
+The first breadth engine. A curator cannot read thousands of advisories, but a machine can map them, and
+the mapping is useful even when it is wrong as long as it is auditable.
+
+**1,261 advisories** harvested from the OSV query API across 41 web significant packages in six
+ecosystems. Scoping is a **selection made before the query**, not a keyword filter after it, because a
+pipeline that pulls everything and filters afterwards produces a corpus whose size is mostly the filter's
+false positive rate.
+
+**993 mapped (78.7%), 268 unmapped (21.3%).** Of the mapped, 543 are high confidence (two or more distinct
+patterns matched) and 450 medium.
+
+| atom | advisories |
+|---|---|
+| A07 resource exhaustion | 270 |
+| A01 interpreter confusion | 258 |
+| A10 logic assumption | 207 |
+| A02 trust boundary | 141 |
+| A08 information exposure | 91 |
+| A06 path and namespace | 82 |
+
+Two properties make it auditable rather than magical:
+
+- **every record carries the terms that matched**, so a reader can disagree with a classification without
+  rerunning it (`C115` enforces this)
+- **it is a separate dataset with its own counts** (`C114`), because mixing generated records with hand
+  authored ones is how a size claim gets inflated. This repo made that mistake once with corpus rows and
+  is not repeating it with advisories
+
+The unmapped share measures the **classifier's recall, not the advisories' irrelevance**. Reading a sample
+of the 268 finds real mechanisms the pattern table does not name yet, including "Improper Neutralization of
+Input During Web Page Generation", which is CWE-79's formal name for XSS and was invisible to the first
+pass until the word was added.
+
+```bash
+python3 scripts/harvest-osv.py     # 41 package queries, about 40 seconds
+python3 scripts/map-advisories.py  # classify and report
+```
+
+---
+
 ## The counter layer
 
 The defensive half, and the part that answers the other half of the brief: what will stop you, and what
@@ -778,6 +820,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | REA operations built | 6 of 10 named gaps, each with fixtures and a test |
 | stack playbooks | 4, every cited entry verified to exist |
 | control classes with a stated blind spot | 14 of 14 |
+| advisories mapped | 993 of 1,261 (78.7%), 268 unmapped and stated |
 | MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 
@@ -849,6 +892,7 @@ ai-web-arsenal/
 ├── prompts/                   5 phase packs with failure modes
 ├── playbooks/                 per stack ordered runs, generated from data/playbooks/
 ├── counters/                  the defensive half, generated from data/counters/
+├── data/advisories/           the first breadth engine: OSV advisories, mapped, own counts
 ├── mcps/                      working MCP configs, including arsenal-mcp.py
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── rea-ops/                   built extraction operations, each with a fixture and a test

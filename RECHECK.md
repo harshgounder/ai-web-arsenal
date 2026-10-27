@@ -527,6 +527,37 @@ cheapest class for a patient attacker, because the bypass is waiting rather than
 
 ---
 
+## 6o. The first breadth engine
+
+Everything before this was written by hand. This was generated, which means the question changes from
+"is it right" to "can a reader check it".
+
+1,261 advisories from the OSV query API, across 41 web significant packages in six ecosystems. **993
+mapped to at least one atom (78.7%), 268 unmapped (21.3%).**
+
+Two decisions carry the honesty:
+
+- **Scoping happens before the query.** The package list is a selection, not a keyword filter applied
+  afterwards. A pipeline that pulls everything and filters later produces a corpus whose size is mostly
+  the filter's false positive rate, which is a mistake this repo has already made once.
+- **Every record names the terms that matched.** `C115` enforces it. A reader can disagree with a
+  classification without rerunning anything, which is the only way a mechanical pass is auditable.
+
+The dataset is separate from the curated corpus and reports its own counts (`C114`), so its size cannot
+inflate the hand authored figures.
+
+What the 21.3 percent unmapped actually means: it measures **classifier recall, not advisory
+irrelevance**. Sampling them found real mechanisms the table did not name, including CWE-79's formal
+description "Improper Neutralization of Input During Web Page Generation", which is XSS and was invisible
+until the word neutralization was added. Four rounds of widening took the unmapped share from 25.3 to
+21.3 and then returns stopped justifying themselves.
+
+What it does not do: it does not grade confidence against a human judgement, and it does not cover
+advisories outside the selected packages. Both are stated in `data/advisories/SUMMARY.json` rather than
+implied.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

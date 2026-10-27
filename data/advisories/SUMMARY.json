@@ -1,0 +1,50 @@
+{
+ "generated_at": "2026-10-27",
+ "source": "OSV query API, scoped to a selected package list rather than filtered by keyword",
+ "total": 1261,
+ "mapped": 993,
+ "unmapped": 268,
+ "unmapped_pct": 21.3,
+ "by_confidence": {
+  "medium": 450,
+  "high": 543,
+  "unmapped": 268
+ },
+ "by_ecosystem": {
+  "Go": 12,
+  "Maven": 125,
+  "Packagist": 29,
+  "PyPI": 841,
+  "RubyGems": 17,
+  "npm": 237
+ },
+ "by_atom": {
+  "A07": 270,
+  "A01": 258,
+  "A10": 207,
+  "A02": 141,
+  "A08": 91,
+  "A06": 82,
+  "A09": 70,
+  "A03": 61,
+  "A04": 38,
+  "A05": 36,
+  "A12": 21,
+  "A13": 20,
+  "A15": 14,
+  "A14": 13,
+  "A11": 6,
+  "A16": 1
+ },
+ "by_lens": {
+  "L04": 258,
+  "L09": 241,
+  "L06": 234,
+  "L07": 131,
+  "L08": 117,
+  "L01": 6,
+  "L11": 5,
+  "L10": 1
+ },
+ "note": "mechanical classification: confidence is high only where two or more distinct patterns matched, and every record carries the terms that matched so a reader can disagree"
+}
