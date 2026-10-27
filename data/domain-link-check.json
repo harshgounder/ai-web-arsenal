@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 277,
+ "unique_urls": 282,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -106,6 +106,20 @@
     "d17-imds"
    ]
   },
+  "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-cloud-audit"
+   ]
+  },
+  "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-ci-trigger"
+   ]
+  },
   "https://docs.mitmproxy.org/stable/": {
    "status": "OK",
    "http": 200,
@@ -121,6 +135,13 @@
     "d23-mitmproxy",
     "d29-mitmproxy",
     "d31-mitmproxy"
+   ]
+  },
+  "https://docs.npmjs.com/cli/v10/using-npm/scripts": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-install-hooks"
    ]
   },
   "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html": {
@@ -2071,6 +2092,13 @@
     "d24-pci-scope"
    ]
   },
+  "https://www.rfc-editor.org/rfc/rfc8446": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d25-key-custody"
+   ]
+  },
   "https://www.rfc-editor.org/rfc/rfc9112": {
    "status": "OK",
    "http": 200,
@@ -2097,6 +2125,14 @@
    "http": 200,
    "entries": [
     "d02-shodan-censys"
+   ]
+  },
+  "https://www.w3.org/TR/SRI/": {
+   "status": "BLOCKED",
+   "http": 403,
+   "note": "the site refuses automated clients, which is not the same as absent",
+   "entries": [
+    "d18-script-integrity"
    ]
   },
   "https://www.w3.org/TR/webauthn-3/": {

@@ -35,6 +35,14 @@ except Exception:
 enr=sum(len(json.load(open(f))["entries"]) for f in glob.glob(str(R/"data"/"domains"/"D*.json")) if not f.endswith(".index.json"))
 cand=sum(json.load(open(f))["indexed_not_enriched"] for f in glob.glob(str(R/"data"/"domains"/"*.index.json")))
 print(f"enriched_entries {enr}")
+_dom_entries = []
+for _f in glob.glob(str(R/"data"/"domains"/"D*.json")):
+    if _f.endswith(".index.json"):
+        continue
+    _dom_entries.extend(json.load(open(_f)).get("entries", []))
+print(f"entries_total {len(_dom_entries)}")
+for _k in ("preconditions", "oracle", "evades", "detected_by"):
+    print(f"entries_with_{_k} {sum(1 for e in _dom_entries if e.get(_k))}")
 print(f"promotable_candidates {cand}")
 print(f"sources {rivals}")
 print(f"rows_total {summ['rows_total']}")
@@ -58,15 +66,25 @@ try:
     print(f"denominator_lenses {_lens}")
     _cov = [json.loads(l) for l in open(R/"data"/"coverage"/"coverage.jsonl") if l.strip()] if (R/"data"/"coverage"/"coverage.jsonl").exists() else []
     print(f"coverage_mapped {len(_cov)}")
-    print(f"coverage_l2 {sum(1 for r in _cov if r['level'] in ('L2','L3'))}")
+    # coverage_l2 means exactly L2. An earlier version counted L2+L3 here, which made the label a
+    # lie and broke a claim that compared it against a pure L2 count.
+    print(f"coverage_l2 {sum(1 for r in _cov if r['level'] == 'L2')}")
     print(f"coverage_l3 {sum(1 for r in _cov if r['level'] == 'L3')}")
+    print(f"coverage_l2plus {sum(1 for r in _cov if r['level'] in ('L2', 'L3'))}")
     _gap = json.load(open(R/"data"/"gap"/"SUMMARY.json")) if (R/"data"/"gap"/"SUMMARY.json").exists() else {}
+    print(f"gap_total {_gap.get('gap_total', 0)}")
     for _k in ("reachable_by_authoring", "reachable_by_lab", "unavailable"):
         print(f"gap_{_k} {_gap.get(_k, 0)}")
     # the stats parser only accepts integers, so the ceiling is emitted in tenths
     print(f"ceiling_pct_tenths {round(float(_gap.get('ceiling_pct', 0)) * 10)}")
 except Exception:
     print("denominator_factors ?")
+try:
+    _lc = json.load(open(R/"data"/"domain-link-check.json"))
+    print(f"link_urls {_lc['unique_urls']}")
+    print(f"link_ok {sum(1 for r in _lc['results'].values() if r['status'] == 'OK')}")
+except Exception:
+    print("link_urls 0")
 print(f"domains_with_data {doms}")
 print(f"domains_rendered {rendered}")
 print(f"prompt_packs {prompts}")

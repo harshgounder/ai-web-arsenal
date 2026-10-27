@@ -26,19 +26,26 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+19 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [ATT&CK STIX data](https://github.com/mitre-attack/attack-stix-data) | L10 reporting | A2 | A02 | `n/a reference` | no | The technique taxonomy to map detection coverage against |
 | [awesome-yara](https://github.com/InQuest/awesome-yara) | L10 reporting | A0 | A01 | `n/a reference` | no | Curated YARA rules and tooling, the detection corpus entry point |
+| [Cloud control plane audit trail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether API calls and identity events leave the provider at all, which decides whether a permission change is investigable. |
 | [This repo: counters/COUNTERS.md](https://github.com/) | L10 reporting | A0 | A01,A02 | `local` | no | 74 control mechanisms across 150 patterns, grouped into 13 classes, each with a precondition and cost |
 | [OWASP Core Rule Set](https://github.com/coreruleset/coreruleset) | L10 reporting | A2 | A01,A05 | `n/a reference` | no | The CRS rule family most WAFs run, so 'which CRS rule catches this' is the real question |
+| [Egress mediation](https://github.com/OISF/suricata) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether all outbound traffic passes an inspection point. A connection that avoids the proxy is a blind spot regardless of what the proxy can do. |
 | [Elastic detection rules](https://github.com/elastic/detection-rules) | L10 reporting | A2 | A01,A02 | `n/a reference` | no | A large maintained rule set, useful as a coverage cross check |
 | [Falco](https://github.com/falcosecurity/falco) | L10 reporting | A2 | A02,A15 | `n/a reference` | no | Runtime detection for containers and cloud native workloads |
+| [Inspection depth by position](https://github.com/coreruleset/coreruleset) | L10 reporting | A0 | A08 | `n/a reference` | no | Where a control stops reading. The same payload placed in the path, a header, the body and a multipart part tells you which regions are inspected at all. |
+| [Inspection key custody](https://www.rfc-editor.org/rfc/rfc8446) | L10 reporting | A0 | A08 | `n/a reference` | no | Where the keys that let a control read traffic live, and who can use them without a second approval. |
+| [Response authority and time to block](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether detection becomes prevention. Measured as the time from a decision to an enforced block, not the time to an alert. |
+| [Rule language surface and signature bias](https://github.com/SigmaHQ/sigma) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether the rules can express structure or only strings. A request that is structurally invalid but contains no banned substring shows the difference. |
 | [Sigma](https://github.com/SigmaHQ/sigma) | L10 reporting | A2 | A01,A02 | `n/a reference` | no | The vendor neutral detection rule format. If your finding has no Sigma rule, detection coverage is a guess |
 | [Suricata](https://github.com/OISF/suricata) | L10 reporting | A2 | A02 | `n/a reference` | no | Network IDS with rules per attack class, the wire level mirror |
+| [Telemetry coverage matrix](https://github.com/zeek/zeek) | L10 reporting | A0 | A08 | `n/a reference` | no | What each sensor records, for how long, and on which clock. A technique is only invisible if no sensor in the matrix sees it. |
 | [Wazuh](https://github.com/wazuh/wazuh) | L10 reporting | A2 | A02 | `n/a reference` | no | Host and log based detection with a free SIEM, the SMB default |
 | [YARA](https://github.com/VirusTotal/yara) | L10 reporting | A2 | A01 | `n/a reference` | no | Pattern matching for artefacts, used here for payload and malware signatures |
 | [YARA Rules](https://github.com/Yara-Rules/rules) | L10 reporting | A2 | A01 | `n/a reference` | no | Community rule repository |
@@ -51,6 +58,34 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 
 **This repo: counters/COUNTERS.md**  
 - note: Local document in web-attack-atlas. It is the defensive view of the pattern corpus.
+
+**Inspection depth by position**  
+- preconditions: `you control a request to the protected endpoint`, `a benign marker exists that the control blocks when it sees it`
+- oracle: `blocked in one position and accepted in another`, `the accepted position repeats reliably across three attempts`
+
+**Rule language surface and signature bias**  
+- preconditions: `the rule set is available for reading or the control's behaviour is observable`
+- oracle: `a structurally invalid request with no known signature passes`, `every rule that fires is traceable to a substring match rather than a parse`
+
+**Telemetry coverage matrix**  
+- preconditions: `you can influence or observe one action across the estate`
+- oracle: `the action appears in at least one sensor, with a timestamp`, `sensors agree on ordering within the measured clock drift`
+
+**Cloud control plane audit trail**  
+- preconditions: `the estate runs in a cloud account`
+- oracle: `a permission change appears in the trail with an actor and a source address`, `an identity provider sign-in burst appears centrally, not only in the provider console`
+
+**Egress mediation**  
+- preconditions: `the estate has an egress proxy or inspection point`
+- oracle: `a direct connection attempt from a workload is blocked or logged`, `the same connection through the proxy is recorded with its destination`
+
+**Inspection key custody**  
+- preconditions: `a control terminates or inspects TLS`
+- oracle: `the key is usable only through an approval path, recorded`, `no single operator can export and use it alone`
+
+**Response authority and time to block**  
+- preconditions: `the organisation has a detection capability and a blocking capability`
+- oracle: `one real action was blocked after a decision, with both timestamps recorded`, `the measured interval is stated, not estimated`
 
 ## Decision tree
 

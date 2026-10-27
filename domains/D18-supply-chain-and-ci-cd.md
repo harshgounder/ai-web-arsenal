@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+16 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -42,6 +42,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [OWASP Dependency-Check](https://github.com/jeremylong/DependencyCheck) | L06 probing | A2 | A11 | `n/a reference` | no | CPE based matching, still the default in many pipelines |
 | [grype](https://github.com/anchore/grype) | L06 probing | A2 | A11 | `git:https://github.com/anchore/grype` | yes | Vulnerability matching against an SBOM, pairs with syft |
 | [trivy](https://github.com/aquasecurity/trivy) | L06 probing | A2 | A11,A15 | `pacman:trivy` | yes | Dependency, image and IaC scanning in one binary |
+| [Workflow trigger trust](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions) | L10 reporting | A0 | A08 | `n/a reference` | no | Which events can start a job and what that job can reach. A pull request from a fork running with secrets is the whole class. |
+| [Deployment credential lifetime and scope](https://github.com/sigstore/cosign) | L10 reporting | A0 | A08 | `n/a reference` | no | What a deploy can reach and for how long. A long lived shared credential turns one pipeline compromise into permanent access. |
+| [Install time execution surface](https://docs.npmjs.com/cli/v10/using-npm/scripts) | L10 reporting | A0 | A08 | `n/a reference` | no | What runs when a dependency is installed, before anyone reviews its behaviour. An install hook is code execution with the developer's authority. |
+| [Lockfile enforcement](https://github.com/ossf/scorecard) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether the resolved version can drift from the locked one. A lock that install ignores is documentation, not a control. |
+| [Repository exposure history](https://github.com/ossf/scorecard) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether a repository was ever public, and whether forks and history still hold what was removed. |
+| [Subresource integrity and third party pinning](https://www.w3.org/TR/SRI/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether a third party script can change under the site. Without a pin, the third party's compromise is your compromise. |
 | [cosign](https://github.com/sigstore/cosign) | L11 fix verification | A2 | A11,A09 | `pacman:cosign` | no | Image and artefact signing and verification |
 | [SLSA](https://slsa.dev/) | L11 fix verification | A2 | A11 | `n/a reference` | no | Build integrity framework, used as the control column |
 
@@ -83,6 +89,30 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `source access, which is often available through a leak or a public repo`
 - oracle: `rule match with the sink location`
 - defense levels it addresses: F1
+
+**Install time execution surface**  
+- preconditions: `the project installs dependencies from a registry`
+- oracle: `a network request or file write observed during install, attributable to a package`, `the same install with scripts disabled produces none`
+
+**Workflow trigger trust**  
+- preconditions: `CI runs on contributions from outside the repository`
+- oracle: `a secret present in a job triggered by an unprivileged actor, or provably absent`, `the event, the actor and the permissions recorded per run`
+
+**Lockfile enforcement**  
+- preconditions: `the project ships a lockfile`
+- oracle: `an install resolves exactly the locked versions, verified by diffing the tree`, `a registry substitution attempt either fails or is recorded`
+
+**Subresource integrity and third party pinning**  
+- preconditions: `the page loads script from an origin you do not control`
+- oracle: `a modified third party file is refused by the browser`, `every third party script tag carries an integrity value or an equivalent pin`
+
+**Deployment credential lifetime and scope**  
+- preconditions: `a pipeline deploys to an environment`
+- oracle: `the credential is scoped to the artefact it ships, demonstrated by a refused action outside it`, `its lifetime is stated and enforced, with a rotation event recorded`
+
+**Repository exposure history**  
+- preconditions: `the project has had secrets or internal detail in its history`
+- oracle: `a secret found in history after removal from the working tree`, `a fork or mirror still serving content the origin no longer has`
 
 ## Decision tree
 

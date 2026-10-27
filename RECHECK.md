@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 59 | 277 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 61 | 282 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 277 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 282 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -313,7 +313,9 @@ not are ISO 27001 and the W3C WebAuthn page refusing automated clients.
 | lens | before | after |
 |---|---|---|
 | L13 regulation | 0 of 64 | **26 of 64 (41%)** |
-| whole denominator | 108 of 1,000 (10.8%) | **134 of 1,000 (13.4%)** |
+| L10 supply chain | 9 of 62 | **21 of 62 (34%)** |
+| L15 detection industry | 5 of 64 | **19 of 64 (30%)** |
+| whole denominator | 108 of 1,000 (10.8%) | **160 of 1,000 (16.0%)** |
 
 What the entries do that a policy document does not: each states what to look at and what result settles
 it. `d24-gdpr-breach` asks for the awareness timestamp and the article 33(5) register entry, not a promise
@@ -322,8 +324,16 @@ of compliance. `d24-pci-scope` asks whether a primary account number appears in 
 systems implement on only one side.
 
 Two consequences of the rebuild, both caught by the gates rather than by reading: the gap classification
-had to be rebuilt (866 now, 216 Class I), and fourteen claims encoded counts that changed. The URL ledger
-also had to be re-run, which is why domain URLs are 277 now rather than 267.
+had to be rebuilt, and the URL ledger re-run.
+
+Then the cascade was engineered away. Fourteen claims hardcoded counts that any content addition
+invalidated. Those literals now live in `readme-stats.py` and the claims compare against `stats[...]`
+instead. The second batch of thirteen entries promoted twenty six factors and needed **zero claim edits**,
+which is the difference between a ritual and a mechanism.
+
+The link checker also caught a wrong URL: Suricata is `OISF/suricata`, and the entry had
+`suricata/suricata`, which resolves to nothing. That is defect 4's class, caught before commit by a
+machine rather than after by a reader.
 
 ---
 

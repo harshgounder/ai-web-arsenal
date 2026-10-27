@@ -45,28 +45,28 @@
    "note": "Measuring detection coverage against a scoring test set is the independent check on a vendor claim."
   },
   "L15-001": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-crs"
+    "d25-inspection-depth"
    ],
    "basis": "entry",
-   "note": "The rule set defines what is inspected. Depth per product is not tested."
+   "note": "Placement of one payload across path, header, body and multipart is the inspection depth test."
   },
   "L15-004": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-crs"
+    "d25-rule-surface"
    ],
    "basis": "entry",
-   "note": "Rule language expressiveness is visible in the corpus, not measured."
+   "note": "A structurally invalid request with no banned substring measures whether rules express structure."
   },
   "L15-005": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d25-attack"
+    "d25-rule-surface"
    ],
    "basis": "entry",
-   "note": "Mapping coverage to techniques shows the signature bias without quantifying it."
+   "note": "Traceability of every firing rule to a substring is the signature versus behaviour question."
   },
   "L15-021": {
    "level": "L1",
@@ -107,6 +107,94 @@
    ],
    "basis": "entry",
    "note": "Living off the platform is a named technique class with no local test."
+  },
+  "L15-007": {
+   "level": "L2",
+   "covered_by": [
+    "d25-inspection-depth"
+   ],
+   "basis": "entry",
+   "note": "A position that is never inspected is functionally an exclusion list, and the test finds it."
+  },
+  "L15-010": {
+   "level": "L2",
+   "covered_by": [
+    "d25-inspection-depth"
+   ],
+   "basis": "entry",
+   "note": "Multipart is one of the positions the test uses."
+  },
+  "L15-026": {
+   "level": "L2",
+   "covered_by": [
+    "d25-egress-path"
+   ],
+   "basis": "entry",
+   "note": "A connection that bypasses the proxy is the factor, tested by attempting one."
+  },
+  "L15-030": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Which sources exist is the matrix."
+  },
+  "L15-031": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Ordering across sensors with measured drift is the clock question."
+  },
+  "L15-032": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Retention against the investigation window is a column in the matrix."
+  },
+  "L15-033": {
+   "level": "L2",
+   "covered_by": [
+    "d25-egress-path"
+   ],
+   "basis": "entry",
+   "note": "Outbound channel coverage is tested by attempting each channel."
+  },
+  "L15-048": {
+   "level": "L2",
+   "covered_by": [
+    "d25-cloud-audit"
+   ],
+   "basis": "entry",
+   "note": "A permission change with an actor and source address is the control plane log test."
+  },
+  "L15-049": {
+   "level": "L2",
+   "covered_by": [
+    "d25-cloud-audit"
+   ],
+   "basis": "entry",
+   "note": "Sign-in events appearing centrally is the identity log export test."
+  },
+  "L15-057": {
+   "level": "L2",
+   "covered_by": [
+    "d25-key-custody"
+   ],
+   "basis": "entry",
+   "note": "Whether a single operator can use the inspection key alone is the factor."
+  },
+  "L15-064": {
+   "level": "L2",
+   "covered_by": [
+    "d25-response-authority"
+   ],
+   "basis": "entry",
+   "note": "Time from decision to enforced block, measured on a real action."
   }
  }
 }

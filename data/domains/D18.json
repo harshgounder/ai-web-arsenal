@@ -321,6 +321,174 @@
    ],
    "detected_by": [],
    "status": "VERIFIED"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d18-install-hooks",
+   "name": "Install time execution surface",
+   "url": "https://docs.npmjs.com/cli/v10/using-npm/scripts",
+   "role": "What runs when a dependency is installed, before anyone reviews its behaviour. An install hook is code execution with the developer's authority.",
+   "preconditions": [
+    "the project installs dependencies from a registry"
+   ],
+   "oracle": [
+    "a network request or file write observed during install, attributable to a package",
+    "the same install with scripts disabled produces none"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d18-ci-trigger",
+   "name": "Workflow trigger trust",
+   "url": "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions",
+   "role": "Which events can start a job and what that job can reach. A pull request from a fork running with secrets is the whole class.",
+   "preconditions": [
+    "CI runs on contributions from outside the repository"
+   ],
+   "oracle": [
+    "a secret present in a job triggered by an unprivileged actor, or provably absent",
+    "the event, the actor and the permissions recorded per run"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d18-lockfile-proof",
+   "name": "Lockfile enforcement",
+   "url": "https://github.com/ossf/scorecard",
+   "role": "Whether the resolved version can drift from the locked one. A lock that install ignores is documentation, not a control.",
+   "preconditions": [
+    "the project ships a lockfile"
+   ],
+   "oracle": [
+    "an install resolves exactly the locked versions, verified by diffing the tree",
+    "a registry substitution attempt either fails or is recorded"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d18-script-integrity",
+   "name": "Subresource integrity and third party pinning",
+   "url": "https://www.w3.org/TR/SRI/",
+   "role": "Whether a third party script can change under the site. Without a pin, the third party's compromise is your compromise.",
+   "preconditions": [
+    "the page loads script from an origin you do not control"
+   ],
+   "oracle": [
+    "a modified third party file is refused by the browser",
+    "every third party script tag carries an integrity value or an equivalent pin"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d18-deploy-creds",
+   "name": "Deployment credential lifetime and scope",
+   "url": "https://github.com/sigstore/cosign",
+   "role": "What a deploy can reach and for how long. A long lived shared credential turns one pipeline compromise into permanent access.",
+   "preconditions": [
+    "a pipeline deploys to an environment"
+   ],
+   "oracle": [
+    "the credential is scoped to the artefact it ships, demonstrated by a refused action outside it",
+    "its lifetime is stated and enforced, with a rotation event recorded"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d18-repo-exposure",
+   "name": "Repository exposure history",
+   "url": "https://github.com/ossf/scorecard",
+   "role": "Whether a repository was ever public, and whether forks and history still hold what was removed.",
+   "preconditions": [
+    "the project has had secrets or internal detail in its history"
+   ],
+   "oracle": [
+    "a secret found in history after removal from the working tree",
+    "a fork or mirror still serving content the origin no longer has"
+   ]
   }
  ],
  "tree": {

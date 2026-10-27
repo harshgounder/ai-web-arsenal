@@ -10,7 +10,10 @@
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
 {"url": "https://docs.astral.sh/uv/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-uv"]}
 {"url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d14-imds", "d17-imds"]}
+{"url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-cloud-audit"]}
+{"url": "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-ci-trigger"]}
 {"url": "https://docs.mitmproxy.org/stable/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-mitmproxy", "d05-mitmproxy", "d06-mitmproxy", "d09-mitmproxy", "d10-mitmproxy", "d12-mitmproxy", "d14-mitmproxy", "d22-mitmproxy", "d23-mitmproxy", "d29-mitmproxy", "d31-mitmproxy"]}
+{"url": "https://docs.npmjs.com/cli/v10/using-npm/scripts", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-install-hooks"]}
 {"url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-sarif"]}
 {"url": "https://dsopas.github.io/MindAPI/play/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-mindapi", "d11-mindapi"]}
 {"url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "checked_at": "2026-10-27", "status": "OK", "http": 202, "entries": ["d24-gdpr-breach"]}
@@ -45,7 +48,7 @@
 {"url": "https://github.com/KissPeter/APIFuzzer", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-apifuzzer"]}
 {"url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-mobsf"]}
 {"url": "https://github.com/NVIDIA/garak", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-garak", "d29-garak"]}
-{"url": "https://github.com/OISF/suricata", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-suricata"]}
+{"url": "https://github.com/OISF/suricata", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-suricata", "d25-egress-path"]}
 {"url": "https://github.com/OJ/gobuster", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-gobuster", "d29-gobuster"]}
 {"url": "https://github.com/OWASP/ASVS", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-asvs-v6", "d04-asvs-v7", "d04-asvs-v10", "d05-asvs-v8", "d06-asvs-v7"]}
 {"url": "https://github.com/OWASP/crAPI", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-crapi", "d11-crapi"]}
@@ -59,7 +62,7 @@
 {"url": "https://github.com/RhinoSecurityLabs/pacu", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-pacu"]}
 {"url": "https://github.com/SecurityInnovation/AuthMatrix", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-authmatrix"]}
 {"url": "https://github.com/Shuffle/Shuffle", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d30-shuffle"]}
-{"url": "https://github.com/SigmaHQ/sigma", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-sigma"]}
+{"url": "https://github.com/SigmaHQ/sigma", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-sigma", "d25-rule-surface"]}
 {"url": "https://github.com/Teebytes/TnT-Fuzzer", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-tnt-fuzzer"]}
 {"url": "https://github.com/TheHackerDev/race-the-web", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d12-race-the-web"]}
 {"url": "https://github.com/VeNoMouS/cloudscraper", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-cloudscraper"]}
@@ -87,7 +90,7 @@
 {"url": "https://github.com/codingo/NoSQLMap", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-nosqlmap"]}
 {"url": "https://github.com/commixproject/commix", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-commix", "d29-commix"]}
 {"url": "https://github.com/confident-ai/deepteam", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-deepteam", "d29-deepteam"]}
-{"url": "https://github.com/coreruleset/coreruleset", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-crs"]}
+{"url": "https://github.com/coreruleset/coreruleset", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-crs", "d25-inspection-depth"]}
 {"url": "https://github.com/crewAIInc/crewAI", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d30-crewai"]}
 {"url": "https://github.com/cure53/DOMPurify", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-dompurify"]}
 {"url": "https://github.com/cyprosecurity/API-SecurityEmpire", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-api-sec-empire"]}
@@ -148,7 +151,7 @@
 {"url": "https://github.com/openwall/john", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d16-john"]}
 {"url": "https://github.com/opticdev/optic", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-optic"]}
 {"url": "https://github.com/optiv/rest-api-goat", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-rest-api-goat"]}
-{"url": "https://github.com/ossf/scorecard", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-scorecard"]}
+{"url": "https://github.com/ossf/scorecard", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-scorecard", "d18-lockfile-proof", "d18-repo-exposure"]}
 {"url": "https://github.com/owasp-amass/amass", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-amass"]}
 {"url": "https://github.com/portswigger/turbo-intruder", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d12-turbo-intruder"]}
 {"url": "https://github.com/postmanlabs/newman", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-newman", "d11-newman", "d12-newman", "d23-newman", "d29-newman"]}
@@ -181,7 +184,7 @@
 {"url": "https://github.com/semgrep/semgrep", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-semgrep"]}
 {"url": "https://github.com/sensepost/objection", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-objection"]}
 {"url": "https://github.com/shieldfy/API-Security-Checklist", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-api-checklist"]}
-{"url": "https://github.com/sigstore/cosign", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-cosign"]}
+{"url": "https://github.com/sigstore/cosign", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-cosign", "d18-deploy-creds"]}
 {"url": "https://github.com/skylot/jadx", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-jadx", "d29-jadx"]}
 {"url": "https://github.com/smicallef/spiderfoot", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-spiderfoot"]}
 {"url": "https://github.com/smodnix/31-days-of-API-Security-Tips", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-31days"]}
@@ -208,7 +211,7 @@
 {"url": "https://github.com/wazuh/wazuh", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-wazuh"]}
 {"url": "https://github.com/wireghoul/dotdotpwn", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d13-dotdotpwn"]}
 {"url": "https://github.com/worawit/blutter", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-blutter"]}
-{"url": "https://github.com/zeek/zeek", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-zeek"]}
+{"url": "https://github.com/zeek/zeek", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-zeek", "d25-telemetry-matrix"]}
 {"url": "https://github.com/zinja-coder/apktool-mcp-server", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-apktool-mcp"]}
 {"url": "https://hashcat.net/hashcat/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-hashcat"]}
 {"url": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d20-bandit"]}
@@ -257,7 +260,7 @@
 {"url": "https://www.bis.doc.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-export-control"]}
 {"url": "https://www.chromium.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-chromium", "d31-chromium"]}
 {"url": "https://www.cisa.gov/coordinated-vulnerability-disclosure-process", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvd"]}
-{"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-kev"]}
+{"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-kev", "d25-response-authority"]}
 {"url": "https://www.cisecurity.org/cis-benchmarks", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-cis"]}
 {"url": "https://www.cve.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cve"]}
 {"url": "https://www.first.org/cvss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvss"]}
@@ -268,10 +271,12 @@
 {"url": "https://www.keycloak.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-keycloak"]}
 {"url": "https://www.nist.gov/privacy-framework", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist-privacy"]}
 {"url": "https://www.pcisecuritystandards.org/standards/pci-dss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-pci-scope"]}
+{"url": "https://www.rfc-editor.org/rfc/rfc8446", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-key-custody"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9112", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9112"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9113", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9113"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9700", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-rfc9700"]}
 {"url": "https://www.shodan.io/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-shodan-censys"]}
+{"url": "https://www.w3.org/TR/SRI/", "checked_at": "2026-10-27", "status": "BLOCKED", "http": 403, "entries": ["d18-script-integrity"]}
 {"url": "https://www.w3.org/TR/webauthn-3/", "checked_at": "2026-10-27", "status": "BLOCKED", "http": 403, "entries": ["d04-webauthn"]}
 {"url": "https://www.zaproxy.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-zap"]}
 {"url": "https://www.zaproxy.org/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-zaproxy"]}

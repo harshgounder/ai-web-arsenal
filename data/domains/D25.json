@@ -321,6 +321,203 @@
    "agency": "A0",
    "stage": "L10",
    "status": "VERIFIED"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-inspection-depth",
+   "name": "Inspection depth by position",
+   "url": "https://github.com/coreruleset/coreruleset",
+   "role": "Where a control stops reading. The same payload placed in the path, a header, the body and a multipart part tells you which regions are inspected at all.",
+   "preconditions": [
+    "you control a request to the protected endpoint",
+    "a benign marker exists that the control blocks when it sees it"
+   ],
+   "oracle": [
+    "blocked in one position and accepted in another",
+    "the accepted position repeats reliably across three attempts"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-rule-surface",
+   "name": "Rule language surface and signature bias",
+   "url": "https://github.com/SigmaHQ/sigma",
+   "role": "Whether the rules can express structure or only strings. A request that is structurally invalid but contains no banned substring shows the difference.",
+   "preconditions": [
+    "the rule set is available for reading or the control's behaviour is observable"
+   ],
+   "oracle": [
+    "a structurally invalid request with no known signature passes",
+    "every rule that fires is traceable to a substring match rather than a parse"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-telemetry-matrix",
+   "name": "Telemetry coverage matrix",
+   "url": "https://github.com/zeek/zeek",
+   "role": "What each sensor records, for how long, and on which clock. A technique is only invisible if no sensor in the matrix sees it.",
+   "preconditions": [
+    "you can influence or observe one action across the estate"
+   ],
+   "oracle": [
+    "the action appears in at least one sensor, with a timestamp",
+    "sensors agree on ordering within the measured clock drift"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-cloud-audit",
+   "name": "Cloud control plane audit trail",
+   "url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html",
+   "role": "Whether API calls and identity events leave the provider at all, which decides whether a permission change is investigable.",
+   "preconditions": [
+    "the estate runs in a cloud account"
+   ],
+   "oracle": [
+    "a permission change appears in the trail with an actor and a source address",
+    "an identity provider sign-in burst appears centrally, not only in the provider console"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-egress-path",
+   "name": "Egress mediation",
+   "url": "https://github.com/OISF/suricata",
+   "role": "Whether all outbound traffic passes an inspection point. A connection that avoids the proxy is a blind spot regardless of what the proxy can do.",
+   "preconditions": [
+    "the estate has an egress proxy or inspection point"
+   ],
+   "oracle": [
+    "a direct connection attempt from a workload is blocked or logged",
+    "the same connection through the proxy is recorded with its destination"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-key-custody",
+   "name": "Inspection key custody",
+   "url": "https://www.rfc-editor.org/rfc/rfc8446",
+   "role": "Where the keys that let a control read traffic live, and who can use them without a second approval.",
+   "preconditions": [
+    "a control terminates or inspects TLS"
+   ],
+   "oracle": [
+    "the key is usable only through an approval path, recorded",
+    "no single operator can export and use it alone"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L10",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d25-response-authority",
+   "name": "Response authority and time to block",
+   "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+   "role": "Whether detection becomes prevention. Measured as the time from a decision to an enforced block, not the time to an alert.",
+   "preconditions": [
+    "the organisation has a detection capability and a blocking capability"
+   ],
+   "oracle": [
+    "one real action was blocked after a decision, with both timestamps recorded",
+    "the measured interval is stated, not estimated"
+   ]
   }
  ],
  "tree": {

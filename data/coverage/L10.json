@@ -155,6 +155,102 @@
    ],
    "basis": "entry",
    "note": "Branch protection is one of the scored checks."
+  },
+  "L10-004": {
+   "level": "L2",
+   "covered_by": [
+    "d18-install-hooks"
+   ],
+   "basis": "entry",
+   "note": "A request observed during install with the control run proving the difference."
+  },
+  "L10-020": {
+   "level": "L2",
+   "covered_by": [
+    "d18-ci-trigger"
+   ],
+   "basis": "entry",
+   "note": "A secret present or provably absent in a job started by an unprivileged actor."
+  },
+  "L10-021": {
+   "level": "L2",
+   "covered_by": [
+    "d18-ci-trigger"
+   ],
+   "basis": "entry",
+   "note": "Interpolation into a command is the actor-controlled input half of the same test."
+  },
+  "L10-001": {
+   "level": "L2",
+   "covered_by": [
+    "d18-lockfile-proof"
+   ],
+   "basis": "entry",
+   "note": "Resolved versions diffed against the lock answers the range question."
+  },
+  "L10-002": {
+   "level": "L2",
+   "covered_by": [
+    "d18-lockfile-proof"
+   ],
+   "basis": "entry",
+   "note": "An install that ignores the lock is the failure signal."
+  },
+  "L10-012": {
+   "level": "L2",
+   "covered_by": [
+    "d18-script-integrity"
+   ],
+   "basis": "entry",
+   "note": "Every third party script tag carrying an integrity value is the coverage question."
+  },
+  "L10-014": {
+   "level": "L2",
+   "covered_by": [
+    "d18-script-integrity"
+   ],
+   "basis": "entry",
+   "note": "A modified third party file refused by the browser is the oracle."
+  },
+  "L10-015": {
+   "level": "L2",
+   "covered_by": [
+    "d18-script-integrity"
+   ],
+   "basis": "entry",
+   "note": "Whether a CDN can change content under the site origin is the same pin question."
+  },
+  "L10-024": {
+   "level": "L2",
+   "covered_by": [
+    "d18-deploy-creds"
+   ],
+   "basis": "entry",
+   "note": "Lifetime and scope, demonstrated by a refused action outside the artefact."
+  },
+  "L10-026": {
+   "level": "L2",
+   "covered_by": [
+    "d18-repo-exposure"
+   ],
+   "basis": "entry",
+   "note": "A fork or mirror still serving removed content is the test."
+  },
+  "L10-029": {
+   "level": "L2",
+   "covered_by": [
+    "d18-lockfile-proof"
+   ],
+   "basis": "entry",
+   "note": "A registry substitution attempt either fails or is recorded."
+  },
+  "L10-039": {
+   "level": "L2",
+   "covered_by": [
+    "d18-install-hooks"
+   ],
+   "basis": "entry",
+   "note": "A repository supplied command running on install is the config inheritance case."
   }
  }
 }

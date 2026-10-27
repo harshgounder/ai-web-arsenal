@@ -1,9 +1,9 @@
 {
  "generated_at": "2026-10-27",
- "urls_asserted": 277,
+ "urls_asserted": 282,
  "by_status": {
-  "OK": 275,
-  "BLOCKED": 2
+  "OK": 279,
+  "BLOCKED": 3
  },
  "unchecked": 0,
  "note": "a URL with no record is unverified, and unverified is not the same as broken"
