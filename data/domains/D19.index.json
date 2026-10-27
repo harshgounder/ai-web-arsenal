@@ -2,7 +2,7 @@
  "domain": "D19",
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
- "enriched": 12,
+ "enriched": 17,
  "indexed_not_enriched": 38,
  "entries": [
   {

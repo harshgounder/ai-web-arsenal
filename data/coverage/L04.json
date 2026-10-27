@@ -30,12 +30,12 @@
    "note": "Parameterisation gaps are exactly what both engines detect and confirm, including in identifier positions."
   },
   "L04-010": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d07-ghauri"
+    "d07-raw-fragment"
    ],
    "basis": "entry",
-   "note": "Raw fragment reachability is a source question. The tools find the symptom, not the escape hatch."
+   "note": "Reaching a raw fragment from input, traced to a call site, is the factor."
   },
   "L04-014": {
    "level": "L2",
@@ -202,10 +202,12 @@
    "note": "Which native library parses an uploaded image is unaddressed. No entry discusses image processing."
   },
   "L04-038": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "Redirect helper behaviour with absolute targets is unaddressed."
+   "level": "L2",
+   "covered_by": [
+    "d07-open-redirect-helper"
+   ],
+   "basis": "entry",
+   "note": "A redirect to a host the app does not own is the absolute target test."
   },
   "L04-039": {
    "level": "L1",
@@ -299,6 +301,30 @@
    ],
    "basis": "entry",
    "note": "Fingerprinting answers whether the version is disclosed, which is the factor's first half."
+  },
+  "L04-007": {
+   "level": "L2",
+   "covered_by": [
+    "d07-binder-audit"
+   ],
+   "basis": "entry",
+   "note": "An undeclared field persisted traces the framework's binding behaviour."
+  },
+  "L04-004": {
+   "level": "L2",
+   "covered_by": [
+    "d07-binder-audit"
+   ],
+   "basis": "entry",
+   "note": "A handler running before its guard is the middleware order question."
+  },
+  "L04-005": {
+   "level": "L2",
+   "covered_by": [
+    "d07-binder-audit"
+   ],
+   "basis": "entry",
+   "note": "A response produced before the guard runs is the short circuit case."
   }
  }
 }

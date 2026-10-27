@@ -32,18 +32,23 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-12 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+17 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [MITRE ATLAS](https://atlas.mitre.org/) | L05 hypothesis | A0 | A16 | `n/a reference` | no | Adversarial technique knowledge base for AI systems |
 | [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/) | L05 hypothesis | A0 | A16,A02 | `n/a reference` | no | Agent specific risks: tool abuse, excessive agency, memory poisoning |
+| [Agent authority and credential scope](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) | L06 probing | A2 | A08 | `n/a reference` | no | What an agent can do without asking, and what it holds. A broad credential plus an unsupervised loop is the difference between a tool and an insider. |
 | [DeepTeam](https://github.com/confident-ai/deepteam) | L06 probing | A2 | A16 | `pipx:deepteam` | yes | Red teaming framework with OWASP and NIST aligned vulnerability sets |
+| [Prompt and configuration pinning](https://genai.owasp.org/) | L06 probing | A2 | A08 | `n/a reference` | no | Whether the deployed prompt, model version and tool set are pinned and reviewable. Behaviour that changes without a deployment is behaviour nobody reviewed. |
 | [Lakera Gandalf](https://gandalf.lakera.ai/) | L06 probing | A2 | A16 | `n/a web` | no | Public prompt injection range, the calibration target before touching a real app |
 | [garak](https://github.com/NVIDIA/garak) | L06 probing | A2 | A16,A08 | `pipx:garak` | yes | LLM vulnerability scanner: prompt injection, jailbreak, leakage, toxicity probes across model families |
+| [Guardrail placement and failure mode](https://genai.owasp.org/) | L06 probing | A2 | A08 | `n/a reference` | no | Whether the guard sits before the model, after it, or both, and what it does when it errors. A guard that fails open is a guard that is absent under load. |
+| [Stop authority for a running agent](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a running agent can be stopped mid task, and how long it takes to take effect. An agent that cannot be stopped is an incident with no containment step. |
 | [promptfoo](https://github.com/promptfoo/promptfoo) | L06 probing | A2 | A16,A08 | `npm:promptfoo` | yes | Eval harness with red team plugins, the closest thing to CI for prompt injection regression |
 | [PurpleLlama](https://github.com/meta-llama/PurpleLlama) | L06 probing | A2 | A16,A15 | `git` | no | Meta's LLM safety toolset: risk taxonomy, benchmarks and guard models |
+| [Streaming, partial output and cost accounting](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) | L06 probing | A2 | A08 | `n/a reference` | no | Whether partial output is acted on before completion, and whether the meter counts what the model actually consumed. Both are quiet failures that only show in aggregate. |
 | [AgentDojo](https://github.com/ethz-spylab/agentdojo) | L07 exploitation | A2 | A16,A02 | `git:https://github.com/ethz-spylab/agentdojo` | yes | Benchmark for prompt injection against tool using agents, with real tool environments |
 | [PyRIT](https://github.com/Azure/PyRIT) | L07 exploitation | A2 | A16,A01 | `pipx:pyrit` | yes | Microsoft's risk identification toolkit: orchestrators, converters, scorers for red teaming generative apps |
 | [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) | L10 reporting | A0 | A16,A08 | `n/a reference` | no | The taxonomy every LLM finding maps to |
@@ -107,6 +112,26 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a model endpoint`
 - oracle: `risk category scores`
 - note: Its value is the taxonomy and the benchmark, not the guard. Use the taxonomy to structure findings.
+
+**Agent authority and credential scope**  
+- preconditions: `an agent acts on a system with an API`, `a human can approve or refuse an action`
+- oracle: `an irreversible action taken with no approval record`, `an action outside the task's needs succeeding, which is the scope failure`, `the credential's permissions enumerated against the task's stated purpose`
+
+**Guardrail placement and failure mode**  
+- preconditions: `a guard or filter is deployed in the path`
+- oracle: `output produced while the guard was unavailable, with the error recorded`, `a harmful output that passed, attributable to the guard's position rather than its policy`
+
+**Streaming, partial output and cost accounting**  
+- preconditions: `responses stream to a consumer`, `usage is metered per principal`
+- oracle: `an action taken on an incomplete answer, visible in the consumer's log`, `tokens billed below the tokens consumed, measured against the provider's own count`
+
+**Prompt and configuration pinning**  
+- preconditions: `the application uses a hosted model`, `prompts or tool definitions can change independently of code`
+- oracle: `a behavioural change with no corresponding code change`, `the deployed prompt hash differing from the reviewed one`
+
+**Stop authority for a running agent**  
+- preconditions: `an agent runs multi step tasks autonomously`
+- oracle: `an agent continuing after a stop request, measured in steps taken`, `time from stop to no further side effect`
 
 ## Decision tree
 

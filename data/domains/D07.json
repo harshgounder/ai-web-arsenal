@@ -745,6 +745,90 @@
    "agency": "A2",
    "stage": "L06",
    "status": "ESTABLISHED"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-binder-audit",
+   "name": "Binding and middleware order audit",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/",
+   "role": "Which fields the framework writes from a request, and in what order the stack runs. Mass assignment and a guard that runs after the handler are both framework behaviour, not application code.",
+   "preconditions": [
+    "the framework's binding and middleware order can be read or observed"
+   ],
+   "oracle": [
+    "an undeclared field persisted, with the request that carried it",
+    "a handler executing before the check that was meant to guard it"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-raw-fragment",
+   "name": "Raw query escape hatch reachability",
+   "url": "https://owasp.org/www-project-web-security-testing-guide/",
+   "role": "Whether a raw fragment can be reached from user input, and how much of it is interpolated. The parameterised path being safe says nothing about the escape hatch beside it.",
+   "preconditions": [
+    "the data layer exposes a raw or literal construct"
+   ],
+   "oracle": [
+    "a clause built from input, traced to the call site",
+    "the same try against the parameterised sibling returning nothing"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d07-open-redirect-helper",
+   "name": "Redirect and link helper target handling",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+   "role": "Whether URL helpers accept absolute targets. A helper that takes a user supplied next value is an open redirect with a friendly name.",
+   "preconditions": [
+    "the application generates redirects or absolute links"
+   ],
+   "oracle": [
+    "a redirect to a host the application does not own, from a helper call",
+    "an absolute target accepted where only a path was expected"
+   ]
   }
  ],
  "tree": {

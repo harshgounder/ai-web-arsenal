@@ -3,15 +3,19 @@
 {"url": "https://aws.amazon.com/cli/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-awscli"]}
 {"url": "https://book.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-hacktricks", "d07-hacktricks", "d08-hacktricks-csti", "d09-hacktricks", "d12-hacktricks", "d13-hacktricks", "d14-hacktricks", "d15-hacktricks", "d18-hacktricks", "d22-hacktricks", "d23-hacktricks"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-cheatsheet"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-open-redirect-helper"]}
 {"url": "https://chromium.googlesource.com/chromium/src/+/main/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-chromium", "d29-chromium"]}
 {"url": "https://cloud.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-hacktricks-cloud"]}
 {"url": "https://csrc.nist.gov/pubs/sp/800/115/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist115"]}
 {"url": "https://curl.se/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-curl", "d09-curl", "d10-curl", "d13-curl", "d14-curl", "d29-curl"]}
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-extension-scope"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-kill-switch"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-agent-authority"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-timer-resolution"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-oracle-stats"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-storage-lifecycle"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-streaming-trust"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-gpu-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-messaging-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-render-tree-exfil"]}
@@ -32,7 +36,7 @@
 {"url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "checked_at": "2026-10-27", "status": "OK", "http": 202, "entries": ["d24-gdpr-breach"]}
 {"url": "https://gandalf.lakera.ai/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-gandalf"]}
 {"url": "https://gdpr-info.eu/art-17-gdpr/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-gdpr-dsar"]}
-{"url": "https://genai.owasp.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-owasp-agentic", "d20-owasp-agentic", "d30-owasp-agentic"]}
+{"url": "https://genai.owasp.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-owasp-agentic", "d19-guardrail-position", "d19-eval-pinning", "d20-owasp-agentic", "d30-owasp-agentic"]}
 {"url": "https://genai.owasp.org/llm-top-10/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-llm-top10"]}
 {"url": "https://ghidra-sre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-ghidra"]}
 {"url": "https://github.com/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-prove", "d24-critic", "d25-counters", "d28-mcps", "d28-skill", "d30-orchestration"]}
@@ -241,6 +245,7 @@
 {"url": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-owasp-api-top10"]}
 {"url": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-owasp-api1"]}
 {"url": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-owasp-api5"]}
+{"url": "https://owasp.org/www-project-web-security-testing-guide/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-binder-audit", "d07-raw-fragment"]}
 {"url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d03-wstg-info"]}
 {"url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-wstg-athn"]}
 {"url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-wstg-athz"]}

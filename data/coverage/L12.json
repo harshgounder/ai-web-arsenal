@@ -92,16 +92,20 @@
    "note": "The specification says what a resource may carry. Whether a client treats it as instruction is untested."
   },
   "L12-019": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "No entry measures how much an agent can do without confirmation."
+   "level": "L2",
+   "covered_by": [
+    "d19-agent-authority"
+   ],
+   "basis": "entry",
+   "note": "An irreversible action with no approval record is the authority breadth test."
   },
   "L12-020": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "No entry tests the scope of the credential an agent holds."
+   "level": "L2",
+   "covered_by": [
+    "d19-agent-authority"
+   ],
+   "basis": "entry",
+   "note": "An action outside the task's needs succeeding is the credential scope failure."
   },
   "L12-023": {
    "level": "L0",
@@ -142,20 +146,20 @@
    "note": "Prompt leakage is a named probe with reproduced prompt text as the oracle."
   },
   "L12-040": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d19-llm-guard"
+    "d19-guardrail-position"
    ],
    "basis": "entry",
-   "note": "The defensive scanner set models guard placement. Whether it fails open is untested."
+   "note": "Guard placement is what decides whether harmful output passes."
   },
   "L12-047": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d19-promptfoo"
+    "d19-eval-pinning"
    ],
    "basis": "entry",
-   "note": "An eval harness makes divergence measurable. Deployment divergence is not the stated check."
+   "note": "A behavioural change with no code change is the eval versus production divergence."
   },
   "L12-052": {
    "level": "L1",
@@ -164,6 +168,54 @@
    ],
    "basis": "entry",
    "note": "Multimodal injection is catalogued. No harness is present here."
+  },
+  "L12-041": {
+   "level": "L2",
+   "covered_by": [
+    "d19-guardrail-position"
+   ],
+   "basis": "entry",
+   "note": "Output produced while the guard was unavailable is the fail open test."
+  },
+  "L12-046": {
+   "level": "L2",
+   "covered_by": [
+    "d19-streaming-trust"
+   ],
+   "basis": "entry",
+   "note": "An action taken on an incomplete answer is the partial output question."
+  },
+  "L12-044": {
+   "level": "L2",
+   "covered_by": [
+    "d19-streaming-trust"
+   ],
+   "basis": "entry",
+   "note": "Billed tokens against consumed tokens is the counting discrepancy."
+  },
+  "L12-060": {
+   "level": "L2",
+   "covered_by": [
+    "d19-eval-pinning"
+   ],
+   "basis": "entry",
+   "note": "The deployed prompt hash against the reviewed one is the pinning check."
+  },
+  "L12-055": {
+   "level": "L2",
+   "covered_by": [
+    "d19-kill-switch"
+   ],
+   "basis": "entry",
+   "note": "An agent continuing after a stop request is the readable observable."
+  },
+  "L12-059": {
+   "level": "L2",
+   "covered_by": [
+    "d19-eval-pinning"
+   ],
+   "basis": "entry",
+   "note": "A tool appearing without a deployment is the same pinning question."
   }
  }
 }

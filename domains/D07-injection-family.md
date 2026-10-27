@@ -31,20 +31,23 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-22 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+25 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
 |---|---|---|---|---|---|---|
 | [Atlas W04: datastore writes](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A01,A04 | `n/a data` | yes | Technique pointer. W04 is queued and this says so. |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A0 | A01,A05 | `n/a reference` | no | Per class technique reference with payload context |
+| [Binding and middleware order audit](https://owasp.org/www-project-web-security-testing-guide/) | L06 probing | A2 | A08 | `n/a reference` | no | Which fields the framework writes from a request, and in what order the stack runs. Mass assignment and a guard that runs after the handler are both framework behaviour, not application code. |
 | [dalfox](https://github.com/hahwul/dalfox) | L06 probing | A2 | A01,A05 | `aur:dalfox` | yes | XSS scanning with DOM and parameter analysis |
 | [dtd-finder](https://github.com/GoSecure/dtd-finder) | L06 probing | A2 | A01,A06 | `git` | no | Finds DTD files reachable on the target, which turns blind XXE into file read |
 | [DVWA](https://github.com/digininja/DVWA) | L06 probing | A2 | A01 | `docker` | no | Classic injection modules |
 | [ffuf](https://github.com/ffuf/ffuf) | L06 probing | A2 | A01 | `aur:ffuf` | yes | Fuzz the injection position to find a working context |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A01,A15 | `aur:nuclei-bin` | yes | Known CVE and misconfiguration injection templates |
+| [Redirect and link helper target handling](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Whether URL helpers accept absolute targets. A helper that takes a user supplied next value is an open redirect with a friendly name. |
 | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | L06 probing | A2 | A01,A05 | `git:https://github.com/swisskyrepo/PayloadsAllTheThings` | no | The payload corpus, organised by class and context |
 | [PortSwigger Web Security Academy labs](https://portswigger.net/web-security/all-labs) | L06 probing | A2 | A01 | `n/a web` | no | The best free lab set per class, each with an intended answer |
+| [Raw query escape hatch reachability](https://owasp.org/www-project-web-security-testing-guide/) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a raw fragment can be reached from user input, and how much of it is interpolated. The parameterised path being safe says nothing about the escape hatch beside it. |
 | [rea inspect_web_event_listeners](https://rea.tools) | L06 probing | A3 | A01,A08 | `mcp:rea` | yes | Read the actual DOM handlers before guessing which sink a payload reaches |
 | [OWASP WebGoat](https://github.com/WebGoat/WebGoat) | L06 probing | A2 | A01,A04 | `docker` | no | Structured lessons including blind and second order |
 | [xsser](https://github.com/epsylon/xsser) | L06 probing | A2 | A01,A05 | `git` | no | XSS scanner with a large context and encoding matrix |
@@ -179,6 +182,18 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **xsser**  
 - preconditions: `a reflected parameter`
 - oracle: `execution confirmed by callback`
+
+**Binding and middleware order audit**  
+- preconditions: `the framework's binding and middleware order can be read or observed`
+- oracle: `an undeclared field persisted, with the request that carried it`, `a handler executing before the check that was meant to guard it`
+
+**Raw query escape hatch reachability**  
+- preconditions: `the data layer exposes a raw or literal construct`
+- oracle: `a clause built from input, traced to the call site`, `the same try against the parameterised sibling returning nothing`
+
+**Redirect and link helper target handling**  
+- preconditions: `the application generates redirects or absolute links`
+- oracle: `a redirect to a host the application does not own, from a helper call`, `an absolute target accepted where only a path was expected`
 
 ## Decision tree
 

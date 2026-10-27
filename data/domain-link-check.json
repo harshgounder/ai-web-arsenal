@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 298,
+ "unique_urls": 303,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -48,6 +48,13 @@
    "http": 200,
    "entries": [
     "d06-cheatsheet"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d07-open-redirect-helper"
    ]
   },
   "https://chromium.googlesource.com/chromium/src/+/main/docs/": {
@@ -98,6 +105,20 @@
     "d08-extension-scope"
    ]
   },
+  "https://developer.mozilla.org/en-US/docs/Web/API/AbortController": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d19-kill-switch"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d19-agent-authority"
+   ]
+  },
   "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now": {
    "status": "OK",
    "http": 200,
@@ -117,6 +138,13 @@
    "http": 200,
    "entries": [
     "d08-storage-lifecycle"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d19-streaming-trust"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API": {
@@ -1839,6 +1867,14 @@
    "http": 200,
    "entries": [
     "d05-owasp-api5"
+   ]
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d07-binder-audit",
+    "d07-raw-fragment"
    ]
   },
   "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/": {
