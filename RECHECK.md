@@ -608,6 +608,39 @@ measurable blind spot rather than a suspected one.
 
 ---
 
+## 6r. Reproducibility pass, and what a fresh clone actually found
+
+Cloning the repo to a clean directory and running the gate was the point of this pass, and it failed in
+ways that reading would not have shown.
+
+**Three gates failed in a fresh clone**, one of them with a traceback, and none of the failures was a
+repository defect. They were all the absence of the companion repo, reported as though the repo were
+broken. That is the most expensive kind of false alarm: it teaches people to ignore the gate.
+
+Three things were wrong and are fixed:
+
+1. **Four claims assumed a sibling checkout** and either failed or raised `FileNotFoundError`. They are
+   `SKIP` now, with the clone command printed, and `--require-atlas` fails instead for a release run.
+2. **`generate-mutations.py` exited 1 when the atlas was absent**, which reads as "the mutations are
+   wrong". It exits 3 now, and the gate reports `SKIP` distinctly from `PASS` and `FAIL`, with a closing
+   note that a skipped gate means part of the repo was not checked.
+3. **The MCP server returned zero matches for a missing companion**, which is indistinguishable from
+   "no patterns match". It returns an error payload naming the path, and its test runs in degraded mode.
+
+Two deeper gaps were found while checking:
+
+- **`harvest-taxonomy.sh` did not exist.** The taxonomy repos had been cloned by hand in an earlier
+  session, so a fresh clone could not rebuild taxonomy coverage at all. It exists now, with provenance
+  recorded per clone, and it states which sources it cannot fetch.
+- **WSTG and ASVS come from `~/web-universe-work/universe-nodes.json`**, a sibling project outside both
+  repos. The 624 of 706 figure is therefore not reproducible from this repo alone. That is stated in
+  preflight, in the harvester and here, rather than fixed by changing the source, because changing it
+  would change the number and that is a decision rather than a patch.
+
+A fresh clone now reports **8 pass, 0 fail, 2 skip** with the reason.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

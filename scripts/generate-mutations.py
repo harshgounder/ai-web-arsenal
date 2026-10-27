@@ -140,8 +140,11 @@ def main():
 
     patterns = load_patterns()
     if not patterns:
-        print(f"no patterns found at {ATLAS}; is the companion repo present?", file=sys.stderr)
-        return 1
+        # exit 3 means skip, not fail: the atlas being absent is an environment fact
+        print(f"skip: no patterns at {ATLAS}. Clone the companion repo beside this one:", file=sys.stderr)
+        print("  git clone https://github.com/harshgounder/web-attack-atlas ../web-attack-atlas",
+              file=sys.stderr)
+        return 3
 
     rows = generate(patterns, args.pattern)
     if args.check:

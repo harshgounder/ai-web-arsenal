@@ -135,13 +135,22 @@ def main():
     claim = json.loads(content_text(by_id(res, 9)) or "{}")
     check("claims returns a real claim with its check", claim.get("id") == "C102" and claim.get("check"))
 
+    atlas_present = (ROOT.parent / "web-attack-atlas" / "waves").exists()
     pats = json.loads(content_text(by_id(res, 10)) or "{}")
-    check("search_patterns reaches the atlas", pats.get("matches", 0) > 0)
+    if atlas_present:
+        check("search_patterns reaches the atlas", pats.get("matches", 0) > 0)
+    else:
+        check("search_patterns explains a missing companion instead of returning zero",
+              "not present" in json.dumps(pats))
 
     check("no unparsed output and nothing on stderr", not any("_unparsed" in r for r in res) and not err.strip(),
           err.strip()[:80])
 
     print(f"\nmcp: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
+    if not atlas_present:
+        print("NOTE: the companion repo is absent, so the pattern search check ran in degraded mode. "
+              "Exit 3 means this gate did not fully run.", file=sys.stderr)
+        return 3 if not FAIL else 1
     return 0 if not FAIL else 1
 
 

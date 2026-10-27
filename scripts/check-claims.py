@@ -23,6 +23,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ATLAS = ROOT.parent / "web-attack-atlas"
 CLAIMS = ROOT / "data" / "claims.yaml"
+ATLAS_PRESENT = (ROOT.parent / "web-attack-atlas" / "data" / "atoms.json").exists()
+
+# These claims read the companion repo. Without it they are not false, they are unanswerable, and those
+# are different states. A fresh clone with no sibling must not report the repo as broken.
+ATLAS_CLAIMS = {"C081", "C083", "C090", "C113"}
 
 # Words the house rules ban. A document that uses them reads as machine-written, and this repo is
 # supposed to read like a person who did the work.
@@ -172,6 +177,8 @@ def main():
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--quiet", action="store_true")
     ap.add_argument("--only", help="run one claim id")
+    ap.add_argument("--require-atlas", action="store_true",
+                    help="treat a missing companion repo as failure rather than skip")
     args = ap.parse_args()
 
     spec = load_yaml(CLAIMS)
@@ -218,9 +225,17 @@ def main():
         return 0
 
     results = []
+    skipped = []
     for c in claims:
         cid = c.get("id", "?")
         if args.only and cid != args.only:
+            continue
+        if cid in ATLAS_CLAIMS and not ATLAS_PRESENT:
+            if args.require_atlas:
+                results.append((cid, "ERROR", c.get("statement", ""),
+                                "needs ../web-attack-atlas, which is not present"))
+            else:
+                skipped.append((cid, c.get("statement", "")))
             continue
         expr = c.get("check", "")
         try:
@@ -250,6 +265,11 @@ def main():
             counts[s] = counts.get(s, 0) + 1
         print(f"claims: {len(results)}  " +
               "  ".join(f"{k.lower()} {v}" for k, v in sorted(counts.items())))
+        if skipped:
+            print(f"\nskipped {len(skipped)} claim(s) that need the companion repo: "
+                  f"{', '.join(s[0] for s in skipped)}")
+            print("  clone it beside this one, or pass --require-atlas to fail instead:")
+            print(f"  git clone https://github.com/harshgounder/web-attack-atlas {ROOT.parent}/web-attack-atlas")
         if failed:
             print("\nA failing claim is a false statement in the repository. Fix the document or the")
             print("check, but do not delete the claim: the deletion is the defect.")

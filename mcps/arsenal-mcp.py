@@ -128,7 +128,15 @@ def t_get_entry(a):
     return json.dumps({"error": f"no entry {eid!r}", "hint": "use search_entries"}, indent=1)
 
 
+def _atlas_missing():
+    return not (ATLAS / "waves").exists()
+
+
 def t_search_patterns(a):
+    if _atlas_missing():
+        return json.dumps({"error": "companion repo not present",
+                           "detail": "clone web-attack-atlas beside this repo to search patterns",
+                           "path": str(ATLAS)}, indent=1)
     q = (a.get("query") or "").lower()
     limit = int(a.get("limit") or 20)
     rows = []

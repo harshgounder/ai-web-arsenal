@@ -15,6 +15,7 @@ FULL=0
 
 PASS=0
 FAIL=0
+SKIP=0
 declare -a RESULTS
 
 run_gate() {
@@ -22,7 +23,12 @@ run_gate() {
   local out rc
   out=$("$@" 2>&1)
   rc=$?
-  if [ $rc -eq 0 ]; then
+  if [ $rc -eq 3 ]; then
+    # exit 3 means "could not run here", which is not the same as failed. It is still reported.
+    SKIP=$((SKIP + 1))
+    RESULTS+=("SKIP  $name")
+    printf '\n----- %s skipped -----\n%s\n' "$name" "$(printf '%s' "$out" | tail -6)"
+  elif [ $rc -eq 0 ]; then
     PASS=$((PASS + 1))
     RESULTS+=("PASS  $name")
   else
@@ -70,11 +76,16 @@ fi
 echo
 for r in "${RESULTS[@]}"; do echo "  $r"; done
 echo
-echo "gates: $((PASS + FAIL))  pass $PASS  fail $FAIL"
+echo "gates: $((PASS + FAIL + SKIP))  pass $PASS  fail $FAIL  skip $SKIP"
 
 if [ $FAIL -ne 0 ]; then
   echo
   echo "A failed gate is a false statement in the repository. Do not proceed to the next phase."
   exit 1
+fi
+if [ $SKIP -ne 0 ]; then
+  echo
+  echo "Skipped gates could not run here. That is not the same as passing: it means part of this repo"
+  echo "was not checked. The usual cause is a missing companion repo."
 fi
 exit 0

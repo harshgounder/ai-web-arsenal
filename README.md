@@ -317,6 +317,39 @@ The whole loop is four data structures, all checkable:
 
 ---
 
+## What a fresh clone can do
+
+Tested, not assumed. A checkout with no companion repo beside it passes eight of ten gates and **skips
+two with a stated reason**, rather than failing:
+
+```
+gates: 10  pass 8  fail 0  skip 2
+
+Skipped gates could not run here. That is not the same as passing: it means part of this repo
+was not checked. The usual cause is a missing companion repo.
+```
+
+An environment problem reported as a repository problem is the most expensive kind of false alarm,
+because it teaches people to ignore the gate. So `scripts/preflight.py` checks the four things that are
+actually environmental and prints the exact command for each:
+
+```bash
+python3 scripts/preflight.py
+```
+
+| check | needed for |
+|---|---|
+| python 3.10 or newer | everything |
+| companion repo beside this one | pattern search, mutation generation, four claims |
+| raw harvest in `raw/` | a from-scratch corpus rebuild only, not validation |
+| `gh` authenticated | re-running capability mining only |
+
+One dependency is outside both repos and is stated rather than hidden: the WSTG and ASVS taxonomy rows are
+read from `~/web-universe-work/universe-nodes.json`, so the 624 of 706 figure cannot be rebuilt from this
+repo alone. The committed `data/taxonomy-coverage.json` stands without it, and preflight reports the gap.
+
+---
+
 ## Quickstart
 
 Two commands to a working toolkit on Arch, CachyOS, EndeavourOS or Manjaro.
