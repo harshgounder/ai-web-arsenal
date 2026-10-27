@@ -14,14 +14,15 @@ when it has a fixture and a test, because an operation with neither is a claim.
 | `hermes.py` | validates a Hermes bundle and reports the header; refuses to walk tables whose offsets move between versions | a header this repo generates |
 | `flutter-aot.py` | parses ELF symbol tables with no dependency, locates the four Dart snapshots, reports the Dart version, refuses to deserialise | a shared object gcc compiles at test time |
 | `sw-recover.py` | reads a CDP or HAR capture, lists registrations and caches, classifies each entry as principal bound and shared | a capture this repo writes, in both shapes |
+| `signing-recover.py` | ranks signature construction sites in a bundle by independent signal groups, with the evidence for each, and calls out cache and etag decoys | a bundle this repo writes, with a real signer and two decoys |
 
 Run the tests:
 
 ```bash
-python3 rea-ops/test-ops.py      # 78 checks
+python3 rea-ops/test-ops.py      # 86 checks
 ```
 
-Six of ten gaps closed, three partial. What each one states plainly rather than implying:
+Six of ten gaps closed, four partial, none open. What each one states plainly rather than implying:
 
 - **`wxapkg.py` has not been validated against a real WeChat package.** Published descriptions of the
   format disagree on header width across versions, and no real sample was available here.

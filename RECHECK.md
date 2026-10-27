@@ -305,7 +305,7 @@ D31 named ten gaps and none were built. Two now are, each with a fixture and a t
 | `rea-ops/hermes.py` | validates a Hermes bundle, reports the header, warns on an unknown version | 6 fixture checks | header only: the tables are deliberately not walked |
 | `rea-ops/flutter-aot.py` | parses ELF symbol and dynamic tables with no dependency, locates the four Dart snapshots, reports the embedded version | 7 fixture checks | identifies, does not deserialise |
 
-Six are fully built, three are partial, one remains. Tests went from 18 to 71 checks.
+Six are fully built and four are partial. None is open any more. Tests went from 18 to 71 checks.
 
 Flutter AOT is the second partial, and its fixture is the strongest in the set: gcc compiles a real shared
 object at test time with the four snapshot symbols, so the parser is validated against a real toolchain
@@ -317,8 +317,12 @@ Service worker reconstruction is the third partial. It parses a CDP or HAR captu
 cached entry by whether it is bound to a principal and shared anyway, which is the attack relevant question.
 It has no CDP transport, so live collection is not implemented and that is stated in the tool.
 
-Only signing recovery remains, and it is heuristic by nature: a fixture for it would only ever prove the
-fixture.
+Signing recovery is the fourth partial, and it is the one I twice called blocked when it was only
+heuristic. It ranks signature construction sites in a bundle by independent signal groups and shows the
+evidence, and its fixture is a bundle with a real signer between two decoys so that the ranking has to
+earn itself. The first version failed that fixture: it merged the whole bundle into one region and let an
+etag helper sink the real signer. Anchoring on the crypto call, then letting a decoy vote only when it
+consumes that call, fixed it.
 
 The partial is Hermes, and it is partial on purpose. The header fields sit at offsets that have been
 stable for a long time, so reading them is safe and answers the triage question: is this Hermes, which

@@ -570,6 +570,57 @@ def test_sw(tmp):
     check("sw-recover: rejects an unknown shape with a reason", rc == 2 and "not a CDP" in err)
 
 
+BUNDLE = """
+(function(){
+  var e = require("crypto");
+  function t(n){ return e.createHash("sha256").update(n).digest("hex"); }
+  function cacheKey(u){ return "ck_" + t(u); }
+  var etag = t(document.body.innerHTML);
+  function sign(params, appSecret){
+    var msg = Object.keys(params).sort().map(function(k){ return k + "=" + params[k]; }).join("&")
+      + "&ts=" + Date.now();
+    return e.createHmac("sha256", appSecret).update(msg).digest("base64");
+  }
+  function call(params){
+    var s = sign(params, window.__SECRET);
+    return fetch("/api/v1/orders", { headers: { "X-Signature": s }});
+  }
+})();
+"""
+
+
+def test_signing(tmp):
+    js = tmp / "bundle.js"
+    js.write_text(BUNDLE)
+    rc, out, err = run([str(HERE / "signing-recover.py"), str(js), "--json"])
+    d = parse_json(out)
+    cands = d.get("candidates") or []
+    check("signing-recover: finds candidates", rc == 0 and len(cands) >= 2, err[:80])
+    check("signing-recover: the hmac signer ranks first",
+          bool(cands) and "strong" in cands[0]["verdict"] and "hmac" in " ".join(cands[0]["groups"]),
+          cands[0]["verdict"] if cands else "none")
+    check("signing-recover: the etag helper is called out as a decoy",
+          any("decoy" in c["groups"] for c in cands))
+    check("signing-recover: the decoy ranks below the signer",
+          all(c["score"] < cands[0]["score"] for c in cands[1:]))
+    check("signing-recover: every candidate carries evidence",
+          all(c.get("evidence") for c in cands))
+    check("signing-recover: says it is candidates, not a recovered algorithm",
+          "not a recovered algorithm" in (d.get("method") or ""))
+
+    # a bundle with no crypto at all must say so, and say why that is not proof of absence
+    plain = tmp / "plain.js"
+    plain.write_text("function add(a,b){ return a+b; }" + " " * 200)
+    rc, out, err = run([str(HERE / "signing-recover.py"), str(plain)])
+    check("signing-recover: an empty result explains itself", rc == 0 and "not proof" in out)
+
+    # too small to be a bundle is a different answer from nothing found
+    tiny = tmp / "tiny.js"
+    tiny.write_text("var a=1;")
+    rc, out, err = run([str(HERE / "signing-recover.py"), str(tiny)])
+    check("signing-recover: refuses a file too small to be a bundle", rc == 2 and "too small" in err)
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -591,6 +642,8 @@ def main():
         test_flutter(tmp)
         print("sw-recover.py")
         test_sw(tmp)
+        print("signing-recover.py")
+        test_signing(tmp)
     print(f"\nfixtures: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
     if FAIL:
         for f in FAIL:

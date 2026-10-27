@@ -955,7 +955,10 @@
   {
    "gap": "No request signing recovery from obfuscated JS",
    "class": "no-tool",
-   "build_candidate": "locate the signing function, lift it, and test replayed signatures against a control"
+   "build_candidate": "locate the signing function, lift it, and test replayed signatures against a control",
+   "status": "partial",
+   "built_at": "rea-ops/signing-recover.py",
+   "built_note": "ranks signature construction sites by independent signal groups and shows the evidence for each. Returns candidates, never a recovered algorithm. The algorithm itself is not recovered."
   },
   {
    "gap": "Source map recovery when the map is absent",
