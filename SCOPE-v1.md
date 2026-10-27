@@ -101,7 +101,8 @@ Seven structural defects that repeat across all of them:
 
 DECIDED 2026-10-26: the atlas is a **separate repo**, `web-attack-atlas`. This repo keeps tools,
 installs, drivers, MCP wiring, REA, the corpus and the reconciliation ledger. That repo keeps atoms,
-patterns, preconditions, oracles, chains, playbooks and counters. Join key is `entry_id`.
+patterns, preconditions, oracles, chains, playbooks and counters. They join at wave granularity, not
+by pattern id: see `RECHECK.md` section 6s for the measurement.
 
 The grammar lives there, at `web-attack-atlas/docs/ONTOLOGY.md`:
 
