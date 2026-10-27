@@ -1,24 +1,23 @@
 {
  "source": "own-byok-cyber-arsenal",
  "rows": 1580,
- "admitted": 1004,
- "excluded": 511,
- "held": 65,
+ "admitted": 1040,
+ "excluded": 476,
+ "held": 64,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 304,
-  "OUT_OF_SCOPE_NONWEB": 35,
   "KNOWLEDGE_NOT_TOOL": 114,
   "IMAGE_NOT_ENTRY": 3,
   "SOCIAL_OR_VIDEO": 48,
   "MCP_NON_SECURITY": 7,
-  "UNCLASSIFIED_LOW_SIGNAL": 65
+  "UNCLASSIFIED_LOW_SIGNAL": 64
  },
  "unique_entries": {
-  "admit": 778,
-  "exclude": 427,
+  "admit": 800,
+  "exclude": 405,
   "hold": 64
  },
  "identity_holds": true,
@@ -26,11 +25,6 @@
   {
    "name": "velociraptor",
    "url": "https://github.com/Velocidex/velociraptor",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "patator>",
-   "url": "https://github.com/lanjelot/patator",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -66,6 +60,11 @@
   {
    "name": "BinText",
    "url": "https://web.archive.org/web/http://www.mcafee.com/kr/downloads/free-tools/bintext.aspx",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Binary Exploitation: Buffer Overflows",
+   "url": "https://blog.usejournal.com/binary-exploitation-buffer-overflows-a9dc63e8b546",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {

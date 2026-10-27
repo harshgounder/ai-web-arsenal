@@ -342,7 +342,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Muhammed-AbdelGhany/restapimcp",
+   "name": "Muhammed-AbdelGhany/rest_api_mcp",
    "url": "https://github.com/Muhammed-AbdelGhany/rest_api_mcp",
    "tier": "adjacent",
    "n_sources": 1,
@@ -372,7 +372,7 @@
   {
    "name": "OWASP API Security Top 10 Checklist",
    "url": "https://www.owasp.org/images/7/76/API_Security_Checklist.pdf",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -498,7 +498,7 @@
   {
    "name": "The Privacy, Security, & OSINT Show",
    "url": "https://inteltechniques.com/podcast.html",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -519,7 +519,7 @@
   {
    "name": "UUSEC WAF",
    "url": "https://github.com/Safe3/uusec-waf/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -741,9 +741,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "graphqlbeautifier",
+   "name": "graphql_beautifier",
    "url": "https://github.com/zidekmat/graphql_beautifier",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -855,7 +855,7 @@
   {
    "name": "shapeshifter",
    "url": "https://github.com/szski/shapeshifter",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

@@ -162,7 +162,7 @@
   {
    "name": "XSSOauthPersistence",
    "url": "https://github.com/dxa4481/XSSOauthPersistence",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -279,7 +279,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "wenb1n-dev/SmartDBMCP",
+   "name": "wenb1n-dev/SmartDB_MCP",
    "url": "https://github.com/wenb1n-dev/SmartDB_MCP",
    "tier": "adjacent",
    "n_sources": 1,

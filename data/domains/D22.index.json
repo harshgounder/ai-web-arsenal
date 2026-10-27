@@ -50,7 +50,7 @@
   {
    "name": "AvalZ/waf-a-mole",
    "url": "https://github.com/AvalZ/waf-a-mole",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -64,7 +64,7 @@
   {
    "name": "BunkerWeb",
    "url": "https://github.com/bunkerity/bunkerweb",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -78,7 +78,7 @@
   {
    "name": "Bypass bot detection",
    "url": "https://github.com/portswigger/bypass-bot-detection",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -120,7 +120,7 @@
   {
    "name": "ModSecurity",
    "url": "https://www.github.com/SpiderLabs/ModSecurity",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -169,7 +169,7 @@
   {
    "name": "UUSEC WAF",
    "url": "https://github.com/Safe3/uusec-waf/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -267,21 +267,21 @@
   {
    "name": "ja3.me JA3 lookup",
    "url": "https://ja3.me/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "waf-testing-framework>",
    "url": "https://github.com/coreruleset/waf-testing-framework",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "wafw00f PyPI distribution",
    "url": "https://pypi.org/project/wafw00f/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

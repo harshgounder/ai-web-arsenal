@@ -15,21 +15,21 @@
   {
    "name": "JWT Cracker",
    "url": "https://github.com/lmammino/jwt-cracker",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "c-jwt-cracker>",
    "url": "https://github.com/brendan-rius/c-jwt-cracker",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "jwt-hack CLI",
    "url": "https://github.com/hahwul/jwt-hack",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -92,7 +92,7 @@
   {
    "name": "Trufflehog-Chrome-Extension",
    "url": "https://github.com/trufflesecurity/Trufflehog-Chrome-Extension",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -104,7 +104,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "hatecrack",
+   "name": "hate_crack",
    "url": "https://github.com/trustedsec/hate_crack",
    "tier": "tail",
    "n_sources": 1,
@@ -148,7 +148,7 @@
   {
    "name": "jwtear",
    "url": "https://github.com/KINGSABRI/jwtear",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -162,7 +162,7 @@
   {
    "name": "rusty-hog",
    "url": "https://github.com/newrelic/rusty-hog",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   }

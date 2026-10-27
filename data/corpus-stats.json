@@ -1,30 +1,30 @@
 {
  "generated_at": "2026-10-27",
  "rows_parsed": 27787,
- "entries_canonical": 21384,
+ "entries_canonical": 21378,
  "unresolved_rows": 3,
  "tiers": {
-  "core_web": 475,
-  "adjacent": 15788,
-  "offscope": 343,
-  "knowledge": 824,
-  "tail": 3954
+  "core_web": 694,
+  "adjacent": 15848,
+  "knowledge": 826,
+  "tail": 3986,
+  "offscope": 24
  },
  "kinds": {
-  "tool": 8848,
+  "tool": 8840,
   "taxonomy_node": 11712,
-  "social": 577,
+  "social": 579,
   "knowledge": 247
  },
  "domains": {
-  "unclassified": 11917,
+  "unclassified": 11909,
   "D28": 4383,
   "D08": 683,
-  "D10": 676,
+  "D10": 677,
   "D02": 637,
   "D24": 634,
   "D17": 287,
-  "D22": 262,
+  "D22": 263,
   "D26": 212,
   "D19": 187,
   "D11": 185,
@@ -48,12 +48,12 @@
   "D09": 17,
   "D01": 10
  },
- "unique_to_one_source": 20841,
- "multi_source_ge2": 543,
+ "unique_to_one_source": 20828,
+ "multi_source_ge2": 550,
  "split": {
-  "tools": 8848,
+  "tools": 8840,
   "taxonomy": 11712,
-  "other": 824
+  "other": 826
  },
  "per_source": {
   "0xinfection__awesome-waf": {

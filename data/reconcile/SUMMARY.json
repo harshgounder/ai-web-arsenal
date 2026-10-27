@@ -2,21 +2,21 @@
  "generated_at": "2026-10-26",
  "sources": 22,
  "rows_total": 31298,
- "admitted": 13516,
- "excluded": 17506,
- "held": 204,
- "orphan": 71,
+ "admitted": 13970,
+ "excluded": 17053,
+ "held": 199,
+ "orphan": 75,
  "unresolved": 1,
  "identity_holds": true,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 12009,
   "IMAGE_NOT_ENTRY": 3439,
   "SOCIAL_OR_VIDEO": 930,
-  "OUT_OF_SCOPE_NONWEB": 479,
   "KNOWLEDGE_NOT_TOOL": 329,
-  "MCP_NON_SECURITY": 320,
-  "UNCLASSIFIED_LOW_SIGNAL": 204,
-  "not_in_corpus": 71
+  "MCP_NON_SECURITY": 321,
+  "UNCLASSIFIED_LOW_SIGNAL": 199,
+  "not_in_corpus": 75,
+  "OUT_OF_SCOPE_NONWEB": 25
  },
  "per_source": {
   "0xinfection__awesome-waf": {
@@ -29,88 +29,88 @@
   },
   "arainho__awesome-api-security": {
    "rows": 227,
-   "admitted": 173,
-   "excluded": 52,
-   "held": 2,
+   "admitted": 179,
+   "excluded": 48,
+   "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "carpedm20__awesome-hacking": {
    "rows": 201,
-   "admitted": 131,
-   "excluded": 25,
-   "held": 45,
+   "admitted": 146,
+   "excluded": 7,
+   "held": 48,
    "orphan": 0,
    "identity_holds": true
   },
   "devanshbatham__awesome-bugbounty-writeups": {
    "rows": 620,
-   "admitted": 260,
-   "excluded": 335,
+   "admitted": 265,
+   "excluded": 330,
    "held": 25,
    "orphan": 0,
    "identity_holds": true
   },
   "enablesecurity__awesome-rtc-hacking": {
    "rows": 108,
-   "admitted": 58,
-   "excluded": 50,
+   "admitted": 82,
+   "excluded": 26,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "enaqx__awesome-pentest": {
    "rows": 618,
-   "admitted": 480,
-   "excluded": 105,
-   "held": 33,
+   "admitted": 527,
+   "excluded": 56,
+   "held": 35,
    "orphan": 0,
    "identity_holds": true
   },
   "hack-with-github__awesome-hacking": {
    "rows": 83,
-   "admitted": 64,
-   "excluded": 10,
+   "admitted": 71,
+   "excluded": 3,
    "held": 9,
    "orphan": 0,
    "identity_holds": true
   },
   "infoslack__awesome-web-hacking": {
    "rows": 42,
-   "admitted": 29,
-   "excluded": 6,
+   "admitted": 35,
+   "excluded": 0,
    "held": 7,
    "orphan": 0,
    "identity_holds": true
   },
   "jbahire__awesome-api-security-essentials": {
    "rows": 191,
-   "admitted": 106,
-   "excluded": 83,
+   "admitted": 123,
+   "excluded": 66,
    "held": 0,
    "orphan": 2,
    "identity_holds": true
   },
   "marchev__awesome-ai-web3-security": {
    "rows": 62,
-   "admitted": 53,
-   "excluded": 9,
+   "admitted": 61,
+   "excluded": 1,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "own-byok-cyber-arsenal": {
    "rows": 1580,
-   "admitted": 1004,
-   "excluded": 511,
-   "held": 65,
+   "admitted": 1040,
+   "excluded": 476,
+   "held": 64,
    "orphan": 0,
    "identity_holds": true
   },
   "own-rea-expansion": {
    "rows": 687,
-   "admitted": 679,
-   "excluded": 8,
+   "admitted": 682,
+   "excluded": 5,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
@@ -133,57 +133,57 @@
   },
   "punkpeye__awesome-mcp-servers": {
    "rows": 11777,
-   "admitted": 7921,
-   "excluded": 3789,
+   "admitted": 7959,
+   "excluded": 3747,
    "held": 0,
-   "orphan": 67,
+   "orphan": 71,
    "identity_holds": true
   },
   "qazbnm456__awesome-web-security": {
    "rows": 2262,
-   "admitted": 1614,
-   "excluded": 648,
+   "admitted": 1791,
+   "excluded": 471,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "randomadversary__awesome-ai-security": {
    "rows": 97,
-   "admitted": 36,
-   "excluded": 61,
+   "admitted": 41,
+   "excluded": 56,
    "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "skyvanguard__awesome-ai-pentesting": {
    "rows": 197,
-   "admitted": 160,
-   "excluded": 36,
+   "admitted": 169,
+   "excluded": 27,
    "held": 1,
    "orphan": 0,
    "identity_holds": true
   },
   "spinov001-art__awesome-security-tools-2026": {
    "rows": 125,
-   "admitted": 83,
-   "excluded": 36,
+   "admitted": 100,
+   "excluded": 19,
    "held": 4,
    "orphan": 2,
    "identity_holds": true
   },
   "tupletype__awesome-cicd-attacks": {
    "rows": 89,
-   "admitted": 66,
-   "excluded": 21,
-   "held": 2,
+   "admitted": 81,
+   "excluded": 8,
+   "held": 0,
    "orphan": 0,
    "identity_holds": true
   },
   "vavkamil__awesome-bugbounty-tools": {
    "rows": 410,
-   "admitted": 389,
-   "excluded": 15,
-   "held": 6,
+   "admitted": 408,
+   "excluded": 1,
+   "held": 1,
    "orphan": 0,
    "identity_holds": true
   },

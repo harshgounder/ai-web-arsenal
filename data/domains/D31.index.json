@@ -13,6 +13,27 @@
    "status": "PROMOTABLE"
   },
   {
+   "name": "",
+   "url": "https://github.com/0sec-labs/0",
+   "tier": "core_web",
+   "n_sources": 2,
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "",
+   "url": "https://github.com/morluto/rea",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "",
+   "url": "https://github.com/symgraph/IDAssist",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "PROMOTABLE"
+  },
+  {
    "name": "Decompiler.com",
    "url": "https://www.decompiler.com/",
    "tier": "tail",
@@ -22,7 +43,7 @@
   {
    "name": "Hopper",
    "url": "https://www.hopperapp.com",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -43,7 +64,7 @@
   {
    "name": "radare2",
    "url": "https://github.com/radare/radare2",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -52,13 +73,6 @@
    "url": "https://github.com/zinja-coder/apktool-mcp-server",
    "tier": "adjacent",
    "n_sources": 2,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "0",
-   "url": "https://github.com/0sec-labs/0",
-   "tier": "adjacent",
-   "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
@@ -113,28 +127,21 @@
   {
    "name": "Ghidra",
    "url": "https://github.com/NationalSecurityAgency/ghidra",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Ghidra MCP",
    "url": "https://github.com/bethington/ghidra-mcp",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "How To Reverse Engineer A Web Application Firewall Using Regular Expression Reversing",
    "url": "https://www.sunnyhoi.com/reverse-engineer-web-application-firewall-using-regular-expression-reversing/",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "IDAssist",
-   "url": "https://github.com/symgraph/IDAssist",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -148,7 +155,7 @@
   {
    "name": "Iait\u014d",
    "url": "https://github.com/hteso/iaito",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -230,16 +237,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "REA",
-   "url": "https://github.com/morluto/rea",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "Radare2",
    "url": "https://github.com/radareorg/radare2",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -274,7 +274,7 @@
   {
    "name": "TRRespass",
    "url": "https://github.com/vusec/trrespass",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -323,7 +323,7 @@
   {
    "name": "jtang613/GhidrAssistMCP",
    "url": "https://github.com/jtang613/GhidrAssistMCP",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

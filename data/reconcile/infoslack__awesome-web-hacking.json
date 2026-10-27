@@ -1,19 +1,18 @@
 {
  "source": "infoslack__awesome-web-hacking",
  "rows": 42,
- "admitted": 29,
- "excluded": 6,
+ "admitted": 35,
+ "excluded": 0,
  "held": 7,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 6,
   "UNCLASSIFIED_LOW_SIGNAL": 7
  },
  "unique_entries": {
-  "admit": 29,
-  "exclude": 6,
+  "admit": 35,
+  "exclude": 0,
   "hold": 7
  },
  "identity_holds": true,

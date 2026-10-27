@@ -36,7 +36,7 @@
   {
    "name": "Hacking Terraform State for Privilege Escalation",
    "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -99,14 +99,14 @@
   {
    "name": "Vulnerable GitHub Actions Workflows Part 1: Privilege Escalation Inside Your CI/CD Pipeline",
    "url": "https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "WinPwn",
    "url": "https://github.com/SecureThisShit/WinPwn",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

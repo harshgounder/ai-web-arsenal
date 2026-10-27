@@ -220,6 +220,13 @@ def main():
             except Exception:
                 continue
             url = o.get("url") or o.get("html_url") or o.get("repo")
+            # This source stores a bare owner/repo in whichever field it found first. canon() only
+            # understands URLs, so a bare slug passed through unchanged and became a key of "owner/repo"
+            # while the corpus builder expanded the same value to https://github.com/owner/repo and keyed
+            # it as gh:owner/repo. 686 rows were then orphans: present in both files, matched in neither.
+            # Expanding here, with the same rule the builder uses, is what makes the two ends agree.
+            if url and "://" not in url and re.match(r"^[\w.-]+/[\w.-]+$", url):
+                url = "https://github.com/" + url
             rows.append({"source": "own-rea-expansion", "source_type": "own",
                          "section": o.get("topic") or o.get("category") or "rea-expansion",
                          "name": clean_name(str(o.get("name") or o.get("full_name") or "")),

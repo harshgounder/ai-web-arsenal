@@ -3,12 +3,12 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 12,
- "indexed_not_enriched": 35,
+ "indexed_not_enriched": 34,
  "entries": [
   {
    "name": "IntruderPayloads>",
    "url": "https://github.com/1N3/IntruderPayloads",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -106,14 +106,7 @@
   {
    "name": "Pompelmi",
    "url": "https://github.com/pompelmi/pompelmi",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Proxmark3",
-   "url": "https://proxmark3.com/",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -190,7 +183,7 @@
   {
    "name": "liffier",
    "url": "https://github.com/momenbasel/liffier",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -204,7 +197,7 @@
   {
    "name": "liffy",
    "url": "https://github.com/mzfr/liffy",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -218,7 +211,7 @@
   {
    "name": "mass-s3-bucket-tester",
    "url": "https://github.com/random-robbie/mass-s3-bucket-tester",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

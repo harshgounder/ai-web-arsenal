@@ -98,7 +98,7 @@ Goal marked complete on round 40/40. **"Definitive" was not achieved and the REA
 ## 5. What is actually done
 
 ```
-corpus          21,384 rows, of which 8,848 are tools (8,692 identities); 9,671 carry a real URL (1 row holds an unparseable slug)
+corpus          21,378 rows, of which 8,840 are tools (8,684 identities); 9,665 carry a real URL; reconciliation 13,970 admitted, 17,053 excluded, 75 orphan
                 the other rows: 11,712 taxonomy nodes, 577 social, 247 knowledge. 19 sources
 reconcile       31,298 rows = 13,516 admitted + 17,506 excluded + 204 held + 71 orphan + 1 unresolved
                 identity holds per source and in aggregate, every term named
@@ -844,7 +844,7 @@ figure stands. What is unreliable is the per entry atom field, and it is now lab
 
 ---
 
-## 6y. External audit part 1 and 2: what was fixed, and what a rebuild is blocked on
+## 6y. External audit part 1, 2 and 3: what was fixed, and what a rebuild is blocked on
 
 Eleven findings verified against the code. Seven fixed here. Four need a full pipeline rebuild and are
 not shipped, because the rebuild produced a delta I could not fully explain in one pass.
@@ -879,6 +879,34 @@ The orphan delta is the first thing to explain when that runs. The likely cause 
 audit: reconciliation reimplements a subset of the builder's badge and canonical logic instead of calling
 it, so any change to canonisation moves rows between `excluded` and `orphan` without moving them between
 correct and incorrect.
+
+---
+
+## 6z. The rebuild that was blocked is now done, and every delta is explained
+
+The previous entry reverted a corpus rebuild because orphans went from 71 to 761 and I could not account
+for it. The cause turned out to be exactly what the audit predicted: **two components canonicalising the
+same value differently.**
+
+`own-rea-expansion` stores a bare `owner/repo` in its url field. `parse-sources.py` passed it through
+`canon()`, which only understands URLs, so the key became `morluto/rea`. `build-corpus.py` expanded the
+same value to a GitHub URL and keyed it `gh:morluto/rea`. 686 rows were present in both files and matched in
+neither. Fixing the builder alone made it worse, which is why the first rebuild looked broken.
+
+The fix is one rule applied at both ends: expand a bare slug before canonicalising. Then the whole chain
+rebuilt coherently:
+
+| figure | before | after | why |
+|---|---|---|---|
+| canon entries | 21,384 | 21,378 | tracking-parameter variants now collapse correctly instead of surviving as distinct keys |
+| tool rows | 8,848 | 8,840 | 8 badge and duplicate rows correctly merged |
+| rows with a URL | 9,671 | 9,665 | same merges |
+| admitted | 13,516 | 13,970 | 454 rows were being excluded as off scope on false substring matches |
+| excluded | 17,506 | 17,053 | those 454 rows, plus the false matches |
+| orphan | 71 | 75 | four rows whose keys legitimately changed with case preservation |
+
+Tier movement from the same run: `offscope` 343 to 24, `core_web` 475 to 694. Both are the fixes working,
+not drift.
 
 ---
 

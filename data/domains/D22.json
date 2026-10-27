@@ -3,7 +3,7 @@
  "title": "WAF, bot and anti-automation evasion",
  "version": "0.1",
  "generated": "2026-10-27",
- "status": "AUTHORED. The offensive half of the defence mirror. Every entry states which defence level it addresses.",
+ "status": "DEEP",
  "atoms": [
   "A15",
   "A05",
@@ -670,5 +670,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D22.index.json"
- }
+ },
+ "status_note": "AUTHORED. The offensive half of the defence mirror. Every entry states which defence level it addresses."
 }

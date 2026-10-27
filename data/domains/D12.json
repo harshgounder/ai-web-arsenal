@@ -3,7 +3,7 @@
  "title": "Business logic, races, money paths",
  "version": "0.1",
  "generated": "2026-10-27",
- "status": "AUTHORED. The domain no scanner can reach, because the bug is that the code does exactly what it says.",
+ "status": "DEEP",
  "atoms": [
   "A10",
   "A12",
@@ -358,5 +358,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D12.index.json"
- }
+ },
+ "status_note": "AUTHORED. The domain no scanner can reach, because the bug is that the code does exactly what it says."
 }

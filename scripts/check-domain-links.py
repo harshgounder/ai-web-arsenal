@@ -76,6 +76,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only-missing", action="store_true")
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--strict", action="store_true",
+                    help="exit 1 if any link is DEAD, ERROR or TIMEOUT. BLOCKED never fails.")
     args = ap.parse_args()
 
     wanted = collect()
@@ -127,6 +129,12 @@ def main():
         print(f"\n{len(bad)} need a look:")
         for u in bad[:15]:
             print(f"  {results[u]['status']:8} {u}")
+    # A report that finds dead links and exits 0 is a report, not a gate. The default stays 0 so the
+    # checker can run mid-session without blocking work, but strict mode fails, and says which statuses
+    # caused it. BLOCKED is never a failure: the site exists and refuses us, which is a different fact.
+    if bad and args.strict:
+        print(f"\nstrict: {len(bad)} dead, error or timeout link(s). Failing.", file=sys.stderr)
+        return 1
     return 0
 
 

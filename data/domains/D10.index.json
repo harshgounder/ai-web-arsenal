@@ -43,7 +43,7 @@
   {
    "name": "The Monsters in Your Build Cache \u2013 GitHub Actions Cache Poisoning",
    "url": "https://adnanthekhan.com/2024/05/06/the-monsters-in-your-build-cache-github-actions-cache-poisoning/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -71,21 +71,21 @@
   {
    "name": "cdncheck",
    "url": "https://github.com/projectdiscovery/cdncheck",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "cut-cdn",
    "url": "https://github.com/ImAyrix/cut-cdn",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "getJS",
    "url": "https://github.com/003random/getJS",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -99,14 +99,14 @@
   {
    "name": "toxicache",
    "url": "https://github.com/xhzeem/toxicache",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "verifyfetch",
    "url": "https://github.com/hamzaydia/verifyfetch",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   }

@@ -6,9 +6,16 @@
  "indexed_not_enriched": 37,
  "entries": [
   {
+   "name": "",
+   "url": "https://github.com/scadastrangelove/rust-in-peace",
+   "tier": "adjacent",
+   "n_sources": 2,
+   "status": "PROMOTABLE"
+  },
+  {
    "name": "Bug Bounty",
    "url": "https://github.com/djadmin/awesome-bug-bounty",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -22,7 +29,7 @@
   {
    "name": "AiSOC",
    "url": "https://github.com/beenuar/AiSOC",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -113,7 +120,7 @@
   {
    "name": "SSD Advisory \u2013 Chrome Turbofan Remote Code Execution",
    "url": "https://blogs.securiteam.com/index.php/archives/3379",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -169,7 +176,7 @@
   {
    "name": "Web Application Security Assessment Report Template",
    "url": "http://lucideus.com/pdf/stw.pdf",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -195,14 +202,14 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "cwechecker",
+   "name": "cwe_checker",
    "url": "https://github.com/fkie-cad/cwe_checker",
    "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
-   "name": "dsstoreexp",
+   "name": "ds_store_exp",
    "url": "https://github.com/lijiejie/ds_store_exp",
    "tier": "adjacent",
    "n_sources": 1,
@@ -239,13 +246,6 @@
   {
    "name": "neufagents/mcp-triage",
    "url": "https://github.com/neufagents/mcp-triage",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "rust-in-peace",
-   "url": "https://github.com/scadastrangelove/rust-in-peace",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"

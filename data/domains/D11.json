@@ -3,7 +3,7 @@
  "title": "API protocols: REST, GraphQL, gRPC",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "TEMPLATE SLICE. This domain is the reference format for the other 36.",
+ "status": "DEEP",
  "why_this_domain_first": "It exercises every layer of the design: capture, schema recovery, hypothesis, test, oracle, defense. If the format works here it works everywhere.",
  "atoms": [
   "A01",
@@ -1614,5 +1614,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "Entries from the corpus that mention API but were not enriched for this slice are listed in data/domains/D11.index.json, not here. The gap between indexed and enriched is reported, never hidden."
- }
+ },
+ "status_note": "TEMPLATE SLICE. This domain is the reference format for the other 36."
 }

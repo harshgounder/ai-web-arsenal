@@ -78,7 +78,7 @@
   {
    "name": "aurumflux20/seal",
    "url": "https://github.com/aurumflux20/seal",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -148,14 +148,14 @@
   {
    "name": "racepwn",
    "url": "https://github.com/racepwn/racepwn",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "requests-racer",
    "url": "https://github.com/nccgroup/requests-racer",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

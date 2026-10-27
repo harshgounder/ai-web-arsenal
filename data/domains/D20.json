@@ -3,7 +3,7 @@
  "title": "Agent, MCP and skill attacks",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. The surface where the attacker and the tooling share a protocol. Technique layer W12 queued.",
+ "status": "DEEP",
  "atoms": [
   "A16",
   "A02",
@@ -494,5 +494,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D20.index.json"
- }
+ },
+ "status_note": "AUTHORED. The surface where the attacker and the tooling share a protocol. Technique layer W12 queued."
 }

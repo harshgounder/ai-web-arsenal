@@ -44,8 +44,10 @@ def main():
     problems = []
     files = sorted((ROOT / "data" / "domains").glob("D*.json"))
     files = [f for f in files if not f.stem.endswith(".index")]
+    all_doms = []
     for f in files:
         d = json.load(open(f))
+        all_doms.append(d)
         did = d.get("id", f.stem)
         if not d.get("atoms"): problems.append(f"{did}: no atoms")
         for a in d.get("atoms", []):
@@ -78,6 +80,13 @@ def main():
             if not e.get("url"): problems.append(f"{did}/{eid}: no url")
             if e.get("stage") in ("L06", "L07", "L08") and not e.get("oracle") and e.get("agency") != "A0":
                 problems.append(f"{did}/{eid}: probing or exploit entry with no oracle")
+    # This call was lost twice. The first time the replacement string did not match and str.replace
+    # returned the original silently, so the function existed and never ran while the run printed success.
+    # assert on the anchor is how that stops happening.
+    scope = atom_scope_problems(all_doms)
+    if scope:
+        print(f"note: {len(scope)} entry atom(s) sit outside their domain's declared set. Measured and "
+              f"pinned by C134, not failed, because deciding which side is wrong for each needs review.")
     print(f"checked {len(files)} domain files")
     if problems:
         print(f"VIOLATIONS: {len(problems)}")

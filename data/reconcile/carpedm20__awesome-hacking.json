@@ -1,22 +1,22 @@
 {
  "source": "carpedm20__awesome-hacking",
  "rows": 201,
- "admitted": 131,
- "excluded": 25,
- "held": 45,
+ "admitted": 146,
+ "excluded": 7,
+ "held": 48,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "SOCIAL_OR_VIDEO": 3,
-  "OUT_OF_SCOPE_NONWEB": 21,
-  "UNCLASSIFIED_LOW_SIGNAL": 45,
-  "KNOWLEDGE_NOT_TOOL": 1
+  "UNCLASSIFIED_LOW_SIGNAL": 48,
+  "KNOWLEDGE_NOT_TOOL": 1,
+  "OUT_OF_SCOPE_NONWEB": 3
  },
  "unique_entries": {
-  "admit": 128,
-  "exclude": 25,
-  "hold": 44
+  "admit": 143,
+  "exclude": 7,
+  "hold": 47
  },
  "identity_holds": true,
  "held_examples": [
@@ -51,8 +51,18 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
+   "name": "Hopper",
+   "url": "https://www.hopperapp.com",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
    "name": "Wireshark",
    "url": "https://www.wireshark.org/",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "tcpdump",
+   "url": "http://www.tcpdump.org/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
@@ -101,6 +111,11 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
+   "name": "sniffglue",
+   "url": "https://github.com/kpcyrd/sniffglue",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
    "name": "Autopsy",
    "url": "http://www.sleuthkit.org/autopsy/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
@@ -128,21 +143,6 @@
   {
    "name": "HackingLab",
    "url": "https://www.hacking-lab.com/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "CodeEngn",
-   "url": "http://codeengn.com/challenges/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Crackmes.de",
-   "url": "http://crackmes.de/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Hack This Site!",
-   "url": "https://www.hackthissite.org/",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   }
  ]

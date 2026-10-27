@@ -3,7 +3,7 @@
  "title": "Recon and surface mapping",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. Cheap to do correctly because every driver here is already verified in the manifest.",
+ "status": "DEEP",
  "atoms": [
   "A08",
   "A06",
@@ -993,5 +993,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D02.index.json"
- }
+ },
+ "status_note": "AUTHORED. Cheap to do correctly because every driver here is already verified in the manifest."
 }

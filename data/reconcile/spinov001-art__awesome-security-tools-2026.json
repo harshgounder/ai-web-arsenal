@@ -1,8 +1,8 @@
 {
  "source": "spinov001-art__awesome-security-tools-2026",
  "rows": 125,
- "admitted": 83,
- "excluded": 36,
+ "admitted": 100,
+ "excluded": 19,
  "held": 4,
  "orphan": 2,
  "unresolved": 0,
@@ -12,13 +12,12 @@
   "IMAGE_NOT_ENTRY": 1,
   "TAXONOMY_NODE": 16,
   "UNCLASSIFIED_LOW_SIGNAL": 4,
-  "OUT_OF_SCOPE_NONWEB": 17,
   "SOCIAL_OR_VIDEO": 1,
   "KNOWLEDGE_NOT_TOOL": 1
  },
  "unique_entries": {
-  "admit": 83,
-  "exclude": 19,
+  "admit": 99,
+  "exclude": 3,
   "hold": 4
  },
  "identity_holds": true,

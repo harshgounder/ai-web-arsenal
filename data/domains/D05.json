@@ -3,7 +3,7 @@
  "title": "Authorization, tenancy, field-level access",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. Technique layer lives in web-attack-atlas W02 (50 gated patterns). This document is the tooling and the decision path.",
+ "status": "DEEP",
  "atoms": [
   "A02",
   "A03",
@@ -789,5 +789,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D05.index.json"
- }
+ },
+ "status_note": "AUTHORED. Technique layer lives in web-attack-atlas W02 (50 gated patterns). This document is the tooling and the decision path."
 }

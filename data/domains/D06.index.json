@@ -15,21 +15,21 @@
   {
    "name": "JWT Cracker",
    "url": "https://github.com/lmammino/jwt-cracker",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "c-jwt-cracker>",
    "url": "https://github.com/brendan-rius/c-jwt-cracker",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "keyFinder",
    "url": "https://github.com/momenbasel/keyFinder",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -106,7 +106,7 @@
   {
    "name": "GetCacheOverflow/CacheOverflow",
    "url": "https://github.com/GetCacheOverflow/CacheOverflow",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -295,7 +295,7 @@
   {
    "name": "TestMachine",
    "url": "https://testmachine.ai/",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -309,7 +309,7 @@
   {
    "name": "The Monsters in Your Build Cache \u2013 GitHub Actions Cache Poisoning",
    "url": "https://adnanthekhan.com/2024/05/06/the-monsters-in-your-build-cache-github-actions-cache-poisoning/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -351,7 +351,7 @@
   {
    "name": "Windows Credentials Editor",
    "url": "https://www.ampliasecurity.com/research/windows-credentials-editor/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -596,7 +596,7 @@
   {
    "name": "jwtear",
    "url": "https://github.com/KINGSABRI/jwtear",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -785,7 +785,7 @@
   {
    "name": "talisman",
    "url": "https://github.com/thoughtworks/talisman",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

@@ -3,13 +3,20 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 14,
- "indexed_not_enriched": 58,
+ "indexed_not_enriched": 57,
  "entries": [
   {
    "name": "Android Security",
    "url": "https://github.com/ashishb/android-security-awesome",
    "tier": "adjacent",
    "n_sources": 3,
+   "status": "PROMOTABLE"
+  },
+  {
+   "name": "",
+   "url": "https://github.com/scadastrangelove/rust-in-peace",
+   "tier": "adjacent",
+   "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
@@ -22,14 +29,14 @@
   {
    "name": "Hopper",
    "url": "https://www.hopperapp.com",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "MCP Compatible",
    "url": "https://modelcontextprotocol.io/",
-   "tier": "offscope",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -132,16 +139,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "NullKia",
-   "url": "https://github.com/bad-antics/nullkia",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "NullSec Linux",
    "url": "https://github.com/bad-antics/nullsec-linux",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -204,7 +204,7 @@
   {
    "name": "awesome-mobile-security",
    "url": "https://github.com/vaib25vicky/awesome-mobile-security",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -225,7 +225,7 @@
   {
    "name": "cSploit",
    "url": "https://github.com/cSploit/android",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -358,13 +358,6 @@
   {
    "name": "pullkitsan/mobsf-mcp-server",
    "url": "https://github.com/pullkitsan/mobsf-mcp-server",
-   "tier": "adjacent",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "rust-in-peace",
-   "url": "https://github.com/scadastrangelove/rust-in-peace",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"

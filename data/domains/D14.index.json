@@ -15,14 +15,14 @@
   {
    "name": "DNS Rebind Toolkit",
    "url": "https://github.com/brannondorsey/dns-rebind-toolkit",
-   "tier": "offscope",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "Whonow DNS Server",
    "url": "https://github.com/brannondorsey/whonow",
-   "tier": "offscope",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -106,7 +106,7 @@
   {
    "name": "SSRFire",
    "url": "https://github.com/micha3lb3n/SSRFire",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -147,22 +147,22 @@
   },
   {
    "name": "dref",
-   "url": "https://github.com/mwrlabs/dref",
-   "tier": "offscope",
+   "url": "https://github.com/FSecureLABS/dref",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "dref",
-   "url": "https://github.com/FSecureLABS/dref",
-   "tier": "offscope",
+   "url": "https://github.com/mwrlabs/dref",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "extended-ssrf-search",
    "url": "https://github.com/Damian89/extended-ssrf-search",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -197,14 +197,14 @@
   {
    "name": "httprebind",
    "url": "https://github.com/daeken/httprebind",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "lorsrf",
    "url": "https://github.com/knassar702/lorsrf",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -218,7 +218,7 @@
   {
    "name": "sentrySSRF",
    "url": "https://github.com/xawdxawdx/sentrySSRF",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -232,14 +232,14 @@
   {
    "name": "ssrfDetector",
    "url": "https://github.com/JacobReynolds/ssrfDetector",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "surf",
    "url": "https://github.com/assetnote/surf",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   }

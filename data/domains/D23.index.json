@@ -3,7 +3,7 @@
  "generated_at": "2026-10-27",
  "rule": "name+desc only, specific terms, noise excluded",
  "enriched": 9,
- "indexed_not_enriched": 24,
+ "indexed_not_enriched": 20,
  "entries": [
   {
    "name": "VHostScan",
@@ -27,23 +27,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "Awesome Malware",
-   "url": "https://github.com/fabacab/awesome-malware",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
    "name": "Bella",
    "url": "https://github.com/kdaoudieh/Bella",
    "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Empire",
-   "url": "https://github.com/BC-SECURITY/Empire",
-   "tier": "offscope",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -57,14 +43,14 @@
   {
    "name": "Hacking Terraform State for Privilege Escalation",
    "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Hwacha",
    "url": "https://github.com/n00py/Hwacha",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -79,13 +65,6 @@
    "name": "LinEnum",
    "url": "https://github.com/rebootuser/LinEnum",
    "tier": "tail",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "Merlin",
-   "url": "https://github.com/Ne0nd0g/merlin",
-   "tier": "offscope",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -106,21 +85,14 @@
   {
    "name": "Vulnerable GitHub Actions Workflows Part 1: Privilege Escalation Inside Your CI/CD Pipeline",
    "url": "https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "WinPwn",
    "url": "https://github.com/SecureThisShit/WinPwn",
-   "tier": "offscope",
-   "n_sources": 1,
-   "status": "PROMOTABLE"
-  },
-  {
-   "name": "empire",
-   "url": "https://github.com/EmpireProject/Empire",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -141,14 +113,14 @@
   {
    "name": "pivotsuite",
    "url": "https://github.com/RedTeamOperations/PivotSuite",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "redsnarf",
    "url": "https://github.com/nccgroup/redsnarf",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

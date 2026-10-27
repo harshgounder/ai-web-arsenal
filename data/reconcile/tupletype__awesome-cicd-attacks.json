@@ -1,33 +1,21 @@
 {
  "source": "tupletype__awesome-cicd-attacks",
  "rows": 89,
- "admitted": 66,
- "excluded": 21,
- "held": 2,
+ "admitted": 81,
+ "excluded": 8,
+ "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 14,
   "SOCIAL_OR_VIDEO": 7,
-  "UNCLASSIFIED_LOW_SIGNAL": 2
+  "OUT_OF_SCOPE_NONWEB": 1
  },
  "unique_entries": {
-  "admit": 66,
-  "exclude": 21,
-  "hold": 2
+  "admit": 81,
+  "exclude": 8,
+  "hold": 0
  },
  "identity_holds": true,
- "held_examples": [
-  {
-   "name": "Gato",
-   "url": "https://github.com/praetorian-inc/gato",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "zizmor",
-   "url": "https://github.com/zizmorcore/zizmor",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  }
- ]
+ "held_examples": []
 }

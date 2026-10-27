@@ -1,21 +1,20 @@
 {
  "source": "hack-with-github__awesome-hacking",
  "rows": 83,
- "admitted": 64,
- "excluded": 10,
+ "admitted": 71,
+ "excluded": 3,
  "held": 9,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 7,
   "UNCLASSIFIED_LOW_SIGNAL": 9,
   "KNOWLEDGE_NOT_TOOL": 1,
   "SOCIAL_OR_VIDEO": 2
  },
  "unique_entries": {
-  "admit": 64,
-  "exclude": 10,
+  "admit": 71,
+  "exclude": 3,
   "hold": 9
  },
  "identity_holds": true,

@@ -65,6 +65,9 @@ def ok(e):
     if n.startswith("!["): return False
     if len(d) < 12: return False
     if e.get("kind") not in ("tool",): return False
+    # A row the corpus has already classified as off scope is not a promotion candidate. It was written
+    # with status PROMOTABLE anyway, which used the same word as rows that are actually suitable.
+    if e.get("tier") == "offscope": return False
     return True
 
 tot = 0

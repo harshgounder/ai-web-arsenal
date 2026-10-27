@@ -1,19 +1,18 @@
 {
  "source": "marchev__awesome-ai-web3-security",
  "rows": 62,
- "admitted": 53,
- "excluded": 9,
+ "admitted": 61,
+ "excluded": 1,
  "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 8,
   "KNOWLEDGE_NOT_TOOL": 1
  },
  "unique_entries": {
-  "admit": 51,
-  "exclude": 9,
+  "admit": 59,
+  "exclude": 1,
   "hold": 0
  },
  "identity_holds": true,

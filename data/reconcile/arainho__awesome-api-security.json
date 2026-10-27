@@ -1,35 +1,22 @@
 {
  "source": "arainho__awesome-api-security",
  "rows": 227,
- "admitted": 173,
- "excluded": 52,
- "held": 2,
+ "admitted": 179,
+ "excluded": 48,
+ "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "TAXONOMY_NODE": 23,
-  "UNCLASSIFIED_LOW_SIGNAL": 2,
-  "OUT_OF_SCOPE_NONWEB": 4,
   "KNOWLEDGE_NOT_TOOL": 14,
   "SOCIAL_OR_VIDEO": 11
  },
  "unique_entries": {
-  "admit": 165,
-  "exclude": 31,
-  "hold": 2
+  "admit": 171,
+  "exclude": 27,
+  "hold": 0
  },
  "identity_holds": true,
- "held_examples": [
-  {
-   "name": "Keyhacks",
-   "url": "https://github.com/streaak/keyhacks",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "unfurl",
-   "url": "https://github.com/tomnomnom/unfurl",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  }
- ]
+ "held_examples": []
 }

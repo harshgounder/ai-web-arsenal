@@ -22,7 +22,7 @@
   {
    "name": "AWS PENETRATION TESTING PART 2. S3, IAM, EC2",
    "url": "https://www.virtuesecurity.com/aws-penetration-testing-part-2-s3-iam-ec2/",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -64,7 +64,7 @@
   {
    "name": "Hacking Terraform State for Privilege Escalation",
    "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -120,14 +120,14 @@
   {
    "name": "Vulnerable GitHub Actions Workflows Part 1: Privilege Escalation Inside Your CI/CD Pipeline",
    "url": "https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "WinPwn",
    "url": "https://github.com/SecureThisShit/WinPwn",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -251,7 +251,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "samvas-codes/dawshundmcp",
+   "name": "samvas-codes/dawshund_mcp",
    "url": "https://github.com/samvas-codes/dawshund_mcp",
    "tier": "adjacent",
    "n_sources": 1,

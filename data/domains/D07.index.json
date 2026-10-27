@@ -29,7 +29,7 @@
   {
    "name": "bXSS",
    "url": "https://github.com/LewisArdern/bXSS",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -50,7 +50,7 @@
   {
    "name": "xssor2",
    "url": "https://github.com/evilcos/xssor2",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -120,14 +120,14 @@
   {
    "name": "Blinder",
    "url": "https://github.com/mhaskar/Blinder",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "BruteXSS",
    "url": "https://github.com/rajeshmajumdar/BruteXSS",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -155,7 +155,7 @@
   {
    "name": "Claude-Red",
    "url": "https://github.com/SnailSploit/Claude-Red",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -258,7 +258,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "JaviMaligno/postgresmcp",
+   "name": "JaviMaligno/postgres_mcp",
    "url": "https://github.com/JaviMaligno/postgres_mcp",
    "tier": "tail",
    "n_sources": 1,
@@ -295,7 +295,7 @@
   {
    "name": "MySQL Error Based SQL Injection Using EXP",
    "url": "https://www.exploit-db.com/docs/english/37953-mysql-error-based-sql-injection-using-exp.pdf",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -372,7 +372,7 @@
   {
    "name": "SQL Injection Wiki",
    "url": "https://sqlwiki.netspi.com/",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -407,7 +407,7 @@
   {
    "name": "SSRFire",
    "url": "https://github.com/micha3lb3n/SSRFire",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -554,14 +554,14 @@
   {
    "name": "XSSCon",
    "url": "https://github.com/menkrep1337/XSSCon",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "XSSOauthPersistence",
    "url": "https://github.com/dxa4481/XSSOauthPersistence",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -610,7 +610,7 @@
   {
    "name": "Xss-Sql-Fuzz",
    "url": "https://github.com/jiangsir404/Xss-Sql-Fuzz",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -624,7 +624,7 @@
   {
    "name": "andor",
    "url": "https://github.com/sadicann/andor",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -659,14 +659,14 @@
   {
    "name": "domdig",
    "url": "https://github.com/fcavallarin/domdig",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "domxssscanner",
    "url": "https://github.com/yaph/domxssscanner",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -680,7 +680,7 @@
   {
    "name": "femida",
    "url": "https://github.com/wish-i-was/femida",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -692,7 +692,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "genericapicall.pl XSS",
+   "name": "generic_api_call.pl XSS",
    "url": "https://www.exploit-db.com/exploits/30777",
    "tier": "core_web",
    "n_sources": 1,
@@ -771,7 +771,7 @@
   {
    "name": "mssqli-duet",
    "url": "https://github.com/Keramas/mssqli-duet",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -792,7 +792,7 @@
   {
    "name": "nosqli",
    "url": "https://github.com/Charlie-belmer/nosqli",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -804,9 +804,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "oxmlxxe",
+   "name": "oxml_xxe",
    "url": "https://github.com/BuffaloWill/oxml_xxe",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -832,7 +832,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "reporttype XSS",
+   "name": "report_type XSS",
    "url": "https://www.securityfocus.com/bid/27462/info",
    "tier": "core_web",
    "n_sources": 1,
@@ -841,7 +841,7 @@
   {
    "name": "rexsser",
    "url": "https://github.com/profmoriarity/rexsser",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -855,14 +855,14 @@
   {
    "name": "shadow-workers",
    "url": "https://github.com/shadow-workers/shadow-workers",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "sleepy-puppy",
    "url": "https://github.com/Netflix-Skunkworks/sleepy-puppy",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -890,7 +890,7 @@
   {
    "name": "sqliv",
    "url": "https://github.com/the-robot/sqliv",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -904,7 +904,7 @@
   {
    "name": "tomohiro-owada/devrag",
    "url": "https://github.com/tomohiro-owada/devrag",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -918,14 +918,14 @@
   {
    "name": "vaya-ciego-nen",
    "url": "https://github.com/hipotermia/vaya-ciego-nen",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "waybackSqliScanner",
    "url": "https://github.com/ghostlulzhacks/waybackSqliScanner",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -939,14 +939,14 @@
   {
    "name": "xss2png",
    "url": "https://github.com/vavkamil/xss2png",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "xssValidator",
    "url": "https://github.com/nVisium/xssValidator",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -960,7 +960,7 @@
   {
    "name": "xsscrapy",
    "url": "https://github.com/DanMcInerney/xsscrapy",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -972,9 +972,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "xsshunterclient",
+   "name": "xsshunter_client",
    "url": "https://github.com/mandatoryprogrammer/xsshunter_client",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -995,7 +995,7 @@
   {
    "name": "xxexploiter",
    "url": "https://github.com/luisfontes19/xxexploiter",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   }

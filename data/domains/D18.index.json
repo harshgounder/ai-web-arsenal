@@ -92,7 +92,7 @@
   {
    "name": "Understanding typosquatting methods - for a secure supply chain",
    "url": "https://bytesafe.dev/posts/understanding-typosquatting-methods/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -134,7 +134,7 @@
   {
    "name": "verifyfetch",
    "url": "https://github.com/hamzaydia/verifyfetch",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

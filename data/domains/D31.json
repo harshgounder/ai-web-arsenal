@@ -3,7 +3,7 @@
  "title": "REA spine: target artifact extraction",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. The domain the whole repo is ordered around: artifact before request.",
+ "status": "DEEP",
  "atoms": [
   "A08",
   "A06",
@@ -972,5 +972,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D31.index.json"
- }
+ },
+ "status_note": "AUTHORED. The domain the whole repo is ordered around: artifact before request."
 }

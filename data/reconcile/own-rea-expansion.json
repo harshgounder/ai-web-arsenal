@@ -1,18 +1,18 @@
 {
  "source": "own-rea-expansion",
  "rows": 687,
- "admitted": 679,
- "excluded": 8,
+ "admitted": 682,
+ "excluded": 5,
  "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 8
+  "OUT_OF_SCOPE_NONWEB": 5
  },
  "unique_entries": {
-  "admit": 679,
-  "exclude": 8,
+  "admit": 682,
+  "exclude": 5,
   "hold": 0
  },
  "identity_holds": true,

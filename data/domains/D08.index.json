@@ -43,7 +43,7 @@
   {
    "name": "CORStest",
    "url": "https://github.com/RUB-NDS/CORStest",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -85,7 +85,7 @@
   {
    "name": "CorsMe",
    "url": "https://github.com/Shivangx01b/CorsMe",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -141,14 +141,14 @@
   {
    "name": "JSONBee",
    "url": "https://github.com/zigoo0/JSONBee",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Laravel CSP Generator",
    "url": "https://csp-generator.shakiltech.com",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -167,9 +167,9 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "PostMessageFuzzTool",
+   "name": "PostMessage_Fuzz_Tool",
    "url": "https://github.com/kiranreddyrebel/PostMessage_Fuzz_Tool",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -211,35 +211,35 @@
   {
    "name": "cSploit",
    "url": "https://github.com/cSploit/android",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "cors-scanner",
    "url": "https://github.com/laconicwolf/cors-scanner",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "csprecon",
    "url": "https://github.com/edoardottt/csprecon",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "domdig",
    "url": "https://github.com/fcavallarin/domdig",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "domxssscanner",
    "url": "https://github.com/yaph/domxssscanner",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -260,7 +260,7 @@
   {
    "name": "postMessage-tracker",
    "url": "https://github.com/fransr/postMessage-tracker",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   }

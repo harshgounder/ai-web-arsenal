@@ -1,9 +1,9 @@
 {
  "generated_at": "2026-10-27",
- "entries_by_url": 21384,
- "entries_by_identity": 21187,
- "collapsed": 197,
- "duplicate_groups": 146,
+ "entries_by_url": 21378,
+ "entries_by_identity": 21179,
+ "collapsed": 199,
+ "duplicate_groups": 148,
  "largest_groups": [
   {
    "name": "XSS Bypass",
@@ -46,11 +46,11 @@
    ]
   },
   {
-   "name": "Hacking-APIs",
+   "name": "Hacking APIs",
    "count": 4,
    "urls": [
-    "https://github.com/hAPI-hacker/Hacking-APIs",
     "https://www.google.co.in/books/edition/Hacking_APIs/gHpPEAAAQBAJ?hl=en&gbpv=0",
+    "https://github.com/hAPI-hacker/Hacking-APIs",
     "https://forallsecure.com/blog/the-hacker-mind-podcast-hacking-apis",
     "https://sway.office.com/HVrL2AXUlWGNDHqy"
    ]
@@ -104,11 +104,11 @@
  ],
  "rows_by_kind": {
   "taxonomy_node": 11712,
-  "tool": 8848,
-  "social": 577,
+  "tool": 8840,
+  "social": 579,
   "knowledge": 247
  },
- "tool_rows": 8848,
- "tool_identities": 8692,
- "rows_with_url": 9671
+ "tool_rows": 8840,
+ "tool_identities": 8684,
+ "rows_with_url": 9665
 }

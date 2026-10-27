@@ -3,7 +3,7 @@
  "title": "Session, token, cookie, key material",
  "version": "0.1",
  "generated": "2026-10-27",
- "status": "AUTHORED. The state that survives between requests, and the one most often carried in the wrong place.",
+ "status": "DEEP",
  "atoms": [
   "A03",
   "A04",
@@ -600,5 +600,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D06.index.json"
- }
+ },
+ "status_note": "AUTHORED. The state that survives between requests, and the one most often carried in the wrong place."
 }

@@ -85,7 +85,7 @@
   {
    "name": "SSRFmap>",
    "url": "https://github.com/swisskyrepo/SSRFmap",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -127,14 +127,14 @@
   {
    "name": "phpggc>",
    "url": "https://github.com/ambionics/phpggc",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
   {
    "name": "tcpdump",
    "url": "http://www.tcpdump.org/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -162,7 +162,7 @@
   {
    "name": "Awesome CLI Tools 2026",
    "url": "https://github.com/spinov001-art/awesome-cli-tools-2026",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -176,7 +176,7 @@
   {
    "name": "BlackWidow",
    "url": "https://github.com/1N3/BlackWidow",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -211,7 +211,7 @@
   {
    "name": "CORStest",
    "url": "https://github.com/RUB-NDS/CORStest",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -246,7 +246,7 @@
   {
    "name": "CorsMe",
    "url": "https://github.com/Shivangx01b/CorsMe",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -309,7 +309,7 @@
   {
    "name": "Injectus",
    "url": "https://github.com/BountyStrike/Injectus",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -323,7 +323,7 @@
   {
    "name": "JS-Scan",
    "url": "https://github.com/zseano/JS-Scan",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -365,14 +365,14 @@
   {
    "name": "NimScan",
    "url": "https://github.com/elddy/NimScan/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "OWASP PTK",
    "url": "https://github.com/DenisPodgurskii/pentestkit",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -386,7 +386,7 @@
   {
    "name": "OpenRedireX",
    "url": "https://github.com/devanshbatham/OpenRedireX",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -491,7 +491,7 @@
   {
    "name": "Wapiti",
    "url": "http://wapiti.sourceforge.net/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -519,7 +519,7 @@
   {
    "name": "WebReaver",
    "url": "https://www.webreaver.com/",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -533,7 +533,7 @@
   {
    "name": "XSSCon",
    "url": "https://github.com/menkrep1337/XSSCon",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -554,7 +554,7 @@
   {
    "name": "aemscan",
    "url": "https://github.com/Raz0r/aemscan",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -589,7 +589,7 @@
   {
    "name": "backslash-powered-scanner",
    "url": "https://github.com/PortSwigger/backslash-powered-scanner",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -624,7 +624,7 @@
   {
    "name": "cors-scanner",
    "url": "https://github.com/laconicwolf/cors-scanner",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -638,7 +638,7 @@
   {
    "name": "cyber-harness",
    "url": "https://github.com/chainreactors/cyber-harness",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -666,14 +666,14 @@
   {
    "name": "domdig",
    "url": "https://github.com/fcavallarin/domdig",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "domxssscanner",
    "url": "https://github.com/yaph/domxssscanner",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -715,7 +715,7 @@
   {
    "name": "extended-ssrf-search",
    "url": "https://github.com/Damian89/extended-ssrf-search",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -743,14 +743,14 @@
   {
    "name": "flan",
    "url": "https://github.com/cloudflare/flan",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "fuzzilli",
    "url": "https://github.com/googleprojectzero/fuzzilli",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -805,14 +805,14 @@
   },
   {
    "name": "joomscan",
-   "url": "https://www.owasp.org/index.php/Category:OWASP_Joomla_Vulnerability_Scanner_Project",
-   "tier": "adjacent",
+   "url": "https://github.com/OWASP/joomscan",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "joomscan",
-   "url": "https://github.com/OWASP/joomscan",
+   "url": "https://www.owasp.org/index.php/Category:OWASP_Joomla_Vulnerability_Scanner_Project",
    "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
@@ -820,7 +820,7 @@
   {
    "name": "jwtear",
    "url": "https://github.com/KINGSABRI/jwtear",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -883,14 +883,14 @@
   {
    "name": "noseyparker",
    "url": "https://github.com/praetorian-inc/noseyparker",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "nosqli",
    "url": "https://github.com/Charlie-belmer/nosqli",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -911,14 +911,14 @@
   {
    "name": "pyfiscan",
    "url": "https://github.com/fgeek/pyfiscan",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "razzer",
    "url": "https://github.com/compsec-snu/razzer",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -932,7 +932,7 @@
   {
    "name": "rusty-hog",
    "url": "https://github.com/newrelic/rusty-hog",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -974,7 +974,7 @@
   {
    "name": "sqliv",
    "url": "https://github.com/the-robot/sqliv",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1009,7 +1009,7 @@
   {
    "name": "toxicache",
    "url": "https://github.com/xhzeem/toxicache",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1023,7 +1023,7 @@
   {
    "name": "vaf",
    "url": "https://github.com/d4rckh/vaf",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

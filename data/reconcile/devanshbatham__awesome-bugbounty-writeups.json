@@ -1,8 +1,8 @@
 {
  "source": "devanshbatham__awesome-bugbounty-writeups",
  "rows": 620,
- "admitted": 260,
- "excluded": 335,
+ "admitted": 265,
+ "excluded": 330,
  "held": 25,
  "orphan": 0,
  "unresolved": 0,
@@ -10,12 +10,11 @@
  "exclusion_reasons": {
   "SOCIAL_OR_VIDEO": 306,
   "KNOWLEDGE_NOT_TOOL": 24,
-  "UNCLASSIFIED_LOW_SIGNAL": 25,
-  "OUT_OF_SCOPE_NONWEB": 5
+  "UNCLASSIFIED_LOW_SIGNAL": 25
  },
  "unique_entries": {
-  "admit": 233,
-  "exclude": 321,
+  "admit": 238,
+  "exclude": 316,
   "hold": 25
  },
  "identity_holds": true,
@@ -96,11 +95,6 @@
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   },
   {
-   "name": "About a Sucuri RCE\u2026and How Not to Handle Bug Bounty Reports",
-   "url": "https://www.rcesecurity.com/2019/06/about-a-sucuri-rce-and-how-not-to-handle-bug-bounty-reports/",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
    "name": "Apache strust RCE",
    "url": "https://www.mohamedharon.com/2019/04/apache-strust-rce.html",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
@@ -143,6 +137,11 @@
   {
    "name": "Buffer Overflow Attack Book pdf",
    "url": "http://www.cis.syr.edu/~wedu/seed/Book/book_sample_buffer.pdf",
+   "reason": "UNCLASSIFIED_LOW_SIGNAL"
+  },
+  {
+   "name": "Binary Exploitation: Buffer Overflows",
+   "url": "https://blog.usejournal.com/binary-exploitation-buffer-overflows-a9dc63e8b546",
    "reason": "UNCLASSIFIED_LOW_SIGNAL"
   }
  ]

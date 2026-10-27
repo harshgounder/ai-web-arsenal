@@ -3,7 +3,7 @@
  "title": "Client-side and browser trust boundaries",
  "version": "0.1",
  "generated": "2026-10-27",
- "status": "AUTHORED. The surface where the server cannot help you, because the bug is in the browser.",
+ "status": "DEEP",
  "atoms": [
   "A01",
   "A05",
@@ -832,5 +832,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D08.index.json"
- }
+ },
+ "status_note": "AUTHORED. The surface where the server cannot help you, because the bug is in the browser."
 }

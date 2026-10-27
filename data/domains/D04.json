@@ -3,7 +3,7 @@
  "title": "Authentication and identity providers",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. Technique layer partially in web-attack-atlas W07 (queued, pointer declared).",
+ "status": "DEEP",
  "atoms": [
   "A03",
   "A09",
@@ -856,5 +856,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D04.index.json"
- }
+ },
+ "status_note": "AUTHORED. Technique layer partially in web-attack-atlas W07 (queued, pointer declared)."
 }

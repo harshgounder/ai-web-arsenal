@@ -3,7 +3,7 @@
  "title": "Injection family",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. The classic surface, with the context-first rule most scanners violate.",
+ "status": "DEEP",
  "atoms": [
   "A01",
   "A05",
@@ -1247,5 +1247,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D07.index.json"
- }
+ },
+ "status_note": "AUTHORED. The classic surface, with the context-first rule most scanners violate."
 }

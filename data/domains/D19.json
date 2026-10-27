@@ -3,7 +3,7 @@
  "title": "AI application attacks",
  "version": "0.1",
  "generated": "2026-10-26",
- "status": "AUTHORED. Technique layer in web-attack-atlas W12 (queued). This is the surface every other list omits.",
+ "status": "DEEP",
  "atoms": [
   "A16",
   "A01",
@@ -762,5 +762,6 @@
  "unreviewed_index": {
   "count": 0,
   "note": "see data/domains/D19.index.json"
- }
+ },
+ "status_note": "AUTHORED. Technique layer in web-attack-atlas W12 (queued). This is the surface every other list omits."
 }

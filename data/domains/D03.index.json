@@ -29,14 +29,14 @@
   {
    "name": "BlindElephant",
    "url": "http://blindelephant.sourceforge.net/",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Bypass bot detection",
    "url": "https://github.com/portswigger/bypass-bot-detection",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -85,7 +85,7 @@
   {
    "name": "Julius",
    "url": "https://github.com/praetorian-inc/julius",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -146,7 +146,7 @@
    "status": "PROMOTABLE"
   },
   {
-   "name": "tlsprober",
+   "name": "tls_prober",
    "url": "https://github.com/WestpointLtd/tls_prober",
    "tier": "adjacent",
    "n_sources": 1,

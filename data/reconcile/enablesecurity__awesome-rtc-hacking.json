@@ -1,21 +1,20 @@
 {
  "source": "enablesecurity__awesome-rtc-hacking",
  "rows": 108,
- "admitted": 58,
- "excluded": 50,
+ "admitted": 82,
+ "excluded": 26,
  "held": 0,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
   "IMAGE_NOT_ENTRY": 1,
-  "OUT_OF_SCOPE_NONWEB": 24,
   "SOCIAL_OR_VIDEO": 14,
   "KNOWLEDGE_NOT_TOOL": 11
  },
  "unique_entries": {
-  "admit": 57,
-  "exclude": 41,
+  "admit": 73,
+  "exclude": 25,
   "hold": 0
  },
  "identity_holds": true,

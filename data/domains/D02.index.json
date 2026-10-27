@@ -8,7 +8,7 @@
   {
    "name": "NoSQLMap",
    "url": "https://github.com/codingo/NoSQLMap",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 4,
    "status": "PROMOTABLE"
   },
@@ -22,7 +22,7 @@
   {
    "name": "DNS Rebind Toolkit",
    "url": "https://github.com/brannondorsey/dns-rebind-toolkit",
-   "tier": "offscope",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -36,7 +36,7 @@
   {
    "name": "Whonow DNS Server",
    "url": "https://github.com/brannondorsey/whonow",
-   "tier": "offscope",
+   "tier": "core_web",
    "n_sources": 2,
    "status": "PROMOTABLE"
   },
@@ -64,7 +64,7 @@
   {
    "name": "BigBountyRecon",
    "url": "https://github.com/Viralmaniar/BigBountyRecon",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -78,7 +78,7 @@
   {
    "name": "BlackWidow",
    "url": "https://github.com/1N3/BlackWidow",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -141,7 +141,7 @@
   {
    "name": "CloudRip",
    "url": "https://github.com/staxsum/CloudRip",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -183,7 +183,7 @@
   {
    "name": "Findomain",
    "url": "https://github.com/Findomain/Findomain",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -225,7 +225,7 @@
   {
    "name": "GitHound",
    "url": "https://github.com/tillson/git-hound",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -246,7 +246,7 @@
   {
    "name": "HostileSubBruteforcer",
    "url": "https://github.com/nahamsec/HostileSubBruteforcer",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -372,7 +372,7 @@
   {
    "name": "OpenOSINT",
    "url": "https://github.com/OpenOSINT/OpenOSINT",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -393,7 +393,7 @@
   {
    "name": "ReconAIzer",
    "url": "https://github.com/hisxo/ReconAIzer",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -407,7 +407,7 @@
   {
    "name": "SPARTA",
    "url": "https://sparta.secforce.com/",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -470,35 +470,35 @@
   {
    "name": "SubOver",
    "url": "https://github.com/Ice3man543/SubOver",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Subra",
    "url": "https://github.com/si9int/Subra",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Substr3am",
    "url": "https://github.com/nexxai/Substr3am",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Sudomy",
    "url": "https://github.com/Screetsec/Sudomy",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "TIDoS-Framework",
    "url": "https://github.com/theInfectedDrake/TIDoS-Framework",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -512,14 +512,14 @@
   {
    "name": "The Privacy, Security, & OSINT Show",
    "url": "https://inteltechniques.com/podcast.html",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "Turbolist3r",
    "url": "https://github.com/fleetcaptain/Turbolist3r",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -533,7 +533,7 @@
   {
    "name": "altdns",
    "url": "https://github.com/infosec-au/altdns",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -547,28 +547,28 @@
   {
    "name": "assetfinder",
    "url": "https://github.com/tomnomnom/assetfinder",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "autoSubTakeover",
    "url": "https://github.com/JordyZomer/autoSubTakeover",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "brutesubs",
    "url": "https://github.com/anshumanbh/brutesubs",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "bugcrowd-levelup-subdomain-enumeration",
    "url": "https://github.com/appsecco/bugcrowd-levelup-subdomain-enumeration",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -582,7 +582,7 @@
   {
    "name": "cdncheck",
    "url": "https://github.com/projectdiscovery/cdncheck",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -603,7 +603,7 @@
   {
    "name": "censys-subdomain-finder",
    "url": "https://github.com/christophetd/censys-subdomain-finder",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -617,14 +617,14 @@
   {
    "name": "cnames",
    "url": "https://github.com/cybercdh/cnames",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "crawley",
    "url": "https://github.com/s0rg/crawley",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -638,14 +638,14 @@
   {
    "name": "crt.go",
    "url": "https://github.com/TaurusOmar/crt.sh",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "crtndstry",
    "url": "https://github.com/nahamsec/crtndstry",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -659,7 +659,7 @@
   {
    "name": "dns-parallel-prober",
    "url": "https://github.com/lorenzog/dns-parallel-prober",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -701,7 +701,7 @@
   {
    "name": "dnsgen",
    "url": "https://github.com/AlephNullSK/dnsgen",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -729,7 +729,7 @@
   {
    "name": "domained",
    "url": "https://github.com/TypeError/domained",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -756,22 +756,22 @@
   },
   {
    "name": "dref",
-   "url": "https://github.com/mwrlabs/dref",
-   "tier": "offscope",
+   "url": "https://github.com/FSecureLABS/dref",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "dref",
-   "url": "https://github.com/FSecureLABS/dref",
-   "tier": "offscope",
+   "url": "https://github.com/mwrlabs/dref",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "espi0n/Dockerfiles",
    "url": "https://github.com/espi0n/Dockerfiles",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -827,21 +827,21 @@
   {
    "name": "github-subdomains",
    "url": "https://github.com/gwen001/github-subdomains",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "gitlab-subdomains",
    "url": "https://github.com/gwen001/gitlab-subdomains",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "gospider",
    "url": "https://github.com/jaeles-project/gospider",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -869,7 +869,7 @@
   {
    "name": "hakrawler",
    "url": "https://github.com/hakluke/hakrawler",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -890,7 +890,7 @@
   {
    "name": "httprebind",
    "url": "https://github.com/daeken/httprebind",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -925,14 +925,14 @@
   {
    "name": "knock",
    "url": "https://github.com/guelfoweb/knock",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "massdns",
    "url": "https://github.com/blechschmidt/massdns",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1002,7 +1002,7 @@
   {
    "name": "puredns",
    "url": "https://github.com/d3mondev/puredns",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1023,7 +1023,7 @@
   {
    "name": "s3dns",
    "url": "https://github.com/olizimmermann/s3dns",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1051,7 +1051,7 @@
   {
    "name": "shuffledns",
    "url": "https://github.com/projectdiscovery/shuffledns",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1079,7 +1079,7 @@
   {
    "name": "sub3suite",
    "url": "https://github.com/3nock/sub3suite",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1093,7 +1093,7 @@
   {
    "name": "subHijack",
    "url": "https://github.com/vavkamil/old-repos-backup/tree/master/subHijack-master",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1107,14 +1107,14 @@
   {
    "name": "subdominator",
    "url": "https://github.com/RevoltSecurities/Subdominator",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "takeover",
    "url": "https://github.com/mzfr/takeover",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1128,14 +1128,14 @@
   {
    "name": "tugarecon",
    "url": "https://github.com/LordNeoStark/tugarecon",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "urlgrab",
    "url": "https://github.com/IAmStoxe/urlgrab",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1149,7 +1149,7 @@
   {
    "name": "waybackSqliScanner",
    "url": "https://github.com/ghostlulzhacks/waybackSqliScanner",
-   "tier": "tail",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -1170,7 +1170,7 @@
   {
    "name": "xsscrapy",
    "url": "https://github.com/DanMcInerney/xsscrapy",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   }

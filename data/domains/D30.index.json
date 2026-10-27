@@ -8,7 +8,7 @@
   {
    "name": "Darkmoon",
    "url": "https://github.com/ASCIT31/Dark-Moon",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 3,
    "status": "PROMOTABLE"
   },
@@ -85,14 +85,14 @@
   {
    "name": "Pentest-Swarm-AI",
    "url": "https://github.com/Armur-Ai/Pentest-Swarm-AI",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "PentestAgent",
    "url": "https://github.com/GH05TCREW/pentestagent",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -106,7 +106,7 @@
   {
    "name": "Plamen",
    "url": "https://github.com/PlamenTSV/plamen",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
@@ -134,14 +134,14 @@
   {
    "name": "Savant.Chat",
    "url": "https://savant.chat/",
-   "tier": "offscope",
+   "tier": "adjacent",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
   {
    "name": "T3MP3ST",
    "url": "https://github.com/elder-plinius/T3MP3ST",
-   "tier": "adjacent",
+   "tier": "core_web",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },

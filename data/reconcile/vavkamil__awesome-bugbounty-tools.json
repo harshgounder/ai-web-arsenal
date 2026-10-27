@@ -1,49 +1,23 @@
 {
  "source": "vavkamil__awesome-bugbounty-tools",
  "rows": 410,
- "admitted": 389,
- "excluded": 15,
- "held": 6,
+ "admitted": 408,
+ "excluded": 1,
+ "held": 1,
  "orphan": 0,
  "unresolved": 0,
  "unparsed": 0,
  "exclusion_reasons": {
-  "OUT_OF_SCOPE_NONWEB": 14,
-  "UNCLASSIFIED_LOW_SIGNAL": 6,
-  "IMAGE_NOT_ENTRY": 1
+  "IMAGE_NOT_ENTRY": 1,
+  "UNCLASSIFIED_LOW_SIGNAL": 1
  },
  "unique_entries": {
-  "admit": 377,
-  "exclude": 14,
-  "hold": 6
+  "admit": 396,
+  "exclude": 0,
+  "hold": 1
  },
  "identity_holds": true,
  "held_examples": [
-  {
-   "name": "patator",
-   "url": "https://github.com/lanjelot/patator",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "keyhacks",
-   "url": "https://github.com/streaak/keyhacks",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "Gato (Github Attack TOolkit)",
-   "url": "https://github.com/praetorian-inc/gato",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "zizmor",
-   "url": "https://github.com/zizmorcore/zizmor",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
-  {
-   "name": "unfurl",
-   "url": "https://github.com/tomnomnom/unfurl",
-   "reason": "UNCLASSIFIED_LOW_SIGNAL"
-  },
   {
    "name": "here is a guide",
    "url": "https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md",

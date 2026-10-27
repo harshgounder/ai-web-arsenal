@@ -8,7 +8,7 @@
   {
    "name": "Agent Threat Rules",
    "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-   "tier": "offscope",
+   "tier": "tail",
    "n_sources": 1,
    "status": "PROMOTABLE"
   },
