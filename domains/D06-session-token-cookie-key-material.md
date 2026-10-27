@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+17 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -37,9 +37,13 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [rea inspect_web_page](https://rea.tools) | L03 surface mapping | A3 | A08,A03 | `mcp:rea` | yes | Storage key inventory and cookie attribute surface, passively |
 | [Atlas W07: identity state](https://github.com/harshgounder/web-attack-atlas/blob/main/waves/QUEUE.json) | L05 hypothesis | A0 | A03,A04 | `n/a data` | yes | Technique pointer. W07 is queued and this says so. |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A2 | A03 | `n/a reference` | no | Per platform session and token technique reference |
+| [Where the authorisation check actually runs](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html) | L06 probing | A2 | A11 | `n/a reference` | no | Whether the check is in the handler, the model layer or only the view. A check in one path is a check the other paths do not have. |
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A03 | `pacman:curl` | no | Attribute level control over cookies and headers |
+| [Directory sync and claim propagation trust](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) | L06 probing | A2 | A11 | `n/a reference` | no | Whether a directory sync authenticates and scopes its writes, and whether downstream services revalidate the claims they receive or trust the forwarder. |
+| [Second factor secret storage and push approval](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html) | L06 probing | A2 | A11 | `n/a reference` | no | Where the shared TOTP secret lives and whether a push approval carries context. A secret readable by support tooling makes the second factor a first factor with extra steps. |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A04,A03 | `pacman:mitmproxy` | yes | Observe and replay the whole session lifecycle, including logout and rotation |
 | [PortSwigger: authentication](https://portswigger.net/web-security/authentication) | L06 probing | A2 | A03 | `n/a reference` | no | Labs that calibrate the auth and session tools |
+| [Session identifier generation and rotation](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) | L06 probing | A2 | A11 | `n/a reference` | no | The entropy of the identifier and every point it should change. A session that survives a privilege change is a session an attacker can prepare in advance. |
 | [ctftool](https://github.com/taviso/ctftool) | L07 exploitation | A3 | A02,A06 | `git` | no | Explores the Windows CTF protocol, where the attached text service is an unexpected IPC surface |
 | [jwt-hack](https://github.com/hahwul/jwt-hack) | L07 exploitation | A2 | A03,A09 | `git` | no | JWT attack CLI with a cleaner interface than the classic tools |
 | [jwt_tool](https://github.com/ticarpi/jwt_tool) | L07 exploitation | A2 | A03,A09 | `aur:jwt_tool` | no | The full token attack set, plus claim tampering |
@@ -81,6 +85,22 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **ctftool**  
 - preconditions: `a Windows host in scope`
 - oracle: `interaction with a text service process`
+
+**Second factor secret storage and push approval**  
+- preconditions: `the account uses TOTP or push based second factors`
+- oracle: `the TOTP secret recoverable from a data path rather than only from the enrolment flow`, `a push approval accepted for a transaction other than the one described`, `the approval prompt showing no amount, destination or device context`
+
+**Session identifier generation and rotation**  
+- preconditions: `the application issues session identifiers`
+- oracle: `the identifier length and alphabet, sampled across sessions`, `the identifier changing at login, at elevation and at password change`, `a captured identifier still working after logout`
+
+**Where the authorisation check actually runs**  
+- preconditions: `the application has more than one route to the same data`
+- oracle: `an action allowed through a path that skips the layer holding the check`, `the same object refused on one route and returned on another`, `the check located in code, with the routes that lack it listed`
+
+**Directory sync and claim propagation trust**  
+- preconditions: `identities are provisioned by sync or federation`
+- oracle: `a sync write accepted from a source that should not have write rights`, `a downstream action taken on a claim the receiving service never verified`, `a deprovisioned identity still accepted after the sync interval`
 
 ## Decision tree
 

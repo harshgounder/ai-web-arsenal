@@ -156,6 +156,38 @@
    ],
    "basis": "entry",
    "note": "The analysis framework is what would answer visibility. Coverage measurement is not stated."
+  },
+  "L09-018": {
+   "level": "L2",
+   "covered_by": [
+    "d17-cross-account"
+   ],
+   "basis": "entry",
+   "note": "A handler reading a field the client controlled through gateway metadata."
+  },
+  "L09-029": {
+   "level": "L2",
+   "covered_by": [
+    "d17-admission-and-iac"
+   ],
+   "basis": "entry",
+   "note": "A change applied from a pull request opened by someone without repository rights."
+  },
+  "L09-035": {
+   "level": "L2",
+   "covered_by": [
+    "d17-cross-account"
+   ],
+   "basis": "entry",
+   "note": "An assumption from an unintended account, with the trust policy quoted."
+  },
+  "L09-053": {
+   "level": "L2",
+   "covered_by": [
+    "d17-admission-and-iac"
+   ],
+   "basis": "entry",
+   "note": "A workload admitted that policy should refuse."
   }
  }
 }

@@ -500,6 +500,64 @@
    "detected_by": [],
    "status": "PROBABLE",
    "note": "Low star count and thin documentation. Listed because four independent sources carry it, flagged PROBABLE because this project has not run it."
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d17-admission-and-iac",
+   "name": "Admission control and infrastructure as code execution",
+   "url": "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/",
+   "role": "Whether the cluster refuses privileged or unlabelled workloads, and whether a plan or apply can be triggered from an untrusted contribution.",
+   "preconditions": [
+    "the estate runs on an orchestrator or IaC pipeline"
+   ],
+   "oracle": [
+    "a workload admitted that policy should refuse",
+    "a change applied from a pull request opened by someone without repository rights",
+    "the admission policy list read from the cluster rather than from the repository"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d17-cross-account",
+   "name": "Cross account trust and event shaping",
+   "url": "https://developer.hashicorp.com/terraform/language/state/sensitive-data",
+   "role": "Which principals from outside the account can assume a role, and whether a gateway event can influence what a handler believes about the request.",
+   "preconditions": [
+    "the estate spans more than one account or team"
+   ],
+   "oracle": [
+    "an assumption from an unintended account, with the trust policy quoted",
+    "a handler reading a field the client controlled through gateway metadata",
+    "the state file containing a secret, and who can read it"
+   ]
   }
  ],
  "tree": {

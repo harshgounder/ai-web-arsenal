@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 329,
+ "unique_urls": 334,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -43,6 +43,13 @@
     "d23-hacktricks"
    ]
   },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d06-authorisation-locus"
+   ]
+  },
   "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html": {
    "status": "OK",
    "http": 200,
@@ -70,6 +77,13 @@
    "http": 200,
    "entries": [
     "d07-identifier-source"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d06-mfa-secret-storage"
    ]
   },
   "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html": {
@@ -158,6 +172,13 @@
    "http": 200,
    "entries": [
     "d24-cwe"
+   ]
+  },
+  "https://developer.hashicorp.com/terraform/language/state/sensitive-data": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-cross-account"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions": {
@@ -306,6 +327,13 @@
    "http": 200,
    "entries": [
     "d18-ci-trigger"
+   ]
+  },
+  "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d18-signed-history"
    ]
   },
   "https://docs.mitmproxy.org/stable/": {
@@ -1877,6 +1905,13 @@
    "http": 200,
    "entries": [
     "d17-kubectl"
+   ]
+  },
+  "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d17-admission-and-iac"
    ]
   },
   "https://learn.microsoft.com/cli/azure/": {

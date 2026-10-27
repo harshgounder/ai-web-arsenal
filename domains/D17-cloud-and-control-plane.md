@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-15 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+17 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -39,8 +39,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [kube-hunter](https://github.com/aquasecurity/kube-hunter) | L03 surface mapping | A3 | A15,A02 | `pipx:kube-hunter` | yes | Kubernetes attack surface discovery from outside or inside the cluster |
 | [pathfinding.cloud](https://pathfinding.cloud/) | L05 hypothesis | A0 | A02 | `n/a reference` | no | Catalogue of AWS IAM privilege escalation techniques, the map behind pathrunner |
 | [HackTricks Cloud](https://cloud.hacktricks.wiki/) | L05 hypothesis | A0 | A02,A15 | `n/a reference` | no | Per provider technique reference including metadata and IAM paths |
+| [Admission control and infrastructure as code execution](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/) | L06 probing | A2 | A11 | `n/a reference` | no | Whether the cluster refuses privileged or unlabelled workloads, and whether a plan or apply can be triggered from an untrusted contribution. |
 | [aws-cli](https://aws.amazon.com/cli/) | L06 probing | A3 | A02,A08 | `pacman:aws-cli` | yes | Direct control plane access, needed for everything the scanners cannot express |
 | [azure-cli](https://learn.microsoft.com/cli/azure/) | L06 probing | A3 | A02,A08 | `pacman:azure-cli` | yes | The Azure equivalent, including Entra and ARM enumeration |
+| [Cross account trust and event shaping](https://developer.hashicorp.com/terraform/language/state/sensitive-data) | L06 probing | A2 | A11 | `n/a reference` | no | Which principals from outside the account can assume a role, and whether a gateway event can influence what a handler believes about the request. |
 | [Dark-Moon](https://github.com/ASCIT31/Dark-Moon) | L06 probing | A2 | A02,A08 | `git:https://github.com/ASCIT31/Dark-Moon` | no | Cloud credential and exposure assessment tooling |
 | [kubectl](https://kubernetes.io/docs/) | L06 probing | A2 | A02 | `pacman:kubectl` | no | The control plane itself, and the fastest way to test what a token can do |
 | [Prowler](https://github.com/prowler-cloud/prowler) | L06 probing | A3 | A15,A02 | `pipx:prowler` | yes | Cloud posture and attack path checks across AWS, Azure and GCP |
@@ -122,6 +124,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - oracle: `reachable resources listed`
 - defense levels it addresses: F1
 - note: Low star count and thin documentation. Listed because four independent sources carry it, flagged PROBABLE because this project has not run it.
+
+**Admission control and infrastructure as code execution**  
+- preconditions: `the estate runs on an orchestrator or IaC pipeline`
+- oracle: `a workload admitted that policy should refuse`, `a change applied from a pull request opened by someone without repository rights`, `the admission policy list read from the cluster rather than from the repository`
+
+**Cross account trust and event shaping**  
+- preconditions: `the estate spans more than one account or team`
+- oracle: `an assumption from an unintended account, with the trust policy quoted`, `a handler reading a field the client controlled through gateway metadata`, `the state file containing a secret, and who can read it`
 
 ## Decision tree
 

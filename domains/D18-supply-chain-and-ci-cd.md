@@ -29,7 +29,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-16 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+23 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -40,8 +40,15 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A2 | A11 | `n/a reference` | no | Supply chain technique reference |
 | [Semgrep](https://github.com/semgrep/semgrep) | L05 hypothesis | A3 | A01,A11 | `pipx:semgrep` | yes | Pattern based static analysis, useful for finding dangerous sinks in the target's own code when you have it |
 | [OWASP Dependency-Check](https://github.com/jeremylong/DependencyCheck) | L06 probing | A2 | A11 | `n/a reference` | no | CPE based matching, still the default in many pipelines |
+| [Dependency incident response](https://slsa.dev/) | L06 probing | A2 | A11 | `n/a reference` | no | Whether the organisation can answer what uses a given package, at which version, in what timeframe. That question arrives on the day of an advisory and cannot be answered retroactively. |
+| [Generated code, model and tool definition provenance](https://slsa.dev/) | L06 probing | A2 | A11 | `n/a reference` | no | Anything that arrives already written and is trusted because a tool or a model produced it. Generated code, model files and remote tool definitions all carry authoring authority without the review that code normally gets. |
 | [grype](https://github.com/anchore/grype) | L06 probing | A2 | A11 | `git:https://github.com/anchore/grype` | yes | Vulnerability matching against an SBOM, pairs with syft |
+| [Maintainer account and release authority](https://github.com/ossf/scorecard) | L06 probing | A2 | A11 | `n/a reference` | no | Who can publish a new version of a dependency, and whether that requires a second party. A single unprotected account with publish rights is the whole attack surface for a popular package. |
+| [Plugin and extension review path](https://github.com/ossf/scorecard) | L06 probing | A2 | A11 | `n/a reference` | no | Whether a plugin is reviewed before publication and again on update. A marketplace that reviews once and never again is a delivery channel for whoever takes over the plugin later. |
+| [Artefact provenance and rebuild agreement](https://slsa.dev/) | L06 probing | A2 | A11 | `n/a reference` | no | Whether the published artefact can be rebuilt from the stated source. Without that, a registry compromise and a source compromise look identical from the outside. |
+| [Signed history and protected refs](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification) | L06 probing | A2 | A11 | `n/a reference` | no | Whether commits and tags are signed and whether the platform enforces it. An unsigned history means a rewritten branch is indistinguishable from the original. |
 | [trivy](https://github.com/aquasecurity/trivy) | L06 probing | A2 | A11,A15 | `pacman:trivy` | yes | Dependency, image and IaC scanning in one binary |
+| [Vendored code and binary trust](https://slsa.dev/) | L06 probing | A2 | A11 | `n/a reference` | no | Whether code committed inside the tree is reviewed as code or ignored as third party. Vendored dependencies and binaries are where review stops. |
 | [Workflow trigger trust](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions) | L10 reporting | A0 | A08 | `n/a reference` | no | Which events can start a job and what that job can reach. A pull request from a fork running with secrets is the whole class. |
 | [Deployment credential lifetime and scope](https://github.com/sigstore/cosign) | L10 reporting | A0 | A08 | `n/a reference` | no | What a deploy can reach and for how long. A long lived shared credential turns one pipeline compromise into permanent access. |
 | [Install time execution surface](https://docs.npmjs.com/cli/v10/using-npm/scripts) | L10 reporting | A0 | A08 | `n/a reference` | no | What runs when a dependency is installed, before anyone reviews its behaviour. An install hook is code execution with the developer's authority. |
@@ -113,6 +120,34 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **Repository exposure history**  
 - preconditions: `the project has had secrets or internal detail in its history`
 - oracle: `a secret found in history after removal from the working tree`, `a fork or mirror still serving content the origin no longer has`
+
+**Maintainer account and release authority**  
+- preconditions: `a dependency's repository and registry settings are visible`
+- oracle: `the number of accounts with publish rights, and whether any lacks a second factor`, `a release published without a second approver, shown from the release record`, `branch protection on the release path, read rather than assumed`
+
+**Artefact provenance and rebuild agreement**  
+- preconditions: `the project publishes binaries, images or packages`
+- oracle: `a rebuild from the stated commit producing byte identical or functionally identical output`, `a provenance attestation naming the builder and the source digest`, `a published artefact that does not match its own provenance, which is the finding`
+
+**Signed history and protected refs**  
+- preconditions: `the repository has a release process`
+- oracle: `a signature verified on the tag that shipped, not only on commits`, `a direct push or force push refused by policy, demonstrated`, `an unsigned commit rejected at merge`
+
+**Vendored code and binary trust**  
+- preconditions: `the repository vendors dependencies or ships binaries`
+- oracle: `a change to vendored code that was reviewed, shown by the pull request trail`, `a binary in the tree traceable to a source and a build, or listed as untraceable`, `a submodule pinned to a commit rather than to a branch`
+
+**Generated code, model and tool definition provenance**  
+- preconditions: `the project contains generated code, model artefacts or remote tool definitions`
+- oracle: `a generated file with no recorded generator and version`, `a model artefact whose publisher cannot be verified`, `a tool definition fetched at runtime rather than pinned in the repository`
+
+**Plugin and extension review path**  
+- preconditions: `the product loads plugins or extensions from a marketplace`
+- oracle: `an update that changed behaviour without a review record`, `a publisher whose ownership changed without a re-review`, `the review criteria written down, so a reviewer can apply them`
+
+**Dependency incident response**  
+- preconditions: `the project has a dependency inventory`
+- oracle: `the exposure list produced for a named package inside a stated window, measured`, `every system on the list confirmed from its own lockfile rather than from a spreadsheet`, `the same query run before an incident, as a rehearsal`
 
 ## Decision tree
 

@@ -85,12 +85,12 @@
    "note": "Hygiene scoring includes namespace and registry practice. Squatting is not tested."
   },
   "L10-007": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-scorecard"
+    "d18-maintainer-trust"
    ],
    "basis": "entry",
-   "note": "Maintainer risk is scored. Account takeover resistance is not tested."
+   "note": "Accounts with publish rights and whether any lacks a second factor."
   },
   "L10-022": {
    "level": "L1",
@@ -125,20 +125,20 @@
    "note": "A pinned vulnerable version is matched by the advisory database, which is the symptom."
   },
   "L10-045": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d20-mcp-scan"
+    "d18-generated-and-model"
    ],
    "basis": "entry",
-   "note": "Tool description provenance is adjacent. Runtime fetching of prompts is not tested."
+   "note": "A tool definition fetched at runtime rather than pinned."
   },
   "L10-046": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d28-mcp-scan"
+    "d18-generated-and-model"
    ],
    "basis": "entry",
-   "note": "Config scanning finds unverified servers. Whether an agent can be pointed at one is not tested."
+   "note": "A remote tool registry entry accepted without pinning is the same supply question."
   },
   "L10-049": {
    "level": "L1",
@@ -263,10 +263,10 @@
   "L10-009": {
    "level": "L2",
    "covered_by": [
-    "d18-lockfile-proof"
+    "d18-provenance-chain"
    ],
    "basis": "entry",
-   "note": "Release provenance is whether a rebuild matches the published bytes."
+   "note": "A rebuild matching the published artefact is release provenance."
   },
   "L10-010": {
    "level": "L2",
@@ -309,12 +309,12 @@
    "note": "CI runner privilege is the credential scope question on a different host."
   },
   "L10-027": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-install-hooks"
+    "d18-vendored-code"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Vendored code review is not the install hook surface. The concept is named and no procedure for it is stated."
+   "note": "A submodule pinned to a commit rather than a branch is vendoring trust."
   },
   "L10-028": {
    "level": "L2",
@@ -341,20 +341,20 @@
    "note": "Licence exposure is a distribution obligation, already operationalised."
   },
   "L10-037": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-install-hooks"
+    "d18-generated-and-model"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Generated code entering unreviewed is a review process gap, not an install hook. The concept is named and no procedure for it is stated."
+   "note": "A generated file with no recorded generator and version."
   },
   "L10-038": {
    "level": "L1",
    "covered_by": [
-    "d18-install-hooks"
+    "d18-generated-and-model"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: An editor extension is not npm install time execution. The concept is named and no procedure for it is stated."
+   "note": "Downgraded from L2: an editor extension is not generated code, a model or a remote tool definition, so the cited entry does not state a procedure for it. The concept is named and no procedure is given."
   },
   "L10-040": {
    "level": "L2",
@@ -381,12 +381,12 @@
    "note": "Rebuilding without an upstream is the lock and mirror question."
   },
   "L10-043": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-lockfile-proof"
+    "d18-generated-and-model"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Model provenance is not the lockfile resolution test. The concept is named and no procedure for it is stated."
+   "note": "A model whose publisher cannot be verified is the provenance question."
   },
   "L10-044": {
    "level": "L1",
@@ -397,12 +397,12 @@
    "note": "Downgraded from L2: A model loading code is close, but the cited entry describes package install hooks specifically. The concept is named and no procedure for it is stated."
   },
   "L10-047": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-install-hooks"
+    "d18-plugin-review"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Plugin update review is not the install surface. The concept is named and no procedure for it is stated."
+   "note": "An update that changed behaviour without a review record."
   },
   "L10-048": {
    "level": "L1",
@@ -437,12 +437,12 @@
    "note": "Reproducible build verification is the same comparison."
   },
   "L10-056": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-ci-trigger"
+    "d18-signed-history"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Signed commits are not covered by the trigger test. The concept is named and no procedure for it is stated."
+   "note": "A signature verified on the tag that shipped, and an unsigned commit rejected at merge."
   },
   "L10-058": {
    "level": "L2",
@@ -453,12 +453,12 @@
    "note": "Release automation authority is the credential scope test."
   },
   "L10-059": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-lockfile-proof"
+    "d18-vendored-code"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: A vendored binary's provenance is not the lockfile test. The concept is named and no procedure for it is stated."
+   "note": "A binary traceable to a source and a build, or listed as untraceable."
   },
   "L10-060": {
    "level": "L2",
@@ -477,12 +477,12 @@
    "note": "Downgraded from L2: Namespace ownership is not the resolution drift test. The concept is named and no procedure for it is stated."
   },
   "L10-062": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d18-lockfile-proof"
+    "d18-dependency-incident"
    ],
    "basis": "entry",
-   "note": "Downgraded from L2: Enumerating exposure is a tree walk, but the cited entry is about resolved versions matching the lock. The concept is named and no procedure for it is stated."
+   "note": "The exposure list produced for a named package inside a measured window."
   }
  }
 }

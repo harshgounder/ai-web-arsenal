@@ -390,6 +390,122 @@
    "agency": "A3",
    "stage": "L07",
    "status": "PROBABLE"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d06-mfa-secret-storage",
+   "name": "Second factor secret storage and push approval",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html",
+   "role": "Where the shared TOTP secret lives and whether a push approval carries context. A secret readable by support tooling makes the second factor a first factor with extra steps.",
+   "preconditions": [
+    "the account uses TOTP or push based second factors"
+   ],
+   "oracle": [
+    "the TOTP secret recoverable from a data path rather than only from the enrolment flow",
+    "a push approval accepted for a transaction other than the one described",
+    "the approval prompt showing no amount, destination or device context"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d06-session-generation",
+   "name": "Session identifier generation and rotation",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+   "role": "The entropy of the identifier and every point it should change. A session that survives a privilege change is a session an attacker can prepare in advance.",
+   "preconditions": [
+    "the application issues session identifiers"
+   ],
+   "oracle": [
+    "the identifier length and alphabet, sampled across sessions",
+    "the identifier changing at login, at elevation and at password change",
+    "a captured identifier still working after logout"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d06-authorisation-locus",
+   "name": "Where the authorisation check actually runs",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html",
+   "role": "Whether the check is in the handler, the model layer or only the view. A check in one path is a check the other paths do not have.",
+   "preconditions": [
+    "the application has more than one route to the same data"
+   ],
+   "oracle": [
+    "an action allowed through a path that skips the layer holding the check",
+    "the same object refused on one route and returned on another",
+    "the check located in code, with the routes that lack it listed"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A11"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d06-directory-sync",
+   "name": "Directory sync and claim propagation trust",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+   "role": "Whether a directory sync authenticates and scopes its writes, and whether downstream services revalidate the claims they receive or trust the forwarder.",
+   "preconditions": [
+    "identities are provisioned by sync or federation"
+   ],
+   "oracle": [
+    "a sync write accepted from a source that should not have write rights",
+    "a downstream action taken on a claim the receiving service never verified",
+    "a deprovisioned identity still accepted after the sync interval"
+   ]
   }
  ],
  "tree": {

@@ -2,12 +2,14 @@
 {"url": "https://atlas.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-atlas", "d20-atlas"]}
 {"url": "https://aws.amazon.com/cli/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-awscli"]}
 {"url": "https://book.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-hacktricks", "d07-hacktricks", "d08-hacktricks-csti", "d09-hacktricks", "d12-hacktricks", "d13-hacktricks", "d14-hacktricks", "d15-hacktricks", "d18-hacktricks", "d22-hacktricks", "d23-hacktricks"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-authorisation-locus"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-body-limit-map"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-orm-loading", "d07-autoload-path"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-inspection-matrix"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-identifier-source"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-mfa-secret-storage"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-db-privilege"]}
-{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-cheatsheet"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-cheatsheet", "d06-session-generation", "d06-directory-sync"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-open-redirect-helper"]}
 {"url": "https://chromium.googlesource.com/chromium/src/+/main/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-chromium", "d29-chromium"]}
 {"url": "https://cloud.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-hacktricks-cloud"]}
@@ -17,6 +19,7 @@
 {"url": "https://csrc.nist.gov/pubs/sp/800/92/final", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-report-anatomy", "d24-scope-statement", "d24-proof-minimum", "d24-evidence-redaction", "d24-evidence-record"]}
 {"url": "https://curl.se/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-curl", "d09-curl", "d10-curl", "d13-curl", "d14-curl", "d29-curl"]}
 {"url": "https://cwe.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cwe"]}
+{"url": "https://developer.hashicorp.com/terraform/language/state/sensitive-data", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-cross-account"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-extension-scope", "d08-extension-page-interaction"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-kill-switch"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-agent-authority"]}
@@ -38,6 +41,7 @@
 {"url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d14-imds", "d17-imds"]}
 {"url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-cloud-audit"]}
 {"url": "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-ci-trigger"]}
+{"url": "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-signed-history"]}
 {"url": "https://docs.mitmproxy.org/stable/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-mitmproxy", "d05-mitmproxy", "d06-mitmproxy", "d09-mitmproxy", "d10-mitmproxy", "d12-mitmproxy", "d14-mitmproxy", "d22-mitmproxy", "d23-mitmproxy", "d29-mitmproxy", "d31-mitmproxy"]}
 {"url": "https://docs.npmjs.com/cli/v10/using-npm/scripts", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-install-hooks"]}
 {"url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-sarif"]}
@@ -177,7 +181,7 @@
 {"url": "https://github.com/openwall/john", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d16-john"]}
 {"url": "https://github.com/opticdev/optic", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-optic"]}
 {"url": "https://github.com/optiv/rest-api-goat", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-rest-api-goat"]}
-{"url": "https://github.com/ossf/scorecard", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-scorecard", "d18-lockfile-proof", "d18-repo-exposure"]}
+{"url": "https://github.com/ossf/scorecard", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-scorecard", "d18-lockfile-proof", "d18-repo-exposure", "d18-maintainer-trust", "d18-plugin-review"]}
 {"url": "https://github.com/owasp-amass/amass", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-amass"]}
 {"url": "https://github.com/portswigger/turbo-intruder", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d12-turbo-intruder"]}
 {"url": "https://github.com/postmanlabs/newman", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-newman", "d11-newman", "d12-newman", "d23-newman", "d29-newman"]}
@@ -246,6 +250,7 @@
 {"url": "https://jwt.io/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d16-jwtio"]}
 {"url": "https://kafka.apache.org/documentation/#security", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-queue-trust"]}
 {"url": "https://kubernetes.io/docs/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-kubectl"]}
+{"url": "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-admission-and-iac"]}
 {"url": "https://learn.microsoft.com/cli/azure/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-azurecli"]}
 {"url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-device-code"]}
 {"url": "https://mas.owasp.org/MASTG/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d21-mastg"]}
@@ -286,7 +291,7 @@
 {"url": "https://rea.tools", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-rea-bundle", "d02-rea-capture", "d02-rea-scenario", "d03-rea-bundle", "d06-rea-page", "d07-rea-listeners", "d08-rea-listeners", "d08-rea-scenario", "d08-rea-page", "d12-rea-capture", "d13-rea-artifact", "d14-rea-capture", "d15-rea", "d16-rea-signing", "d21-rea-android", "d21-rea-android-class", "d21-rea-android-res", "d23-rea", "d28-rea", "d31-analyze-web-bundle", "d31-export-web-scripts", "d31-inspect-web-page", "d31-event-listeners", "d31-capture", "d31-source-location", "d31-recover", "d31-app-graph", "d31-reconcile-js", "d31-webmcp", "d31-scenario", "d31-compare", "d31-android", "d31-android-class", "d31-wasm", "d31-sqlite", "d31-artifact", "d31-electron"]}
 {"url": "https://sanctionssearch.ofac.treas.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-ofac"]}
 {"url": "https://schemathesis.readthedocs.io/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-schemathesis"]}
-{"url": "https://slsa.dev/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-slsa"]}
+{"url": "https://slsa.dev/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-slsa", "d18-provenance-chain", "d18-vendored-code", "d18-generated-and-model", "d18-dependency-incident"]}
 {"url": "https://source.chromium.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-allocator-behaviour"]}
 {"url": "https://spdx.org/licenses/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-spdx-licence"]}
 {"url": "https://supabase.com/docs/guides/database/postgres/row-level-security", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-supabase-rls"]}

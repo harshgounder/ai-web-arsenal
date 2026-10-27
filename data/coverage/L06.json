@@ -71,12 +71,12 @@
    "note": "The WebAuthn entry is a semantics reference. Relying party id binding is described and not tested."
   },
   "L06-019": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d06-rea-page"
+    "d06-session-generation"
    ],
    "basis": "entry",
-   "note": "The capture inventories storage keys and cookie attributes, which is where a session identifier is observed. Entropy is not measured."
+   "note": "Length, alphabet and the points at which the identifier changes."
   },
   "L06-020": {
    "level": "L1",
@@ -155,12 +155,12 @@
    "note": "Enumerating object ids and tenant prefixes at scale is the direct test of predictability, with another user's object as the oracle."
   },
   "L06-038": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d05-kiterunner"
+    "d06-authorisation-locus"
    ],
    "basis": "entry",
-   "note": "Route discovery finds the endpoints where the check is usually missing. It does not locate the check."
+   "note": "An action allowed through a path that skips the layer holding the check."
   },
   "L06-039": {
    "level": "L2",
@@ -190,10 +190,10 @@
   "L06-044": {
    "level": "L1",
    "covered_by": [
-    "d16-gitleaks"
+    "d06-session-generation"
    ],
    "basis": "entry",
-   "note": "Secret scanning covers one of the four properties in this factor, the credential committed to the repository. Longevity and cross environment reuse are untested."
+   "note": "Downgraded from L2: the session identifier entry tests entropy and rotation points, while this factor asks whether a machine credential is shared across environments and valid in both. Different question."
   },
   "L06-045": {
    "level": "L1",
@@ -218,6 +218,38 @@
    ],
    "basis": "entry",
    "note": "Login CSRF is named in the authentication list. Sessions per identity are required to confirm it and no entry states that procedure."
+  },
+  "L06-013": {
+   "level": "L2",
+   "covered_by": [
+    "d06-mfa-secret-storage"
+   ],
+   "basis": "entry",
+   "note": "The TOTP secret recoverable from a data path rather than only the enrolment flow."
+  },
+  "L06-014": {
+   "level": "L2",
+   "covered_by": [
+    "d06-mfa-secret-storage"
+   ],
+   "basis": "entry",
+   "note": "A push approval accepted for a transaction other than the one described."
+  },
+  "L06-054": {
+   "level": "L2",
+   "covered_by": [
+    "d06-directory-sync"
+   ],
+   "basis": "entry",
+   "note": "A sync write accepted from a source without write rights."
+  },
+  "L06-061": {
+   "level": "L2",
+   "covered_by": [
+    "d06-directory-sync"
+   ],
+   "basis": "entry",
+   "note": "A downstream action taken on a claim the receiver never verified."
   }
  }
 }
