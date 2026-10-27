@@ -1,11 +1,11 @@
 {
  "generated_at": "2026-10-27",
  "factors_total": 1000,
- "covered_l2_plus": 259,
- "gap_total": 741,
+ "covered_l2_plus": 300,
+ "gap_total": 700,
  "gap_by_class": {
-  "II": 565,
-  "I": 126,
+  "II": 550,
+  "I": 100,
   "III": 50
  },
  "cost_by_class": {
@@ -13,8 +13,8 @@
   "I": "authoring",
   "III": "impossible"
  },
- "reachable_by_authoring": 126,
- "reachable_by_lab": 565,
+ "reachable_by_authoring": 100,
+ "reachable_by_lab": 550,
  "unavailable": 50,
  "ceiling_pct": 95.0,
  "ceiling_note": "share of Set D that any collection could reach from outside, given unlimited authoring and lab time. It is not a forecast of what this repo will reach."

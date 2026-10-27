@@ -1346,6 +1346,35 @@
    "evades": [],
    "detected_by": [],
    "status": "VERIFIED"
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d11-method-override",
+   "name": "Method override and content negotiation trust",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods",
+   "role": "Whether a header or parameter can change the effective method, and whether the body is parsed by the declared type or the observed bytes. Both are how a write becomes reachable from a read.",
+   "preconditions": [
+    "an endpoint with different behaviour per method",
+    "the ability to set override headers and content types"
+   ],
+   "oracle": [
+    "a state change from a request whose method was GET",
+    "a body parsed as a different type than declared, producing a write"
+   ]
   }
  ],
  "tree": {

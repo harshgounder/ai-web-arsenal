@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 67 | 320 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 68 | 323 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 320 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 323 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -106,7 +106,7 @@ taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
 domains         30 authored + 9 explicit pointers + 0 empty
-enriched        510 entries, all with atom and driver; 401 with preconditions, 412 with oracle,
+enriched        515 entries, all with atom and driver; 406 with preconditions, 417 with oracle,
                 175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
@@ -322,8 +322,10 @@ not are ISO 27001 and the W3C WebAuthn page refusing automated clients.
 | L07 data and storage | 8 of 62 | **22 of 62 (35%)** |
 | L13 regulation | 26 of 64 | **40 of 64 (63%)** |
 | L11 human and organisational | 0 of 62 | **12 of 62 (19%)** |
+| L10 supply chain | 21 of 62 | **38 of 62 (61%)** |
+| L15 detection industry | 19 of 64 | **43 of 64 (67%)** |
 | L04 frameworks | 15 of 62 | **21 of 62 (34%)** |
-| whole denominator | 108 of 1,000 (10.8%) | **259 of 1,000 (25.9%)** |
+| whole denominator | 108 of 1,000 (10.8%) | **300 of 1,000 (30.0%)** |
 
 What the entries do that a policy document does not: each states what to look at and what result settles
 it. `d24-gdpr-breach` asks for the awareness timestamp and the article 33(5) register entry, not a promise
@@ -399,6 +401,33 @@ L11 goes 0 to 12 of 62. Coverage 24.7 to 25.9 percent.
 Note what stayed out. Twenty seven of L11's factors are Class III and they remain unavailable, because
 whether a team keeps an exception register is not in any public source and not revealed by any probe.
 The domain's own gap list says so rather than implying the gap will close.
+
+---
+
+## 6k. A grading correction, because the jump was too big to believe
+
+A batch mapped 63 factors to existing entries and coverage went from 25.9 to 32.2 in one run. That is
+the kind of jump that should be treated as a warning rather than a win, so the mappings were re-read
+against the standard: L2 requires an entry whose stated role is a procedure **for that factor**, not an
+entry that touches the same area.
+
+Twenty two of them did not survive that reading. Examples of what was wrong:
+
+| factor | what I had cited | why it failed |
+|---|---|---|
+| L15-038 decoy placement | telemetry coverage matrix | the matrix entry never discusses decoys |
+| L15-042 forensic readiness | telemetry coverage matrix | the matrix covers retention and clocks, not capture before change |
+| L15-056 product update channel | deploy credential scope | a security product's own updater is not a deploy credential |
+| L10-038 editor extension | install time execution | an IDE extension is not `npm install` |
+| L10-048 webhook target | workflow trigger trust | application egress is not a CI event |
+
+All 22 are now L1 with the reason recorded in the record itself, and coverage settled at **30.0 percent**
+rather than 32.2.
+
+This is the third time in this project that a number moved in the flattering direction and had to be
+pulled back. It is also the first time it was caught by re-reading the grading rather than by a mismatch
+with disk, which suggests the standard needs to be written down where it can be enforced, not just
+followed by memory.
 
 ---
 

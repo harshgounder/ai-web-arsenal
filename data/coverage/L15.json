@@ -195,6 +195,262 @@
    ],
    "basis": "entry",
    "note": "Time from decision to enforced block, measured on a real action."
+  },
+  "L15-002": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "Plaintext versus ciphertext is the first row of the matrix: a marker in the body either arrives readable or does not."
+  },
+  "L15-006": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "A learning mode residue shows as a marker accepted that a tuned rule would block."
+  },
+  "L15-008": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "A rule disabled after an incident shows as a position with no blocking at all."
+  },
+  "L15-011": {
+   "level": "L1",
+   "covered_by": [
+    "d37-sandbox-reach"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: d37-sandbox-reach covers a renderer sandbox, not an in-process RASP agent. Different mechanism. The concept is named and no procedure for it is stated."
+  },
+  "L15-012": {
+   "level": "L1",
+   "covered_by": [
+    "d37-sandbox-reach"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Tamper resistance of an agent is not the renderer sandbox audit. The concept is named and no procedure for it is stated."
+  },
+  "L15-015": {
+   "level": "L2",
+   "covered_by": [
+    "d22-body-limit-map"
+   ],
+   "basis": "entry",
+   "note": "Behavioural modelling is defeated by shaping timing, and the matrix shows where it is absent."
+  },
+  "L15-016": {
+   "level": "L2",
+   "covered_by": [
+    "d22-body-limit-map"
+   ],
+   "basis": "entry",
+   "note": "Fingerprint stability is tested by changing one property at a time, which is the same bisection."
+  },
+  "L15-017": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "Address class handling appears as a position where the marker is blocked for one source and not another."
+  },
+  "L15-018": {
+   "level": "L2",
+   "covered_by": [
+    "d22-body-limit-map"
+   ],
+   "basis": "entry",
+   "note": "Rate limiting granularity is found by bisecting the property that resets the count."
+  },
+  "L15-019": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "Account takeover signals are rows in the matrix: which anomaly is challenged and which passes."
+  },
+  "L15-020": {
+   "level": "L2",
+   "covered_by": [
+    "d22-body-limit-map"
+   ],
+   "basis": "entry",
+   "note": "Distributed stuffing is pacing across addresses, which the limiter granularity test names."
+  },
+  "L15-022": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Command line completeness is a column in the telemetry matrix."
+  },
+  "L15-023": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Script block logging is the same column for interpreted code."
+  },
+  "L15-025": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "DNS logging and retention are columns in the matrix."
+  },
+  "L15-028": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Detection latency is measured by timestamping the action and the alert."
+  },
+  "L15-034": {
+   "level": "L2",
+   "covered_by": [
+    "d38-privileged-approval"
+   ],
+   "basis": "entry",
+   "note": "Zero trust policy evaluation is an approval and attribution question, which is what the privileged access trail answers."
+  },
+  "L15-035": {
+   "level": "L2",
+   "covered_by": [
+    "d38-device-trust"
+   ],
+   "basis": "entry",
+   "note": "Device posture asserted versus measured is exactly the enrollment record test."
+  },
+  "L15-036": {
+   "level": "L2",
+   "covered_by": [
+    "d38-offboarding-access"
+   ],
+   "basis": "entry",
+   "note": "Conditional access gaps are access that survives a policy, which the offboarding review finds."
+  },
+  "L15-037": {
+   "level": "L2",
+   "covered_by": [
+    "d38-privileged-approval"
+   ],
+   "basis": "entry",
+   "note": "Administrative plane protection is the same privileged session audit."
+  },
+  "L15-038": {
+   "level": "L1",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: The telemetry matrix entry does not cover decoy placement. The concept is named and no procedure for it is stated."
+  },
+  "L15-039": {
+   "level": "L1",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Deception consistency is not a column the matrix defines. The concept is named and no procedure for it is stated."
+  },
+  "L15-040": {
+   "level": "L1",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: A canary is a detection source; the matrix entry does not describe placing or triaging one. The concept is named and no procedure for it is stated."
+  },
+  "L15-042": {
+   "level": "L1",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: The matrix covers retention and clocks, not capture before state changes. The concept is named and no procedure for it is stated."
+  },
+  "L15-044": {
+   "level": "L2",
+   "covered_by": [
+    "d37-data-at-rest"
+   ],
+   "basis": "entry",
+   "note": "Backup isolation is the key separability question: can a production credential delete the copy."
+  },
+  "L15-045": {
+   "level": "L1",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: Restore duration is not measured by the matrix. The concept is named and no procedure for it is stated."
+  },
+  "L15-047": {
+   "level": "L2",
+   "covered_by": [
+    "d25-rule-surface"
+   ],
+   "basis": "entry",
+   "note": "Detecting only what the deployed product emits is the signature bias question."
+  },
+  "L15-054": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "Defence in depth shows as the same marker blocked at two layers or only one."
+  },
+  "L15-055": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "A default that disables a feature shows as a position with no blocking."
+  },
+  "L15-056": {
+   "level": "L1",
+   "covered_by": [
+    "d18-deploy-creds"
+   ],
+   "basis": "entry",
+   "note": "Downgraded from L2: A security product's own update channel is not the deploy credential test. The concept is named and no procedure for it is stated."
+  },
+  "L15-058": {
+   "level": "L2",
+   "covered_by": [
+    "d38-privileged-approval"
+   ],
+   "basis": "entry",
+   "note": "Break glass bypassing its own controls is the approval trail question."
+  },
+  "L15-059": {
+   "level": "L2",
+   "covered_by": [
+    "d22-inspection-matrix"
+   ],
+   "basis": "entry",
+   "note": "Measuring whether a control catches anything is what the matrix is."
+  },
+  "L15-063": {
+   "level": "L2",
+   "covered_by": [
+    "d25-telemetry-matrix"
+   ],
+   "basis": "entry",
+   "note": "A hop with no owner is a column with no data."
   }
  }
 }

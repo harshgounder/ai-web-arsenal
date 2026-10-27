@@ -2,6 +2,8 @@
 {"url": "https://atlas.mitre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-atlas", "d20-atlas"]}
 {"url": "https://aws.amazon.com/cli/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-awscli"]}
 {"url": "https://book.hacktricks.wiki/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-hacktricks", "d07-hacktricks", "d08-hacktricks-csti", "d09-hacktricks", "d12-hacktricks", "d13-hacktricks", "d14-hacktricks", "d15-hacktricks", "d18-hacktricks", "d22-hacktricks", "d23-hacktricks"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-body-limit-map"]}
+{"url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d22-inspection-matrix"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-db-privilege"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d06-cheatsheet"]}
 {"url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-open-redirect-helper"]}
@@ -26,6 +28,7 @@
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-parser-surface"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-repro-pack"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-header-posture"]}
+{"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d11-method-override"]}
 {"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-collector-behaviour"]}
 {"url": "https://developer.mozilla.org/en-US/docs/WebAssembly", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d37-wasm-pipeline"]}
 {"url": "https://docs.astral.sh/uv/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-uv"]}
@@ -309,7 +312,7 @@
 {"url": "https://www.postgresql.org/docs/current/sql-altertable.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-migration-safety"]}
 {"url": "https://www.postgresql.org/docs/current/transaction-iso.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d07-isolation-audit"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc8446", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d25-key-custody"]}
-{"url": "https://www.rfc-editor.org/rfc/rfc9112", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9112"]}
+{"url": "https://www.rfc-editor.org/rfc/rfc9112", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9112", "d09-framing-bisect", "d09-header-precedence"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9113", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9113"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9700", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-rfc9700"]}
 {"url": "https://www.shodan.io/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-shodan-censys"]}

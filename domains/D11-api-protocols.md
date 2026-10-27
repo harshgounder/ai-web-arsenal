@@ -39,7 +39,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-37 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+38 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -65,6 +65,7 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [CATS](https://github.com/Endava/cats) | L06 probing | A3 | A01,A05 | `git:https://github.com/Endava/cats` | yes | OpenAPI fuzzer that generates tests from the schema and reports by category |
 | [Damn Vulnerable GraphQL Application](https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application) | L06 probing | A3 | A01,A02,A07,A10 | `docker` | no | Practice target that exercises the whole GraphQL attack set |
 | [graphql-cop](https://github.com/dolevf/graphql-cop) | L06 probing | A2 | A15,A02 | `git:https://github.com/dolevf/graphql-cop` | yes | GraphQL misconfiguration audit, the cheap wins first |
+| [Method override and content negotiation trust](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) | L06 probing | A2 | A08 | `n/a reference` | no | Whether a header or parameter can change the effective method, and whether the body is parsed by the declared type or the observed bytes. Both are how a write becomes reachable from a read. |
 | [newman](https://github.com/postmanlabs/newman) | L06 probing | A2 | A02,A10 | `npm:newman` | yes | Run a postman collection, the cheapest way to replay an authenticated flow |
 | [REST API Goat](https://github.com/optiv/rest-api-goat) | L06 probing | A2 | A02,A05 | `docker` | no | Deliberately vulnerable API for practising the whole Top 10 |
 | [schemathesis](https://github.com/schemathesis/schemathesis) | L06 probing | A3 | A01,A05,A10 | `pipx:schemathesis` | yes | Property based testing from an OpenAPI or GraphQL schema |
@@ -301,6 +302,10 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **ShipFast API protection walkthrough**  
 - preconditions: `docker`
 - oracle: `the walkthrough step reproduced`
+
+**Method override and content negotiation trust**  
+- preconditions: `an endpoint with different behaviour per method`, `the ability to set override headers and content types`
+- oracle: `a state change from a request whose method was GET`, `a body parsed as a different type than declared, producing a write`
 
 ## Decision tree
 

@@ -31,7 +31,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-15 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+17 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -41,10 +41,12 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [ffuf](https://github.com/ffuf/ffuf) | L04 discovery | A2 | A07 | `aur:ffuf` | yes | Fuzzing that survives rate limits by being paced, not by being fast |
 | [Awesome-WAF](https://github.com/0xInfection/Awesome-WAF) | L05 hypothesis | A0 | A15 | `n/a reference` | no | The WAF corpus: fingerprints, bypass notes and per product behaviour. 7,662 stars and still maintained |
 | [HackTricks](https://book.hacktricks.wiki/) | L05 hypothesis | A0 | A05 | `n/a reference` | no | Per defence technique reference with current bypass context |
+| [Body size and content type inspection limits](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Where inspection stops. Every control has a body size beyond which it forwards without reading, and a content type it does not parse, and both are discoverable by bisection. |
 | [cloudscraper](https://github.com/VeNoMouS/cloudscraper) | L06 probing | A2 | A15 | `pipx:cloudscraper` | no | Solves only the classic Cloudflare JS challenge |
 | [curl-impersonate](https://github.com/lwthiker/curl-impersonate) | L06 probing | A2 | A05 | `git:https://github.com/lwthiker/curl-impersonate` | no | The same idea from the shell, for quick differential checks |
 | [curl_cffi](https://github.com/lexiforest/curl_cffi) | L06 probing | A2 | A05,A03 | `pipx:curl-cffi` | no | Browser TLS fingerprint from python, the library route past JA3 and h2 checks |
 | [GoTestWAF](https://github.com/wallarm/gotestwaf) | L06 probing | A3 | A15,A05 | `git:https://github.com/wallarm/gotestwaf` | yes | Measures WAF detection coverage with a scoring report, the honest way to characterise a defence |
+| [Inspection position matrix](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html) | L06 probing | A2 | A08 | `n/a reference` | no | Which request region a control reads. One marker placed in the path, a header, the body and a multipart part, then the same marker obfuscated once, gives the coverage map in a handful of requests. |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Intercept and replay with control over the exact bytes, including pacing |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15 | `aur:nuclei-bin` | yes | Template checks with rate limiting and known WAF friendly options |
 | [playwright](https://playwright.dev/) | L06 probing | A2 | A05,A08 | `pipx:playwright` | no | A real browser engine driven by script, the honest bot workflow |
@@ -132,6 +134,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a WAF that inspects only the first N bytes`
 - oracle: `the payload reaches the app while the WAF sees only benign noise`
 - note: The class most WAF bypass lists miss entirely: it is not an encoding trick, it is a size assumption.
+
+**Inspection position matrix**  
+- preconditions: `a benign marker the control blocks when it sees it`, `write access to every position in the request`
+- oracle: `blocked in one position and accepted in another, repeatable`, `the accepted position still reaching the handler with the marker intact`, `a rule that fires on the plain marker and not on the once obfuscated form`
+
+**Body size and content type inspection limits**  
+- preconditions: `a payload the control blocks in a small body`
+- oracle: `the size at which the same payload stops being blocked, found by bisection`, `a content type the control does not parse, shown by the payload passing while its JSON twin is blocked`
 
 ## Decision tree
 

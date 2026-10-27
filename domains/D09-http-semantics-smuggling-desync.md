@@ -30,7 +30,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-11 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+13 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -41,7 +41,9 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [RFC 9112 (HTTP/1.1)](https://www.rfc-editor.org/rfc/rfc9112) | L05 hypothesis | A2 | A06 | `n/a reference` | no | The framing rules, which are the source of every desync |
 | [RFC 9113 (HTTP/2)](https://www.rfc-editor.org/rfc/rfc9113) | L05 hypothesis | A2 | A06 | `n/a reference` | no | Connection and request specific header rules, the basis of downgrade smuggling |
 | [curl](https://curl.se/docs/) | L06 probing | A2 | A05 | `pacman:curl` | no | Manual probes: no reason to use a tool before you can hand craft the request |
+| [Framing bisection across hops](https://www.rfc-editor.org/rfc/rfc9112) | L06 probing | A2 | A08 | `n/a reference` | no | Which hop disagrees about where a request ends. Bisection by placing a boundary marker at a chosen offset and watching which side treats it as data gives the seam without a scanner. |
 | [h2cSmuggler](https://github.com/BishopFox/h2cSmuggler) | L06 probing | A2 | A06 | `n/a reference` | no | HTTP/2 cleartext upgrade smuggling, the class most scanners completely miss |
+| [Header precedence per hop](https://www.rfc-editor.org/rfc/rfc9112) | L06 probing | A2 | A08 | `n/a reference` | no | Which of two conflicting headers each hop believes. Sending both with distinguishable values and reading what the origin echoes back names the precedence order without guessing. |
 | [HTTP Request Smuggler (Burp extension)](https://github.com/PortSwigger/http-request-smuggler) | L06 probing | A2 | A06,A04 | `git` | no | The reference desync tool, including h2 and TE variants |
 | [mitmproxy](https://docs.mitmproxy.org/stable/) | L06 probing | A2 | A05 | `pacman:mitmproxy` | yes | Byte level control over the request, which is the only way to send a malformed frame |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | L06 probing | A2 | A15,A06 | `aur:nuclei-bin` | yes | Template checks for known desync misconfigurations and proxy behaviour |
@@ -82,6 +84,14 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 - preconditions: `a lab or infrastructure you own`
 - oracle: `a desync with a paired timing control`
 - note: Same safety rule as the domain: not on shared infrastructure. The extension has a safe mode, use it.
+
+**Framing bisection across hops**  
+- preconditions: `a marker observable in a response body or a log`, `a request shape accepted by both hops`
+- oracle: `a marker that appears in the second response but was sent in the first`, `the offset at which the two hops stop agreeing, measured by moving the marker`
+
+**Header precedence per hop**  
+- preconditions: `a header the origin reflects or acts on`, `the ability to send duplicates`
+- oracle: `the value the origin acts on, matched to one of the two sent`, `a different value acted on by the edge, shown by a behaviour change before the origin`
 
 ## Decision tree
 

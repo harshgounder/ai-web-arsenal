@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 320,
+ "unique_urls": 323,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -41,6 +41,20 @@
     "d18-hacktricks",
     "d22-hacktricks",
     "d23-hacktricks"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-body-limit-map"
+   ]
+  },
+  "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d22-inspection-matrix"
    ]
   },
   "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html": {
@@ -216,6 +230,13 @@
    "http": 200,
    "entries": [
     "d08-header-posture"
+   ]
+  },
+  "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d11-method-override"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management": {

@@ -510,6 +510,64 @@
    "stage": "L07",
    "status": "ESTABLISHED",
    "note": "The class most WAF bypass lists miss entirely: it is not an encoding trick, it is a size assumption."
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d22-inspection-matrix",
+   "name": "Inspection position matrix",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html",
+   "role": "Which request region a control reads. One marker placed in the path, a header, the body and a multipart part, then the same marker obfuscated once, gives the coverage map in a handful of requests.",
+   "preconditions": [
+    "a benign marker the control blocks when it sees it",
+    "write access to every position in the request"
+   ],
+   "oracle": [
+    "blocked in one position and accepted in another, repeatable",
+    "the accepted position still reaching the handler with the marker intact",
+    "a rule that fires on the plain marker and not on the once obfuscated form"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d22-body-limit-map",
+   "name": "Body size and content type inspection limits",
+   "url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+   "role": "Where inspection stops. Every control has a body size beyond which it forwards without reading, and a content type it does not parse, and both are discoverable by bisection.",
+   "preconditions": [
+    "a payload the control blocks in a small body"
+   ],
+   "oracle": [
+    "the size at which the same payload stops being blocked, found by bisection",
+    "a content type the control does not parse, shown by the payload passing while its JSON twin is blocked"
+   ]
   }
  ],
  "tree": {

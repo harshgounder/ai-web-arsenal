@@ -343,6 +343,64 @@
    "stage": "L06",
    "status": "ESTABLISHED",
    "note": "Same safety rule as the domain: not on shared infrastructure. The extension has a safe mode, use it."
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d09-framing-bisect",
+   "name": "Framing bisection across hops",
+   "url": "https://www.rfc-editor.org/rfc/rfc9112",
+   "role": "Which hop disagrees about where a request ends. Bisection by placing a boundary marker at a chosen offset and watching which side treats it as data gives the seam without a scanner.",
+   "preconditions": [
+    "a marker observable in a response body or a log",
+    "a request shape accepted by both hops"
+   ],
+   "oracle": [
+    "a marker that appears in the second response but was sent in the first",
+    "the offset at which the two hops stop agreeing, measured by moving the marker"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A08"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d09-header-precedence",
+   "name": "Header precedence per hop",
+   "url": "https://www.rfc-editor.org/rfc/rfc9112",
+   "role": "Which of two conflicting headers each hop believes. Sending both with distinguishable values and reading what the origin echoes back names the precedence order without guessing.",
+   "preconditions": [
+    "a header the origin reflects or acts on",
+    "the ability to send duplicates"
+   ],
+   "oracle": [
+    "the value the origin acts on, matched to one of the two sent",
+    "a different value acted on by the edge, shown by a behaviour change before the origin"
+   ]
   }
  ],
  "tree": {
