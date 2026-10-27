@@ -1,5 +1,8 @@
 # RESUME: how to continue this repo
 
+> **After any context compaction, read `RECHECK.md` first and run `python3 scripts/recheck.py`.**
+> It re-derives 33 claims from disk and reports PASS, CHANGED or FAIL. Do not trust memory over it.
+
 Everything below was verified by running it on 2026-10-26. No step here depends on chat history.
 
 ---

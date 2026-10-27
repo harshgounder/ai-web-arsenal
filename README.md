@@ -122,6 +122,7 @@ ai-web-arsenal/
 ├── README.md                  you are here
 ├── SCOPE-v1.md                the superset derivation: 11 axes, cell model
 ├── BOOTSTRAP.md               bring-your-own-AI setup, Arch first
+├── RECHECK.md                 post-compaction state: goals, decisions, what is done and not
 ├── RESUME.md                  state, rebuild commands, traps already paid for
 ├── LOG.md                     every step, including the eight defects
 ├── manifest/tools.yaml        single source of truth for 64 tools
