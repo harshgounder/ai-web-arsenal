@@ -1,0 +1,62 @@
+{
+ "stack": "WordPress",
+ "detect": [
+  "/wp-json/ and /wp-login.php answering",
+  "a generator meta tag naming the version",
+  "/wp-content/plugins/<name>/ readable directly"
+ ],
+ "order": [
+  {
+   "step": 1,
+   "entry": "d03-whatweb",
+   "why": "version and plugin set decide which known issues apply at all",
+   "oracle": "a plugin directory or readme.txt naming a version"
+  },
+  {
+   "step": 2,
+   "entry": "d02-ffuf",
+   "why": "the plugin list is the attack surface and it is rarely complete in the UI",
+   "oracle": "a plugin directory reachable that is not listed anywhere"
+  },
+  {
+   "step": 3,
+   "entry": "d22-wafw00f",
+   "why": "most WordPress sites sit behind something, and knowing which changes the encoding budget",
+   "oracle": "a response that differs only for a blocked pattern"
+  },
+  {
+   "step": 4,
+   "entry": "d07-sqlmap",
+   "why": "plugin queries are where injection lives; core is usually current and plugins are not",
+   "oracle": "a conditional delay or a boolean difference on a plugin parameter"
+  },
+  {
+   "step": 5,
+   "entry": "d13-fuxploider",
+   "why": "media uploads and plugin upload forms differ in type checking",
+   "oracle": "a file stored and reachable as executable content"
+  },
+  {
+   "step": 6,
+   "entry": "d09-smuggler",
+   "why": "shared hosting and CDN fronting make framing disagreements common",
+   "oracle": "a request the edge and the origin disagree about"
+  },
+  {
+   "step": 7,
+   "entry": "d24-prove",
+   "why": "plugin version claims are unreliable, so prove the behaviour not the version",
+   "oracle": "the control request produces no effect"
+  }
+ ],
+ "pitfalls": [
+  "a readable plugin directory is a finding only with a behaviour, not on its own",
+  "version numbers in meta tags are frequently wrong after a partial update",
+  "xmlrpc.php open is not a finding unless a specific method does something"
+ ],
+ "not_covered": [
+  "the block editor REST surface has no entry",
+  "multisite tenancy is not modelled"
+ ],
+ "id": "p03-wordpress"
+}

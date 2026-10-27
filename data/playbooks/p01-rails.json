@@ -1,0 +1,62 @@
+{
+ "stack": "Ruby on Rails",
+ "detect": [
+  "X-Powered-By or Server headers rarely help; look for a `_session_id` cookie",
+  "asset paths containing a digest, e.g. /assets/application-<hash>.css",
+  "422 responses with a Rails error page on a bad authenticity token"
+ ],
+ "order": [
+  {
+   "step": 1,
+   "entry": "d08-header-posture",
+   "why": "headers are set per response, and Rails error pages are where they go missing",
+   "oracle": "at least one response variant missing a header the others carry"
+  },
+  {
+   "step": 2,
+   "entry": "d07-binder-audit",
+   "why": "strong parameters are per controller; one controller that forgot permits everything",
+   "oracle": "an undeclared field persisted, traced to the controller"
+  },
+  {
+   "step": 3,
+   "entry": "d07-orm-loading",
+   "why": "ActiveRecord scopes apply to queries but a lazy relation can bypass the scope chain",
+   "oracle": "a record reachable through a lazy path that the collection query excludes"
+  },
+  {
+   "step": 4,
+   "entry": "d05-autorize",
+   "why": "authorisation usually lives in a before_action per controller, so gaps are per controller too",
+   "oracle": "a request replayed as a lower role that still succeeds"
+  },
+  {
+   "step": 5,
+   "entry": "d13-fuxploider",
+   "why": "ActiveStorage and blob uploads decide type by content, and the pipeline trusts it",
+   "oracle": "an uploaded file reachable and interpreted as something else"
+  },
+  {
+   "step": 6,
+   "entry": "d12-race-the-web",
+   "why": "counter caches and optimistic locking are where Rails logic races live",
+   "oracle": "a stale write accepted after a concurrent update"
+  },
+  {
+   "step": 7,
+   "entry": "d24-prove",
+   "why": "before writing anything up, falsify it",
+   "oracle": "the control run produces no effect"
+  }
+ ],
+ "pitfalls": [
+  "a 422 on a forged token is not a CSRF finding, it is the protection working",
+  "Rails `find` raises while `where` returns empty, so a 404 and a 200 can mean the same query",
+  "development error pages expose the full stack, which is a finding only if reachable in production"
+ ],
+ "not_covered": [
+  "Action Cable and Turbo Streams are WebSocket surfaces and the atlas does not model them",
+  "ActiveJob retry semantics are named in the data lens and have no lab here"
+ ],
+ "id": "p01-rails"
+}

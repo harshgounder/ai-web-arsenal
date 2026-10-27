@@ -1,0 +1,62 @@
+{
+ "stack": "GraphQL API",
+ "detect": [
+  "a single POST endpoint answering a query",
+  "error shapes naming a schema type",
+  "a playground or GraphiQL page left enabled"
+ ],
+ "order": [
+  {
+   "step": 1,
+   "entry": "d11-inql",
+   "why": "if introspection is on, the whole surface is one request away",
+   "oracle": "a schema returned without credentials"
+  },
+  {
+   "step": 2,
+   "entry": "d11-clairvoyance",
+   "why": "with introspection off, field suggestions still name fields",
+   "oracle": "a recovered field the UI never calls"
+  },
+  {
+   "step": 3,
+   "entry": "d11-graphql-cop",
+   "why": "the known misconfigurations are cheap to check before manual work",
+   "oracle": "a named weakness confirmed by a request"
+  },
+  {
+   "step": 4,
+   "entry": "d05-autorize",
+   "why": "authorisation must be per field and per edge, not per endpoint",
+   "oracle": "a field returned that the caller may not read"
+  },
+  {
+   "step": 5,
+   "entry": "d11-batchql",
+   "why": "batching and aliasing multiply every check in one request",
+   "oracle": "N effects from one request that passed depth limits"
+  },
+  {
+   "step": 6,
+   "entry": "d11-schemathesis",
+   "why": "the schema states constraints the implementation may not enforce",
+   "oracle": "an input accepted that the schema forbids"
+  },
+  {
+   "step": 7,
+   "entry": "d24-prove",
+   "why": "a field returned is not a finding until you show it is not yours",
+   "oracle": "the same field refused to a lower role, or a second tenant's record returned"
+  }
+ ],
+ "pitfalls": [
+  "introspection disabled is not the same as the schema protected",
+  "depth limits do not bound cost; aliases and fragments do the multiplication",
+  "a 200 with an errors array is a partial success and often still returns data"
+ ],
+ "not_covered": [
+  "subscription transports are not modelled",
+  "federation boundary checks have no entry"
+ ],
+ "id": "p04-graphql"
+}

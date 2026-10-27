@@ -590,6 +590,31 @@ not previously read, with a fixture and a test, or it does not go in.
 
 ---
 
+## Playbooks
+
+A list tells you a tool exists. A playbook tells you what to run first on the stack in front of you, in
+order, and what proves each step. Four exist, generated from `data/playbooks/`:
+
+| stack | steps | first move |
+|---|---|---|
+| Rails | 7 | headers per response variant, then strong parameter coverage |
+| Next.js and React SSR | 7 | the bundle and the flight payload are the route table |
+| WordPress | 7 | version and plugin set decide which issues apply at all |
+| GraphQL | 7 | introspection, then field suggestions when it is off |
+
+Every step cites a real entry id and the generator refuses to emit a broken reference:
+
+```bash
+python3 scripts/render-playbooks.py --check
+# 4 playbook(s) checked, every cited entry exists
+```
+
+Each playbook also carries a "what will make you wrong" section, which is the part that costs people
+real time. The Next.js one starts with: *a personalised response is not a cache finding unless a second
+client receives it.*
+
+---
+
 ## The MCP server
 
 An agent should not read 500 entries to find one. `mcps/arsenal-mcp.py` serves the same data as tools over
@@ -725,6 +750,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | claims checked | 45 |
 | regression tests | 30 across 21 known defect classes |
 | REA operations built | 6 of 10 named gaps, each with fixtures and a test |
+| stack playbooks | 4, every cited entry verified to exist |
 | MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 
@@ -794,6 +820,7 @@ ai-web-arsenal/
 ├── domains/                   39 domain documents, 30 authored, 9 pointers
 ├── trees/                     decision trees as JSON
 ├── prompts/                   5 phase packs with failure modes
+├── playbooks/                 per stack ordered runs, generated from data/playbooks/
 ├── mcps/                      working MCP configs, including arsenal-mcp.py
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── rea-ops/                   built extraction operations, each with a fixture and a test

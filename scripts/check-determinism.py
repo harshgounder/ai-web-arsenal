@@ -33,6 +33,7 @@ OFFLINE = [
     "scripts/dedupe-names.py",
     "scripts/validate-domains.py",
     "scripts/render-ceiling.py",
+    "scripts/render-playbooks.py",
 ]
 
 # Files whose content legitimately depends on the network or on when it was run.
@@ -42,7 +43,7 @@ VOLATILE = {
     "data/observations/observations.jsonl",
 }
 
-WATCH = ["data", "domains", "bootstrap", "docs"]
+WATCH = ["data", "domains", "bootstrap", "docs", "playbooks"]
 
 
 def snapshot():

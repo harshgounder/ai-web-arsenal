@@ -1,0 +1,62 @@
+{
+ "stack": "Next.js and React server rendering",
+ "detect": [
+  "/_next/static/ asset paths with a build id",
+  "a `__NEXT_DATA__` script tag on server rendered pages",
+  "RSC payloads in the flight stream, which look like `self.__next_f.push` calls"
+ ],
+ "order": [
+  {
+   "step": 1,
+   "entry": "d03-rea-bundle",
+   "why": "the client bundle and the flight payload together are the real route table",
+   "oracle": "a route or action present in the payload that the sitemap does not list"
+  },
+  {
+   "step": 2,
+   "entry": "d06-rea-page",
+   "why": "the app stores session state client side more often than it admits",
+   "oracle": "a token or a tenant id readable from storage or from the flight payload"
+  },
+  {
+   "step": 3,
+   "entry": "d08-header-posture",
+   "why": "static assets, API routes and error boundaries each carry their own headers",
+   "oracle": "one variant missing a header the others carry"
+  },
+  {
+   "step": 4,
+   "entry": "d11-kiterunner",
+   "why": "route handlers and server actions are easy to add and easy to forget to guard",
+   "oracle": "an undocumented route or action that answers"
+  },
+  {
+   "step": 5,
+   "entry": "d10-wcvs",
+   "why": "full route cache and ISR mean a response can outlive the permission under it",
+   "oracle": "a personalised response served to a second client"
+  },
+  {
+   "step": 6,
+   "entry": "d09-smuggler",
+   "why": "server actions are POSTs to the page route, so framing disagreements land on them",
+   "oracle": "a smuggled prefix that becomes a second action invocation"
+  },
+  {
+   "step": 7,
+   "entry": "d24-prove",
+   "why": "cache findings are the easiest to fake, so control them",
+   "oracle": "the same request with the header removed produces the benign page"
+  }
+ ],
+ "pitfalls": [
+  "a personalised response is not a cache finding unless a second client receives it",
+  "the flight payload often contains more than the HTML does, including server-only props",
+  "middleware runs at the edge and can be bypassed by a mismatched route, so test the handler and not the redirect"
+ ],
+ "not_covered": [
+  "React Server Component serialisation has no dedicated entry",
+  "edge middleware ordering is not modelled"
+ ],
+ "id": "p02-nextjs"
+}
