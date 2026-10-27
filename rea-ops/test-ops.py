@@ -197,6 +197,18 @@ def make_sourcemap(bundle_path, with_content=True, inline=False):
     return m
 
 
+def make_hermes(path, version=96, funcs=120, strings=900, storage=4096):
+    """A Hermes header this repo generates. Circular by construction: it validates the reader against the
+    layout the reader implements, not against a real .hbc. Stated so nobody mistakes it for field data."""
+    import struct
+    body = b"\x00" * 64
+    total = 48 + len(body)
+    hdr = struct.pack("<QIII", 0xC61FBB1E, version, 0xDEADBEEF, total)
+    hdr += struct.pack("<IIIIIII", 0, funcs, 4, 40, strings, 0, storage)
+    path.write_bytes(hdr + body)
+    return total
+
+
 def run(args):
     r = subprocess.run([sys.executable] + args, capture_output=True, text=True, timeout=120)
     return r.returncode, r.stdout, r.stderr
@@ -425,6 +437,33 @@ def test_sourcemap(tmp):
           rc == 2 and "no map" in err, f"rc={rc}")
 
 
+def test_hermes(tmp):
+    hbc = tmp / "index.android.bundle.hbc"
+    make_hermes(hbc, version=96, funcs=120, strings=900, storage=4096)
+    rc, out, err = run([str(HERE / "hermes.py"), str(hbc), "--json"])
+    d = parse_json(out)
+    check("hermes: reads a valid header", rc == 0, err[:80])
+    check("hermes: reports the version", d.get("version") == 96)
+    check("hermes: reports function and string counts",
+          d.get("function_count") == 120 and d.get("string_count") == 900)
+    check("hermes: length check agrees with the file", d.get("length_matches") is True)
+    check("hermes: version inside the known range makes no warning", "warning" not in d)
+
+    # an unknown version must still report the header but say so
+    odd = tmp / "odd.hbc"
+    make_hermes(odd, version=250)
+    rc, out, _ = run([str(HERE / "hermes.py"), str(odd), "--json"])
+    d = parse_json(out)
+    check("hermes: unknown version warns instead of guessing",
+          rc == 0 and d.get("known_version") is False and "outside" in str(d.get("warning")))
+
+    # not Hermes at all
+    junk = tmp / "junk.bin"
+    junk.write_bytes(b"not a hermes bundle at all, twelve bytes")
+    rc, out, err = run([str(HERE / "hermes.py"), str(junk)])
+    check("hermes: rejects a non Hermes file with a reason", rc == 1 and "not Hermes" in err)
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -440,6 +479,8 @@ def main():
         test_webauthn(tmp)
         print("sourcemap.py")
         test_sourcemap(tmp)
+        print("hermes.py")
+        test_hermes(tmp)
     print(f"\nfixtures: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
     if FAIL:
         for f in FAIL:

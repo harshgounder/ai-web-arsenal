@@ -912,7 +912,10 @@
   {
    "gap": "No Hermes or React Native bundle recovery",
    "class": "no-tool",
-   "build_candidate": "extract the bundle and recover the JS, then treat as a web bundle"
+   "build_candidate": "extract the bundle and recover the JS, then treat as a web bundle",
+   "status": "partial",
+   "built_at": "rea-ops/hermes.py",
+   "built_note": "reads the header: magic, version, source hash, declared length, function, identifier and string counts, string storage size. Refuses to walk the tables because their offsets move between versions, and warns on an unknown version. The bundle recovery half is not done."
   },
   {
    "gap": "No HarmonyOS HAP or ABC bytecode support",

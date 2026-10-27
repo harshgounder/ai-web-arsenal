@@ -122,6 +122,7 @@ except Exception:
 try:
     _d31 = json.load(open(R/"data"/"domains"/"D31.json"))
     print(f"rea_gaps_built {sum(1 for g in _d31['gaps'] if g.get('status') == 'built')}")
+    print(f"rea_gaps_partial {sum(1 for g in _d31['gaps'] if g.get('status') == 'partial')}")
 except Exception:
     print("rea_gaps_built 0")
 print("tiers " + json.dumps(tiers))

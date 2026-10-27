@@ -929,7 +929,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | atlas patterns | 150, gate passing, 135 ESTABLISHED and 15 PROBABLE |
 | claims checked | 45 |
 | regression tests | 30 across 21 known defect classes |
-| REA operations built | 6 of 10 named gaps, each with fixtures and a test |
+| REA operations built | 6 of 10 named gaps fully, 1 partial, each with fixtures and a test |
 | stack playbooks | 4, every cited entry verified to exist |
 | control classes with a stated blind spot | 14 of 14 |
 | advisories mapped | 993 of 1,261 (78.7%), 268 unmapped and stated |
