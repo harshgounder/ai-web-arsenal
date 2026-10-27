@@ -17,6 +17,29 @@ STATUSES = {"VERIFIED", "ESTABLISHED", "PROBABLE", "DRAFT", "OBSERVED"}
 AGENCIES = {f"A{i}" for i in range(0, 8)}
 STAGES = {f"L{i:02d}" for i in range(1, 13)}
 
+def atom_scope_problems(doms):
+    """An entry's atoms must be within the domain's declared atoms.
+
+    The old check verified that an atom id existed in the global set, so a domain could declare A13, A07
+    and A05 while every one of its entries said A08 and still pass. That is how D37 shipped with eight
+    identically misclassified entries.
+
+    An entry may step outside the domain's set if it carries `atom_note`, which is the explicit exception
+    rather than an accident.
+    """
+    problems = []
+    for d in doms:
+        allowed = set(d.get("atoms") or [])
+        if not allowed:
+            continue
+        for e in d.get("entries", []):
+            atoms = set(e.get("atom") or [])
+            if not atoms <= allowed and not e.get("atom_note"):
+                problems.append(f"{d['id']}/{e['id']}: atoms {sorted(atoms)} outside the domain set "
+                                f"{sorted(allowed)} and no atom_note explains it")
+    return problems
+
+
 def main():
     problems = []
     files = sorted((ROOT / "data" / "domains").glob("D*.json"))

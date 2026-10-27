@@ -814,6 +814,36 @@ capture without a transport, signing ranks candidates without recovering an algo
 
 ---
 
+## 6x. External audit: the atom field is not reliable for 98 entries
+
+An external review found that every D37 entry carried atom A08 while the domain declared A13, A07 and A05.
+That was true, and it was the visible edge of something wider.
+
+Measured: **98 of 562 entries carry an atom outside their domain's declared atom set**, 17 percent. The
+worst are D11 with 22, D07 with 16, D25 with 11 and D04 with 9. The cause is not mysterious. For most of
+this project's authoring, a new entry was created from a template whose atom defaulted to A08, information
+exposure, and nobody checked it against the domain's own declaration. The two fields were written at
+different times by different passes.
+
+**I did not mass edit them.** Deciding which side is wrong for 98 entries means reading 98 entries, and
+guessing would replace a visible defect with a silent one. Two things were done instead:
+
+- the D37 entries were re-atomised, because that domain was small enough to reason about entry by entry,
+  and eight identical atoms for timing, JIT, allocation, sandbox and GPU work was plainly wrong
+- `C134` pins the number at 98, so it burns down rather than drifts, and `validate-domains.py` prints it
+  on every run
+
+A second inconsistency surfaced in the same check. The domain registry disagreed with the domain files on
+atoms for **25 of 30 domains**, and on required cells for several more. Three representations existed for
+one fact and none was derived from another. The registry is now regenerated from the domain files, they
+are the single source, and `C135` enforces agreement.
+
+What this means for the rest of the ledger: domain level `atoms` and the coverage numbers do not depend on
+entry level `atom`. The 397 coverage records are keyed to lens factors, not to atoms, so the coverage
+figure stands. What is unreliable is the per entry atom field, and it is now labelled as such.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

@@ -35,7 +35,7 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A13"
    ],
    "evades": [],
    "detected_by": [],
@@ -65,7 +65,8 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A13",
+    "A05"
    ],
    "evades": [],
    "detected_by": [],
@@ -93,7 +94,7 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A01"
    ],
    "evades": [],
    "detected_by": [],
@@ -121,7 +122,8 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A07",
+    "A13"
    ],
    "evades": [],
    "detected_by": [],
@@ -151,7 +153,7 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A07"
    ],
    "evades": [],
    "detected_by": [],
@@ -180,7 +182,7 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A02"
    ],
    "evades": [],
    "detected_by": [],
@@ -209,7 +211,7 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A01"
    ],
    "evades": [],
    "detected_by": [],
@@ -237,7 +239,7 @@
     "stdin": false
    },
    "atom": [
-    "A08"
+    "A13"
    ],
    "evades": [],
    "detected_by": [],
