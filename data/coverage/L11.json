@@ -2,7 +2,7 @@
  "lens": "L11",
  "name": "human and organisational",
  "default": "L0",
- "reason": "Almost nothing. Two entries touch reporting practice and one touches credential handling. Every factor that decides whether a person can be talked into an action, which is most successful intrusion, has no artefact in either repo. This is stated as the largest people gap.",
+ "reason": "The people and process lens now has a domain. Twelve of its Class I factors are covered by review procedures that produce evidence, and the twenty seven Class III factors stay unavailable because they are internal governance facts. Nothing here is observed: no social engineering test plan exists.",
  "exceptions": {
   "L11-026": {
    "level": "L1",
@@ -25,6 +25,102 @@
    "covered_by": [],
    "basis": "none",
    "note": "Handover completeness is unaddressed."
+  },
+  "L11-009": {
+   "level": "L2",
+   "covered_by": [
+    "d38-offboarding-access"
+   ],
+   "basis": "entry",
+   "note": "A login from a leaver's account after the last day is the evidence."
+  },
+  "L11-010": {
+   "level": "L2",
+   "covered_by": [
+    "d38-shared-account"
+   ],
+   "basis": "entry",
+   "note": "One credential used from several distinct clients is the attribution failure."
+  },
+  "L11-011": {
+   "level": "L2",
+   "covered_by": [
+    "d38-secret-storage"
+   ],
+   "basis": "entry",
+   "note": "A live secret in a non manager store, with its location, is the finding."
+  },
+  "L11-014": {
+   "level": "L2",
+   "covered_by": [
+    "d38-device-trust"
+   ],
+   "basis": "entry",
+   "note": "A device without an enrollment record holding data is the unmanaged trust case."
+  },
+  "L11-015": {
+   "level": "L2",
+   "covered_by": [
+    "d38-device-trust"
+   ],
+   "basis": "entry",
+   "note": "Work data present on a device outside management is the boundary test."
+  },
+  "L11-019": {
+   "level": "L2",
+   "covered_by": [
+    "d38-privileged-approval"
+   ],
+   "basis": "entry",
+   "note": "An elevated session with no approval record is the trail question."
+  },
+  "L11-027": {
+   "level": "L2",
+   "covered_by": [
+    "d38-disclosure-program"
+   ],
+   "basis": "entry",
+   "note": "A report marked out of scope for a real issue is the scope defect."
+  },
+  "L11-028": {
+   "level": "L2",
+   "covered_by": [
+    "d38-disclosure-program"
+   ],
+   "basis": "entry",
+   "note": "The safe harbour statement read for what it actually protects."
+  },
+  "L11-031": {
+   "level": "L2",
+   "covered_by": [
+    "d38-change-review-depth"
+   ],
+   "basis": "entry",
+   "note": "A sensitive change merged with one approval and no security review."
+  },
+  "L11-032": {
+   "level": "L2",
+   "covered_by": [
+    "d38-change-review-depth"
+   ],
+   "basis": "entry",
+   "note": "A sensitive file with no named owner."
+  },
+  "L11-039": {
+   "level": "L2",
+   "covered_by": [
+    "d38-shared-account"
+   ],
+   "basis": "entry",
+   "note": "A key used by several distinct clients is the sharing symptom."
+  },
+  "L11-055": {
+   "level": "L2",
+   "covered_by": [
+    "d38-secret-storage"
+   ],
+   "basis": "entry",
+   "note": "What the organisation says it will never ask for, checked against its real process."
   }
  }
 }

@@ -1,0 +1,5 @@
+{
+ "q1": "is the question about who someone is, what they hold, or what they can do",
+ "q2": "is the evidence a directory record, a login, or a real device",
+ "q3": "does the answer require being inside the organisation, in which case it is Class III and stated as unavailable"
+}

@@ -467,17 +467,11 @@
 {"factor": "L11-006", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-007", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-008", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-009", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-010", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-011", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-012", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-013", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
-{"factor": "L11-014", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-015", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-016", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-017", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-018", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "requires internal telemetry that no outsider can see"}
-{"factor": "L11-019", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-020", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "credential custody and access breadth are internal records"}
 {"factor": "L11-021", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "credential custody and access breadth are internal records"}
 {"factor": "L11-022", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "whether real customer data reaches a lower environment is an internal practice"}
@@ -485,19 +479,14 @@
 {"factor": "L11-024", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "documents can be read only from inside; accuracy is not observable from outside"}
 {"factor": "L11-025", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-026", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L11-027", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-028", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-029", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-030", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-031", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
-{"factor": "L11-032", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-033", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "employment and acquisition history is internal"}
 {"factor": "L11-034", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "employment and acquisition history is internal"}
 {"factor": "L11-035", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "the organisation's own legal process is not public"}
 {"factor": "L11-036", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "the organisation's own legal process is not public"}
 {"factor": "L11-037", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-038", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L11-039", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-040", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "documents can be read only from inside; accuracy is not observable from outside"}
 {"factor": "L11-041", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "decision authority and exception registers are governance, not behaviour"}
 {"factor": "L11-042", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "paper", "reason": "incentives, assessments and team integration are internal facts"}
@@ -513,7 +502,6 @@
 {"factor": "L11-052", "lens": "L11", "class": "II", "cost": "lab", "evidence": "paper", "reason": "evidence is paper, so it needs a probe or a lab"}
 {"factor": "L11-053", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
 {"factor": "L11-054", "lens": "L11", "class": "II", "cost": "lab", "evidence": "run", "reason": "evidence is run, so it needs a probe or a lab"}
-{"factor": "L11-055", "lens": "L11", "class": "I", "cost": "authoring", "evidence": "source", "reason": "evidence is source, so the mechanism is published and can be written"}
 {"factor": "L11-056", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "incentives, assessments and team integration are internal facts"}
 {"factor": "L11-057", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "the organisation's own legal process is not public"}
 {"factor": "L11-058", "lens": "L11", "class": "III", "cost": "impossible", "evidence": "source", "reason": "requires internal telemetry that no outsider can see"}

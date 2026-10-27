@@ -1,0 +1,286 @@
+{
+ "id": "D38",
+ "title": "People and process: the controls that are held by humans",
+ "version": 1,
+ "generated": "2026-10-27",
+ "status": "DEEP",
+ "atoms": [
+  "A14",
+  "A02"
+ ],
+ "atom_notes": {
+  "A14": "most successful intrusion starts with a person, not a parser",
+  "A02": "the trust boundary between an employee and a customer is the one nobody draws"
+ },
+ "required_cells": [
+  {
+   "cell": "S15/L02/A1",
+   "why": "you cannot review a process you have not inventoried",
+   "filled": true
+  },
+  {
+   "cell": "S15/L08/A3",
+   "why": "attribution is the property that makes every other control auditable",
+   "filled": true
+  }
+ ],
+ "entries": [
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-offboarding-access",
+   "name": "Offboarding access review",
+   "url": "https://www.ncsc.gov.uk/collection/10-steps",
+   "role": "What survives a departure. Accounts, tokens, device trust, shared passwords and local files each have their own lifecycle, and most reviews check only the directory account.",
+   "preconditions": [
+    "a person has left or changed role in the last quarter",
+    "an inventory of systems exists or can be built"
+   ],
+   "oracle": [
+    "a credential or session still working after the last day, evidenced by a login record",
+    "every system on the inventory answered for, positive or negative",
+    "a shared credential rotated, because revoking one account does not revoke a shared secret"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-shared-account",
+   "name": "Shared account and attribution audit",
+   "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/final",
+   "role": "Whether an action can be attributed to a person. A shared login makes the audit trail a guess, which is both a control failure and an incident response problem.",
+   "preconditions": [
+    "the organisation has accounts used by more than one person"
+   ],
+   "oracle": [
+    "an action in the log that cannot be attributed to one human",
+    "one credential used from several distinct clients in a window",
+    "an access review that lists a person against an account they do not uniquely hold"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-secret-storage",
+   "name": "Credential storage outside a manager",
+   "url": "https://www.ncsc.gov.uk/collection/device-security-guidance",
+   "role": "Where secrets actually live. Notes, chat, spreadsheets and screenshots are the real inventory, and a manager's adoption says nothing about what is outside it.",
+   "preconditions": [
+    "the organisation has a password manager or policy"
+   ],
+   "oracle": [
+    "a working credential found outside the manager, with its location",
+    "the manager's coverage reported as a fraction of the credential inventory, not a yes"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-device-trust",
+   "name": "Device trust enrollment path",
+   "url": "https://www.ncsc.gov.uk/collection/device-security-guidance",
+   "role": "Whether a device can be enrolled outside the managed process, and what organisational data reaches a personal device that cannot be removed.",
+   "preconditions": [
+    "access depends on device posture or enrollment"
+   ],
+   "oracle": [
+    "an unmanaged device treated as trusted, with the enrollment record or its absence",
+    "work data present on a device outside management, demonstrated on a real device"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-privileged-approval",
+   "name": "Privileged access approval trail",
+   "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/final",
+   "role": "Whether elevated access is requested, approved and recorded per session. Standing privilege with no trail is indistinguishable from a compromised account until someone looks.",
+   "preconditions": [
+    "the organisation has administrative access to production or data"
+   ],
+   "oracle": [
+    "an elevated session with no approval record",
+    "the approval record missing a second party, where dual control is claimed",
+    "duration of the elevation longer than the task required"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-disclosure-program",
+   "name": "Disclosure programme scope and safe harbour",
+   "url": "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/",
+   "role": "The relationship with people who find things. Scope must be precise enough to test the real system, and good faith testing must be protected in writing.",
+   "preconditions": [
+    "the organisation receives external reports"
+   ],
+   "oracle": [
+    "a report marked out of scope for a real issue, which is a scope defect",
+    "the safe harbour statement read for what it actually protects",
+    "acknowledgement measured against the stated window on a real report"
+   ]
+  },
+  {
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A14"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A0",
+   "stage": "L11",
+   "status": "VERIFIED",
+   "mirror_note": "no mirror row covers this entry",
+   "id": "d38-change-review-depth",
+   "name": "Review depth on security relevant changes",
+   "url": "https://owasp.org/www-project-top-ten/",
+   "role": "Whether authentication, payment and crypto changes get a different review than a typo fix, and whether a named owner exists for each sensitive path.",
+   "preconditions": [
+    "the project has a review process and code ownership"
+   ],
+   "oracle": [
+    "a sensitive change merged with one approval and no security review",
+    "a sensitive file with no named owner",
+    "the repeat rate of the same class of mistake, which is the only honest measure of whether review teaches"
+   ]
+  }
+ ],
+ "tree": {
+  "q1": "is the question about who someone is, what they hold, or what they can do",
+  "q2": "is the evidence a directory record, a login, or a real device",
+  "q3": "does the answer require being inside the organisation, in which case it is Class III and stated as unavailable"
+ },
+ "mirror": [
+  {
+   "attack": "access surviving a departure",
+   "detect": "quarterly access review against the HR leaver list",
+   "control": "single join and leave workflow covering every system",
+   "rule": "a login from a leaver's account after their last day"
+  },
+  {
+   "attack": "an action with no attributable person",
+   "detect": "shared account inventory and per session attribution check",
+   "control": "named accounts, no shared credentials",
+   "rule": "one credential used from several distinct clients"
+  },
+  {
+   "attack": "a credential found outside the manager",
+   "detect": "secret scanning of chat and shared drives",
+   "control": "manager enforced, rotation on exposure",
+   "rule": "a live secret in a non manager store"
+  },
+  {
+   "attack": "an unmanaged device treated as trusted",
+   "detect": "device enrollment audit against the endpoint inventory",
+   "control": "posture required for access, personal devices excluded from data",
+   "rule": "a device without an enrollment record holding data"
+  },
+  {
+   "attack": "standing privilege with no trail",
+   "detect": "privileged session recording and approval records",
+   "control": "just in time elevation with dual approval",
+   "rule": "an elevated session with no approval record"
+  }
+ ],
+ "gaps": [
+  {
+   "gap": "No social engineering test plan, so the human half of every engagement is improvised",
+   "class": "no-tool",
+   "build_candidate": "a consent gated script set for support desk verification, with what may and may not be attempted and a written stop condition"
+  },
+  {
+   "gap": "Nothing in this domain is observed, and most of it cannot be from outside",
+   "class": "no-tool",
+   "build_candidate": "an internal review pack a client can run themselves, producing the evidence this domain asks for"
+  },
+  {
+   "gap": "No method for measuring whether review teaches, only the repeat rate",
+   "class": "partial",
+   "build_candidate": "tag every finding by defect class and track recurrence per team across engagements"
+  }
+ ],
+ "unreviewed_index": 0
+}

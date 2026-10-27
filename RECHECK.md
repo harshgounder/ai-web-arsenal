@@ -17,7 +17,7 @@ Written 2026-10-27. Author: the same session that built everything below.
 
 | path | remote | commits | tracked | state |
 |---|---|---|---|---|
-| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 66 | 315 | pushed, clean |
+| `~/ai-web-arsenal` | github.com/harshgounder/ai-web-arsenal | 67 | 320 | pushed, clean |
 | `~/web-attack-atlas` | github.com/harshgounder/web-attack-atlas | 12 | 25 | pushed, clean |
 | `~/contest-opsec` | none | 0 | 0 | **PAUSED**, only `SCOPE.md` drafted |
 | `~/operator-opsec` | none | 0 | 0 | **ABANDONED**, stale corporate-OPSEC drafts, safe to delete |
@@ -38,7 +38,7 @@ It was never committed, never pushed. `~/contest-opsec` is the correct successor
 | 2 | rival reconciliation, every entry included or in an exclusion ledger with reason | **done** | `data/reconcile/`: 19 sources, 31,298 rows, identity holds, 7 reason codes |
 | 3 | layered repo: README hub + per-domain MD + machine-readable JSON | **done** | `README.md`, 37 files in `domains/`, 37 JSON in `data/domains/` |
 | 4 | full AI-native layer: MCP specs, skills, prompts, orchestration, trees | **done** | `mcps/`, `skills/`, 5 `prompts/`, `docs/ORCHESTRATION.md`, 28 `trees/` |
-| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 315 domain URLs fetched 2026-10-27 |
+| 5 | dated evidence per entry, web/API + adjacent, refreshed through Oct 2026 | **done** | every corpus row stamped; 320 domain URLs fetched 2026-10-27 |
 
 Goal marked complete on round 40/40. **"Definitive" was not achieved and the README no longer claims it.**
 
@@ -105,8 +105,8 @@ reconcile       31,298 rows = 13,516 admitted + 17,506 excluded + 204 held + 71 
 taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
-domains         29 authored + 9 explicit pointers + 0 empty
-enriched        503 entries, all with atom and driver; 394 with preconditions, 405 with oracle,
+domains         30 authored + 9 explicit pointers + 0 empty
+enriched        510 entries, all with atom and driver; 401 with preconditions, 412 with oracle,
                 175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
@@ -321,8 +321,9 @@ not are ISO 27001 and the W3C WebAuthn page refusing automated clients.
 | L12 AI and agentic | 5 of 62 | **15 of 62 (24%)** |
 | L07 data and storage | 8 of 62 | **22 of 62 (35%)** |
 | L13 regulation | 26 of 64 | **40 of 64 (63%)** |
+| L11 human and organisational | 0 of 62 | **12 of 62 (19%)** |
 | L04 frameworks | 15 of 62 | **21 of 62 (34%)** |
-| whole denominator | 108 of 1,000 (10.8%) | **247 of 1,000 (24.7%)** |
+| whole denominator | 108 of 1,000 (10.8%) | **259 of 1,000 (25.9%)** |
 
 What the entries do that a policy document does not: each states what to look at and what result settles
 it. `d24-gdpr-breach` asks for the awareness timestamp and the article 33(5) register entry, not a promise
@@ -372,6 +373,32 @@ buffer before any write, which should be zero" answers the GPU memory clearing q
 
 The domain also carries its own gaps, including the honest one: nothing in it is observed, because there
 is no substrate harness, and building one is named as the candidate.
+
+---
+
+## 6j. A people domain, so the second zero has somewhere to live
+
+L11 was the last lens at zero. Like substrate it had no domain, and unlike substrate the reason was
+awkward: the factors are about how an organisation runs itself, which is not a technical surface at all.
+
+D38 exists now, "People and process: the controls that are held by humans", seven entries. Every one
+produces evidence rather than advice:
+
+```
+d38-offboarding-access  a login from a leaver's account after their last day
+d38-shared-account      one credential used from several distinct clients
+d38-secret-storage      a live secret found outside the manager, with its location
+d38-device-trust        a device with no enrollment record holding data
+d38-privileged-approval an elevated session with no approval record
+d38-disclosure-program  a report marked out of scope for a real issue
+d38-change-review-depth a sensitive file with no named owner
+```
+
+L11 goes 0 to 12 of 62. Coverage 24.7 to 25.9 percent.
+
+Note what stayed out. Twenty seven of L11's factors are Class III and they remain unavailable, because
+whether a team keeps an exception register is not in any public source and not revealed by any probe.
+The domain's own gap list says so rather than implying the gap will close.
 
 ---
 

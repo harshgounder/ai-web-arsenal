@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 315,
+ "unique_urls": 320,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -84,6 +84,14 @@
    "http": 200,
    "entries": [
     "d24-nist115"
+   ]
+  },
+  "https://csrc.nist.gov/pubs/sp/800/53/r5/final": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d38-shared-account",
+    "d38-privileged-approval"
    ]
   },
   "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final": {
@@ -1904,6 +1912,13 @@
     "d05-owasp-api5"
    ]
   },
+  "https://owasp.org/www-project-top-ten/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d38-change-review-depth"
+   ]
+  },
   "https://owasp.org/www-project-web-security-testing-guide/": {
    "status": "OK",
    "http": 200,
@@ -2239,6 +2254,13 @@
     "d24-epss"
    ]
   },
+  "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d38-disclosure-program"
+   ]
+  },
   "https://www.iso.org/standard/27001": {
    "status": "BLOCKED",
    "http": 403,
@@ -2280,6 +2302,21 @@
    "http": 200,
    "entries": [
     "d04-keycloak"
+   ]
+  },
+  "https://www.ncsc.gov.uk/collection/10-steps": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d38-offboarding-access"
+   ]
+  },
+  "https://www.ncsc.gov.uk/collection/device-security-guidance": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d38-secret-storage",
+    "d38-device-trust"
    ]
   },
   "https://www.nist.gov/cyberframework": {
