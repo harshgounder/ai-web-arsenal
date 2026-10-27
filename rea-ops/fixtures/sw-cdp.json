@@ -1,0 +1,45 @@
+{
+ "registrations": [
+  {
+   "scopeURL": "https://app.test/",
+   "scriptURL": "https://app.test/sw.js",
+   "versionId": "42"
+  }
+ ],
+ "caches": [
+  {
+   "name": "pages-v3",
+   "entries": [
+    {
+     "url": "https://app.test/dashboard",
+     "status": 200,
+     "size": 4096,
+     "headers": {
+      "Cache-Control": "public, max-age=600",
+      "Content-Type": "text/html"
+     },
+     "body": "<html>dashboard for alice</html>"
+    },
+    {
+     "url": "https://app.test/api/me/account",
+     "status": 200,
+     "size": 512,
+     "headers": {
+      "Cache-Control": "max-age=60",
+      "Authorization": "Bearer x"
+     },
+     "body": "{\"account\":\"alice\"}"
+    },
+    {
+     "url": "https://app.test/static/logo.svg",
+     "status": 200,
+     "size": 200,
+     "headers": {
+      "Cache-Control": "public, max-age=86400"
+     },
+     "body": "<svg/>"
+    }
+   ]
+  }
+ ]
+}

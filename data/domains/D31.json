@@ -939,7 +939,10 @@
   {
    "gap": "No service worker and CacheStorage reconstruction",
    "class": "no-tool",
-   "build_candidate": "CDP CacheStorage enumeration plus stored response bodies"
+   "build_candidate": "CDP CacheStorage enumeration plus stored response bodies",
+   "status": "partial",
+   "built_at": "rea-ops/sw-recover.py",
+   "built_note": "parses a CDP capture or a HAR, reports registrations, cache names and entry counts, then classifies each cached entry by whether it is bound to a principal and shared anyway. No CDP transport, so live collection is not implemented."
   },
   {
    "gap": "No WebAuthn attestation parser",

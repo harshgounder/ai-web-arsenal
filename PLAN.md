@@ -102,7 +102,10 @@ the disk disagree.
 
 ### 1.7 Blackboard
 
-One machine-readable state file, `data/STATE.json`, holding phase status, gate results, last run dates
+One state document, holding phase status, gate results and last run dates. **Implemented as `RECHECK.md`
+rather than `data/STATE.json`:** a machine readable file still drifts unless something compares it to disk,
+and `scripts/recheck.py` parses a fenced block out of the markdown and compares every number in it. A file
+nobody parses is a third copy of the truth, which was the original problem
 and the current measured numbers. Prose docs read from it. No phase is "done" because it feels done.
 
 ---
@@ -185,7 +188,7 @@ The mess is not six wrong numbers. It is that nothing prevented six wrong number
    counts. The 2.4x overcount happened because one file held three kinds of thing.
 4. **Regression tests for all fourteen known defects.** Each defect in RECHECK section 8 becomes a test
    that fails if it returns.
-5. **One state file.** `data/STATE.json` replaces the drift between RESUME.md and RECHECK.md. Two state
+5. **One state file.** One state document replaces the drift between RESUME.md and RECHECK.md. Two state
    docs already disagreed once; one is enough.
 6. **Determinism gate.** Rebuild and byte-compare, as a script and as a pre-push hook.
 

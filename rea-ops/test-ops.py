@@ -526,6 +526,50 @@ def test_flutter(tmp):
     check("flutter: rejects a non ELF file with a reason", rc == 1 and "not an ELF" in err)
 
 
+def test_sw(tmp):
+    cap = tmp / "cap.json"
+    cap.write_text(json.dumps({
+        "registrations": [{"scopeURL": "https://a.test/", "scriptURL": "https://a.test/sw.js"}],
+        "caches": [{"name": "c1", "entries": [
+            {"url": "https://a.test/api/me/account", "status": 200,
+             "headers": {"Content-Type": "application/json", "Authorization": "Bearer x"}},
+            {"url": "https://a.test/static/logo.svg", "status": 200,
+             "headers": {"Content-Type": "image/svg+xml", "Cache-Control": "public, max-age=86400"}},
+            {"url": "https://a.test/dashboard", "status": 200,
+             "headers": {"Content-Type": "text/html", "Cache-Control": "public"}},
+        ]}]}))
+    rc, out, err = run([str(HERE / "sw-recover.py"), str(cap), "--json"])
+    d = parse_json(out)
+    check("sw-recover: parses a cdp capture", rc == 0 and d.get("shape") == "cdp", err[:80])
+    check("sw-recover: counts entries", d.get("cached_entries") == 3)
+    urls = [r["url"] for r in d.get("risk") or []]
+    check("sw-recover: flags the principal bound api response",
+          any("api/me/account" in u for u in urls), str(urls))
+    check("sw-recover: does not flag a public static asset",
+          not any("logo.svg" in u for u in urls), str(urls))
+    check("sw-recover: flags a public html page as the weaker case",
+          any("dashboard" in u for u in urls) and
+          any("varies by user" in r for r in
+              [x for e in (d.get("risk") or []) for x in e["reasons"]]))
+
+    # a HAR shaped file must be accepted too
+    har = tmp / "cap.har"
+    har.write_text(json.dumps({"log": {"entries": [
+        {"request": {"url": "https://a.test/app"},
+         "response": {"status": 200, "headers": [{"name": "Cache-Control", "value": "public"}],
+                      "content": {"size": 10}},
+         "_resourceType": "serviceworker"}]}}))
+    rc, out, _ = run([str(HERE / "sw-recover.py"), str(har), "--json"])
+    d = parse_json(out)
+    check("sw-recover: accepts a HAR shape", rc == 0 and d.get("shape") == "har")
+
+    # neither shape
+    junk = tmp / "x.json"
+    junk.write_text('{"hello": 1}')
+    rc, out, err = run([str(HERE / "sw-recover.py"), str(junk)])
+    check("sw-recover: rejects an unknown shape with a reason", rc == 2 and "not a CDP" in err)
+
+
 def main():
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -545,6 +589,8 @@ def main():
         test_hermes(tmp)
         print("flutter-aot.py")
         test_flutter(tmp)
+        print("sw-recover.py")
+        test_sw(tmp)
     print(f"\nfixtures: {len(PASS) + len(FAIL)} checks, {len(PASS)} pass, {len(FAIL)} fail")
     if FAIL:
         for f in FAIL:

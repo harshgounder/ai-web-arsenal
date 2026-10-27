@@ -225,8 +225,8 @@ claims:
     check: "(lambda gap: len(gap) == stats['gap_total'] and len({g['factor'] for g in gap}) == len(gap))(rows('data/gap/classification.jsonl'))"
 
   - id: C110
-    statement: "six of the ten REA gaps are fully built and two are partial, each with a fixture and a passing test"
-    check: "(lambda g: sum(1 for x in g if x.get('status') == 'built') == 6 and sum(1 for x in g if x.get('status') == 'partial') == 2)(load('data/domains/D31.json')['gaps'])"
+    statement: "six of the ten REA gaps are fully built and three are partial, each with a fixture and a passing test"
+    check: "(lambda g: sum(1 for x in g if x.get('status') == 'built') == 6 and sum(1 for x in g if x.get('status') == 'partial') == 3)(load('data/domains/D31.json')['gaps'])"
 
   - id: C111
     statement: "no built REA operation claims a path that does not exist"
