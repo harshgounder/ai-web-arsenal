@@ -9,14 +9,15 @@ when it has a fixture and a test, because an operation with neither is a claim.
 | `wxapkg.py` | parses a documented wxapkg layout and extracts with traversal refusal | a package this repo generates |
 | `leveldb-log.py` | reads a LevelDB write-ahead log: masked CRC32C, records spanning blocks, WriteBatch puts and deletes | a log this repo generates |
 | `hap.py` | unpacks a HarmonyOS HAP, identifies Ark bytecode and native libraries, parses module.json | a package this repo generates |
+| `webauthn-attestation.py` | CBOR decodes an attestation object, reports flags, sign count, AAGUID, credential id and COSE key | an attestation this repo generates |
 
 Run the tests:
 
 ```bash
-python3 rea-ops/test-ops.py      # 34 checks
+python3 rea-ops/test-ops.py      # 45 checks
 ```
 
-Four of ten gaps closed. What each one states plainly rather than implying:
+Five of ten gaps closed. What each one states plainly rather than implying:
 
 - **`wxapkg.py` has not been validated against a real WeChat package.** Published descriptions of the
   format disagree on header width across versions, and no real sample was available here.
@@ -26,8 +27,10 @@ Four of ten gaps closed. What each one states plainly rather than implying:
 - **`hap.py` does not decompile Ark bytecode and does not verify the signature.** It identifies the
   `.abc` files so a reader knows what needs a disassembler.
 - **`warc.py` does not resolve revisits beyond a pointer** and does not verify digests.
+- **`webauthn-attestation.py` verifies no signature and no chain.** It reports what the artefact says,
+  because whether to trust the authenticator is a relying party policy decision this tool does not have.
 
 None of the four is wired into the REA MCP server yet. They are standalone readers.
 
-The remaining six gaps are still gaps: Flutter AOT, Hermes, service worker reconstruction, WebAuthn
-attestation, signing recovery and source map recovery.
+The remaining five gaps are still gaps: Flutter AOT, Hermes, service worker reconstruction, signing
+recovery and source map recovery.

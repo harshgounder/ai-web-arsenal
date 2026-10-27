@@ -938,7 +938,10 @@
   {
    "gap": "No WebAuthn attestation parser",
    "class": "no-tool",
-   "build_candidate": "parse attestation objects and report origin, RP id hash and UV"
+   "build_candidate": "parse attestation objects and report origin, RP id hash and UV",
+   "status": "built",
+   "built_at": "rea-ops/webauthn-attestation.py",
+   "built_note": "CBOR decodes the attestation object, splits fmt, attStmt and authData, and reports flags, sign count, AAGUID, credential id and COSE key. No signature or chain verification."
   },
   {
    "gap": "No request signing recovery from obfuscated JS",
