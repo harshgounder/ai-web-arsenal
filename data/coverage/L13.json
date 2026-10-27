@@ -2,7 +2,7 @@
  "lens": "L13",
  "name": "regulation and standards",
  "default": "L0",
- "reason": "Effectively zero, and this is a deliberate statement rather than an omission. The repo defines no scope of authorisation, no disclosure procedure and no evidence handling standard. Every pattern carries an authorisation precondition, which is a rule in prose, not an artefact that a reader can run.",
+ "reason": "Regulation factors with no artefact beyond the published instruments. Ten entries in D24 now operationalise the parts a system owner can actually check; the rest of the lens is still text with no procedure, and the Class III organisational facts stay unavailable.",
  "exceptions": {
   "L13-025": {
    "level": "L1",
@@ -13,18 +13,212 @@
    "note": "A hardening baseline is one reading of a standard. Divergence between auditors is not tested."
   },
   "L13-001": {
-   "level": "L1",
+   "level": "L2",
    "covered_by": [
-    "d24-wstg-report"
+    "d24-doj-cfaa"
    ],
    "basis": "entry",
-   "note": "Scope is stated as a requirement in reporting practice. No artefact encodes what is in and out."
+   "note": "Scope of a test, with the written scope as the artefact and the signed authority as the check."
   },
   "L13-005": {
-   "level": "L0",
-   "covered_by": [],
-   "basis": "none",
-   "note": "No artefact addresses the legal limits of a test, which is a gap in a repo that claims authorisation is a precondition."
+   "level": "L2",
+   "covered_by": [
+    "d24-doj-cfaa"
+   ],
+   "basis": "entry",
+   "note": "The charging guidance is what makes the statute breadth concrete enough to plan against."
+  },
+  "L13-002": {
+   "level": "L2",
+   "covered_by": [
+    "d24-doj-cfaa"
+   ],
+   "basis": "entry",
+   "note": "Written authorisation, verified by who signed it rather than whether a document exists."
+  },
+  "L13-003": {
+   "level": "L2",
+   "covered_by": [
+    "d24-doj-cfaa"
+   ],
+   "basis": "entry",
+   "note": "Third party hosting terms, checked before the test rather than after."
+  },
+  "L13-007": {
+   "level": "L2",
+   "covered_by": [
+    "d24-gdpr-breach"
+   ],
+   "basis": "entry",
+   "note": "The 72 hour clock, with the awareness timestamp as the oracle."
+  },
+  "L13-008": {
+   "level": "L2",
+   "covered_by": [
+    "d24-gdpr-breach"
+   ],
+   "basis": "entry",
+   "note": "Recipient set, tested by listing who a real incident would have to be told."
+  },
+  "L13-009": {
+   "level": "L2",
+   "covered_by": [
+    "d24-gdpr-breach"
+   ],
+   "basis": "entry",
+   "note": "Reportable versus recordable, decided against article 33(5) and recorded."
+  },
+  "L13-011": {
+   "level": "L2",
+   "covered_by": [
+    "d24-gdpr-dsar"
+   ],
+   "basis": "entry",
+   "note": "Access requests, tested against what each store can actually answer from."
+  },
+  "L13-012": {
+   "level": "L2",
+   "covered_by": [
+    "d24-gdpr-dsar"
+   ],
+   "basis": "entry",
+   "note": "Erasure feasibility, with every store named including backups."
+  },
+  "L13-013": {
+   "level": "L2",
+   "covered_by": [
+    "d24-gdpr-dsar"
+   ],
+   "basis": "entry",
+   "note": "Retention versus minimisation, resolved per store rather than per policy."
+  },
+  "L13-014": {
+   "level": "L2",
+   "covered_by": [
+    "d24-legal-hold"
+   ],
+   "basis": "entry",
+   "note": "A hold flag that suspends the deletion job, with a deletion during a hold as the failure signal."
+  },
+  "L13-015": {
+   "level": "L2",
+   "covered_by": [
+    "d24-nist-privacy"
+   ],
+   "basis": "entry",
+   "note": "Consent records mapped to processing activities through a privacy profile."
+  },
+  "L13-016": {
+   "level": "L2",
+   "covered_by": [
+    "d24-nist-privacy"
+   ],
+   "basis": "entry",
+   "note": "Withdrawal propagation, checked against the mapping rather than assumed."
+  },
+  "L13-017": {
+   "level": "L2",
+   "covered_by": [
+    "d24-nist-privacy"
+   ],
+   "basis": "entry",
+   "note": "Processing basis documented per activity, with unmapped activities listed."
+  },
+  "L13-018": {
+   "level": "L2",
+   "covered_by": [
+    "d24-pci-scope"
+   ],
+   "basis": "entry",
+   "note": "Whether card data enters the environment at all, which is the scope question."
+  },
+  "L13-019": {
+   "level": "L2",
+   "covered_by": [
+    "d24-pci-scope"
+   ],
+   "basis": "entry",
+   "note": "Tokenisation coverage, tested by searching every store for a primary account number."
+  },
+  "L13-020": {
+   "level": "L2",
+   "covered_by": [
+    "d24-pci-scope"
+   ],
+   "basis": "entry",
+   "note": "The cardholder data environment boundary, compared against observed flows."
+  },
+  "L13-026": {
+   "level": "L2",
+   "covered_by": [
+    "d24-iso27001-scope"
+   ],
+   "basis": "entry",
+   "note": "Standard version attached to the compliance claim, read from the certificate."
+  },
+  "L13-027": {
+   "level": "L2",
+   "covered_by": [
+    "d24-iso27001-scope"
+   ],
+   "basis": "entry",
+   "note": "Certification scope, checked against the system in question rather than a sibling."
+  },
+  "L13-028": {
+   "level": "L2",
+   "covered_by": [
+    "d24-iso27001-scope"
+   ],
+   "basis": "entry",
+   "note": "Assessor independence, recorded with the engagement."
+  },
+  "L13-029": {
+   "level": "L2",
+   "covered_by": [
+    "d24-iso27001-scope"
+   ],
+   "basis": "entry",
+   "note": "Self attestation, identified as such rather than presented as verification."
+  },
+  "L13-030": {
+   "level": "L2",
+   "covered_by": [
+    "d24-export-control"
+   ],
+   "basis": "entry",
+   "note": "Cryptographic distribution obligations, classified by destination."
+  },
+  "L13-034": {
+   "level": "L2",
+   "covered_by": [
+    "d24-ofac"
+   ],
+   "basis": "entry",
+   "note": "Screening recorded at onboarding and re-screened on the list cadence."
+  },
+  "L13-038": {
+   "level": "L2",
+   "covered_by": [
+    "d24-iso27001-scope"
+   ],
+   "basis": "entry",
+   "note": "Contractual security promises, checked against the control set rather than the brochure."
+  },
+  "L13-046": {
+   "level": "L2",
+   "covered_by": [
+    "d24-cvd"
+   ],
+   "basis": "entry",
+   "note": "Embargo period, stated and honoured on a real report."
+  },
+  "L13-047": {
+   "level": "L2",
+   "covered_by": [
+    "d24-cvd"
+   ],
+   "basis": "entry",
+   "note": "Bounty terms, read for a testing licence and a promise not to sue."
   }
  }
 }

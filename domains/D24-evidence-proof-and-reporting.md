@@ -25,7 +25,7 @@ A cell is required only if a practitioner would want something there, and the re
 
 ## Entries
 
-10 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
+20 enriched entries. `driver` tells an agent how to invoke the thing, which is the field
 every other list omits. `atom`, `preconditions` and `oracle` are what make a row testable.
 
 | name | stage | agency | atoms | driver | json | what it does |
@@ -33,11 +33,21 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 | [NIST SP 800-115](https://csrc.nist.gov/pubs/sp/800/115/final) | L01 scope | A0 | A08 | `n/a reference` | no | The methodology standard, useful when a client asks what process you follow |
 | [This repo: prompts/05-critic.md](https://github.com/) | L08 proof | A5 | A08 | `local` | no | The adversarial review pack, the reason findings survive human review |
 | [This repo: prompts/04-prove-it.md](https://github.com/) | L08 proof | A5 | A08 | `local` | no | The proving procedure: falsify first, control second, verdict last |
+| [Coordinated vulnerability disclosure process](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) | L10 reporting | A0 | A08 | `n/a reference` | no | The reporting side of the relationship, which is also the side that decides whether a researcher is a threat or a channel. |
 | [CVE Program](https://www.cve.org/) | L10 reporting | A0 | A08 | `n/a reference` | no | Identifier of record when the finding is a known product issue |
 | [CVSS](https://www.first.org/cvss/) | L10 reporting | A0 | A08 | `n/a reference` | no | The severity score everyone argues about. Use the vector, not just the number |
 | [CWE](https://cwe.mitre.org/) | L10 reporting | A0 | A08 | `n/a reference` | no | The weakness taxonomy to map a finding onto |
+| [DOJ computer fraud charging guidance](https://www.justice.gov/jm/jm-9-48000-computer-fraud) | L10 reporting | A0 | A08 | `n/a reference` | no | How the prosecution side reads unauthorised access, which is the practical boundary for what a test may do. |
 | [EPSS](https://www.first.org/epss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Exploit prediction, the number that actually orders a queue |
+| [Export control on cryptographic capability](https://www.bis.doc.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether distributing a tool with strong cryptography carries an obligation in the jurisdiction it ships to. |
+| [GDPR Article 33 breach notification clock](https://eur-lex.europa.eu/eli/reg/2016/679/oj) | L10 reporting | A0 | A08 | `n/a reference` | no | The 72 hour clock and what starts it, which decides whether an incident is a reportable breach or a note in a ticket. |
+| [GDPR Article 15 and 17 request handling](https://gdpr-info.eu/art-17-gdpr/) | L10 reporting | A0 | A08 | `n/a reference` | no | Access and erasure, tested against what the system can actually produce and delete rather than what the policy says. |
+| [ISO 27001 certification scope statement](https://www.iso.org/standard/27001) | L10 reporting | A0 | A08 | `n/a reference` | no | A certificate is only meaningful against its scope. Reading the scope is the first step of relying on one. |
 | [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | L10 reporting | A0 | A08 | `n/a reference` | no | Exploited in the wild. The only list that means immediate |
+| [Legal hold overriding a deletion obligation](https://www.justice.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | When a preservation duty and an erasure duty conflict, and who decides. Systems usually implement only one of them. |
+| [NIST Privacy Framework profiles](https://www.nist.gov/privacy-framework) | L10 reporting | A0 | A08 | `n/a reference` | no | A vocabulary for mapping processing purposes to controls, useful when a client needs the gap expressed in a standard both sides accept. |
+| [Sanctions screening against a published list](https://sanctionssearch.ofac.treas.gov/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether a customer or counterparty can be checked against a list before service is provided. |
+| [PCI DSS scope reduction and CDE boundary](https://www.pcisecuritystandards.org/standards/pci-dss/) | L10 reporting | A0 | A08 | `n/a reference` | no | Whether card data enters the environment at all. Scope is the whole compliance burden, so shrinking it is the control. |
 | [SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html) | L10 reporting | A0 | A08 | `n/a reference` | no | The interchange format, so findings land in the customer's tooling |
 | [WSTG Reporting](https://github.com/OWASP/wstg) | L10 reporting | A0 | A08 | `n/a reference` | no | The reporting section of the testing guide |
 
@@ -58,6 +68,46 @@ every other list omits. `atom`, `preconditions` and `oracle` are what make a row
 **This repo: prompts/05-critic.md**  
 - preconditions: `another agent's finding`
 - oracle: `SOUND, OVERSTATED, UNSAFE_TO_REPORT or REFUTED`
+
+**GDPR Article 33 breach notification clock**  
+- preconditions: `a personal data breach has been identified`, `the controller is established in or targets the EU`
+- oracle: `a written record of when the controller became aware`, `the notification filed inside 72 hours, or a documented reason it was late`, `the article 33(5) register entry exists for the incident`
+
+**GDPR Article 15 and 17 request handling**  
+- preconditions: `a data subject request has been received`, `the controller is in scope of the regulation`
+- oracle: `every store named in the request answered from, including backups and logs`, `erasure removes the record from each store, or the retained copy has a documented legal basis`
+
+**PCI DSS scope reduction and CDE boundary**  
+- preconditions: `the system handles payment card data or connects to one that does`
+- oracle: `no primary account number present in a store, log or trace`, `the cardholder data environment boundary drawn on the network diagram matches observed flows`, `tokenisation used instead of a stored number on every path`
+
+**NIST Privacy Framework profiles**  
+- preconditions: `the client requires a recognised framework for a privacy assessment`
+- oracle: `a current profile exists and names the functions in scope`, `each processing activity in the data map maps to a profile function, or is listed as unmapped`
+
+**Coordinated vulnerability disclosure process**  
+- preconditions: `the organisation receives external vulnerability reports`
+- oracle: `an acknowledgement inside the stated window, measured on a real report`, `an embargo period stated in writing and honoured`, `a published disclosure after the fix, or a documented reason not to`
+
+**ISO 27001 certification scope statement**  
+- preconditions: `a supplier or the organisation claims certification`
+- oracle: `the scope statement names the system in question, not only a sibling`, `the certification body and the statement of applicability are available on request`, `the surveillance audit date is current`
+
+**Sanctions screening against a published list**  
+- preconditions: `the service can be provided to a person or entity in a sanctioned jurisdiction`
+- oracle: `a screening result recorded at onboarding`, `a re-screen on the list update cadence, with the date recorded`
+
+**DOJ computer fraud charging guidance**  
+- preconditions: `a test will touch a system the tester does not own`
+- oracle: `the written scope identifies host, method and data`, `the scope is signed by someone with authority to grant it`, `third party hosting terms confirmed to permit the test`
+
+**Export control on cryptographic capability**  
+- preconditions: `the organisation distributes software containing cryptographic functions`
+- oracle: `the destination jurisdictions are listed and classified`, `a notification or licence exists where the classification requires one`
+
+**Legal hold overriding a deletion obligation**  
+- preconditions: `the organisation is subject to both a retention obligation and a deletion obligation`
+- oracle: `a hold flag exists that suspends deletion, and it is honoured by the deletion job`, `a deletion performed during a hold is detectable in the audit trail`
 
 ## Decision tree
 

@@ -13,7 +13,9 @@
 {"url": "https://docs.mitmproxy.org/stable/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-mitmproxy", "d05-mitmproxy", "d06-mitmproxy", "d09-mitmproxy", "d10-mitmproxy", "d12-mitmproxy", "d14-mitmproxy", "d22-mitmproxy", "d23-mitmproxy", "d29-mitmproxy", "d31-mitmproxy"]}
 {"url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-sarif"]}
 {"url": "https://dsopas.github.io/MindAPI/play/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-mindapi", "d11-mindapi"]}
+{"url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "checked_at": "2026-10-27", "status": "OK", "http": 202, "entries": ["d24-gdpr-breach"]}
 {"url": "https://gandalf.lakera.ai/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-gandalf"]}
+{"url": "https://gdpr-info.eu/art-17-gdpr/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-gdpr-dsar"]}
 {"url": "https://genai.owasp.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-owasp-agentic", "d20-owasp-agentic", "d30-owasp-agentic"]}
 {"url": "https://genai.owasp.org/llm-top-10/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d19-llm-top10"]}
 {"url": "https://ghidra-sre.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-ghidra"]}
@@ -248,16 +250,24 @@
 {"url": "https://portswigger.net/web-security/web-cache-poisoning", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d10-ps-poison"]}
 {"url": "https://rada.re/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-radare2"]}
 {"url": "https://rea.tools", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d02-rea-bundle", "d02-rea-capture", "d02-rea-scenario", "d03-rea-bundle", "d06-rea-page", "d07-rea-listeners", "d08-rea-listeners", "d08-rea-scenario", "d08-rea-page", "d12-rea-capture", "d13-rea-artifact", "d14-rea-capture", "d15-rea", "d16-rea-signing", "d21-rea-android", "d21-rea-android-class", "d21-rea-android-res", "d23-rea", "d28-rea", "d31-analyze-web-bundle", "d31-export-web-scripts", "d31-inspect-web-page", "d31-event-listeners", "d31-capture", "d31-source-location", "d31-recover", "d31-app-graph", "d31-reconcile-js", "d31-webmcp", "d31-scenario", "d31-compare", "d31-android", "d31-android-class", "d31-wasm", "d31-sqlite", "d31-artifact", "d31-electron"]}
+{"url": "https://sanctionssearch.ofac.treas.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-ofac"]}
 {"url": "https://schemathesis.readthedocs.io/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d29-schemathesis"]}
 {"url": "https://slsa.dev/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d18-slsa"]}
 {"url": "https://supabase.com/docs/guides/database/postgres/row-level-security", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d05-supabase-rls"]}
+{"url": "https://www.bis.doc.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-export-control"]}
 {"url": "https://www.chromium.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d08-chromium", "d31-chromium"]}
+{"url": "https://www.cisa.gov/coordinated-vulnerability-disclosure-process", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvd"]}
 {"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-kev"]}
 {"url": "https://www.cisecurity.org/cis-benchmarks", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d17-cis"]}
 {"url": "https://www.cve.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cve"]}
 {"url": "https://www.first.org/cvss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-cvss"]}
 {"url": "https://www.first.org/epss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-epss"]}
+{"url": "https://www.iso.org/standard/27001", "checked_at": "2026-10-27", "status": "BLOCKED", "http": 403, "entries": ["d24-iso27001-scope"]}
+{"url": "https://www.justice.gov/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-legal-hold"]}
+{"url": "https://www.justice.gov/jm/jm-9-48000-computer-fraud", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-doj-cfaa"]}
 {"url": "https://www.keycloak.org/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-keycloak"]}
+{"url": "https://www.nist.gov/privacy-framework", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-nist-privacy"]}
+{"url": "https://www.pcisecuritystandards.org/standards/pci-dss/", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d24-pci-scope"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9112", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9112"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9113", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d09-rfc9113"]}
 {"url": "https://www.rfc-editor.org/rfc/rfc9700", "checked_at": "2026-10-27", "status": "OK", "http": 200, "entries": ["d04-rfc9700"]}

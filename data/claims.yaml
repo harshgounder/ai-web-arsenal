@@ -42,8 +42,8 @@ claims:
 
   # --- link health -------------------------------------------------------------
   - id: C010
-    statement: "267 unique domain URLs were checked and 266 answered"
-    check: "(lambda d: d['unique_urls'] == 267 and sum(1 for r in d['results'].values() if r['status'] == 'OK') == 266)(load('data/domain-link-check.json'))"
+    statement: "277 unique domain URLs were checked and 275 answered"
+    check: "(lambda d: d['unique_urls'] == 277 and sum(1 for r in d['results'].values() if r['status'] == 'OK') == 275)(load('data/domain-link-check.json'))"
 
   - id: C012
     statement: "every URL an authored entry asserts has a provenance record with a check date"
@@ -113,19 +113,19 @@ claims:
   # entry. Measured 2026-10-27, it is met by 335 and 346 of 444. The shortfall is real and is recorded
   # in RECHECK.md rather than hidden by weakening the claim to "most".
   - id: C053
-    statement: "335 of 444 entries declare preconditions, which is 75 percent, not all of them"
-    check: "sum(1 for e in entries() if e.get('preconditions')) == 335"
+    statement: "345 of 454 entries declare preconditions, which is 76 percent, not all of them"
+    check: "sum(1 for e in entries() if e.get('preconditions')) == 345"
 
   - id: C053b
-    statement: "346 of 444 entries declare an oracle"
-    check: "sum(1 for e in entries() if e.get('oracle')) == 346"
+    statement: "356 of 454 entries declare an oracle"
+    check: "sum(1 for e in entries() if e.get('oracle')) == 356"
 
   - id: C053c
-    statement: "135 of 444 entries declare what detects them, which is the weakest field in the repo"
+    statement: "135 of 454 entries declare what detects them, which is the weakest field in the repo"
     check: "sum(1 for e in entries() if e.get('detected_by')) == 135"
 
   - id: C053d
-    statement: "175 of 444 entries declare what defensive surface they evade"
+    statement: "175 of 454 entries declare what defensive surface they evade"
     check: "sum(1 for e in entries() if e.get('evades')) == 175"
 
   - id: C054
@@ -193,12 +193,12 @@ claims:
     check: "all(f.get('def') and f.get('observable') for p in sorted((ROOT / 'data' / 'denominator').glob('L*.json')) for f in json.loads(p.read_text(encoding='utf-8')).get('factors', []))"
 
   - id: C102
-    statement: "all 1,000 factors have a coverage record, and 108 of them reach L2 or better"
-    check: "(lambda rs: len(rs) == 1000 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 108)(rows('data/coverage/coverage.jsonl'))"
+    statement: "all 1,000 factors have a coverage record, and 134 of them reach L2 or better"
+    check: "(lambda rs: len(rs) == 1000 and sum(1 for r in rs if r['level'] in ('L2', 'L3')) == 134)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C104
     statement: "four factors are graded L3, each backed by a recorded observation"
-    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L2') == 104 and sum(1 for r in rs if r['level'] == 'L3') == 4)(rows('data/coverage/coverage.jsonl'))"
+    check: "(lambda rs: sum(1 for r in rs if r['level'] == 'L2') == 130 and sum(1 for r in rs if r['level'] == 'L3') == 4)(rows('data/coverage/coverage.jsonl'))"
 
   - id: C108
     statement: "every L3 factor names a lab whose observation verdict is OBSERVED"
@@ -209,20 +209,20 @@ claims:
     check: "all((r['level'] not in ('L2', 'L3')) or r.get('covered_by') for r in rows('data/coverage/coverage.jsonl'))"
 
   - id: C105
-    statement: "the gap is 238 derivable, 603 lab, 51 impossible, and it sums to 892"
-    check: "(lambda g: g['reachable_by_authoring'] == 238 and g['reachable_by_lab'] == 603 and g['unavailable'] == 51 and g['gap_total'] == 892)(load('data/gap/SUMMARY.json'))"
+    statement: "the gap is 216 derivable, 600 lab, 50 impossible, and it sums to 866"
+    check: "(lambda g: g['reachable_by_authoring'] == 216 and g['reachable_by_lab'] == 600 and g['unavailable'] == 50 and g['gap_total'] == 866)(load('data/gap/SUMMARY.json'))"
 
   - id: C109
     statement: "gap plus covered equals the denominator, so nothing is lost between the two ledgers"
     check: "(lambda g: g['gap_total'] + g['covered_l2_plus'] == g['factors_total'])(load('data/gap/SUMMARY.json'))"
 
   - id: C106
-    statement: "the ceiling is 94.9 percent of the denominator"
-    check: "load('data/gap/SUMMARY.json')['ceiling_pct'] == 94.9"
+    statement: "the ceiling is 95.0 percent of the denominator"
+    check: "load('data/gap/SUMMARY.json')['ceiling_pct'] == 95.0"
 
   - id: C107
     statement: "every uncovered factor is classified exactly once, and no covered one is"
-    check: "(lambda gap: len(gap) == 892 and len({g['factor'] for g in gap}) == 892)(rows('data/gap/classification.jsonl'))"
+    check: "(lambda gap: len(gap) == 866 and len({g['factor'] for g in gap}) == 866)(rows('data/gap/classification.jsonl'))"
 
   - id: C110
     statement: "two of the ten REA gaps are built, each with a fixture and a passing test"

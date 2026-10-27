@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-10-27",
- "unique_urls": 267,
+ "unique_urls": 277,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -138,11 +138,25 @@
     "d11-mindapi"
    ]
   },
+  "https://eur-lex.europa.eu/eli/reg/2016/679/oj": {
+   "status": "OK",
+   "http": 202,
+   "entries": [
+    "d24-gdpr-breach"
+   ]
+  },
   "https://gandalf.lakera.ai/": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d19-gandalf"
+   ]
+  },
+  "https://gdpr-info.eu/art-17-gdpr/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-gdpr-dsar"
    ]
   },
   "https://genai.owasp.org/": {
@@ -1929,6 +1943,13 @@
     "d31-electron"
    ]
   },
+  "https://sanctionssearch.ofac.treas.gov/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-ofac"
+   ]
+  },
   "https://schemathesis.readthedocs.io/": {
    "status": "OK",
    "http": 200,
@@ -1950,12 +1971,26 @@
     "d05-supabase-rls"
    ]
   },
+  "https://www.bis.doc.gov/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-export-control"
+   ]
+  },
   "https://www.chromium.org/": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d08-chromium",
     "d31-chromium"
+   ]
+  },
+  "https://www.cisa.gov/coordinated-vulnerability-disclosure-process": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-cvd"
    ]
   },
   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog": {
@@ -1993,11 +2028,47 @@
     "d24-epss"
    ]
   },
+  "https://www.iso.org/standard/27001": {
+   "status": "BLOCKED",
+   "http": 403,
+   "note": "the site refuses automated clients, which is not the same as absent",
+   "entries": [
+    "d24-iso27001-scope"
+   ]
+  },
+  "https://www.justice.gov/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-legal-hold"
+   ]
+  },
+  "https://www.justice.gov/jm/jm-9-48000-computer-fraud": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-doj-cfaa"
+   ]
+  },
   "https://www.keycloak.org/": {
    "status": "OK",
    "http": 200,
    "entries": [
     "d04-keycloak"
+   ]
+  },
+  "https://www.nist.gov/privacy-framework": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-nist-privacy"
+   ]
+  },
+  "https://www.pcisecuritystandards.org/standards/pci-dss/": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d24-pci-scope"
    ]
   },
   "https://www.rfc-editor.org/rfc/rfc9112": {
