@@ -232,6 +232,14 @@ claims:
     statement: "no built REA operation claims a path that does not exist"
     check: "all((ROOT / g['built_at']).exists() for g in load('data/domains/D31.json')['gaps'] if g.get('built_at'))"
 
+  - id: C112
+    statement: "every control class states a mechanism, what it sees, and what it structurally cannot see"
+    check: "(lambda cs: len(cs) == 14 and all(c.get('mechanism') and c.get('sees') and c.get('blind_spot') and c.get('bypass') and c.get('cost') and c.get('detection') for c in cs))(load('data/counters/classes.json')['classes'])"
+
+  - id: C113
+    statement: "every control class cites only atoms the atlas defines"
+    check: "(lambda cs, names: all(a in names for c in cs for a in (c.get('atoms') or [])))(load('data/counters/classes.json')['classes'], {a['id'] for a in load('../web-attack-atlas/data/atoms.json')['atoms']})"
+
   # --- honesty -----------------------------------------------------------------
   - id: C090
     statement: "the atlas marks one pattern OBSERVED, and that pattern names the run record backing it"

@@ -1,0 +1,198 @@
+{
+ "version": 1,
+ "generated_at": "2026-10-27",
+ "note": "One record per control class. sees and blind_spot are the pair that matters: a control is only as good as what it structurally cannot observe.",
+ "classes": [
+  {
+   "id": "C01",
+   "name": "object level authorisation",
+   "mechanism": "a per object ownership check on every read and write, evaluated after the object is fetched",
+   "sees": "the caller and the record owner, when both are present at the same layer",
+   "blind_spot": "paths that fetch the object without going through the checked function, such as a bulk export, a report, a relation traversal or an admin view",
+   "bypass": "reach the object through any route that does not call the checked function",
+   "cost": "low: usually a parameter change on an alternate endpoint",
+   "detection": "an access log where one principal touches objects whose owner column differs, correlated across endpoints",
+   "atoms": [
+    "A02",
+    "A03"
+   ]
+  },
+  {
+   "id": "C02",
+   "name": "function level authorisation",
+   "mechanism": "a role or permission check per operation, deny by default, declared centrally",
+   "sees": "the operation name and the caller's role set",
+   "blind_spot": "operations that are composed at runtime, and the difference between a role that exists and a role that should reach this object",
+   "bypass": "find an operation not covered by the declaration, or one whose declaration is stale",
+   "cost": "low to medium: needs route enumeration, rewarded by any undocumented endpoint",
+   "detection": "a request to a route with no matching policy entry, which is a configuration alert rather than a traffic one",
+   "atoms": [
+    "A02",
+    "A15"
+   ]
+  },
+  {
+   "id": "C03",
+   "name": "binding allowlist",
+   "mechanism": "an explicit field allowlist per operation, never object hydration from request data",
+   "sees": "the field names the request carries",
+   "blind_spot": "nested and association writes, where the allowlist covers the parent and the child object is bound by a different rule",
+   "bypass": "write through a relation or a batch operation the allowlist does not model",
+   "cost": "low if a relation exists, medium otherwise",
+   "detection": "a write where a field changed that the endpoint's allowlist does not contain",
+   "atoms": [
+    "A05",
+    "A02"
+   ]
+  },
+  {
+   "id": "C04",
+   "name": "identity canonicalisation",
+   "mechanism": "one normalisation form for every identifier, exact match, verified linking between providers",
+   "sees": "the identifier as submitted and its canonical form",
+   "blind_spot": "identifiers the canonicaliser does not know about, such as provider specific aliases, unicode confusables and case folding that differs per backend",
+   "bypass": "find two spellings that pass canonicalisation and collide at the store",
+   "cost": "medium: requires probing the normaliser, not guessing it",
+   "detection": "two accounts or sessions resolving from one credential, visible as a uniqueness violation after the fact",
+   "atoms": [
+    "A03"
+   ]
+  },
+  {
+   "id": "C05",
+   "name": "state machine integrity",
+   "mechanism": "invariants enforced per transition, with separation of duties where the process requires it",
+   "sees": "the current state and the requested transition",
+   "blind_spot": "the same invariant expressed in two places, such as an API and a batch job, and any transition performed by a migration",
+   "bypass": "act on the state directly through a second writer",
+   "cost": "medium: needs a second surface that writes the same record",
+   "detection": "a state value reached without the transition event that should precede it",
+   "atoms": [
+    "A04",
+    "A10"
+   ]
+  },
+  {
+   "id": "C06",
+   "name": "credential and token policy",
+   "mechanism": "atomic single use for reset and invite tokens, subset scopes for delegation, verified identity for every claim",
+   "sees": "the token's claims, signature, expiry and use count",
+   "blind_spot": "the lifetime of the permission behind the token, and every token minted before a revocation",
+   "bypass": "use a token inside its validity window after the permission behind it changed",
+   "cost": "low if a revocation window exists, high otherwise",
+   "detection": "a token used after the subject's rights changed, correlated on subject rather than on token",
+   "atoms": [
+    "A03",
+    "A09"
+   ]
+  },
+  {
+   "id": "C07",
+   "name": "parser strictness",
+   "mechanism": "one parser for the whole path, rejecting duplicates, alternates and ambiguous framing",
+   "sees": "the bytes it parsed and anything it rejected",
+   "blind_spot": "the other parser downstream, whose existence is the entire precondition for a desync",
+   "bypass": "find a second interpreter in the path and a message both accept differently",
+   "cost": "medium: needs a byte level client and knowledge of the chain",
+   "detection": "a request the edge logged differently from the origin, which requires comparing two logs rather than one",
+   "atoms": [
+    "A01",
+    "A15"
+   ]
+  },
+  {
+   "id": "C08",
+   "name": "path and namespace control",
+   "mechanism": "canonicalise once, then verify containment against a fixed root, with no user controlled path component",
+   "sees": "the canonical path and whether it sits under the root",
+   "blind_spot": "symlinks and junctions created after the check, and any component the application resolves later",
+   "bypass": "create a link between check and use, or reach a resolver that reinterprets the name",
+   "cost": "medium to high: needs a write primitive as well as a read",
+   "detection": "a resolved path whose realpath differs from the checked path, which almost nobody logs",
+   "atoms": [
+    "A06"
+   ]
+  },
+  {
+   "id": "C09",
+   "name": "cache and key discipline",
+   "mechanism": "every input that varies the response is part of the key, and authenticated responses never enter a shared cache",
+   "sees": "the key it built and the response it stored",
+   "blind_spot": "inputs it did not model, such as a header it forwards, a cookie it ignores and normalisation it applies after keying",
+   "bypass": "find an input that changes the response and is absent from the key",
+   "cost": "low: usually one request to plant, one to read",
+   "detection": "a cached response whose body contains a value from a different request's headers, found by diffing stored objects",
+   "atoms": [
+    "A04",
+    "A06"
+   ]
+  },
+  {
+   "id": "C10",
+   "name": "cost and resource control",
+   "mechanism": "per operation cost budgets and per principal quotas, enforced before the work is done",
+   "sees": "the declared cost of an operation and the principal's spend so far",
+   "blind_spot": "operations whose real cost differs from the declared one, which is every resolver that expands a relation",
+   "bypass": "find an operation that under declares its cost",
+   "cost": "low: one request shape",
+   "detection": "spend per operation diverging from the declared budget across a population of requests",
+   "atoms": [
+    "A07"
+   ]
+  },
+  {
+   "id": "C11",
+   "name": "audit integrity",
+   "mechanism": "structured append only logging with attribution, held where the audited identity cannot edit it",
+   "sees": "the acts the application chose to log, and the principal the application believed",
+   "blind_spot": "acts performed through a path that does not log, and any act where the principal was fabricated upstream",
+   "bypass": "act through an unlogged path, or make the log attribute the act to someone else",
+   "cost": "low if an unlogged path exists",
+   "detection": "a state change with no corresponding audit record, found by reconciling state against the log rather than reading the log",
+   "atoms": [
+    "A08",
+    "A03"
+   ]
+  },
+  {
+   "id": "C12",
+   "name": "protocol lifecycle",
+   "mechanism": "retired versions decommissioned, one policy point rather than one per version",
+   "sees": "the version in use and whether it is still permitted",
+   "blind_spot": "the older version nobody decommissioned, and the policy point that only some routes pass through",
+   "bypass": "use a version or a route that skips the policy point",
+   "cost": "low: usually a header",
+   "detection": "traffic on a version whose retirement date has passed, which is a configuration report",
+   "atoms": [
+    "A15",
+    "A01"
+   ]
+  },
+  {
+   "id": "C13",
+   "name": "maintenance and process",
+   "mechanism": "controls that live in process, infrastructure or review: patching cadence, dependency freshness, offboarding, review depth",
+   "sees": "whether a step in the process happened, if anyone records it",
+   "blind_spot": "the gap between the process and the work, and every exception granted under time pressure",
+   "bypass": "wait for the gap, or find the exception that was never revoked",
+   "cost": "time rather than requests, which is why it is the cheapest class for a patient attacker",
+   "detection": "a step that has no record, and a control whose exception register has no expiry",
+   "atoms": [
+    "A11",
+    "A15",
+    "A14"
+   ]
+  },
+  {
+   "id": "C99",
+   "name": "unclassified",
+   "mechanism": "no mechanism: the counter did not match any class, which is a classifier gap rather than a control",
+   "sees": "nothing, because it is an absence",
+   "blind_spot": "whatever the unmatched counters were describing",
+   "bypass": "not applicable; an unclassified counter means the taxonomy needs the case, not that a bypass exists",
+   "cost": "unknown by construction",
+   "detection": "the size of this class itself, which should stay small and does not always",
+   "atoms": []
+  }
+ ]
+}

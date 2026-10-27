@@ -96,6 +96,11 @@ print(f"domains_with_data {doms}")
 print(f"domains_rendered {rendered}")
 print(f"prompt_packs {prompts}")
 try:
+    _cc = json.load(open(R/"data"/"counters"/"classes.json"))
+    print(f"counter_classes {len(_cc['classes'])}")
+except Exception:
+    print("counter_classes 0")
+try:
     _d31 = json.load(open(R/"data"/"domains"/"D31.json"))
     print(f"rea_gaps_built {sum(1 for g in _d31['gaps'] if g.get('status') == 'built')}")
 except Exception:

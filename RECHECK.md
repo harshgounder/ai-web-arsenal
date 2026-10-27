@@ -505,6 +505,28 @@ entry with the right noun is constant, and only the sample check catches it.
 
 ---
 
+## 6n. The counter layer
+
+The defensive half had been one line per pattern in the atlas. It is now a document with a stated blind
+spot per control class, because a control described only by what it stops is marketing.
+
+Fourteen classes, the same ids the atlas uses, each with six fields: mechanism, what it sees, what it
+structurally cannot see, the bypass, what the bypass costs, and the rule that would catch it.
+
+The pairing is the point. C09 cache discipline sees the key it built and cannot see an input it did not
+model, which is a header it forwards or a normalisation applied after keying. C07 parser strictness sees
+the bytes it parsed and cannot see the other parser downstream, whose existence is the entire precondition
+for a desync. C11 audit integrity sees the acts the application chose to log and cannot see a principal
+fabricated upstream.
+
+Two claims enforce it: every class has all six fields, and every atom referenced exists in the atlas. Both
+are in the default gate, and the rendered document is inside the determinism check.
+
+The cost column is the part a defender rarely sees written down. C13 maintenance and process is the
+cheapest class for a patient attacker, because the bypass is waiting rather than requesting.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

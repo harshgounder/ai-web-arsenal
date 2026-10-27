@@ -653,6 +653,32 @@ error. A server that starts is not a server that answers.
 
 ---
 
+## The counter layer
+
+The defensive half, and the part that answers the other half of the brief: what will stop you, and what
+does it miss. Fourteen control classes, generated into [`counters/COUNTERS.md`](counters/COUNTERS.md),
+matching the ids the atlas uses so a pattern's `counter` field and a class record mean the same thing.
+
+Each class states six things, and the pair that matters is the middle two:
+
+| class | mechanism | **what it sees** | **what it structurally cannot see** |
+|---|---|---|---|
+| C01 | per object ownership check | caller and owner at the same layer | paths that fetch without calling the checked function |
+| C07 | one parser for the whole path | the bytes it parsed | the other parser downstream, whose existence is the desync precondition |
+| C09 | every varying input in the key | the key it built | inputs it did not model: a header it forwards, normalisation it applies after keying |
+| C11 | append only logging with attribution | acts the application chose to log | acts through an unlogged path, or a principal fabricated upstream |
+
+A control described only by what it stops is marketing. The blind spot column is the attack surface, and
+the cost column says what using it will cost you: **C13 maintenance and process** is the cheapest class
+for a patient attacker, because the bypass is waiting rather than requesting.
+
+```bash
+python3 scripts/render-counters.py --check
+# 14 control classes checked, every field present
+```
+
+---
+
 ## The gate
 
 A phase is done when the gate exits 0, not when the prose says so.
@@ -751,6 +777,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | regression tests | 30 across 21 known defect classes |
 | REA operations built | 6 of 10 named gaps, each with fixtures and a test |
 | stack playbooks | 4, every cited entry verified to exist |
+| control classes with a stated blind spot | 14 of 14 |
 | MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 
@@ -821,6 +848,7 @@ ai-web-arsenal/
 ├── trees/                     decision trees as JSON
 ├── prompts/                   5 phase packs with failure modes
 ├── playbooks/                 per stack ordered runs, generated from data/playbooks/
+├── counters/                  the defensive half, generated from data/counters/
 ├── mcps/                      working MCP configs, including arsenal-mcp.py
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── rea-ops/                   built extraction operations, each with a fixture and a test
