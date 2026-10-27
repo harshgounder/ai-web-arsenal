@@ -844,6 +844,44 @@ figure stands. What is unreliable is the per entry atom field, and it is now lab
 
 ---
 
+## 6y. External audit part 1 and 2: what was fixed, and what a rebuild is blocked on
+
+Eleven findings verified against the code. Seven fixed here. Four need a full pipeline rebuild and are
+not shipped, because the rebuild produced a delta I could not fully explain in one pass.
+
+**Fixed and committed:**
+
+| finding | what was wrong |
+|---|---|
+| C031 ended in `or True` | the check was a tautology, so no matrix could ever fail it. Replaced with the invariant its statement describes, and proved it fails on an injected broken row |
+| `STRONG_WEB` used `.split()` on a quoted string | `"web application"` arrived as `"web` and `application"`, so the phrase branch could never fire. Now `shlex.split`, and the three multiword terms are intact |
+| `score()` used bare substring matching | `rf` matched inside `perform`, `surface` and `workflow`. Short terms now require word boundaries |
+| `domain_of()` was defined twice | identical copies, second silently winning. One copy now |
+| `clean_name()` stripped underscores | `jwt_tool` became `jwttool` and stopped matching its own URL. Markdown delimiters only |
+| `canon()` deleted tracking parameters from the string | `?utm_source=x&Key=V` became `&Key=V`, which is no longer a query. The query is rebuilt now |
+| `canon()` lowercased the whole path | `/User/Harsh` and `/user/harsh` merged. Host is lowercased, path and query are not |
+
+**Measured, then reverted.** With those fixes applied the tier distribution moved: `offscope` 343 to 24,
+`core_web` 475 to 694, `knowledge` 824 to 826. The first two are the fixes working: 319 rows were being
+excluded on false substring matches, and 219 were not scoring as core web because the phrases were shredded.
+
+But `reconcile.py` orphans went from 71 to **761**, and I could not account for that in this pass. Shipping
+a twenty-fold increase in unexplained orphans to make four separate fixes land is exactly the trade this
+project refuses. The data is reverted, the code fixes are kept, and the rebuild is a single documented task
+with its known consequences:
+
+```
+python3 scripts/parse-sources.py && python3 scripts/build-corpus.py && python3 scripts/reconcile.py
+python3 scripts/merge-identities.py && python3 scripts/build-indexes.py && python3 scripts/dedupe-names.py
+```
+
+The orphan delta is the first thing to explain when that runs. The likely cause is written down in the
+audit: reconciliation reimplements a subset of the builder's badge and canonical logic instead of calling
+it, so any change to canonisation moves rows between `excluded` and `orphan` without moving them between
+correct and incorrect.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

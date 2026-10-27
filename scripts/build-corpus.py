@@ -15,7 +15,7 @@ Every row gets:
 
 Nothing is deleted. Rows that fail every rule land in tier=tail with the reason recorded.
 """
-import json, re
+import json, re, shlex, sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -38,14 +38,18 @@ CODE_HOST = re.compile(r"(github\.com|gitlab\.com|gitee\.com|codeberg\.org|bitbu
 
 # --- domain relevance -------------------------------------------------------
 # strong terms are specific to this repo's scope. weak terms are shared with other fields.
-STRONG_WEB = [t.lower() for t in """xss csrf sqli ssrf idor bola bfla cors jwt jwe oauth oidc saml sso graphql
+_STRONG_RAW = """xss csrf sqli ssrf idor bola bfla cors jwt jwe oauth oidc saml sso graphql
 websocket webhook smuggler desync prototype-pollution postmessage clickjacking open-redirect session-fixation
 takeover subdomain recon nuclei ffuf sqlmap dalfox burp caido zap postman swagger openapi har
 waf bypass payload webshell lfi rfi xxe ssti deserialization zip-slip mass-assignment race-condition
 header cookie endpoint api-security webapp "web application" "web app" pentest "bug bounty" bugbounty
 fuzzing crawler spider sourcemap deobfusc wasm webview electron apk mobile-security
 prompt-injection llm-security mcp-server agent-skill tool-poisoning rag-poisoning
-cve exploit vulnerability scanner interception proxy""".split()]
+cve exploit vulnerability scanner interception proxy"""
+# shlex.split honours the quotes, so "web application" stays one phrase. str.split() did not, which
+# meant the multiword terms the matcher was written to handle arrived as '"web' and 'application"', and
+# the ''if " " in t'' phrase branch could never fire.
+STRONG_WEB = [t.lower() for t in shlex.split(_STRONG_RAW)]
 
 WEAK_WEB = [t.lower() for t in """web http https api rest security browser mobile agent llm mcp cloud
 docker kubernetes azure aws gcp cdn cache dns tls certificate json xml yaml javascript js
@@ -93,6 +97,11 @@ DOMAIN_RULES = [
 ]
 
 
+JUNK_NAME = re.compile(r"^(github|gitlab|gitee|codeberg|repository|repo|link|here|this|site|website|web|page|"
+                       r"read more|more|source|docs|documentation|tool|article|blog|post|glama|mcp|server|"
+                       r"badge|badges|shield|shields|homepage|home|download|click here|unknown|n a|na|"
+                       r"HARNESS-IFACE|BENCH-\d+|(OFF|DEF|ENG|GOV|HUM|PHY|ENB|DATA)-\d{2})$", re.I)
+
 def domain_of(text):
     for did, pat in DOMAIN_RULES:
         if re.search(pat, text, re.I):
@@ -115,8 +124,21 @@ def kind_of(url, name, section, desc):
 
 
 def score(text, terms):
+    """Count terms, with word boundaries for short ones.
+
+    A bare substring test made 'rf' match inside 'perform', 'surface' and 'workflow', and 'c2' match
+    inside anything with those characters. Bare words get a boundary; phrases and hyphenated terms keep
+    substring matching because their own shape is already specific.
+    """
     low = text.lower()
-    return sum(1 for t in terms if t in low)
+    hits = 0
+    for t in terms:
+        if len(t) <= 3 and " " not in t and "-" not in t:
+            if re.search(r"\b" + re.escape(t) + r"\b", low):
+                hits += 1
+        elif t in low:
+            hits += 1
+    return hits
 
 
 def wscore(text):
@@ -134,20 +156,6 @@ def wscore(text):
         if re.search(r"\b" + re.escape(t) + r"\b", low):
             weak += 1
     return strong * 3 + weak, strong, weak
-
-
-def domain_of(text):
-    for did, pat in DOMAIN_RULES:
-        if re.search(pat, text, re.I):
-            return did
-    return None
-
-
-
-JUNK_NAME = re.compile(r"^(github|gitlab|gitee|codeberg|repository|repo|link|here|this|site|website|web|page|"
-                       r"read more|more|source|docs|documentation|tool|article|blog|post|glama|mcp|server|"
-                       r"badge|badges|shield|shields|homepage|home|download|click here|unknown|n a|na|"
-                       r"HARNESS-IFACE|BENCH-\d+|(OFF|DEF|ENG|GOV|HUM|PHY|ENB|DATA)-\d{2})$", re.I)
 
 
 def derive_name(url):
@@ -209,6 +217,13 @@ def repair_badge_url(u):
 SLUG_ONLY = re.compile(r"^[\w.-]+/[\w.-]+$")
 
 
+def _canon(url):
+    """One canonicaliser for the whole pipeline. Reimplementing it here is how the two drifted apart."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from importlib import import_module
+    return import_module("parse-sources").canon(url)
+
+
 def normalize_url(u):
     """One harvested source stores a bare `owner/repo` in its url field instead of a link.
     That made 687 rows count as 'carrying a URL' when they carried an identifier, and left them
@@ -233,6 +248,11 @@ def main():
             _u = normalize_url((r.get("url") or ""))
             if _u != (r.get("url") or ""):
                 r["url"] = _u
+                # The canonical key was computed from the old value and left alone, so a repaired URL
+                # kept a key derived from the bare slug. normalize_url() saying two rows have the same
+                # URL while their keys differ is a broken dedupe invariant, so the key is recomputed
+                # here from the URL that will actually be stored.
+                r["canonical"] = _canon(_u)
             # badge and image URLs are not entries. glama.ai alone contributed 3,348 of them.
             # A badge that encodes a real tool URL is repaired instead of dropped.
             if is_badge_url(_u):
@@ -240,6 +260,7 @@ def main():
                 if not fixed:
                     continue
                 r["url"] = fixed
+                r["canonical"] = _canon(fixed)
                 r["parse_notes"] = list(r.get("parse_notes") or []) + ["badge-url-repaired"]
                 _u = fixed
             key = r.get("canonical") or ("name:" + slug(r.get("name")))

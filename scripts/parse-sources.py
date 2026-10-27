@@ -45,7 +45,14 @@ def canon(url: str) -> str:
         return u.lower()
     scheme, host, path = m.group(1).lower(), m.group(2).lower(), m.group(3)
     host = re.sub(r"^www\.", "", host)
-    path = re.sub(r"[?&](utm_[^&]*|ref|fbclid|gclid)=[^&]*", "", path)
+    # Remove tracking parameters by rebuilding the query, not by deleting from the string. The old
+    # substitution removed the leading ? along with the parameter, so ?utm_source=x&Key=V became
+    # &Key=V, which is no longer a query at all.
+    if "?" in path:
+        head, _, query = path.partition("?")
+        keep = [kv for kv in query.split("&")
+                if kv and not re.match(r"^(utm_[^&]*|ref|fbclid|gclid)=", kv)]
+        path = head + ("?" + "&".join(keep) if keep else "")
     path = re.sub(r"/+$", "", path)
     if host == "github.com":
         parts = [p for p in path.split("/") if p]
@@ -53,11 +60,19 @@ def canon(url: str) -> str:
             owner, repo = parts[0].lower(), re.sub(r"\.git$", "", parts[1]).lower()
             return f"gh:{owner}/{repo}"
     path = re.sub(r"\.git$", "", path)
-    return scheme + host + path.lower()
+    # Host is case insensitive; path and query are not. Lowercasing them merged distinct resources.
+    return scheme + host + path
 
 
 def clean_name(raw: str) -> str:
-    n = re.sub(r"[`*_]", "", raw).strip()
+    """Strip Markdown formatting, not identifier characters.
+
+    The old pattern removed every backtick, asterisk and underscore, so jwt_tool became jwttool and a
+    name could stop matching its own URL. Underscores are ordinary in project names; they are only
+    emphasis when they wrap the whole string.
+    """
+    n = re.sub(r"[`*]", "", raw).strip()
+    n = re.sub(r"^_(.+)_$", r"\1", n)          # _emphasis_ only when it wraps the whole name
     n = re.sub(r"\s+", " ", n)
     return n[:200]
 
