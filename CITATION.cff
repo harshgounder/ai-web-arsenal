@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: ai-web-arsenal
+message: If you use this arsenal in research or a report, cite it.
+type: software
+authors:
+  - family-names: Gounder
+    given-names: Harsh
+    alias: harshgounder
+repository-code: https://github.com/harshgounder/ai-web-arsenal
+url: https://github.com/harshgounder/ai-web-arsenal
+license: MIT
+version: 0.1.0
+date-released: 2026-10-27
+abstract: >
+  An AI-native arsenal for testing web platforms. The deduplicated superset of 19 public security
+  collections as of October 2026, plus 28 authored domains of method mapped onto 16 attack primitives,
+  with verified install channels for 64 tools, decision trees as JSON, prompt packs, and a
+  reconciliation ledger in which every excluded entry carries a reason.
+keywords:
+  - application security
+  - web security
+  - api security
+  - penetration testing
+  - ai agents
+  - mcp
+  - reverse engineering

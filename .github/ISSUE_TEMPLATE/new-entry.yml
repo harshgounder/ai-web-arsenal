@@ -1,0 +1,28 @@
+name: New tool or technique
+description: Propose an entry. Read CONTRIBUTING.md first, the bar is three fields.
+title: "[entry] "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Which domain
+      placeholder: D07
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Upstream URL
+    validations:
+      required: true
+  - type: textarea
+    id: fields
+    attributes:
+      label: The three fields
+      description: |
+        preconditions: what must be true on the target
+        oracle: how you know it worked
+        driver: install channel and verify command
+    validations:
+      required: true

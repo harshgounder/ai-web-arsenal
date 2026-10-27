@@ -1,0 +1,19 @@
+name: Broken entry or dead link
+description: An install command fails, a URL 404s, or a claim is wrong.
+title: "[broken] "
+labels: ["bug"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry id or domain
+      placeholder: "d11-clairvoyance or D11"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: Paste the command you ran and its output, or the URL and the status it returned.
+    validations:
+      required: true
