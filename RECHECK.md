@@ -441,6 +441,27 @@ followed by memory.
 
 ---
 
+## 6l. The AI layer: a server, not a reading list
+
+The brief asked for an AI-native arsenal. Until now that meant markdown an agent could read and prompts
+it could follow, which is a reading list. `mcps/arsenal-mcp.py` is an interface: nine tools over stdio,
+standard library only, so an agent asks instead of inferring.
+
+What makes it more than a grep wrapper is that the answers carry the grading. `search_entries` reports
+whether each entry has an oracle, so a caller can tell a procedure from a mention without reading the
+entry. `coverage` returns L0 to L3 for any factor. `gaps` returns the class that decides whether a
+missing factor can be written or needs a lab.
+
+Thirteen protocol checks in `mcps/test-mcp.py`, wired into the default gate. They compare the server's
+answers against the same data read directly from disk, which is the only interesting property: a server
+that restates the repo wrongly is worse than no server.
+
+One defect found while building it: the test and the server disagreed about which fields a search covers,
+so the same query returned six rows in one and eight in the other. Both now use one documented field
+tuple. That is the mirror of this project's oldest lesson, from the other direction.
+
+---
+
 ## 7. How to re-derive everything
 
 Run in this order. All stages are idempotent.

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "arsenal": {
+      "command": "python3",
+      "args": ["${HOME}/ai-web-arsenal/mcps/arsenal-mcp.py"],
+      "description": "Query the arsenal: 515 domain entries, 150 atlas patterns, 1,000 factor coverage ledger, classified gap, 64 tool manifest, 52 prose claims."
+    }
+  }
+}

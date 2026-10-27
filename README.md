@@ -590,6 +590,44 @@ not previously read, with a fixture and a test, or it does not go in.
 
 ---
 
+## The MCP server
+
+An agent should not read 500 entries to find one. `mcps/arsenal-mcp.py` serves the same data as tools over
+stdio, using only the standard library, because a tool that needs an install to answer a question is
+worse than grep.
+
+```json
+{
+  "mcpServers": {
+    "arsenal": {
+      "command": "python3",
+      "args": ["${HOME}/ai-web-arsenal/mcps/arsenal-mcp.py"]
+    }
+  }
+}
+```
+
+Nine tools:
+
+| tool | answers |
+|---|---|
+| `search_entries` | which entries touch a term, and **whether each has an oracle**, so a caller can tell a procedure from a mention |
+| `get_entry` | one entry complete, including preconditions, oracle, evades and driver |
+| `search_patterns` | atlas patterns by title or target state, with status |
+| `get_pattern` | one pattern with its counter and negative control |
+| `coverage` | the grade for a factor, or a level summary for a lens, or the whole denominator |
+| `gaps` | the classified gap: I derivable, II needs a lab, III unavailable |
+| `tools_for` | manifest tools with the install channel that actually resolves |
+| `domains` | the registry with entry counts |
+| `claims` | what this repo asserts about itself, with the check behind each one |
+
+`mcps/test-mcp.py` drives it over stdio the way a client would, and it is in the gate. It checks that
+`search_entries` agrees with a direct disk read, that `coverage` returns the same grade as the ledger,
+that a missing id returns an error payload rather than a crash, and that an unknown tool is a protocol
+error. A server that starts is not a server that answers.
+
+---
+
 ## The gate
 
 A phase is done when the gate exits 0, not when the prose says so.
@@ -687,6 +725,7 @@ Run `python3 scripts/readme-stats.py` to reproduce every number in this file.
 | claims checked | 45 |
 | regression tests | 30 across 21 known defect classes |
 | REA operations built | 2 of 10 named gaps, each with fixtures |
+| MCP server | 9 tools, 13 protocol checks in the gate |
 | generated files, rebuild | 190, byte identical |
 
 ---
@@ -755,7 +794,7 @@ ai-web-arsenal/
 ├── domains/                   39 domain documents, 30 authored, 9 pointers
 ├── trees/                     decision trees as JSON
 ├── prompts/                   5 phase packs with failure modes
-├── mcps/                      working MCP configs
+├── mcps/                      working MCP configs, including arsenal-mcp.py
 ├── skills/web-arsenal/        the order of operations as a loadable skill
 ├── rea-ops/                   built extraction operations, each with a fixture and a test
 ├── range/                     4 labs that produced the only observed records here
