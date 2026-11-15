@@ -1093,3 +1093,24 @@ Neither restates the other.
 ## Licence
 
 MIT, see [`LICENSE`](LICENSE). Cite with [`CITATION.cff`](CITATION.cff).
+
+## The system, expanded (2026-11-15)
+
+This repo and the atlas are no longer the whole picture. Five repos now form
+one machine, and the execution, proving and memory layers exist:
+
+- web-attack-driver (private, github harshgounder): the executor/critic loop.
+  Scope, rate and evidence enforced in code. Three complete engagements
+  against the juice-shop lab: 23 candidates, 5 proven, 1 refuted, 17 honestly
+  overstated.
+- web-attack-labs (private): the proving layer. Every pattern ships with a lab
+  or it does not ship. First ground-truth cross-check against the lab's own
+  answer key is in.
+- web-attack-ledger (private): the memory layer. What worked, failed, or
+  false-positived, with lessons that re-enter the driver's doctrine.
+
+The join runs both ways now: this repo's denominator and doctrine feed the
+driver, and run evidence (data/observations/2026-11-15-driver-run.md) feeds
+back into this repo's domain picture. The 74 percent overstated rate from the
+first three engagements is the strongest evidence yet for the
+executor-is-never-critic rule in ORCHESTRATION.md.
