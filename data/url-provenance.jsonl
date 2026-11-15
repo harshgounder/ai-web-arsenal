@@ -48,6 +48,7 @@
 {"url": "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d18-ci-trigger"]}
 {"url": "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d18-signed-history"]}
 {"url": "https://docs.mitmproxy.org/stable/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d04-mitmproxy", "d05-mitmproxy", "d06-mitmproxy", "d09-mitmproxy", "d10-mitmproxy", "d12-mitmproxy", "d14-mitmproxy", "d22-mitmproxy", "d23-mitmproxy", "d29-mitmproxy", "d31-mitmproxy"]}
+{"url": "https://docs.neo.projectdiscovery.io/integrations/mcp", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d28-neo-mcp"]}
 {"url": "https://docs.npmjs.com/cli/v10/using-npm/scripts", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d18-install-hooks"]}
 {"url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d24-sarif"]}
 {"url": "https://dsopas.github.io/MindAPI/play/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d05-mindapi", "d11-mindapi"]}
@@ -69,6 +70,7 @@
 {"url": "https://github.com/BugTraceAI/BugTraceAI", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d30-bugtrace"]}
 {"url": "https://github.com/CyberStrikeus/CyberStrike", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d30-cyberstrike"]}
 {"url": "https://github.com/D35m0nd142/LFISuite", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d13-lfisuite"]}
+{"url": "https://github.com/D4T4HUN73R/mcp-security-hub", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d28-mcp-security-hub"]}
 {"url": "https://github.com/DataDog/pathrunner", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d17-pathrunner"]}
 {"url": "https://github.com/EdOverflow/can-i-take-over-xyz", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d02-takeover-xyz"]}
 {"url": "https://github.com/EnableSecurity/wafw00f", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d03-wafw00f", "d22-wafw00f", "d29-wafw00f"]}
@@ -90,6 +92,7 @@
 {"url": "https://github.com/OWASP/wstg", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d24-wstg-report"]}
 {"url": "https://github.com/PentestPad/subzy", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d02-subzy"]}
 {"url": "https://github.com/PortSwigger/http-request-smuggler", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d09-hrs"]}
+{"url": "https://github.com/PortSwigger/mcp-server", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d28-burp-mcp"]}
 {"url": "https://github.com/PowerShellMafia/PowerSploit", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d23-powersploit"]}
 {"url": "https://github.com/Quitten/Autorize", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d05-autorize"]}
 {"url": "https://github.com/ReFirmLabs/binwalk", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d29-binwalk"]}

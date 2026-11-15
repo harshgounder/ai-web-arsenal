@@ -1,6 +1,6 @@
 {
  "checked_at": "2026-11-15",
- "unique_urls": 342,
+ "unique_urls": 345,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -402,6 +402,13 @@
     "d31-mitmproxy"
    ]
   },
+  "https://docs.neo.projectdiscovery.io/integrations/mcp": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d28-neo-mcp"
+   ]
+  },
   "https://docs.npmjs.com/cli/v10/using-npm/scripts": {
    "status": "OK",
    "http": 200,
@@ -560,6 +567,13 @@
     "d13-lfisuite"
    ]
   },
+  "https://github.com/D4T4HUN73R/mcp-security-hub": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d28-mcp-security-hub"
+   ]
+  },
   "https://github.com/DataDog/pathrunner": {
    "status": "OK",
    "http": 200,
@@ -715,6 +729,13 @@
    "http": 200,
    "entries": [
     "d09-hrs"
+   ]
+  },
+  "https://github.com/PortSwigger/mcp-server": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d28-burp-mcp"
    ]
   },
   "https://github.com/PowerShellMafia/PowerSploit": {

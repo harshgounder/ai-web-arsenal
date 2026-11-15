@@ -322,7 +322,7 @@ claims:
 
   - id: C134
     statement: "the number of entries whose atom falls outside their domain's declared set is measured and disclosed"
-    check: "sum(1 for d in domains() for e in d.get('entries', []) if d.get('atoms') and not set(e.get('atom') or []) <= set(d['atoms'])) == 98"
+    check: "sum(1 for d in domains() for e in d.get('entries', []) if d.get('atoms') and not set(e.get('atom') or []) <= set(d['atoms'])) == 97"
 
   - id: C135
     statement: "the domain registry and the domain files agree on atoms and required cells"

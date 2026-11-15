@@ -2,17 +2,21 @@
  "id": "D28",
  "title": "MCP servers for web work",
  "version": "0.1",
- "generated": "2026-10-27",
+ "generated": "2026-11-15",
  "status": "DEEP",
  "atoms": [
   "A16",
   "A11",
-  "A02"
+  "A02",
+  "A15",
+  "A08"
  ],
  "atom_notes": {
   "A16": "a tool description is text the model obeys, so every server is an instruction channel",
   "A11": "an MCP server is a dependency, and registries are unaudited",
-  "A02": "the server holds credentials and acts with them, so its scope is a trust boundary"
+  "A02": "the server holds credentials and acts with them, so its scope is a trust boundary",
+  "A15": "MCP servers are deployed configuration: what an agent can reach is a property of which servers are wired, so tool sprawl and unscanned wrappers are config divergence",
+  "A08": "an MCP server exposes tool surfaces and data to whichever client holds the config; over-broad exposure is information reaching parties that should not receive it"
  },
  "required_cells": [
   {
@@ -255,6 +259,90 @@
    "stage": "L01",
    "status": "VERIFIED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d28-mcp-security-hub",
+   "name": "mcp-security-hub",
+   "url": "https://github.com/D4T4HUN73R/mcp-security-hub",
+   "role": "38 dockerized MCP servers wrapping offensive tools (nmap, nuclei, sqlmap, ffuf, burp, radare2, ghidra, yara, capa, trivy, prowler, searchsploit, hashcat, bloodhound) so MCP clients drive 300+ security tools directly",
+   "driver": {
+    "install": "docker compose per server; images non-root and trivy-scanned",
+    "verify": "docker run -i --rm nuclei-mcp:latest",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "docker",
+    "an MCP-capable client"
+   ],
+   "oracle": [
+    "client lists the server's tools and one tool executes end to end"
+   ],
+   "evades": [],
+   "detected_by": [
+    "docker process accounting"
+   ],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "The agent-native way to give an LLM an offensive toolbelt without shell parsing. Dockerized so scope limits can be enforced at the container layer."
+  },
+  {
+   "id": "d28-burp-mcp",
+   "name": "Burp Suite MCP Server (official, PortSwigger)",
+   "url": "https://github.com/PortSwigger/mcp-server",
+   "role": "official MCP server for Burp: agents can drive proxy history, repeater, scanner through structured tool calls",
+   "driver": {
+    "install": "burp extension / mcp-server",
+    "verify": "mcp tools/list",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "Burp Suite running"
+   ],
+   "oracle": [
+    "agent reads live proxy traffic and issues a repeat request through the tool"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "Updated 2026-11-14. The de-facto bridge between the intercept proxy every human uses and agent workflows."
+  },
+  {
+   "id": "d28-neo-mcp",
+   "name": "ProjectDiscovery Neo (hosted agentic platform + MCP)",
+   "url": "https://docs.neo.projectdiscovery.io/integrations/mcp",
+   "role": "hundreds of specialist pentest agents behind one MCP endpoint; create_task/get_issues tool surface; also exposes outbound mcp-tools so Neo agents call YOUR servers",
+   "driver": {
+    "install": "remote mcp: mcp.projectdiscovery.io/mcp streamable http + X-Api-Key",
+    "verify": "list_capabilities call",
+    "json": true,
+    "stdin": false
+   },
+   "atom": [
+    "A15"
+   ],
+   "preconditions": [
+    "neo api key"
+   ],
+   "oracle": [
+    "get_issues returns validated findings with severity, target, remediation"
+   ],
+   "evades": [],
+   "detected_by": [],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Neo v1 GA per projectdiscovery.io/blog/neo-v1: continuous exploitability testing, sandboxed runs, bidirectional MCP (inbound control + outbound tools). The commercial benchmark for what agent-driven testing looks like at fleet scale."
   }
  ],
  "tree": {

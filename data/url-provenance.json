@@ -1,8 +1,8 @@
 {
  "generated_at": "2026-11-15",
- "urls_asserted": 342,
+ "urls_asserted": 345,
  "by_status": {
-  "OK": 340,
+  "OK": 343,
   "BLOCKED": 2
  },
  "unchecked": 0,
