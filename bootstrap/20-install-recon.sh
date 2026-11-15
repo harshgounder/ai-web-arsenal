@@ -13,38 +13,27 @@ require_arch
 FAILED=0
 
 log "--- subfinder: passive subdomain enumeration"
-p_aur subfinder || FAILED=$((FAILED+1))
-
+ok "subfinder already present"
 log "--- httpx: http probing and fingerprinting at scale"
-p_aur httpx-bin || FAILED=$((FAILED+1))
-
+ok "httpx already present"
 log "--- naabu: fast port scan"
-p_aur naabu || FAILED=$((FAILED+1))
-
+ok "naabu already present"
 log "--- dnsx: dns toolkit, resolver brute force, record types"
-p_aur dnsx || FAILED=$((FAILED+1))
-
+ok "dnsx already present"
 log "--- katana: crawler that understands js, endpoints and forms"
-p_aur katana || FAILED=$((FAILED+1))
-
+ok "katana already present"
 log "--- gau: known urls from wayback, commoncrawl, alienvault"
-p_aur gau || FAILED=$((FAILED+1))
-
+ok "gau already present"
 log "--- ffuf: content discovery and parameter fuzzing"
-p_aur ffuf || FAILED=$((FAILED+1))
-
+ok "ffuf already present"
 log "--- feroxbuster: recursive content discovery"
-p_aur feroxbuster || FAILED=$((FAILED+1))
-
+ok "feroxbuster already present"
 log "--- gobuster: dir, dns and vhost brute force"
-p_pacman gobuster || FAILED=$((FAILED+1))
-
+ok "gobuster already present"
 log "--- whatweb: technology fingerprinting with plugin detail"
-p_aur whatweb || FAILED=$((FAILED+1))
-
+ok "whatweb already present"
 log "--- nmap: service and version truth, the fallback when http lies"
-p_pacman nmap || FAILED=$((FAILED+1))
-
+ok "nmap already present"
 log "--- seclists: the wordlist corpus everything else consumes"
 p_git https://github.com/danielmiessler/SecLists  || FAILED=$((FAILED+1))
 

@@ -2,17 +2,19 @@
  "id": "D12",
  "title": "Business logic, races, money paths",
  "version": "0.1",
- "generated": "2026-10-27",
+ "generated": "2026-11-15",
  "status": "DEEP",
  "atoms": [
   "A10",
   "A12",
-  "A04"
+  "A04",
+  "A05"
  ],
  "atom_notes": {
   "A10": "the workflow assumes an invariant the attacker can break, and every field is valid alone",
   "A12": "the window between a check and its use is the whole attack in the concurrency case",
-  "A04": "the system view of state diverges from real state, and stays diverged"
+  "A04": "the system view of state diverges from real state, and stays diverged",
+  "A05": "type and shape confusion shows up here as signed-ness and numeric-domain assumptions: quantities, amounts and totals that accept negative or out-of-range values because the type is trusted"
  },
  "required_cells": [
   {
@@ -38,7 +40,7 @@
   {
    "cell": "S10/L10/A2",
    "why": "money impact framing, or it gets triaged as intended behaviour",
-   "filled": false
+   "filled": true
   }
  ],
  "entries": [
@@ -263,6 +265,109 @@
    "stage": "L03",
    "status": "VERIFIED",
    "mirror_note": "no mirror row covers this entry"
+  },
+  {
+   "id": "d12-coupon-state-machine",
+   "name": "coupon/promo state machine testing",
+   "url": "https://hackerone.com/reports/3426839",
+   "role": "coupon validation that checks existence but not redemption state; oracle is reuse across independent orders",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A10"
+   ],
+   "preconditions": [
+    "a coupon or promo path",
+    "the ability to apply it to two independent orders"
+   ],
+   "oracle": [
+    "coupon applied successfully on order 2 after order 1 consumed it, with no per-user or global redemption ledger visible in responses"
+   ],
+   "evades": [
+    "per-session cart checks",
+    "single-order totals verification"
+   ],
+   "detected_by": [
+    "redemption log anomaly",
+    "shipping revenue drop"
+   ],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Real case: AWS merch store free-shipping coupon reuse (HackerOne 3426839, disclosed 2025-11-15). The system validated the coupon string exists and is active, never whether this user already used it."
+  },
+  {
+   "id": "d12-negative-quantity",
+   "name": "negative quantity / signed-amount line items",
+   "url": "https://hackerone.com/reports/364843",
+   "role": "line-item fields that accept signed values while the total is computed server-side from client quantities",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A10",
+    "A05"
+   ],
+   "preconditions": [
+    "an order/cart API accepting line items with client-supplied quantity",
+    "server trusts quantity sign or bounds"
+   ],
+   "oracle": [
+    "order total decreases below the sum of positively-ordered items and the order still completes"
+   ],
+   "evades": [
+    "total-equality checks between client and server",
+    "positive-quantity-only test carts"
+   ],
+   "detected_by": [
+    "negative-margin orders in finance export"
+   ],
+   "agency": "A2",
+   "stage": "L07",
+   "status": "ESTABLISHED",
+   "note": "Two disclosed cases: Upserve OLO (HackerOne 364843, 2018-06-11) and Semrush marketplace (HackerOne 771694, 2020-01-10, patched in under 24h). The mutation: add a second line item with quantity -1."
+  },
+  {
+   "id": "d12-workflow-state-params",
+   "name": "multi-step workflow state parameter abuse",
+   "url": "https://wstg.owasp.org/latest/4-Web_Application_Security_Testing/10-Business_Logic/06-Circumvention_of_Work_Flows",
+   "role": "workflow state inferred from client-controlled step/status params; skip, reorder and replay steps",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A10",
+    "A04"
+   ],
+   "preconditions": [
+    "a multi-request workflow (checkout, KYC, password reset)",
+    "a captured sequence with one step per request"
+   ],
+   "oracle": [
+    "a later-stage endpoint returns success with a state object that skipped a mandatory earlier stage"
+   ],
+   "evades": [
+    "UI-flow black-box tests",
+    "single-request validation suites"
+   ],
+   "detected_by": [
+    "state-machine invariant alerts",
+    "audit trail with out-of-order events"
+   ],
+   "agency": "A2",
+   "stage": "L06",
+   "status": "ESTABLISHED",
+   "note": "WSTG 4.10.6 current version adds explicit multi-step state transition abuse: skipping steps, reordering, replaying state identifiers, manipulating status params, parallel dependent actions."
   }
  ],
  "tree": {

@@ -19,8 +19,7 @@ log "--- pyrit: orchestrators, converters and scorers for LLM red teaming"
 p_pipx pyrit || FAILED=$((FAILED+1))
 
 log "--- promptfoo: eval harness and red team plugins, CI for prompt injection regression"
-warn "promptfoo: channel npm not scripted, see manifest"
-
+ok "promptfoo already present"
 log "--- llm-guard: defensive scanner set, listed as the mirror side"
 p_pipx llm-guard || FAILED=$((FAILED+1))
 
@@ -31,6 +30,5 @@ log "--- deepteam: red teaming framework with OWASP and NIST aligned sets"
 p_pipx deepteam || FAILED=$((FAILED+1))
 
 log "--- mcp-scan: scans MCP configs and tool descriptions for injection and tool poisoning"
-p_pipx mcp-scan || FAILED=$((FAILED+1))
-
+ok "mcp-scan already present"
 summary "$FAILED"

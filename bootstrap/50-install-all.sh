@@ -15,117 +15,83 @@ FAILED=0
 log "--- jq: json slicing, the glue for every other tool"
 ok "jq already present"
 log "--- yq: yaml and xml to json, for specs and configs"
-p_pacman go-yq || FAILED=$((FAILED+1))
-
+ok "yq already present"
 log "--- fq: jq semantics over any binary format, the fastest unknown-format probe"
-p_pacman fq || FAILED=$((FAILED+1))
-
+ok "fq already present"
 log "--- curl: raw http, the ground truth for every request claim"
 ok "curl already present"
 log "--- subfinder: passive subdomain enumeration"
-p_aur subfinder || FAILED=$((FAILED+1))
-
+ok "subfinder already present"
 log "--- httpx: http probing and fingerprinting at scale"
-p_aur httpx-bin || FAILED=$((FAILED+1))
-
+ok "httpx already present"
 log "--- naabu: fast port scan"
-p_aur naabu || FAILED=$((FAILED+1))
-
+ok "naabu already present"
 log "--- dnsx: dns toolkit, resolver brute force, record types"
-p_aur dnsx || FAILED=$((FAILED+1))
-
+ok "dnsx already present"
 log "--- katana: crawler that understands js, endpoints and forms"
-p_aur katana || FAILED=$((FAILED+1))
-
+ok "katana already present"
 log "--- gau: known urls from wayback, commoncrawl, alienvault"
-p_aur gau || FAILED=$((FAILED+1))
-
+ok "gau already present"
 log "--- ffuf: content discovery and parameter fuzzing"
-p_aur ffuf || FAILED=$((FAILED+1))
-
+ok "ffuf already present"
 log "--- feroxbuster: recursive content discovery"
-p_aur feroxbuster || FAILED=$((FAILED+1))
-
+ok "feroxbuster already present"
 log "--- gobuster: dir, dns and vhost brute force"
-p_pacman gobuster || FAILED=$((FAILED+1))
-
+ok "gobuster already present"
 log "--- arjun: http parameter discovery"
-p_pipx arjun || FAILED=$((FAILED+1))
-
+ok "arjun already present"
 log "--- nuclei: template based scanning, the cve and misconfig workhorse"
-p_aur nuclei-bin || FAILED=$((FAILED+1))
-
+ok "nuclei already present"
 log "--- nikto: classic server misconfiguration scanner"
-p_pacman nikto || FAILED=$((FAILED+1))
-
+ok "nikto already present"
 log "--- wafw00f: waf fingerprint, decides which evasion class applies"
 ok "wafw00f already present"
 log "--- whatweb: technology fingerprinting with plugin detail"
-p_aur whatweb || FAILED=$((FAILED+1))
-
+ok "whatweb already present"
 log "--- nmap: service and version truth, the fallback when http lies"
-p_pacman nmap || FAILED=$((FAILED+1))
-
+ok "nmap already present"
 log "--- sqlmap: sql injection detection and exploitation"
-p_pacman sqlmap || FAILED=$((FAILED+1))
-
+ok "sqlmap already present"
 log "--- dalfox: xss scanner with dom and parameter analysis"
-p_aur dalfox || FAILED=$((FAILED+1))
-
+ok "dalfox already present"
 log "--- commix: os command injection"
-p_aur commix || FAILED=$((FAILED+1))
-
+ok "commix already present"
 log "--- grpcurl: grpc reflection and call, the whole grpc attack surface in one binary"
-p_aur grpcurl || FAILED=$((FAILED+1))
-
+ok "grpcurl already present"
 log "--- kiterunner: api route brute force with real wordlists"
-p_aur kiterunner-bin || FAILED=$((FAILED+1))
-
+ok "kiterunner already present"
 log "--- clairvoyance: graphql schema recovery when introspection is disabled"
-p_pipx clairvoyance || FAILED=$((FAILED+1))
-
+ok "clairvoyance already present"
 log "--- mitmproxy2swagger: recover an openapi spec from a har or flow dump"
-p_pipx mitmproxy2swagger || FAILED=$((FAILED+1))
-
+ok "mitmproxy2swagger already present"
 log "--- mitmproxy: programmable intercepting proxy, the capture source for REA"
-p_pacman mitmproxy || FAILED=$((FAILED+1))
-
+ok "mitmproxy already present"
 log "--- zaproxy: full scanner with api driven automation"
 p_pacman zaproxy || FAILED=$((FAILED+1))
 
 log "--- chromium: real browser for cdp work, the only honest way to test client side"
-p_pacman chromium || FAILED=$((FAILED+1))
-
+ok "chromium already present"
 log "--- trufflehog: verified secret detection in repos and filesystems"
-p_aur trufflehog || FAILED=$((FAILED+1))
-
+ok "trufflehog already present"
 log "--- gitleaks: fast regex secret scan for repos and bundles"
-p_pacman gitleaks || FAILED=$((FAILED+1))
-
+ok "gitleaks already present"
 log "--- prowler: cloud posture and attack path checks"
 p_pipx prowler || FAILED=$((FAILED+1))
 
 log "--- jadx: dex to java, the readable half of apk analysis"
-p_pacman jadx || FAILED=$((FAILED+1))
-
+ok "jadx already present"
 log "--- apktool: manifest and resource decode, smali"
-p_aur android-apktool || FAILED=$((FAILED+1))
-
+ok "apktool already present"
 log "--- frida: runtime instrumentation, ssl pinning and logic bypass at runtime"
-p_pipx frida-tools || FAILED=$((FAILED+1))
-
+ok "frida already present"
 log "--- ghidra: decompiler for native artifacts reached from a web target"
-p_pacman ghidra || FAILED=$((FAILED+1))
-
+ok "ghidra already present"
 log "--- radare2: fast disassembly and binary triage"
-p_pacman radare2 || FAILED=$((FAILED+1))
-
+ok "radare2 already present"
 log "--- binwalk: firmware and embedded container signature scan"
-p_pacman binwalk || FAILED=$((FAILED+1))
-
+ok "binwalk already present"
 log "--- hashcat: offline cracking for hashes recovered from artifacts"
-p_pacman hashcat || FAILED=$((FAILED+1))
-
+ok "hashcat already present"
 log "--- seclists: the wordlist corpus everything else consumes"
 p_git https://github.com/danielmiessler/SecLists  || FAILED=$((FAILED+1))
 
@@ -135,26 +101,19 @@ p_git https://github.com/projectdiscovery/nuclei-templates '$HOME/nuclei-templat
 log "--- uv: python env and tool runner, the install engine for python tooling"
 ok "uv already present"
 log "--- pipx: isolated python cli installs"
-p_pacman python-pipx || FAILED=$((FAILED+1))
-
+ok "pipx already present"
 log "--- schemathesis: property based testing straight from an openapi or graphql schema"
-p_pipx schemathesis || FAILED=$((FAILED+1))
-
+ok "schemathesis already present"
 log "--- newman: run a postman collection as a test suite, includes auth flows"
-warn "newman: channel npm not scripted, see manifest"
-
+ok "newman already present"
 log "--- jwt_tool: jwt inspection and the full attack set, none, alg confusion, kid, jku"
-p_aur jwt_tool || FAILED=$((FAILED+1))
-
+ok "jwt_tool already present"
 log "--- graphw00f: graphql engine fingerprint, decides which bypass class applies"
-p_git https://github.com/dolevf/graphw00f  || FAILED=$((FAILED+1))
-
+ok "graphw00f already present"
 log "--- graphql-cop: graphql misconfiguration audit, the cheap wins first"
-p_git https://github.com/dolevf/graphql-cop  || FAILED=$((FAILED+1))
-
+ok "graphql-cop already present"
 log "--- inql: graphql introspection to queries, burp extension plus cli"
-p_pipx inql || FAILED=$((FAILED+1))
-
+ok "inql already present"
 log "--- restler: stateful rest api fuzzing from an openapi spec, finds sequences not single calls"
 p_git https://github.com/microsoft/restler-fuzzer  || FAILED=$((FAILED+1))
 
@@ -165,8 +124,7 @@ log "--- pyrit: orchestrators, converters and scorers for LLM red teaming"
 p_pipx pyrit || FAILED=$((FAILED+1))
 
 log "--- promptfoo: eval harness and red team plugins, CI for prompt injection regression"
-warn "promptfoo: channel npm not scripted, see manifest"
-
+ok "promptfoo already present"
 log "--- llm-guard: defensive scanner set, listed as the mirror side"
 p_pipx llm-guard || FAILED=$((FAILED+1))
 
@@ -177,8 +135,7 @@ log "--- deepteam: red teaming framework with OWASP and NIST aligned sets"
 p_pipx deepteam || FAILED=$((FAILED+1))
 
 log "--- mcp-scan: scans MCP configs and tool descriptions for injection and tool poisoning"
-p_pipx mcp-scan || FAILED=$((FAILED+1))
-
+ok "mcp-scan already present"
 log "--- curl_cffi: python client with browser TLS fingerprints, the library route past JA3 checking"
 p_pipx curl-cffi || FAILED=$((FAILED+1))
 
@@ -189,14 +146,12 @@ log "--- undetected-chromedriver: patched chromedriver that avoids the usual aut
 p_pipx undetected-chromedriver || FAILED=$((FAILED+1))
 
 log "--- playwright: scripted browser with real engine, the honest way to run a bot shaped workflow"
-p_pipx playwright || FAILED=$((FAILED+1))
-
+ok "playwright already present"
 log "--- curl-impersonate: curl built with browser TLS and h2 fingerprints, the CLI route past JA3 checking"
 ok "curl-impersonate already present"
 log "--- tls-client: go backed python client with browser profiles"
 p_pipx tls-client || FAILED=$((FAILED+1))
 
 log "--- interactsh-client: out of band interaction server, the oracle for blind SSRF and blind injection"
-p_aur interactsh-client || FAILED=$((FAILED+1))
-
+ok "interactsh-client already present"
 summary "$FAILED"

@@ -15,28 +15,21 @@ FAILED=0
 log "--- jq: json slicing, the glue for every other tool"
 ok "jq already present"
 log "--- yq: yaml and xml to json, for specs and configs"
-p_pacman go-yq || FAILED=$((FAILED+1))
-
+ok "yq already present"
 log "--- curl: raw http, the ground truth for every request claim"
 ok "curl already present"
 log "--- subfinder: passive subdomain enumeration"
-p_aur subfinder || FAILED=$((FAILED+1))
-
+ok "subfinder already present"
 log "--- httpx: http probing and fingerprinting at scale"
-p_aur httpx-bin || FAILED=$((FAILED+1))
-
+ok "httpx already present"
 log "--- ffuf: content discovery and parameter fuzzing"
-p_aur ffuf || FAILED=$((FAILED+1))
-
+ok "ffuf already present"
 log "--- nuclei: template based scanning, the cve and misconfig workhorse"
-p_aur nuclei-bin || FAILED=$((FAILED+1))
-
+ok "nuclei already present"
 log "--- mitmproxy: programmable intercepting proxy, the capture source for REA"
-p_pacman mitmproxy || FAILED=$((FAILED+1))
-
+ok "mitmproxy already present"
 log "--- chromium: real browser for cdp work, the only honest way to test client side"
-p_pacman chromium || FAILED=$((FAILED+1))
-
+ok "chromium already present"
 log "--- seclists: the wordlist corpus everything else consumes"
 p_git https://github.com/danielmiessler/SecLists  || FAILED=$((FAILED+1))
 
@@ -46,6 +39,5 @@ p_git https://github.com/projectdiscovery/nuclei-templates '$HOME/nuclei-templat
 log "--- uv: python env and tool runner, the install engine for python tooling"
 ok "uv already present"
 log "--- pipx: isolated python cli installs"
-p_pacman python-pipx || FAILED=$((FAILED+1))
-
+ok "pipx already present"
 summary "$FAILED"

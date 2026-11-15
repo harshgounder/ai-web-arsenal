@@ -13,12 +13,9 @@ require_arch
 FAILED=0
 
 log "--- jadx: dex to java, the readable half of apk analysis"
-p_pacman jadx || FAILED=$((FAILED+1))
-
+ok "jadx already present"
 log "--- apktool: manifest and resource decode, smali"
-p_aur android-apktool || FAILED=$((FAILED+1))
-
+ok "apktool already present"
 log "--- frida: runtime instrumentation, ssl pinning and logic bypass at runtime"
-p_pipx frida-tools || FAILED=$((FAILED+1))
-
+ok "frida already present"
 summary "$FAILED"

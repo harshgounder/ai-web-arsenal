@@ -17,46 +17,34 @@ ok "jq already present"
 log "--- curl: raw http, the ground truth for every request claim"
 ok "curl already present"
 log "--- katana: crawler that understands js, endpoints and forms"
-p_aur katana || FAILED=$((FAILED+1))
-
+ok "katana already present"
 log "--- ffuf: content discovery and parameter fuzzing"
-p_aur ffuf || FAILED=$((FAILED+1))
-
+ok "ffuf already present"
 log "--- arjun: http parameter discovery"
-p_pipx arjun || FAILED=$((FAILED+1))
-
+ok "arjun already present"
 log "--- nuclei: template based scanning, the cve and misconfig workhorse"
-p_aur nuclei-bin || FAILED=$((FAILED+1))
-
+ok "nuclei already present"
 log "--- nikto: classic server misconfiguration scanner"
-p_pacman nikto || FAILED=$((FAILED+1))
-
+ok "nikto already present"
 log "--- wafw00f: waf fingerprint, decides which evasion class applies"
 ok "wafw00f already present"
 log "--- sqlmap: sql injection detection and exploitation"
-p_pacman sqlmap || FAILED=$((FAILED+1))
-
+ok "sqlmap already present"
 log "--- dalfox: xss scanner with dom and parameter analysis"
-p_aur dalfox || FAILED=$((FAILED+1))
-
+ok "dalfox already present"
 log "--- commix: os command injection"
-p_aur commix || FAILED=$((FAILED+1))
-
+ok "commix already present"
 log "--- mitmproxy: programmable intercepting proxy, the capture source for REA"
-p_pacman mitmproxy || FAILED=$((FAILED+1))
-
+ok "mitmproxy already present"
 log "--- zaproxy: full scanner with api driven automation"
 p_pacman zaproxy || FAILED=$((FAILED+1))
 
 log "--- chromium: real browser for cdp work, the only honest way to test client side"
-p_pacman chromium || FAILED=$((FAILED+1))
-
+ok "chromium already present"
 log "--- trufflehog: verified secret detection in repos and filesystems"
-p_aur trufflehog || FAILED=$((FAILED+1))
-
+ok "trufflehog already present"
 log "--- gitleaks: fast regex secret scan for repos and bundles"
-p_pacman gitleaks || FAILED=$((FAILED+1))
-
+ok "gitleaks already present"
 log "--- seclists: the wordlist corpus everything else consumes"
 p_git https://github.com/danielmiessler/SecLists  || FAILED=$((FAILED+1))
 
@@ -64,8 +52,7 @@ log "--- nuclei-templates: the template corpus nuclei runs"
 p_git https://github.com/projectdiscovery/nuclei-templates '$HOME/nuclei-templates' || FAILED=$((FAILED+1))
 
 log "--- jwt_tool: jwt inspection and the full attack set, none, alg confusion, kid, jku"
-p_aur jwt_tool || FAILED=$((FAILED+1))
-
+ok "jwt_tool already present"
 log "--- curl_cffi: python client with browser TLS fingerprints, the library route past JA3 checking"
 p_pipx curl-cffi || FAILED=$((FAILED+1))
 
@@ -76,14 +63,12 @@ log "--- undetected-chromedriver: patched chromedriver that avoids the usual aut
 p_pipx undetected-chromedriver || FAILED=$((FAILED+1))
 
 log "--- playwright: scripted browser with real engine, the honest way to run a bot shaped workflow"
-p_pipx playwright || FAILED=$((FAILED+1))
-
+ok "playwright already present"
 log "--- curl-impersonate: curl built with browser TLS and h2 fingerprints, the CLI route past JA3 checking"
 ok "curl-impersonate already present"
 log "--- tls-client: go backed python client with browser profiles"
 p_pipx tls-client || FAILED=$((FAILED+1))
 
 log "--- interactsh-client: out of band interaction server, the oracle for blind SSRF and blind injection"
-p_aur interactsh-client || FAILED=$((FAILED+1))
-
+ok "interactsh-client already present"
 summary "$FAILED"

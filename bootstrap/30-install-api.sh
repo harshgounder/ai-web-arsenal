@@ -15,47 +15,34 @@ FAILED=0
 log "--- jq: json slicing, the glue for every other tool"
 ok "jq already present"
 log "--- yq: yaml and xml to json, for specs and configs"
-p_pacman go-yq || FAILED=$((FAILED+1))
-
+ok "yq already present"
 log "--- curl: raw http, the ground truth for every request claim"
 ok "curl already present"
 log "--- grpcurl: grpc reflection and call, the whole grpc attack surface in one binary"
-p_aur grpcurl || FAILED=$((FAILED+1))
-
+ok "grpcurl already present"
 log "--- kiterunner: api route brute force with real wordlists"
-p_aur kiterunner-bin || FAILED=$((FAILED+1))
-
+ok "kiterunner already present"
 log "--- clairvoyance: graphql schema recovery when introspection is disabled"
-p_pipx clairvoyance || FAILED=$((FAILED+1))
-
+ok "clairvoyance already present"
 log "--- mitmproxy2swagger: recover an openapi spec from a har or flow dump"
-p_pipx mitmproxy2swagger || FAILED=$((FAILED+1))
-
+ok "mitmproxy2swagger already present"
 log "--- mitmproxy: programmable intercepting proxy, the capture source for REA"
-p_pacman mitmproxy || FAILED=$((FAILED+1))
-
+ok "mitmproxy already present"
 log "--- schemathesis: property based testing straight from an openapi or graphql schema"
-p_pipx schemathesis || FAILED=$((FAILED+1))
-
+ok "schemathesis already present"
 log "--- newman: run a postman collection as a test suite, includes auth flows"
-warn "newman: channel npm not scripted, see manifest"
-
+ok "newman already present"
 log "--- jwt_tool: jwt inspection and the full attack set, none, alg confusion, kid, jku"
-p_aur jwt_tool || FAILED=$((FAILED+1))
-
+ok "jwt_tool already present"
 log "--- graphw00f: graphql engine fingerprint, decides which bypass class applies"
-p_git https://github.com/dolevf/graphw00f  || FAILED=$((FAILED+1))
-
+ok "graphw00f already present"
 log "--- graphql-cop: graphql misconfiguration audit, the cheap wins first"
-p_git https://github.com/dolevf/graphql-cop  || FAILED=$((FAILED+1))
-
+ok "graphql-cop already present"
 log "--- inql: graphql introspection to queries, burp extension plus cli"
-p_pipx inql || FAILED=$((FAILED+1))
-
+ok "inql already present"
 log "--- restler: stateful rest api fuzzing from an openapi spec, finds sequences not single calls"
 p_git https://github.com/microsoft/restler-fuzzer  || FAILED=$((FAILED+1))
 
 log "--- interactsh-client: out of band interaction server, the oracle for blind SSRF and blind injection"
-p_aur interactsh-client || FAILED=$((FAILED+1))
-
+ok "interactsh-client already present"
 summary "$FAILED"

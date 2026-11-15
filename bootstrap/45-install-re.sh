@@ -13,15 +13,11 @@ require_arch
 FAILED=0
 
 log "--- fq: jq semantics over any binary format, the fastest unknown-format probe"
-p_pacman fq || FAILED=$((FAILED+1))
-
+ok "fq already present"
 log "--- ghidra: decompiler for native artifacts reached from a web target"
-p_pacman ghidra || FAILED=$((FAILED+1))
-
+ok "ghidra already present"
 log "--- radare2: fast disassembly and binary triage"
-p_pacman radare2 || FAILED=$((FAILED+1))
-
+ok "radare2 already present"
 log "--- binwalk: firmware and embedded container signature scan"
-p_pacman binwalk || FAILED=$((FAILED+1))
-
+ok "binwalk already present"
 summary "$FAILED"

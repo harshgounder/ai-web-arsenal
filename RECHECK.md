@@ -106,7 +106,7 @@ taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
 domains         30 authored + 9 explicit pointers + 0 empty
-enriched        562 entries, all with atom and driver; 453 with preconditions, 464 with oracle,
+enriched        565 entries, all with atom and driver; 456 with preconditions, 467 with oracle,
                 175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
@@ -676,7 +676,7 @@ Both README and AUTHORING said the join key between the two repos was `entry_id`
 
 | measurement | value |
 |---|---|
-| entries in this repo | 562 |
+| entries in this repo | 565 |
 | entries referencing a pattern id | **0** |
 | entries pointing into the atlas at all | 8 |
 | of those, at a wave's `patterns.jsonl` | 1 |
@@ -706,9 +706,9 @@ in the docs. Six were checkable and are now claims.
 | claim | result |
 |---|---|
 | every domain carries a tree, a mirror and a gap | holds, 30 of 30 |
-| every entry carries a driver, an atom and a status | holds, 562 of 562 |
+| every entry carries a driver, an atom and a status | holds, 565 of 565 |
 | no bootstrap script pipes a download into a shell | holds, 0 of 11 |
-| no entry restates an atlas pattern title | holds, 0 of 562 over a 0.5 token overlap |
+| no entry restates an atlas pattern title | holds, 0 of 565 over a 0.5 token overlap |
 | the MCP server imports only the standard library | **false** |
 | the bootstrap library refuses to run as root | holds |
 
