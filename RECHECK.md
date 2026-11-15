@@ -106,7 +106,7 @@ taxonomy        624 of 706 test IDs mapped to 16 atoms (88.4%)
 tools           64 in manifest, 0 unresolved, every channel verified live
 bootstrap       11 generated scripts, 8 profiles, dry-run safe, syntax clean
 domains         30 authored + 9 explicit pointers + 0 empty
-enriched        568 entries, all with atom and driver; 459 with preconditions, 470 with oracle,
+enriched        570 entries, all with atom and driver; 461 with preconditions, 472 with oracle,
                 175 with evades, 135 with detected_by. The mandatory-field rule is 76% met
 trees           28 decision trees as JSON
 atlas           150 patterns, gate passing, 13 control classes, 157 mutations
@@ -676,7 +676,7 @@ Both README and AUTHORING said the join key between the two repos was `entry_id`
 
 | measurement | value |
 |---|---|
-| entries in this repo | 568 |
+| entries in this repo | 570 |
 | entries referencing a pattern id | **0** |
 | entries pointing into the atlas at all | 8 |
 | of those, at a wave's `patterns.jsonl` | 1 |
@@ -706,9 +706,9 @@ in the docs. Six were checkable and are now claims.
 | claim | result |
 |---|---|
 | every domain carries a tree, a mirror and a gap | holds, 30 of 30 |
-| every entry carries a driver, an atom and a status | holds, 568 of 568 |
+| every entry carries a driver, an atom and a status | holds, 570 of 570 |
 | no bootstrap script pipes a download into a shell | holds, 0 of 11 |
-| no entry restates an atlas pattern title | holds, 0 of 568 over a 0.5 token overlap |
+| no entry restates an atlas pattern title | holds, 0 of 570 over a 0.5 token overlap |
 | the MCP server imports only the standard library | **false** |
 | the bootstrap library refuses to run as root | holds |
 
@@ -819,7 +819,7 @@ capture without a transport, signing ranks candidates without recovering an algo
 An external review found that every D37 entry carried atom A08 while the domain declared A13, A07 and A05.
 That was true, and it was the visible edge of something wider.
 
-Measured: **97 of 568 entries carry an atom outside their domain's declared atom set**, 17 percent. The
+Measured: **97 of 570 entries carry an atom outside their domain's declared atom set**, 17 percent. The
 worst are D11 with 22, D07 with 16, D25 with 11 and D04 with 9. The cause is not mysterious. For most of
 this project's authoring, a new entry was created from a template whose atom defaulted to A08, information
 exposure, and nobody checked it against the domain's own declaration. The two fields were written at

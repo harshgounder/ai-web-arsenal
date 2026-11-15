@@ -2,7 +2,7 @@
  "id": "D19",
  "title": "AI application attacks",
  "version": "0.1",
- "generated": "2026-10-26",
+ "generated": "2026-11-15",
  "status": "DEEP",
  "atoms": [
   "A16",
@@ -622,6 +622,74 @@
     "approvals granted in bulk, which is a different failure from a fast one",
     "the approver able to state what they approved afterwards"
    ]
+  },
+  {
+   "id": "d19-owasp-llm-2026",
+   "name": "OWASP Top 10 for LLM Applications 2026",
+   "url": "https://genai.owasp.org/llm-top-10/",
+   "role": "the 2026 release: renames LLM07 to Hidden Context Exposure, folds cross-modal injection (image/audio-carried instructions), fine-tuning subversion and insecure generated code into existing entries; first edition validated against 7,714 collected incidents",
+   "driver": {
+    "install": "n/a reference",
+    "verify": "n/a",
+    "json": false,
+    "stdin": false
+   },
+   "atom": [
+    "A16",
+    "A01"
+   ],
+   "preconditions": [
+    "a web app exposing an LLM feature (chat, summary, AI search, agent mode)"
+   ],
+   "oracle": [
+    "each entry maps to a testable boundary: input (LLM01), output leakage (LLM02), privilege reach (LLM03), provenance (LLM04), corpus integrity (LLM05), cost (LLM06), truth (LLM07), context visibility (LLM08), retrieval geometry (LLM09), downstream handling (LLM10)"
+   ],
+   "evades": [
+    "input-only scanners that never test retrieval or output handling"
+   ],
+   "detected_by": [
+    "LLM output review",
+    "cost anomaly monitoring"
+   ],
+   "agency": "A2",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "Supersedes the 2025 mapping in data/taxonomy/llm_top10.json, reconciled 2026-11-15. Key stat carried in the 2026 doc: 5 poisoned RAG docs reach ~90% attack success against a corpus of millions (W. Zou et al., 2025)."
+  },
+  {
+   "id": "d19-indirect-injection-mcp",
+   "name": "indirect prompt injection via MCP tool outputs and agent feeds",
+   "url": "https://github.com/ethz-spylab/AgentDojo",
+   "role": "agent ingests content whose trust profile differs from the user prompt: MCP server responses, tool results, retrieved documents, issue titles; the instruction boundary is the ingestion point, not the chat box",
+   "driver": {
+    "install": "pipx: agentdojo (benchmark harness)",
+    "verify": "agentdojo --help",
+    "json": true,
+    "stdin": true
+   },
+   "atom": [
+    "A16",
+    "A02"
+   ],
+   "preconditions": [
+    "an agent with tool access (browser, shell, MCP clients)",
+    "attacker-controlled content in any ingested channel"
+   ],
+   "oracle": [
+    "the agent performs an action the operator never requested, traceable to instructions embedded in tool output or retrieved content"
+   ],
+   "evades": [
+    "prompt-level filtering of user input",
+    "output-only sanitisation"
+   ],
+   "detected_by": [
+    "agent action audit vs operator intent diff",
+    "mcp-scan tool-description checks"
+   ],
+   "agency": "A3",
+   "stage": "L05",
+   "status": "ESTABLISHED",
+   "note": "OWASP LLM01:2026 lists MCP server output as an explicit indirect-injection carrier. AgentDojo (ETH) is the benchmark harness; invariantlabs mcp-scan checks tool descriptions for injected instructions; rug-pull (tool update swapping behavior) is the supply-chain variant."
   }
  ],
  "tree": {

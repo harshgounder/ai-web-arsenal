@@ -56,7 +56,7 @@
 {"url": "https://gandalf.lakera.ai/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d19-gandalf"]}
 {"url": "https://gdpr-info.eu/art-17-gdpr/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d24-gdpr-dsar"]}
 {"url": "https://genai.owasp.org/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d19-owasp-agentic", "d19-guardrail-position", "d19-eval-pinning", "d20-owasp-agentic", "d30-owasp-agentic"]}
-{"url": "https://genai.owasp.org/llm-top-10/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d19-llm-top10"]}
+{"url": "https://genai.owasp.org/llm-top-10/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d19-llm-top10", "d19-owasp-llm-2026"]}
 {"url": "https://ghidra-sre.org/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d29-ghidra"]}
 {"url": "https://github.com/", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d24-prove", "d24-critic", "d25-counters", "d28-mcps", "d28-skill", "d30-orchestration"]}
 {"url": "https://github.com/0xInfection/Awesome-WAF", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d22-awesome-waf"]}
@@ -146,6 +146,7 @@
 {"url": "https://github.com/epinna/tplmap", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d15-tplmap"]}
 {"url": "https://github.com/epsylon/xsser", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d07-xsser"]}
 {"url": "https://github.com/erev0s/VAmPI", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d05-vampi", "d11-vampi"]}
+{"url": "https://github.com/ethz-spylab/AgentDojo", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d19-indirect-injection-mcp"]}
 {"url": "https://github.com/ethz-spylab/agentdojo", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d19-agentdojo", "d20-agentdojo", "d28-agentdojo"]}
 {"url": "https://github.com/evilsocket/xray", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d02-xray"]}
 {"url": "https://github.com/falcosecurity/falco", "checked_at": "2026-11-15", "status": "OK", "http": 200, "entries": ["d25-falco"]}
