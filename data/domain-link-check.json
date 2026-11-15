@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-10-27",
- "unique_urls": 339,
+ "checked_at": "2026-11-15",
+ "unique_urls": 342,
  "method": "GET, browser UA, redirects followed, 3 concurrent retries not attempted",
  "results": {
   "https://apktool.org/": {
@@ -113,7 +113,9 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d06-cheatsheet"
+    "d06-cheatsheet",
+    "d06-session-generation",
+    "d06-directory-sync"
    ]
   },
   "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html": {
@@ -214,7 +216,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d08-extension-scope"
+    "d08-extension-scope",
+    "d08-extension-page-interaction"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/API/AbortController": {
@@ -277,7 +280,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d08-messaging-surface"
+    "d08-messaging-surface",
+    "d08-webview-surface"
    ]
   },
   "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors": {
@@ -341,6 +345,7 @@
    "status": "OK",
    "http": 200,
    "entries": [
+    "d08-wasm-authority",
     "d37-wasm-pipeline"
    ]
   },
@@ -445,6 +450,8 @@
    "http": 200,
    "entries": [
     "d19-owasp-agentic",
+    "d19-guardrail-position",
+    "d19-eval-pinning",
     "d20-owasp-agentic",
     "d30-owasp-agentic"
    ]
@@ -658,7 +665,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d25-suricata"
+    "d25-suricata",
+    "d25-egress-path"
    ]
   },
   "https://github.com/OJ/gobuster": {
@@ -762,7 +770,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d25-sigma"
+    "d25-sigma",
+    "d25-rule-surface"
    ]
   },
   "https://github.com/Teebytes/TnT-Fuzzer": {
@@ -966,7 +975,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d25-crs"
+    "d25-crs",
+    "d25-inspection-depth"
    ]
   },
   "https://github.com/crewAIInc/crewAI": {
@@ -1427,7 +1437,11 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d18-scorecard"
+    "d18-scorecard",
+    "d18-lockfile-proof",
+    "d18-repo-exposure",
+    "d18-maintainer-trust",
+    "d18-plugin-review"
    ]
   },
   "https://github.com/owasp-amass/amass": {
@@ -1687,7 +1701,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d18-cosign"
+    "d18-cosign",
+    "d18-deploy-creds"
    ]
   },
   "https://github.com/skylot/jadx": {
@@ -1892,7 +1907,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d25-zeek"
+    "d25-zeek",
+    "d25-telemetry-matrix"
    ]
   },
   "https://github.com/zinja-coder/apktool-mcp-server": {
@@ -1900,6 +1916,20 @@
    "http": 200,
    "entries": [
     "d21-apktool-mcp"
+   ]
+  },
+  "https://hackerone.com/reports/3426839": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-coupon-state-machine"
+   ]
+  },
+  "https://hackerone.com/reports/364843": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-negative-quantity"
    ]
   },
   "https://hashcat.net/hashcat/": {
@@ -1990,7 +2020,11 @@
    "status": "OK",
    "http": 200,
    "entries": [
+    "d11-resolver-boundary",
+    "d11-protobuf-semantics",
+    "d19-model-supply",
     "d20-spec",
+    "d20-mcp-trust-boundary",
     "d28-spec"
    ]
   },
@@ -2285,7 +2319,11 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d18-slsa"
+    "d18-slsa",
+    "d18-provenance-chain",
+    "d18-vendored-code",
+    "d18-generated-and-model",
+    "d18-dependency-incident"
    ]
   },
   "https://source.chromium.org/": {
@@ -2316,6 +2354,13 @@
     "d37-jit-tiers"
    ]
   },
+  "https://wstg.owasp.org/latest/4-Web_Application_Security_Testing/10-Business_Logic/06-Circumvention_of_Work_Flows": {
+   "status": "OK",
+   "http": 200,
+   "entries": [
+    "d12-workflow-state-params"
+   ]
+  },
   "https://www.bis.doc.gov/": {
    "status": "OK",
    "http": 200,
@@ -2342,7 +2387,8 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d24-kev"
+    "d24-kev",
+    "d25-response-authority"
    ]
   },
   "https://www.cisecurity.org/cis-benchmarks": {
@@ -2398,13 +2444,13 @@
    "status": "OK",
    "http": 200,
    "entries": [
+    "d24-vendor-confirmation",
     "d38-disclosure-program"
    ]
   },
   "https://www.iso.org/standard/27001": {
-   "status": "BLOCKED",
-   "http": 403,
-   "note": "the site refuses automated clients, which is not the same as absent",
+   "status": "OK",
+   "http": 200,
    "entries": [
     "d24-iso27001-scope"
    ]
@@ -2513,7 +2559,9 @@
    "status": "OK",
    "http": 200,
    "entries": [
-    "d09-rfc9112"
+    "d09-rfc9112",
+    "d09-framing-bisect",
+    "d09-header-precedence"
    ]
   },
   "https://www.rfc-editor.org/rfc/rfc9113": {
@@ -2548,6 +2596,7 @@
   "https://www.w3.org/TR/webauthn-3/": {
    "status": "BLOCKED",
    "http": 403,
+   "note": "the site refuses automated clients, which is not the same as absent",
    "entries": [
     "d04-webauthn"
    ]
