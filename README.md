@@ -9,6 +9,7 @@
 [![ceiling](https://img.shields.io/badge/ceiling-95.0%25-58a6ff)](#the-ceiling)
 [![observed](https://img.shields.io/badge/observed-6%20of%201%2C000-d29922)](#the-scoreboard)
 [![licence](https://img.shields.io/badge/licence-MIT-8b949e)](LICENSE)
+[![M8ven Score](https://m8ven.ai/badge/mcp/harshgounder-ai-web-arsenal-ti9j17?v=d179b09bd6862090ab9c6c2811cd1f07)](https://m8ven.ai/mcp/harshgounder-ai-web-arsenal-ti9j17?s=readme)
 
 Authorised testing only. Every pattern in the companion repo carries an authorisation precondition, and
 this repo assumes you have written permission for anything you point it at. See [`SECURITY.md`](SECURITY.md).
